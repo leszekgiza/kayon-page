@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import KayonLogo from './KayonLogo';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,10 +19,8 @@ const Navigation = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary">
-              KAYON
-            </div>
+          <Link href="/" className="flex items-center">
+            <KayonLogo className="h-8" />
           </Link>
 
           {/* Desktop Menu */}
@@ -35,7 +34,7 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <button className="px-6 py-2 bg-accent-blue text-white rounded-lg hover:bg-accent-blue/90 transition-colors duration-200 font-medium">
+            <button className="px-6 py-2 bg-primary text-white rounded-full hover:bg-primary-light transition-colors duration-200 font-bold text-sm">
               Kontakt
             </button>
           </div>
@@ -84,7 +83,7 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <button className="w-full mt-4 px-6 py-3 bg-accent-blue text-white rounded-lg hover:bg-accent-blue/90 transition-colors duration-200 font-medium">
+            <button className="w-full mt-4 px-6 py-3 bg-primary text-white rounded-full hover:bg-primary-light transition-colors duration-200 font-bold text-sm">
               Kontakt
             </button>
           </div>

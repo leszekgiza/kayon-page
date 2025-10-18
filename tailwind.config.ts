@@ -9,22 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Exact colors from Figma
         primary: {
-          DEFAULT: '#1d1d1b',
-          light: '#343432',
-          lighter: '#747171',
+          DEFAULT: 'rgb(29, 29, 27)',      // #1d1d1b - Main dark color
+          light: 'rgb(52, 52, 50)',         // #343432 - Secondary dark
+          lighter: 'rgb(116, 113, 113)',    // #747171 - Text gray
         },
         accent: {
-          blue: '#2cbceb',
-          yellow: '#f4b250',
-          green: '#77bb61',
-          purple: '#8a38f5',
+          blue: 'rgb(44, 188, 235)',        // #2cbceb - Primary blue
+          gold: 'rgb(244, 178, 80)',        // #f4b250 - Gold/Orange
+          green: 'rgb(119, 187, 97)',       // #77bb61 - Green
         },
         neutral: {
-          white: '#ffffff',
+          white: 'rgb(255, 255, 255)',      // #ffffff - White
           gray: {
-            light: '#eaeaea',
-            DEFAULT: '#bcb7b7',
+            light: 'rgb(234, 234, 234)',    // #eaeaea - Light gray bg
+            DEFAULT: 'rgb(188, 183, 183)',  // #bcb7b7 - Medium gray
           }
         }
       },
