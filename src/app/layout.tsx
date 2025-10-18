@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import JsonLd from "./schema";
+import LanguageProvider from "@/components/LanguageProvider";
 
 const montserrat = Montserrat({
   subsets: ["latin", "latin-ext"],
@@ -68,7 +69,7 @@ export default function RootLayout({
         <JsonLd />
       </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );
