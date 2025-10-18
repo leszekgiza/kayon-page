@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import KayonLogo from './KayonLogo';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +19,7 @@ const Navigation = () => {
 
           {/* Desktop Menu - exact Figma dimensions */}
           <div className="hidden md:flex items-center gap-2.5">
+            <LanguageSwitcher />
             {/* Why button - 119x57px */}
             <Link
               href="#why"
@@ -77,7 +79,8 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-neutral-gray-light space-y-2">
+          <div className="md:hidden py-4 border-t border-neutral-gray-light space-y-4">
+            <LanguageSwitcher variant="menu" />
             <Link
               href="#why"
               className="block py-3 px-4 text-primary font-bold hover:bg-neutral-gray-light rounded-lg transition-colors duration-200"

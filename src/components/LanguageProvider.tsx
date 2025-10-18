@@ -2,15 +2,23 @@
 
 import {
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useMemo,
   useState,
 } from "react";
 
-const SUPPORTED_LANGUAGES = ["pl", "en", "de"] as const;
-type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
+export const SUPPORTED_LANGUAGES = ["pl", "en", "de"] as const;
+export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
 
+export const LANGUAGE_LABELS: Record<SupportedLanguage, string> = {
+  pl: "PL",
+  en: "EN",
+  de: "DE",
+};
+
+const LANGUAGE_STORAGE_KEY = "kayon-language";
 const FALLBACK_LANGUAGE: SupportedLanguage = "pl";
 
 const isSupportedLanguage = (value: string | undefined): value is SupportedLanguage =>
@@ -54,25 +62,41 @@ const LanguageContext = createContext<LanguageContextValue>({
 });
 
 const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  const [language, setLanguage] = useState<SupportedLanguage>(FALLBACK_LANGUAGE);
+  const [language, setLanguageState] = useState<SupportedLanguage>(FALLBACK_LANGUAGE);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const storedPreference = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    if (isSupportedLanguage(storedPreference ?? undefined)) {
+      setLanguageState(storedPreference as SupportedLanguage);
+      return;
+    }
+
     const preferred = detectPreferredLanguage();
-    setLanguage(preferred);
+    setLanguageState(preferred);
   }, []);
 
   useEffect(() => {
     if (typeof document !== "undefined") {
       document.documentElement.lang = language;
     }
+
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+    }
   }, [language]);
+
+  const setLanguage = useCallback((nextLanguage: SupportedLanguage) => {
+    setLanguageState(nextLanguage);
+  }, []);
 
   const value = useMemo(
     () => ({
       language,
       setLanguage,
     }),
-    [language],
+    [language, setLanguage],
   );
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
