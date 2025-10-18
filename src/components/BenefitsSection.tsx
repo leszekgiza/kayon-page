@@ -14,29 +14,29 @@ const BenefitsSection = () => {
   return (
     <section className="section-padding bg-accent-gold" id="korzysci">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column */}
           <div>
             {/* Label */}
-            <div className="inline-block px-6 py-2 bg-white/30 rounded-full mb-8">
+            <div className="inline-block px-6 py-2 bg-white/30 rounded-full mb-6 md:mb-8">
               <span className="text-primary font-bold text-sm">Jak działamy?</span>
             </div>
 
             {/* Title */}
-            <h2 className="text-[40px] leading-[1.2] font-bold text-primary mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-[40px] leading-[1.2] font-bold text-primary mb-6 md:mb-8">
               Dostarczamy urządzenia i serwis, które minimalizują koszty
             </h2>
 
             {/* Description Box */}
-            <div className="bg-white/20 border-2 border-white/40 rounded-3xl p-8">
-              <p className="text-primary leading-relaxed">
+            <div className="bg-white/20 border-2 border-white/40 rounded-3xl p-6 md:p-8">
+              <p className="text-sm md:text-base text-primary leading-relaxed">
                 Rozwiązania Kayon są projektowane tak, by każdy uczestnik łańcucha interesariuszy — od dystrybutora, przez instalatora, po zarządcę i mieszkańca nieruchomości — zyskał realne oszczędności, zmniejszenie wydatków, mniej pracy operacyjnej i większą kontrolę.
               </p>
             </div>
           </div>
 
           {/* Right Column - Benefits Cards */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -47,19 +47,19 @@ const BenefitsSection = () => {
                 className="flex flex-col items-start"
               >
                 {/* Icon */}
-                <div className="w-14 h-14 mb-4 flex items-center justify-center bg-neutral-gray rounded-full">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 md:w-14 md:h-14 mb-3 md:mb-4 flex items-center justify-center bg-neutral-gray rounded-full">
+                  <svg className="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-primary mb-4">
+                <h3 className="text-base md:text-lg font-bold text-primary mb-3 md:mb-4">
                   {benefit.title}
                 </h3>
 
                 {/* Button */}
-                <button className="px-6 py-2.5 bg-primary text-white rounded-full hover:bg-primary-light transition-colors duration-200 font-bold text-sm">
+                <button className="px-5 py-2 md:px-6 md:py-2.5 bg-primary text-white rounded-full hover:bg-primary-light transition-colors duration-200 font-bold text-sm">
                   Read more
                 </button>
               </motion.div>

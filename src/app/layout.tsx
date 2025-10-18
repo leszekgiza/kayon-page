@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import JsonLd from "./schema";
 
 const montserrat = Montserrat({
   subsets: ["latin", "latin-ext"],
@@ -9,25 +10,50 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kayon-page-9ggodaet3-leszekgs-projects.vercel.app"),
   title: "KAYON - Nowoczesne systemy pomiarowe | Liczniki ciepła i wody",
   description: "Nowoczesne systemy pomiarowe KAYON - liczniki ciepła i wody z zdalnym odczytem. Spełniamy standardy EED 2023/1791. Oszczędność, automatyzacja i pełna kontrola.",
-  keywords: ["systemy pomiarowe", "liczniki ciepła", "liczniki wody", "zdalny odczyt", "KAYON", "EED 2023/1791", "oszczędność energii"],
   authors: [{ name: "KAYON" }],
   creator: "KAYON",
   publisher: "KAYON",
-  robots: "index, follow",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: "https://kayon-page-9ggodaet3-leszekgs-projects.vercel.app",
+  },
   openGraph: {
     type: "website",
     locale: "pl_PL",
-    url: "https://kayon.pl",
+    url: "https://kayon-page-9ggodaet3-leszekgs-projects.vercel.app",
     title: "KAYON - Nowoczesne systemy pomiarowe",
-    description: "Nowoczesne systemy pomiarowe - liczniki ciepła i wody z zdalnym odczytem. Spełniamy standardy EED 2023/1791.",
+    description: "Nowoczesne systemy pomiarowe - liczniki ciepła i wody z zdalnym odczytem. Spełniamy standardy EED 2023/1791. Oszczędność, automatyzacja i pełna kontrola.",
     siteName: "KAYON",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "KAYON - Nowoczesne systemy pomiarowe",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "KAYON - Nowoczesne systemy pomiarowe",
-    description: "Nowoczesne systemy pomiarowe - liczniki ciepła i wody z zdalnym odczytem.",
+    description: "Nowoczesne systemy pomiarowe - liczniki ciepła i wody z zdalnym odczytem. Spełniamy standardy EED 2023/1791.",
+    images: ["/og-image.svg"],
+  },
+  verification: {
+    google: "google-site-verification-code", // TODO: Dodaj kod weryfikacji Google Search Console
   },
 };
 
@@ -38,6 +64,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
+      <head>
+        <JsonLd />
+      </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
         {children}
       </body>

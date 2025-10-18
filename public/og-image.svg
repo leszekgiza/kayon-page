@@ -1,0 +1,32 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+
+  <!-- Decorative elements -->
+  <rect x="100" y="80" width="200" height="50" rx="25" fill="rgb(44, 188, 235)" opacity="0.3"/>
+  <rect x="900" y="80" width="200" height="50" rx="25" fill="rgb(244, 178, 80)" opacity="0.3"/>
+  <rect x="200" y="450" width="80" height="300" rx="40" fill="rgb(119, 187, 97)" opacity="0.3"/>
+
+  <!-- KAYON Logo -->
+  <g transform="translate(350, 200)">
+    <!-- K -->
+    <path d="M0 0 L0 160 M0 80 L80 0 M0 80 L80 160" stroke="rgb(29, 29, 27)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- A -->
+    <path d="M120 160 L170 0 L220 160 M137 105 L203 105" stroke="rgb(29, 29, 27)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Y -->
+    <path d="M260 0 L310 80 M360 0 L310 80 L310 160" stroke="rgb(44, 188, 235)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- O -->
+    <ellipse cx="440" cy="80" rx="45" ry="80" stroke="rgb(244, 178, 80)" stroke-width="16" fill="none"/>
+    <!-- N -->
+    <path d="M515 160 L515 0 L595 160 L595 0" stroke="rgb(119, 187, 97)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Text -->
+  <text x="600" y="450" font-family="Montserrat, sans-serif" font-size="32" font-weight="700" fill="rgb(29, 29, 27)" text-anchor="middle">
+    Nowoczesne systemy pomiarowe
+  </text>
+
+  <text x="600" y="500" font-family="Montserrat, sans-serif" font-size="24" fill="rgb(116, 113, 113)" text-anchor="middle">
+    Liczniki ciepła i wody z zdalnym odczytem
+  </text>
+</svg>

@@ -6,40 +6,42 @@ import KayonLogo from './KayonLogo';
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-neutral-white overflow-hidden">
-      {/* Decorative elements - exact from Figma */}
-      <div className="absolute top-20 left-32">
+      {/* Decorative elements - only on desktop */}
+      <div className="hidden lg:block absolute top-20 left-32">
         <div className="w-32 h-8 bg-accent-blue rounded-full transform -rotate-45" />
       </div>
-      <div className="absolute top-20 right-32">
+      <div className="hidden lg:block absolute top-20 right-32">
         <div className="w-32 h-8 bg-accent-gold rounded-full transform rotate-45" />
       </div>
-      <div className="absolute bottom-1/3 left-1/4">
+      <div className="hidden lg:block absolute bottom-1/3 left-1/4">
         <div className="w-12 h-48 bg-accent-green rounded-full" />
       </div>
 
-      <div className="container-custom relative z-10 pt-32 pb-16">
+      <div className="container-custom relative z-10 pt-32 pb-24 lg:pb-16">
+        {/* Desktop: 2 columns, Mobile: 1 column centered */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left - Logo */}
+          {/* Logo - only on desktop */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center"
+            className="hidden lg:flex justify-center"
           >
             <KayonLogo className="h-24 w-auto" />
           </motion.div>
 
-          {/* Right - Content */}
+          {/* Content - full width on mobile */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-1"
           >
-            <h1 className="text-[40px] leading-[1.2] font-bold text-primary mb-6">
+            <h1 className="text-2xl md:text-3xl lg:text-[40px] leading-[1.2] font-bold text-primary mb-6">
               W świecie, w którym technologia nadaje tempo zmianom, przewagę zyskują ci, którzy dysponują nią wcześniej.
             </h1>
 
-            <p className="text-base text-primary mb-8 leading-relaxed">
+            <p className="text-sm md:text-base text-primary mb-8 leading-relaxed">
               Nasze systemy zdalnego odczytu już dziś spełniają unijne standardy, które staną się obowiązkiem dopiero w 2027 roku.
             </p>
 
@@ -49,12 +51,12 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Scroll button - bottom right */}
+        {/* Scroll button - left on mobile, right on desktop */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
-          className="absolute bottom-12 right-12"
+          className="absolute bottom-12 left-6 lg:left-auto lg:right-12"
         >
           <button className="w-12 h-12 bg-accent-blue rounded-full flex items-center justify-center text-white hover:bg-accent-blue/90 transition-colors">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

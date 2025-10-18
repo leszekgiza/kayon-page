@@ -18,8 +18,8 @@ const FeaturesSection = () => {
   return (
     <section className="section-padding bg-neutral-gray-light" id="o-nas">
       <div className="container-custom">
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-3 gap-12">
+        {/* Features Grid - 3 cols on desktop, 1 col on mobile */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -30,19 +30,19 @@ const FeaturesSection = () => {
               className="flex flex-col items-start"
             >
               {/* Icon - simple gray circle with checkmark */}
-              <div className="w-16 h-16 mb-6 flex items-center justify-center bg-neutral-gray rounded-full">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-14 h-14 md:w-16 md:h-16 mb-4 md:mb-6 flex items-center justify-center bg-neutral-gray rounded-full">
+                <svg className="w-7 h-7 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-bold text-primary mb-6">
+              <h3 className="text-xl md:text-2xl font-bold text-primary mb-4 md:mb-6">
                 {feature.title}
               </h3>
 
               {/* Button */}
-              <button className="px-6 py-3 bg-primary text-white rounded-full hover:bg-primary-light transition-colors duration-200 font-bold text-sm">
+              <button className="px-6 py-2.5 md:py-3 bg-primary text-white rounded-full hover:bg-primary-light transition-colors duration-200 font-bold text-sm">
                 Read more
               </button>
             </motion.div>
