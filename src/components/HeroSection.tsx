@@ -6,6 +6,9 @@ import KayonLogo from './KayonLogo';
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-neutral-white overflow-hidden">
+      {/* Background pattern from Figma */}
+      <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-cover opacity-40 pointer-events-none" aria-hidden="true" />
+
       {/* Background decorative circles - large subtle circles */}
       <div className="hidden lg:block absolute -left-64 top-16 w-[1420px] h-[494px] rounded-[247px] border-2 border-neutral-gray-light opacity-40 transform -rotate-3" />
       <div className="hidden lg:block absolute left-1/4 top-1/3 w-[800px] h-[350px] rounded-[175px] border-2 border-neutral-gray-light opacity-30" />
