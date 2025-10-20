@@ -77,7 +77,7 @@ const HeroSection = () => {
               className="flex flex-col items-end gap-6"
             >
               <KayonLogo className="h-12 w-auto drop-shadow-[0_12px_45px_rgba(0,0,0,0.35)] md:h-14" />
-              <h1 className="text-3xl font-semibold leading-snug md:text-[42px] md:leading-tight">{headline}</h1>
+              <h1 className="text-[15px] font-semibold leading-snug md:text-[21px] md:leading-tight">{headline}</h1>
             </motion.div>
 
             <motion.div
