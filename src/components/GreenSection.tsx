@@ -1,46 +1,64 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const clientCards = [
   {
     title: 'Dystrybutorzy',
     description:
-      'Cenią nas za elastyczność w dopasowaniu technologii do lokalnych standardów oraz prosty model integracji systemu ALL in KAYON z innymi platformami dystrybucyjnymi, które oferowali wcześniej. Mogą sprzedawać produkt kompletny, skalowalny i gotowy do wdrożenia bez kosztownych modyfikacji.',
+      'Cenią nas za elastyczność w dopasowaniu technologii do lokalnych standardów oraz prosty model integracji systemu ALL in KAYON z innymi platformami dystrybucyjnymi. Mogą sprzedawać rozwiązanie kompletne, skalowalne i gotowe do wdrożenia bez kosztownych modyfikacji.',
   },
   {
     title: 'Firmy instalatorskie',
     description:
-      'Doceniają intuicyjny montaż, pełną kompatybilność komponentów i wysoką odporność sprzętu na błędy montażowe. Instalacja przebiega szybko, bez specjalistycznych narzędzi, a konfiguracja sprowadzona jest do kilku logicznych kroków.',
+      'Doceniają intuicyjny montaż, pełną kompatybilność komponentów i odporność sprzętu na błędy instalacyjne. Instalacja przebiega szybko, bez specjalistycznych narzędzi, a konfiguracja sprowadza się do kilku logicznych kroków.',
   },
   {
     title: 'Administratorzy budynków',
     description:
-      'Otrzymują pełną kontrolę nad infrastrukturą w jednym miejscu. ALL in KAYON łączy dane z wielu obiektów w jeden system – wszystko, od liczników po alerty i koszty, dostępne jest w czasie rzeczywistym i zawsze pod ręką.',
+      'Otrzymują pełną kontrolę nad infrastrukturą w jednym miejscu. ALL in KAYON łączy dane z wielu obiektów – wszystko, od liczników po alerty i koszty, dostępne jest w czasie rzeczywistym i zawsze pod ręką.',
   },
   {
     title: 'Zarządcy nieruchomości',
     description:
-      'Mają pewność nieprzerwanych odczytów i zdalny dostęp do uporządkowanych danych. System umożliwia błyskawiczne raportowanie zużycia, identyfikację nieprawidłowości oraz natychmiastowy dostęp do historii pomiarów – bez ryzyka utraty informacji.',
+      'Mają pewność nieprzerwanych odczytów i zdalny dostęp do uporządkowanych danych. System umożliwia błyskawiczne raportowanie zużycia, identyfikację nieprawidłowości oraz natychmiastowy dostęp do historii pomiarów.',
   },
   {
-    title: 'Wspólnoty i spółdzielnie mieszkaniowe',
+    title: 'Wspólnoty i spółdzielnie',
     description:
-      'Zyskują przejrzystość rozliczeń i łatwość weryfikacji zużycia wśród mieszkańców. Każdy lokator ma dostęp do danych o własnym zużyciu, co odciąża obsługę i ogranicza liczbę zapytań.',
+      'Zyskują przejrzystość rozliczeń i łatwość weryfikacji zużycia wśród mieszkańców. Każdy lokator ma dostęp do danych o własnym zużyciu, co odciąża administrację i redukuje liczbę zapytań.',
   },
 ];
 
 const GreenSection = () => {
-  const [activeCard, setActiveCard] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const prevCard = () => {
-    setActiveCard((prev) => (prev === 0 ? clientCards.length - 1 : prev - 1));
-  };
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      if (window.innerWidth >= 1280) {
+        setVisibleCount(3);
+      } else if (window.innerWidth >= 768) {
+        setVisibleCount(2);
+      } else {
+        setVisibleCount(1);
+      }
+    };
 
-  const nextCard = () => {
-    setActiveCard((prev) => (prev === clientCards.length - 1 ? 0 : prev + 1));
-  };
+    updateVisibleCount();
+    window.addEventListener('resize', updateVisibleCount);
+
+    return () => window.removeEventListener('resize', updateVisibleCount);
+  }, []);
+
+  const maxIndex = Math.max(0, clientCards.length - visibleCount);
+
+  useEffect(() => {
+    setActiveIndex((prev) => Math.min(prev, maxIndex));
+  }, [maxIndex]);
+
+  const slides = useMemo(() => clientCards.slice(activeIndex, activeIndex + visibleCount), [activeIndex, visibleCount]);
 
   return (
     <section id="oferta" className="relative overflow-hidden bg-gradient-to-r from-[#2F8E5C] via-[#2F8E5C] to-[#4ABF73] py-24 text-white">
@@ -62,36 +80,43 @@ const GreenSection = () => {
             </div>
           </div>
           <div className="space-y-8">
-            <motion.div
-              key={clientCards[activeCard].title}
-              className="rounded-[32px] bg-white text-primary shadow-lg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-            >
-              <div className="space-y-5 px-8 py-10">
-                <h3 className="text-lg font-semibold">{clientCards[activeCard].title}</h3>
-                <p className="text-sm leading-relaxed text-primary/80 md:text-base">{clientCards[activeCard].description}</p>
-              </div>
-            </motion.div>
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {slides.map((card) => (
+                <motion.div
+                  key={card.title}
+                  className="flex h-full flex-col justify-between rounded-[32px] bg-white text-primary px-6 py-8 shadow-lg"
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-semibold">{card.title}</h3>
+                    <p className="text-sm leading-relaxed text-primary/80 md:text-base">{card.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                {clientCards.map((_, index) => (
+                {Array.from({ length: maxIndex + 1 }).map((_, index) => (
                   <button
                     key={index}
                     type="button"
-                    onClick={() => setActiveCard(index)}
-                    className={`h-2 w-2 rounded-full transition-colors ${index === activeCard ? 'bg-white' : 'bg-white/40'}`}
-                    aria-label={`Pokaż grupę klientów ${index + 1}`}
+                    onClick={() => setActiveIndex(index)}
+                    className={`h-2 w-2 rounded-full transition-colors ${
+                      index === activeIndex ? 'bg-white' : 'bg-white/40'
+                    }`}
+                    aria-label={`Pokaż grupę ${index + 1}`}
                   />
                 ))}
               </div>
               <div className="flex gap-3">
                 <button
                   type="button"
-                  onClick={prevCard}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 text-white transition-colors duration-200 hover:bg-white/10"
+                  onClick={() => setActiveIndex((prev) => Math.max(prev - 1, 0))}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 text-white transition-colors duration-200 hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40"
                   aria-label="Poprzednia grupa klientów"
+                  disabled={activeIndex === 0}
                 >
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M15 6 9 12l6 6" />
@@ -99,9 +124,10 @@ const GreenSection = () => {
                 </button>
                 <button
                   type="button"
-                  onClick={nextCard}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white bg-white text-primary transition-colors duration-200 hover:bg-white/80"
+                  onClick={() => setActiveIndex((prev) => Math.min(prev + 1, maxIndex))}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white bg-white text-primary transition-colors duration-200 hover:bg-white/80 disabled:cursor-not-allowed disabled:bg-white/60"
                   aria-label="Następna grupa klientów"
+                  disabled={activeIndex === maxIndex}
                 >
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="m9 6 6 6-6 6" />
