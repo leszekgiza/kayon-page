@@ -52,13 +52,21 @@ const GreenSection = () => {
     return () => window.removeEventListener('resize', updateVisibleCount);
   }, []);
 
-  const maxIndex = Math.max(0, clientCards.length - visibleCount);
+  const maxIndex = useMemo(() => clientCards.length - 1, []);
+  const effectiveIndex = useMemo(
+    () => Math.min(activeIndex, Math.max(0, clientCards.length - visibleCount)),
+    [activeIndex, visibleCount]
+  );
 
-  useEffect(() => {
-    setActiveIndex((prev) => Math.min(prev, maxIndex));
-  }, [maxIndex]);
+  const trackStyle = useMemo(
+    () => ({
+      width: `${(clientCards.length * 100) / visibleCount}%`,
+      transform: `translateX(-${(effectiveIndex * 100) / clientCards.length}%)`,
+    }),
+    [effectiveIndex, visibleCount]
+  );
 
-  const slides = useMemo(() => clientCards.slice(activeIndex, activeIndex + visibleCount), [activeIndex, visibleCount]);
+  const cardStyle = useMemo(() => ({ width: `${100 / clientCards.length}%` }), []);
 
   return (
     <section id="oferta" className="relative overflow-hidden bg-gradient-to-r from-[#2F8E5C] via-[#2F8E5C] to-[#4ABF73] py-24 text-white">
@@ -80,25 +88,31 @@ const GreenSection = () => {
             </div>
           </div>
           <div className="space-y-8">
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {slides.map((card) => (
-                <motion.div
-                  key={card.title}
-                  className="flex h-full flex-col justify-between rounded-[32px] bg-white text-primary px-6 py-8 shadow-lg"
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-semibold">{card.title}</h3>
-                    <p className="text-sm leading-relaxed text-primary/80 md:text-base">{card.description}</p>
+            <div className="overflow-hidden">
+              <motion.div
+                style={trackStyle}
+                className="flex gap-6"
+                initial={false}
+                animate={{ transform: trackStyle.transform }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
+              >
+                {clientCards.map((card) => (
+                  <div
+                    key={card.title}
+                    style={cardStyle}
+                    className="flex-shrink-0 rounded-[32px] bg-white px-6 py-8 text-primary shadow-lg"
+                  >
+                    <div className="space-y-4">
+                      <h3 className="text-lg font-semibold">{card.title}</h3>
+                      <p className="text-sm leading-relaxed text-primary/80 md:text-base">{card.description}</p>
+                    </div>
                   </div>
-                </motion.div>
-              ))}
+                ))}
+              </motion.div>
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+                {clientCards.map((_, index) => (
                   <button
                     key={index}
                     type="button"
