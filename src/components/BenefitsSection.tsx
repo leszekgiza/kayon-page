@@ -2,68 +2,60 @@
 
 import { motion } from 'framer-motion';
 
+const benefits = [
+  { title: 'Co to oznacza w praktyce?' },
+  { title: 'Brak przestojów i awarii' },
+  { title: 'Oszczędność czasu przy instalacji' },
+  { title: 'Proste zarządzanie dużymi zbiorami danych' },
+  { title: 'Pełna kompatybilność i elastyczność' },
+];
+
+const BenefitIcon = () => (
+  <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full border border-black/20 bg-black/80 text-white shadow">
+    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 6v12m6-6H6" />
+    </svg>
+  </div>
+);
+
 const BenefitsSection = () => {
-  const benefits = [
-    { title: 'Co to oznacza w praktyce?' },
-    { title: 'Brak przestojów i awarii' },
-    { title: 'Oszczędność czasu przy instalacji' },
-    { title: 'Proste zarządzanie dużymi zbiorami danych' },
-    { title: 'Pełna kompatybilność i elastyczność' },
-  ];
-
   return (
-    <section className="section-padding bg-accent-gold" id="korzysci">
+    <section className="bg-[#E8A33C] py-24 text-primary" id="jak-dzialamy">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left Column */}
-          <div>
-            {/* Label */}
-            <div className="inline-block px-6 py-2 bg-white/30 rounded-full mb-6 md:mb-8">
-              <span className="text-primary font-bold text-sm">Jak działamy?</span>
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+          <div className="space-y-6 text-black">
+            <div className="inline-flex w-max items-center rounded-full border border-black/20 bg-white/40 px-6 py-2 text-sm font-semibold">
+              Jak działamy?
             </div>
-
-            {/* Title */}
-            <h2 className="text-2xl md:text-3xl lg:text-[40px] leading-[1.2] font-bold text-primary mb-6 md:mb-8">
+            <h2 className="text-3xl leading-tight md:text-[40px]">
               Dostarczamy urządzenia i serwis, które minimalizują koszty
             </h2>
-
-            {/* Description Box */}
-            <div className="bg-white/20 border-2 border-white/40 rounded-3xl p-6 md:p-8">
-              <p className="text-sm md:text-base text-primary leading-relaxed">
-                Rozwiązania Kayon są projektowane tak, by każdy uczestnik łańcucha interesariuszy — od dystrybutora, przez instalatora, po zarządcę i mieszkańca nieruchomości — zyskał realne oszczędności, zmniejszenie wydatków, mniej pracy operacyjnej i większą kontrolę.
-              </p>
-            </div>
+            <p className="max-w-xl text-sm leading-relaxed text-black/70 md:text-base">
+              Rozwiązania Kayon są projektowane tak, by każdy uczestnik łańcucha interesariuszy — od dystrybutora, przez instalatora, po
+              zarządcę i mieszkańca nieruchomości — zyskał realne oszczędności, zmniejszenie wydatków, mniej pracy operacyjnej i większą kontrolę.
+            </p>
           </div>
-
-          {/* Right Column - Benefits Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="flex flex-col items-start"
-              >
-                {/* Icon */}
-                <div className="w-12 h-12 md:w-14 md:h-14 mb-3 md:mb-4 flex items-center justify-center bg-neutral-gray rounded-full">
-                  <svg className="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                  </svg>
+          <div>
+            <motion.div
+              className="grid gap-6 md:grid-cols-2"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6 }}
+            >
+              {benefits.map((benefit) => (
+                <div key={benefit.title} className="flex flex-col rounded-[28px] bg-white/70 px-6 py-6 shadow">
+                  <BenefitIcon />
+                  <h3 className="text-base font-semibold text-black">{benefit.title}</h3>
+                  <button className="mt-4 inline-flex w-max items-center gap-2 rounded-full bg-black px-4 py-2 text-xs font-semibold text-white transition-colors duration-200 hover:bg-black/80">
+                    Read more
+                    <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
+                    </svg>
+                  </button>
                 </div>
-
-                {/* Title */}
-                <h3 className="text-base md:text-lg font-bold text-primary mb-3 md:mb-4">
-                  {benefit.title}
-                </h3>
-
-                {/* Button */}
-                <button className="px-5 py-2 md:px-6 md:py-2.5 bg-primary text-white rounded-full hover:bg-primary-light transition-colors duration-200 font-bold text-sm">
-                  Read more
-                </button>
-              </motion.div>
-            ))}
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>

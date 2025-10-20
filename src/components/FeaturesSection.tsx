@@ -2,48 +2,49 @@
 
 import { motion } from 'framer-motion';
 
-const FeaturesSection = () => {
-  const features = [
-    {
-      title: 'Doświadczenie, które buduje zaufanie',
-    },
-    {
-      title: 'Technologia gotowa na przyszłość',
-    },
-    {
-      title: 'Kayon zyskuje uznanie w całej Europie',
-    },
-  ];
+const features = [
+  {
+    title: 'Doświadczenie, które buduje zaufanie',
+    description: 'Setki wdrożeń, które pozwoliły nam dopracować technologię na miarę oczekiwań rynku.',
+  },
+  {
+    title: 'Technologia gotowa na przyszłość',
+    description: 'Urządzenia spełniające normy, które staną się obowiązkowe dopiero w nadchodzących latach.',
+  },
+  {
+    title: 'Kayon zyskuje uznanie w całej Europie',
+    description: 'Partnerzy z wielu krajów wybierają KAYON jako standard pomiarów i zarządzania energią.',
+  },
+];
 
+const FeaturesSection = () => {
   return (
-    <section className="section-padding bg-neutral-gray-light" id="o-nas">
+    <section id="dla-kogo" className="relative bg-gradient-to-r from-[#F2F2F2] via-[#EAEAEA] to-[#F2F2F2] py-20 md:py-28">
       <div className="container-custom">
-        {/* Features Grid - 3 cols on desktop, 1 col on mobile */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid gap-8 md:grid-cols-3">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
+              className="relative flex h-full flex-col justify-between rounded-[48px] border border-white/40 bg-white/60 px-10 py-12 shadow-sm backdrop-blur"
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.15, duration: 0.5 }}
-              className="flex flex-col items-start"
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              {/* Icon - simple gray circle with checkmark */}
-              <div className="w-14 h-14 md:w-16 md:h-16 mb-4 md:mb-6 flex items-center justify-center bg-neutral-gray rounded-full">
-                <svg className="w-7 h-7 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                </svg>
+              <div>
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black/80 text-white shadow-lg">
+                  <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="mb-4 text-xl font-semibold text-primary md:text-2xl">{feature.title}</h3>
+                <p className="text-sm text-primary/80 md:text-base">{feature.description}</p>
               </div>
-
-              {/* Title */}
-              <h3 className="text-xl md:text-2xl font-bold text-primary mb-4 md:mb-6">
-                {feature.title}
-              </h3>
-
-              {/* Button */}
-              <button className="px-6 py-2.5 md:py-3 bg-primary text-white rounded-full hover:bg-primary-light transition-colors duration-200 font-bold text-sm">
+              <button className="mt-10 inline-flex w-max items-center gap-2 rounded-full bg-black px-6 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/80">
                 Read more
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
+                </svg>
               </button>
             </motion.div>
           ))}

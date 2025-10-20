@@ -1,8 +1,10 @@
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
-import BenefitsSection from '@/components/BenefitsSection';
 import GreenSection from '@/components/GreenSection';
+import BenefitsSection from '@/components/BenefitsSection';
+import OfferSection from '@/components/OfferSection';
+import ProductsSection from '@/components/ProductsSection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -12,8 +14,10 @@ export default function Home() {
       <main>
         <HeroSection />
         <FeaturesSection />
-        <BenefitsSection />
         <GreenSection />
+        <BenefitsSection />
+        <OfferSection />
+        <ProductsSection />
       </main>
       <Footer />
     </>

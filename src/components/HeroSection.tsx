@@ -1,85 +1,69 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import KayonLogo from './KayonLogo';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-neutral-white overflow-hidden">
-      {/* Background pattern from Figma */}
-      <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-cover opacity-40 pointer-events-none" aria-hidden="true" />
+    <section className="relative flex min-h-screen flex-col justify-end overflow-hidden">
+      <div className="absolute inset-0">
+        <Image
+          src="/hero-bg.png"
+          alt="KAYON background"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/45" />
+      </div>
 
-      {/* Background decorative circles - large subtle circles */}
-      <div className="hidden lg:block absolute -left-64 top-16 w-[1420px] h-[494px] rounded-[247px] border-2 border-neutral-gray-light opacity-40 transform -rotate-3" />
-      <div className="hidden lg:block absolute left-1/4 top-1/3 w-[800px] h-[350px] rounded-[175px] border-2 border-neutral-gray-light opacity-30" />
+      <div className="pointer-events-none absolute -left-32 top-16 hidden h-40 w-40 rotate-45 bg-accent-blue md:block" />
+      <div className="pointer-events-none absolute -right-24 top-20 hidden h-40 w-40 -rotate-12 bg-accent-gold md:block" />
+      <div className="pointer-events-none absolute left-1/2 top-1/3 hidden h-[620px] w-[1200px] -translate-x-1/2 rounded-[300px] border border-white/20 md:block" />
+      <div className="pointer-events-none absolute left-1/2 bottom-[24%] hidden h-32 w-6 -translate-x-1/2 rounded-full bg-accent-green md:block" />
 
-      {/* Decorative colored bars (AIM instance from Figma) */}
-      {/* Blue bar - top left corner (148x147) */}
-      <div className="hidden lg:block absolute -left-8 -top-8 w-36 h-36 bg-accent-blue rounded-[50px] opacity-90" />
-
-      {/* Orange bar - top right corner (147x147) */}
-      <div className="hidden lg:block absolute right-4 -top-8 w-36 h-36 bg-accent-gold rounded-[50px] opacity-90" />
-
-      {/* Green vertical bar - bottom left (44x159) */}
-      <div className="hidden lg:block absolute left-1/4 bottom-32 w-11 h-40 bg-accent-green rounded-[20px]" />
-
-      <div className="container-custom relative z-10 pt-32 pb-24">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center">
-          {/* Logo - only on desktop */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="hidden lg:flex justify-center items-center"
-          >
-            <KayonLogo className="h-20 w-auto" />
-          </motion.div>
-
-          {/* Content - full width on mobile */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6 lg:space-y-8"
-          >
-            {/* Label tag */}
-            <div className="inline-block px-6 py-2 bg-neutral-gray-light rounded-full">
-              <span className="text-primary font-bold text-xs md:text-sm">Dlaczego KAYON?</span>
-            </div>
-
-            {/* Main heading */}
-            <h1 className="text-2xl md:text-3xl lg:text-[40px] leading-[1.2] font-bold text-primary">
-              W świecie, w którym technologia nadaje tempo zmianom, przewagę zyskują ci, którzy dysponują nią wcześniej.
-            </h1>
-
-            {/* White card with text and button - exact Figma dimensions */}
-            <div className="bg-white border border-neutral-gray-light rounded-[30px] p-6 md:p-8 max-w-2xl">
-              <p className="text-sm md:text-base text-primary mb-6 leading-relaxed">
-                Nasze systemy zdalnego odczytu już dziś spełniają unijne standardy, które staną się obowiązkiem dopiero w 2027 roku.
-              </p>
-
-              <button className="px-6 py-3 bg-primary text-white rounded-full hover:bg-primary-light transition-colors duration-200 font-bold text-xs md:text-sm">
-                Read more
-              </button>
-            </div>
-
-            {/* Scroll button - exact 57x57px from Figma */}
+      <div className="relative z-10 w-full py-24 md:py-32">
+        <div className="container-custom">
+          <div className="flex flex-col items-center text-center text-white md:items-end md:text-right">
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="pt-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="w-full max-w-3xl rounded-[160px] border border-white/20 bg-white/10 px-10 py-12 backdrop-blur"
             >
-              <button
-                className="w-14 h-14 bg-accent-blue rounded-full flex items-center justify-center text-white hover:bg-accent-blue/90 transition-colors shadow-md"
-                aria-label="Scroll down"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </button>
+              <div className="flex flex-col items-center gap-6 md:items-end">
+                <KayonLogo className="h-12 w-auto" />
+                <h1 className="text-2xl leading-snug md:text-3xl lg:text-[42px] lg:leading-tight">
+                  W&nbsp;świecie, w&nbsp;którym technologia nadaje tempo zmianom, przewagę zyskują ci, którzy dysponują nią wcześniej.
+                </h1>
+                <div className="flex w-full flex-col gap-4 rounded-[36px] border border-white/40 bg-black/40 px-8 py-6 text-left md:max-w-md md:text-left">
+                  <p className="text-sm leading-relaxed md:text-base">
+                    Nasze systemy zdalnego odczytu już dziś spełniają unijne standardy, które staną się obowiązkiem dopiero w&nbsp;2027 roku.
+                  </p>
+                  <button className="inline-flex w-max items-center gap-3 rounded-full border border-white/50 px-5 py-2 text-sm font-semibold transition-colors duration-200 hover:bg-white/10">
+                    <span>Read more</span>
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </motion.div>
-          </motion.div>
+
+            <motion.button
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="mt-10 flex h-14 w-14 items-center justify-center rounded-full bg-accent-blue text-white shadow-xl transition-colors duration-200 hover:bg-accent-blue/90"
+              aria-label="Scroll down"
+            >
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v14m0 0-6-6m6 6 6-6" />
+              </svg>
+            </motion.button>
+          </div>
         </div>
       </div>
     </section>
