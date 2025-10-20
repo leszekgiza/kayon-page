@@ -5,19 +5,28 @@ import { motion } from 'framer-motion';
 const productGroups = [
   {
     title: 'Wodomierze',
-    items: ['Wiehrte', 'Madallena', 'Wassergeräte', 'SonicNano (GWF)', 'Apator Smart'],
+    items: ['Wehrle', 'Maddalena', 'Wassergeräte', 'SonicoNano (GWF)', 'Apator Smart'],
   },
   {
     title: 'Ciepłomierze',
-    items: ['Engelman Sensonic', 'Madallena MicroClima', 'RC12 Polmeter'],
+    items: ['Engelman SensoStar', 'Maddalena MicroClima', 'RC12 PloMeter'],
   },
   {
     title: 'Moduły komunikacyjne',
-    items: ['Modularis One', 'WMbus Smart+', 'MiBus Smart+', 'WMbus MicroClima', 'WMbus RC12'],
+    items: ['Modularis One', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
   },
   {
     title: 'Systemy i platformy',
-    items: ['Aplikacje Web', 'Platforma ALL in KAYON', 'Portal Dystrybutora', 'Dashboard Technologiczny'],
+    items: [
+      'Aplikacja mobilna Route One',
+      'Platforma OpenMetering (2WayCom, FOTA)',
+      'Portal dystrybutora',
+      'Dashboard technologiczny',
+    ],
+  },
+  {
+    title: 'Infrastruktura',
+    items: ['Range One', 'Koncentrator AC', 'Koncentrator BAT', 'Repeater'],
   },
 ];
 
@@ -32,7 +41,7 @@ const ProductsSection = () => {
             </div>
             <h2 className="text-3xl leading-tight md:text-[40px]">Produkty wyznaczające nowy standard pomiarów</h2>
             <p className="max-w-lg text-sm leading-relaxed text-white/70 md:text-base">
-              Oferujemy nie tylko technologię — dostarczamy narzędzia do oszczędności, automatyzacji i kontroli. Nasze produkty tworzą spójny
+              Oferujemy nie tylko technologię – dostarczamy narzędzia do oszczędności, automatyzacji i kontroli. Nasze produkty tworzą spójny
               system ALL in KAYON, w którym każdy element współpracuje z pozostałymi.
             </p>
             <p className="text-xs uppercase tracking-wide text-white/50">
@@ -61,7 +70,7 @@ const ProductsSection = () => {
                     </ul>
                   </div>
                   <button className="mt-6 inline-flex w-max items-center gap-2 rounded-full border border-white/30 px-5 py-2 text-xs font-semibold text-white transition-colors duration-200 hover:bg-white/10">
-                    Read more
+                    Dowiedz się więcej
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
                     </svg>
@@ -69,10 +78,10 @@ const ProductsSection = () => {
                 </div>
               ))}
             </motion.div>
-            <div className="flex items-center justify-end gap-3">
+            <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                {[0, 1, 2, 3].map((dot) => (
-                  <span key={dot} className={`h-2 w-2 rounded-full ${dot === 2 ? 'bg-white' : 'bg-white/30'}`} />
+                {[0, 1, 2, 3, 4].map((dot) => (
+                  <span key={dot} className={`h-2 w-2 rounded-full ${dot === 2 ? 'bg-white' : 'bg-white/30'}`} aria-hidden />
                 ))}
               </div>
               <div className="flex gap-3">

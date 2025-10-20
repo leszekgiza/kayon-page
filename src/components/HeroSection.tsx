@@ -6,15 +6,15 @@ import Image from 'next/image';
 import KayonLogo from './KayonLogo';
 
 const headline =
-  'W \u015bwiecie, w kt\u00f3rym technologia nadaje tempo zmianom, przewag\u0119 zyskuj\u0105 ci, kt\u00f3rzy dysponuj\u0105 ni\u0105 wcze\u015bniej.';
+  'W świecie, w którym technologia nadaje tempo zmianom, przewagę zyskują ci, którzy dysponują nią wcześniej.';
 const bodyCopy =
-  'Nasze systemy zdalnego odczytu ju\u017c dzi\u015b spe\u0142niaj\u0105 unijne standardy, kt\u00f3re stan\u0105 si\u0119 obowi\u0105zkiem dopiero w 2027 roku.';
+  'Nasze systemy zdalnego odczytu wody i ciepła już dziś działają zgodnie z unijnymi regulacjami, które zaczną obowiązywać w 2027 roku.';
 const modalLead =
-  'Projektujemy i produkujemy nowoczesne systemy pomiarowe, kt\u00f3re wyprzedzaj\u0105 zmiany technologiczne i regulacyjne. Ju\u017c teraz spe\u0142niamy wymogi dyrektywy EED 2023/1791, zobowi\u0105zuj\u0105cej administrator\u00f3w, zarz\u0105dc\u00f3w i wsp\u00f3lnoty do zdalnego odczytu licznik\u00f3w.';
+  'Projektujemy nasze rozwiązania z myślą o wszystkich uczestnikach rynku – dystrybutorach, instalatorach, zarządcach nieruchomości, deweloperach, spółdzielniach, wspólnotach oraz pojedynczych lokatorach.';
 const modalCopyOne =
-  'Nasze rozwi\u0105zania ju\u017c od 2017 roku dzia\u0142aj\u0105 z powodzeniem w Polsce, od kilku lat w Czechach, Ukrainie oraz w krajach Europy Zachodniej, gdzie dost\u0119pne s\u0105 dzi\u0119ki szwajcarskiej firmie GWF AG \u2013 liderowi technologii pomiarowych.';
+  'Każdy zyskuje realną korzyść: gwarancję niezawodności, łatwiejszy montaż, stabilność działania, stały dostęp do danych, mniejsze ryzyko błędów w rozliczeniach oraz niższe rachunki.';
 const modalCopyTwo =
-  'Sprawdzaj\u0105 si\u0119 wsz\u0119dzie tam, gdzie liczy si\u0119 precyzja, prostota instalacji i niezawodno\u015b\u0107. To technologia, kt\u00f3ra daje realne oszcz\u0119dno\u015bci: wody, ciep\u0142a, czasu i oczywi\u015bcie pieni\u0119dzy, ale te\u017c pewno\u015b\u0107, \u017ce swoj\u0105 przysz\u0142o\u015b\u0107 masz ju\u017c dzi\u015b pod kontrol\u0105.';
+  'Dzięki urządzeniom pomiarowym i systemom Kayon możliwe jest nie tylko precyzyjne mierzenie zużycia wody i ciepła, ale też trwałe ograniczenie kosztów i zużycia energii. W efekcie daje to stabilne i harmonijne funkcjonowanie wszystkich zainteresowanych tym osób i podmiotów.';
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

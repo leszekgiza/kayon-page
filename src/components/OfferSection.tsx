@@ -6,19 +6,19 @@ const cards = [
   {
     title: 'Produkty, które działają na korzyść użytkownika',
     bullets: [
-      'działają długo — nawet 15 lat na baterii,',
+      'działają długo – nawet 15 lat na baterii,',
       'są niezawodne w trudnych warunkach,',
-      'łatwe w montażu i konfiguracji,',
-      'odporne na błędy instalacyjne.',
+      'są łatwe w montażu i konfiguracji (bez użycia specjalistycznych narzędzi),',
+      'są odporne na błędy instalacyjne.',
     ],
   },
   {
-    title: 'Jeden system — wszystkie elementy współpracują',
+    title: 'Jeden system ALL in KAYON – współpraca wszystkich elementów',
     bullets: [
-      'zdalny odczyt w czasie rzeczywistym,',
-      'automatyczne alerty i raporty,',
-      'pełna kontrola przez OTA,',
-      'mniej stresu i mniej pracy dla instalatorów i administratorów.',
+      'zdalny odczyt w czasie rzeczywistym, bez wizyt na miejscu,',
+      'automatyczne alerty i raporty, które oszczędzają czas,',
+      'pełna kontrola i zdalne aktualizacje oprogramowania (OTA – Over-the-Air updates),',
+      'mniej stresu i mniej pracy dla instalatorów, administratorów i użytkowników.',
     ],
   },
 ];
@@ -34,7 +34,7 @@ const OfferSection = () => {
             </div>
             <h2 className="text-3xl leading-tight md:text-[40px]">Łączymy nowoczesne produkty z systemowym podejściem</h2>
             <p className="max-w-xl text-sm leading-relaxed text-white/80 md:text-base">
-              Usprawniamy codzienne funkcjonowanie i gwarantujemy zadowolenie wszystkim zaangażowanym stronom — od dystrybutora po
+              Usprawniamy codzienne funkcjonowanie i gwarantujemy zadowolenie wszystkim zaangażowanym stronom – od dystrybutora po
               użytkownika końcowego.
             </p>
           </div>
