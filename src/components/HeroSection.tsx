@@ -133,7 +133,7 @@ const HeroSection = () => {
                 </svg>
               </button>
               <h2 id="hero-modal-title" className="text-2xl font-semibold text-primary">
-                Rozwinięcie
+                {'Rozwini\u0119cie'}
               </h2>
               <p className="mt-6 text-base font-semibold leading-relaxed text-primary">{modalLead}</p>
               <p className="mt-6 text-base leading-relaxed text-primary">{modalCopyOne}</p>
@@ -142,22 +142,6 @@ const HeroSection = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.25, duration: 0.6 }}
-        className="pointer-events-none absolute bottom-16 left-1/2 flex -translate-x-1/2 flex-col items-center gap-3"
-      >
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/80 text-primary shadow-lg">
-          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v14m0 0-6-6m6 6 6-6" />
-          </svg>
-        </div>
-        <div className="h-16 w-2 rounded-full border border-white/40 bg-white/10">
-          <span className="mx-auto mt-1 block h-8 w-1 rounded-full bg-accent-blue" />
-        </div>
-      </motion.div>
     </section>
   );
 };
