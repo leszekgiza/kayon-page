@@ -53,18 +53,24 @@ const Navigation = () => {
             <button
               type="button"
               aria-label="Logowanie"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/50 bg-transparent text-white transition-colors duration-200 hover:border-white"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/55 bg-transparent text-white transition-colors duration-200 hover:border-white"
             >
-              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <svg className="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path
-                  d="M14.5 6h4a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5h-4"
-                  strokeWidth="1.6"
+                  d="M14.8 6h3.2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.2"
+                  strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
                 <path
-                  d="M5 12h10M12 9l3 3-3 3"
-                  strokeWidth="1.6"
+                  d="M6 12h9"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M12.5 9.5 15 12l-2.5 2.5"
+                  strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
