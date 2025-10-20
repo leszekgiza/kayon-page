@@ -33,7 +33,12 @@ const clientCards = [
 
 const GreenSection = () => {
   const [visibleCount, setVisibleCount] = useState(1);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const baseCards = useMemo(() => clientCards, []);
+  const baseLength = baseCards.length;
+  const extendedCards = useMemo(() => [...baseCards, ...baseCards, ...baseCards], [baseCards]);
+  const extendedLength = extendedCards.length;
+  const [index, setIndex] = useState(baseLength);
+  const [animateTransition, setAnimateTransition] = useState(true);
 
   useEffect(() => {
     const updateVisibleCount = () => {
@@ -52,21 +57,47 @@ const GreenSection = () => {
     return () => window.removeEventListener('resize', updateVisibleCount);
   }, []);
 
-  const maxIndex = useMemo(() => clientCards.length - 1, []);
-  const effectiveIndex = useMemo(
-    () => Math.min(activeIndex, Math.max(0, clientCards.length - visibleCount)),
-    [activeIndex, visibleCount]
-  );
+  useEffect(() => {
+    const needsReset =
+      index >= baseLength * 2 ? -baseLength : index < baseLength ? baseLength : 0;
 
-  const trackStyle = useMemo(
-    () => ({
-      width: `${(clientCards.length * 100) / visibleCount}%`,
-      transform: `translateX(-${(effectiveIndex * 100) / clientCards.length}%)`,
-    }),
-    [effectiveIndex, visibleCount]
-  );
+    if (needsReset !== 0) {
+      const timeout = setTimeout(() => {
+        setAnimateTransition(false);
+        setIndex((prev) => prev + needsReset);
+      }, 450);
+      return () => clearTimeout(timeout);
+    }
 
-  const cardStyle = useMemo(() => ({ width: `${100 / clientCards.length}%` }), []);
+    return undefined;
+  }, [index, baseLength]);
+
+  useEffect(() => {
+    if (!animateTransition) {
+      const raf = requestAnimationFrame(() => setAnimateTransition(true));
+      return () => cancelAnimationFrame(raf);
+    }
+    return undefined;
+  }, [animateTransition]);
+
+  const trackStyle = useMemo(() => {
+    const translatePercent = (index * 100) / extendedLength;
+    return {
+      width: `${(extendedLength * 100) / visibleCount}%`,
+      transform: `translateX(-${translatePercent}%)`,
+    };
+  }, [index, extendedLength, visibleCount]);
+
+  const cardStyle = useMemo(() => ({ width: `${100 / extendedLength}%` }), [extendedLength]);
+
+  const activeDot = useMemo(() => {
+    const normalized = (index - baseLength) % baseLength;
+    return (normalized + baseLength) % baseLength;
+  }, [index, baseLength]);
+
+  const handleNext = () => setIndex((prev) => prev + 1);
+  const handlePrev = () => setIndex((prev) => prev - 1);
+  const handleDot = (dotIndex: number) => setIndex(baseLength + dotIndex);
 
   return (
     <section id="oferta" className="relative overflow-hidden bg-gradient-to-r from-[#2F8E5C] via-[#2F8E5C] to-[#4ABF73] py-24 text-white">
@@ -94,9 +125,13 @@ const GreenSection = () => {
                 className="flex gap-6"
                 initial={false}
                 animate={{ transform: trackStyle.transform }}
-                transition={{ duration: 0.4, ease: 'easeInOut' }}
+                transition={
+                  animateTransition
+                    ? { duration: 0.45, ease: 'easeInOut' }
+                    : { duration: 0 }
+                }
               >
-                {clientCards.map((card) => (
+                {extendedCards.map((card, cardIndex) => (
                   <div
                     key={card.title}
                     style={cardStyle}
@@ -112,25 +147,24 @@ const GreenSection = () => {
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                {clientCards.map((_, index) => (
+                {clientCards.map((_, dotIndex) => (
                   <button
-                    key={index}
+                    key={dotIndex}
                     type="button"
-                    onClick={() => setActiveIndex(index)}
+                    onClick={() => handleDot(dotIndex)}
                     className={`h-2 w-2 rounded-full transition-colors ${
-                      index === activeIndex ? 'bg-white' : 'bg-white/40'
+                      dotIndex === activeDot ? 'bg-white' : 'bg-white/40'
                     }`}
-                    aria-label={`Pokaż grupę ${index + 1}`}
+                    aria-label={`Pokaż grupę ${dotIndex + 1}`}
                   />
                 ))}
               </div>
               <div className="flex gap-3">
                 <button
                   type="button"
-                  onClick={() => setActiveIndex((prev) => Math.max(prev - 1, 0))}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 text-white transition-colors duration-200 hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40"
+                  onClick={handlePrev}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 text-white transition-colors duration-200 hover:bg-white/10"
                   aria-label="Poprzednia grupa klientów"
-                  disabled={activeIndex === 0}
                 >
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M15 6 9 12l6 6" />
@@ -138,10 +172,9 @@ const GreenSection = () => {
                 </button>
                 <button
                   type="button"
-                  onClick={() => setActiveIndex((prev) => Math.min(prev + 1, maxIndex))}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white bg-white text-primary transition-colors duration-200 hover:bg-white/80 disabled:cursor-not-allowed disabled:bg-white/60"
+                  onClick={handleNext}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white bg-white text-primary transition-colors duration-200 hover:bg-white/80"
                   aria-label="Następna grupa klientów"
-                  disabled={activeIndex === maxIndex}
                 >
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="m9 6 6 6-6 6" />
