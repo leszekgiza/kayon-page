@@ -1,15 +1,45 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import KayonLogo from './KayonLogo';
 
 const headline =
-  'W świecie, w którym technologia nadaje tempo zmianom, przewagę zyskują ci, którzy dysponują nią wcześniej.';
+  'W \u015bwiecie, w kt\u00f3rym technologia nadaje tempo zmianom, przewag\u0119 zyskuj\u0105 ci, kt\u00f3rzy dysponuj\u0105 ni\u0105 wcze\u015bniej.';
 const bodyCopy =
-  'Nasze systemy zdalnego odczytu już dziś spełniają unijne standardy, które staną się obowiązkiem dopiero w 2027 roku.';
+  'Nasze systemy zdalnego odczytu ju\u017c dzi\u015b spe\u0142niaj\u0105 unijne standardy, kt\u00f3re stan\u0105 si\u0119 obowi\u0105zkiem dopiero w 2027 roku.';
+const modalLead =
+  'Projektujemy i produkujemy nowoczesne systemy pomiarowe, kt\u00f3re wyprzedzaj\u0105 zmiany technologiczne i regulacyjne. Ju\u017c teraz spe\u0142niamy wymogi dyrektywy EED 2023/1791, zobowi\u0105zuj\u0105cej administrator\u00f3w, zarz\u0105dc\u00f3w i wsp\u00f3lnoty do zdalnego odczytu licznik\u00f3w.';
+const modalCopyOne =
+  'Nasze rozwi\u0105zania ju\u017c od 2017 roku dzia\u0142aj\u0105 z powodzeniem w Polsce, od kilku lat w Czechach, Ukrainie oraz w krajach Europy Zachodniej, gdzie dost\u0119pne s\u0105 dzi\u0119ki szwajcarskiej firmie GWF AG \u2013 liderowi technologii pomiarowych.';
+const modalCopyTwo =
+  'Sprawdzaj\u0105 si\u0119 wsz\u0119dzie tam, gdzie liczy si\u0119 precyzja, prostota instalacji i niezawodno\u015b\u0107. To technologia, kt\u00f3ra daje realne oszcz\u0119dno\u015bci: wody, ciep\u0142a, czasu i oczywi\u015bcie pieni\u0119dzy, ale te\u017c pewno\u015b\u0107, \u017ce swoj\u0105 przysz\u0142o\u015b\u0107 masz ju\u017c dzi\u015b pod kontrol\u0105.';
 
 const HeroSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isModalOpen) {
+      return undefined;
+    }
+
+    const originalOverflow = document.body.style.overflow;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsModalOpen(false);
+      }
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [isModalOpen]);
+
   return (
     <section className="relative min-h-screen overflow-hidden bg-primary text-white">
       <div className="absolute inset-0">
@@ -59,6 +89,7 @@ const HeroSection = () => {
               <p className="text-sm leading-relaxed text-white/90 md:text-base">{bodyCopy}</p>
               <button
                 type="button"
+                onClick={() => setIsModalOpen(true)}
                 className="mt-5 inline-flex items-center gap-3 rounded-full border border-white/50 px-5 py-2 text-sm font-semibold transition-colors duration-200 hover:bg-white/15"
               >
                 Read more
@@ -70,6 +101,47 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      <AnimatePresence initial={false}>
+        {isModalOpen && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4 py-12 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsModalOpen(false)}
+          >
+            <motion.div
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="hero-modal-title"
+              initial={{ opacity: 0, scale: 0.92, y: 24 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.94, y: 20 }}
+              transition={{ duration: 0.25 }}
+              className="relative max-w-3xl rounded-[36px] bg-white px-10 py-12 text-primary shadow-[0_40px_80px_rgba(0,0,0,0.45)] md:px-16 md:py-14"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(false)}
+                className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white transition-colors duration-200 hover:bg-primary-light"
+                aria-label="Zamknij okno"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 6l12 12M18 6 6 18" />
+                </svg>
+              </button>
+              <h2 id="hero-modal-title" className="text-2xl font-semibold text-primary">
+                Rozwinięcie
+              </h2>
+              <p className="mt-6 text-base font-semibold leading-relaxed text-primary">{modalLead}</p>
+              <p className="mt-6 text-base leading-relaxed text-primary">{modalCopyOne}</p>
+              <p className="mt-4 text-base leading-relaxed text-primary">{modalCopyTwo}</p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <motion.div
         initial={{ opacity: 0, y: 12 }}
