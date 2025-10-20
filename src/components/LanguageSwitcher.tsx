@@ -5,14 +5,14 @@ import { LANGUAGE_LABELS, SUPPORTED_LANGUAGES, useLanguage } from "./LanguagePro
 type Variant = "inline" | "menu";
 
 const variantClasses: Record<Variant, string> = {
-  inline: "flex items-center gap-1 rounded-full bg-neutral-gray-light px-2 py-1",
+  inline: "flex items-center gap-1 rounded-full px-2 py-1",
   menu: "flex items-center gap-2",
 };
 
 const baseButtonClasses =
   "px-3 py-1 text-xs font-semibold transition-colors duration-200 rounded-full";
-const activeButtonClasses = "bg-primary text-white";
-const inactiveButtonClasses = "bg-transparent text-primary hover:bg-neutral-gray-light";
+const activeButtonClasses = "bg-white text-primary";
+const inactiveButtonClasses = "bg-transparent text-white/80 hover:bg-white/15";
 
 interface LanguageSwitcherProps {
   variant?: Variant;

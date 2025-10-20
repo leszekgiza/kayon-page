@@ -19,51 +19,57 @@ const Navigation = () => {
     <nav className="absolute left-0 right-0 top-0 z-50">
       <div className="container-custom">
         <div className="flex items-center justify-between gap-4 py-6">
-          <Link href="/" className="hidden rounded-full bg-white/90 p-1 shadow-md md:flex">
-            <KayonMark className="h-12 w-12" />
+          <Link
+            href="/"
+            className="hidden h-12 w-12 items-center justify-center rounded-full bg-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] md:flex"
+            aria-label="KAYON strona główna"
+          >
+            <KayonMark className="h-10 w-10" />
           </Link>
 
-          <div className="hidden items-center gap-3 rounded-full border border-white/30 bg-black/40 px-4 py-2 backdrop-blur md:flex">
+          <div className="hidden items-center gap-3 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-full px-5 py-2 text-sm font-semibold text-white/90 transition-colors duration-200 hover:bg-white/10"
+                className="inline-flex items-center rounded-full border border-white/35 bg-black/35 px-6 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/15"
               >
                 {link.label}
               </Link>
             ))}
           </div>
 
-          <div className="hidden items-center gap-3 md:flex">
+          <div className="hidden items-center gap-2 md:flex">
             <button
               type="button"
               aria-label="Prezentacja"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-black/50 text-white transition-colors duration-200 hover:bg-white/10"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 bg-black/45 text-white transition-colors duration-200 hover:bg-white/15"
             >
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <rect x="4" y="4" width="16" height="16" rx="2" strokeWidth="1.7" />
-                <path d="M9 9h6v6H9z" strokeWidth="1.7" />
+                <rect x="5" y="5" width="14" height="14" rx="2" strokeWidth="1.6" />
+                <path d="M9.5 10.5h5v5h-5z" strokeWidth="1.6" />
               </svg>
             </button>
             <button
               type="button"
               aria-label="Logowanie"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-black/50 text-white transition-colors duration-200 hover:bg-white/10"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 bg-black/45 text-white transition-colors duration-200 hover:bg-white/15"
             >
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M12 5h6a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-6" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M15 12H5m0 0 3-3m-3 3 3 3" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M12 5h6a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-6" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M15 12H5m0 0 3-3m-3 3 3 3" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
-            <LanguageSwitcher variant="inline" />
+            <div className="rounded-full border border-white/35 bg-black/45 px-1 py-1">
+              <LanguageSwitcher variant="inline" />
+            </div>
             <button
               type="button"
               aria-label="Menu"
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-black/80 text-white transition-colors duration-200 hover:bg-black"
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-black/80 text-white transition-colors duration-200 hover:bg-black"
             >
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.7} d="M4 7h16M4 12h16M4 17h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M4 7h16M4 12h16M4 17h16" />
               </svg>
             </button>
           </div>
@@ -71,7 +77,7 @@ const Navigation = () => {
           <button
             onClick={() => setIsOpen((prev) => !prev)}
             className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 text-white md:hidden"
-            aria-label="Toggle menu"
+            aria-label="Przełącz menu"
           >
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
