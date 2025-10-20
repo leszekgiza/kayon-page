@@ -24,19 +24,18 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/45 to-black/15" />
       </div>
 
-      <Image
-        src="/hero-pattern.svg"
-        alt=""
-        fill
-        priority
-        className="pointer-events-none absolute inset-0 object-cover object-center opacity-65 mix-blend-soft-light"
-        sizes="100vw"
-      />
+      <div className="pointer-events-none absolute inset-0 hidden items-start justify-center md:flex">
+        <Image
+          src="/hero-pattern.svg"
+          alt=""
+          width={1120}
+          height={933}
+          priority
+          className="mt-10 w-[90vw] max-w-[1120px] opacity-85"
+        />
+      </div>
 
-      <div className="pointer-events-none absolute left-1/2 top-28 hidden h-[520px] w-[1400px] -translate-x-1/2 rounded-[260px] border border-white/25 md:block" />
-      <span className="pointer-events-none absolute left-[7%] top-10 hidden h-28 w-8 rotate-45 rounded-full bg-accent-blue md:block" />
-      <span className="pointer-events-none absolute right-[9%] top-12 hidden h-28 w-8 -rotate-45 rounded-full bg-accent-gold md:block" />
-      <span className="pointer-events-none absolute left-1/2 bottom-24 hidden h-32 w-6 -translate-x-1/2 rounded-full bg-accent-green md:block" />
+      <div className="pointer-events-none absolute left-1/2 top-32 hidden h-[520px] w-[1120px] -translate-x-1/2 rounded-[260px] border border-white/25 md:block" />
 
       <div className="relative z-10 flex min-h-screen items-end">
         <div className="container-custom w-full pb-24 pt-36 md:pb-32 md:pt-44">
