@@ -5,6 +5,7 @@ import Link from 'next/link';
 import KayonLogo from './KayonLogo';
 import KayonMark from './KayonMark';
 import LanguageSwitcher from './LanguageSwitcher';
+import MenuOverlay from './MenuOverlay';
 
 const navLinks = [
   { label: 'Dla kogo?', href: '#dla-kogo' },
@@ -13,7 +14,8 @@ const navLinks = [
 ];
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isDesktopMenuOpen, setDesktopMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <nav className="absolute left-0 right-0 top-0 z-50">
@@ -22,7 +24,7 @@ const Navigation = () => {
           <Link
             href="/"
             className="hidden h-12 w-12 items-center justify-center rounded-full bg-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] md:flex"
-            aria-label="KAYON strona główna"
+            aria-label="KAYON strona glowna"
           >
             <KayonMark className="h-10 w-10" />
           </Link>
@@ -62,18 +64,8 @@ const Navigation = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
-                <path
-                  d="M6 12h9"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M12.5 9.5 15 12l-2.5 2.5"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+                <path d="M6 12h9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M12.5 9.5 15 12l-2.5 2.5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
             <div className="rounded-full border border-white/35 bg-black/45 px-1 py-1">
@@ -82,6 +74,7 @@ const Navigation = () => {
             <button
               type="button"
               aria-label="Menu"
+              onClick={() => setDesktopMenuOpen(true)}
               className="flex h-11 w-11 items-center justify-center rounded-full bg-black/80 text-white transition-colors duration-200 hover:bg-black"
             >
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -91,12 +84,12 @@ const Navigation = () => {
           </div>
 
           <button
-            onClick={() => setIsOpen((prev) => !prev)}
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
             className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 text-white md:hidden"
-            aria-label="Przełącz menu"
+            aria-label="Przelacz menu"
           >
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isOpen ? (
+              {isMobileMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -105,7 +98,7 @@ const Navigation = () => {
           </button>
         </div>
 
-        {isOpen && (
+        {isMobileMenuOpen && (
           <div className="space-y-4 rounded-3xl border border-white/20 bg-black/75 p-6 text-white backdrop-blur md:hidden">
             <div className="flex items-center justify-between">
               <KayonLogo className="h-10 w-auto text-white" />
@@ -116,7 +109,7 @@ const Navigation = () => {
                 key={link.href}
                 href={link.href}
                 className="block rounded-full border border-white/30 px-4 py-3 text-center text-sm font-semibold hover:bg-white/10"
-                onClick={() => setIsOpen(false)}
+                onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
               </Link>
@@ -144,6 +137,7 @@ const Navigation = () => {
           </div>
         )}
       </div>
+      <MenuOverlay open={isDesktopMenuOpen} onClose={() => setDesktopMenuOpen(false)} />
     </nav>
   );
 };
