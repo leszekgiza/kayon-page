@@ -78,33 +78,6 @@ const ProductsSection = () => {
                 </div>
               ))}
             </motion.div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                {[0, 1, 2, 3, 4].map((dot) => (
-                  <span key={dot} className={`h-2 w-2 rounded-full ${dot === 2 ? 'bg-white' : 'bg-white/30'}`} aria-hidden />
-                ))}
-              </div>
-              <div className="flex gap-3">
-                <button
-                  type="button"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-colors duration-200 hover:bg-white/10"
-                  aria-label="Poprzedni"
-                >
-                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M15 6 9 12l6 6" />
-                  </svg>
-                </button>
-                <button
-                  type="button"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white bg-white text-primary transition-colors duration-200 hover:bg-white/80"
-                  aria-label="Następny"
-                >
-                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="m9 6 6 6-6 6" />
-                  </svg>
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </div>

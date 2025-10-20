@@ -12,9 +12,12 @@ const Footer = () => {
         </div>
         <div className="flex items-center gap-6">
           <a href="#" className="transition-colors duration-200 hover:text-white/90">
-            Terms of service
+            Polityka prywatności
           </a>
-            <a href="#" className="transition-colors duration-200 hover:text-white/90">
+          <a href="#" className="transition-colors duration-200 hover:text-white/90">
+            Regulamin
+          </a>
+          <a href="#" className="transition-colors duration-200 hover:text-white/90">
             Cookies
           </a>
         </div>
