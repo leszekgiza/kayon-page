@@ -29,30 +29,34 @@ const ProductsSection = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6 }}
             >
-              {products.groups.map((group) => (
-                <div key={group.title} className="flex h-full flex-col justify-between rounded-[32px] bg-[#2A2A2A] px-6 py-8 shadow-lg">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{group.title}</h3>
-                    <ul className="mt-4 space-y-2 text-sm text-white/70">
-                      {group.items.map((item) => (
-                        <li key={item} className="flex items-center gap-2">
-                          <span className="inline-flex h-2 w-2 rounded-full bg-white/60" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+              {products.groups.map((group) => {
+                const targetHref = group.slug ? `/produkty/${group.slug}` : '/produkty';
+
+                return (
+                  <div key={group.title} className="flex h-full flex-col justify-between rounded-[32px] bg-[#2A2A2A] px-6 py-8 shadow-lg">
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{group.title}</h3>
+                      <ul className="mt-4 space-y-2 text-sm text-white/70">
+                        {group.items.map((item) => (
+                          <li key={item} className="flex items-center gap-2">
+                            <span className="inline-flex h-2 w-2 rounded-full bg-white/60" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <Link
+                      href={targetHref}
+                      className="mt-6 inline-flex w-max items-center gap-2 rounded-full border border-white/30 px-5 py-2 text-xs font-semibold text-white transition-colors duration-200 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70"
+                    >
+                      {products.ctaLabel}
+                      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
+                      </svg>
+                    </Link>
                   </div>
-                  <Link
-                    href="/produkty"
-                    className="mt-6 inline-flex w-max items-center gap-2 rounded-full border border-white/30 px-5 py-2 text-xs font-semibold text-white transition-colors duration-200 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70"
-                  >
-                    {products.ctaLabel}
-                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
-                    </svg>
-                  </Link>
-                </div>
-              ))}
+                );
+              })}
             </motion.div>
           </div>
         </div>

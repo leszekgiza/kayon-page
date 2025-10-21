@@ -95,6 +95,7 @@ export interface OfferSectionContent {
 export interface ProductsGroupContent {
   title: string;
   items: string[];
+  slug: string;
 }
 
 export interface ProductsSectionContent {
@@ -367,18 +368,22 @@ const pl: ContentStructure = {
     groups: [
       {
         title: 'Wodomierze',
+        slug: 'wodomierze',
         items: ['Wehrle', 'Maddalena', 'Wasser-Geraete', 'GWF Sonico Nano', 'Apator JS Smart+'],
       },
       {
         title: 'Ciepłomierze',
+        slug: 'cieplomierze',
         items: ['Engelman SensoStar', 'Maddalena MicroClima', 'RC12 PloMeter'],
       },
       {
         title: 'Moduły komunikacyjne',
+        slug: 'moduly-komunikacyjne',
         items: ['Modularis ONE', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
       },
       {
         title: 'Systemy i platformy',
+        slug: 'systemy-i-platformy',
         items: [
           'Aplikacja mobilna Route One',
           'Platforma OpenMetering (2WayCom, FOTA)',
@@ -388,6 +393,7 @@ const pl: ContentStructure = {
       },
       {
         title: 'Infrastruktura',
+        slug: 'infrastruktura',
         items: ['Range One', 'Koncentrator AC', 'Koncentrator BAT', 'Repeater'],
       },
     ],
@@ -1109,18 +1115,22 @@ const en: ContentStructure = {
     groups: [
       {
         title: 'Water meters',
+        slug: 'wodomierze',
         items: ['Wehrle', 'Maddalena', 'Wasser-Geraete', 'GWF Sonico Nano', 'Apator JS Smart+'],
       },
       {
         title: 'Heat meters',
+        slug: 'cieplomierze',
         items: ['Engelman SensoStar', 'Maddalena MicroClima', 'RC12 PloMeter'],
       },
       {
         title: 'Communication modules',
+        slug: 'moduly-komunikacyjne',
         items: ['Modularis ONE', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
       },
       {
         title: 'Systems and platforms',
+        slug: 'systemy-i-platformy',
         items: [
           'Route One mobile app',
           'OpenMetering platform (2WayCom, FOTA)',
@@ -1130,6 +1140,7 @@ const en: ContentStructure = {
       },
       {
         title: 'Infrastructure',
+        slug: 'infrastruktura',
         items: ['Range One', 'AC concentrator', 'BAT concentrator', 'Repeater'],
       },
     ],
@@ -1849,18 +1860,22 @@ const de: ContentStructure = {
     groups: [
       {
         title: 'Wasserzaehler',
+        slug: 'wodomierze',
         items: ['Wehrle', 'Maddalena', 'Wasser-Geraete', 'GWF Sonico Nano', 'Apator JS Smart+'],
       },
       {
         title: 'Wärmezähler',
+        slug: 'cieplomierze',
         items: ['Engelman SensoStar', 'Maddalena MicroClima', 'RC12 PloMeter'],
       },
       {
         title: 'Kommunikationsmodule',
+        slug: 'moduly-komunikacyjne',
         items: ['Modularis ONE', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
       },
       {
         title: 'Systeme & Plattformen',
+        slug: 'systemy-i-platformy',
         items: [
           'Route One Mobile App',
           'OpenMetering Plattform (2WayCom, FOTA)',
@@ -1870,6 +1885,7 @@ const de: ContentStructure = {
       },
       {
         title: 'Infrastruktur',
+        slug: 'infrastruktura',
         items: ['Range One', 'AC-Konzentrator', 'BAT-Konzentrator', 'Repeater'],
       },
     ],
