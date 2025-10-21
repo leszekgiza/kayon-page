@@ -106,6 +106,25 @@ export interface ProductsSectionContent {
   ctaLabel: string;
 }
 
+export interface ProductDownloadContent {
+  label: string;
+  href: string;
+}
+
+export interface ProductDetailCardContent {
+  title: string;
+  subtitle?: string;
+  description: string;
+  features: string[];
+  downloads: ProductDownloadContent[];
+  readMoreLabel: string;
+  readMoreHref: string;
+}
+
+export interface ProductDetailsPageContent {
+  cards: ProductDetailCardContent[];
+}
+
 export interface FooterContent {
   legalLinks: NavigationLink[];
   copyright: string;
@@ -120,6 +139,7 @@ export interface ContentStructure {
   benefits: BenefitsSectionContent;
   offer: OfferSectionContent;
   products: ProductsSectionContent;
+  productPage: ProductDetailsPageContent;
   footer: FooterContent;
 }
 
@@ -351,6 +371,95 @@ const pl: ContentStructure = {
     ],
     ctaLabel: 'Dowiedz się więcej',
   },
+
+productPage: {
+  cards: [
+    {
+      title: 'Wherle',
+      subtitle: 'Lorem ipsum',
+      description:
+        'Modularis One to zaawansowany, kompaktowy modul radiowy w standardzie wM-Bus 868 MHz, przeznaczony do zdalnego odczytu wodomierzy Modularis.',
+      features: [
+        'Dwustronna zdalna komunikacja do zmiany konfiguracji, kasowania alarmow i diagnostyki',
+        'Kompatybilny z wieloma markami wodomierzy Modularis i innymi producentami',
+        'Rownolegla transmisja radiotelegramow walk-by i AMR (stacjonarny odczyt)',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+    {
+      title: 'Maddalena',
+      description:
+        'Modularis One to zaawansowany, kompaktowy modul radiowy w standardzie wM-Bus 868 MHz, przeznaczony do zdalnego odczytu wodomierzy Modularis.',
+      features: [
+        'Dwustronna zdalna komunikacja do zmiany konfiguracji, kasowania alarmow i diagnostyki',
+        'Kompatybilny z wieloma markami wodomierzy Modularis i innymi producentami',
+        'Rownolegla transmisja radiotelegramow walk-by i AMR (stacjonarny odczyt)',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+    {
+      title: 'Wassergerate',
+      description:
+        'Modularis One to zaawansowany, kompaktowy modul radiowy w standardzie wM-Bus 868 MHz, przeznaczony do zdalnego odczytu wodomierzy Modularis.',
+      features: [
+        'Dwustronna zdalna komunikacja do zmiany konfiguracji, kasowania alarmow i diagnostyki',
+        'Kompatybilny z wieloma markami wodomierzy Modularis i innymi producentami',
+        'Rownolegla transmisja radiotelegramow walk-by i AMR (stacjonarny odczyt)',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+    {
+      title: 'GWF',
+      subtitle: 'SonicoNano',
+      description:
+        'Modularis One to zaawansowany, kompaktowy modul radiowy w standardzie wM-Bus 868 MHz, przeznaczony do zdalnego odczytu wodomierzy Modularis.',
+      features: [
+        'Dwustronna zdalna komunikacja do zmiany konfiguracji, kasowania alarmow i diagnostyki',
+        'Kompatybilny z wieloma markami wodomierzy Modularis i innymi producentami',
+        'Rownolegla transmisja radiotelegramow walk-by i AMR (stacjonarny odczyt)',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+    {
+      title: 'Apator',
+      subtitle: 'Smart',
+      description:
+        'Modularis One to zaawansowany, kompaktowy modul radiowy w standardzie wM-Bus 868 MHz, przeznaczony do zdalnego odczytu wodomierzy Modularis.',
+      features: [
+        'Dwustronna zdalna komunikacja do zmiany konfiguracji, kasowania alarmow i diagnostyki',
+        'Kompatybilny z wieloma markami wodomierzy Modularis i innymi producentami',
+        'Rownolegla transmisja radiotelegramow walk-by i AMR (stacjonarny odczyt)',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+  ],
+},
+
   footer: {
     legalLinks: [
       { label: 'Polityka prywatności', href: '#' },
@@ -589,6 +698,95 @@ const en: ContentStructure = {
     ],
     ctaLabel: 'Learn more',
   },
+
+productPage: {
+  cards: [
+    {
+      title: 'Wherle',
+      subtitle: 'Lorem ipsum',
+      description:
+        'Modularis One is an advanced, compact radio module in the wM-Bus 868 MHz standard, designed for remote reading of Modularis water meters.',
+      features: [
+        'Two-way remote communication for reconfiguration, alarm resets, and diagnostics',
+        'Compatible with many Modularis water meter brands and other manufacturers',
+        'Parallel transmission of walk-by and AMR (stationary) radio telegrams',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+    {
+      title: 'Maddalena',
+      description:
+        'Modularis One is an advanced, compact radio module in the wM-Bus 868 MHz standard, designed for remote reading of Modularis water meters.',
+      features: [
+        'Two-way remote communication for reconfiguration, alarm resets, and diagnostics',
+        'Compatible with many Modularis water meter brands and other manufacturers',
+        'Parallel transmission of walk-by and AMR (stationary) radio telegrams',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+    {
+      title: 'Wassergerate',
+      description:
+        'Modularis One is an advanced, compact radio module in the wM-Bus 868 MHz standard, designed for remote reading of Modularis water meters.',
+      features: [
+        'Two-way remote communication for reconfiguration, alarm resets, and diagnostics',
+        'Compatible with many Modularis water meter brands and other manufacturers',
+        'Parallel transmission of walk-by and AMR (stationary) radio telegrams',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+    {
+      title: 'GWF',
+      subtitle: 'SonicoNano',
+      description:
+        'Modularis One is an advanced, compact radio module in the wM-Bus 868 MHz standard, designed for remote reading of Modularis water meters.',
+      features: [
+        'Two-way remote communication for reconfiguration, alarm resets, and diagnostics',
+        'Compatible with many Modularis water meter brands and other manufacturers',
+        'Parallel transmission of walk-by and AMR (stationary) radio telegrams',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+    {
+      title: 'Apator',
+      subtitle: 'Smart',
+      description:
+        'Modularis One is an advanced, compact radio module in the wM-Bus 868 MHz standard, designed for remote reading of Modularis water meters.',
+      features: [
+        'Two-way remote communication for reconfiguration, alarm resets, and diagnostics',
+        'Compatible with many Modularis water meter brands and other manufacturers',
+        'Parallel transmission of walk-by and AMR (stationary) radio telegrams',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+  ],
+},
+
   footer: {
     legalLinks: [
       { label: 'Privacy policy', href: '#' },
@@ -826,6 +1024,95 @@ const de: ContentStructure = {
     ],
     ctaLabel: 'Mehr erfahren',
   },
+
+productPage: {
+  cards: [
+    {
+      title: 'Wherle',
+      subtitle: 'Lorem ipsum',
+      description:
+        'Modularis One ist ein fortschrittliches, kompaktes Funkmodul im wM-Bus-Standard 868 MHz, entwickelt fuer die Fernauslese von Modularis-Wasserzaehlern.',
+      features: [
+        'Zweiwege-Fernkommunikation zur Neukonfiguration, Alarmruecksetzung und Diagnose',
+        'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und anderen Herstellern',
+        'Parallele Uebertragung von Funktelegrammen fuer Walk-by und AMR (stationaere Auslesung)',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+    {
+      title: 'Maddalena',
+      description:
+        'Modularis One ist ein fortschrittliches, kompaktes Funkmodul im wM-Bus-Standard 868 MHz, entwickelt fuer die Fernauslese von Modularis-Wasserzaehlern.',
+      features: [
+        'Zweiwege-Fernkommunikation zur Neukonfiguration, Alarmruecksetzung und Diagnose',
+        'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und anderen Herstellern',
+        'Parallele Uebertragung von Funktelegrammen fuer Walk-by und AMR (stationaere Auslesung)',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+    {
+      title: 'Wassergerate',
+      description:
+        'Modularis One ist ein fortschrittliches, kompaktes Funkmodul im wM-Bus-Standard 868 MHz, entwickelt fuer die Fernauslese von Modularis-Wasserzaehlern.',
+      features: [
+        'Zweiwege-Fernkommunikation zur Neukonfiguration, Alarmruecksetzung und Diagnose',
+        'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und anderen Herstellern',
+        'Parallele Uebertragung von Funktelegrammen fuer Walk-by und AMR (stationaere Auslesung)',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+    {
+      title: 'GWF',
+      subtitle: 'SonicoNano',
+      description:
+        'Modularis One ist ein fortschrittliches, kompaktes Funkmodul im wM-Bus-Standard 868 MHz, entwickelt fuer die Fernauslese von Modularis-Wasserzaehlern.',
+      features: [
+        'Zweiwege-Fernkommunikation zur Neukonfiguration, Alarmruecksetzung und Diagnose',
+        'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und anderen Herstellern',
+        'Parallele Uebertragung von Funktelegrammen fuer Walk-by und AMR (stationaere Auslesung)',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+    {
+      title: 'Apator',
+      subtitle: 'Smart',
+      description:
+        'Modularis One ist ein fortschrittliches, kompaktes Funkmodul im wM-Bus-Standard 868 MHz, entwickelt fuer die Fernauslese von Modularis-Wasserzaehlern.',
+      features: [
+        'Zweiwege-Fernkommunikation zur Neukonfiguration, Alarmruecksetzung und Diagnose',
+        'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und anderen Herstellern',
+        'Parallele Uebertragung von Funktelegrammen fuer Walk-by und AMR (stationaere Auslesung)',
+      ],
+      downloads: [
+        { label: 'Download PDF ENG', href: '#' },
+        { label: 'Download PDF GER', href: '#' },
+      ],
+      readMoreLabel: 'Read more',
+      readMoreHref: '#',
+    },
+  ],
+},
+
   footer: {
     legalLinks: [
       { label: 'Datenschutz', href: '#' },

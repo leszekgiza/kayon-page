@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 
@@ -41,12 +42,15 @@ const ProductsSection = () => {
                       ))}
                     </ul>
                   </div>
-                  <button className="mt-6 inline-flex w-max items-center gap-2 rounded-full border border-white/30 px-5 py-2 text-xs font-semibold text-white transition-colors duration-200 hover:bg-white/10">
+                  <Link
+                    href="/produkty"
+                    className="mt-6 inline-flex w-max items-center gap-2 rounded-full border border-white/30 px-5 py-2 text-xs font-semibold text-white transition-colors duration-200 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70"
+                  >
                     {products.ctaLabel}
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
                     </svg>
-                  </button>
+                  </Link>
                 </div>
               ))}
             </motion.div>
