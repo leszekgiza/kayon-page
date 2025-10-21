@@ -118,12 +118,25 @@ export interface ProductDetailCardContent {
   features: string[];
   downloads: ProductDownloadContent[];
   readMoreLabel: string;
+  slug?: string;
   readMoreHref: string;
 }
 
 export interface ProductDetailsPageContent {
   cards: ProductDetailCardContent[];
 }
+
+export interface ProductDetailContent {
+  slug: string;
+  heading: string;
+  title: string;
+  intro: string;
+  description: string[];
+  features: string[];
+  featuresHeading: string;
+}
+
+export type ProductDetailsContent = Record<string, ProductDetailContent>;
 
 export interface FooterContent {
   legalLinks: NavigationLink[];
@@ -140,6 +153,7 @@ export interface ContentStructure {
   offer: OfferSectionContent;
   products: ProductsSectionContent;
   productPage: ProductDetailsPageContent;
+  productDetails: ProductDetailsContent;
   footer: FooterContent;
 }
 
@@ -374,23 +388,31 @@ const pl: ContentStructure = {
 
 productPage: {
   cards: [
-    {
-      title: 'Wherle',
-      subtitle: 'Lorem ipsum',
-      description:
-        'Modularis One to zaawansowany, kompaktowy modul radiowy w standardzie wM-Bus 868 MHz, przeznaczony do zdalnego odczytu wodomierzy Modularis.',
-      features: [
-        'Dwustronna zdalna komunikacja do zmiany konfiguracji, kasowania alarmow i diagnostyki',
-        'Kompatybilny z wieloma markami wodomierzy Modularis i innymi producentami',
-        'Rownolegla transmisja radiotelegramow walk-by i AMR (stacjonarny odczyt)',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
+    
+{
+  title: 'Modularis One',
+  subtitle: 'Modul komunikacyjny',
+  description:
+    'Kompaktowy modul radiowy w standardzie wM-Bus 868 MHz do zdalnego odczytu wodomierzy Modularis. Integruje sie z systemami walk-by i AMR, zapewniajac stabilna transmisje danych.',
+  features: [
+    'Dwukierunkowa komunikacja umozliwiajaca zdalna konfiguracje, kasowanie alarmow i diagnostyke',
+    'Kompatybilnosc z wieloma wodomierzami Modularis oraz urzadzeniami innych producentow',
+    'Rownolegla transmisja radiotelegramow w trybie walk-by i AMR (stacjonarny odczyt)',
+    'Transmisja krotkich, dlugich i rozszerzonych ramek z historia danych do 15 miesiecy',
+    'Indukcyjny sensor odporny na zaklocenia magnetyczne',
+    'Dlugi czas pracy baterii do 11 lat',
+    'Stopien ochrony IP54 (opcjonalnie IP68)',
+    'Zgodnosc z normami EN 13757 i OMS',
+  ],
+  downloads: [
+    { label: 'Download PDF ENG', href: '#' },
+    { label: 'Download PDF GER', href: '#' },
+  ],
+  readMoreLabel: 'Read more',
+  slug: 'modularis-one',
+  readMoreHref: '/produkty/modularis-one',
+},
+
     {
       title: 'Maddalena',
       description:
@@ -459,6 +481,32 @@ productPage: {
     },
   ],
 },
+
+
+productDetails: {
+  'modularis-one': {
+    slug: 'modularis-one',
+    heading: 'Opis poszczegolnych modulow komunikacyjnych',
+    title: 'Modularis One',
+    intro:
+      'Kompaktowy modul radiowy w standardzie wM-Bus 868 MHz do zdalnego odczytu wodomierzy Modularis. Umozliwia integracje z systemami walk-by i AMR oraz zapewnia stabilna bezprzewodowa transmisje danych. Dwukierunkowa komunikacja pozwala zdalnie konfigurowac urzadzenia, kasowac alarmy i prowadzic diagnostyke.',
+    description: [
+      'Modularis One to nowoczesne rozwiazanie do efektywnego i bezpiecznego monitoringu wodomierzy, zapewniajace elastycznosc i skalowalnosc systemu odczytowego bez koniecznosci okablowania czy recznego zbierania danych.',
+    ],
+    featuresHeading: 'Najwazniejsze cechy',
+    features: [
+      'Dwukierunkowa komunikacja umozliwiajaca zdalna konfiguracje, kasowanie alarmow i diagnostyke',
+      'Kompatybilnosc z wieloma wodomierzami Modularis oraz urzadzeniami innych producentow',
+      'Rownolegla transmisja radiotelegramow w trybie walk-by i AMR (stacjonarny odczyt)',
+      'Transmisja krotkich, dlugich i rozszerzonych ramek z historia danych do 15 miesiecy',
+      'Indukcyjny sensor odporny na zaklocenia magnetyczne',
+      'Dlugi czas pracy baterii do 11 lat',
+      'Stopien ochrony IP54 (opcjonalnie IP68)',
+      'Zgodnosc z normami EN 13757 i OMS',
+    ],
+  },
+},
+
 
   footer: {
     legalLinks: [
@@ -701,23 +749,31 @@ const en: ContentStructure = {
 
 productPage: {
   cards: [
-    {
-      title: 'Wherle',
-      subtitle: 'Lorem ipsum',
-      description:
-        'Modularis One is an advanced, compact radio module in the wM-Bus 868 MHz standard, designed for remote reading of Modularis water meters.',
-      features: [
-        'Two-way remote communication for reconfiguration, alarm resets, and diagnostics',
-        'Compatible with many Modularis water meter brands and other manufacturers',
-        'Parallel transmission of walk-by and AMR (stationary) radio telegrams',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
+    
+{
+  title: 'Modularis One',
+  subtitle: 'Communication module',
+  description:
+    'Compact radio module in the wM-Bus 868 MHz standard for remote reading of Modularis water meters. It integrates with walk-by and AMR systems and delivers stable data transmission.',
+  features: [
+    'Two-way communication enabling remote configuration, alarm resets, and diagnostics',
+    'Compatibility with numerous Modularis water meters and devices from other manufacturers',
+    'Parallel transmission of radio telegrams in walk-by and AMR (stationary) modes',
+    'Support for short, long, and extended frames with data history up to 15 months',
+    'Inductive sensor resistant to magnetic interference',
+    'Battery life up to 11 years',
+    'Protection rating IP54 (optional IP68)',
+    'Compliance with EN 13757 and OMS standards',
+  ],
+  downloads: [
+    { label: 'Download PDF ENG', href: '#' },
+    { label: 'Download PDF GER', href: '#' },
+  ],
+  readMoreLabel: 'Read more',
+  slug: 'modularis-one',
+  readMoreHref: '/produkty/modularis-one',
+},
+
     {
       title: 'Maddalena',
       description:
@@ -786,6 +842,32 @@ productPage: {
     },
   ],
 },
+
+
+productDetails: {
+  'modularis-one': {
+    slug: 'modularis-one',
+    heading: 'Communication modules overview',
+    title: 'Modularis One',
+    intro:
+      'Compact radio module in the wM-Bus 868 MHz standard for remote reading of Modularis water meters. It integrates with walk-by and AMR systems, providing stable wireless data transmission. Two-way communication enables remote configuration, alarm resets, and diagnostics.',
+    description: [
+      'Modularis One is a modern solution for efficient and secure meter monitoring, offering flexibility and scalability without cabling or manual data collection.',
+    ],
+    featuresHeading: 'Key features',
+    features: [
+      'Two-way communication enabling remote configuration, alarm resets, and diagnostics',
+      'Compatibility with numerous Modularis water meters and devices from other manufacturers',
+      'Parallel transmission of radio telegrams in walk-by and AMR (stationary) modes',
+      'Support for short, long, and extended frames with data history up to 15 months',
+      'Inductive sensor resistant to magnetic interference',
+      'Battery life up to 11 years',
+      'Protection rating IP54 (optional IP68)',
+      'Compliance with EN 13757 and OMS standards',
+    ],
+  },
+},
+
 
   footer: {
     legalLinks: [
@@ -1027,23 +1109,31 @@ const de: ContentStructure = {
 
 productPage: {
   cards: [
-    {
-      title: 'Wherle',
-      subtitle: 'Lorem ipsum',
-      description:
-        'Modularis One ist ein fortschrittliches, kompaktes Funkmodul im wM-Bus-Standard 868 MHz, entwickelt fuer die Fernauslese von Modularis-Wasserzaehlern.',
-      features: [
-        'Zweiwege-Fernkommunikation zur Neukonfiguration, Alarmruecksetzung und Diagnose',
-        'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und anderen Herstellern',
-        'Parallele Uebertragung von Funktelegrammen fuer Walk-by und AMR (stationaere Auslesung)',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
+    
+{
+  title: 'Modularis One',
+  subtitle: 'Kommunikationsmodul',
+  description:
+    'Kompaktes Funkmodul im wM-Bus-Standard 868 MHz fuer die Fernauslese von Modularis-Wasserzaehlern. Es laesst sich in Walk-by- und AMR-Systeme integrieren und sorgt fuer stabile Datenuebertragung.',
+  features: [
+    'Bidirektionale Kommunikation fuer Fernkonfiguration, Alarm-Reset und Diagnose',
+    'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und Geraeten anderer Hersteller',
+    'Parallele Uebertragung von Funktelegrammen im Walk-by- und AMR-Betrieb (stationaere Auslesung)',
+    'Unterstuetzung von kurzen, langen und erweiterten Rahmen mit Datenhistorie bis zu 15 Monaten',
+    'Induktiver Sensor, unempfindlich gegen magnetische Stoerungen',
+    'Batterielebensdauer bis zu 11 Jahren',
+    'Schutzart IP54 (optional IP68)',
+    'Konform mit EN 13757 und OMS',
+  ],
+  downloads: [
+    { label: 'Download PDF ENG', href: '#' },
+    { label: 'Download PDF GER', href: '#' },
+  ],
+  readMoreLabel: 'Read more',
+  slug: 'modularis-one',
+  readMoreHref: '/produkty/modularis-one',
+},
+
     {
       title: 'Maddalena',
       description:
@@ -1112,6 +1202,32 @@ productPage: {
     },
   ],
 },
+
+
+productDetails: {
+  'modularis-one': {
+    slug: 'modularis-one',
+    heading: 'Uebersicht Kommunikationsmodule',
+    title: 'Modularis One',
+    intro:
+      'Kompaktes Funkmodul im wM-Bus-Standard 868 MHz fuer die Fernauslese von Modularis-Wasserzaehlern. Es laesst sich in Walk-by- und AMR-Systeme integrieren und sorgt fuer eine stabile drahtlose Datenuebertragung. Die bidirektionale Kommunikation ermoeglicht Fernkonfiguration, Alarm-Reset und Diagnose.',
+    description: [
+      'Modularis One ist eine moderne Loesung fuer effizientes und sicheres Metering und bietet Flexibilitaet und Skalierbarkeit ohne Verkabelung oder manuelles Datensammeln.',
+    ],
+    featuresHeading: 'Wichtigste Merkmale',
+    features: [
+      'Bidirektionale Kommunikation fuer Fernkonfiguration, Alarm-Reset und Diagnose',
+      'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und Geraeten anderer Hersteller',
+      'Parallele Uebertragung von Funktelegrammen im Walk-by- und AMR-Betrieb (stationaere Auslesung)',
+      'Unterstuetzung von kurzen, langen und erweiterten Rahmen mit Datenhistorie bis zu 15 Monaten',
+      'Induktiver Sensor, unempfindlich gegen magnetische Stoerungen',
+      'Batterielebensdauer bis zu 11 Jahren',
+      'Schutzart IP54 (optional IP68)',
+      'Konform mit EN 13757 und OMS',
+    ],
+  },
+},
+
 
   footer: {
     legalLinks: [

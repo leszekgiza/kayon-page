@@ -60,18 +60,31 @@ const ProductListingPage = () => {
                   ))}
                 </ul>
               </div>
-              {isInteractiveHref(card.readMoreHref) ? (
-                <Link
-                  href={card.readMoreHref}
-                  className="inline-flex w-max items-center gap-2 rounded-full bg-primary px-6 py-2 text-sm font-semibold text-white transition hover:bg-primary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                >
-                  {card.readMoreLabel}
-                </Link>
-              ) : (
-                <span className="inline-flex w-max items-center gap-2 rounded-full bg-primary/70 px-6 py-2 text-sm font-semibold text-white opacity-70">
-                  {card.readMoreLabel}
-                </span>
-              )}
+              {(() => {
+                const resolvedHref =
+                  !card.readMoreHref || card.readMoreHref.trim() === '#'
+                    ? card.slug
+                      ? `/produkty/${card.slug}`
+                      : '#'
+                    : card.readMoreHref;
+                const interactive = isInteractiveHref(resolvedHref);
+                if (!interactive) {
+                  return (
+                    <span className="inline-flex w-max items-center gap-2 rounded-full bg-primary/70 px-6 py-2 text-sm font-semibold text-white opacity-70">
+                      {card.readMoreLabel}
+                    </span>
+                  );
+                }
+
+                return (
+                  <Link
+                    href={resolvedHref}
+                    className="inline-flex w-max items-center gap-2 rounded-full bg-primary px-6 py-2 text-sm font-semibold text-white transition hover:bg-primary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  >
+                    {card.readMoreLabel}
+                  </Link>
+                );
+              })()}
             </div>
 
             <div className="hidden min-h-[220px] rounded-[32px] bg-neutral-gray-light/80 md:block" />
