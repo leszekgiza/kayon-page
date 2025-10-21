@@ -220,6 +220,63 @@ FEATURE_HEADINGS = {
     "de": "Hauptmerkmale",
 }
 
+IMAGE_MAP = {
+    "pl": {
+        "wehrle-etkw-eax": ("/images/products/wodomierze/wehrle-etkw-eax.png", "Wodomierz Wehrle ETK(W)-EAX"),
+        "maddalena-sj-plus-evo": ("/images/products/wodomierze/maddalena-sj-plus-evo.png", "Wodomierz Maddalena SJ PLUS-EVO"),
+        "wasser-geraete-eco": ("/images/products/wodomierze/wasser-geraete-eco.png", "Wodomierz Wasser-Geraete ECO"),
+        "gwf-sonico-nano": ("/images/products/wodomierze/gwf-sonico-nano.png", "Wodomierz GWF Sonico Nano"),
+        "apator-js-smart-plus": ("/images/products/wodomierze/apator-js-smart-plus.png", "Wodomierz Apator Powogaz JS Smart+"),
+        "modularis-one": ("/images/products/moduly-komunikacyjne/modularis-one.png", "Modul komunikacyjny Modularis ONE"),
+        "wmbus-smart-plus": ("/images/products/moduly-komunikacyjne/wmbus-smart-plus.png", "Modul radiowy wMBus Smart+"),
+        "mbus-smart-plus": ("/images/products/moduly-komunikacyjne/mbus-smart-plus.png", "Modul przewodowy MBus Smart+"),
+        "wmbus-microclima": ("/images/products/moduly-komunikacyjne/wmbus-microclima.png", "Modul radiowy wMBus MicroClima"),
+        "wmbus-rc12": ("/images/products/moduly-komunikacyjne/wmbus-rc12.png", "Modul radiowy wMBus RC12"),
+        "engelmann-senso-star-e": ("/images/products/cieplomierze/engelmann-senso-star-e.png", "Cieplomierz Engelmann Senso Star E"),
+        "maddalena-microclima-evo": ("/images/products/cieplomierze/maddalena-microclima-evo.png", "Cieplomierz Maddalena MicroClima Evo"),
+        "ploumeter-rc12": ("/images/products/cieplomierze/ploumeter-rc12.png", "Cieplomierz Ploumeter RC12"),
+        "range-one": ("/images/products/infrastruktura/range-one.png", "Range ONE - odbiornik radiowy"),
+        "eclipse-wmbus-gateway": ("/images/products/infrastruktura/eclipse-wmbus-gateway.png", "ECLIPSE WM-Bus Gateway"),
+        "eclipse-wmbus-repeater": ("/images/products/infrastruktura/eclipse-wmbus-repeater.png", "ECLIPSE WM-Bus Repeater"),
+    },
+    "en": {
+        "wehrle-etkw-eax": ("/images/products/wodomierze/wehrle-etkw-eax.png", "Wehrle ETK(W)-EAX water meter"),
+        "maddalena-sj-plus-evo": ("/images/products/wodomierze/maddalena-sj-plus-evo.png", "Maddalena SJ PLUS-EVO water meter"),
+        "wasser-geraete-eco": ("/images/products/wodomierze/wasser-geraete-eco.png", "Wasser-Geraete ECO water meter"),
+        "gwf-sonico-nano": ("/images/products/wodomierze/gwf-sonico-nano.png", "GWF Sonico Nano ultrasonic water meter"),
+        "apator-js-smart-plus": ("/images/products/wodomierze/apator-js-smart-plus.png", "Apator Powogaz JS Smart+ water meter"),
+        "modularis-one": ("/images/products/moduly-komunikacyjne/modularis-one.png", "Modularis ONE communication module"),
+        "wmbus-smart-plus": ("/images/products/moduly-komunikacyjne/wmbus-smart-plus.png", "wMBus Smart+ wireless module"),
+        "mbus-smart-plus": ("/images/products/moduly-komunikacyjne/mbus-smart-plus.png", "MBus Smart+ wired module"),
+        "wmbus-microclima": ("/images/products/moduly-komunikacyjne/wmbus-microclima.png", "wMBus MicroClima wireless module"),
+        "wmbus-rc12": ("/images/products/moduly-komunikacyjne/wmbus-rc12.png", "wMBus RC12 communication module"),
+        "engelmann-senso-star-e": ("/images/products/cieplomierze/engelmann-senso-star-e.png", "Engelmann Senso Star E heat meter"),
+        "maddalena-microclima-evo": ("/images/products/cieplomierze/maddalena-microclima-evo.png", "Maddalena MicroClima Evo heat meter"),
+        "ploumeter-rc12": ("/images/products/cieplomierze/ploumeter-rc12.png", "Ploumeter RC12 heat meter"),
+        "range-one": ("/images/products/infrastruktura/range-one.png", "Range ONE portable receiver"),
+        "eclipse-wmbus-gateway": ("/images/products/infrastruktura/eclipse-wmbus-gateway.png", "ECLIPSE WM-Bus Gateway"),
+        "eclipse-wmbus-repeater": ("/images/products/infrastruktura/eclipse-wmbus-repeater.png", "ECLIPSE WM-Bus Repeater"),
+    },
+    "de": {
+        "wehrle-etkw-eax": ("/images/products/wodomierze/wehrle-etkw-eax.png", "Wehrle ETK(W)-EAX Wasserzaehler"),
+        "maddalena-sj-plus-evo": ("/images/products/wodomierze/maddalena-sj-plus-evo.png", "Maddalena SJ PLUS-EVO Wasserzaehler"),
+        "wasser-geraete-eco": ("/images/products/wodomierze/wasser-geraete-eco.png", "Wasser-Geraete ECO Wasserzaehler"),
+        "gwf-sonico-nano": ("/images/products/wodomierze/gwf-sonico-nano.png", "GWF Sonico Nano Wasserzaehler"),
+        "apator-js-smart-plus": ("/images/products/wodomierze/apator-js-smart-plus.png", "Apator Powogaz JS Smart+ Wasserzaehler"),
+        "modularis-one": ("/images/products/moduly-komunikacyjne/modularis-one.png", "Modularis ONE Kommunikationsmodul"),
+        "wmbus-smart-plus": ("/images/products/moduly-komunikacyjne/wmbus-smart-plus.png", "wMBus Smart+ Funkmodul"),
+        "mbus-smart-plus": ("/images/products/moduly-komunikacyjne/mbus-smart-plus.png", "MBus Smart+ Modul"),
+        "wmbus-microclima": ("/images/products/moduly-komunikacyjne/wmbus-microclima.png", "wMBus MicroClima Funkmodul"),
+        "wmbus-rc12": ("/images/products/moduly-komunikacyjne/wmbus-rc12.png", "wMBus RC12 Kommunikationsmodul"),
+        "engelmann-senso-star-e": ("/images/products/cieplomierze/engelmann-senso-star-e.png", "Engelmann Senso Star E Waermezaehler"),
+        "maddalena-microclima-evo": ("/images/products/cieplomierze/maddalena-microclima-evo.png", "Maddalena MicroClima Evo Waermezaehler"),
+        "ploumeter-rc12": ("/images/products/cieplomierze/ploumeter-rc12.png", "Ploumeter RC12 Waermezaehler"),
+        "range-one": ("/images/products/infrastruktura/range-one.png", "Range ONE Funkempfaenger"),
+        "eclipse-wmbus-gateway": ("/images/products/infrastruktura/eclipse-wmbus-gateway.png", "ECLIPSE WM-Bus Gateway"),
+        "eclipse-wmbus-repeater": ("/images/products/infrastruktura/eclipse-wmbus-repeater.png", "ECLIPSE WM-Bus Repeater"),
+    },
+}
+
 REPLACEMENTS = {"\u2013": "-", "\u2014": "-", "\u2011": "-", "\u2212": "-"}
 FEATURE_KEYWORDS = ("Key Features", "Najwazniejsze cechy", "Kluczowe cechy", "Hauptmerkmale")
 CHAR_MAP = str.maketrans(
@@ -414,6 +471,7 @@ def build_block(slug: str, entry: Dict[str, List[str]], lang: str) -> str:
         DETAIL_HEADINGS.get(lang, {}).get("modularis-one", FEATURE_HEADINGS[lang]),
     )
     features_heading = normalize_heading(entry.get("featuresHeading"), lang, slug)
+    image_entry = IMAGE_MAP.get(lang, {}).get(slug)
     lines = [
         f"    '{slug}': {{",
         f"      slug: '{slug}',",
@@ -421,8 +479,18 @@ def build_block(slug: str, entry: Dict[str, List[str]], lang: str) -> str:
         f"      title: '{escape_ts(entry['title'])}',",
         "      intro:",
         f"        '{escape_ts(entry['intro'])}',",
-        "      description: [",
     ]
+    if image_entry:
+        src, alt = image_entry
+        lines.extend(
+            [
+                "      image: {",
+                f"        src: '{escape_ts(src)}',",
+                f"        alt: '{escape_ts(alt)}',",
+                "      },",
+            ]
+        )
+    lines.append("      description: [")
     for item in entry["description"]:
         lines.append(f"        '{escape_ts(item)}',")
     lines.append("      ],")

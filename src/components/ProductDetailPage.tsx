@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useContent } from '@/hooks/useContent';
 
@@ -62,7 +63,20 @@ const ProductDetailPage = ({ slug }: ProductDetailPageProps) => {
             </ul>
           </div>
 
-          <div className="hidden rounded-[36px] border border-neutral-gray-light/60 bg-neutral-gray-light/60 lg:block" />
+          {detail.image ? (
+            <div className="relative min-h-[260px] overflow-hidden rounded-[36px] border border-neutral-gray-light/60 bg-neutral-gray-light/40 shadow-[0_24px_60px_-35px_rgba(16,16,16,0.28)] sm:min-h-[320px] lg:min-h-[360px]">
+              <Image
+                src={detail.image.src}
+                alt={detail.image.alt}
+                fill
+                sizes="(min-width: 1024px) 420px, (min-width: 768px) 60vw, 90vw"
+                className="object-contain p-6 lg:p-8"
+                priority={false}
+              />
+            </div>
+          ) : (
+            <div className="hidden rounded-[36px] border border-neutral-gray-light/60 bg-neutral-gray-light/60 lg:block" />
+          )}
         </div>
       </div>
     </section>
