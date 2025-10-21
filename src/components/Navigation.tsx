@@ -12,6 +12,7 @@ const Navigation = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { navigation } = useContent();
   const { primaryLinks, actions, mobileMenu } = navigation;
+  const resolveHref = (href: string) => (href.startsWith('#') ? `/${href}` : href);
 
   return (
     <nav className="absolute left-0 right-0 top-0 z-50">
@@ -22,7 +23,7 @@ const Navigation = () => {
             {primaryLinks.map((link) => (
               <Link
                 key={link.href}
-                href={link.href}
+                href={resolveHref(link.href)}
                 className="inline-flex items-center rounded-full border border-white/35 bg-black/35 px-6 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/15"
               >
                 {link.label}
@@ -100,7 +101,7 @@ const Navigation = () => {
             {primaryLinks.map((link) => (
               <Link
                 key={link.href}
-                href={link.href}
+                href={resolveHref(link.href)}
                 className="block rounded-full border border-white/30 px-4 py-3 text-center text-sm font-semibold hover:bg-white/10"
                 onClick={() => setMobileMenuOpen(false)}
               >

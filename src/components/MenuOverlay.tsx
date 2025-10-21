@@ -12,6 +12,7 @@ interface MenuOverlayProps {
 
 const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
   const { menuOverlay } = useContent();
+  const resolveHref = (href: string) => (href.startsWith('#') ? `/${href}` : href);
 
   return (
     <AnimatePresence>
@@ -49,7 +50,7 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
                 {menuOverlay.items.map((item) => (
                   <Link
                     key={item.href}
-                    href={item.href}
+                    href={resolveHref(item.href)}
                     onClick={onClose}
                     className="group flex items-center gap-4 text-xl font-semibold leading-tight lg:text-2xl"
                   >
@@ -62,7 +63,7 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
               <div className="h-px w-full bg-white/20" />
 
               <Link
-                href={menuOverlay.cta.href}
+                href={resolveHref(menuOverlay.cta.href)}
                 onClick={onClose}
                 className="inline-flex w-max items-center gap-3 rounded-full bg-accent-blue px-8 py-3 text-sm font-semibold uppercase tracking-wide text-primary transition-colors hover:bg-accent-blue/80"
               >
