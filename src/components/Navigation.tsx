@@ -6,16 +6,13 @@ import KayonLogo from './KayonLogo';
 import KayonMark from './KayonMark';
 import LanguageSwitcher from './LanguageSwitcher';
 import MenuOverlay from './MenuOverlay';
-
-const navLinks = [
-  { label: 'Dla kogo?', href: '#dla-kogo' },
-  { label: 'Oferta', href: '#oferta' },
-  { label: 'Produkty', href: '#produkty' },
-];
+import { useContent } from '@/hooks/useContent';
 
 const Navigation = () => {
   const [isDesktopMenuOpen, setDesktopMenuOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { navigation } = useContent();
+  const { primaryLinks, actions, mobileMenu, homeAriaLabel } = navigation;
 
   return (
     <nav className="absolute left-0 right-0 top-0 z-50">
@@ -24,13 +21,13 @@ const Navigation = () => {
           <Link
             href="/"
             className="hidden h-12 w-12 items-center justify-center rounded-full bg-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] md:flex"
-            aria-label="KAYON strona glowna"
+            aria-label={homeAriaLabel}
           >
             <KayonMark className="h-10 w-10" />
           </Link>
 
           <div className="hidden items-center gap-3 md:flex">
-            {navLinks.map((link) => (
+            {primaryLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -44,7 +41,8 @@ const Navigation = () => {
           <div className="hidden items-center gap-2 md:flex">
             <button
               type="button"
-              aria-label="Prezentacja"
+              aria-label={actions.presentation.ariaLabel}
+              title={actions.presentation.label}
               className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 bg-black/45 text-white transition-colors duration-200 hover:bg-white/15"
             >
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -54,7 +52,8 @@ const Navigation = () => {
             </button>
             <button
               type="button"
-              aria-label="Logowanie"
+              aria-label={actions.login.ariaLabel}
+              title={actions.login.label}
               className="flex h-11 w-11 items-center justify-center rounded-full border border-white/55 bg-transparent text-white transition-colors duration-200 hover:border-white"
             >
               <svg className="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -73,7 +72,7 @@ const Navigation = () => {
             </div>
             <button
               type="button"
-              aria-label="Menu"
+              aria-label={actions.menu.ariaLabel}
               onClick={() => setDesktopMenuOpen(true)}
               className="flex h-11 w-11 items-center justify-center rounded-full bg-black/80 text-white transition-colors duration-200 hover:bg-black"
             >
@@ -86,7 +85,9 @@ const Navigation = () => {
           <button
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 text-white md:hidden"
-            aria-label="Przelacz menu"
+            aria-label={
+              isMobileMenuOpen ? mobileMenu.toggleAria.close : mobileMenu.toggleAria.open
+            }
           >
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMobileMenuOpen ? (
@@ -104,7 +105,7 @@ const Navigation = () => {
               <KayonLogo className="h-10 w-auto text-white" />
               <LanguageSwitcher variant="menu" />
             </div>
-            {navLinks.map((link) => (
+            {primaryLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -119,19 +120,19 @@ const Navigation = () => {
                 type="button"
                 className="flex h-12 items-center justify-center rounded-full border border-white/30 text-sm font-semibold hover:bg-white/10"
               >
-                Prezentacja
+                {mobileMenu.presentation}
               </button>
               <button
                 type="button"
                 className="flex h-12 items-center justify-center rounded-full border border-white/30 text-sm font-semibold hover:bg-white/10"
               >
-                Logowanie
+                {mobileMenu.login}
               </button>
               <button
                 type="button"
                 className="flex h-12 items-center justify-center rounded-full bg-black text-sm font-semibold"
               >
-                Menu
+                {mobileMenu.menu}
               </button>
             </div>
           </div>

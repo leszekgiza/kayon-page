@@ -3,20 +3,16 @@
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import KayonLogo from './KayonLogo';
+import { useContent } from '@/hooks/useContent';
 
 interface MenuOverlayProps {
   open: boolean;
   onClose: () => void;
 }
 
-const menuItems = [
-  { label: 'Home', href: '#dla-kogo' },
-  { label: 'Oferta', href: '#oferta' },
-  { label: 'Produkty', href: '#produkty' },
-  { label: 'Reach Us', href: '#kontakt' },
-];
-
 const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
+  const { menuOverlay } = useContent();
+
   return (
     <AnimatePresence>
       {open && (
@@ -30,7 +26,7 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
             type="button"
             className="absolute right-8 top-8 flex h-12 w-12 items-center justify-center rounded-full border border-white/30 text-white transition-colors hover:bg-white/10"
             onClick={onClose}
-            aria-label="Zamknij menu"
+            aria-label={menuOverlay.closeAria}
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 6l12 12M18 6 6 18" />
@@ -50,7 +46,7 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
 
             <div className="flex flex-col justify-center gap-10 lg:pl-16">
               <nav className="space-y-5">
-                {menuItems.map((item) => (
+                {menuOverlay.items.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
@@ -66,11 +62,11 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
               <div className="h-px w-full bg-white/20" />
 
               <Link
-                href="#platforma"
+                href={menuOverlay.cta.href}
                 onClick={onClose}
                 className="inline-flex w-max items-center gap-3 rounded-full bg-accent-blue px-8 py-3 text-sm font-semibold uppercase tracking-wide text-primary transition-colors hover:bg-accent-blue/80"
               >
-                Platforma
+                {menuOverlay.cta.label}
               </Link>
             </div>
           </motion.div>

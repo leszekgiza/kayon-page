@@ -1,5 +1,10 @@
+'use client';
+
+import { useContent } from '@/hooks/useContent';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { footer } = useContent();
 
   return (
     <footer className="bg-[#171717] py-10 text-white" id="kontakt">
@@ -8,18 +13,14 @@ const Footer = () => {
           <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-lg font-semibold text-white">
             Y
           </div>
-          <span>© {currentYear} KAYON</span>
+          <span>© {currentYear} {footer.copyright}</span>
         </div>
         <div className="flex items-center gap-6">
-          <a href="#" className="transition-colors duration-200 hover:text-white/90">
-            Polityka prywatności
-          </a>
-          <a href="#" className="transition-colors duration-200 hover:text-white/90">
-            Regulamin
-          </a>
-          <a href="#" className="transition-colors duration-200 hover:text-white/90">
-            Cookies
-          </a>
+          {footer.legalLinks.map((link) => (
+            <a key={link.href} href={link.href} className="transition-colors duration-200 hover:text-white/90">
+              {link.label}
+            </a>
+          ))}
         </div>
       </div>
     </footer>

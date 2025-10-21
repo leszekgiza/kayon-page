@@ -4,20 +4,11 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import KayonLogo from './KayonLogo';
-
-const headline =
-  'W świecie, w którym technologia nadaje tempo zmianom, przewagę zyskują ci, którzy dysponują nią wcześniej.';
-const bodyCopy =
-  'Nasze systemy zdalnego odczytu wody i ciepła już dziś działają zgodnie z unijnymi regulacjami, które zaczną obowiązywać w 2027 roku.';
-const modalLead =
-  'Projektujemy nasze rozwiązania z myślą o wszystkich uczestnikach rynku – dystrybutorach, instalatorach, zarządcach nieruchomości, deweloperach, spółdzielniach, wspólnotach oraz pojedynczych lokatorach.';
-const modalCopyOne =
-  'Każdy zyskuje realną korzyść: gwarancję niezawodności, łatwiejszy montaż, stabilność działania, stały dostęp do danych, mniejsze ryzyko błędów w rozliczeniach oraz niższe rachunki.';
-const modalCopyTwo =
-  'Dzięki urządzeniom pomiarowym i systemom Kayon możliwe jest nie tylko precyzyjne mierzenie zużycia wody i ciepła, ale też trwałe ograniczenie kosztów i zużycia energii. W efekcie daje to stabilne i harmonijne funkcjonowanie wszystkich zainteresowanych tym osób i podmiotów.';
+import { useContent } from '@/hooks/useContent';
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { hero } = useContent();
 
   useEffect(() => {
     if (!isModalOpen) {
@@ -45,7 +36,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <Image
           src="/hero-top.png"
-          alt="Panorama farmy wiatrowej"
+          alt={hero.imageAlt}
           fill
           priority
           className="object-cover"
@@ -77,7 +68,7 @@ const HeroSection = () => {
               className="flex flex-col items-end gap-6"
             >
               <KayonLogo className="h-12 w-auto drop-shadow-[0_12px_45px_rgba(0,0,0,0.35)] md:h-14" />
-              <h1 className="text-[15px] font-semibold leading-snug md:text-[21px] md:leading-tight">{headline}</h1>
+              <h1 className="text-[15px] font-semibold leading-snug md:text-[21px] md:leading-tight">{hero.headline}</h1>
             </motion.div>
 
             <motion.div
@@ -86,13 +77,13 @@ const HeroSection = () => {
               transition={{ delay: 0.15, duration: 0.6 }}
               className="w-full rounded-[36px] border border-white/35 bg-black/40 px-8 py-6 backdrop-blur-md md:px-10 md:py-7"
             >
-              <p className="text-sm leading-relaxed text-white/90 md:text-base">{bodyCopy}</p>
+              <p className="text-sm leading-relaxed text-white/90 md:text-base">{hero.body}</p>
               <button
                 type="button"
                 onClick={() => setIsModalOpen(true)}
                 className="mt-5 inline-flex items-center gap-3 rounded-full border border-white/50 px-5 py-2 text-sm font-semibold transition-colors duration-200 hover:bg-white/15"
               >
-                Read more
+                {hero.ctaLabel}
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
                 </svg>
@@ -126,18 +117,24 @@ const HeroSection = () => {
                 type="button"
                 onClick={() => setIsModalOpen(false)}
                 className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white transition-colors duration-200 hover:bg-primary-light"
-                aria-label="Zamknij okno"
+                aria-label={hero.modalCloseAria}
               >
                 <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 6l12 12M18 6 6 18" />
                 </svg>
               </button>
               <h2 id="hero-modal-title" className="text-2xl font-semibold text-primary">
-                {'Rozwini\u0119cie'}
+                {hero.modalTitle}
               </h2>
-              <p className="mt-6 text-base font-semibold leading-relaxed text-primary">{modalLead}</p>
-              <p className="mt-6 text-base leading-relaxed text-primary">{modalCopyOne}</p>
-              <p className="mt-4 text-base leading-relaxed text-primary">{modalCopyTwo}</p>
+              <p className="mt-6 text-base font-semibold leading-relaxed text-primary">{hero.modalLead}</p>
+              {hero.modalBody.map((paragraph, index) => (
+                <p
+                  key={paragraph}
+                  className={`text-base leading-relaxed text-primary ${index === 0 ? 'mt-6' : 'mt-4'}`}
+                >
+                  {paragraph}
+                </p>
+              ))}
             </motion.div>
           </motion.div>
         )}
