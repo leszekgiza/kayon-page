@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import KayonLogo from './KayonLogo';
-import KayonMark from './KayonMark';
 import LanguageSwitcher from './LanguageSwitcher';
 import MenuOverlay from './MenuOverlay';
 import { useContent } from '@/hooks/useContent';
@@ -12,20 +11,12 @@ const Navigation = () => {
   const [isDesktopMenuOpen, setDesktopMenuOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { navigation } = useContent();
-  const { primaryLinks, actions, mobileMenu, homeAriaLabel } = navigation;
+  const { primaryLinks, actions, mobileMenu } = navigation;
 
   return (
     <nav className="absolute left-0 right-0 top-0 z-50">
       <div className="container-custom">
         <div className="flex items-center justify-between gap-4 py-6">
-          <Link
-            href="/"
-            className="hidden h-12 w-12 items-center justify-center rounded-full bg-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] md:flex"
-            aria-label={homeAriaLabel}
-          >
-            <KayonMark className="h-10 w-10" />
-          </Link>
-
           <div className="hidden items-center gap-3 md:flex">
             {primaryLinks.map((link) => (
               <Link
