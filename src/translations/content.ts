@@ -122,6 +122,13 @@ export interface ProductDetailCardContent {
   readMoreHref: string;
 }
 
+export interface ProductCategoryContent {
+  slug: string;
+  title: string;
+  description: string;
+  items: string[];
+}
+
 export interface ProductDetailsPageContent {
   cards: ProductDetailCardContent[];
 }
@@ -153,6 +160,7 @@ export interface ContentStructure {
   offer: OfferSectionContent;
   products: ProductsSectionContent;
   productPage: ProductDetailsPageContent;
+  productCategories: ProductCategoryContent[];
   productDetails: ProductDetailsContent;
   footer: FooterContent;
 }
@@ -403,7 +411,7 @@ const pl: ContentStructure = {
         downloads: [],
         readMoreLabel: 'Zobacz produkty',
         slug: 'wehrle-etkw-eax',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/wodomierze',
       },
       {
         title: 'Cieplomierze',
@@ -417,7 +425,7 @@ const pl: ContentStructure = {
         ],
         downloads: [],
         readMoreLabel: 'Zobacz produkty',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/cieplomierze',
       },
       {
         title: 'Moduly komunikacyjne',
@@ -434,7 +442,7 @@ const pl: ContentStructure = {
         downloads: [],
         readMoreLabel: 'Zobacz produkty',
         slug: 'modularis-one',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/moduly-komunikacyjne',
       },
       {
         title: 'Systemy i platformy',
@@ -449,7 +457,7 @@ const pl: ContentStructure = {
         ],
         downloads: [],
         readMoreLabel: 'Sprawdz rozwiazania',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/systemy-i-platformy',
       },
       {
         title: 'Infrastruktura',
@@ -466,35 +474,143 @@ const pl: ContentStructure = {
         downloads: [],
         readMoreLabel: 'Zobacz produkty',
         slug: 'range-one',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/infrastruktura',
       },
     ],
   },
 
+  productCategories: [
+    {
+      slug: 'wodomierze',
+      title: 'Wodomierze',
+      description: 'Kompletne portfolio wodomierzy przygotowanych do pracy w systemach zdalnego odczytu Kayon.',
+      items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'gwf-sonico-nano', 'apator-js-smart-plus'],
+    },
+    {
+      slug: 'cieplomierze',
+      title: 'Cieplomierze',
+      description: 'Cieplomierze do instalacji mieszkaniowych i komercyjnych z gotowa integracja systemowa.',
+      items: ['engelmann-senso-star-e', 'maddalena-microclima-evo', 'ploumeter-rc12'],
+    },
+    {
+      slug: 'moduly-komunikacyjne',
+      title: 'Moduly komunikacyjne',
+      description: 'Moduly radiowe i przewodowe do integracji licznikow z platformami Kayon.',
+      items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
+    },
+    {
+      slug: 'systemy-i-platformy',
+      title: 'Systemy i platformy',
+      description: 'Rozwiazania All in Kayon do zarzadzania danymi i automatyzacji pracy.',
+      items: ['walk-by', 'star-fix', 'mesh'],
+    },
+    {
+      slug: 'infrastruktura',
+      title: 'Infrastruktura',
+      description: 'Urzadzenia terenowe i stacjonarne budujace sieci odczytowe Kayon.',
+      items: ['range-one', 'eclipse-wmbus-gateway', 'eclipse-wmbus-repeater', 'eixo-wmbus-gateway', 'exio-wmbus-repeater'],
+    },
+  ],
+
 
 
   productDetails: {
+
     'modularis-one': {
       slug: 'modularis-one',
       heading: 'Opis poszczegolnych modulow komunikacyjnych',
       title: 'Modularis ONE',
       intro:
-        'Kompaktowy modul radiowy w standardzie wM-Bus 868 MHz do zdalnego odczytu wodomierzy Modularis. Umozliwia integracje z systemami walk-by i AMR oraz zapewnia stabilna bezprzewodowa transmisje danych. Dwukierunkowa komunikacja pozwala zdalnie konfigurowac urzadzenia, kasowac alarmy i prowadzic diagnostyke.',
+        'Kompaktowy modul radiowy 868 MHz przeznaczony do wodomierzy Modularis, umozliwiajacy odczyt i zdalna konfiguracje w systemach walk-by oraz AMR.',
       description: [
-        'Modularis ONE to nowoczesne rozwiazanie do efektywnego i bezpiecznego monitoringu wodomierzy, zapewniajace elastycznosc i skalowalnosc systemu odczytowego bez koniecznosci okablowania czy recznego zbierania danych.',
       ],
       featuresHeading: 'Najwazniejsze cechy',
       features: [
-        'Dwukierunkowa komunikacja umozliwiajaca zdalna konfiguracje, kasowanie alarmow i diagnostyke',
-        'Kompatybilnosc z wieloma wodomierzami Modularis oraz urzadzeniami innych producentow',
-        'Rownolegla transmisja radiotelegramow w trybie walk-by i AMR (stacjonarny odczyt)',
-        'Transmisja krotkich, dlugich i rozszerzonych ramek z historia danych do 15 miesiecy',
-        'Indukcyjny sensor odporny na zaklocenia magnetyczne',
-        'Dlugi czas pracy baterii do 11 lat',
-        'Stopien ochrony IP54 (opcjonalnie IP68)',
+        'Dwukierunkowa komunikacja z kasowaniem alarmow i konfiguracja zdalna',
+        'Rownolegla transmisja telegramow walk-by i stacjonarnych (AMR)',
+        'Obsluga ramek z historia danych do 15 miesiecy',
+        'Sensor indukcyjny odporny na zaklocenia magnetyczne',
+        'Bateria zywotna do 11 lat, opcjonalna szczelnosc IP68',
         'Zgodnosc z normami EN 13757 i OMS',
       ],
     },
+
+    'wmbus-smart-plus': {
+      slug: 'wmbus-smart-plus',
+      heading: 'Opis poszczegolnych modulow komunikacyjnych',
+      title: 'wMBus Smart+',
+      intro:
+        'Radiowy modul nakladkowy dla wodomierzy i cieplomierzy serii Smart+, ktory zapewnia natychmiastowy dostep do danych w standardzie Wireless M-Bus.',
+      description: [
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Transmisja w pasmach S i T zgodnie z OMS',
+        'Rownolegla wysylka logow zuzycia oraz alarmow zdalnych',
+        'Szyfrowanie AES 128 dla bezpiecznego przesylania danych',
+        'Zdalna konfiguracja przez Range ONE lub koncentratory ECLIPSE',
+        'Bateria o typowej zywotnosci do 12 lat',
+        'Szczelna obudowa IP68 gotowa do pracy w studzienkach',
+      ],
+    },
+
+    'mbus-smart-plus': {
+      slug: 'mbus-smart-plus',
+      heading: 'Opis poszczegolnych modulow komunikacyjnych',
+      title: 'MBus Smart+',
+      intro:
+        'Modul przewodowy M-Bus umozliwiajacy pelna integracje licznikow Smart+ z sieciami automatyki budynkowej i systemami BMS.',
+      description: [
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Zasilanie z magistrali M-Bus bez dodatkowych baterii',
+        'Adresowanie wielourzadzeniowe z mozliwoscia kaskadowego laczenia',
+        'Wsparcie dla odczytow chwilowych i archiwalnych',
+        'Diagnostyka magistrali oraz sygnalizacja zaklocen',
+        'Wysoka odpornosc na przepiecia i niepoprawne podlaczenia',
+        'Kompaktowa konstrukcja do montazu bez narzedzi',
+      ],
+    },
+
+    'wmbus-microclima': {
+      slug: 'wmbus-microclima',
+      heading: 'Opis poszczegolnych modulow komunikacyjnych',
+      title: 'wMBus MicroClima',
+      intro:
+        'Nakladka radiowa dla cieplomierzy MicroClima, dedykowana do zastosowan mieszkaniowych z czestymi odczytami zdalnymi.',
+      description: [
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Bezprzewodowa komunikacja 868 MHz zgodna z OMS',
+        'Wbudowane profile billingowe z pamiecia do 24 miesiecy',
+        'Tryb ekonomiczny wydluzajacy czas pracy baterii',
+        'Funkcja alarmowania o manipulacji i przekroczeniach temperatury',
+        'Szybka konfiguracja poprzez NFC lub program Route ONE',
+        'Praca w szerokim zakresie temperatur -10C do 55C',
+      ],
+    },
+
+    'wmbus-rc12': {
+      slug: 'wmbus-rc12',
+      heading: 'Opis poszczegolnych modulow komunikacyjnych',
+      title: 'wMBus RC12',
+      intro:
+        'Modul komunikacyjny dla cieplomierzy RC12, przygotowany do pracy w sieciach walk-by oraz instalacjach stacjonarnych.',
+      description: [
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Nadawanie ramek w trybach T i C-T zgodnie z OMS',
+        'Obsluga funkcji multi-hop przez repeatery EXIO/ECLIPSE',
+        'Rejestrowanie alarmow hydraulicznych i energetycznych',
+        'Zdalna aktualizacja ustawien czestotliwosci odczytu',
+        'Bateria zywotna do 12 lat przy interwale 15 minut',
+        'Solidna obudowa IP67 odporna na wilgotne srodowisko',
+      ],
+    },
+
     'wehrle-etkw-eax': {
       slug: 'wehrle-etkw-eax',
       heading: 'Opis poszczegolnych wodomierzy',
@@ -517,6 +633,7 @@ const pl: ContentStructure = {
         'Wytrzymalosc do 1,6 MPa',
       ],
     },
+
     'maddalena-sj-plus-evo': {
       slug: 'maddalena-sj-plus-evo',
       heading: 'Opis poszczegolnych wodomierzy',
@@ -539,6 +656,7 @@ const pl: ContentStructure = {
         'Dostepny z certyfikatem sanitarnym',
       ],
     },
+
     'wasser-geraete-eco': {
       slug: 'wasser-geraete-eco',
       heading: 'Opis poszczegolnych wodomierzy',
@@ -558,6 +676,7 @@ const pl: ContentStructure = {
         'Opcje montazowe: poziomo/pionowo',
       ],
     },
+
     'gwf-sonico-nano': {
       slug: 'gwf-sonico-nano',
       heading: 'Opis poszczegolnych wodomierzy',
@@ -579,6 +698,7 @@ const pl: ContentStructure = {
         'Czas pracy na baterii do 20 lat',
       ],
     },
+
     'apator-js-smart-plus': {
       slug: 'apator-js-smart-plus',
       heading: 'Opis poszczegolnych wodomierzy',
@@ -600,6 +720,7 @@ const pl: ContentStructure = {
         'Mozliwosc montazu: liczydlo na gorze lub z boku (poziomy/pionowy montaz)',
       ],
     },
+
     'engelmann-senso-star-e': {
       slug: 'engelmann-senso-star-e',
       heading: 'Opis poszczegolnych cieplomierzy',
@@ -618,6 +739,7 @@ const pl: ContentStructure = {
         'Konstrukcja odporna na zaklocenia elektromagnetyczne i z funkcja wykrywania przeplywu wstecznego',
       ],
     },
+
     'maddalena-microclima-evo': {
       slug: 'maddalena-microclima-evo',
       heading: 'Opis poszczegolnych cieplomierzy',
@@ -635,6 +757,7 @@ const pl: ContentStructure = {
         'Intuicyjny interfejs uzytkownika oraz mozliwosc zdalnego odczytu danych',
       ],
     },
+
     'ploumeter-rc12': {
       slug: 'ploumeter-rc12',
       heading: 'Opis poszczegolnych cieplomierzy',
@@ -651,6 +774,7 @@ const pl: ContentStructure = {
         'Latwy montaz i obsluga, oraz wytrzymala konstrukcja',
       ],
     },
+
     'range-one': {
       slug: 'range-one',
       heading: 'Opis poszczegolnych elementow infrastruktury',
@@ -670,6 +794,7 @@ const pl: ContentStructure = {
         'Mozliwosc odczytu danych i zdalnej konfiguracji modulow radiowych',
       ],
     },
+
     'eclipse-wmbus-gateway': {
       slug: 'eclipse-wmbus-gateway',
       heading: 'Opis poszczegolnych elementow infrastruktury',
@@ -690,6 +815,7 @@ const pl: ContentStructure = {
         'Czujniki bezpieczenstwa wykrywajace otwarcie i demontaz urzadzenia',
       ],
     },
+
     'eclipse-wmbus-repeater': {
       slug: 'eclipse-wmbus-repeater',
       heading: 'Opis poszczegolnych elementow infrastruktury',
@@ -710,55 +836,70 @@ const pl: ContentStructure = {
         'Zasilanie bateryjne o zywotnosci do 11 lat',
       ],
     },
-    'eixo-wmbus-gateway': {
-      slug: 'eixo-wmbus-gateway',
-      heading: 'Opis poszczegolnych elementow infrastruktury',
-      title: 'EIXO WM-Bus Gateway',
-      intro:
-        'Sieciowo zasilany koncentrator danych do kompleksowego monitoringu nowoczesnych systemow pomiarowych, kompatybilny z urzadzeniami Wireless M-Bus i OMS.',
-      description: [
-        'EIXO WM-Bus Gateway zapewnia niezawodny monitoring i pelna kontrole nad inteligentnymi sieciami pomiarowymi w wymagajacym srodowisku.',
-      ],
-      featuresHeading: 'Najwazniejsze cechy',
-      features: [
-        'Zasilanie 230 V gwarantuje ciagla, stabilna prace',
-        'Pelna zgodnosc z normami wM-Bus i OMS oraz szeroka gama urzadzen pomiarowych',
-        'Komunikacja 5G, 4G oraz NB-IoT dla maksymalnego zasiegu',
-        'Wysoka czulosc odbiornika 868 MHz pozwala na odczyt w trudnych lokalizacjach',
-        'System Linux ulatwia zdalne zarzadzanie i diagnostyke',
-        'Elastyczne protokoly transmisji danych (MQTT, E-mail, HTTPS) wraz z rozbudowanymi harmonogramami',
-        'Zabezpieczenia przed otwarciem i demontazem obudowy',
-        'Solidna, odporna obudowa przystosowana do wymagajacych warunkow',
-      ],
-    },
-    'exio-wmbus-repeater': {
-      slug: 'exio-wmbus-repeater',
-      heading: 'Opis poszczegolnych elementow infrastruktury',
-      title: 'EXIO WM-Bus Repeater',
-      intro:
-        'Urzadzenie sieciowe zwiekszajace zasieg i bezpieczenstwo transmisji w systemach Wireless M-Bus.',
-      description: [
-        'EXIO WM-Bus Repeater znaczaco zwieksza efektywnosc i zasieg systemow telemetrycznych, gwarantujac trwalosc, bezpieczenstwo i wysoka jakosc komunikacji.',
-      ],
-      featuresHeading: 'Najwazniejsze cechy',
-      features: [
-        'Stabilne zasilanie 230 V gwarantujace ciaglosc pracy',
-        'Wysoka czulosc 868 MHz oraz szyfrowanie AES 128-bit',
-        'Obsluga wielu trybow Wireless M-Bus (S, T, C+T itd.)',
-        'Kompatybilnosc z szeroka gama urzadzen pomiarowych',
-        'Mozliwosc tworzenia lancuchow repeaterow (multi-hop)',
-        'Latwy montaz i odporna obudowa antywandalowa',
-        'Aktualizacja oprogramowania lokalnie lub zdalnie przez USB',
-        'Stabilna transmisja bez zaklocen i utraty sygnalu',
-      ],
-    },
-  },
 
+    'walk-by': {
+      slug: 'walk-by',
+      heading: 'Opis poszczegolnych systemow',
+      title: 'Walk-by',
+      intro:
+        'Szybki odczyt zdalny bez bledow i przestojow. System oparty na urzadzeniu Range ONE i aplikacji Route ONE automatyzuje pobor danych i diagnostyke urzadzen w terenie.',
+      description: [
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Automatyczny odczyt wodomierzy, cieplomierzy, podzielnikow oraz licznikow gazu i energii',
+        'Natychmiastowe przesylanie danych do systemu bez potrzeby fizycznego dostepu',
+        'Wbudowana diagnostyka i serwis modulow pomiarowych w terenie',
+        'Integracja z platforma Route ONE dla raportow i alarmow',
+        'Odczyt nawet w trudno dostepnych miejscach dzieki 868 MHz',
+        'Tryb pracy walk-by redukujacy czas obslugi i koszty wizyt',
+      ],
+    },
+
+    'star-fix': {
+      slug: 'star-fix',
+      heading: 'Opis poszczegolnych systemow',
+      title: 'Star/Fix',
+      intro:
+        'Staly nadzor i pelna kontrola nad mediami w topologii gwiazdy. Liczniki lacza sie z koncentratorem bezposrednio lub przez repeatery, co zapewnia ciagla obserwacje sieci.',
+      description: [
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Architektura gwiazdy z modulami wM-Bus lub OMS',
+        'Automatyczne odczyty i bilansowanie zuzycia mediow',
+        'Szybka reakcja na alarmy i anomalie dzieki zdalnym powiadomieniom',
+        'Skalowanie zasiegu poprzez repeatery ECLIPSE lub EXIO',
+        'Centralna konfiguracja parametrow i harmonogramow odczytu',
+        'Ochrona danych poprzez szyfrowanie i kontrola dostepu',
+      ],
+    },
+
+    'mesh': {
+      slug: 'mesh',
+      heading: 'Opis poszczegolnych systemow',
+      title: 'MESH',
+      intro:
+        'Inteligentna, samokonfigurujaca sie siec pomiarowa gwarantujaca niezawodna komunikacje nawet w trudnych warunkach. Montaz sprowadza sie do wlaczenia koncentratora i uruchomienia sieci.',
+      description: [
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Samonaprawiajaca topologia mesh zapewniajaca ciaglosc transmisji',
+        'Jeden koncentrator danych i automatyczne wysylanie do chmury',
+        'Minimalne koszty utrzymania dzieki braku recznych interwencji',
+        'Automatyczne wykrywanie nowych urzadzen i aktualizacja trasy danych',
+        'Skalowanie do tysiecy licznikow bez utraty jakosci uslugi',
+        'Rozbudowane raporty, alarmy i zarzadzanie zasobami w czasie rzeczywistym',
+      ],
+    },
+
+  },
 
 
   footer: {
     legalLinks: [
-      { label: 'Polityka prywatności', href: '#' },
+      { label: 'Polityka prywatnosci', href: '#' },
       { label: 'Regulamin', href: '#' },
       { label: 'Cookies', href: '#' },
     ],
@@ -1012,7 +1153,7 @@ const en: ContentStructure = {
         downloads: [],
         readMoreLabel: 'Explore products',
         slug: 'wehrle-etkw-eax',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/wodomierze',
       },
       {
         title: 'Heat meters',
@@ -1026,7 +1167,7 @@ const en: ContentStructure = {
         ],
         downloads: [],
         readMoreLabel: 'Explore products',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/cieplomierze',
       },
       {
         title: 'Communication modules',
@@ -1043,7 +1184,7 @@ const en: ContentStructure = {
         downloads: [],
         readMoreLabel: 'Explore products',
         slug: 'modularis-one',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/moduly-komunikacyjne',
       },
       {
         title: 'Systems & platforms',
@@ -1058,7 +1199,7 @@ const en: ContentStructure = {
         ],
         downloads: [],
         readMoreLabel: 'Explore solutions',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/systemy-i-platformy',
       },
       {
         title: 'Infrastructure',
@@ -1075,35 +1216,142 @@ const en: ContentStructure = {
         downloads: [],
         readMoreLabel: 'Explore products',
         slug: 'range-one',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/infrastruktura',
       },
     ],
   },
 
+  productCategories: [
+    {
+      slug: 'wodomierze',
+      title: 'Water meters',
+      description: 'Water meters engineered for Kayon remote-reading deployments.',
+      items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'gwf-sonico-nano', 'apator-js-smart-plus'],
+    },
+    {
+      slug: 'cieplomierze',
+      title: 'Heat meters',
+      description: 'Heat meters ready for residential and commercial monitoring networks.',
+      items: ['engelmann-senso-star-e', 'maddalena-microclima-evo', 'ploumeter-rc12'],
+    },
+    {
+      slug: 'moduly-komunikacyjne',
+      title: 'Communication modules',
+      description: 'Radio and wired modules connecting meters with Kayon platforms.',
+      items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
+    },
+    {
+      slug: 'systemy-i-platformy',
+      title: 'Systems & platforms',
+      description: 'All in Kayon solutions for automation and data management.',
+      items: ['walk-by', 'star-fix', 'mesh'],
+    },
+    {
+      slug: 'infrastruktura',
+      title: 'Infrastructure',
+      description: 'Field and stationary devices building Kayon remote-reading networks.',
+      items: ['range-one', 'eclipse-wmbus-gateway', 'eclipse-wmbus-repeater', 'eixo-wmbus-gateway', 'exio-wmbus-repeater'],
+    },
+  ],
 
 
   productDetails: {
+
     'modularis-one': {
       slug: 'modularis-one',
       heading: 'Communication module portfolio',
       title: 'Modularis ONE',
       intro:
-        'Compact radio module in the wM-Bus 868 MHz standard for remote reading of Modularis meters. It integrates with walk-by and AMR systems and provides stable wireless data transmission. Two-way communication enables remote configuration, alarm resets, and diagnostics.',
+        'Compact 868 MHz radio module for Modularis water meters, enabling remote reading and configuration in both walk-by and AMR deployments.',
       description: [
-        'Modularis ONE is a modern solution for efficient and secure meter monitoring, offering flexibility and scalability without cabling or manual data collection.',
       ],
       featuresHeading: 'Key features',
       features: [
-        'Two-way communication enabling remote configuration, alarm resets, and diagnostics',
-        'Compatibility with multiple Modularis meters and third-party devices',
-        'Parallel transmission of walk-by and AMR radio telegrams',
-        'Support for short, long, and extended frames with up to 15 months of history',
+        'Two-way communication with remote alarm reset and configuration',
+        'Parallel transmission of walk-by and stationary (AMR) telegrams',
+        'Supports frame history up to 15 months',
         'Inductive sensor resistant to magnetic interference',
-        'Battery life up to 11 years',
-        'Protection rating IP54 (optional IP68)',
-        'Compliance with EN 13757 and OMS',
+        'Battery lifetime up to 11 years, optional IP68 enclosure',
+        'Compliance with EN 13757 and OMS standards',
       ],
     },
+
+    'wmbus-smart-plus': {
+      slug: 'wmbus-smart-plus',
+      heading: 'Communication module portfolio',
+      title: 'wMBus Smart+',
+      intro:
+        'Wireless add-on module for Smart+ water and heat meters, delivering instant access to data in the Wireless M-Bus standard.',
+      description: [
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'Transmission in S and T bands compliant with OMS',
+        'Parallel delivery of consumption logs and remote alarms',
+        'AES 128 encryption keeps data secure end to end',
+        'Remote configuration via Range ONE handheld or ECLIPSE gateways',
+        'Battery lifetime up to 12 years in typical duty cycle',
+        'IP68 sealed housing ready for underground chambers',
+      ],
+    },
+
+    'mbus-smart-plus': {
+      slug: 'mbus-smart-plus',
+      heading: 'Communication module portfolio',
+      title: 'MBus Smart+',
+      intro:
+        'Wired M-Bus module that connects Smart+ meters with building automation and BMS infrastructures.',
+      description: [
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'Powered directly from the M-Bus line without extra batteries',
+        'Multi-device addressing with cascade wiring support',
+        'Instant and historical readings available on demand',
+        'Bus diagnostics and disturbance indication',
+        'High immunity against surges and wiring mistakes',
+        'Compact enclosure enabling tool-free installation',
+      ],
+    },
+
+    'wmbus-microclima': {
+      slug: 'wmbus-microclima',
+      heading: 'Communication module portfolio',
+      title: 'wMBus MicroClima',
+      intro:
+        'Wireless add-on for MicroClima heat meters, dedicated to residential deployments with frequent remote reads.',
+      description: [
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        '868 MHz communication compliant with OMS',
+        'Built-in billing profiles with up to 24 months of memory',
+        'Power-saving mode extending battery life',
+        'Alarm function for tamper and temperature thresholds',
+        'Quick setup through NFC or the Route ONE configuration tool',
+        'Operates in wide temperature range from -10C to 55C',
+      ],
+    },
+
+    'wmbus-rc12': {
+      slug: 'wmbus-rc12',
+      heading: 'Communication module portfolio',
+      title: 'wMBus RC12',
+      intro:
+        'Communication module for RC12 heat meters designed for both walk-by and stationary networks.',
+      description: [
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'Transmits frames in T and C-T modes compliant with OMS',
+        'Supports multi-hop via EXIO or ECLIPSE repeaters',
+        'Logs hydraulic and energy related alarms',
+        'Remote adjustment of reading intervals',
+        'Battery lifetime up to 12 years at 15-minute reporting',
+        'Robust IP67 enclosure resistant to moisture',
+      ],
+    },
+
     'wehrle-etkw-eax': {
       slug: 'wehrle-etkw-eax',
       heading: 'Water meter portfolio',
@@ -1126,6 +1374,7 @@ const en: ContentStructure = {
         'Pressure resistance up to 1.6 MPa',
       ],
     },
+
     'maddalena-sj-plus-evo': {
       slug: 'maddalena-sj-plus-evo',
       heading: 'Water meter portfolio',
@@ -1148,6 +1397,7 @@ const en: ContentStructure = {
         'Available with sanitary certificate',
       ],
     },
+
     'wasser-geraete-eco': {
       slug: 'wasser-geraete-eco',
       heading: 'Water meter portfolio',
@@ -1167,6 +1417,7 @@ const en: ContentStructure = {
         'Mounting options: horizontal/vertical',
       ],
     },
+
     'gwf-sonico-nano': {
       slug: 'gwf-sonico-nano',
       heading: 'Water meter portfolio',
@@ -1188,6 +1439,7 @@ const en: ContentStructure = {
         'Battery life up to 20 years',
       ],
     },
+
     'apator-js-smart-plus': {
       slug: 'apator-js-smart-plus',
       heading: 'Water meter portfolio',
@@ -1209,6 +1461,7 @@ const en: ContentStructure = {
         'Mounting possibility: register on top or side (horizontal/vertical mounting)',
       ],
     },
+
     'engelmann-senso-star-e': {
       slug: 'engelmann-senso-star-e',
       heading: 'Heat meter portfolio',
@@ -1227,6 +1480,7 @@ const en: ContentStructure = {
         'Construction resistant to electromagnetic interference and with reverse flow detection',
       ],
     },
+
     'maddalena-microclima-evo': {
       slug: 'maddalena-microclima-evo',
       heading: 'Heat meter portfolio',
@@ -1244,6 +1498,7 @@ const en: ContentStructure = {
         'Intuitive user interface and remote data reading capability',
       ],
     },
+
     'ploumeter-rc12': {
       slug: 'ploumeter-rc12',
       heading: 'Heat meter portfolio',
@@ -1260,6 +1515,7 @@ const en: ContentStructure = {
         'Easy installation and operation, as well as durable construction',
       ],
     },
+
     'range-one': {
       slug: 'range-one',
       heading: 'Infrastructure product overview',
@@ -1279,6 +1535,7 @@ const en: ContentStructure = {
         'Data reading and remote configuration capability of radio modules',
       ],
     },
+
     'eclipse-wmbus-gateway': {
       slug: 'eclipse-wmbus-gateway',
       heading: 'Infrastructure product overview',
@@ -1299,6 +1556,7 @@ const en: ContentStructure = {
         'Security sensors detecting opening and dismounting of the device',
       ],
     },
+
     'eclipse-wmbus-repeater': {
       slug: 'eclipse-wmbus-repeater',
       heading: 'Infrastructure product overview',
@@ -1319,51 +1577,65 @@ const en: ContentStructure = {
         'Battery power with lifespan up to 11 years',
       ],
     },
-    'eixo-wmbus-gateway': {
-      slug: 'eixo-wmbus-gateway',
-      heading: 'Infrastructure product overview',
-      title: 'EIXO WM-Bus Gateway',
+
+    'walk-by': {
+      slug: 'walk-by',
+      heading: 'Systems and platforms',
+      title: 'Walk-by',
       intro:
-        'Mains-powered data concentrator for advanced metering infrastructure, compatible with Wireless M-Bus and OMS.',
+        'Fast remote reading without errors or downtime. Based on the Range ONE device and the Route ONE app, the system automates data capture and device diagnostics in the field.',
       description: [
-        'EIXO WM-Bus Gateway provides reliable monitoring and full control over smart metering networks in demanding environments.',
       ],
       featuresHeading: 'Key features',
       features: [
-        '230 V supply ensures continuous and stable operation',
-        'Compliance with wM-Bus and OMS standards and a broad range of meters',
-        '5G, 4G, and NB-IoT connectivity for maximum coverage',
-        'High 868 MHz sensitivity for difficult installation points',
-        'Linux-based system for remote management and diagnostics',
-        'Flexible data transmission protocols (MQTT, E-mail, HTTPS) with advanced scheduling',
-        'Tamper detection against enclosure opening or removal',
-        'Rugged housing suited for harsh conditions',
+        'Automatic reading of water, heat, heating cost allocators, gas, and electricity meters',
+        'Instant data transfer to the platform without physical access to meters',
+        'Built-in diagnostics and servicing of measuring modules in the field',
+        'Integration with Route ONE for reports and alarm handling',
+        'Reliable communication in hard-to-reach locations thanks to 868 MHz radio',
+        'Walk-by workflow shortens service time and reduces operational costs',
       ],
     },
-    'exio-wmbus-repeater': {
-      slug: 'exio-wmbus-repeater',
-      heading: 'Infrastructure product overview',
-      title: 'EXIO WM-Bus Repeater',
+
+    'star-fix': {
+      slug: 'star-fix',
+      heading: 'Systems and platforms',
+      title: 'Star/Fix',
       intro:
-        'Mains-powered repeater enhancing range and reliability in Wireless M-Bus systems.',
+        'Continuous supervision and full control over media using a star topology. Meters communicate directly with the concentrator or via repeaters to maintain visibility of the network.',
       description: [
-        'EXIO WM-Bus Repeater significantly boosts telemetry network performance, ensuring durability, security, and high-quality communication.',
       ],
       featuresHeading: 'Key features',
       features: [
-        'Stable 230 V power supply for uninterrupted operation',
-        'High 868 MHz sensitivity with AES 128-bit encryption',
-        'Supports multiple Wireless M-Bus modes (S, T, C+T, etc.)',
-        'Compatible with a wide variety of metering devices',
-        'Enables multi-hop repeater chains for extended reach',
-        'Easy installation with vandal-resistant enclosure',
-        'Firmware updates locally or remotely via USB',
-        'Stable transmission without interference or signal loss',
+        'Star architecture for devices compliant with Wireless M-Bus or OMS',
+        'Automated readings and balancing of utility consumption',
+        'Rapid response to alarms and anomalies through remote notifications',
+        'Range extension with ECLIPSE or EXIO repeaters',
+        'Central configuration of parameters and reading schedules',
+        'Secure data handling with encryption and controlled access',
       ],
     },
+
+    'mesh': {
+      slug: 'mesh',
+      heading: 'Systems and platforms',
+      title: 'MESH',
+      intro:
+        'An intelligent self-configuring metering network that keeps communication running even in demanding conditions. Installation is as simple as powering the concentrator and starting the network.',
+      description: [
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'Self-healing mesh topology guaranteeing transmission continuity',
+        'Single data concentrator with automatic delivery to the cloud',
+        'Minimal maintenance costs thanks to zero manual intervention',
+        'Automatic discovery of new devices and route optimisation',
+        'Scales to thousands of meters without loss of service quality',
+        'Advanced real-time reports, alarms, and resource management',
+      ],
+    },
+
   },
-
-
 
   footer: {
     legalLinks: [
@@ -1373,6 +1645,7 @@ const en: ContentStructure = {
     ],
     copyright: 'KAYON',
   },
+
 };
 
 const de: ContentStructure = {
@@ -1620,7 +1893,7 @@ const de: ContentStructure = {
         downloads: [],
         readMoreLabel: 'Produkte ansehen',
         slug: 'wehrle-etkw-eax',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/wodomierze',
       },
       {
         title: 'Waermezaehler',
@@ -1634,7 +1907,7 @@ const de: ContentStructure = {
         ],
         downloads: [],
         readMoreLabel: 'Produkte ansehen',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/cieplomierze',
       },
       {
         title: 'Kommunikationsmodule',
@@ -1651,7 +1924,7 @@ const de: ContentStructure = {
         downloads: [],
         readMoreLabel: 'Produkte ansehen',
         slug: 'modularis-one',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/moduly-komunikacyjne',
       },
       {
         title: 'Systeme & Plattformen',
@@ -1666,7 +1939,7 @@ const de: ContentStructure = {
         ],
         downloads: [],
         readMoreLabel: 'Loesungen entdecken',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/systemy-i-platformy',
       },
       {
         title: 'Infrastruktur',
@@ -1683,35 +1956,142 @@ const de: ContentStructure = {
         downloads: [],
         readMoreLabel: 'Produkte ansehen',
         slug: 'range-one',
-        readMoreHref: '#',
+        readMoreHref: '/produkty/infrastruktura',
       },
     ],
   },
 
+  productCategories: [
+    {
+      slug: 'wodomierze',
+      title: 'Wasserzaehler',
+      description: 'Wasserzaehler fuer Kayon Fernauslese- und Abrechnungssysteme.',
+      items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'gwf-sonico-nano', 'apator-js-smart-plus'],
+    },
+    {
+      slug: 'cieplomierze',
+      title: 'Waermezaehler',
+      description: 'Waermezaehler fuer Wohn- und Gewerbeanwendungen mit Systemintegration.',
+      items: ['engelmann-senso-star-e', 'maddalena-microclima-evo', 'ploumeter-rc12'],
+    },
+    {
+      slug: 'moduly-komunikacyjne',
+      title: 'Kommunikationsmodule',
+      description: 'Funk- und Kabelmodule zur Anbindung der Zaehler an Kayon Plattformen.',
+      items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
+    },
+    {
+      slug: 'systemy-i-platformy',
+      title: 'Systeme & Plattformen',
+      description: 'ALL in KAYON Systeme fuer Automatisierung und Datenmanagement.',
+      items: ['walk-by', 'star-fix', 'mesh'],
+    },
+    {
+      slug: 'infrastruktura',
+      title: 'Infrastruktur',
+      description: 'Feld- und Netzwerktechnik fuer den Aufbau von Fernauslese-Netzen.',
+      items: ['range-one', 'eclipse-wmbus-gateway', 'eclipse-wmbus-repeater', 'eixo-wmbus-gateway', 'exio-wmbus-repeater'],
+    },
+  ],
 
 
   productDetails: {
+
     'modularis-one': {
       slug: 'modularis-one',
       heading: 'Kommunikationsmodule im Ueberblick',
       title: 'Modularis ONE',
       intro:
-        'Kompaktes Funkmodul im wM-Bus-Standard 868 MHz zur Fernauslese von Modularis-Zaehlern. Es integriert sich in Walk-by- und AMR-Systeme und bietet stabile drahtlose Datenuebertragung. Bidirektionale Kommunikation ermoeglicht Fernkonfiguration, Alarm-Reset und Diagnose.',
+        'Kompaktes 868-MHz-Funkmodul fuer Modularis-Wasserzaehler, das Fernauslesung und Konfiguration in Walk-by- und AMR-Installationen ermoeglicht.',
       description: [
-        'Modularis ONE ist eine moderne Loesung fuer effizientes und sicheres Metering und bietet Flexibilitaet und Skalierbarkeit ohne Verkabelung oder manuelle Datenerfassung.',
       ],
-      featuresHeading: 'Wichtigste Merkmale',
+      featuresHeading: 'Hauptmerkmale',
       features: [
-        'Bidirektionale Kommunikation fuer Fernkonfiguration, Alarm-Reset und Diagnose',
-        'Kompatibel mit zahlreichen Modularis-Zaehlern und Geraeten anderer Hersteller',
-        'Parallele Uebertragung von Walk-by- und AMR-Telegrammen',
-        'Unterstuetzung von kurzen, langen und erweiterten Rahmen mit bis zu 15 Monaten Historie',
-        'Induktiver Sensor, unempfindlich gegen magnetische Stoerungen',
-        'Batterielaufzeit bis zu 11 Jahren',
-        'Schutzart IP54 (optional IP68)',
+        'Bidirektionale Kommunikation mit Fernkonfiguration und Alarm-Reset',
+        'Parallele Uebertragung von Walk-by- und stationaeren (AMR) Telegrammen',
+        'Unterstuetzt Rahmenhistorie bis zu 15 Monaten',
+        'Induktiver Sensor unempfindlich gegen magnetische Stoerungen',
+        'Batterielebensdauer bis zu 11 Jahren, optionales IP68-Gehaeuse',
         'Konform mit EN 13757 und OMS',
       ],
     },
+
+    'wmbus-smart-plus': {
+      slug: 'wmbus-smart-plus',
+      heading: 'Kommunikationsmodule im Ueberblick',
+      title: 'wMBus Smart+',
+      intro:
+        'Funkaufsatz fuer Smart+ Wasser- und Waermezaehler, der sofortigen Zugriff auf Messdaten im Wireless-M-Bus-Standard liefert.',
+      description: [
+      ],
+      featuresHeading: 'Hauptmerkmale',
+      features: [
+        'Sendung in den Baendern S und T gemaess OMS',
+        'Parallele Uebertragung von Verbrauchsprotokollen und Fernalarmen',
+        'AES-128-Verschluesselung fuer durchgaengig gesicherte Daten',
+        'Fernkonfiguration ueber das Handgeraet Range ONE oder ECLIPSE-Gateways',
+        'Batterielebensdauer bis zu 12 Jahren im typischen Betrieb',
+        'IP68-geschuetztes Gehaeuse fuer den Einsatz in Schaechten',
+      ],
+    },
+
+    'mbus-smart-plus': {
+      slug: 'mbus-smart-plus',
+      heading: 'Kommunikationsmodule im Ueberblick',
+      title: 'MBus Smart+',
+      intro:
+        'Drahtgebundenes M-Bus-Modul, das Smart+-Zaehler mit Gebaeudeautomation und BMS-Infrastrukturen verbindet.',
+      description: [
+      ],
+      featuresHeading: 'Hauptmerkmale',
+      features: [
+        'Versorgung direkt aus der M-Bus-Leitung ohne zusaetzliche Batterien',
+        'Mehrgeraeteadressierung mit Kaskadierungsmoeglichkeit',
+        'Sofortige und historische Ablesungen auf Abruf',
+        'Busdiagnose und Stoerungsanzeige',
+        'Hohe Bestaendigkeit gegen Ueberspannungen und Verdrahtungsfehler',
+        'Kompaktes Gehaeuse fuer werkzeuglose Montage',
+      ],
+    },
+
+    'wmbus-microclima': {
+      slug: 'wmbus-microclima',
+      heading: 'Kommunikationsmodule im Ueberblick',
+      title: 'wMBus MicroClima',
+      intro:
+        'Funkmodul fuer MicroClima-Waermezaehler, optimiert fuer Wohnanlagen mit haeufigen Fernauslesungen.',
+      description: [
+      ],
+      featuresHeading: 'Hauptmerkmale',
+      features: [
+        '868-MHz-Kommunikation gemaess OMS',
+        'Integrierte Abrechnungsprofile mit bis zu 24 Monaten Speicher',
+        'Energiesparmodus verlaengert die Batterielebensdauer',
+        'Alarmierung bei Manipulation und Temperaturgrenzwerten',
+        'Schnelle Konfiguration via NFC oder dem Route-ONE-Tool',
+        'Einsatzbereich von -10C bis 55C',
+      ],
+    },
+
+    'wmbus-rc12': {
+      slug: 'wmbus-rc12',
+      heading: 'Kommunikationsmodule im Ueberblick',
+      title: 'wMBus RC12',
+      intro:
+        'Kommunikationsmodul fuer RC12-Waermezaehler, ausgelegt fuer Walk-by- und stationaere Netze.',
+      description: [
+      ],
+      featuresHeading: 'Hauptmerkmale',
+      features: [
+        'Uebertragung von Frames in den Modi T und C-T gemaess OMS',
+        'Unterstuetzt Multi-Hop ueber EXIO- oder ECLIPSE-Repeater',
+        'Erfasst hydraulische und energetische Alarme',
+        'Fernanpassung des Ausleseintervalls',
+        'Batterielebensdauer bis zu 12 Jahren bei 15-Minuten-Intervall',
+        'Robustes IP67-Gehaeuse widersteht Feuchtigkeit',
+      ],
+    },
+
     'wehrle-etkw-eax': {
       slug: 'wehrle-etkw-eax',
       heading: 'Wasserzaehler im Ueberblick',
@@ -1734,6 +2114,7 @@ const de: ContentStructure = {
         'Druckfestigkeit bis 1,6 MPa',
       ],
     },
+
     'maddalena-sj-plus-evo': {
       slug: 'maddalena-sj-plus-evo',
       heading: 'Wasserzaehler im Ueberblick',
@@ -1756,6 +2137,7 @@ const de: ContentStructure = {
         'Erhaeltlich mit Hygienezertifikat',
       ],
     },
+
     'wasser-geraete-eco': {
       slug: 'wasser-geraete-eco',
       heading: 'Wasserzaehler im Ueberblick',
@@ -1775,6 +2157,7 @@ const de: ContentStructure = {
         'Montageoptionen: horizontal/vertikal',
       ],
     },
+
     'gwf-sonico-nano': {
       slug: 'gwf-sonico-nano',
       heading: 'Wasserzaehler im Ueberblick',
@@ -1796,6 +2179,7 @@ const de: ContentStructure = {
         'Batterielebensdauer bis zu 20 Jahren',
       ],
     },
+
     'apator-js-smart-plus': {
       slug: 'apator-js-smart-plus',
       heading: 'Wasserzaehler im Ueberblick',
@@ -1817,6 +2201,7 @@ const de: ContentStructure = {
         'Montagemoeglichkeit: Zaehlwerk oben oder seitlich (horizontale/vertikale Montage)',
       ],
     },
+
     'engelmann-senso-star-e': {
       slug: 'engelmann-senso-star-e',
       heading: 'Warmezaehler im Ueberblick',
@@ -1835,6 +2220,7 @@ const de: ContentStructure = {
         'Konstruktion resistent gegen elektromagnetische Stoerungen und mit Rueckflusserkennung',
       ],
     },
+
     'maddalena-microclima-evo': {
       slug: 'maddalena-microclima-evo',
       heading: 'Warmezaehler im Ueberblick',
@@ -1852,6 +2238,7 @@ const de: ContentStructure = {
         'Intuitive Benutzeroberflaeche und Moeglichkeit zur Fernauslesung der Daten',
       ],
     },
+
     'ploumeter-rc12': {
       slug: 'ploumeter-rc12',
       heading: 'Warmezaehler im Ueberblick',
@@ -1868,6 +2255,7 @@ const de: ContentStructure = {
         'Einfache Montage und Bedienung sowie langlebige Konstruktion',
       ],
     },
+
     'range-one': {
       slug: 'range-one',
       heading: 'Infrastrukturprodukte im Ueberblick',
@@ -1887,6 +2275,7 @@ const de: ContentStructure = {
         'Moeglichkeit zur Datenauslesung und Fernkonfiguration von Funkmodulen',
       ],
     },
+
     'eclipse-wmbus-gateway': {
       slug: 'eclipse-wmbus-gateway',
       heading: 'Infrastrukturprodukte im Ueberblick',
@@ -1907,6 +2296,7 @@ const de: ContentStructure = {
         'Sicherheitssensoren zur Erkennung von Oeffnung und Demontage des Geraets',
       ],
     },
+
     'eclipse-wmbus-repeater': {
       slug: 'eclipse-wmbus-repeater',
       heading: 'Infrastrukturprodukte im Ueberblick',
@@ -1927,51 +2317,65 @@ const de: ContentStructure = {
         'Batteriebetrieb mit einer Lebensdauer von bis zu 11 Jahren',
       ],
     },
-    'eixo-wmbus-gateway': {
-      slug: 'eixo-wmbus-gateway',
-      heading: 'Infrastrukturprodukte im Ueberblick',
-      title: 'EIXO WM-Bus Gateway',
+
+    'walk-by': {
+      slug: 'walk-by',
+      heading: 'Systeme und Plattformen',
+      title: 'Walk-by',
       intro:
-        'Netzgespeister Datenkonzentrator fuer moderne Messinfrastrukturen, kompatibel mit Wireless M-Bus und OMS.',
+        'Schnelle Fernauslesung ohne Fehler und Ausfallzeiten. Basierend auf dem Geraet Range ONE und der App Route ONE automatisiert das System die Datenerfassung und Geraetediagnose im Feld.',
       description: [
-        'EIXO WM-Bus Gateway bietet zuverlaessige Ueberwachung und volle Kontrolle ueber Smart-Metering-Netze in anspruchsvollen Umgebungen.',
       ],
-      featuresHeading: 'Wichtigste Merkmale',
+      featuresHeading: 'Hauptmerkmale',
       features: [
-        '230-V-Stromversorgung fuer kontinuierlichen, stabilen Betrieb',
-        'Konform mit wM-Bus- und OMS-Standards und zahlreichen Messgeraeten',
-        '5G, 4G und NB-IoT fuer maximale Reichweite',
-        'Hohe 868-MHz-Empfindlichkeit fuer schwierige Installationsorte',
-        'Linux-basierte Plattform fuer Fernverwaltung und Diagnose',
-        'Flexible Datenprotokolle (MQTT, E-Mail, HTTPS) mit erweiterten Zeitplaenen',
-        'Manipulationserkennung bei Gehaeuseoeffnung oder Demontage',
-        'Robustes Gehaeuse fuer harte Umgebungen',
+        'Automatische Auslesung von Wasser-, Waerme-, Heizkosten-, Gas- und Stromzaehlern',
+        'Sofortige Datenuebertragung in die Plattform ohne physischen Zugang zu den Zaehlern',
+        'Integrierte Diagnose und Service fuer Messmodule vor Ort',
+        'Integration mit Route ONE fuer Berichte und Alarmverwaltung',
+        'Zuverlaessige Kommunikation an schwer zugaenglichen Stellen dank 868-MHz-Funk',
+        'Walk-by-Prozess verkuerzt Servicezeiten und reduziert Betriebskosten',
       ],
     },
-    'exio-wmbus-repeater': {
-      slug: 'exio-wmbus-repeater',
-      heading: 'Infrastrukturprodukte im Ueberblick',
-      title: 'EXIO WM-Bus Repeater',
+
+    'star-fix': {
+      slug: 'star-fix',
+      heading: 'Systeme und Plattformen',
+      title: 'Star/Fix',
       intro:
-        'Netzbetriebener Repeater, der Reichweite und Sicherheit in Wireless-M-Bus-Systemen erhoeht.',
+        'Kontinuierliche Ueberwachung und volle Kontrolle ueber Medien in einer Stern-Topologie. Zaehler kommunizieren direkt mit dem Konzentrator oder ueber Repeater, um die Netzabdeckung sicherzustellen.',
       description: [
-        'EXIO WM-Bus Repeater steigert die Leistungsfaehigkeit von Telemetrienetzen und sorgt fuer Dauerhaftigkeit, Sicherheit und hochwertige Kommunikation.',
       ],
-      featuresHeading: 'Wichtigste Merkmale',
+      featuresHeading: 'Hauptmerkmale',
       features: [
-        'Stabile 230-V-Versorgung fuer unterbrechungsfreien Betrieb',
-        'Hohe 868-MHz-Empfindlichkeit mit AES-128-Verschluesselung',
-        'Unterstuetzt mehrere Wireless-M-Bus-Modi (S, T, C+T usw.)',
-        'Kompatibel mit einer breiten Palette von Messgeraeten',
-        'Ermoeglicht Multi-Hop-Repeaterketten fuer groessere Reichweite',
-        'Einfache Montage mit vandalismussicherem Gehaeuse',
-        'Firmware-Updates lokal oder remote via USB',
-        'Stabile Uebertragung ohne Stoerungen oder Signalverlust',
+        'Sternarchitektur fuer Geraete nach Wireless-M-Bus oder OMS',
+        'Automatisierte Ablesung und Bilanzierung des Verbrauchs',
+        'Schnelle Reaktion auf Alarme und Anomalien durch Fernbenachrichtigungen',
+        'Reichweitenerweiterung mit ECLIPSE- oder EXIO-Repeatern',
+        'Zentrale Konfiguration von Parametern und Ausleseplaenen',
+        'Sichere Datenverarbeitung durch Verschluesselung und Zugriffskontrolle',
       ],
     },
+
+    'mesh': {
+      slug: 'mesh',
+      heading: 'Systeme und Plattformen',
+      title: 'MESH',
+      intro:
+        'Intelligentes, selbstkonfigurierendes Messnetz, das auch unter schwierigen Bedingungen eine zuverlaessige Kommunikation sicherstellt. Die Installation beschraenkt sich auf das Einschalten des Konzentrators.',
+      description: [
+      ],
+      featuresHeading: 'Hauptmerkmale',
+      features: [
+        'Selbstheilende Mesh-Topologie fuer dauerhafte Uebertragung',
+        'Ein Datenkonzentrator mit automatischer Cloud-Uebermittlung',
+        'Minimale Wartungskosten durch fehlende manuelle Eingriffe',
+        'Automatische Erkennung neuer Geraete und Routenoptimierung',
+        'Skalierbar auf tausende Zaehler ohne Qualitaetseinbussen',
+        'Umfassende Echtzeitberichte, Alarme und Ressourcenmanagement',
+      ],
+    },
+
   },
-
-
 
   footer: {
     legalLinks: [
@@ -1981,6 +2385,7 @@ const de: ContentStructure = {
     ],
     copyright: 'KAYON',
   },
+
 };
 
 export const CONTENT: Record<SupportedLanguage, ContentStructure> = {

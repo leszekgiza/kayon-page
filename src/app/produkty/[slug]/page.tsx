@@ -1,16 +1,19 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import ProductCategoryPage from '@/components/ProductCategoryPage';
 import ProductDetailPage from '@/components/ProductDetailPage';
 import { CONTENT } from '@/translations/content';
 
-const SLUGS = Object.keys(CONTENT.pl.productDetails);
+const PRODUCT_SLUGS = Object.keys(CONTENT.pl.productDetails);
+const CATEGORY_SLUGS = CONTENT.pl.productCategories.map((category) => category.slug);
+const ALL_SLUGS = [...PRODUCT_SLUGS, ...CATEGORY_SLUGS];
 
 type ProductDetailParams = { slug: string };
 
 export function generateStaticParams() {
-  return SLUGS.map((slug) => ({ slug }));
+  return ALL_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -19,13 +22,26 @@ export async function generateMetadata({
   params: Promise<ProductDetailParams>;
 }): Promise<Metadata> {
   const { slug } = await params;
+
+  if (CATEGORY_SLUGS.includes(slug)) {
+    const category = CONTENT.pl.productCategories.find((item) => item.slug === slug);
+    if (!category) {
+      return {};
+    }
+
+    return {
+      title: `KAYON - ${category.title}`,
+      description: category.description,
+    };
+  }
+
   const detail = CONTENT.pl.productDetails[slug];
   if (!detail) {
     return {};
   }
 
   return {
-    title: `KAYON – ${detail.title}`,
+    title: `KAYON - ${detail.title}`,
     description: detail.intro,
   };
 }
@@ -33,7 +49,10 @@ export async function generateMetadata({
 const ProductDetailRoute = async ({ params }: { params: Promise<ProductDetailParams> }) => {
   const { slug } = await params;
 
-  if (!SLUGS.includes(slug)) {
+  const isCategory = CATEGORY_SLUGS.includes(slug);
+  const isProduct = PRODUCT_SLUGS.includes(slug);
+
+  if (!isCategory && !isProduct) {
     notFound();
   }
 
@@ -41,7 +60,7 @@ const ProductDetailRoute = async ({ params }: { params: Promise<ProductDetailPar
     <>
       <Navigation />
       <main>
-        <ProductDetailPage slug={slug} />
+        {isCategory ? <ProductCategoryPage slug={slug} /> : <ProductDetailPage slug={slug} />}
       </main>
       <Footer />
     </>
