@@ -359,7 +359,7 @@ const pl: ContentStructure = {
     groups: [
       {
         title: 'Wodomierze',
-        items: ['Wehrle', 'Maddalena', 'Wassergeräte', 'SonicoNano (GWF)', 'Apator Smart'],
+        items: ['Wehrle', 'Maddalena', 'Wasser-Geraete', 'GWF Sonico Nano', 'Apator JS Smart+'],
       },
       {
         title: 'Ciepłomierze',
@@ -367,7 +367,7 @@ const pl: ContentStructure = {
       },
       {
         title: 'Moduły komunikacyjne',
-        items: ['Modularis One', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
+        items: ['Modularis ONE', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
       },
       {
         title: 'Systemy i platformy',
@@ -389,15 +389,15 @@ const pl: ContentStructure = {
   productPage: {
     cards: [
       {
-        title: 'Modularis One',
+        title: 'Modularis ONE',
         subtitle: 'Modul komunikacyjny',
         description:
           'Kompaktowy modul radiowy w standardzie wM-Bus 868 MHz do zdalnego odczytu wodomierzy Modularis.',
         features: [
-          'Dwukierunkowa komunikacja umozliwiajaca zdalna konfiguracje, kasowanie alarmow i diagnostyke',
-          'Kompatybilnosc z wieloma wodomierzami Modularis oraz urzadzeniami innych producentow',
-          'Rownolegla transmisja radiotelegramow w trybie walk-by i AMR (stacjonarny odczyt)',
-          'Praca bateryjna do 11 lat w trudnych warunkach',
+          'Dwukierunkowa komunikacja i zdalna diagnostyka',
+          'Kompatybilnosc z wodomierzami Modularis i urzadzeniami innych producentow',
+          'Jednoczesna transmisja telegramow walk-by i AMR',
+          'Bateria do 11 lat oraz szczelnosc IP54/IP68',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -408,15 +408,114 @@ const pl: ContentStructure = {
         readMoreHref: '/produkty/modularis-one',
       },
       {
+        title: 'Wehrle ETK(W)-EAX',
+        subtitle: 'Wodomierz jednotrumieniowy',
+        description:
+          'Precyzyjny wodomierz do zastosowan domowych i komercyjnych, gotowy do pracy w wymagajacych warunkach.',
+        features: [
+          'Integracja z dowolnym systemem AMR',
+          'Zakres temperatur: do 50C (zimna) i 90C (ciepla)',
+          'Maksymalne natezenie przeplywu Q3: 2.5-4.0 m3/h',
+          'MID: R250 poziomo i R80 pionowo',
+          'Liczydlo obracane o 360 stopni',
+          'Obudowa z niklowanego mosiadzu, klasa IP64',
+          'Odpornosc cisnieniowa do 1.6 MPa',
+        ],
+        downloads: [
+          { label: 'Download PDF', href: 'https://wehrle.de/en/metering/water/single-jet-dry-meters/single-jet-dry-modularis/#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'wehrle-etkw-eax',
+        readMoreHref: '/produkty/wehrle-etkw-eax',
+      },
+      {
+        title: 'Maddalena SJ PLUS-EVO',
+        subtitle: 'Wodomierz jednotrumieniowy',
+        description:
+          'Nowoczesny wodomierz do instalacji domowych, zapewniajacy wysoka niezawodnosc i dokladnosc pomiaru.',
+        features: [
+          'Kompatybilny z przewodowymi i radiowymi modulami odczytowymi',
+          'Zakres temperatur: do 90C',
+          'Q3: 1.6 m3/h (DN15) lub 4.0 m3/h (DN20)',
+          'MID do klasy R160',
+          'Montaz w wielu pozycjach, liczydlo 360 stopni',
+          'Wysoka odpornosc na pole magnetyczne i certyfikat sanitarny',
+        ],
+        downloads: [
+          { label: 'Download PDF', href: 'https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnica-sjplus-en-v4.pdf' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'maddalena-sj-plus-evo',
+        readMoreHref: '/produkty/maddalena-sj-plus-evo',
+      },
+      {
+        title: 'Wasser-Geraete ECO',
+        subtitle: 'Wodomierz do cieplej i zimnej wody',
+        description: 'Trwaly wodomierz do pomiaru cieplej i zimnej wody w budynkach mieszkaniowych oraz komercyjnych.',
+        features: [
+          'Integracja z nasadka radiowa, M-Bus lub wyjsciem impulsowym',
+          'Zakres temperatur: do 50C (zimna) i 90C (ciepla)',
+          'Maksymalne natezenie przeplywu Q3: 2.5 m3/h',
+          'Trwala konstrukcja odporna na kondensacje',
+          'Montaz poziomy lub pionowy',
+        ],
+        downloads: [
+          { label: 'Download PDF', href: 'https://www.wasser-geraete.de/products/wohnungswasserzaehlereco/#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'wasser-geraete-eco',
+        readMoreHref: '/produkty/wasser-geraete-eco',
+      },
+      {
+        title: 'GWF Sonico Nano',
+        subtitle: 'Wodomierz ultradzwiekowy',
+        description:
+          'Zaawansowany wodomierz ultradzwiekowy zapewniajacy wysoka precyzje i trwalosc pomiaru w instalacjach mieszkaniowych i przemyslowych.',
+        features: [
+          'Ultradzwiekowy pomiar zgodny z LoRaWAN i Wireless M-Bus',
+          'Zakres temperatur: do 50C (zimna) i 90C (ciepla)',
+          'Q3: 1.6 / 2.5 / 4.0 m3/h w zaleznosci od DN',
+          'MID klasy R1000 oraz bardzo niskie straty cisnienia',
+          'Bateria do 20 lat pracy i latwa integracja z automatyka',
+        ],
+        downloads: [
+          { label: 'Download PDF', href: 'https://productfinder.gwf.ch/uploads_productfinder/downloads/Sonico_Brochure_Enlit-Version-2024_KIe10200_web_v04.pdf' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'gwf-sonico-nano',
+        readMoreHref: '/produkty/gwf-sonico-nano',
+      },
+      {
+        title: 'Apator Powogaz JS Smart+',
+        subtitle: 'Wodomierz do instalacji domowych',
+        description:
+          'Sprawdzone rozwiazanie do precyzyjnego pomiaru przeplywu wody w instalacjach domowych, odporne na wymagajace warunki.',
+        features: [
+          'Integracja z nakladkami Wireless M-Bus, impulsowa, M-Bus i indukcyjna',
+          'Zakres temperatur: do 50C (zimna) i 90C (ciepla)',
+          'Q3: 1.6 / 2.5 / 4.0 m3/h w zaleznosci od DN',
+          'MID: R100 (H, DN15/20) oraz R50 (V, DN15/20)',
+          'Odporna obudowa i liczydlo montowane z gory lub z boku',
+          'Wytrzymalosc cisnieniowa do 16 bar',
+        ],
+        downloads: [
+          { label: 'Download PDF', href: 'https://api.apator.com/uploads/oferta/woda-i-cieplo/wodomierze/smart-plus/smart-plus-karta-katalogowa.pdf' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'apator-js-smart-plus',
+        readMoreHref: '/produkty/apator-js-smart-plus',
+      },
+      {
         title: 'Range ONE',
         subtitle: 'Infrastruktura terenowa',
-        description:
-          'Przenosny odbiornik Wireless M-Bus z lacznoscia Bluetooth i wysoka czuloscia 868 MHz.',
+        description: 'Przenosny odbiornik Wireless M-Bus z lacznoscia Bluetooth i wysoka czuloscia 868 MHz.',
         features: [
-          'Szybkie odczyty w trudno dostepnych miejscach',
-          'Lacznosc Bluetooth z aplikacja Route ONE',
-          'Praca na baterii do 40 godzin',
-          'Odporna, ergonomiczna obudowa',
+          'Wysoka czulosc odbiornika 868 MHz do odczytow w trudnych miejscach',
+          'Bluetooth do przesylania danych na Android (Route ONE)',
+          'Energooszczedna praca na baterii do 40 godzin',
+          'Ergonomiczna, odporna obudowa z gumowanymi bokami',
+          'Zewnetrzna antena i port USB do ladowania',
+          'Odczyt danych i zdalna konfiguracja modulow radiowych',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -429,13 +528,15 @@ const pl: ContentStructure = {
       {
         title: 'ECLIPSE WM-Bus Gateway',
         subtitle: 'Koncentrator danych',
-        description:
-          'Bateryjny koncentrator danych wM-Bus/OMS do szybkiego wdrozenia w dowolnej lokalizacji.',
+        description: 'Bateryjny koncentrator danych wM-Bus/OMS do szybkiego wdrozenia w dowolnej lokalizacji.',
         features: [
-          'Zdalne zarzadzanie, diagnostyka i elastyczne protokoly transmisji',
-          'Kompatybilnosc z urzadzeniami wM-Bus i OMS',
+          'Zdalne zarzadzanie, diagnostyka i protokoly (HTTPS, MQTT, E-mail)',
+          'Pelna zgodnosc z urzadzeniami wM-Bus i OMS',
           'Lacznosc 5G/4G/NB-IoT zapewnia stabilne polaczenie',
+          'Wysoka czulosc odbiornika 868 MHz',
           'Praca na baterii do 11 lat bez serwisowania',
+          'Odporna na kurz i UV obudowa o estetycznym designie',
+          'Czujniki bezpieczenstwa wykrywajace otwarcie i demontaz',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -448,13 +549,14 @@ const pl: ContentStructure = {
       {
         title: 'ECLIPSE WM-Bus Repeater',
         subtitle: 'Wzmacniacz sygnalu',
-        description:
-          'Bateryjny repeater przedluzajacy zasieg sieci Wireless M-Bus na rozleglych instalacjach.',
+        description: 'Bateryjny repeater przedluzajacy zasieg sieci Wireless M-Bus na rozleglych instalacjach.',
         features: [
           'Prosta konfiguracja i zdalne aktualizacje firmware',
           'Wysoka czulosc odbiornika 868 MHz',
-          'Obsluga trybow Wireless M-Bus i OMS',
-          'Mozliwosc pracy multi-hop dla wiekszego zasiegu',
+          'Obsluga trybow Wireless M-Bus i OMS (S, T, C+T itd.)',
+          'Mozliwosc tworzenia lancuchow repeaterow (multi-hop)',
+          'Solidna, odporna konstrukcja do zastosowan przemyslowych i miejskich',
+          'Zasilanie bateryjne do 11 lat',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -467,13 +569,16 @@ const pl: ContentStructure = {
       {
         title: 'EIXO WM-Bus Gateway',
         subtitle: 'Koncentrator sieciowy',
-        description:
-          'Zasilany sieciowo gateway Linux do kompleksowego monitoringu systemow pomiarowych.',
+        description: 'Zasilany sieciowo gateway Linux do kompleksowego monitoringu systemow pomiarowych.',
         features: [
-          'Zasilanie 230 V zapewniajace ciagla prace',
-          'Pelna zgodnosc z wM-Bus i OMS',
-          'Komunikacja mobilna 5G/4G/NB-IoT',
-          'Zaawansowane protokoly transmisji danych',
+          'Zasilanie 230 V zapewnia ciagla, stabilna prace',
+          'Pelna zgodnosc z normami wM-Bus i OMS oraz szeroka gama urzadzen',
+          'Komunikacja 5G/4G/NB-IoT dla maksymalnego zasiegu',
+          'Wysoka czulosc odbiornika 868 MHz',
+          'System Linux do zdalnego zarzadzania i diagnostyki',
+          'Elastyczne protokoly danych (MQTT, E-mail, HTTPS) i harmonogramy',
+          'Zabezpieczenia przed otwarciem i demontazem obudowy',
+          'Solidna, odporna obudowa do wymagajacych warunkow',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -486,13 +591,16 @@ const pl: ContentStructure = {
       {
         title: 'EXIO WM-Bus Repeater',
         subtitle: 'Wzmacniacz sieciowy',
-        description:
-          'Sieciowy repeater zwiekszajacy zasieg i bezpieczenstwo transmisji Wireless M-Bus.',
+        description: 'Sieciowy repeater zwiekszajacy zasieg i bezpieczenstwo transmisji Wireless M-Bus.',
         features: [
-          'Zasilanie 230 V dla stabilnej pracy',
-          'Szyfrowanie AES 128-bit i wysoka czulosc 868 MHz',
-          'Obsluga wielu trybow Wireless M-Bus',
+          'Stabilne zasilanie 230 V gwarantujace ciaglosc pracy',
+          'Wysoka czulosc 868 MHz i szyfrowanie AES 128-bit',
+          'Obsluga licznych trybow Wireless M-Bus (S, T, C+T itd.)',
+          'Kompatybilnosc z szerokim zakresem urzadzen pomiarowych',
+          'Tworzenie lancuchow repeaterow (multi-hop)',
           'Latwy montaz i odporna obudowa antywandalowa',
+          'Aktualizacja firmware lokalnie lub zdalnie przez USB',
+          'Stabilna transmisja bez zaklocen i utraty sygnalu',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -510,11 +618,11 @@ const pl: ContentStructure = {
     'modularis-one': {
       slug: 'modularis-one',
       heading: 'Opis poszczegolnych modulow komunikacyjnych',
-      title: 'Modularis One',
+      title: 'Modularis ONE',
       intro:
         'Kompaktowy modul radiowy w standardzie wM-Bus 868 MHz do zdalnego odczytu wodomierzy Modularis. Umozliwia integracje z systemami walk-by i AMR oraz zapewnia stabilna bezprzewodowa transmisje danych. Dwukierunkowa komunikacja pozwala zdalnie konfigurowac urzadzenia, kasowac alarmy i prowadzic diagnostyke.',
       description: [
-        'Modularis One to nowoczesne rozwiazanie do efektywnego i bezpiecznego monitoringu wodomierzy, zapewniajace elastycznosc i skalowalnosc systemu odczytowego bez koniecznosci okablowania czy recznego zbierania danych.',
+        'Modularis ONE to nowoczesne rozwiazanie do efektywnego i bezpiecznego monitoringu wodomierzy, zapewniajace elastycznosc i skalowalnosc systemu odczytowego bez koniecznosci okablowania czy recznego zbierania danych.',
       ],
       featuresHeading: 'Najwazniejsze cechy',
       features: [
@@ -526,6 +634,103 @@ const pl: ContentStructure = {
         'Dlugi czas pracy baterii do 11 lat',
         'Stopien ochrony IP54 (opcjonalnie IP68)',
         'Zgodnosc z normami EN 13757 i OMS',
+      ],
+    },
+    'wehrle-etkw-eax': {
+      slug: 'wehrle-etkw-eax',
+      heading: 'Opis poszczegolnych wodomierzy',
+      title: 'Wehrle ETK(W)-EAX',
+      intro:
+        'Wodomierz jednotrumieniowy Wehrle to precyzyjne i niezawodne urzadzenie do pomiaru zuzycia wody w instalacjach domowych i komercyjnych, stworzone do dlugotrwalej pracy w trudnych warunkach.',
+      description: [
+        'Model ETK(W)-EAX jest w pelni kompatybilny z modulem Modularis ONE, co zapewnia elastyczna integracje z systemami zdalnego odczytu AMR.',
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Integracja z dowolnym systemem AMR',
+        'Zakres temperatur: do 50C (zimna woda) oraz do 90C (ciepla woda)',
+        'Maksymalne natezenie przeplywu Q3: 2.5-4.0 m3/h',
+        'MID: R250 przy montazu poziomym i R80 pionowo',
+        'Liczydlo obracane o 360 stopni',
+        'Obudowa z niklowanego mosiadzu, klasa szczelnosci IP64',
+        'Wytrzymalosc cisnieniowa do 1.6 MPa',
+      ],
+    },
+    'maddalena-sj-plus-evo': {
+      slug: 'maddalena-sj-plus-evo',
+      heading: 'Opis poszczegolnych wodomierzy',
+      title: 'Maddalena SJ PLUS-EVO',
+      intro:
+        'Wodomierz SJ PLUS-EVO to nowoczesne rozwiazanie do zastosowan domowych, laczace wysoka jakosc wykonania z precyzyjnym pomiarem.',
+      description: [
+        'Urzadzenie jest w pelni kompatybilne z przewodowymi i radiowymi modulami odczytowymi, co ulatwia wdrozenie systemow zdalnego odczytu.',
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Gotowy do wspolpracy z modulami przewodowymi i radiowymi',
+        'Zakres temperatur: do 90C',
+        'Maksymalne natezenie przeplywu Q3: 1.6 m3/h (DN15) lub 4.0 m3/h (DN20)',
+        'MID do klasy R160',
+        'Montaz w wielu pozycjach, liczydlo obracane o 360 stopni',
+        'Wysoka odpornosc na pole magnetyczne',
+        'Dostepny z certyfikatem sanitarnym',
+      ],
+    },
+    'wasser-geraete-eco': {
+      slug: 'wasser-geraete-eco',
+      heading: 'Opis poszczegolnych wodomierzy',
+      title: 'Wasser-Geraete ECO',
+      intro:
+        'Wodomierz ECO zapewnia niezawodny pomiar zarowno cieplej, jak i zimnej wody do 90C, sprawdzajac sie w budynkach mieszkaniowych oraz komercyjnych.',
+      description: [
+        'Urzadzenie mozna rozszerzyc o nakladke radiowa, M-Bus lub wyjscie impulsowe, co ulatwia integracje z istniejacymi systemami pomiarowymi.',
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Integracja z nakladka radiowa, M-Bus lub wyjsciem impulsowym',
+        'Zakres temperatur: do 50C (zimna woda) i do 90C (ciepla woda)',
+        'Maksymalne natezenie przeplywu Q3: 2.5 m3/h',
+        'Trwala konstrukcja odporna na kondensacje i uszkodzenia mechaniczne',
+        'Montaz poziomy lub pionowy',
+      ],
+    },
+    'gwf-sonico-nano': {
+      slug: 'gwf-sonico-nano',
+      heading: 'Opis poszczegolnych wodomierzy',
+      title: 'GWF Sonico Nano',
+      intro:
+        'Ultradzwiekowy wodomierz Sonico Nano zapewnia najwyzsza precyzje i trwalosc pomiaru w instalacjach mieszkaniowych oraz przemyslowych.',
+      description: [
+        'Urzadzenie wspiera zaawansowane systemy zdalnego odczytu, w tym LoRaWAN i Wireless M-Bus, dzieki czemu latwo wlaczysz je w istniejaca infrastrukture.',
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Ultradzwiekowy pomiar kompatybilny z LoRaWAN i Wireless M-Bus',
+        'Zakres temperatur: do 50C (zimna woda) oraz 90C (ciepla woda)',
+        'Maksymalne natezenie przeplywu Q3: 1.6 / 2.5 / 4.0 m3/h',
+        'MID klasy R1000 i bardzo niskie straty cisnienia',
+        'Latwa integracja z systemami automatyzacji',
+        'Zasilanie bateryjne do 20 lat',
+      ],
+    },
+    'apator-js-smart-plus': {
+      slug: 'apator-js-smart-plus',
+      heading: 'Opis poszczegolnych wodomierzy',
+      title: 'Apator Powogaz JS Smart+',
+      intro:
+        'Wodomierz Apator Powogaz JS Smart+ to sprawdzone i niezawodne rozwiazanie do instalacji domowych, odporne na wymagajace warunki pracy.',
+      description: [
+        'Urzadzenie wspolpracuje z szeroka gama modulow komunikacyjnych, co zapewnia elastyczne wdrozenia systemow zdalnego odczytu.',
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Kompatybilny z nakladkami Wireless M-Bus, impulsowa, M-Bus i indukcyjna',
+        'Zakres temperatur: do 50C (zimna woda) oraz 90C (ciepla woda)',
+        'Maksymalne natezenie przeplywu Q3: 1.6 / 2.5 / 4.0 m3/h',
+        'MID: R100 (H, DN15/20) i R50 (V, DN15/20)',
+        'Odporna obudowa na silne pole magnetyczne',
+        'Wytrzymalosc cisnieniowa do 16 bar',
+        'Liczydlo montowane z gory lub z boku, montaz poziomy lub pionowy',
       ],
     },
     'range-one': {
@@ -560,11 +765,11 @@ const pl: ContentStructure = {
       features: [
         'Zdalne zarzadzanie, diagnostyka i elastyczne protokoly transmisji (HTTPS, MQTT, E-mail)',
         'Pelna kompatybilnosc z urzadzeniami wM-Bus i OMS',
-        'Lacznosc 5G, 4G, NB-IoT zapewnia stabilne polaczenie',
-        'Wysoka czulosc odbiornika 868 MHz do odczytu w trudno dostepnych miejscach',
+        'Lacznosc 5G, 4G oraz NB-IoT zapewnia stabilne polaczenie',
+        'Wysoka czulosc odbiornika 868 MHz pozwala na odczyt w trudnych warunkach',
         'Praca bateryjna do 11 lat bez koniecznosci serwisowania',
-        'Obudowa odporna na kurz i promieniowanie UV o estetycznym wygladzie',
-        'Czujniki bezpieczenstwa wykrywajace otwarcie i demontaz urzadzenia',
+        'Odporna na kurz i UV obudowa o estetycznym wykonaniu',
+        'Czujniki bezpieczenstwa wykrywajace otwarcie lub demontaz urzadzenia',
       ],
     },
     'eclipse-wmbus-repeater': {
@@ -572,19 +777,18 @@ const pl: ContentStructure = {
       heading: 'Opis poszczegolnych elementow infrastruktury',
       title: 'ECLIPSE WM-Bus Repeater',
       intro:
-        'Bateryjne urzadzenie wzmacniajace sygnal w systemach Wireless M-Bus zapewniajace nieprzerwana prace przez 11 lat.',
+        'Bateryjne urzadzenie wzmacniajace sygnal w systemach Wireless M-Bus, zapewniajace nieprzerwana prace przez nawet 11 lat.',
       description: [
         'ECLIPSE WM-Bus Repeater to nowoczesne, energooszczedne rozwiazanie zwiekszajace zasieg i niezawodnosc transmisji w systemach telemetrycznych.',
       ],
       featuresHeading: 'Najwazniejsze cechy',
       features: [
-        'Prosta konfiguracja i zdalna aktualizacja firmware',
+        'Prosta konfiguracja oraz zdalna aktualizacja oprogramowania',
         'Wysoka czulosc odbiornika 868 MHz dla skutecznego odczytu w trudnych warunkach',
         'Obsluga trybow Wireless M-Bus i OMS (S, T, C+T itd.)',
-        'Kompatybilnosc z roznorodnymi urzadzeniami pomiarowymi',
-        'Mozliwosc tworzenia ciagow repeaterow (multi-hop)',
-        'Solidna, odporna konstrukcja z zabezpieczeniami antywandalowymi',
-        'Zasilanie bateryjne o zywotnosci do 11 lat',
+        'Mozliwosc tworzenia lancuchow repeaterow (multi-hop)',
+        'Solidna, odporna konstrukcja do zastosowan przemyslowych i miejskich',
+        'Zasilanie bateryjne do 11 lat bez serwisowania',
       ],
     },
     'eixo-wmbus-gateway': {
@@ -592,20 +796,20 @@ const pl: ContentStructure = {
       heading: 'Opis poszczegolnych elementow infrastruktury',
       title: 'EIXO WM-Bus Gateway',
       intro:
-        'Sieciowo zasilany koncentrator danych do monitoringu nowoczesnych systemow pomiarowych, kompatybilny z Wireless M-Bus i OMS.',
+        'Sieciowo zasilany koncentrator danych do kompleksowego monitoringu nowoczesnych systemow pomiarowych, kompatybilny z urzadzeniami Wireless M-Bus i OMS.',
       description: [
-        'EIXO WM-Bus Gateway to profesjonalny koncentrator zapewniajacy niezawodny monitoring i pelna kontrole nad inteligentnymi sieciami pomiarowymi.',
+        'EIXO WM-Bus Gateway zapewnia niezawodny monitoring i pelna kontrole nad inteligentnymi sieciami pomiarowymi w wymagajacym srodowisku.',
       ],
       featuresHeading: 'Najwazniejsze cechy',
       features: [
-        'Zasilanie 230 V zapewnia ciagla i stabilna prace',
+        'Zasilanie 230 V gwarantuje ciagla, stabilna prace',
         'Pelna zgodnosc z normami wM-Bus i OMS oraz szeroka gama urzadzen pomiarowych',
-        'Komunikacja mobilna 5G, 4G, NB-IoT dla maksymalnego zasiegu',
-        'Wysoka czulosc odbiornika 868 MHz umozliwia odczyt w trudno dostepnych miejscach',
-        'System Linux do zdalnego zarzadzania i diagnostyki',
-        'Elastyczne protokoly transmisji danych (MQTT, E-mail, HTTPS) i rozbudowane harmonogramy',
+        'Komunikacja 5G, 4G oraz NB-IoT dla maksymalnego zasiegu',
+        'Wysoka czulosc odbiornika 868 MHz pozwala na odczyt w trudnych lokalizacjach',
+        'System Linux ulatwia zdalne zarzadzanie i diagnostyke',
+        'Elastyczne protokoly transmisji danych (MQTT, E-mail, HTTPS) wraz z rozbudowanymi harmonogramami',
         'Zabezpieczenia przed otwarciem i demontazem obudowy',
-        'Solidna, odporna obudowa do zastosowan w wymagajacym srodowisku',
+        'Solidna, odporna obudowa przystosowana do wymagajacych warunkow',
       ],
     },
     'exio-wmbus-repeater': {
@@ -613,23 +817,24 @@ const pl: ContentStructure = {
       heading: 'Opis poszczegolnych elementow infrastruktury',
       title: 'EXIO WM-Bus Repeater',
       intro:
-        'Urzadzenie sieciowe zwiekszajace zasieg i niezawodnosc transmisji w systemach Wireless M-Bus.',
+        'Urzadzenie sieciowe zwiekszajace zasieg i bezpieczenstwo transmisji w systemach Wireless M-Bus.',
       description: [
         'EXIO WM-Bus Repeater znaczaco zwieksza efektywnosc i zasieg systemow telemetrycznych, gwarantujac trwalosc, bezpieczenstwo i wysoka jakosc komunikacji.',
       ],
       featuresHeading: 'Najwazniejsze cechy',
       features: [
         'Stabilne zasilanie 230 V gwarantujace ciaglosc pracy',
-        'Wysoka czulosc odbiornika 868 MHz oraz szyfrowanie AES 128-bit',
+        'Wysoka czulosc 868 MHz oraz szyfrowanie AES 128-bit',
         'Obsluga wielu trybow Wireless M-Bus (S, T, C+T itd.)',
-        'Kompatybilnosc z szerokim zakresem urzadzen pomiarowych',
-        'Tworzenie ciagow repeaterow (multi-hop) dla maksymalnego zasiegu',
-        'Latwy montaz i odporna na uszkodzenia obudowa antywandalowa',
-        'Aktualizacja firmware lokalnie lub zdalnie przez USB',
+        'Kompatybilnosc z szeroka gama urzadzen pomiarowych',
+        'Mozliwosc tworzenia lancuchow repeaterow (multi-hop)',
+        'Latwy montaz i odporna obudowa antywandalowa',
+        'Aktualizacja oprogramowania lokalnie lub zdalnie przez USB',
         'Stabilna transmisja bez zaklocen i utraty sygnalu',
       ],
     },
   },
+
 
 
   footer: {
@@ -844,7 +1049,7 @@ const en: ContentStructure = {
     groups: [
       {
         title: 'Water meters',
-        items: ['Wehrle', 'Maddalena', 'Wassergeräte', 'SonicoNano (GWF)', 'Apator Smart'],
+        items: ['Wehrle', 'Maddalena', 'Wasser-Geraete', 'GWF Sonico Nano', 'Apator JS Smart+'],
       },
       {
         title: 'Heat meters',
@@ -852,7 +1057,7 @@ const en: ContentStructure = {
       },
       {
         title: 'Communication modules',
-        items: ['Modularis One', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
+        items: ['Modularis ONE', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
       },
       {
         title: 'Systems and platforms',
@@ -874,15 +1079,15 @@ const en: ContentStructure = {
   productPage: {
     cards: [
       {
-        title: 'Modularis One',
+        title: 'Modularis ONE',
         subtitle: 'Communication module',
         description:
           'Compact wM-Bus 868 MHz radio module for remote reading of Modularis water meters.',
         features: [
-          'Two-way communication for remote configuration, alarm resets, and diagnostics',
+          'Two-way communication for remote configuration and diagnostics',
           'Compatible with Modularis meters and third-party devices',
-          'Parallel transmission of walk-by and AMR radio telegrams',
-          'Battery life up to 11 years in demanding conditions',
+          'Parallel walk-by and AMR telegram transmission',
+          'Battery life up to 11 years with IP54/IP68 protection',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -893,15 +1098,125 @@ const en: ContentStructure = {
         readMoreHref: '/produkty/modularis-one',
       },
       {
+        title: 'Wehrle ETK(W)-EAX',
+        subtitle: 'Single-jet water meter',
+        description:
+          'Precise, durable water meter for residential and commercial environments.',
+        features: [
+          'Integrates with any AMR platform',
+          'Temperature range: up to 50C (cold) and 90C (hot)',
+          'Maximum flow rate Q3: 2.5-4.0 m3/h',
+          'MID class R250 horizontal, R80 vertical',
+          '360-degree rotatable register',
+          'Nickel-plated brass housing with IP64 protection',
+          'Pressure resistance up to 1.6 MPa',
+        ],
+        downloads: [
+          {
+            label: 'Download PDF',
+            href: 'https://wehrle.de/en/metering/water/single-jet-dry-meters/single-jet-dry-modularis/#',
+          },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'wehrle-etkw-eax',
+        readMoreHref: '/produkty/wehrle-etkw-eax',
+      },
+      {
+        title: 'Maddalena SJ PLUS-EVO',
+        subtitle: 'Single-jet water meter',
+        description:
+          'High-quality household meter delivering outstanding measurement accuracy and reliability.',
+        features: [
+          'Supports wired and radio remote-reading modules',
+          'Temperature range: up to 90C',
+          'Maximum flow rate Q3: 1.6 m3/h (DN15) or 4.0 m3/h (DN20)',
+          'MID class up to R160',
+          '360-degree rotatable register for flexible installation',
+          'High resistance to magnetic interference and sanitary certification',
+        ],
+        downloads: [
+          {
+            label: 'Download PDF',
+            href: 'https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnica-sjplus-en-v4.pdf',
+          },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'maddalena-sj-plus-evo',
+        readMoreHref: '/produkty/maddalena-sj-plus-evo',
+      },
+      {
+        title: 'Wasser-Geraete ECO',
+        subtitle: 'Hot and cold water meter',
+        description:
+          'Durable hot and cold water meter up to 90C, ideal for residential and commercial sites.',
+        features: [
+          'Ready for radio add-on, M-Bus, or pulse output',
+          'Temperature range: up to 50C (cold) and 90C (hot)',
+          'Maximum flow rate Q3: 2.5 m3/h',
+          'Condensation-resistant, robust construction',
+          'Horizontal or vertical installation options',
+        ],
+        downloads: [
+          { label: 'Download PDF', href: 'https://www.wasser-geraete.de/products/wohnungswasserzaehlereco/#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'wasser-geraete-eco',
+        readMoreHref: '/produkty/wasser-geraete-eco',
+      },
+      {
+        title: 'GWF Sonico Nano',
+        subtitle: 'Ultrasonic water meter',
+        description:
+          'Advanced ultrasonic water meter delivering long-term precision in residential and industrial applications.',
+        features: [
+          'Ultrasonic metering compatible with LoRaWAN and Wireless M-Bus',
+          'Temperature range: up to 50C (cold) and 90C (hot)',
+          'Q3: 1.6 / 2.5 / 4.0 m3/h depending on DN',
+          'MID class R1000 with very low pressure loss',
+          'Battery autonomy up to 20 years and easy integration with automation',
+        ],
+        downloads: [
+          {
+            label: 'Download PDF',
+            href: 'https://productfinder.gwf.ch/uploads_productfinder/downloads/Sonico_Brochure_Enlit-Version-2024_KIe10200_web_v04.pdf',
+          },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'gwf-sonico-nano',
+        readMoreHref: '/produkty/gwf-sonico-nano',
+      },
+      {
+        title: 'Apator Powogaz JS Smart+',
+        subtitle: 'Domestic water meter',
+        description:
+          'Proven solution for precise water measurement in domestic installations, resistant to harsh conditions.',
+        features: [
+          'Works with Wireless M-Bus, pulse, M-Bus, and inductive add-ons',
+          'Temperature range: up to 50C (cold) and 90C (hot)',
+          'Q3: 1.6 / 2.5 / 4.0 m3/h depending on DN',
+          'MID: R100 (H, DN15/20) and R50 (V, DN15/20)',
+          'Magnet-resistant housing rated up to 16 bar',
+          'Register mounted on top or side for flexible installation',
+        ],
+        downloads: [
+          { label: 'Download PDF', href: 'https://api.apator.com/uploads/oferta/woda-i-cieplo/wodomierze/smart-plus/smart-plus-karta-katalogowa.pdf' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'apator-js-smart-plus',
+        readMoreHref: '/produkty/apator-js-smart-plus',
+      },
+      {
         title: 'Range ONE',
         subtitle: 'Field infrastructure',
         description:
           'Portable Wireless M-Bus receiver with Bluetooth and high 868 MHz sensitivity.',
         features: [
-          'Fast readings in hard-to-reach locations',
-          'Bluetooth connectivity via the Route ONE app',
-          'Battery operation for up to 40 hours',
-          'Rugged, ergonomic housing with secure grip',
+          'High 868 MHz sensitivity for readings in hard-to-reach locations',
+          'Bluetooth connectivity to Android devices via the Route ONE app',
+          'Energy-efficient algorithms deliver up to 40 hours of battery life',
+          'Ergonomic, rugged housing with rubberized grips',
+          'External antenna and USB port for charging',
+          'Enables data collection and remote configuration of radio modules',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -917,10 +1232,13 @@ const en: ContentStructure = {
         description:
           'Battery-powered wM-Bus/OMS gateway for rapid deployment anywhere.',
         features: [
-          'Remote management, diagnostics, and flexible transmission protocols',
+          'Remote management, diagnostics, and flexible protocols (HTTPS, MQTT, E-mail)',
           'Full compatibility with wM-Bus and OMS devices',
-          '5G/4G/NB-IoT connectivity for reliable communication',
-          'Battery-powered operation for up to 11 years',
+          '5G/4G/NB-IoT connectivity for stable communication',
+          'High 868 MHz sensitivity for hard-to-reach meters',
+          'Battery operation for up to 11 years without servicing',
+          'Dust- and UV-resistant enclosure with clean design',
+          'Security sensors detecting tampering or removal',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -934,12 +1252,14 @@ const en: ContentStructure = {
         title: 'ECLIPSE WM-Bus Repeater',
         subtitle: 'Signal booster',
         description:
-          'Battery repeater extending Wireless M-Bus coverage across large sites.',
+          'Battery-powered repeater extending Wireless M-Bus coverage across large sites.',
         features: [
-          'Simple setup with remote firmware updates',
+          'Simple configuration with remote firmware updates',
           'High 868 MHz sensitivity for reliable reception',
-          'Supports Wireless M-Bus and OMS operating modes',
-          'Multi-hop capability for extended range',
+          'Supports Wireless M-Bus and OMS modes (S, T, C+T, etc.)',
+          'Multi-hop capability to extend network range',
+          'Robust, weather-resistant construction for field deployments',
+          'Battery-powered operation for up to 11 years',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -955,10 +1275,14 @@ const en: ContentStructure = {
         description:
           'Mains-powered Linux gateway for comprehensive metering supervision.',
         features: [
-          '230 V supply for continuous operation',
-          'Compliance with wM-Bus and OMS standards',
+          '230 V power supply for continuous, stable operation',
+          'Compliance with wM-Bus and OMS standards across diverse meters',
           '5G/4G/NB-IoT connectivity for maximum reach',
-          'Advanced data transmission protocols and scheduling',
+          'High 868 MHz sensitivity for difficult installation points',
+          'Linux-based platform for remote management and diagnostics',
+          'Flexible data protocols (MQTT, E-mail, HTTPS) with advanced scheduling',
+          'Tamper detection against enclosure opening or removal',
+          'Rugged enclosure engineered for harsh environments',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -972,12 +1296,16 @@ const en: ContentStructure = {
         title: 'EXIO WM-Bus Repeater',
         subtitle: 'Network repeater',
         description:
-          'Mains-powered repeater enhancing Wireless M-Bus range and security.',
+          'Mains-powered repeater boosting Wireless M-Bus range and resilience.',
         features: [
-          '230 V power for continuous uptime',
-          'AES 128-bit encryption and high 868 MHz sensitivity',
-          'Supports multiple Wireless M-Bus modes',
-          'Easy installation with vandal-resistant housing',
+          'Stable 230 V power supply ensures uninterrupted operation',
+          'High 868 MHz sensitivity with AES 128-bit encryption',
+          'Supports multiple Wireless M-Bus modes (S, T, C+T, etc.)',
+          'Compatible with a wide range of metering devices',
+          'Allows multi-hop repeater chains for extended coverage',
+          'Easy installation with vandal-resistant enclosure',
+          'Firmware updates locally or remotely via USB',
+          'Reliable transmission without interference or signal loss',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -991,15 +1319,16 @@ const en: ContentStructure = {
   },
 
 
+
   productDetails: {
     'modularis-one': {
       slug: 'modularis-one',
       heading: 'Communication module portfolio',
-      title: 'Modularis One',
+      title: 'Modularis ONE',
       intro:
         'Compact radio module in the wM-Bus 868 MHz standard for remote reading of Modularis meters. It integrates with walk-by and AMR systems and provides stable wireless data transmission. Two-way communication enables remote configuration, alarm resets, and diagnostics.',
       description: [
-        'Modularis One is a modern solution for efficient and secure meter monitoring, offering flexibility and scalability without cabling or manual data collection.',
+        'Modularis ONE is a modern solution for efficient and secure meter monitoring, offering flexibility and scalability without cabling or manual data collection.',
       ],
       featuresHeading: 'Key features',
       features: [
@@ -1011,6 +1340,102 @@ const en: ContentStructure = {
         'Battery life up to 11 years',
         'Protection rating IP54 (optional IP68)',
         'Compliance with EN 13757 and OMS',
+      ],
+    },
+    'wehrle-etkw-eax': {
+      slug: 'wehrle-etkw-eax',
+      heading: 'Water meter portfolio',
+      title: 'Wehrle ETK(W)-EAX',
+      intro:
+        'Wehrle ETK(W)-EAX is a precise single-jet water meter for residential and commercial installations, engineered for long-term reliability in demanding conditions.',
+      description: [
+        'The meter integrates seamlessly with the Modularis ONE communication module, enabling flexible AMR and remote-reading deployments.',
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'Ready for integration with any AMR platform',
+        'Temperature range: up to 50C (cold water) and 90C (hot water)',
+        'Maximum flow rate Q3: 2.5-4.0 m3/h',
+        'MID accuracy class R250 horizontal and R80 vertical',
+        '360-degree rotatable register',
+        'Nickel-plated brass housing with IP64 protection',
+        'Pressure resistance up to 1.6 MPa',
+      ],
+    },
+    'maddalena-sj-plus-evo': {
+      slug: 'maddalena-sj-plus-evo',
+      heading: 'Water meter portfolio',
+      title: 'Maddalena SJ PLUS-EVO',
+      intro:
+        'The SJ PLUS-EVO meter combines premium build quality with excellent measurement accuracy for household applications.',
+      description: [
+        'It supports both wired and radio communication modules, making remote-reading rollouts straightforward.',
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'Compatible with wired and radio remote-reading modules',
+        'Temperature range: up to 90C',
+        'Maximum flow rate Q3: 1.6 m3/h (DN15) or 4.0 m3/h (DN20)',
+        'MID accuracy class up to R160',
+        'Installation in multiple orientations with a 360-degree register',
+        'High resistance to magnetic interference',
+        'Available with sanitary certification',
+      ],
+    },
+    'wasser-geraete-eco': {
+      slug: 'wasser-geraete-eco',
+      heading: 'Water meter portfolio',
+      title: 'Wasser-Geraete ECO',
+      intro:
+        'The ECO water meter provides reliable measurement of hot and cold water up to 90C for residential and commercial buildings.',
+      description: [
+        'It can be extended with radio, M-Bus, or pulse modules to integrate with existing metering infrastructure.',
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'Ready for radio add-on, M-Bus, or pulse output',
+        'Temperature range: up to 50C (cold water) and 90C (hot water)',
+        'Maximum flow rate Q3: 2.5 m3/h',
+        'Durable construction resistant to condensation and mechanical impacts',
+        'Horizontal or vertical installation',
+      ],
+    },
+    'gwf-sonico-nano': {
+      slug: 'gwf-sonico-nano',
+      heading: 'Water meter portfolio',
+      title: 'GWF Sonico Nano',
+      intro:
+        'The Sonico Nano ultrasonic meter delivers outstanding precision and durability for residential and industrial usage.',
+      description: [
+        'It supports advanced remote-reading ecosystems such as LoRaWAN and Wireless M-Bus, ensuring effortless integration.',
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'Ultrasonic metering compatible with LoRaWAN and Wireless M-Bus',
+        'Temperature range: up to 50C (cold water) and 90C (hot water)',
+        'Maximum flow rate Q3: 1.6 / 2.5 / 4.0 m3/h',
+        'MID accuracy class R1000 with minimal pressure loss',
+        'Easy integration with automation and building systems',
+        'Battery life up to 20 years',
+      ],
+    },
+    'apator-js-smart-plus': {
+      slug: 'apator-js-smart-plus',
+      heading: 'Water meter portfolio',
+      title: 'Apator Powogaz JS Smart+',
+      intro:
+        'JS Smart+ from Apator Powogaz is a proven, resilient water meter for domestic installations, designed to handle demanding environments.',
+      description: [
+        'The meter works with a wide variety of communication modules, offering flexible remote-reading setups.',
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'Supports Wireless M-Bus, pulse, M-Bus, and inductive add-ons',
+        'Temperature range: up to 50C (cold water) and 90C (hot water)',
+        'Maximum flow rate Q3: 1.6 / 2.5 / 4.0 m3/h',
+        'MID classes R100 (horizontal DN15/20) and R50 (vertical DN15/20)',
+        'Magnet-resistant housing rated up to 16 bar',
+        'Register can be mounted on top or on the side for flexible installation',
       ],
     },
     'range-one': {
@@ -1026,7 +1451,7 @@ const en: ContentStructure = {
       features: [
         'High 868 MHz sensitivity for readings in hard-to-reach locations',
         'Bluetooth connectivity to transmit data to Android devices via the Route ONE app',
-        'Energy-efficient algorithms deliver up to 40 hours of battery life',
+        'Energy-efficient algorithms provide up to 40 hours of battery life',
         'Ergonomic, durable housing with rubberized grips',
         'External antenna and USB port for battery charging',
         'Enables meter data reading and remote configuration of radio modules',
@@ -1043,7 +1468,7 @@ const en: ContentStructure = {
       ],
       featuresHeading: 'Key features',
       features: [
-        'Remote management, diagnostics, and flexible transmission protocols (HTTPS, MQTT, E-mail)',
+        'Remote management, diagnostics, and flexible protocols (HTTPS, MQTT, E-mail)',
         'Full compatibility with wM-Bus and OMS devices',
         '5G, 4G, and NB-IoT connectivity for stable communication',
         'High 868 MHz sensitivity for readings from challenging locations',
@@ -1066,7 +1491,6 @@ const en: ContentStructure = {
         'Simple configuration with remote firmware updates',
         'High 868 MHz sensitivity for dependable reception in harsh environments',
         'Supports Wireless M-Bus and OMS modes (S, T, C+T, etc.)',
-        'Compatible with a wide range of metering devices',
         'Allows multi-hop repeater chains for maximum coverage',
         'Robust, vandal-resistant construction for industrial and urban use',
         'Battery-powered for up to 11 years',
@@ -1115,6 +1539,7 @@ const en: ContentStructure = {
       ],
     },
   },
+
 
 
   footer: {
@@ -1327,8 +1752,8 @@ const de: ContentStructure = {
       'Alle Kayon-Geräte werden vollständig in der Europäischen Union produziert und erfüllen die Normen CE, RED und EMC.',
     groups: [
       {
-        title: 'Wasserzähler',
-        items: ['Wehrle', 'Maddalena', 'Wassergeräte', 'SonicoNano (GWF)', 'Apator Smart'],
+        title: 'Wasserzaehler',
+        items: ['Wehrle', 'Maddalena', 'Wasser-Geraete', 'GWF Sonico Nano', 'Apator JS Smart+'],
       },
       {
         title: 'Wärmezähler',
@@ -1336,7 +1761,7 @@ const de: ContentStructure = {
       },
       {
         title: 'Kommunikationsmodule',
-        items: ['Modularis One', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
+        items: ['Modularis ONE', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
       },
       {
         title: 'Systeme & Plattformen',
@@ -1358,15 +1783,15 @@ const de: ContentStructure = {
   productPage: {
     cards: [
       {
-        title: 'Modularis One',
+        title: 'Modularis ONE',
         subtitle: 'Kommunikationsmodul',
         description:
-          'Kompaktes Funkmodul im wM-Bus-Standard 868 MHz fuer die Fernauslese von Modularis-Wasserzaehlern.',
+          'Kompaktes wM-Bus-868-MHz-Funkmodul zur Fernauslesung von Modularis-Wasserzaehlern.',
         features: [
-          'Bidirektionale Kommunikation fuer Fernkonfiguration, Alarm-Reset und Diagnose',
-          'Kompatibel mit Modularis-Zaehlern und Geraeten anderer Hersteller',
+          'Bidirektionale Kommunikation fuer Fernkonfiguration und Diagnose',
+          'Kompatibel mit Modularis-Zaehlern und Drittanbieter-Geraeten',
           'Parallele Uebertragung von Walk-by- und AMR-Telegrammen',
-          'Batterielaufzeit bis zu 11 Jahren in anspruchsvollen Umgebungen',
+          'Batterielaufzeit bis zu 11 Jahren, Schutzart IP54/IP68',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -1377,15 +1802,125 @@ const de: ContentStructure = {
         readMoreHref: '/produkty/modularis-one',
       },
       {
+        title: 'Wehrle ETK(W)-EAX',
+        subtitle: 'Einstrahl-Wasserzaehler',
+        description:
+          'Praeziser, robuster Wasserzaehler fuer Wohn- und Gewerbeanlagen.',
+        features: [
+          'Integration in beliebige AMR-Plattformen',
+          'Temperaturbereich: bis 50C (kalt) und 90C (warm)',
+          'Maximaler Durchfluss Q3: 2.5-4.0 m3/h',
+          'MID-Klasse R250 horizontal, R80 vertikal',
+          '360-Grad-drehbares Zaehlerregister',
+          'Gehause aus vernickeltem Messing, Schutzart IP64',
+          'Druckbestaendigkeit bis 1.6 MPa',
+        ],
+        downloads: [
+          {
+            label: 'Download PDF',
+            href: 'https://wehrle.de/en/metering/water/single-jet-dry-meters/single-jet-dry-modularis/#',
+          },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'wehrle-etkw-eax',
+        readMoreHref: '/produkty/wehrle-etkw-eax',
+      },
+      {
+        title: 'Maddalena SJ PLUS-EVO',
+        subtitle: 'Einstrahl-Wasserzaehler',
+        description:
+          'Hochwertiger Wasserzaehler fuer Haushalte mit hoher Messgenauigkeit und Zuverlaessigkeit.',
+        features: [
+          'Unterstuetzt drahtgebundene und Funkauslesemodule',
+          'Temperaturbereich: bis 90C',
+          'Q3: 1.6 m3/h (DN15) oder 4.0 m3/h (DN20)',
+          'MID-Klasse bis R160',
+          '360-Grad-drehbares Zaehlerregister',
+          'Hohe Bestaendigkeit gegen Magnetfelder, Hygienezertifikat',
+        ],
+        downloads: [
+          {
+            label: 'Download PDF',
+            href: 'https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnica-sjplus-en-v4.pdf',
+          },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'maddalena-sj-plus-evo',
+        readMoreHref: '/produkty/maddalena-sj-plus-evo',
+      },
+      {
+        title: 'Wasser-Geraete ECO',
+        subtitle: 'Warm- und Kaltwasserzaehler',
+        description:
+          'Robuster Warm- und Kaltwasserzaehler bis 90C fuer Wohn- und Gewerbeobjekte.',
+        features: [
+          'Vorbereitet fuer Funkaufsatz, M-Bus oder Impulsausgang',
+          'Temperaturbereich: bis 50C (kalt) und 90C (warm)',
+          'Maximaler Durchfluss Q3: 2.5 m3/h',
+          'Kondensations- und schlagbestaendige Konstruktion',
+          'Montage horizontal oder vertikal',
+        ],
+        downloads: [
+          { label: 'Download PDF', href: 'https://www.wasser-geraete.de/products/wohnungswasserzaehlereco/#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'wasser-geraete-eco',
+        readMoreHref: '/produkty/wasser-geraete-eco',
+      },
+      {
+        title: 'GWF Sonico Nano',
+        subtitle: 'Ultraschall-Wasserzaehler',
+        description:
+          'Fortschrittlicher Ultraschall-Wasserzaehler mit langfristiger Messpraezision in Wohn- und Industrieanwendungen.',
+        features: [
+          'Ultraschallmessung kompatibel mit LoRaWAN und Wireless M-Bus',
+          'Temperaturbereich: bis 50C (kalt) und 90C (warm)',
+          'Q3: 1.6 / 2.5 / 4.0 m3/h je nach DN',
+          'MID-Klasse R1000 mit sehr geringem Druckverlust',
+          'Batterielebensdauer bis zu 20 Jahren, einfache Automationseinbindung',
+        ],
+        downloads: [
+          {
+            label: 'Download PDF',
+            href: 'https://productfinder.gwf.ch/uploads_productfinder/downloads/Sonico_Brochure_Enlit-Version-2024_KIe10200_web_v04.pdf',
+          },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'gwf-sonico-nano',
+        readMoreHref: '/produkty/gwf-sonico-nano',
+      },
+      {
+        title: 'Apator Powogaz JS Smart+',
+        subtitle: 'Hauswasserzaehler',
+        description:
+          'Bewaehter Wasserzaehler fuer Hausinstallationen, ausgelegt fuer anspruchsvolle Bedingungen.',
+        features: [
+          'Kompatibel mit Wireless M-Bus, Impuls-, M-Bus- und induktiven Modulen',
+          'Temperaturbereich: bis 50C (kalt) und 90C (warm)',
+          'Q3: 1.6 / 2.5 / 4.0 m3/h je nach DN',
+          'MID: R100 (H, DN15/20) und R50 (V, DN15/20)',
+          'Magnetfeldbestaendiges Gehaeuse bis 16 bar',
+          'Register oben oder seitlich montierbar',
+        ],
+        downloads: [
+          { label: 'Download PDF', href: 'https://api.apator.com/uploads/oferta/woda-i-cieplo/wodomierze/smart-plus/smart-plus-karta-katalogowa.pdf' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'apator-js-smart-plus',
+        readMoreHref: '/produkty/apator-js-smart-plus',
+      },
+      {
         title: 'Range ONE',
         subtitle: 'Feldinfrastruktur',
         description:
           'Mobiler Wireless-M-Bus-Empfaenger mit Bluetooth und hoher 868-MHz-Empfindlichkeit.',
         features: [
-          'Schnelle Auslesung an schwer zugaenglichen Orten',
-          'Bluetooth-Anbindung ueber die Route-ONE-App',
-          'Batteriebetrieb bis zu 40 Stunden',
-          'Robustes, ergonomisches Gehaeuse mit rutschfestem Griff',
+          'Hohe 868-MHz-Empfindlichkeit fuer Auslesungen an schwer zugaenglichen Orten',
+          'Bluetooth-Uebertragung auf Android-Geraete (Route-ONE-App)',
+          'Energieeffiziente Algorithmen fuer bis zu 40 Stunden Batteriebetrieb',
+          'Ergonomisches, robustes Gehaeuse mit gummierten Seiten',
+          'Externe Antenne und USB-Ladeport',
+          'Unterstuetzt Datenerfassung und Fernkonfiguration von Funkmodulen',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -1401,10 +1936,13 @@ const de: ContentStructure = {
         description:
           'Batteriebetriebener wM-Bus/OMS-Gateway fuer schnelle Implementierungen.',
         features: [
-          'Fernverwaltung, Diagnose und flexible Uebertragungsprotokolle',
+          'Fernverwaltung, Diagnose und Protokolle (HTTPS, MQTT, E-Mail)',
           'Voll kompatibel mit wM-Bus- und OMS-Geraeten',
-          '5G/4G/NB-IoT fuer zuverlaessige Konnektivitaet',
-          'Batteriebetrieb bis zu 11 Jahren ohne Wartung',
+          '5G/4G/NB-IoT fuer stabile Konnektivitaet',
+          'Hohe 868-MHz-Empfindlichkeit fuer schwer zugaengliche Zaehler',
+          'Batteriebetrieb bis zu 11 Jahren ohne Service',
+          'Staub- und UV-bestaendiges Gehaeuse mit hochwertiger Optik',
+          'Sicherheitssensoren erkennen Oeffnen oder Demontage',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -1420,10 +1958,12 @@ const de: ContentStructure = {
         description:
           'Batteriebetriebener Repeater zur Erweiterung von Wireless-M-Bus-Netzen.',
         features: [
-          'Einfache Konfiguration mit Fern-Firmware-Updates',
-          'Hohe 868-MHz-Empfindlichkeit fuer stabile Signale',
-          'Unterstuetzt Wireless-M-Bus- und OMS-Modi',
-          'Multi-Hop-Funktion fuer groessere Reichweite',
+          'Einfache Konfiguration und Fern-Firmware-Updates',
+          'Hohe 868-MHz-Empfindlichkeit fuer zuverlaessigen Empfang',
+          'Unterstuetzt Wireless-M-Bus- und OMS-Modi (S, T, C+T usw.)',
+          'Multi-Hop-Unterstuetzung fuer erweiterte Reichweite',
+          'Robustes, wetterfestes Design fuer den Feldeinsatz',
+          'Batteriebetrieb bis zu 11 Jahren',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -1439,10 +1979,14 @@ const de: ContentStructure = {
         description:
           'Netzgespeister Linux-Gateway fuer umfassende Ueberwachung von Messsystemen.',
         features: [
-          '230-V-Versorgung fuer dauerhaften Betrieb',
-          'Konform mit wM-Bus- und OMS-Standards',
+          '230-V-Stromversorgung fuer kontinuierlichen, stabilen Betrieb',
+          'Konform mit wM-Bus- und OMS-Standards und vielen Zaehlern',
           '5G/4G/NB-IoT fuer maximale Reichweite',
-          'Erweiterte Datenprotokolle und Zeitplaene',
+          'Hohe 868-MHz-Empfindlichkeit fuer schwierige Montageorte',
+          'Linux-Plattform fuer Fernverwaltung und Diagnose',
+          'Flexible Datenprotokolle (MQTT, E-Mail, HTTPS) mit Zeitplaenen',
+          'Manipulationserkennung bei Gehaeuseoeffnung oder Demontage',
+          'Robustes Gehaeuse fuer anspruchsvolle Umgebungen',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -1458,10 +2002,14 @@ const de: ContentStructure = {
         description:
           'Netzbetriebener Repeater zur Erweiterung von Wireless-M-Bus-Reichweiten und Sicherheit.',
         features: [
-          '230-V-Stromversorgung fuer unterbrechungsfreien Betrieb',
-          'AES-128-Verschluesselung und hohe 868-MHz-Empfindlichkeit',
-          'Unterstuetzt mehrere Wireless-M-Bus-Modi',
+          'Stabile 230-V-Versorgung fuer unterbrechungsfreien Betrieb',
+          'Hohe 868-MHz-Empfindlichkeit mit AES-128-Verschluesselung',
+          'Unterstuetzt mehrere Wireless-M-Bus-Modi (S, T, C+T usw.)',
+          'Kompatibel mit einer breiten Palette an Messgeraeten',
+          'Ermoeglicht Multi-Hop-Repeaterketten fuer groessere Reichweite',
           'Einfache Montage mit vandalismussicherem Gehaeuse',
+          'Firmware-Updates lokal oder remote via USB',
+          'Stabile Uebertragung ohne Stoerungen oder Signalverlust',
         ],
         downloads: [
           { label: 'Download PDF ENG', href: '#' },
@@ -1475,15 +2023,16 @@ const de: ContentStructure = {
   },
 
 
+
   productDetails: {
     'modularis-one': {
       slug: 'modularis-one',
       heading: 'Kommunikationsmodule im Ueberblick',
-      title: 'Modularis One',
+      title: 'Modularis ONE',
       intro:
         'Kompaktes Funkmodul im wM-Bus-Standard 868 MHz zur Fernauslese von Modularis-Zaehlern. Es integriert sich in Walk-by- und AMR-Systeme und bietet stabile drahtlose Datenuebertragung. Bidirektionale Kommunikation ermoeglicht Fernkonfiguration, Alarm-Reset und Diagnose.',
       description: [
-        'Modularis One ist eine moderne Loesung fuer effizientes und sicheres Metering und bietet Flexibilitaet und Skalierbarkeit ohne Verkabelung oder manuelle Datenerfassung.',
+        'Modularis ONE ist eine moderne Loesung fuer effizientes und sicheres Metering und bietet Flexibilitaet und Skalierbarkeit ohne Verkabelung oder manuelle Datenerfassung.',
       ],
       featuresHeading: 'Wichtigste Merkmale',
       features: [
@@ -1495,6 +2044,102 @@ const de: ContentStructure = {
         'Batterielaufzeit bis zu 11 Jahren',
         'Schutzart IP54 (optional IP68)',
         'Konform mit EN 13757 und OMS',
+      ],
+    },
+    'wehrle-etkw-eax': {
+      slug: 'wehrle-etkw-eax',
+      heading: 'Wasserzaehler im Ueberblick',
+      title: 'Wehrle ETK(W)-EAX',
+      intro:
+        'Der Einstrahl-Wasserzaehler Wehrle ETK(W)-EAX bietet praezise Messungen fuer Wohn- und Gewerbeinstallationen und laeuft zuverlaessig auch unter anspruchsvollen Bedingungen.',
+      description: [
+        'In Kombination mit dem Kommunikationsmodul Modularis ONE laesst er sich flexibel in AMR- und Fernauslesesysteme einbinden.',
+      ],
+      featuresHeading: 'Wichtigste Merkmale',
+      features: [
+        'Integration in beliebige AMR-Plattformen',
+        'Temperaturbereich: bis 50C (Kaltwasser) und 90C (Warmwasser)',
+        'Maximaler Durchfluss Q3: 2.5-4.0 m3/h',
+        'MID-Klasse R250 horizontal und R80 vertikal',
+        '360-Grad-drehbares Register',
+        'Gehause aus vernickeltem Messing mit Schutzart IP64',
+        'Druckbestaendigkeit bis 1.6 MPa',
+      ],
+    },
+    'maddalena-sj-plus-evo': {
+      slug: 'maddalena-sj-plus-evo',
+      heading: 'Wasserzaehler im Ueberblick',
+      title: 'Maddalena SJ PLUS-EVO',
+      intro:
+        'Der Maddalena SJ PLUS-EVO kombiniert hochwertige Verarbeitung mit exzellenter Messgenauigkeit fuer den Haushaltsbereich.',
+      description: [
+        'Unterstuetzt sowohl drahtgebundene als auch Funk-Kommunikationsmodule und erleichtert dadurch Fernausleseprojekte.',
+      ],
+      featuresHeading: 'Wichtigste Merkmale',
+      features: [
+        'Kompatibel mit drahtgebundenen und Funkauslesemodulen',
+        'Temperaturbereich: bis 90C',
+        'Maximaler Durchfluss Q3: 1.6 m3/h (DN15) oder 4.0 m3/h (DN20)',
+        'MID-Klasse bis R160',
+        'Montage in verschiedenen Lagen mit 360-Grad-Register',
+        'Hohe Resistenz gegen Magnetfelder',
+        'Erhaeltlich mit Hygienezertifikat',
+      ],
+    },
+    'wasser-geraete-eco': {
+      slug: 'wasser-geraete-eco',
+      heading: 'Wasserzaehler im Ueberblick',
+      title: 'Wasser-Geraete ECO',
+      intro:
+        'Der Wasser-Geraete ECO erfasst zuverlaessig warmes und kaltes Wasser bis 90C und eignet sich fuer Wohn- sowie Gewerbeobjekte.',
+      description: [
+        'Er laesst sich um Funkaufsatz, M-Bus oder Impulsausgang erweitern und passt damit in bestehende Metering-Infrastrukturen.',
+      ],
+      featuresHeading: 'Wichtigste Merkmale',
+      features: [
+        'Vorbereitet fuer Funkaufsatz, M-Bus oder Impulsausgang',
+        'Temperaturbereich: bis 50C (Kaltwasser) und 90C (Warmwasser)',
+        'Maximaler Durchfluss Q3: 2.5 m3/h',
+        'Robuste, kondensationsbestaendige Konstruktion',
+        'Montage horizontal oder vertikal',
+      ],
+    },
+    'gwf-sonico-nano': {
+      slug: 'gwf-sonico-nano',
+      heading: 'Wasserzaehler im Ueberblick',
+      title: 'GWF Sonico Nano',
+      intro:
+        'Der Sonico Nano nutzt Ultraschalltechnologie, um ausserordentlich praezise und langlebige Messungen in Wohn- und Industrieumgebungen zu liefern.',
+      description: [
+        'Er unterstuetzt fortschrittliche Fernauslese-Systeme wie LoRaWAN und Wireless M-Bus und laesst sich problemlos integrieren.',
+      ],
+      featuresHeading: 'Wichtigste Merkmale',
+      features: [
+        'Ultraschallmessung kompatibel mit LoRaWAN und Wireless M-Bus',
+        'Temperaturbereich: bis 50C (Kaltwasser) und 90C (Warmwasser)',
+        'Maximaler Durchfluss Q3: 1.6 / 2.5 / 4.0 m3/h',
+        'MID-Klasse R1000 mit sehr geringem Druckverlust',
+        'Einfache Integration in Automatisierungssysteme',
+        'Batterielebensdauer bis zu 20 Jahren',
+      ],
+    },
+    'apator-js-smart-plus': {
+      slug: 'apator-js-smart-plus',
+      heading: 'Wasserzaehler im Ueberblick',
+      title: 'Apator Powogaz JS Smart+',
+      intro:
+        'Der JS Smart+ von Apator Powogaz ist ein bewaehrter, widerstandsfaehiger Wasserzaehler fuer Hausinstallationen.',
+      description: [
+        'Er arbeitet mit einer Vielzahl von Kommunikationsmodulen zusammen und ermoeglicht flexible Fernauslese-Setups.',
+      ],
+      featuresHeading: 'Wichtigste Merkmale',
+      features: [
+        'Kompatibel mit Wireless M-Bus, Impuls-, M-Bus- und induktiven Modulen',
+        'Temperaturbereich: bis 50C (Kaltwasser) und 90C (Warmwasser)',
+        'Maximaler Durchfluss Q3: 1.6 / 2.5 / 4.0 m3/h',
+        'MID-Klassen R100 (horizontal DN15/20) und R50 (vertikal DN15/20)',
+        'Magnetfeldbestaendiges Gehaeuse bis 16 bar',
+        'Register oben oder seitlich montierbar fuer flexible Installation',
       ],
     },
     'range-one': {
@@ -1527,13 +2172,13 @@ const de: ContentStructure = {
       ],
       featuresHeading: 'Wichtigste Merkmale',
       features: [
-        'Fernverwaltung, Diagnose und flexible Protokolle (HTTPS, MQTT, E-Mail)',
-        'Volle Kompatibilitaet zu wM-Bus- und OMS-Geraeten',
-        '5G-, 4G- und NB-IoT-Konnektivitaet fuer stabile Verbindungen',
-        'Hohe 868-MHz-Empfindlichkeit fuer schwer erreichbare Standorte',
-        'Batteriebetrieb bis zu 11 Jahren ohne Wartung',
-        'Staub- und UV-bestaendige, ansprechende Gehaeuseausfuehrung',
-        'Sicherheitssensoren erkennen das Oeffnen oder Entfernen des Geraets',
+        'Fernverwaltung, Diagnose und Protokolle (HTTPS, MQTT, E-Mail)',
+        'Voll kompatibel mit wM-Bus- und OMS-Geraeten',
+        '5G, 4G und NB-IoT fuer stabile Kommunikation',
+        'Hohe 868-MHz-Empfindlichkeit fuer schwer zugaengliche Stellen',
+        'Batteriebetrieb bis zu 11 Jahren ohne Service',
+        'Staub- und UV-bestaendiges Gehaeuse mit hochwertiger Optik',
+        'Sicherheitssensoren erkennen Oeffnen oder Demontage',
       ],
     },
     'eclipse-wmbus-repeater': {
@@ -1541,18 +2186,17 @@ const de: ContentStructure = {
       heading: 'Infrastrukturprodukte im Ueberblick',
       title: 'ECLIPSE WM-Bus Repeater',
       intro:
-        'Batteriebetriebener Repeater, der Wireless-M-Bus-Signale verstaerkt und bis zu 11 Jahre ununterbrochen arbeitet.',
+        'Batteriebetriebener Repeater, der Wireless-M-Bus-Signale verstaerkt und bis zu 11 Jahre durchgaengig arbeitet.',
       description: [
-        'ECLIPSE WM-Bus Repeater ist eine energieeffiziente Loesung zur Erweiterung von Reichweite und Zuverlaessigkeit in Telemetriesystemen.',
+        'ECLIPSE WM-Bus Repeater ist eine energieeffiziente Loesung, die Reichweite und Zuverlaessigkeit von Telemetriesystemen erhoeht.',
       ],
       featuresHeading: 'Wichtigste Merkmale',
       features: [
         'Einfache Konfiguration und Fern-Firmware-Updates',
-        'Hohe 868-MHz-Empfindlichkeit fuer sichere Auslesung in anspruchsvollen Umgebungen',
-        'Unterstuetzt Wireless-M-Bus- und OMS-Betriebsarten (S, T, C+T usw.)',
-        'Kompatibel mit einer breiten Palette von Messgeraeten',
-        'Ermoeglicht Multi-Hop-Repeaterketten fuer groessere Reichweite',
-        'Robuste, vandalismussichere Konstruktion fuer Industrie und Stadt',
+        'Hohe 868-MHz-Empfindlichkeit fuer zuverlaessigen Empfang in anspruchsvollen Umgebungen',
+        'Unterstuetzt Wireless-M-Bus- und OMS-Modi (S, T, C+T usw.)',
+        'Ermoeglicht Multi-Hop-Repeaterketten fuer maximale Abdeckung',
+        'Robuste, vandalismussichere Konstruktion fuer Industrie und Stadtgebiete',
         'Batteriebetrieb bis zu 11 Jahren',
       ],
     },
@@ -1561,20 +2205,20 @@ const de: ContentStructure = {
       heading: 'Infrastrukturprodukte im Ueberblick',
       title: 'EIXO WM-Bus Gateway',
       intro:
-        'Netzgespeister Datenkonzentrator fuer moderne Messsysteme, kompatibel mit Wireless M-Bus und OMS.',
+        'Netzgespeister Datenkonzentrator fuer moderne Messinfrastrukturen, kompatibel mit Wireless M-Bus und OMS.',
       description: [
-        'EIXO WM-Bus Gateway bietet zuverlaessiges Monitoring und umfassende Kontrolle ueber intelligente Messnetze in anspruchsvollen Umgebungen.',
+        'EIXO WM-Bus Gateway bietet zuverlaessige Ueberwachung und volle Kontrolle ueber Smart-Metering-Netze in anspruchsvollen Umgebungen.',
       ],
       featuresHeading: 'Wichtigste Merkmale',
       features: [
-        '230-V-Versorgung fuer kontinuierlichen und stabilen Betrieb',
-        'Konform mit wM-Bus- und OMS-Standards sowie zahlreichen Messgeraeten',
-        '5G-, 4G- und NB-IoT-Verbindungen fuer maximale Reichweite',
+        '230-V-Stromversorgung fuer kontinuierlichen, stabilen Betrieb',
+        'Konform mit wM-Bus- und OMS-Standards und zahlreichen Messgeraeten',
+        '5G, 4G und NB-IoT fuer maximale Reichweite',
         'Hohe 868-MHz-Empfindlichkeit fuer schwierige Installationsorte',
-        'Linux-System fuer Fernverwaltung und Diagnose',
-        'Flexible Datenprotokolle (MQTT, E-Mail, HTTPS) mit umfangreichen Zeitplaenen',
-        'Manipulationsschutz gegen Oeffnen und Demontage',
-        'Robustes Gehaeuse fuer raue Einsatzbedingungen',
+        'Linux-basierte Plattform fuer Fernverwaltung und Diagnose',
+        'Flexible Datenprotokolle (MQTT, E-Mail, HTTPS) mit erweiterten Zeitplaenen',
+        'Manipulationserkennung bei Gehaeuseoeffnung oder Demontage',
+        'Robustes Gehaeuse fuer harte Umgebungen',
       ],
     },
     'exio-wmbus-repeater': {
@@ -1582,23 +2226,24 @@ const de: ContentStructure = {
       heading: 'Infrastrukturprodukte im Ueberblick',
       title: 'EXIO WM-Bus Repeater',
       intro:
-        'Netzbetriebenes Geraet zur Reichweiten- und Zuverlaessigkeitssteigerung in Wireless-M-Bus-Systemen.',
+        'Netzbetriebener Repeater, der Reichweite und Sicherheit in Wireless-M-Bus-Systemen erhoeht.',
       description: [
-        'EXIO WM-Bus Repeater steigert die Effizienz von Telemetriesystemen nachhaltig und sorgt fuer sichere, hochwertige Kommunikation.',
+        'EXIO WM-Bus Repeater steigert die Leistungsfaehigkeit von Telemetrienetzen und sorgt fuer Dauerhaftigkeit, Sicherheit und hochwertige Kommunikation.',
       ],
       featuresHeading: 'Wichtigste Merkmale',
       features: [
-        'Stabile 230-V-Stromversorgung fuer unterbrechungsfreien Betrieb',
-        'Hohe 868-MHz-Empfindlichkeit und AES-128-Verschluesselung',
+        'Stabile 230-V-Versorgung fuer unterbrechungsfreien Betrieb',
+        'Hohe 868-MHz-Empfindlichkeit mit AES-128-Verschluesselung',
         'Unterstuetzt mehrere Wireless-M-Bus-Modi (S, T, C+T usw.)',
-        'Kompatibel mit einer Vielzahl von Messgeraeten',
-        'Multi-Hop-Repeaterketten fuer maximale Reichweite',
-        'Einfache Montage und vandalismussicheres Gehaeuse',
+        'Kompatibel mit einer breiten Palette von Messgeraeten',
+        'Ermoeglicht Multi-Hop-Repeaterketten fuer groessere Reichweite',
+        'Einfache Montage mit vandalismussicherem Gehaeuse',
         'Firmware-Updates lokal oder remote via USB',
         'Stabile Uebertragung ohne Stoerungen oder Signalverlust',
       ],
     },
   },
+
 
 
   footer: {
