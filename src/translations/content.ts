@@ -386,126 +386,250 @@ const pl: ContentStructure = {
     ctaLabel: 'Dowiedz się więcej',
   },
 
-productPage: {
-  cards: [
-    
-{
-  title: 'Modularis One',
-  subtitle: 'Modul komunikacyjny',
-  description:
-    'Kompaktowy modul radiowy w standardzie wM-Bus 868 MHz do zdalnego odczytu wodomierzy Modularis. Integruje sie z systemami walk-by i AMR, zapewniajac stabilna transmisje danych.',
-  features: [
-    'Dwukierunkowa komunikacja umozliwiajaca zdalna konfiguracje, kasowanie alarmow i diagnostyke',
-    'Kompatybilnosc z wieloma wodomierzami Modularis oraz urzadzeniami innych producentow',
-    'Rownolegla transmisja radiotelegramow w trybie walk-by i AMR (stacjonarny odczyt)',
-    'Transmisja krotkich, dlugich i rozszerzonych ramek z historia danych do 15 miesiecy',
-    'Indukcyjny sensor odporny na zaklocenia magnetyczne',
-    'Dlugi czas pracy baterii do 11 lat',
-    'Stopien ochrony IP54 (opcjonalnie IP68)',
-    'Zgodnosc z normami EN 13757 i OMS',
-  ],
-  downloads: [
-    { label: 'Download PDF ENG', href: '#' },
-    { label: 'Download PDF GER', href: '#' },
-  ],
-  readMoreLabel: 'Read more',
-  slug: 'modularis-one',
-  readMoreHref: '/produkty/modularis-one',
-},
-
-    {
-      title: 'Maddalena',
-      description:
-        'Modularis One to zaawansowany, kompaktowy modul radiowy w standardzie wM-Bus 868 MHz, przeznaczony do zdalnego odczytu wodomierzy Modularis.',
-      features: [
-        'Dwustronna zdalna komunikacja do zmiany konfiguracji, kasowania alarmow i diagnostyki',
-        'Kompatybilny z wieloma markami wodomierzy Modularis i innymi producentami',
-        'Rownolegla transmisja radiotelegramow walk-by i AMR (stacjonarny odczyt)',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
-    {
-      title: 'Wassergerate',
-      description:
-        'Modularis One to zaawansowany, kompaktowy modul radiowy w standardzie wM-Bus 868 MHz, przeznaczony do zdalnego odczytu wodomierzy Modularis.',
-      features: [
-        'Dwustronna zdalna komunikacja do zmiany konfiguracji, kasowania alarmow i diagnostyki',
-        'Kompatybilny z wieloma markami wodomierzy Modularis i innymi producentami',
-        'Rownolegla transmisja radiotelegramow walk-by i AMR (stacjonarny odczyt)',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
-    {
-      title: 'GWF',
-      subtitle: 'SonicoNano',
-      description:
-        'Modularis One to zaawansowany, kompaktowy modul radiowy w standardzie wM-Bus 868 MHz, przeznaczony do zdalnego odczytu wodomierzy Modularis.',
-      features: [
-        'Dwustronna zdalna komunikacja do zmiany konfiguracji, kasowania alarmow i diagnostyki',
-        'Kompatybilny z wieloma markami wodomierzy Modularis i innymi producentami',
-        'Rownolegla transmisja radiotelegramow walk-by i AMR (stacjonarny odczyt)',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
-    {
-      title: 'Apator',
-      subtitle: 'Smart',
-      description:
-        'Modularis One to zaawansowany, kompaktowy modul radiowy w standardzie wM-Bus 868 MHz, przeznaczony do zdalnego odczytu wodomierzy Modularis.',
-      features: [
-        'Dwustronna zdalna komunikacja do zmiany konfiguracji, kasowania alarmow i diagnostyki',
-        'Kompatybilny z wieloma markami wodomierzy Modularis i innymi producentami',
-        'Rownolegla transmisja radiotelegramow walk-by i AMR (stacjonarny odczyt)',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
-  ],
-},
-
-
-productDetails: {
-  'modularis-one': {
-    slug: 'modularis-one',
-    heading: 'Opis poszczegolnych modulow komunikacyjnych',
-    title: 'Modularis One',
-    intro:
-      'Kompaktowy modul radiowy w standardzie wM-Bus 868 MHz do zdalnego odczytu wodomierzy Modularis. Umozliwia integracje z systemami walk-by i AMR oraz zapewnia stabilna bezprzewodowa transmisje danych. Dwukierunkowa komunikacja pozwala zdalnie konfigurowac urzadzenia, kasowac alarmy i prowadzic diagnostyke.',
-    description: [
-      'Modularis One to nowoczesne rozwiazanie do efektywnego i bezpiecznego monitoringu wodomierzy, zapewniajace elastycznosc i skalowalnosc systemu odczytowego bez koniecznosci okablowania czy recznego zbierania danych.',
-    ],
-    featuresHeading: 'Najwazniejsze cechy',
-    features: [
-      'Dwukierunkowa komunikacja umozliwiajaca zdalna konfiguracje, kasowanie alarmow i diagnostyke',
-      'Kompatybilnosc z wieloma wodomierzami Modularis oraz urzadzeniami innych producentow',
-      'Rownolegla transmisja radiotelegramow w trybie walk-by i AMR (stacjonarny odczyt)',
-      'Transmisja krotkich, dlugich i rozszerzonych ramek z historia danych do 15 miesiecy',
-      'Indukcyjny sensor odporny na zaklocenia magnetyczne',
-      'Dlugi czas pracy baterii do 11 lat',
-      'Stopien ochrony IP54 (opcjonalnie IP68)',
-      'Zgodnosc z normami EN 13757 i OMS',
+  productPage: {
+    cards: [
+      {
+        title: 'Modularis One',
+        subtitle: 'Modul komunikacyjny',
+        description:
+          'Kompaktowy modul radiowy w standardzie wM-Bus 868 MHz do zdalnego odczytu wodomierzy Modularis.',
+        features: [
+          'Dwukierunkowa komunikacja umozliwiajaca zdalna konfiguracje, kasowanie alarmow i diagnostyke',
+          'Kompatybilnosc z wieloma wodomierzami Modularis oraz urzadzeniami innych producentow',
+          'Rownolegla transmisja radiotelegramow w trybie walk-by i AMR (stacjonarny odczyt)',
+          'Praca bateryjna do 11 lat w trudnych warunkach',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'modularis-one',
+        readMoreHref: '/produkty/modularis-one',
+      },
+      {
+        title: 'Range ONE',
+        subtitle: 'Infrastruktura terenowa',
+        description:
+          'Przenosny odbiornik Wireless M-Bus z lacznoscia Bluetooth i wysoka czuloscia 868 MHz.',
+        features: [
+          'Szybkie odczyty w trudno dostepnych miejscach',
+          'Lacznosc Bluetooth z aplikacja Route ONE',
+          'Praca na baterii do 40 godzin',
+          'Odporna, ergonomiczna obudowa',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'range-one',
+        readMoreHref: '/produkty/range-one',
+      },
+      {
+        title: 'ECLIPSE WM-Bus Gateway',
+        subtitle: 'Koncentrator danych',
+        description:
+          'Bateryjny koncentrator danych wM-Bus/OMS do szybkiego wdrozenia w dowolnej lokalizacji.',
+        features: [
+          'Zdalne zarzadzanie, diagnostyka i elastyczne protokoly transmisji',
+          'Kompatybilnosc z urzadzeniami wM-Bus i OMS',
+          'Lacznosc 5G/4G/NB-IoT zapewnia stabilne polaczenie',
+          'Praca na baterii do 11 lat bez serwisowania',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'eclipse-wmbus-gateway',
+        readMoreHref: '/produkty/eclipse-wmbus-gateway',
+      },
+      {
+        title: 'ECLIPSE WM-Bus Repeater',
+        subtitle: 'Wzmacniacz sygnalu',
+        description:
+          'Bateryjny repeater przedluzajacy zasieg sieci Wireless M-Bus na rozleglych instalacjach.',
+        features: [
+          'Prosta konfiguracja i zdalne aktualizacje firmware',
+          'Wysoka czulosc odbiornika 868 MHz',
+          'Obsluga trybow Wireless M-Bus i OMS',
+          'Mozliwosc pracy multi-hop dla wiekszego zasiegu',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'eclipse-wmbus-repeater',
+        readMoreHref: '/produkty/eclipse-wmbus-repeater',
+      },
+      {
+        title: 'EIXO WM-Bus Gateway',
+        subtitle: 'Koncentrator sieciowy',
+        description:
+          'Zasilany sieciowo gateway Linux do kompleksowego monitoringu systemow pomiarowych.',
+        features: [
+          'Zasilanie 230 V zapewniajace ciagla prace',
+          'Pelna zgodnosc z wM-Bus i OMS',
+          'Komunikacja mobilna 5G/4G/NB-IoT',
+          'Zaawansowane protokoly transmisji danych',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'eixo-wmbus-gateway',
+        readMoreHref: '/produkty/eixo-wmbus-gateway',
+      },
+      {
+        title: 'EXIO WM-Bus Repeater',
+        subtitle: 'Wzmacniacz sieciowy',
+        description:
+          'Sieciowy repeater zwiekszajacy zasieg i bezpieczenstwo transmisji Wireless M-Bus.',
+        features: [
+          'Zasilanie 230 V dla stabilnej pracy',
+          'Szyfrowanie AES 128-bit i wysoka czulosc 868 MHz',
+          'Obsluga wielu trybow Wireless M-Bus',
+          'Latwy montaz i odporna obudowa antywandalowa',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'exio-wmbus-repeater',
+        readMoreHref: '/produkty/exio-wmbus-repeater',
+      },
     ],
   },
-},
+
+
+  productDetails: {
+    'modularis-one': {
+      slug: 'modularis-one',
+      heading: 'Opis poszczegolnych modulow komunikacyjnych',
+      title: 'Modularis One',
+      intro:
+        'Kompaktowy modul radiowy w standardzie wM-Bus 868 MHz do zdalnego odczytu wodomierzy Modularis. Umozliwia integracje z systemami walk-by i AMR oraz zapewnia stabilna bezprzewodowa transmisje danych. Dwukierunkowa komunikacja pozwala zdalnie konfigurowac urzadzenia, kasowac alarmy i prowadzic diagnostyke.',
+      description: [
+        'Modularis One to nowoczesne rozwiazanie do efektywnego i bezpiecznego monitoringu wodomierzy, zapewniajace elastycznosc i skalowalnosc systemu odczytowego bez koniecznosci okablowania czy recznego zbierania danych.',
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Dwukierunkowa komunikacja umozliwiajaca zdalna konfiguracje, kasowanie alarmow i diagnostyke',
+        'Kompatybilnosc z wieloma wodomierzami Modularis oraz urzadzeniami innych producentow',
+        'Rownolegla transmisja radiotelegramow w trybie walk-by i AMR (stacjonarny odczyt)',
+        'Transmisja krotkich, dlugich i rozszerzonych ramek z historia danych do 15 miesiecy',
+        'Indukcyjny sensor odporny na zaklocenia magnetyczne',
+        'Dlugi czas pracy baterii do 11 lat',
+        'Stopien ochrony IP54 (opcjonalnie IP68)',
+        'Zgodnosc z normami EN 13757 i OMS',
+      ],
+    },
+    'range-one': {
+      slug: 'range-one',
+      heading: 'Opis poszczegolnych elementow infrastruktury',
+      title: 'Range ONE',
+      intro:
+        'Odbiornik radiowy z technologia Bluetooth zgodny ze standardami Wireless M-Bus (EN 13757) i OMS, obslugujacy rozne urzadzenia pomiarowe niezaleznie od producenta.',
+      description: [
+        'Range ONE to niezawodne narzedzie terenowe laczace mobilnosc, funkcjonalnosc i komfort pracy w jednym kompaktowym urzadzeniu.',
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Wysoka czulosc odbiornika 868 MHz umozliwiajaca odczyt w trudno dostepnych miejscach',
+        'Lacznosc Bluetooth do bezprzewodowego przesylania danych na urzadzenia z Androidem (aplikacja Route ONE)',
+        'Energooszczedne algorytmy pozwalaja na prace na baterii do 40 godzin',
+        'Ergonomiczna, odporna obudowa z gumowanymi bokami zapewnia pewny chwyt',
+        'Zewnetrzna antena i port USB do ladowania baterii',
+        'Mozliwosc odczytu danych i zdalnej konfiguracji modulow radiowych',
+      ],
+    },
+    'eclipse-wmbus-gateway': {
+      slug: 'eclipse-wmbus-gateway',
+      heading: 'Opis poszczegolnych elementow infrastruktury',
+      title: 'ECLIPSE WM-Bus Gateway',
+      intro:
+        'Bateryjny koncentrator danych do zbierania informacji z licznikow wody, ciepla, gazu i energii. Zasilany bateria o zywotnosci do 11 lat, minimalizuje koszty instalacji.',
+      description: [
+        'ECLIPSE WM-Bus Gateway to niezawodny, ekonomiczny koncentrator danych oferujacy pelna kontrole nad systemami telemetrycznymi przy niskich kosztach eksploatacji.',
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Zdalne zarzadzanie, diagnostyka i elastyczne protokoly transmisji (HTTPS, MQTT, E-mail)',
+        'Pelna kompatybilnosc z urzadzeniami wM-Bus i OMS',
+        'Lacznosc 5G, 4G, NB-IoT zapewnia stabilne polaczenie',
+        'Wysoka czulosc odbiornika 868 MHz do odczytu w trudno dostepnych miejscach',
+        'Praca bateryjna do 11 lat bez koniecznosci serwisowania',
+        'Obudowa odporna na kurz i promieniowanie UV o estetycznym wygladzie',
+        'Czujniki bezpieczenstwa wykrywajace otwarcie i demontaz urzadzenia',
+      ],
+    },
+    'eclipse-wmbus-repeater': {
+      slug: 'eclipse-wmbus-repeater',
+      heading: 'Opis poszczegolnych elementow infrastruktury',
+      title: 'ECLIPSE WM-Bus Repeater',
+      intro:
+        'Bateryjne urzadzenie wzmacniajace sygnal w systemach Wireless M-Bus zapewniajace nieprzerwana prace przez 11 lat.',
+      description: [
+        'ECLIPSE WM-Bus Repeater to nowoczesne, energooszczedne rozwiazanie zwiekszajace zasieg i niezawodnosc transmisji w systemach telemetrycznych.',
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Prosta konfiguracja i zdalna aktualizacja firmware',
+        'Wysoka czulosc odbiornika 868 MHz dla skutecznego odczytu w trudnych warunkach',
+        'Obsluga trybow Wireless M-Bus i OMS (S, T, C+T itd.)',
+        'Kompatybilnosc z roznorodnymi urzadzeniami pomiarowymi',
+        'Mozliwosc tworzenia ciagow repeaterow (multi-hop)',
+        'Solidna, odporna konstrukcja z zabezpieczeniami antywandalowymi',
+        'Zasilanie bateryjne o zywotnosci do 11 lat',
+      ],
+    },
+    'eixo-wmbus-gateway': {
+      slug: 'eixo-wmbus-gateway',
+      heading: 'Opis poszczegolnych elementow infrastruktury',
+      title: 'EIXO WM-Bus Gateway',
+      intro:
+        'Sieciowo zasilany koncentrator danych do monitoringu nowoczesnych systemow pomiarowych, kompatybilny z Wireless M-Bus i OMS.',
+      description: [
+        'EIXO WM-Bus Gateway to profesjonalny koncentrator zapewniajacy niezawodny monitoring i pelna kontrole nad inteligentnymi sieciami pomiarowymi.',
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Zasilanie 230 V zapewnia ciagla i stabilna prace',
+        'Pelna zgodnosc z normami wM-Bus i OMS oraz szeroka gama urzadzen pomiarowych',
+        'Komunikacja mobilna 5G, 4G, NB-IoT dla maksymalnego zasiegu',
+        'Wysoka czulosc odbiornika 868 MHz umozliwia odczyt w trudno dostepnych miejscach',
+        'System Linux do zdalnego zarzadzania i diagnostyki',
+        'Elastyczne protokoly transmisji danych (MQTT, E-mail, HTTPS) i rozbudowane harmonogramy',
+        'Zabezpieczenia przed otwarciem i demontazem obudowy',
+        'Solidna, odporna obudowa do zastosowan w wymagajacym srodowisku',
+      ],
+    },
+    'exio-wmbus-repeater': {
+      slug: 'exio-wmbus-repeater',
+      heading: 'Opis poszczegolnych elementow infrastruktury',
+      title: 'EXIO WM-Bus Repeater',
+      intro:
+        'Urzadzenie sieciowe zwiekszajace zasieg i niezawodnosc transmisji w systemach Wireless M-Bus.',
+      description: [
+        'EXIO WM-Bus Repeater znaczaco zwieksza efektywnosc i zasieg systemow telemetrycznych, gwarantujac trwalosc, bezpieczenstwo i wysoka jakosc komunikacji.',
+      ],
+      featuresHeading: 'Najwazniejsze cechy',
+      features: [
+        'Stabilne zasilanie 230 V gwarantujace ciaglosc pracy',
+        'Wysoka czulosc odbiornika 868 MHz oraz szyfrowanie AES 128-bit',
+        'Obsluga wielu trybow Wireless M-Bus (S, T, C+T itd.)',
+        'Kompatybilnosc z szerokim zakresem urzadzen pomiarowych',
+        'Tworzenie ciagow repeaterow (multi-hop) dla maksymalnego zasiegu',
+        'Latwy montaz i odporna na uszkodzenia obudowa antywandalowa',
+        'Aktualizacja firmware lokalnie lub zdalnie przez USB',
+        'Stabilna transmisja bez zaklocen i utraty sygnalu',
+      ],
+    },
+  },
 
 
   footer: {
@@ -747,126 +871,250 @@ const en: ContentStructure = {
     ctaLabel: 'Learn more',
   },
 
-productPage: {
-  cards: [
-    
-{
-  title: 'Modularis One',
-  subtitle: 'Communication module',
-  description:
-    'Compact radio module in the wM-Bus 868 MHz standard for remote reading of Modularis water meters. It integrates with walk-by and AMR systems and delivers stable data transmission.',
-  features: [
-    'Two-way communication enabling remote configuration, alarm resets, and diagnostics',
-    'Compatibility with numerous Modularis water meters and devices from other manufacturers',
-    'Parallel transmission of radio telegrams in walk-by and AMR (stationary) modes',
-    'Support for short, long, and extended frames with data history up to 15 months',
-    'Inductive sensor resistant to magnetic interference',
-    'Battery life up to 11 years',
-    'Protection rating IP54 (optional IP68)',
-    'Compliance with EN 13757 and OMS standards',
-  ],
-  downloads: [
-    { label: 'Download PDF ENG', href: '#' },
-    { label: 'Download PDF GER', href: '#' },
-  ],
-  readMoreLabel: 'Read more',
-  slug: 'modularis-one',
-  readMoreHref: '/produkty/modularis-one',
-},
-
-    {
-      title: 'Maddalena',
-      description:
-        'Modularis One is an advanced, compact radio module in the wM-Bus 868 MHz standard, designed for remote reading of Modularis water meters.',
-      features: [
-        'Two-way remote communication for reconfiguration, alarm resets, and diagnostics',
-        'Compatible with many Modularis water meter brands and other manufacturers',
-        'Parallel transmission of walk-by and AMR (stationary) radio telegrams',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
-    {
-      title: 'Wassergerate',
-      description:
-        'Modularis One is an advanced, compact radio module in the wM-Bus 868 MHz standard, designed for remote reading of Modularis water meters.',
-      features: [
-        'Two-way remote communication for reconfiguration, alarm resets, and diagnostics',
-        'Compatible with many Modularis water meter brands and other manufacturers',
-        'Parallel transmission of walk-by and AMR (stationary) radio telegrams',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
-    {
-      title: 'GWF',
-      subtitle: 'SonicoNano',
-      description:
-        'Modularis One is an advanced, compact radio module in the wM-Bus 868 MHz standard, designed for remote reading of Modularis water meters.',
-      features: [
-        'Two-way remote communication for reconfiguration, alarm resets, and diagnostics',
-        'Compatible with many Modularis water meter brands and other manufacturers',
-        'Parallel transmission of walk-by and AMR (stationary) radio telegrams',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
-    {
-      title: 'Apator',
-      subtitle: 'Smart',
-      description:
-        'Modularis One is an advanced, compact radio module in the wM-Bus 868 MHz standard, designed for remote reading of Modularis water meters.',
-      features: [
-        'Two-way remote communication for reconfiguration, alarm resets, and diagnostics',
-        'Compatible with many Modularis water meter brands and other manufacturers',
-        'Parallel transmission of walk-by and AMR (stationary) radio telegrams',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
-  ],
-},
-
-
-productDetails: {
-  'modularis-one': {
-    slug: 'modularis-one',
-    heading: 'Communication modules overview',
-    title: 'Modularis One',
-    intro:
-      'Compact radio module in the wM-Bus 868 MHz standard for remote reading of Modularis water meters. It integrates with walk-by and AMR systems, providing stable wireless data transmission. Two-way communication enables remote configuration, alarm resets, and diagnostics.',
-    description: [
-      'Modularis One is a modern solution for efficient and secure meter monitoring, offering flexibility and scalability without cabling or manual data collection.',
-    ],
-    featuresHeading: 'Key features',
-    features: [
-      'Two-way communication enabling remote configuration, alarm resets, and diagnostics',
-      'Compatibility with numerous Modularis water meters and devices from other manufacturers',
-      'Parallel transmission of radio telegrams in walk-by and AMR (stationary) modes',
-      'Support for short, long, and extended frames with data history up to 15 months',
-      'Inductive sensor resistant to magnetic interference',
-      'Battery life up to 11 years',
-      'Protection rating IP54 (optional IP68)',
-      'Compliance with EN 13757 and OMS standards',
+  productPage: {
+    cards: [
+      {
+        title: 'Modularis One',
+        subtitle: 'Communication module',
+        description:
+          'Compact wM-Bus 868 MHz radio module for remote reading of Modularis water meters.',
+        features: [
+          'Two-way communication for remote configuration, alarm resets, and diagnostics',
+          'Compatible with Modularis meters and third-party devices',
+          'Parallel transmission of walk-by and AMR radio telegrams',
+          'Battery life up to 11 years in demanding conditions',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'modularis-one',
+        readMoreHref: '/produkty/modularis-one',
+      },
+      {
+        title: 'Range ONE',
+        subtitle: 'Field infrastructure',
+        description:
+          'Portable Wireless M-Bus receiver with Bluetooth and high 868 MHz sensitivity.',
+        features: [
+          'Fast readings in hard-to-reach locations',
+          'Bluetooth connectivity via the Route ONE app',
+          'Battery operation for up to 40 hours',
+          'Rugged, ergonomic housing with secure grip',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'range-one',
+        readMoreHref: '/produkty/range-one',
+      },
+      {
+        title: 'ECLIPSE WM-Bus Gateway',
+        subtitle: 'Data concentrator',
+        description:
+          'Battery-powered wM-Bus/OMS gateway for rapid deployment anywhere.',
+        features: [
+          'Remote management, diagnostics, and flexible transmission protocols',
+          'Full compatibility with wM-Bus and OMS devices',
+          '5G/4G/NB-IoT connectivity for reliable communication',
+          'Battery-powered operation for up to 11 years',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'eclipse-wmbus-gateway',
+        readMoreHref: '/produkty/eclipse-wmbus-gateway',
+      },
+      {
+        title: 'ECLIPSE WM-Bus Repeater',
+        subtitle: 'Signal booster',
+        description:
+          'Battery repeater extending Wireless M-Bus coverage across large sites.',
+        features: [
+          'Simple setup with remote firmware updates',
+          'High 868 MHz sensitivity for reliable reception',
+          'Supports Wireless M-Bus and OMS operating modes',
+          'Multi-hop capability for extended range',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'eclipse-wmbus-repeater',
+        readMoreHref: '/produkty/eclipse-wmbus-repeater',
+      },
+      {
+        title: 'EIXO WM-Bus Gateway',
+        subtitle: 'Network gateway',
+        description:
+          'Mains-powered Linux gateway for comprehensive metering supervision.',
+        features: [
+          '230 V supply for continuous operation',
+          'Compliance with wM-Bus and OMS standards',
+          '5G/4G/NB-IoT connectivity for maximum reach',
+          'Advanced data transmission protocols and scheduling',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'eixo-wmbus-gateway',
+        readMoreHref: '/produkty/eixo-wmbus-gateway',
+      },
+      {
+        title: 'EXIO WM-Bus Repeater',
+        subtitle: 'Network repeater',
+        description:
+          'Mains-powered repeater enhancing Wireless M-Bus range and security.',
+        features: [
+          '230 V power for continuous uptime',
+          'AES 128-bit encryption and high 868 MHz sensitivity',
+          'Supports multiple Wireless M-Bus modes',
+          'Easy installation with vandal-resistant housing',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'exio-wmbus-repeater',
+        readMoreHref: '/produkty/exio-wmbus-repeater',
+      },
     ],
   },
-},
+
+
+  productDetails: {
+    'modularis-one': {
+      slug: 'modularis-one',
+      heading: 'Communication module portfolio',
+      title: 'Modularis One',
+      intro:
+        'Compact radio module in the wM-Bus 868 MHz standard for remote reading of Modularis meters. It integrates with walk-by and AMR systems and provides stable wireless data transmission. Two-way communication enables remote configuration, alarm resets, and diagnostics.',
+      description: [
+        'Modularis One is a modern solution for efficient and secure meter monitoring, offering flexibility and scalability without cabling or manual data collection.',
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'Two-way communication enabling remote configuration, alarm resets, and diagnostics',
+        'Compatibility with multiple Modularis meters and third-party devices',
+        'Parallel transmission of walk-by and AMR radio telegrams',
+        'Support for short, long, and extended frames with up to 15 months of history',
+        'Inductive sensor resistant to magnetic interference',
+        'Battery life up to 11 years',
+        'Protection rating IP54 (optional IP68)',
+        'Compliance with EN 13757 and OMS',
+      ],
+    },
+    'range-one': {
+      slug: 'range-one',
+      heading: 'Infrastructure product overview',
+      title: 'Range ONE',
+      intro:
+        'Bluetooth-enabled Wireless M-Bus receiver compliant with EN 13757 and OMS, supporting diverse metering devices across vendors.',
+      description: [
+        'Range ONE combines mobility, functionality, and user comfort in a compact field device for rapid, convenient data collection.',
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'High 868 MHz sensitivity for readings in hard-to-reach locations',
+        'Bluetooth connectivity to transmit data to Android devices via the Route ONE app',
+        'Energy-efficient algorithms deliver up to 40 hours of battery life',
+        'Ergonomic, durable housing with rubberized grips',
+        'External antenna and USB port for battery charging',
+        'Enables meter data reading and remote configuration of radio modules',
+      ],
+    },
+    'eclipse-wmbus-gateway': {
+      slug: 'eclipse-wmbus-gateway',
+      heading: 'Infrastructure product overview',
+      title: 'ECLIPSE WM-Bus Gateway',
+      intro:
+        'Battery-powered data concentrator collecting information from water, heat, gas, and energy meters, with up to 11 years of autonomy.',
+      description: [
+        'ECLIPSE WM-Bus Gateway is a reliable, cost-effective concentrator that delivers full control over telemetry systems with minimal operating costs.',
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'Remote management, diagnostics, and flexible transmission protocols (HTTPS, MQTT, E-mail)',
+        'Full compatibility with wM-Bus and OMS devices',
+        '5G, 4G, and NB-IoT connectivity for stable communication',
+        'High 868 MHz sensitivity for readings from challenging locations',
+        'Battery-powered operation for up to 11 years without service',
+        'Dust- and UV-resistant housing with a clean design',
+        'Security sensors detecting enclosure opening or removal',
+      ],
+    },
+    'eclipse-wmbus-repeater': {
+      slug: 'eclipse-wmbus-repeater',
+      heading: 'Infrastructure product overview',
+      title: 'ECLIPSE WM-Bus Repeater',
+      intro:
+        'Battery-powered repeater that strengthens Wireless M-Bus signals and operates continuously for up to 11 years.',
+      description: [
+        'ECLIPSE WM-Bus Repeater is an energy-efficient solution that extends range and reliability in telemetry networks.',
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'Simple configuration with remote firmware updates',
+        'High 868 MHz sensitivity for dependable reception in harsh environments',
+        'Supports Wireless M-Bus and OMS modes (S, T, C+T, etc.)',
+        'Compatible with a wide range of metering devices',
+        'Allows multi-hop repeater chains for maximum coverage',
+        'Robust, vandal-resistant construction for industrial and urban use',
+        'Battery-powered for up to 11 years',
+      ],
+    },
+    'eixo-wmbus-gateway': {
+      slug: 'eixo-wmbus-gateway',
+      heading: 'Infrastructure product overview',
+      title: 'EIXO WM-Bus Gateway',
+      intro:
+        'Mains-powered data concentrator for advanced metering infrastructure, compatible with Wireless M-Bus and OMS.',
+      description: [
+        'EIXO WM-Bus Gateway provides reliable monitoring and full control over smart metering networks in demanding environments.',
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        '230 V supply ensures continuous and stable operation',
+        'Compliance with wM-Bus and OMS standards and a broad range of meters',
+        '5G, 4G, and NB-IoT connectivity for maximum coverage',
+        'High 868 MHz sensitivity for difficult installation points',
+        'Linux-based system for remote management and diagnostics',
+        'Flexible data transmission protocols (MQTT, E-mail, HTTPS) with advanced scheduling',
+        'Tamper detection against enclosure opening or removal',
+        'Rugged housing suited for harsh conditions',
+      ],
+    },
+    'exio-wmbus-repeater': {
+      slug: 'exio-wmbus-repeater',
+      heading: 'Infrastructure product overview',
+      title: 'EXIO WM-Bus Repeater',
+      intro:
+        'Mains-powered repeater enhancing range and reliability in Wireless M-Bus systems.',
+      description: [
+        'EXIO WM-Bus Repeater significantly boosts telemetry network performance, ensuring durability, security, and high-quality communication.',
+      ],
+      featuresHeading: 'Key features',
+      features: [
+        'Stable 230 V power supply for uninterrupted operation',
+        'High 868 MHz sensitivity with AES 128-bit encryption',
+        'Supports multiple Wireless M-Bus modes (S, T, C+T, etc.)',
+        'Compatible with a wide variety of metering devices',
+        'Enables multi-hop repeater chains for extended reach',
+        'Easy installation with vandal-resistant enclosure',
+        'Firmware updates locally or remotely via USB',
+        'Stable transmission without interference or signal loss',
+      ],
+    },
+  },
 
 
   footer: {
@@ -1107,126 +1355,250 @@ const de: ContentStructure = {
     ctaLabel: 'Mehr erfahren',
   },
 
-productPage: {
-  cards: [
-    
-{
-  title: 'Modularis One',
-  subtitle: 'Kommunikationsmodul',
-  description:
-    'Kompaktes Funkmodul im wM-Bus-Standard 868 MHz fuer die Fernauslese von Modularis-Wasserzaehlern. Es laesst sich in Walk-by- und AMR-Systeme integrieren und sorgt fuer stabile Datenuebertragung.',
-  features: [
-    'Bidirektionale Kommunikation fuer Fernkonfiguration, Alarm-Reset und Diagnose',
-    'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und Geraeten anderer Hersteller',
-    'Parallele Uebertragung von Funktelegrammen im Walk-by- und AMR-Betrieb (stationaere Auslesung)',
-    'Unterstuetzung von kurzen, langen und erweiterten Rahmen mit Datenhistorie bis zu 15 Monaten',
-    'Induktiver Sensor, unempfindlich gegen magnetische Stoerungen',
-    'Batterielebensdauer bis zu 11 Jahren',
-    'Schutzart IP54 (optional IP68)',
-    'Konform mit EN 13757 und OMS',
-  ],
-  downloads: [
-    { label: 'Download PDF ENG', href: '#' },
-    { label: 'Download PDF GER', href: '#' },
-  ],
-  readMoreLabel: 'Read more',
-  slug: 'modularis-one',
-  readMoreHref: '/produkty/modularis-one',
-},
-
-    {
-      title: 'Maddalena',
-      description:
-        'Modularis One ist ein fortschrittliches, kompaktes Funkmodul im wM-Bus-Standard 868 MHz, entwickelt fuer die Fernauslese von Modularis-Wasserzaehlern.',
-      features: [
-        'Zweiwege-Fernkommunikation zur Neukonfiguration, Alarmruecksetzung und Diagnose',
-        'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und anderen Herstellern',
-        'Parallele Uebertragung von Funktelegrammen fuer Walk-by und AMR (stationaere Auslesung)',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
-    {
-      title: 'Wassergerate',
-      description:
-        'Modularis One ist ein fortschrittliches, kompaktes Funkmodul im wM-Bus-Standard 868 MHz, entwickelt fuer die Fernauslese von Modularis-Wasserzaehlern.',
-      features: [
-        'Zweiwege-Fernkommunikation zur Neukonfiguration, Alarmruecksetzung und Diagnose',
-        'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und anderen Herstellern',
-        'Parallele Uebertragung von Funktelegrammen fuer Walk-by und AMR (stationaere Auslesung)',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
-    {
-      title: 'GWF',
-      subtitle: 'SonicoNano',
-      description:
-        'Modularis One ist ein fortschrittliches, kompaktes Funkmodul im wM-Bus-Standard 868 MHz, entwickelt fuer die Fernauslese von Modularis-Wasserzaehlern.',
-      features: [
-        'Zweiwege-Fernkommunikation zur Neukonfiguration, Alarmruecksetzung und Diagnose',
-        'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und anderen Herstellern',
-        'Parallele Uebertragung von Funktelegrammen fuer Walk-by und AMR (stationaere Auslesung)',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
-    {
-      title: 'Apator',
-      subtitle: 'Smart',
-      description:
-        'Modularis One ist ein fortschrittliches, kompaktes Funkmodul im wM-Bus-Standard 868 MHz, entwickelt fuer die Fernauslese von Modularis-Wasserzaehlern.',
-      features: [
-        'Zweiwege-Fernkommunikation zur Neukonfiguration, Alarmruecksetzung und Diagnose',
-        'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und anderen Herstellern',
-        'Parallele Uebertragung von Funktelegrammen fuer Walk-by und AMR (stationaere Auslesung)',
-      ],
-      downloads: [
-        { label: 'Download PDF ENG', href: '#' },
-        { label: 'Download PDF GER', href: '#' },
-      ],
-      readMoreLabel: 'Read more',
-      readMoreHref: '#',
-    },
-  ],
-},
-
-
-productDetails: {
-  'modularis-one': {
-    slug: 'modularis-one',
-    heading: 'Uebersicht Kommunikationsmodule',
-    title: 'Modularis One',
-    intro:
-      'Kompaktes Funkmodul im wM-Bus-Standard 868 MHz fuer die Fernauslese von Modularis-Wasserzaehlern. Es laesst sich in Walk-by- und AMR-Systeme integrieren und sorgt fuer eine stabile drahtlose Datenuebertragung. Die bidirektionale Kommunikation ermoeglicht Fernkonfiguration, Alarm-Reset und Diagnose.',
-    description: [
-      'Modularis One ist eine moderne Loesung fuer effizientes und sicheres Metering und bietet Flexibilitaet und Skalierbarkeit ohne Verkabelung oder manuelles Datensammeln.',
-    ],
-    featuresHeading: 'Wichtigste Merkmale',
-    features: [
-      'Bidirektionale Kommunikation fuer Fernkonfiguration, Alarm-Reset und Diagnose',
-      'Kompatibel mit zahlreichen Modularis-Wasserzaehlern und Geraeten anderer Hersteller',
-      'Parallele Uebertragung von Funktelegrammen im Walk-by- und AMR-Betrieb (stationaere Auslesung)',
-      'Unterstuetzung von kurzen, langen und erweiterten Rahmen mit Datenhistorie bis zu 15 Monaten',
-      'Induktiver Sensor, unempfindlich gegen magnetische Stoerungen',
-      'Batterielebensdauer bis zu 11 Jahren',
-      'Schutzart IP54 (optional IP68)',
-      'Konform mit EN 13757 und OMS',
+  productPage: {
+    cards: [
+      {
+        title: 'Modularis One',
+        subtitle: 'Kommunikationsmodul',
+        description:
+          'Kompaktes Funkmodul im wM-Bus-Standard 868 MHz fuer die Fernauslese von Modularis-Wasserzaehlern.',
+        features: [
+          'Bidirektionale Kommunikation fuer Fernkonfiguration, Alarm-Reset und Diagnose',
+          'Kompatibel mit Modularis-Zaehlern und Geraeten anderer Hersteller',
+          'Parallele Uebertragung von Walk-by- und AMR-Telegrammen',
+          'Batterielaufzeit bis zu 11 Jahren in anspruchsvollen Umgebungen',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'modularis-one',
+        readMoreHref: '/produkty/modularis-one',
+      },
+      {
+        title: 'Range ONE',
+        subtitle: 'Feldinfrastruktur',
+        description:
+          'Mobiler Wireless-M-Bus-Empfaenger mit Bluetooth und hoher 868-MHz-Empfindlichkeit.',
+        features: [
+          'Schnelle Auslesung an schwer zugaenglichen Orten',
+          'Bluetooth-Anbindung ueber die Route-ONE-App',
+          'Batteriebetrieb bis zu 40 Stunden',
+          'Robustes, ergonomisches Gehaeuse mit rutschfestem Griff',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'range-one',
+        readMoreHref: '/produkty/range-one',
+      },
+      {
+        title: 'ECLIPSE WM-Bus Gateway',
+        subtitle: 'Datenkonzentrator',
+        description:
+          'Batteriebetriebener wM-Bus/OMS-Gateway fuer schnelle Implementierungen.',
+        features: [
+          'Fernverwaltung, Diagnose und flexible Uebertragungsprotokolle',
+          'Voll kompatibel mit wM-Bus- und OMS-Geraeten',
+          '5G/4G/NB-IoT fuer zuverlaessige Konnektivitaet',
+          'Batteriebetrieb bis zu 11 Jahren ohne Wartung',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'eclipse-wmbus-gateway',
+        readMoreHref: '/produkty/eclipse-wmbus-gateway',
+      },
+      {
+        title: 'ECLIPSE WM-Bus Repeater',
+        subtitle: 'Signalverstaerker',
+        description:
+          'Batteriebetriebener Repeater zur Erweiterung von Wireless-M-Bus-Netzen.',
+        features: [
+          'Einfache Konfiguration mit Fern-Firmware-Updates',
+          'Hohe 868-MHz-Empfindlichkeit fuer stabile Signale',
+          'Unterstuetzt Wireless-M-Bus- und OMS-Modi',
+          'Multi-Hop-Funktion fuer groessere Reichweite',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'eclipse-wmbus-repeater',
+        readMoreHref: '/produkty/eclipse-wmbus-repeater',
+      },
+      {
+        title: 'EIXO WM-Bus Gateway',
+        subtitle: 'Netzwerk-Gateway',
+        description:
+          'Netzgespeister Linux-Gateway fuer umfassende Ueberwachung von Messsystemen.',
+        features: [
+          '230-V-Versorgung fuer dauerhaften Betrieb',
+          'Konform mit wM-Bus- und OMS-Standards',
+          '5G/4G/NB-IoT fuer maximale Reichweite',
+          'Erweiterte Datenprotokolle und Zeitplaene',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'eixo-wmbus-gateway',
+        readMoreHref: '/produkty/eixo-wmbus-gateway',
+      },
+      {
+        title: 'EXIO WM-Bus Repeater',
+        subtitle: 'Netzwerk-Repeater',
+        description:
+          'Netzbetriebener Repeater zur Erweiterung von Wireless-M-Bus-Reichweiten und Sicherheit.',
+        features: [
+          '230-V-Stromversorgung fuer unterbrechungsfreien Betrieb',
+          'AES-128-Verschluesselung und hohe 868-MHz-Empfindlichkeit',
+          'Unterstuetzt mehrere Wireless-M-Bus-Modi',
+          'Einfache Montage mit vandalismussicherem Gehaeuse',
+        ],
+        downloads: [
+          { label: 'Download PDF ENG', href: '#' },
+          { label: 'Download PDF GER', href: '#' },
+        ],
+        readMoreLabel: 'Read more',
+        slug: 'exio-wmbus-repeater',
+        readMoreHref: '/produkty/exio-wmbus-repeater',
+      },
     ],
   },
-},
+
+
+  productDetails: {
+    'modularis-one': {
+      slug: 'modularis-one',
+      heading: 'Kommunikationsmodule im Ueberblick',
+      title: 'Modularis One',
+      intro:
+        'Kompaktes Funkmodul im wM-Bus-Standard 868 MHz zur Fernauslese von Modularis-Zaehlern. Es integriert sich in Walk-by- und AMR-Systeme und bietet stabile drahtlose Datenuebertragung. Bidirektionale Kommunikation ermoeglicht Fernkonfiguration, Alarm-Reset und Diagnose.',
+      description: [
+        'Modularis One ist eine moderne Loesung fuer effizientes und sicheres Metering und bietet Flexibilitaet und Skalierbarkeit ohne Verkabelung oder manuelle Datenerfassung.',
+      ],
+      featuresHeading: 'Wichtigste Merkmale',
+      features: [
+        'Bidirektionale Kommunikation fuer Fernkonfiguration, Alarm-Reset und Diagnose',
+        'Kompatibel mit zahlreichen Modularis-Zaehlern und Geraeten anderer Hersteller',
+        'Parallele Uebertragung von Walk-by- und AMR-Telegrammen',
+        'Unterstuetzung von kurzen, langen und erweiterten Rahmen mit bis zu 15 Monaten Historie',
+        'Induktiver Sensor, unempfindlich gegen magnetische Stoerungen',
+        'Batterielaufzeit bis zu 11 Jahren',
+        'Schutzart IP54 (optional IP68)',
+        'Konform mit EN 13757 und OMS',
+      ],
+    },
+    'range-one': {
+      slug: 'range-one',
+      heading: 'Infrastrukturprodukte im Ueberblick',
+      title: 'Range ONE',
+      intro:
+        'Bluetooth-faehiger Wireless-M-Bus-Empfaenger nach EN 13757 und OMS, der verschiedene Messgeraete unabhaengiger Hersteller unterstuetzt.',
+      description: [
+        'Range ONE vereint Mobilitaet, Funktionalitaet und Bedienkomfort in einem kompakten Feldgeraet fuer schnelle Datenerfassung.',
+      ],
+      featuresHeading: 'Wichtigste Merkmale',
+      features: [
+        'Hohe 868-MHz-Empfindlichkeit fuer Auslesungen an schwer zugaenglichen Orten',
+        'Bluetooth-Verbindung zur Datenuebertragung auf Android-Geraete mit der Route-ONE-App',
+        'Energieeffiziente Algorithmen fuer bis zu 40 Stunden Batteriebetrieb',
+        'Ergonomisches, robustes Gehaeuse mit gummierten Seiten',
+        'Externe Antenne und USB-Anschluss zum Laden der Batterie',
+        'Unterstuetzt Datenauslesung und Fernkonfiguration von Funkmodulen',
+      ],
+    },
+    'eclipse-wmbus-gateway': {
+      slug: 'eclipse-wmbus-gateway',
+      heading: 'Infrastrukturprodukte im Ueberblick',
+      title: 'ECLIPSE WM-Bus Gateway',
+      intro:
+        'Batteriebetriebener Datenkonzentrator fuer Wasser-, Waerme-, Gas- und Stromzaehler mit bis zu 11 Jahren Laufzeit.',
+      description: [
+        'ECLIPSE WM-Bus Gateway ist ein zuverlaessiger und wirtschaftlicher Konzentrator, der umfassende Kontrolle ueber Telemetriesysteme bei geringen Betriebskosten bietet.',
+      ],
+      featuresHeading: 'Wichtigste Merkmale',
+      features: [
+        'Fernverwaltung, Diagnose und flexible Protokolle (HTTPS, MQTT, E-Mail)',
+        'Volle Kompatibilitaet zu wM-Bus- und OMS-Geraeten',
+        '5G-, 4G- und NB-IoT-Konnektivitaet fuer stabile Verbindungen',
+        'Hohe 868-MHz-Empfindlichkeit fuer schwer erreichbare Standorte',
+        'Batteriebetrieb bis zu 11 Jahren ohne Wartung',
+        'Staub- und UV-bestaendige, ansprechende Gehaeuseausfuehrung',
+        'Sicherheitssensoren erkennen das Oeffnen oder Entfernen des Geraets',
+      ],
+    },
+    'eclipse-wmbus-repeater': {
+      slug: 'eclipse-wmbus-repeater',
+      heading: 'Infrastrukturprodukte im Ueberblick',
+      title: 'ECLIPSE WM-Bus Repeater',
+      intro:
+        'Batteriebetriebener Repeater, der Wireless-M-Bus-Signale verstaerkt und bis zu 11 Jahre ununterbrochen arbeitet.',
+      description: [
+        'ECLIPSE WM-Bus Repeater ist eine energieeffiziente Loesung zur Erweiterung von Reichweite und Zuverlaessigkeit in Telemetriesystemen.',
+      ],
+      featuresHeading: 'Wichtigste Merkmale',
+      features: [
+        'Einfache Konfiguration und Fern-Firmware-Updates',
+        'Hohe 868-MHz-Empfindlichkeit fuer sichere Auslesung in anspruchsvollen Umgebungen',
+        'Unterstuetzt Wireless-M-Bus- und OMS-Betriebsarten (S, T, C+T usw.)',
+        'Kompatibel mit einer breiten Palette von Messgeraeten',
+        'Ermoeglicht Multi-Hop-Repeaterketten fuer groessere Reichweite',
+        'Robuste, vandalismussichere Konstruktion fuer Industrie und Stadt',
+        'Batteriebetrieb bis zu 11 Jahren',
+      ],
+    },
+    'eixo-wmbus-gateway': {
+      slug: 'eixo-wmbus-gateway',
+      heading: 'Infrastrukturprodukte im Ueberblick',
+      title: 'EIXO WM-Bus Gateway',
+      intro:
+        'Netzgespeister Datenkonzentrator fuer moderne Messsysteme, kompatibel mit Wireless M-Bus und OMS.',
+      description: [
+        'EIXO WM-Bus Gateway bietet zuverlaessiges Monitoring und umfassende Kontrolle ueber intelligente Messnetze in anspruchsvollen Umgebungen.',
+      ],
+      featuresHeading: 'Wichtigste Merkmale',
+      features: [
+        '230-V-Versorgung fuer kontinuierlichen und stabilen Betrieb',
+        'Konform mit wM-Bus- und OMS-Standards sowie zahlreichen Messgeraeten',
+        '5G-, 4G- und NB-IoT-Verbindungen fuer maximale Reichweite',
+        'Hohe 868-MHz-Empfindlichkeit fuer schwierige Installationsorte',
+        'Linux-System fuer Fernverwaltung und Diagnose',
+        'Flexible Datenprotokolle (MQTT, E-Mail, HTTPS) mit umfangreichen Zeitplaenen',
+        'Manipulationsschutz gegen Oeffnen und Demontage',
+        'Robustes Gehaeuse fuer raue Einsatzbedingungen',
+      ],
+    },
+    'exio-wmbus-repeater': {
+      slug: 'exio-wmbus-repeater',
+      heading: 'Infrastrukturprodukte im Ueberblick',
+      title: 'EXIO WM-Bus Repeater',
+      intro:
+        'Netzbetriebenes Geraet zur Reichweiten- und Zuverlaessigkeitssteigerung in Wireless-M-Bus-Systemen.',
+      description: [
+        'EXIO WM-Bus Repeater steigert die Effizienz von Telemetriesystemen nachhaltig und sorgt fuer sichere, hochwertige Kommunikation.',
+      ],
+      featuresHeading: 'Wichtigste Merkmale',
+      features: [
+        'Stabile 230-V-Stromversorgung fuer unterbrechungsfreien Betrieb',
+        'Hohe 868-MHz-Empfindlichkeit und AES-128-Verschluesselung',
+        'Unterstuetzt mehrere Wireless-M-Bus-Modi (S, T, C+T usw.)',
+        'Kompatibel mit einer Vielzahl von Messgeraeten',
+        'Multi-Hop-Repeaterketten fuer maximale Reichweite',
+        'Einfache Montage und vandalismussicheres Gehaeuse',
+        'Firmware-Updates lokal oder remote via USB',
+        'Stabile Uebertragung ohne Stoerungen oder Signalverlust',
+      ],
+    },
+  },
 
 
   footer: {
