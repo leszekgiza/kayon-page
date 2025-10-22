@@ -512,7 +512,7 @@ const pl: ContentStructure = {
     {
       slug: 'systemy-i-platformy',
       title: 'Systemy i platformy',
-      description: 'Rozwiazania All in Kayon do zarzadzania danymi i automatyzacji pracy.',
+      description: 'Każdy klient znajdzie tu rozwiązanie idealnie dopasowane do swojego sposobu pracy. To paleta rozwiązań od prostych systemów walk-by po inteligentną sieć MESH. Nasze systemy oferują coraz prostszy, bezpieczniejszy i coraz tańszy dostęp do danych pomiarowych.',
       items: ['walk-by', 'star-fix', 'mesh'],
     },
     {
@@ -914,58 +914,67 @@ const pl: ContentStructure = {
 
     'walk-by': {
       slug: 'walk-by',
-      heading: 'Opis poszczególnych systemow',
+      heading: 'Opis poszczególnych systemów',
       title: 'Walk-by',
       intro:
-        'Szybki odczyt zdalny bez bledow i przestojow. System oparty na urzadzeniu Range ONE i aplikacji Route ONE automatyzuje pobor danych i diagnostyke urzadzen w terenie.',
+        'Szybki odczyt zdalny, bez błędów, bez przestojów.',
       description: [
+        'Praca w terenie staje się prosta, jak nigdy dotąd. Przesył danych jest natychmiastowy i w pełni automatyczny, a dostęp do nich w systemie jest natychmiastowy.',
+        'Rozwiązanie pozwala szybko i bezbłędnie odczytywać dane z wodomierzy, ciepłomierzy, podzielników kosztów ogrzewania, gazomierzy i liczników prąd - bez fizycznego dostępu do nich.',
+        'System oparty na urządzeniu Range ONE i aplikacji Route ONE umożliwia także bieżącą diagnostykę i serwis różnego typu urządzeń pomiarowych.',
       ],
       featuresHeading: 'Najważniejsze cechy',
       features: [
-        'Automatyczny odczyt wodomierzy, cieplomierzy, podzielnikow oraz licznikow gazu i energii',
-        'Natychmiastowe przesylanie danych do systemu bez potrzeby fizycznego dostepu',
-        'Wbudowana diagnostyka i serwis modulow pomiarowych w terenie',
-        'Integracja z platforma Route ONE dla raportow i alarmow',
-        'Odczyt nawet w trudno dostepnych miejscach dzieki 868 MHz',
-        'Tryb pracy walk-by redukujacy czas obslugi i koszty wizyt',
+        'Automatyczny odczyt wodomierzy, ciepłomierzy, podzielników oraz liczników gazu i energii',
+        'Natychmiastowe przesyłanie danych do systemu bez potrzeby fizycznego dostępu',
+        'Wbudowana diagnostyka i serwis modułów pomiarowych w terenie',
+        'Integracja z platformą Route ONE dla raportów i alarmów',
+        'Odczyt nawet w trudno dostępnych miejscach dzięki 868 MHz',
+        'Tryb pracy walk-by redukujący czas obsługi i koszty wizyt',
       ],
     },
 
     'star-fix': {
       slug: 'star-fix',
-      heading: 'Opis poszczególnych systemow',
+      heading: 'Opis poszczególnych systemów',
       title: 'Star/Fix',
       intro:
-        'Staly nadzor i pelna kontrola nad mediami w topologii gwiazdy. Liczniki lacza sie z koncentratorem bezposrednio lub przez repeatery, co zapewnia ciagla obserwacje sieci.',
+        'Stały nadzór i pełna kontrola – jedna sieć, która odczytuje wszystko.',
       description: [
+        'Rozwiązanie działa w oparciu o topologię gwiazdy, w której urządzenia pomiarowe komunikują się z koncentratorem bezpośrednio lub przez repeatery zwiększające zasięg sieci.',
+        'System automatyzuje odczyty oraz zapewnia stały nadzór nad mediami i natychmiastową reakcję na awarie lub nieprawidłowości.',
+        'Fix obsługuje różne typy liczników zgodnych ze standardem Wireless M-Bus lub OMS, maksymalnie ułatwiając zarządzanie i bilansowanie zużycia poszczególnych mediów.',
       ],
       featuresHeading: 'Najważniejsze cechy',
       features: [
-        'Architektura gwiazdy z modulami wM-Bus lub OMS',
-        'Automatyczne odczyty i bilansowanie zużycia mediow',
-        'Szybka reakcja na alarmy i anomalie dzieki zdalnym powiadomieniom',
-        'Skalowanie zasiegu poprzez repeatery ECLIPSE lub EXIO',
-        'Centralna konfiguracja parametrow i harmonogramow odczytu',
-        'Ochrona danych poprzez szyfrowanie i kontrola dostepu',
+        'Architektura gwiazdy z modułami wM-Bus lub OMS',
+        'Automatyczne odczyty i bilansowanie zużycia mediów',
+        'Szybka reakcja na alarmy i anomalie dzięki zdalnym powiadomieniom',
+        'Skalowanie zasięgu poprzez repeatery ECLIPSE lub EXIO',
+        'Centralna konfiguracja parametrów i harmonogramów odczytu',
+        'Ochrona danych poprzez szyfrowanie i kontrola dostępu',
       ],
     },
 
     'mesh': {
       slug: 'mesh',
-      heading: 'Opis poszczególnych systemow',
+      heading: 'Opis poszczególnych systemów',
       title: 'MESH',
       intro:
-        'Inteligentna, samokonfigurujaca sie siec pomiarowa gwarantujaca niezawodną komunikacje nawet w trudnych warunkach. Montaz sprowadza sie do wlaczenia koncentratora i uruchomienia sieci.',
+        'Automatyczny, niezawodny i najtańszy w utrzymaniu system odczytowy. Tak samodzielny, że można odnieść wrażenie, że myśli za użytkowników.',
       description: [
+        'Rozwiązanie jest inteligentną, samokonfigurującą i samonaprawiającą się siecią pomiarową, która zapewnia nieprzerwaną komunikację nawet w trudnych warunkach.',
+        'To innowacyjny system, który opiera się wyłącznie na jednym koncentratorze danych – montaż sprowadza się do kliknięcia „GO", a dane automatycznie trafiają do chmury.',
+        'MESH to najtańszy i najbardziej niezawodny sposób budowy infrastruktury zdalnego monitoringu mediów, gwarantujący pełną kontrolę i minimalne koszty utrzymania.',
       ],
       featuresHeading: 'Najważniejsze cechy',
       features: [
-        'Samonaprawiajaca topologia mesh zapewniajaca ciaglosc transmisji',
-        'Jeden koncentrator danych i automatyczne wysylanie do chmury',
-        'Minimalne koszty utrzymania dzieki braku recznych interwencji',
-        'Automatyczne wykrywanie nowych urzadzen i aktualizacja trasy danych',
-        'Skalowanie do tysiecy licznikow bez utraty jakosci uslugi',
-        'Rozbudowane raporty, alarmy i zarzadzanie zasobami w czasie rzeczywistym',
+        'Samonaprawiająca topologia mesh zapewniająca ciągłość transmisji',
+        'Jeden koncentrator danych i automatyczne wysyłanie do chmury',
+        'Minimalne koszty utrzymania dzięki braku ręcznych interwencji',
+        'Automatyczne wykrywanie nowych urządzeń i aktualizacja trasy danych',
+        'Skalowanie do tysięcy liczników bez utraty jakości usługi',
+        'Rozbudowane raporty, alarmy i zarządzanie zasobami w czasie rzeczywistym',
       ],
     },
 
