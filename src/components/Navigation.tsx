@@ -33,6 +33,16 @@ const Navigation = () => {
 
           <div className="hidden items-center gap-2 md:flex">
             <a
+              href="/#kontakt"
+              aria-label="Kontakt"
+              title="Kontakt"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/55 bg-transparent text-white transition-colors duration-200 hover:border-white"
+            >
+              <span className="material-symbols-rounded" style={{ fontSize: '24px' }}>
+                chat_bubble
+              </span>
+            </a>
+            <a
               href="https://openmetering.co/"
               target="_blank"
               rel="noopener noreferrer"
