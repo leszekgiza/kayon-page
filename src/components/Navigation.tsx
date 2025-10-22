@@ -32,7 +32,7 @@ const Navigation = () => {
           </div>
 
           <div className="hidden items-center gap-2 md:flex">
-            <a
+            <Link
               href="/#kontakt"
               aria-label="Kontakt"
               title="Kontakt"
@@ -41,7 +41,7 @@ const Navigation = () => {
               <span className="material-symbols-rounded" style={{ fontSize: '24px' }}>
                 chat_bubble
               </span>
-            </a>
+            </Link>
             <a
               href="https://openmetering.co/"
               target="_blank"
