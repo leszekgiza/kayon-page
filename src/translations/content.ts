@@ -998,9 +998,9 @@ const pl: ContentStructure = {
     heading: 'Skontaktuj się z nami',
     description:
       'Masz pytania dotyczące naszych produktów lub usług? Skontaktuj się z nami, a nasz zespół chętnie odpowie na wszystkie pytania.',
-    email: 'kontakt@kayon.eu',
-    phone: '+48 123 456 789',
-    address: ['KAYON Sp. z o.o.', 'ul. Przykładowa 123', '00-001 Warszawa', 'Polska'],
+    email: 'welcome@kayon.pl',
+    phone: '+48 577 570 814',
+    address: ['KAYON Sp. z o.o.', 'Aleja Zwycięstwa 96/98', '81-451 Gdynia', 'Polska'],
   },
 
   footer: {
@@ -1820,9 +1820,9 @@ const en: ContentStructure = {
     heading: "Get in touch",
     description:
       "Have questions about our products or services? Contact us, and our team will be happy to answer all your questions.",
-    email: "contact@kayon.eu",
-    phone: "+48 123 456 789",
-    address: ["KAYON Sp. z o.o.", "ul. Przykładowa 123", "00-001 Warsaw", "Poland"],
+    email: "welcome@kayon.pl",
+    phone: "+48 577 570 814",
+    address: ["KAYON Sp. z o.o.", "Aleja Zwycięstwa 96/98", "81-451 Gdynia", "Poland"],
   },
 
   footer: {
@@ -2642,9 +2642,9 @@ const de: ContentStructure = {
     heading: "Kontaktieren Sie uns",
     description:
       "Haben Sie Fragen zu unseren Produkten oder Dienstleistungen? Kontaktieren Sie uns, und unser Team beantwortet gerne alle Ihre Fragen.",
-    email: "kontakt@kayon.eu",
-    phone: "+48 123 456 789",
-    address: ["KAYON Sp. z o.o.", "ul. Przykładowa 123", "00-001 Warschau", "Polen"],
+    email: "welcome@kayon.pl",
+    phone: "+48 577 570 814",
+    address: ["KAYON Sp. z o.o.", "Aleja Zwycięstwa 96/98", "81-451 Gdynia", "Polen"],
   },
 
   footer: {
