@@ -5,6 +5,7 @@ import GreenSection from '@/components/GreenSection';
 import BenefitsSection from '@/components/BenefitsSection';
 import OfferSection from '@/components/OfferSection';
 import ProductsSection from '@/components/ProductsSection';
+import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <BenefitsSection />
         <OfferSection />
         <ProductsSection />
+        <ContactSection />
       </main>
       <Footer />
     </>

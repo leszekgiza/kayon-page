@@ -32,19 +32,8 @@ const Navigation = () => {
           </div>
 
           <div className="hidden items-center gap-2 md:flex">
-            <button
-              type="button"
-              aria-label={actions.presentation.ariaLabel}
-              title={actions.presentation.label}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 bg-black/45 text-white transition-colors duration-200 hover:bg-white/15"
-            >
-              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <rect x="5" y="5" width="14" height="14" rx="2" strokeWidth="1.6" />
-                <path d="M9.5 10.5h5v5h-5z" strokeWidth="1.6" />
-              </svg>
-            </button>
             <a
-              href="https://www.openmetering.co"
+              href="https://openmetering.co/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label={actions.login.ariaLabel}
@@ -110,19 +99,15 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <div className="grid grid-cols-3 gap-3">
-              <button
-                type="button"
-                className="flex h-12 items-center justify-center rounded-full border border-white/30 text-sm font-semibold hover:bg-white/10"
-              >
-                {mobileMenu.presentation}
-              </button>
-              <button
-                type="button"
+            <div className="grid grid-cols-2 gap-3">
+              <a
+                href="https://openmetering.co/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-12 items-center justify-center rounded-full border border-white/30 text-sm font-semibold hover:bg-white/10"
               >
                 {mobileMenu.login}
-              </button>
+              </a>
               <button
                 type="button"
                 className="flex h-12 items-center justify-center rounded-full bg-black text-sm font-semibold"

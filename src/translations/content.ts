@@ -151,6 +151,15 @@ export interface ProductDetailContent {
 
 export type ProductDetailsContent = Record<string, ProductDetailContent>;
 
+export interface ContactContent {
+  label: string;
+  heading: string;
+  description: string;
+  email: string;
+  phone: string;
+  address: string[];
+}
+
 export interface FooterContent {
   legalLinks: NavigationLink[];
   copyright: string;
@@ -168,6 +177,7 @@ export interface ContentStructure {
   productPage: ProductDetailsPageContent;
   productCategories: ProductCategoryContent[];
   productDetails: ProductDetailsContent;
+  contact: ContactContent;
   footer: FooterContent;
 }
 
@@ -980,6 +990,15 @@ const pl: ContentStructure = {
 
   },
 
+  contact: {
+    label: 'Kontakt',
+    heading: 'Skontaktuj się z nami',
+    description:
+      'Masz pytania dotyczące naszych produktów lub usług? Skontaktuj się z nami, a nasz zespół chętnie odpowie na wszystkie pytania.',
+    email: 'kontakt@kayon.eu',
+    phone: '+48 123 456 789',
+    address: ['KAYON Sp. z o.o.', 'ul. Przykładowa 123', '00-001 Warszawa', 'Polska'],
+  },
 
   footer: {
     legalLinks: [
@@ -1790,6 +1809,16 @@ const en: ContentStructure = {
 
   },
 
+  contact: {
+    label: "Contact",
+    heading: "Get in touch",
+    description:
+      "Have questions about our products or services? Contact us, and our team will be happy to answer all your questions.",
+    email: "contact@kayon.eu",
+    phone: "+48 123 456 789",
+    address: ["KAYON Sp. z o.o.", "ul. Przykładowa 123", "00-001 Warsaw", "Poland"],
+  },
+
   footer: {
     legalLinks: [
       { label: 'Privacy policy', href: '#' },
@@ -2597,6 +2626,16 @@ const de: ContentStructure = {
       ],
     },
 
+  },
+
+  contact: {
+    label: "Kontakt",
+    heading: "Kontaktieren Sie uns",
+    description:
+      "Haben Sie Fragen zu unseren Produkten oder Dienstleistungen? Kontaktieren Sie uns, und unser Team beantwortet gerne alle Ihre Fragen.",
+    email: "kontakt@kayon.eu",
+    phone: "+48 123 456 789",
+    address: ["KAYON Sp. z o.o.", "ul. Przykładowa 123", "00-001 Warschau", "Polen"],
   },
 
   footer: {
