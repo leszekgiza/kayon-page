@@ -1015,8 +1015,6 @@ const pl: ContentStructure = {
       'Masz pytania dotyczące naszych produktów lub usług? Skontaktuj się z nami, a nasz zespół chętnie odpowie na wszystkie pytania.',
     cards: [
       { title: 'Zapytania ogólne', value: 'welcome@kayon.pl', type: 'email' },
-      { title: 'Współpraca', value: 'joinus@kayon.pl', type: 'email' },
-      { title: 'Biznes', value: 'biz@kayon.pl', type: 'email' },
       { title: 'Adres', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98\n81-451 Gdynia\nPolska', type: 'address' },
       { title: 'Telefon', value: '+48 577 570 814', type: 'phone' },
     ],
@@ -1852,8 +1850,6 @@ const en: ContentStructure = {
       "Have questions about our products or services? Contact us, and our team will be happy to answer all your questions.",
     cards: [
       { title: 'General inquiries', value: 'welcome@kayon.pl', type: 'email' },
-      { title: 'Careers', value: 'joinus@kayon.pl', type: 'email' },
-      { title: 'Business', value: 'biz@kayon.pl', type: 'email' },
       { title: 'Address', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98\n81-451 Gdynia\nPoland', type: 'address' },
       { title: 'Phone', value: '+48 577 570 814', type: 'phone' },
     ],
@@ -2689,8 +2685,6 @@ const de: ContentStructure = {
       "Haben Sie Fragen zu unseren Produkten oder Dienstleistungen? Kontaktieren Sie uns, und unser Team beantwortet gerne alle Ihre Fragen.",
     cards: [
       { title: 'Allgemeine Anfragen', value: 'welcome@kayon.pl', type: 'email' },
-      { title: 'Karriere', value: 'joinus@kayon.pl', type: 'email' },
-      { title: 'Geschäftlich', value: 'biz@kayon.pl', type: 'email' },
       { title: 'Adresse', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98\n81-451 Gdynia\nPolen', type: 'address' },
       { title: 'Telefon', value: '+48 577 570 814', type: 'phone' },
     ],
