@@ -43,8 +43,10 @@ const Navigation = () => {
                 <path d="M9.5 10.5h5v5h-5z" strokeWidth="1.6" />
               </svg>
             </button>
-            <button
-              type="button"
+            <a
+              href="https://www.openmetering.co"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={actions.login.ariaLabel}
               title={actions.login.label}
               className="flex h-11 w-11 items-center justify-center rounded-full border border-white/55 bg-transparent text-white transition-colors duration-200 hover:border-white"
@@ -59,7 +61,7 @@ const Navigation = () => {
                 <path d="M6 12h9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M12.5 9.5 15 12l-2.5 2.5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </button>
+            </a>
             <div className="rounded-full border border-white/35 bg-black/45 px-1 py-1">
               <LanguageSwitcher variant="inline" />
             </div>

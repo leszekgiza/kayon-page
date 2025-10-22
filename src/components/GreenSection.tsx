@@ -10,6 +10,7 @@ const GreenSection = () => {
   const baseLength = baseCards.length;
   const extendedCards = useMemo(() => [...baseCards, ...baseCards, ...baseCards], [baseCards]);
   const extendedLength = extendedCards.length;
+  const GAP_SIZE = 24; // gap-6 in pixels
 
   const [visibleCount, setVisibleCount] = useState(1);
   const [index, setIndex] = useState(baseLength);
@@ -57,13 +58,19 @@ const GreenSection = () => {
 
   const trackStyle = useMemo(() => {
     const translatePercent = (index * 100) / extendedLength;
+    const totalGaps = (extendedLength - 1) * GAP_SIZE;
     return {
-      width: `${(extendedLength * 100) / visibleCount}%`,
+      width: `calc(${(extendedLength * 100) / visibleCount}% + ${totalGaps}px)`,
       transform: `translateX(-${translatePercent}%)`,
     };
   }, [index, extendedLength, visibleCount]);
 
-  const cardStyle = useMemo(() => ({ width: `${100 / extendedLength}%` }), [extendedLength]);
+  const cardStyle = useMemo(() => {
+    const totalGaps = (extendedLength - 1) * GAP_SIZE;
+    return {
+      width: `calc((100% - ${totalGaps}px) / ${extendedLength})`
+    };
+  }, [extendedLength]);
 
   const activeDot = useMemo(() => {
     const normalized = (index - baseLength) % baseLength;
@@ -78,7 +85,7 @@ const GreenSection = () => {
     clients.dotAriaTemplate.replace('%d', String(dotIndex + 1));
 
   return (
-    <section id="oferta" className="relative overflow-hidden bg-gradient-to-r from-[#2F8E5C] via-[#2F8E5C] to-[#4ABF73] py-24 text-white">
+    <section id="nasi-klienci" className="relative overflow-hidden bg-gradient-to-r from-[#2F8E5C] via-[#2F8E5C] to-[#4ABF73] py-24 text-white">
       <div className="absolute inset-0 opacity-30">
         <div className="mx-auto h-full w-full max-w-5xl rounded-full border border-white/20 blur-3xl" />
       </div>

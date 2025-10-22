@@ -16,9 +16,11 @@ const ProductsSection = () => {
               {products.label}
             </div>
             <h2 className="text-3xl leading-tight md:text-[40px]">{products.heading}</h2>
-            <p className="max-w-lg text-sm leading-relaxed text-white/70 md:text-base">
-              {products.description}
-            </p>
+            <div className="max-w-lg rounded-[30px] border-2 border-white/30 px-8 py-8 md:px-10 md:py-10">
+              <p className="text-sm leading-relaxed text-white/90 md:text-base">
+                {products.description}
+              </p>
+            </div>
             <p className="text-xs uppercase tracking-wide text-white/50">{products.footnote}</p>
           </div>
           <div className="space-y-6">

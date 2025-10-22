@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useContent } from '@/hooks/useContent';
 
@@ -34,37 +35,54 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
           {items.map((detail) => (
             <article
               key={detail.slug}
-              className="space-y-8 rounded-[36px] border border-neutral-gray-light/70 bg-neutral-white px-8 py-10 shadow-[0_24px_60px_-35px_rgba(16,16,16,0.35)] md:px-12 md:py-12"
+              className="rounded-[36px] border border-neutral-gray-light/70 bg-neutral-white px-8 py-10 shadow-[0_24px_60px_-35px_rgba(16,16,16,0.35)] md:px-12 md:py-12"
             >
-              <div className="space-y-4">
-                <h2 className="text-2xl font-semibold text-primary md:text-[30px]">{detail.title}</h2>
-                <p className="text-base text-primary-lighter md:text-lg">{detail.intro}</p>
-                {detail.description.map((paragraph) => (
-                  <p key={paragraph} className="text-sm text-primary-lighter md:text-base">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
+              <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,400px)]">
+                <div className="space-y-8">
+                  <div className="space-y-4">
+                    <h2 className="text-2xl font-semibold text-primary md:text-[30px]">{detail.title}</h2>
+                    <p className="text-base text-primary-lighter md:text-lg">{detail.intro}</p>
+                    {detail.description.map((paragraph) => (
+                      <p key={paragraph} className="text-sm text-primary-lighter md:text-base">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
 
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-primary md:text-xl">{detail.featuresHeading}</h3>
-                <ul className="space-y-3 text-sm text-primary-lighter md:text-base">
-                  {detail.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
-                      <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-accent-green" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-semibold text-primary md:text-xl">{detail.featuresHeading}</h3>
+                    <ul className="space-y-3 text-sm text-primary-lighter md:text-base">
+                      {detail.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-3">
+                          <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-accent-green" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-              <div>
-                <Link
-                  href={`/produkty/${detail.slug}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-primary/30 px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                >
-                  {detail.title}
-                </Link>
+                  <div>
+                    <Link
+                      href={`/produkty/${detail.slug}`}
+                      className="inline-flex items-center gap-2 rounded-full border border-primary/30 px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    >
+                      {detail.title}
+                    </Link>
+                  </div>
+                </div>
+
+                {detail.image && (
+                  <div className="relative min-h-[280px] overflow-hidden rounded-[28px] border border-neutral-gray-light/60 bg-neutral-gray-light/40 shadow-[0_16px_40px_-25px_rgba(16,16,16,0.25)] sm:min-h-[320px] lg:min-h-[360px]">
+                    <Image
+                      src={detail.image.src}
+                      alt={detail.image.alt}
+                      fill
+                      sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 90vw"
+                      className="object-contain p-6 lg:p-8"
+                      priority={false}
+                    />
+                  </div>
+                )}
               </div>
             </article>
           ))}

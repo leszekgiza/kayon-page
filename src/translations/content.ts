@@ -142,6 +142,7 @@ export interface ProductDetailContent {
   description: string[];
   features: string[];
   featuresHeading: string;
+  downloads?: ProductDownloadContent[];
   image?: {
     src: string;
     alt: string;
@@ -174,7 +175,7 @@ const pl: ContentStructure = {
   navigation: {
     homeAriaLabel: 'KAYON strona główna',
     primaryLinks: [
-      { label: 'Dla kogo?', href: '#dla-kogo' },
+      { label: 'Dla kogo?', href: '#nasi-klienci' },
       { label: 'Oferta', href: '#oferta' },
       { label: 'Produkty', href: '#produkty' },
     ],
@@ -193,7 +194,7 @@ const pl: ContentStructure = {
   menuOverlay: {
     closeAria: 'Zamknij menu',
     items: [
-      { label: 'Dla kogo?', href: '#dla-kogo' },
+      { label: 'Dla kogo?', href: '#nasi-klienci' },
       { label: 'Oferta', href: '#oferta' },
       { label: 'Produkty', href: '#produkty' },
       { label: 'Kontakt', href: '#kontakt' },
@@ -366,14 +367,14 @@ const pl: ContentStructure = {
     label: 'Produkty',
     heading: 'Produkty wyznaczające nowy standard pomiarów',
     description:
-      'Dostarczamy narzędzia do oszczędności, automatyzacji i kontroli. Nasze produkty tworzą spójny system ALL in KAYON, w którym każdy element współpracuje z pozostałymi.',
+      'Oferujemy nie tylko technologię — oferujemy realne narzędzia do oszczędności, automatyzacji i kontroli. Nasze produkty tworzą spójny system ALL in KAYON, w którym każdy element współpracuje z pozostałymi.',
     footnote:
       'Produkcja wszystkich urządzeń Kayon odbywa się w 100% na terenie Unii Europejskiej, zgodnie z normami CE, RED i EMC.',
     groups: [
       {
         title: 'Wodomierze',
         slug: 'wodomierze',
-        items: ['Wehrle', 'Maddalena', 'Wasser-Geraete', 'GWF Sonico Nano', 'Apator JS Smart+'],
+        items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'GWF Sonico Nano', 'Apator JS Smart+'],
       },
       {
         title: 'Ciepłomierze',
@@ -386,6 +387,11 @@ const pl: ContentStructure = {
         items: ['Modularis ONE', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
       },
       {
+        title: 'Infrastruktura',
+        slug: 'infrastruktura',
+        items: ['Range One', 'Koncentrator AC', 'Koncentrator BAT', 'Repeater'],
+      },
+      {
         title: 'Systemy i platformy',
         slug: 'systemy-i-platformy',
         items: [
@@ -394,11 +400,6 @@ const pl: ContentStructure = {
           'Portal dystrybutora',
           'Dashboard technologiczny',
         ],
-      },
-      {
-        title: 'Infrastruktura',
-        slug: 'infrastruktura',
-        items: ['Range One', 'Koncentrator AC', 'Koncentrator BAT', 'Repeater'],
       },
     ],
     ctaLabel: 'Dowiedz się więcej',
@@ -414,7 +415,7 @@ const pl: ContentStructure = {
         features: [
           'Wodomierz Wehrle - ETK(W)-EAX',
           'Wodomierz Maddalena - SJ PLUS-EVO',
-          'Wodomierz Wasser-Geraete - ECO',
+          'Wodomierz Wasser-Geräte - ECO',
           'Wodomierz GWF - Sonico Nano',
           'Wodomierz Apator Powogaz - JS Smart+',
         ],
@@ -455,21 +456,6 @@ const pl: ContentStructure = {
         readMoreHref: '/produkty/moduly-komunikacyjne',
       },
       {
-        title: 'Systemy i platformy',
-        subtitle: 'Zarzadzanie danymi',
-        description:
-          'Oprogramowanie KAYON wspierajace dystrybutorow, administratorow i uzytkownikow.',
-        features: [
-          'Aplikacja mobilna Route ONE',
-          'Platforma OpenMetering (2WayCom, FOTA)',
-          'Portal dystrybutora',
-          'Dashboard technologiczny',
-        ],
-        downloads: [],
-        readMoreLabel: 'Sprawdz rozwiazania',
-        readMoreHref: '/produkty/systemy-i-platformy',
-      },
-      {
         title: 'Infrastruktura',
         subtitle: 'Odczyt terenowy i sieciowy',
         description:
@@ -486,6 +472,21 @@ const pl: ContentStructure = {
         slug: 'range-one',
         readMoreHref: '/produkty/infrastruktura',
       },
+      {
+        title: 'Systemy i platformy',
+        subtitle: 'Zarzadzanie danymi',
+        description:
+          'Oprogramowanie KAYON wspierajace dystrybutorow, administratorow i uzytkownikow.',
+        features: [
+          'Aplikacja mobilna Route ONE',
+          'Platforma OpenMetering (2WayCom, FOTA)',
+          'Portal dystrybutora',
+          'Dashboard technologiczny',
+        ],
+        downloads: [],
+        readMoreLabel: 'Sprawdz rozwiazania',
+        readMoreHref: '/produkty/systemy-i-platformy',
+      },
     ],
   },
 
@@ -493,7 +494,7 @@ const pl: ContentStructure = {
     {
       slug: 'wodomierze',
       title: 'Wodomierze',
-      description: 'Kompletne portfolio wodomierzy przygotowanych do pracy w systemach zdalnego odczytu Kayon.',
+      description: 'Oferujemy wyłącznie urządzenia najwyższej jakości: niemieckich producentów Wehrle i Wasser - Geräte, szwajcarskiego GWF oraz wiodącej polskiej marki Apator Powogaz. Dla pełnego bezpieczeństwa i wygody oferujemy też niezawodny system odczytowy All in Kayon, który integruje wodomierze i zwiększa ich funkcjonalność.',
       items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'gwf-sonico-nano', 'apator-js-smart-plus'],
     },
     {
@@ -528,7 +529,7 @@ const pl: ContentStructure = {
 
     'modularis-one': {
       slug: 'modularis-one',
-      heading: 'Opis poszczegolnych modulow komunikacyjnych',
+      heading: 'Opis poszczególnych modulow komunikacyjnych',
       title: 'Modularis ONE',
       intro:
         'Kompaktowy modul radiowy 868 MHz przeznaczony do wodomierzy Modularis, umozliwiajacy odczyt i zdalna konfiguracje w systemach walk-by oraz AMR.',
@@ -538,7 +539,7 @@ const pl: ContentStructure = {
       },
       description: [
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Dwukierunkowa komunikacja z kasowaniem alarmow i konfiguracja zdalna',
         'Rownolegla transmisja telegramow walk-by i stacjonarnych (AMR)',
@@ -551,7 +552,7 @@ const pl: ContentStructure = {
 
     'wmbus-smart-plus': {
       slug: 'wmbus-smart-plus',
-      heading: 'Opis poszczegolnych modulow komunikacyjnych',
+      heading: 'Opis poszczególnych modulow komunikacyjnych',
       title: 'wMBus Smart+',
       intro:
         'Radiowy modul nakladkowy dla wodomierzy i cieplomierzy serii Smart+, ktory zapewnia natychmiastowy dostep do danych w standardzie Wireless M-Bus.',
@@ -561,10 +562,10 @@ const pl: ContentStructure = {
       },
       description: [
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Transmisja w pasmach S i T zgodnie z OMS',
-        'Rownolegla wysylka logow zuzycia oraz alarmow zdalnych',
+        'Rownolegla wysylka logow zużycia oraz alarmow zdalnych',
         'Szyfrowanie AES 128 dla bezpiecznego przesylania danych',
         'Zdalna konfiguracja przez Range ONE lub koncentratory ECLIPSE',
         'Bateria o typowej zywotnosci do 12 lat',
@@ -574,7 +575,7 @@ const pl: ContentStructure = {
 
     'mbus-smart-plus': {
       slug: 'mbus-smart-plus',
-      heading: 'Opis poszczegolnych modulow komunikacyjnych',
+      heading: 'Opis poszczególnych modulow komunikacyjnych',
       title: 'MBus Smart+',
       intro:
         'Modul przewodowy M-Bus umozliwiajacy pelna integracje licznikow Smart+ z sieciami automatyki budynkowej i systemami BMS.',
@@ -584,7 +585,7 @@ const pl: ContentStructure = {
       },
       description: [
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Zasilanie z magistrali M-Bus bez dodatkowych baterii',
         'Adresowanie wielourzadzeniowe z mozliwoscia kaskadowego laczenia',
@@ -597,17 +598,17 @@ const pl: ContentStructure = {
 
     'wmbus-microclima': {
       slug: 'wmbus-microclima',
-      heading: 'Opis poszczegolnych modulow komunikacyjnych',
+      heading: 'Opis poszczególnych modulow komunikacyjnych',
       title: 'wMBus MicroClima',
       intro:
-        'Nakladka radiowa dla cieplomierzy MicroClima, dedykowana do zastosowan mieszkaniowych z czestymi odczytami zdalnymi.',
+        'Nakladka radiowa dla cieplomierzy MicroClima, dedykowana do zastosowań mieszkaniowych z czestymi odczytami zdalnymi.',
       image: {
         src: '/images/products/moduly-komunikacyjne/wmbus-microclima.png',
         alt: 'Modul radiowy wMBus MicroClima',
       },
       description: [
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Bezprzewodowa komunikacja 868 MHz zgodna z OMS',
         'Wbudowane profile billingowe z pamiecia do 24 miesiecy',
@@ -620,7 +621,7 @@ const pl: ContentStructure = {
 
     'wmbus-rc12': {
       slug: 'wmbus-rc12',
-      heading: 'Opis poszczegolnych modulow komunikacyjnych',
+      heading: 'Opis poszczególnych modulow komunikacyjnych',
       title: 'wMBus RC12',
       intro:
         'Modul komunikacyjny dla cieplomierzy RC12, przygotowany do pracy w sieciach walk-by oraz instalacjach stacjonarnych.',
@@ -630,7 +631,7 @@ const pl: ContentStructure = {
       },
       description: [
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Nadawanie ramek w trybach T i C-T zgodnie z OMS',
         'Obsluga funkcji multi-hop przez repeatery EXIO/ECLIPSE',
@@ -643,53 +644,53 @@ const pl: ContentStructure = {
 
     'wehrle-etkw-eax': {
       slug: 'wehrle-etkw-eax',
-      heading: 'Opis poszczegolnych wodomierzy',
+      heading: 'Opis poszczególnych wodomierzy',
       title: 'Wehrle ETK(W)-EAX',
       intro:
-        'Wodomierz jednostrumieniowy Wehrle to precyzyjne i niezawodne urzadzenie do pomiaru zuzycia wody w instalacjach domowych i komercyjnych, zaprojektowane z mysla o dlugotrwala prace w trudnych warunkach.',
+        'Wodomierz jednostrumieniowy Wehrle to precyzyjne i niezawodne urządzenie do pomiaru zużycia wody w instalacjach domowych i komercyjnych, zaprojektowane z myślą o długotrwałą prace w trudnych warunkach.',
       image: {
         src: '/images/products/wodomierze/wehrle-etkw-eax.png',
         alt: 'Wodomierz Wehrle ETK(W)-EAX',
       },
       description: [
-        'Wodomierz ETK(W)-EAX jest w pelni kompatybilny z modulem komunikacyjnym Modularis ONE.',
+        'Wodomierz ETK(W)-EAX jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.',
         'Pobierz dokumentacje: https://wehrle.de/en/metering/water/single-jet-dry-meters/single-jet-dry-modularis/#',
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Gotowy do integracji z dowolnym systemem AMR',
-        'Zakres temperatur: do 50C (zimna woda) oraz do 90C (ciepla woda)',
-        'Maksymalne natezenie przeplywu (Q3): 2,5-4 m3/h',
-        'Wysoka klasa dokladnosci pomiaru MID: R250 poziomo, R80 pionowo',
-        'Obracane w zakresie 360 liczydlo',
-        'Obudowa z niklowanego mosiadzu',
-        'Klasa szczelnosci IP64',
-        'Wytrzymalosc do 1,6 MPa',
+        'Zakres temperatur: do 50°C (zimna woda) oraz do 90°C (ciepla woda)',
+        'Maksymalne natężenie przepływu (Q3): 2,5-4 m3/h',
+        'Wysoka klasa dokładności pomiaru MID: R250 poziomo, R80 pionowo',
+        'Obracane w zakresie 360 liczydło',
+        'Obudowa z niklowanego mosiądzu',
+        'Klasa szczelności IP64',
+        'Wytrzymałość do 1,6 MPa',
       ],
     },
 
     'maddalena-sj-plus-evo': {
       slug: 'maddalena-sj-plus-evo',
-      heading: 'Opis poszczegolnych wodomierzy',
+      heading: 'Opis poszczególnych wodomierzy',
       title: 'Maddalena SJ PLUS-EVO',
       intro:
-        'Wodomierz SJ PLUS-EVO to nowoczesne rozwiazanie do zastosowan domowych, charakteryzujace sie najwyzsza jakoscia wykonania i niezawodna precyzja pomiarowa.',
+        'Wodomierz SJ PLUS-EVO to nowoczesne rozwiązanie do zastosowań domowych, charakteryzujące sie najwyższą jakością wykonania i niezawodną precyzja pomiarowa.',
       image: {
         src: '/images/products/wodomierze/maddalena-sj-plus-evo.png',
         alt: 'Wodomierz Maddalena SJ PLUS-EVO',
       },
       description: [
-        'Wodomierz SJ PLUS-EVO jest w pelni kompatybilny z modulem komunikacyjnym Modularis ONE.',
+        'Wodomierz SJ PLUS-EVO jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.',
         'Pobierz dokumentacje: https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnica-sjplus-en-v4.pdf',
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Gotowy do integracji z nowoczesnymi systemami zdalnego odczytu (przewodowe i radiowe moduly komunikacyjne)',
-        'Zakres temperatur: do 90C (ciepla woda)',
-        'Maksymalne natezenie przeplywu (Q3): 1,6 m3/h dla DN15, 4,0 m3/h dla DN20',
-        'Wysoka klasa dokladnosci pomiaru MID: R maks. 160',
+        'Zakres temperatur: do 90°C (ciepla woda)',
+        'Maksymalne natężenie przepływu (Q3): 1,6 m3/h dla DN15, 4,0 m3/h dla DN20',
+        'Wysoka klasa dokładności pomiaru MID: R maks. 160',
         'Mozliwosc instalacji w roznych pozycjach',
-        'Obracane o 360 liczydlo',
+        'Obracane o 360 liczydło',
         'Wysoka odpornosc na dzialanie pola magnetycznego',
         'Dostepny z certyfikatem sanitarnym',
       ],
@@ -697,48 +698,48 @@ const pl: ContentStructure = {
 
     'wasser-geraete-eco': {
       slug: 'wasser-geraete-eco',
-      heading: 'Opis poszczegolnych wodomierzy',
-      title: 'Wasser-Geraete ECO',
+      heading: 'Opis poszczególnych wodomierzy',
+      title: 'Wasser-Geräte ECO',
       intro:
-        'Wodomierz ECO od Wasser-Geraete zapewnia niezawodny pomiar zarowno cieplej, jak i zimnej wody (do 90C) i jest idealnym rozwiazaniem do zastosowan mieszkaniowych i komercyjnych.',
+        'Wodomierz ECO od Wasser-Geräte zapewnia niezawodny pomiar zarówno ciepłej, jak i zimnej wody (do 90C) i jest idealnym rozwiązaniem do zastosowań mieszkaniowych i komercyjnych.',
       image: {
         src: '/images/products/wodomierze/wasser-geraete-eco.png',
-        alt: 'Wodomierz Wasser-Geraete ECO',
+        alt: 'Wodomierz Wasser-Geräte ECO',
       },
       description: [
-        'Wodomierz ECO jest w pelni kompatybilny z modulem komunikacyjnym Modularis ONE.',
+        'Wodomierz ECO jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.',
         'Pobierz dokumentacje: https://www.wasser-geraete.de/products/wohnungswasserzaehlereco/#',
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Gotowy do integracji z nakladka radiowa, M-Bus, impulsowa',
-        'Zakres temperatur: do 50C (zimna woda), do 90C (ciepla woda)',
-        'Maksymalne natezenie przeplywu (Q3): 2,5 m3/h',
-        'Wysoka trwalosc i odpornosc na uszkodzenia, konstrukcja odporna na kondensacje',
+        'Zakres temperatur: do 50°C (zimna woda), do 90°C (ciepla woda)',
+        'Maksymalne natężenie przepływu (Q3): 2,5 m3/h',
+        'Wysoka trwałość i odpornosc na uszkodzenia, konstrukcja odporna na kondensacje',
         'Opcje montazowe: poziomo/pionowo',
       ],
     },
 
     'gwf-sonico-nano': {
       slug: 'gwf-sonico-nano',
-      heading: 'Opis poszczegolnych wodomierzy',
+      heading: 'Opis poszczególnych wodomierzy',
       title: 'GWF Sonico Nano',
       intro:
-        'GWF Sonico Nano to zaawansowany, ultradzwiekowy wodomierz oferujacy najwyzsza precyzje i trwalosc w pomiarach zimnej wody w budownictwie mieszkaniowym oraz w przemysle.',
+        'GWF Sonico Nano to zaawansowany, ultradźwiękowy wodomierz oferujacy najwyższą precyzję i trwałość w pomiarach zimnej wody w budownictwie mieszkaniowym oraz w przemyśle.',
       image: {
         src: '/images/products/wodomierze/gwf-sonico-nano.png',
         alt: 'Wodomierz GWF Sonico Nano',
       },
       description: [
-        'Sonico Nano to idealne rozwiazanie dla wszystkich poszukujacych wysokiej precyzji oraz niezawodnosci pomiarow.',
+        'Sonico Nano to idealne rozwiązanie dla wszystkich poszukujacych wysokiej precyzji oraz niezawodnosci pomiarow.',
         'Pobierz dokumentacje: https://productfinder.gwf.ch/uploads_productfinder/downloads/Sonico_Brochure_Enlit-Version-2024_KIe10200_web_v04.pdf',
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Ultradzwiekowy wodomierz kompatybilny z zaawansowanymi systemami zdalnego odczytu (LoRaWAN, Wireless M-Bus)',
-        'Zakres temperatur: do 50C (zimna woda), do 90C (ciepla woda)',
-        'Maksymalne natezenie przeplywu (Q3): 1,6 / 2,5 / 4 m3/h (w zaleznosci od wybranego modelu DN)',
-        'Wysoka klasa dokladnosci pomiaru MID: R1000',
+        'Zakres temperatur: do 50°C (zimna woda), do 90°C (ciepla woda)',
+        'Maksymalne natężenie przepływu (Q3): 1,6 / 2,5 / 4 m3/h (w zaleznosci od wybranego modelu DN)',
+        'Wysoka klasa dokładności pomiaru MID: R1000',
         'Bardzo niskie straty cisnienia',
         'Prosta integracja z systemami automatyzacji',
         'Czas pracy na baterii do 20 lat',
@@ -747,36 +748,36 @@ const pl: ContentStructure = {
 
     'apator-js-smart-plus': {
       slug: 'apator-js-smart-plus',
-      heading: 'Opis poszczegolnych wodomierzy',
+      heading: 'Opis poszczególnych wodomierzy',
       title: 'Apator Powogaz JS Smart+',
       intro:
-        'Wodomierz Apator Powogaz JS Smart+ to sprawdzone i niezawodne rozwiazanie od polskiego lidera rynku wodomierzy. Zaprojektowane do pomiaru przeplywu wody w instalacjach domowych, cechujace sie wysoka trwaloscia i odpornoscia na warunki srodowiskowe.',
+        'Wodomierz Apator Powogaz JS Smart+ to sprawdzone i niezawodne rozwiązanie od polskiego lidera rynku wodomierzy. Zaprojektowane do pomiaru przepływu wody w instalacjach domowych, cechujace sie wysoka trwałością i odpornością na warunki środowiskowe.',
       image: {
         src: '/images/products/wodomierze/apator-js-smart-plus.png',
         alt: 'Wodomierz Apator Powogaz JS Smart+',
       },
       description: [
-        'Wodomierz JS Smart+ jest w pelni kompatybilny z modulami komunikacyjnymi MBus Smart+ i WMBus Smart+.',
+        'Wodomierz JS Smart+ jest w pełni kompatybilny z modulami komunikacyjnymi MBus Smart+ i WMBus Smart+.',
         'Pobierz dokumentacje: https://api.apator.com/uploads/oferta/woda-i-cieplo/wodomierze/smart-plus/smart-plus-karta-katalogowa.pdf',
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
-        'Gotowy do wspolpracy z roznymi nakladkami: Wireless M-Bus, impulsowa, M-Bus, indukcyjna',
-        'Zakres temperatur: do 50C (zimna woda), do 90C (ciepla woda)',
-        'Maksymalne natezenie przeplywu (Q3): 1,6 m3/h (DN15), 2,5 m3/h (DN20), 4,0 m3/h (DN20; zaleznie od modelu)',
-        'Wysoka klasa dokladnosci, zgodnosc z MID: R100 (H, DN15/20), R50 (V, DN15/20)',
+        'Gotowy do wspolpracy z różnymi nakładkami: Wireless M-Bus, impulsowa, M-Bus, indukcyjna',
+        'Zakres temperatur: do 50°C (zimna woda), do 90°C (ciepla woda)',
+        'Maksymalne natężenie przepływu (Q3): 1,6 m3/h (DN15), 2,5 m3/h (DN20), 4,0 m3/h (DN20; zaleznie od modelu)',
+        'Wysoka klasa dokładności, zgodnosc z MID: R100 (H, DN15/20), R50 (V, DN15/20)',
         'Obudowa odporna na dzialanie silnego zewnetrznego pola magnetycznego',
-        'Wytrzymalosc do 16 bar',
-        'Mozliwosc montazu: liczydlo na gorze lub z boku (poziomy/pionowy montaz)',
+        'Wytrzymałość do 16 bar',
+        'Mozliwosc montazu: liczydło na gorze lub z boku (poziomy/pionowy montaz)',
       ],
     },
 
     'engelmann-senso-star-e': {
       slug: 'engelmann-senso-star-e',
-      heading: 'Opis poszczegolnych cieplomierzy',
+      heading: 'Opis poszczególnych cieplomierzy',
       title: 'Engelmann Senso Star E',
       intro:
-        'Cieplomierz Engelmann Senso Star E to precyzyjne i trwale urzadzenie do pomiaru zuzycia ciepla w ukladach zamknietych, zapewniajace niezawodnosc i dokladnosc zgodna z norma EN 1434.',
+        'Cieplomierz Engelmann Senso Star E to precyzyjne i trwale urządzenie do pomiaru zużycia ciepla w ukladach zamknietych, zapewniajace niezawodnosc i dokladnosc zgodna z norma EN 1434.',
       image: {
         src: '/images/products/cieplomierze/engelmann-senso-star-e.png',
         alt: 'Cieplomierz Engelmann Senso Star E',
@@ -785,21 +786,21 @@ const pl: ContentStructure = {
         'Cieplomierz kompatybilny z nakladka komunikacyjna MicroClima WMBus.',
         'Pobierz dokumentacje: https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf',
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
-        'Mechaniczny, jednostrumieniowy przetwornik przeplywu z dynamicznym cyklem pomiarowym (2/60 s)',
+        'Mechaniczny, jednostrumieniowy przetwornik przepływu z dynamicznym cyklem pomiarowym (2/60 s)',
         'Zakres temperatur pracy od 15C do 90C, maksymalne cisnienie robocze do 16 bar',
         'Duzy, obrotowy i wielofunkcyjny wyswietlacz LCD z pamiecia wartosci miesiecznych',
-        'Konstrukcja odporna na zaklocenia elektromagnetyczne i z funkcja wykrywania przeplywu wstecznego',
+        'Konstrukcja odporna na zaklocenia elektromagnetyczne i z funkcja wykrywania przepływu wstecznego',
       ],
     },
 
     'maddalena-microclima-evo': {
       slug: 'maddalena-microclima-evo',
-      heading: 'Opis poszczegolnych cieplomierzy',
+      heading: 'Opis poszczególnych cieplomierzy',
       title: 'Maddalena MicroClima Evo',
       intro:
-        'Maddalena MicroClima Evo to nowoczesny, kompaktowy cieplomierz przeznaczony do precyzyjnego pomiaru zuzycia ciepla w systemach grzewczych, szczegolnie w budownictwie mieszkaniowym. Zapewnia trwalosc i wysoka dokladnosc.',
+        'Maddalena MicroClima Evo to nowoczesny, kompaktowy cieplomierz przeznaczony do precyzyjnego pomiaru zużycia ciepla w systemach grzewczych, szczegolnie w budownictwie mieszkaniowym. Zapewnia trwałość i wysoka dokladnosc.',
       image: {
         src: '/images/products/cieplomierze/maddalena-microclima-evo.png',
         alt: 'Cieplomierz Maddalena MicroClima Evo',
@@ -808,7 +809,7 @@ const pl: ContentStructure = {
         'Cieplomierz kompatybilny z nakladka komunikacyjna MicroClima WMBus.',
         'Pobierz dokumentacje: https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf',
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Jednostrumieniowy przeplywomierz dostosowany do pracy w szerokim zakresie temperatur',
         'Wysoka klasa metrologiczna i stabilnosc wskazan dzieki zaawansowanym rozwiazaniom technicznym',
@@ -818,10 +819,10 @@ const pl: ContentStructure = {
 
     'ploumeter-rc12': {
       slug: 'ploumeter-rc12',
-      heading: 'Opis poszczegolnych cieplomierzy',
+      heading: 'Opis poszczególnych cieplomierzy',
       title: 'Ploumeter RC12',
       intro:
-        'Cieplomierz RC12 Ploumeter to precyzyjne i niezawodne urzadzenie pomiarowe do zastosowan w instalacjach grzewczych, znane z solidnej konstrukcji i precyzji pomiaru. Idealny do systemow wymagajacych nowoczesnych rozwiazan komunikacyjnych.',
+        'Cieplomierz RC12 Ploumeter to precyzyjne i niezawodne urządzenie pomiarowe do zastosowań w instalacjach grzewczych, znane z solidnej konstrukcji i precyzji pomiaru. Idealny do systemow wymagajacych nowoczesnych rozwiazan komunikacyjnych.',
       image: {
         src: '/images/products/cieplomierze/ploumeter-rc12.png',
         alt: 'Cieplomierz Ploumeter RC12',
@@ -829,7 +830,7 @@ const pl: ContentStructure = {
       description: [
         'Cieplomierz kompatybilny z nakladka komunikacyjna RC12 WMBUS.',
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Jednostrumieniowy mechaniczny przeplywomierz',
         'Obsluga wysokich temperatur i cisnien roboczych zgodnie z normami branzowymi',
@@ -839,10 +840,10 @@ const pl: ContentStructure = {
 
     'range-one': {
       slug: 'range-one',
-      heading: 'Opis poszczegolnych elementow infrastruktury',
+      heading: 'Opis poszczególnych elementow infrastruktury',
       title: 'Range ONE',
       intro:
-        'Odbiornik radiowy z technologia Bluetooth zgodny ze standardami Wireless M-Bus (EN 13757) i OMS i obslugujacy rozne urzadzenia pomiarowe niezaleznie od producenta. To przenosne urzadzenie stworzone do szybkiego i wygodnego odczytu danych w terenie.',
+        'Odbiornik radiowy z technologia Bluetooth zgodny ze standardami Wireless M-Bus (EN 13757) i OMS i obslugujacy rozne urzadzenia pomiarowe niezaleznie od producenta. To przenosne urządzenie stworzone do szybkiego i wygodnego odczytu danych w terenie.',
       image: {
         src: '/images/products/infrastruktura/range-one.png',
         alt: 'Range ONE - odbiornik radiowy',
@@ -850,7 +851,7 @@ const pl: ContentStructure = {
       description: [
         'Range ONE to niezawodne narzedzie terenowe laczace mobilnosc, funkcjonalnosc i komfort pracy w jednym kompaktowym urzadzeniu.',
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Wysoka czulosc odbiornika 868 MHz umozliwiajaca odczyt w trudno dostepnych miejscach',
         'Lacznosc Bluetooth do bezprzewodowego przesylania danych na urzadzenia z Androidem (aplikacja Route ONE)',
@@ -863,7 +864,7 @@ const pl: ContentStructure = {
 
     'eclipse-wmbus-gateway': {
       slug: 'eclipse-wmbus-gateway',
-      heading: 'Opis poszczegolnych elementow infrastruktury',
+      heading: 'Opis poszczególnych elementow infrastruktury',
       title: 'ECLIPSE WM-Bus Gateway',
       intro:
         'Bateryjny koncentrator danych do zbierania informacji z licznikow wody, ciepla, gazu i energii. Zasilany bateria o zywotnosci do 11 lat, umozliwia szybkie wdrozenie i minimalne koszty instalacji w dowolnej lokalizacji.',
@@ -874,7 +875,7 @@ const pl: ContentStructure = {
       description: [
         'ECLIPSE WM-Bus Gateway to niezawodny, ekonomiczny koncentrator danych, oferujacy pelna kontrole nad systemami telemetrycznymi przy niskich kosztach eksploatacji.',
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Zdalne zarzadzanie, diagnostyka i elastyczne protokoly transmisji (HTTPS, MQTT, E-mail)',
         'Pelna kompatybilnosc z urzadzeniami wM-Bus i OMS',
@@ -888,38 +889,38 @@ const pl: ContentStructure = {
 
     'eclipse-wmbus-repeater': {
       slug: 'eclipse-wmbus-repeater',
-      heading: 'Opis poszczegolnych elementow infrastruktury',
+      heading: 'Opis poszczególnych elementow infrastruktury',
       title: 'ECLIPSE WM-Bus Repeater',
       intro:
-        'Bateryjne urzadzenie wzmacniajace sygnal w systemach Wireless M-Bus, zapewniajace nieprzerwana prace przez 11 lat. Idealne do rozleglych sieci pomiarowych, gdzie liczy sie prostota montazu i minimalne koszty obslugi.',
+        'Bateryjne urządzenie wzmacniajace sygnal w systemach Wireless M-Bus, zapewniajace nieprzerwana prace przez 11 lat. Idealne do rozleglych sieci pomiarowych, gdzie liczy sie prostota montazu i minimalne koszty obslugi.',
       image: {
         src: '/images/products/infrastruktura/eclipse-wmbus-repeater.png',
         alt: 'ECLIPSE WM-Bus Repeater',
       },
       description: [
-        'ECLIPSE WM-Bus Repeater to nowoczesne, energooszczedne rozwiazanie zwiekszajace zasieg i niezawodnosc transmisji w systemach telemetrycznych, redukujace koszty serwisowe i przyspieszajace wdrozenia.',
+        'ECLIPSE WM-Bus Repeater to nowoczesne, energooszczedne rozwiązanie zwiekszajace zasieg i niezawodnosc transmisji w systemach telemetrycznych, redukujace koszty serwisowe i przyspieszajace wdrozenia.',
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Prosta konfiguracja, zdalna aktualizacja firmware',
         'Wysoka czulosc odbiornika 868 MHz dla skutecznego odczytu w trudnych warunkach',
         'Obsluga trybow Wireless M-Bus i OMS (S, T, C+T itp.)',
         'Kompatybilnosc z roznorodnymi urzadzeniami pomiarowymi',
         'Mozliwosc tworzenia lancuchow repeaterow (multi-hop)',
-        'Solidna, odporna konstrukcja do zastosowan przemyslowych i miejskich (zabezpieczenia antywandalizacyjne)',
+        'Solidna, odporna konstrukcja do zastosowań przemyslowych i miejskich (zabezpieczenia antywandalizacyjne)',
         'Zasilanie bateryjne o zywotnosci do 11 lat',
       ],
     },
 
     'walk-by': {
       slug: 'walk-by',
-      heading: 'Opis poszczegolnych systemow',
+      heading: 'Opis poszczególnych systemow',
       title: 'Walk-by',
       intro:
         'Szybki odczyt zdalny bez bledow i przestojow. System oparty na urzadzeniu Range ONE i aplikacji Route ONE automatyzuje pobor danych i diagnostyke urzadzen w terenie.',
       description: [
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Automatyczny odczyt wodomierzy, cieplomierzy, podzielnikow oraz licznikow gazu i energii',
         'Natychmiastowe przesylanie danych do systemu bez potrzeby fizycznego dostepu',
@@ -932,16 +933,16 @@ const pl: ContentStructure = {
 
     'star-fix': {
       slug: 'star-fix',
-      heading: 'Opis poszczegolnych systemow',
+      heading: 'Opis poszczególnych systemow',
       title: 'Star/Fix',
       intro:
         'Staly nadzor i pelna kontrola nad mediami w topologii gwiazdy. Liczniki lacza sie z koncentratorem bezposrednio lub przez repeatery, co zapewnia ciagla obserwacje sieci.',
       description: [
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Architektura gwiazdy z modulami wM-Bus lub OMS',
-        'Automatyczne odczyty i bilansowanie zuzycia mediow',
+        'Automatyczne odczyty i bilansowanie zużycia mediow',
         'Szybka reakcja na alarmy i anomalie dzieki zdalnym powiadomieniom',
         'Skalowanie zasiegu poprzez repeatery ECLIPSE lub EXIO',
         'Centralna konfiguracja parametrow i harmonogramow odczytu',
@@ -951,13 +952,13 @@ const pl: ContentStructure = {
 
     'mesh': {
       slug: 'mesh',
-      heading: 'Opis poszczegolnych systemow',
+      heading: 'Opis poszczególnych systemow',
       title: 'MESH',
       intro:
-        'Inteligentna, samokonfigurujaca sie siec pomiarowa gwarantujaca niezawodna komunikacje nawet w trudnych warunkach. Montaz sprowadza sie do wlaczenia koncentratora i uruchomienia sieci.',
+        'Inteligentna, samokonfigurujaca sie siec pomiarowa gwarantujaca niezawodną komunikacje nawet w trudnych warunkach. Montaz sprowadza sie do wlaczenia koncentratora i uruchomienia sieci.',
       description: [
       ],
-      featuresHeading: 'Najwazniejsze cechy',
+      featuresHeading: 'Najważniejsze cechy',
       features: [
         'Samonaprawiajaca topologia mesh zapewniajaca ciaglosc transmisji',
         'Jeden koncentrator danych i automatyczne wysylanie do chmury',
@@ -985,7 +986,7 @@ const en: ContentStructure = {
   navigation: {
     homeAriaLabel: 'KAYON homepage',
     primaryLinks: [
-      { label: 'Who we help', href: '#dla-kogo' },
+      { label: 'Who we help', href: '#nasi-klienci' },
       { label: 'Offer', href: '#oferta' },
       { label: 'Products', href: '#produkty' },
     ],
@@ -1004,7 +1005,7 @@ const en: ContentStructure = {
   menuOverlay: {
     closeAria: 'Close menu',
     items: [
-      { label: 'Who we help', href: '#dla-kogo' },
+      { label: 'Who we help', href: '#nasi-klienci' },
       { label: 'Offer', href: '#oferta' },
       { label: 'Products', href: '#produkty' },
       { label: 'Contact', href: '#kontakt' },
@@ -1184,7 +1185,7 @@ const en: ContentStructure = {
       {
         title: 'Water meters',
         slug: 'wodomierze',
-        items: ['Wehrle', 'Maddalena', 'Wasser-Geraete', 'GWF Sonico Nano', 'Apator JS Smart+'],
+        items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'GWF Sonico Nano', 'Apator JS Smart+'],
       },
       {
         title: 'Heat meters',
@@ -1225,7 +1226,7 @@ const en: ContentStructure = {
         features: [
           'Wehrle water meter - ETK(W)-EAX',
           'Maddalena water meter - SJ PLUS-EVO',
-          'Wasser-Geraete water meter - ECO',
+          'Wasser-Geräte water meter - ECO',
           'GWF water meter - Sonico Nano',
           'Apator Powogaz water meter - JS Smart+',
         ],
@@ -1468,7 +1469,7 @@ const en: ContentStructure = {
       featuresHeading: 'Key features',
       features: [
         'Ready for integration with any AMR system',
-        'Temperature range: up to 50C (cold water) and up to 90C (hot water)',
+        'Temperature range: up to 50°C (cold water) and up to 90°C (hot water)',
         'Maximum flow rate (Q3): 2.5-4 m3/h',
         'High MID measurement accuracy class: R250 horizontal, R80 vertical',
         '360 rotatable register',
@@ -1495,7 +1496,7 @@ const en: ContentStructure = {
       featuresHeading: 'Key features',
       features: [
         'Ready for integration with modern remote reading systems (wired and radio communication modules)',
-        'Temperature range: up to 90C (hot water)',
+        'Temperature range: up to 90°C (hot water)',
         'Maximum flow rate (Q3): 1.6 m3/h for DN15, 4.0 m3/h for DN20',
         'High MID measurement accuracy class: R max. 160',
         'Installation possibility in various positions',
@@ -1508,12 +1509,12 @@ const en: ContentStructure = {
     'wasser-geraete-eco': {
       slug: 'wasser-geraete-eco',
       heading: 'Water meter portfolio',
-      title: 'Wasser-Geraete ECO',
+      title: 'Wasser-Geräte ECO',
       intro:
-        'The ECO water meter from Wasser-Geraete ensures reliable measurement of both hot and cold water (up to 90C) and is an ideal solution for residential and commercial applications.',
+        'The ECO water meter from Wasser-Geräte ensures reliable measurement of both hot and cold water (up to 90C) and is an ideal solution for residential and commercial applications.',
       image: {
         src: '/images/products/wodomierze/wasser-geraete-eco.png',
-        alt: 'Wasser-Geraete ECO water meter',
+        alt: 'Wasser-Geräte ECO water meter',
       },
       description: [
         'The ECO water meter is fully compatible with the Modularis ONE communication module.',
@@ -1522,7 +1523,7 @@ const en: ContentStructure = {
       featuresHeading: 'Key features',
       features: [
         'Ready for integration with radio module, M-Bus, pulse output',
-        'Temperature range: up to 50C (cold water), up to 90C (hot water)',
+        'Temperature range: up to 50°C (cold water), up to 90°C (hot water)',
         'Maximum flow rate (Q3): 2.5 m3/h',
         'High durability and damage resistance, condensation-resistant construction',
         'Mounting options: horizontal/vertical',
@@ -1546,7 +1547,7 @@ const en: ContentStructure = {
       featuresHeading: 'Key features',
       features: [
         'Ultrasonic water meter compatible with advanced remote reading systems (LoRaWAN, Wireless M-Bus)',
-        'Temperature range: up to 50C (cold water), up to 90C (hot water)',
+        'Temperature range: up to 50°C (cold water), up to 90°C (hot water)',
         'Maximum flow rate (Q3): 1.6 / 2.5 / 4 m3/h (depending on selected DN model)',
         'High MID measurement accuracy class: R1000',
         'Very low pressure losses',
@@ -1572,7 +1573,7 @@ const en: ContentStructure = {
       featuresHeading: 'Key features',
       features: [
         'Ready to work with various modules: Wireless M-Bus, pulse, M-Bus, inductive',
-        'Temperature range: up to 50C (cold water), up to 90C (hot water)',
+        'Temperature range: up to 50°C (cold water), up to 90°C (hot water)',
         'Maximum flow rate (Q3): 1.6 m3/h (DN15), 2.5 m3/h (DN20), 4.0 m3/h (DN20; depending on model)',
         'High accuracy class, MID compliance: R100 (H, DN15/20), R50 (V, DN15/20)',
         'Housing resistant to strong external magnetic fields',
@@ -1795,7 +1796,7 @@ const de: ContentStructure = {
   navigation: {
     homeAriaLabel: 'KAYON Startseite',
     primaryLinks: [
-      { label: 'Für wen?', href: '#dla-kogo' },
+      { label: 'Für wen?', href: '#nasi-klienci' },
       { label: 'Angebot', href: '#oferta' },
       { label: 'Produkte', href: '#produkty' },
     ],
@@ -1814,7 +1815,7 @@ const de: ContentStructure = {
   menuOverlay: {
     closeAria: 'Menü schließen',
     items: [
-      { label: 'Für wen?', href: '#dla-kogo' },
+      { label: 'Für wen?', href: '#nasi-klienci' },
       { label: 'Angebot', href: '#oferta' },
       { label: 'Produkte', href: '#produkty' },
       { label: 'Kontakt', href: '#kontakt' },
@@ -1993,7 +1994,7 @@ const de: ContentStructure = {
       {
         title: 'Wasserzaehler',
         slug: 'wodomierze',
-        items: ['Wehrle', 'Maddalena', 'Wasser-Geraete', 'GWF Sonico Nano', 'Apator JS Smart+'],
+        items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'GWF Sonico Nano', 'Apator JS Smart+'],
       },
       {
         title: 'Wärmezähler',
@@ -2030,11 +2031,11 @@ const de: ContentStructure = {
         title: 'Wasserzaehler',
         subtitle: 'Messportfolio',
         description:
-          'Wasserzaehler, die mit den KAYON-Loesungen und Kommunikationsmodulen kompatibel sind.',
+          'Wasserzaehler, die mit den KAYON-Lösungen und Kommunikationsmodulen kompatibel sind.',
         features: [
           'Wehrle Wasserzaehler - ETK(W)-EAX',
           'Maddalena Wasserzaehler - SJ PLUS-EVO',
-          'Wasser-Geraete Wasserzaehler - ECO',
+          'Wasser-Geräte Wasserzaehler - ECO',
           'GWF Wasserzaehler - Sonico Nano',
           'Apator Powogaz Wasserzaehler - JS Smart+',
         ],
@@ -2044,14 +2045,14 @@ const de: ContentStructure = {
         readMoreHref: '/produkty/wodomierze',
       },
       {
-        title: 'Waermezaehler',
-        subtitle: 'Waermeenergiemonitoring',
+        title: 'Wärmezaehler',
+        subtitle: 'Wärmeenergiemonitoring',
         description:
-          'Geraete fuer die Fernablesung und Abrechnung von Waerme in Wohn- und Gewerbeobjekten.',
+          'Geräte für die Fernablesung und Abrechnung von Wärme in Wohn- und Gewerbeobjekten.',
         features: [
-          'Engelmann Waermezaehler - Senso Star E',
-          'Maddalena Waermezaehler - MicroClima Evo',
-          'Ploumeter Waermezaehler - RC12',
+          'Engelmann Wärmezaehler - Senso Star E',
+          'Maddalena Wärmezaehler - MicroClima Evo',
+          'Ploumeter Wärmezaehler - RC12',
         ],
         downloads: [],
         readMoreLabel: 'Produkte ansehen',
@@ -2061,7 +2062,7 @@ const de: ContentStructure = {
         title: 'Kommunikationsmodule',
         subtitle: 'Datenintegration',
         description:
-          'Funk- und Kabelmodule fuer zuverl?ssige Datenerfassung und Konfiguration im Feld.',
+          'Funk- und Kabelmodule für zuverl?ssige Datenerfassung und Konfiguration im Feld.',
         features: [
           'Modularis ONE',
           'wMBus Smart+',
@@ -2086,14 +2087,14 @@ const de: ContentStructure = {
           'Technologie-Dashboard',
         ],
         downloads: [],
-        readMoreLabel: 'Loesungen entdecken',
+        readMoreLabel: 'Lösungen entdecken',
         readMoreHref: '/produkty/systemy-i-platformy',
       },
       {
         title: 'Infrastruktur',
         subtitle: 'Feld- und Netzwerktechnik',
         description:
-          'Mobile und stationaere Geraete fuer den Aufbau von Fernauslese-Netzen.',
+          'Mobile und stationaere Geräte für den Aufbau von Fernauslese-Netzen.',
         features: [
           'Range ONE',
           'ECLIPSE WM-Bus Gateway',
@@ -2113,13 +2114,13 @@ const de: ContentStructure = {
     {
       slug: 'wodomierze',
       title: 'Wasserzaehler',
-      description: 'Wasserzaehler fuer Kayon Fernauslese- und Abrechnungssysteme.',
+      description: 'Wasserzaehler für Kayon Fernauslese- und Abrechnungssysteme.',
       items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'gwf-sonico-nano', 'apator-js-smart-plus'],
     },
     {
       slug: 'cieplomierze',
-      title: 'Waermezaehler',
-      description: 'Waermezaehler fuer Wohn- und Gewerbeanwendungen mit Systemintegration.',
+      title: 'Wärmezaehler',
+      description: 'Wärmezaehler für Wohn- und Gewerbeanwendungen mit Systemintegration.',
       items: ['engelmann-senso-star-e', 'maddalena-microclima-evo', 'ploumeter-rc12'],
     },
     {
@@ -2131,13 +2132,13 @@ const de: ContentStructure = {
     {
       slug: 'systemy-i-platformy',
       title: 'Systeme & Plattformen',
-      description: 'ALL in KAYON Systeme fuer Automatisierung und Datenmanagement.',
+      description: 'ALL in KAYON Systeme für Automatisierung und Datenmanagement.',
       items: ['walk-by', 'star-fix', 'mesh'],
     },
     {
       slug: 'infrastruktura',
       title: 'Infrastruktur',
-      description: 'Feld- und Netzwerktechnik fuer den Aufbau von Fernauslese-Netzen.',
+      description: 'Feld- und Netzwerktechnik für den Aufbau von Fernauslese-Netzen.',
       items: ['range-one', 'eclipse-wmbus-gateway', 'eclipse-wmbus-repeater', 'eixo-wmbus-gateway', 'exio-wmbus-repeater'],
     },
   ],
@@ -2150,7 +2151,7 @@ const de: ContentStructure = {
       heading: 'Kommunikationsmodule im Ueberblick',
       title: 'Modularis ONE',
       intro:
-        'Kompaktes 868-MHz-Funkmodul fuer Modularis-Wasserzaehler, das Fernauslesung und Konfiguration in Walk-by- und AMR-Installationen ermoeglicht.',
+        'Kompaktes 868-MHz-Funkmodul für Modularis-Wasserzaehler, das Fernauslesung und Konfiguration in Walk-by- und AMR-Installationen ermoeglicht.',
       image: {
         src: '/images/products/moduly-komunikacyjne/modularis-one.png',
         alt: 'Modularis ONE Kommunikationsmodul',
@@ -2173,7 +2174,7 @@ const de: ContentStructure = {
       heading: 'Kommunikationsmodule im Ueberblick',
       title: 'wMBus Smart+',
       intro:
-        'Funkaufsatz fuer Smart+ Wasser- und Waermezaehler, der sofortigen Zugriff auf Messdaten im Wireless-M-Bus-Standard liefert.',
+        'Funkaufsatz für Smart+ Wasser- und Wärmezaehler, der sofortigen Zugriff auf Messdaten im Wireless-M-Bus-Standard liefert.',
       image: {
         src: '/images/products/moduly-komunikacyjne/wmbus-smart-plus.png',
         alt: 'wMBus Smart+ Funkmodul',
@@ -2184,10 +2185,10 @@ const de: ContentStructure = {
       features: [
         'Sendung in den Baendern S und T gemaess OMS',
         'Parallele Uebertragung von Verbrauchsprotokollen und Fernalarmen',
-        'AES-128-Verschluesselung fuer durchgaengig gesicherte Daten',
+        'AES-128-Verschluesselung für durchgaengig gesicherte Daten',
         'Fernkonfiguration ueber das Handgeraet Range ONE oder ECLIPSE-Gateways',
         'Batterielebensdauer bis zu 12 Jahren im typischen Betrieb',
-        'IP68-geschuetztes Gehaeuse fuer den Einsatz in Schaechten',
+        'IP68-geschuetztes Gehaeuse für den Einsatz in Schaechten',
       ],
     },
 
@@ -2210,7 +2211,7 @@ const de: ContentStructure = {
         'Sofortige und historische Ablesungen auf Abruf',
         'Busdiagnose und Stoerungsanzeige',
         'Hohe Bestaendigkeit gegen Ueberspannungen und Verdrahtungsfehler',
-        'Kompaktes Gehaeuse fuer werkzeuglose Montage',
+        'Kompaktes Gehaeuse für werkzeuglose Montage',
       ],
     },
 
@@ -2219,7 +2220,7 @@ const de: ContentStructure = {
       heading: 'Kommunikationsmodule im Ueberblick',
       title: 'wMBus MicroClima',
       intro:
-        'Funkmodul fuer MicroClima-Waermezaehler, optimiert fuer Wohnanlagen mit haeufigen Fernauslesungen.',
+        'Funkmodul für MicroClima-Wärmezaehler, optimiert für Wohnanlagen mit haeufigen Fernauslesungen.',
       image: {
         src: '/images/products/moduly-komunikacyjne/wmbus-microclima.png',
         alt: 'wMBus MicroClima Funkmodul',
@@ -2242,7 +2243,7 @@ const de: ContentStructure = {
       heading: 'Kommunikationsmodule im Ueberblick',
       title: 'wMBus RC12',
       intro:
-        'Kommunikationsmodul fuer RC12-Waermezaehler, ausgelegt fuer Walk-by- und stationaere Netze.',
+        'Kommunikationsmodul für RC12-Wärmezaehler, ausgelegt für Walk-by- und stationaere Netze.',
       image: {
         src: '/images/products/moduly-komunikacyjne/wmbus-rc12.png',
         alt: 'wMBus RC12 Kommunikationsmodul',
@@ -2265,7 +2266,7 @@ const de: ContentStructure = {
       heading: 'Wasserzaehler im Ueberblick',
       title: 'Wehrle ETK(W)-EAX',
       intro:
-        'Der Einstrahl-Wasserzaehler Wehrle ist ein praezises und zuverlaessiges Geraet zur Messung des Wasserverbrauchs in privaten und gewerblichen Installationen, entwickelt fuer langfristigen Betrieb unter schwierigen Bedingungen.',
+        'Der Einstrahl-Wasserzaehler Wehrle ist ein präzises und zuverlässiges Geraet zur Messung des Wasserverbrauchs in privaten und gewerblichen Installationen, entwickelt für langfristigen Betrieb unter schwierigen Bedingungen.',
       image: {
         src: '/images/products/wodomierze/wehrle-etkw-eax.png',
         alt: 'Wehrle ETK(W)-EAX Wasserzaehler',
@@ -2277,7 +2278,7 @@ const de: ContentStructure = {
       featuresHeading: 'Hauptmerkmale',
       features: [
         'Bereit zur Integration mit jedem AMR-System',
-        'Temperaturbereich: bis 50C (Kaltwasser) und bis 90C (Warmwasser)',
+        'Temperaturbereich: bis 50°C (Kaltwasser) und bis 90°C (Warmwasser)',
         'Maximale Durchflussrate (Q3): 2,5-4 m3/h',
         'Hohe MID-Messgenauigkeitsklasse: R250 horizontal, R80 vertikal',
         'Um 360 drehbares Zaehlwerk',
@@ -2292,7 +2293,7 @@ const de: ContentStructure = {
       heading: 'Wasserzaehler im Ueberblick',
       title: 'Maddalena SJ PLUS-EVO',
       intro:
-        'Der Wasserzaehler SJ PLUS-EVO ist eine moderne Loesung fuer den Hausgebrauch, die sich durch hoechste Verarbeitungsqualitaet und zuverlaessige Messgenauigkeit auszeichnet.',
+        'Der Wasserzaehler SJ PLUS-EVO ist eine moderne Lösung für den Hausgebrauch, die sich durch hoechste Verarbeitungsqualitaet und zuverlässige Messgenauigkeit auszeichnet.',
       image: {
         src: '/images/products/wodomierze/maddalena-sj-plus-evo.png',
         alt: 'Maddalena SJ PLUS-EVO Wasserzaehler',
@@ -2304,8 +2305,8 @@ const de: ContentStructure = {
       featuresHeading: 'Hauptmerkmale',
       features: [
         'Bereit zur Integration mit modernen Fernablesungssystemen (kabelgebundene und Funk-Kommunikationsmodule)',
-        'Temperaturbereich: bis 90C (Warmwasser)',
-        'Maximale Durchflussrate (Q3): 1,6 m3/h fuer DN15, 4,0 m3/h fuer DN20',
+        'Temperaturbereich: bis 90°C (Warmwasser)',
+        'Maximale Durchflussrate (Q3): 1,6 m3/h für DN15, 4,0 m3/h für DN20',
         'Hohe MID-Messgenauigkeitsklasse: R max. 160',
         'Installationsmoeglichkeit in verschiedenen Positionen',
         'Um 360 drehbares Zaehlwerk',
@@ -2317,12 +2318,12 @@ const de: ContentStructure = {
     'wasser-geraete-eco': {
       slug: 'wasser-geraete-eco',
       heading: 'Wasserzaehler im Ueberblick',
-      title: 'Wasser-Geraete ECO',
+      title: 'Wasser-Geräte ECO',
       intro:
-        'Der Wasserzaehler ECO von Wasser-Geraete gewaehrleistet zuverlaessige Messung sowohl von warmem als auch kaltem Wasser (bis 90C) und ist die ideale Loesung fuer Wohn- und Gewerbeanwendungen.',
+        'Der Wasserzaehler ECO von Wasser-Geräte gewährleistet zuverlässige Messung sowohl von warmem als auch kaltem Wasser (bis 90C) und ist die ideale Lösung für Wohn- und Gewerbeanwendungen.',
       image: {
         src: '/images/products/wodomierze/wasser-geraete-eco.png',
-        alt: 'Wasser-Geraete ECO Wasserzaehler',
+        alt: 'Wasser-Geräte ECO Wasserzaehler',
       },
       description: [
         'Der Wasserzaehler ECO ist vollstaendig kompatibel mit dem Kommunikationsmodul Modularis ONE.',
@@ -2331,7 +2332,7 @@ const de: ContentStructure = {
       featuresHeading: 'Hauptmerkmale',
       features: [
         'Bereit zur Integration mit Funkmodul, M-Bus, Impulsausgang',
-        'Temperaturbereich: bis 50C (Kaltwasser), bis 90C (Warmwasser)',
+        'Temperaturbereich: bis 50°C (Kaltwasser), bis 90°C (Warmwasser)',
         'Maximale Durchflussrate (Q3): 2,5 m3/h',
         'Hohe Langlebigkeit und Beschaedigungsbestaendigkeit, kondensationsbestaendige Konstruktion',
         'Montageoptionen: horizontal/vertikal',
@@ -2349,13 +2350,13 @@ const de: ContentStructure = {
         alt: 'GWF Sonico Nano Wasserzaehler',
       },
       description: [
-        'Sonico Nano ist die ideale Loesung fuer alle, die hoechste Praezision und Messzuverlaessigkeit suchen.',
+        'Sonico Nano ist die ideale Lösung für alle, die hoechste Praezision und Messzuverlässigkeit suchen.',
         'Dokumentation herunterladen: https://productfinder.gwf.ch/uploads_productfinder/downloads/Sonico_Brochure_Enlit-Version-2024_KIe10200_web_v04.pdf',
       ],
       featuresHeading: 'Hauptmerkmale',
       features: [
         'Ultraschall-Wasserzaehler kompatibel mit fortschrittlichen Fernablesungssystemen (LoRaWAN, Wireless M-Bus)',
-        'Temperaturbereich: bis 50C (Kaltwasser), bis 90C (Warmwasser)',
+        'Temperaturbereich: bis 50°C (Kaltwasser), bis 90°C (Warmwasser)',
         'Maximale Durchflussrate (Q3): 1,6 / 2,5 / 4 m3/h (je nach gewaehltem DN-Modell)',
         'Hohe MID-Messgenauigkeitsklasse: R1000',
         'Sehr geringe Druckverluste',
@@ -2369,7 +2370,7 @@ const de: ContentStructure = {
       heading: 'Wasserzaehler im Ueberblick',
       title: 'Apator Powogaz JS Smart+',
       intro:
-        'Der Wasserzaehler Apator Powogaz JS Smart+ ist eine bewaehrte und zuverlaessige Loesung vom polnischen Marktfuehrer fuer Wasserzaehler. Entwickelt zur Messung des Wasserdurchflusses in Hausinstallationen, zeichnet er sich durch hohe Langlebigkeit und Bestaendigkeit gegen Umweltbedingungen aus.',
+        'Der Wasserzaehler Apator Powogaz JS Smart+ ist eine bewaehrte und zuverlässige Lösung vom polnischen Marktfuehrer für Wasserzaehler. Entwickelt zur Messung des Wasserdurchflusses in Hausinstallationen, zeichnet er sich durch hohe Langlebigkeit und Bestaendigkeit gegen Umweltbedingungen aus.',
       image: {
         src: '/images/products/wodomierze/apator-js-smart-plus.png',
         alt: 'Apator Powogaz JS Smart+ Wasserzaehler',
@@ -2381,7 +2382,7 @@ const de: ContentStructure = {
       featuresHeading: 'Hauptmerkmale',
       features: [
         'Bereit zur Zusammenarbeit mit verschiedenen Modulen: Wireless M-Bus, Impuls, M-Bus, induktiv',
-        'Temperaturbereich: bis 50C (Kaltwasser), bis 90C (Warmwasser)',
+        'Temperaturbereich: bis 50°C (Kaltwasser), bis 90°C (Warmwasser)',
         'Maximale Durchflussrate (Q3): 1,6 m3/h (DN15), 2,5 m3/h (DN20), 4,0 m3/h (DN20; je nach Modell)',
         'Hohe Genauigkeitsklasse, MID-Konformitaet: R100 (H, DN15/20), R50 (V, DN15/20)',
         'Gehaeuse bestaendig gegen starke externe Magnetfelder',
@@ -2395,13 +2396,13 @@ const de: ContentStructure = {
       heading: 'Warmezaehler im Ueberblick',
       title: 'Engelmann Senso Star E',
       intro:
-        'Der Waermezaehler Engelmann Senso Star E ist ein praezises und langlebiges Geraet zur Messung des Waermeverbrauchs in geschlossenen Systemen und gewaehrleistet Zuverlaessigkeit und Genauigkeit gemaess der Norm EN 1434.',
+        'Der Wärmezaehler Engelmann Senso Star E ist ein präzises und langlebiges Geraet zur Messung des Wärmeverbrauchs in geschlossenen Systemen und gewährleistet Zuverlaessigkeit und Genauigkeit gemaess der Norm EN 1434.',
       image: {
         src: '/images/products/cieplomierze/engelmann-senso-star-e.png',
-        alt: 'Engelmann Senso Star E Waermezaehler',
+        alt: 'Engelmann Senso Star E Wärmezaehler',
       },
       description: [
-        'Der Waermezaehler ist kompatibel mit dem Kommunikationsmodul MicroClima WMBus.',
+        'Der Wärmezaehler ist kompatibel mit dem Kommunikationsmodul MicroClima WMBus.',
         'Dokumentation herunterladen: https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf',
       ],
       featuresHeading: 'Hauptmerkmale',
@@ -2418,19 +2419,19 @@ const de: ContentStructure = {
       heading: 'Warmezaehler im Ueberblick',
       title: 'Maddalena MicroClima Evo',
       intro:
-        'Maddalena MicroClima Evo ist ein moderner, kompakter Waermezaehler fuer die praezise Messung des Waermeverbrauchs in Heizsystemen, insbesondere im Wohnungsbau. Er gewaehrleistet Langlebigkeit und hohe Genauigkeit.',
+        'Maddalena MicroClima Evo ist ein moderner, kompakter Wärmezaehler für die präzise Messung des Wärmeverbrauchs in Heizsystemen, insbesondere im Wohnungsbau. Er gewährleistet Langlebigkeit und hohe Genauigkeit.',
       image: {
         src: '/images/products/cieplomierze/maddalena-microclima-evo.png',
-        alt: 'Maddalena MicroClima Evo Waermezaehler',
+        alt: 'Maddalena MicroClima Evo Wärmezaehler',
       },
       description: [
-        'Der Waermezaehler ist kompatibel mit dem Kommunikationsmodul MicroClima WMBus.',
+        'Der Wärmezaehler ist kompatibel mit dem Kommunikationsmodul MicroClima WMBus.',
         'Dokumentation herunterladen: https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf',
       ],
       featuresHeading: 'Hauptmerkmale',
       features: [
-        'Einstrahl-Durchflussmesser fuer den Betrieb in einem weiten Temperaturbereich',
-        'Hohe metrologische Klasse und Anzeigenstabilitaet dank fortschrittlicher technischer Loesungen',
+        'Einstrahl-Durchflussmesser für den Betrieb in einem weiten Temperaturbereich',
+        'Hohe metrologische Klasse und Anzeigenstabilitaet dank fortschrittlicher technischer Lösungen',
         'Intuitive Benutzeroberflaeche und Moeglichkeit zur Fernauslesung der Daten',
       ],
     },
@@ -2440,13 +2441,13 @@ const de: ContentStructure = {
       heading: 'Warmezaehler im Ueberblick',
       title: 'Ploumeter RC12',
       intro:
-        'Der Waermezaehler RC12 Ploumeter ist ein praezises und zuverlaessiges Messgeraet fuer den Einsatz in Heizungsanlagen, bekannt fuer seine solide Konstruktion und Messgenauigkeit. Ideal fuer Systeme, die moderne Kommunikationsloesungen erfordern.',
+        'Der Wärmezaehler RC12 Ploumeter ist ein präzises und zuverlässiges Messgeraet für den Einsatz in Heizungsanlagen, bekannt für seine solide Konstruktion und Messgenauigkeit. Ideal für Systeme, die moderne Kommunikationsloesungen erfordern.',
       image: {
         src: '/images/products/cieplomierze/ploumeter-rc12.png',
-        alt: 'Ploumeter RC12 Waermezaehler',
+        alt: 'Ploumeter RC12 Wärmezaehler',
       },
       description: [
-        'Der Waermezaehler ist kompatibel mit dem Kommunikationsmodul RC12 WMBUS.',
+        'Der Wärmezaehler ist kompatibel mit dem Kommunikationsmodul RC12 WMBUS.',
       ],
       featuresHeading: 'Hauptmerkmale',
       features: [
@@ -2461,20 +2462,20 @@ const de: ContentStructure = {
       heading: 'Infrastrukturprodukte im Ueberblick',
       title: 'Range ONE',
       intro:
-        'Funkempfaenger mit Bluetooth-Technologie, konform mit den Standards Wireless M-Bus (EN 13757) und OMS, der verschiedene Messgeraete unabhaengig vom Hersteller unterstuetzt. Ein tragbares Geraet fuer schnelle und bequeme Datenauslesung im Feld.',
+        'Funkempfaenger mit Bluetooth-Technologie, konform mit den Standards Wireless M-Bus (EN 13757) und OMS, der verschiedene Messgeraete unabhaengig vom Hersteller unterstuetzt. Ein tragbares Geraet für schnelle und bequeme Datenauslesung im Feld.',
       image: {
         src: '/images/products/infrastruktura/range-one.png',
         alt: 'Range ONE Funkempfaenger',
       },
       description: [
-        'Range ONE ist ein zuverlaessiges Feldgeraet, das Mobilitaet, Funktionalitaet und Arbeitskomfort in einem kompakten Geraet vereint.',
+        'Range ONE ist ein zuverlässiges Feldgeraet, das Mobilitaet, Funktionalitaet und Arbeitskomfort in einem kompakten Geraet vereint.',
       ],
       featuresHeading: 'Hauptmerkmale',
       features: [
         'Hohe Empfindlichkeit des 868-MHz-Empfaengers ermoeglicht Auslesung an schwer zugaenglichen Orten',
-        'Bluetooth-Konnektivitaet zur drahtlosen Datenuebertragung auf Android-Geraete (Route ONE App)',
+        'Bluetooth-Konnektivitaet zur drahtlosen Datenuebertragung auf Android-Geräte (Route ONE App)',
         'Energiesparende Algorithmen - Batteriebetrieb bis zu 40 Stunden',
-        'Ergonomisches, robustes Gehaeuse mit gummierten Seiten fuer sicheren Griff',
+        'Ergonomisches, robustes Gehaeuse mit gummierten Seiten für sicheren Griff',
         'Externe Antenne und USB-Port zum Laden der Batterie',
         'Moeglichkeit zur Datenauslesung und Fernkonfiguration von Funkmodulen',
       ],
@@ -2485,19 +2486,19 @@ const de: ContentStructure = {
       heading: 'Infrastrukturprodukte im Ueberblick',
       title: 'ECLIPSE WM-Bus Gateway',
       intro:
-        'Batteriebetriebener Datenkonzentrator zur Erfassung von Informationen von Wasser-, Waerme-, Gas- und Energiezaehlern. Mit einer Batterielebensdauer von bis zu 11 Jahren ermoeglicht er eine schnelle Implementierung und minimale Installationskosten an jedem Standort.',
+        'Batteriebetriebener Datenkonzentrator zur Erfassung von Informationen von Wasser-, Wärme-, Gas- und Energiezaehlern. Mit einer Batterielebensdauer von bis zu 11 Jahren ermoeglicht er eine schnelle Implementierung und minimale Installationskosten an jedem Standort.',
       image: {
         src: '/images/products/infrastruktura/eclipse-wmbus-gateway.png',
         alt: 'ECLIPSE WM-Bus Gateway',
       },
       description: [
-        'ECLIPSE WM-Bus Gateway ist ein zuverlaessiger, wirtschaftlicher Datenkonzentrator, der volle Kontrolle ueber telemetrische Systeme bei niedrigen Betriebskosten bietet.',
+        'ECLIPSE WM-Bus Gateway ist ein zuverlässiger, wirtschaftlicher Datenkonzentrator, der volle Kontrolle ueber telemetrische Systeme bei niedrigen Betriebskosten bietet.',
       ],
       featuresHeading: 'Hauptmerkmale',
       features: [
         'Fernverwaltung, Diagnose und flexible Uebertragungsprotokolle (HTTPS, MQTT, E-Mail)',
-        'Vollstaendige Kompatibilitaet mit wM-Bus- und OMS-Geraeten',
-        '5G-, 4G-, NB-IoT-Konnektivitaet fuer stabile Verbindung',
+        'Vollstaendige Kompatibilitaet mit wM-Bus- und OMS-Geräten',
+        '5G-, 4G-, NB-IoT-Konnektivitaet für stabile Verbindung',
         'Hohe Empfindlichkeit des 868-MHz-Empfaengers zum Auslesen von schwer zugaenglichen Orten',
         'Batteriebetrieb bis zu 11 Jahren ohne Wartungsbedarf',
         'Staub- und UV-bestaendiges Gehaeuse mit aesthetischem Design',
@@ -2510,22 +2511,22 @@ const de: ContentStructure = {
       heading: 'Infrastrukturprodukte im Ueberblick',
       title: 'ECLIPSE WM-Bus Repeater',
       intro:
-        'Batteriebetriebenes Geraet zur Signalverstaerkung in Wireless M-Bus-Systemen, das einen unterbrechungsfreien Betrieb fuer 11 Jahre gewaehrleistet. Ideal fuer weitlaeufige Messnetze, bei denen einfache Montage und minimale Wartungskosten entscheidend sind.',
+        'Batteriebetriebenes Geraet zur Signalverstaerkung in Wireless M-Bus-Systemen, das einen unterbrechungsfreien Betrieb für 11 Jahre gewährleistet. Ideal für weitlaeufige Messnetze, bei denen einfache Montage und minimale Wartungskosten entscheidend sind.',
       image: {
         src: '/images/products/infrastruktura/eclipse-wmbus-repeater.png',
         alt: 'ECLIPSE WM-Bus Repeater',
       },
       description: [
-        'ECLIPSE WM-Bus Repeater ist eine moderne, energiesparende Loesung, die Reichweite und Zuverlaessigkeit der Uebertragung in telemetrischen Systemen erhoeht, Servicekosten reduziert und Implementierungen beschleunigt.',
+        'ECLIPSE WM-Bus Repeater ist eine moderne, energiesparende Lösung, die Reichweite und Zuverlaessigkeit der Uebertragung in telemetrischen Systemen erhoeht, Servicekosten reduziert und Implementierungen beschleunigt.',
       ],
       featuresHeading: 'Hauptmerkmale',
       features: [
         'Einfache Konfiguration, Firmware-Aktualisierung aus der Ferne',
-        'Hohe Empfindlichkeit des 868-MHz-Empfaengers fuer effektives Auslesen unter schwierigen Bedingungen',
+        'Hohe Empfindlichkeit des 868-MHz-Empfaengers für effektives Auslesen unter schwierigen Bedingungen',
         'Unterstuetzung von Wireless M-Bus- und OMS-Modi (S, T, C+T usw.)',
         'Kompatibilitaet mit verschiedenen Messgeraeten',
         'Moeglichkeit zur Erstellung von Repeater-Ketten (Multi-Hop)',
-        'Solide, robuste Konstruktion fuer industrielle und staedtische Anwendungen (Vandalismusschutz)',
+        'Solide, robuste Konstruktion für industrielle und staedtische Anwendungen (Vandalismusschutz)',
         'Batteriebetrieb mit einer Lebensdauer von bis zu 11 Jahren',
       ],
     },
@@ -2535,15 +2536,15 @@ const de: ContentStructure = {
       heading: 'Systeme und Plattformen',
       title: 'Walk-by',
       intro:
-        'Schnelle Fernauslesung ohne Fehler und Ausfallzeiten. Basierend auf dem Geraet Range ONE und der App Route ONE automatisiert das System die Datenerfassung und Geraetediagnose im Feld.',
+        'Schnelle Fernauslesung ohne Fehler und Ausfallzeiten. Basierend auf dem Geraet Range ONE und der App Route ONE automatisiert das System die Datenerfassung und Gerätediagnose im Feld.',
       description: [
       ],
       featuresHeading: 'Hauptmerkmale',
       features: [
-        'Automatische Auslesung von Wasser-, Waerme-, Heizkosten-, Gas- und Stromzaehlern',
+        'Automatische Auslesung von Wasser-, Wärme-, Heizkosten-, Gas- und Stromzaehlern',
         'Sofortige Datenuebertragung in die Plattform ohne physischen Zugang zu den Zaehlern',
-        'Integrierte Diagnose und Service fuer Messmodule vor Ort',
-        'Integration mit Route ONE fuer Berichte und Alarmverwaltung',
+        'Integrierte Diagnose und Service für Messmodule vor Ort',
+        'Integration mit Route ONE für Berichte und Alarmverwaltung',
         'Zuverlaessige Kommunikation an schwer zugaenglichen Stellen dank 868-MHz-Funk',
         'Walk-by-Prozess verkuerzt Servicezeiten und reduziert Betriebskosten',
       ],
@@ -2559,7 +2560,7 @@ const de: ContentStructure = {
       ],
       featuresHeading: 'Hauptmerkmale',
       features: [
-        'Sternarchitektur fuer Geraete nach Wireless-M-Bus oder OMS',
+        'Sternarchitektur für Geräte nach Wireless-M-Bus oder OMS',
         'Automatisierte Ablesung und Bilanzierung des Verbrauchs',
         'Schnelle Reaktion auf Alarme und Anomalien durch Fernbenachrichtigungen',
         'Reichweitenerweiterung mit ECLIPSE- oder EXIO-Repeatern',
@@ -2573,15 +2574,15 @@ const de: ContentStructure = {
       heading: 'Systeme und Plattformen',
       title: 'MESH',
       intro:
-        'Intelligentes, selbstkonfigurierendes Messnetz, das auch unter schwierigen Bedingungen eine zuverlaessige Kommunikation sicherstellt. Die Installation beschraenkt sich auf das Einschalten des Konzentrators.',
+        'Intelligentes, selbstkonfigurierendes Messnetz, das auch unter schwierigen Bedingungen eine zuverlässige Kommunikation sicherstellt. Die Installation beschraenkt sich auf das Einschalten des Konzentrators.',
       description: [
       ],
       featuresHeading: 'Hauptmerkmale',
       features: [
-        'Selbstheilende Mesh-Topologie fuer dauerhafte Uebertragung',
+        'Selbstheilende Mesh-Topologie für dauerhafte Uebertragung',
         'Ein Datenkonzentrator mit automatischer Cloud-Uebermittlung',
         'Minimale Wartungskosten durch fehlende manuelle Eingriffe',
-        'Automatische Erkennung neuer Geraete und Routenoptimierung',
+        'Automatische Erkennung neuer Geräte und Routenoptimierung',
         'Skalierbar auf tausende Zaehler ohne Qualitaetseinbussen',
         'Umfassende Echtzeitberichte, Alarme und Ressourcenmanagement',
       ],
