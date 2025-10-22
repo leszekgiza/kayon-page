@@ -574,7 +574,6 @@ const pl: ContentStructure = {
       ],
       featuresHeading: 'Najważniejsze cechy',
       features: [
-        'Transmisja w pasmach S i T zgodnie z OMS',
         'Rownolegla wysylka logow zużycia oraz alarmow zdalnych',
         'Szyfrowanie AES 128 dla bezpiecznego przesylania danych',
         'Zdalna konfiguracja przez Range ONE lub koncentratory ECLIPSE',
@@ -1402,7 +1401,6 @@ const en: ContentStructure = {
       ],
       featuresHeading: 'Key features',
       features: [
-        'Transmission in S and T bands compliant with OMS',
         'Parallel delivery of consumption logs and remote alarms',
         'AES 128 encryption keeps data secure end to end',
         'Remote configuration via Range ONE handheld or ECLIPSE gateways',
@@ -2221,7 +2219,6 @@ const de: ContentStructure = {
       ],
       featuresHeading: 'Hauptmerkmale',
       features: [
-        'Sendung in den Baendern S und T gemaess OMS',
         'Parallele Uebertragung von Verbrauchsprotokollen und Fernalarmen',
         'AES-128-Verschluesselung für durchgaengig gesicherte Daten',
         'Fernkonfiguration ueber das Handgeraet Range ONE oder ECLIPSE-Gateways',
