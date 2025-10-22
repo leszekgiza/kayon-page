@@ -151,13 +151,28 @@ export interface ProductDetailContent {
 
 export type ProductDetailsContent = Record<string, ProductDetailContent>;
 
+export interface ContactCard {
+  title: string;
+  value: string;
+  type: 'email' | 'phone' | 'address';
+}
+
 export interface ContactContent {
   label: string;
   heading: string;
   description: string;
-  email: string;
-  phone: string;
-  address: string[];
+  cards: ContactCard[];
+  form: {
+    nameLabel: string;
+    namePlaceholder: string;
+    emailLabel: string;
+    emailPlaceholder: string;
+    subjectLabel: string;
+    subjectPlaceholder: string;
+    messageLabel: string;
+    messagePlaceholder: string;
+    submitButton: string;
+  };
 }
 
 export interface FooterContent {
@@ -998,9 +1013,24 @@ const pl: ContentStructure = {
     heading: 'Skontaktuj się z nami',
     description:
       'Masz pytania dotyczące naszych produktów lub usług? Skontaktuj się z nami, a nasz zespół chętnie odpowie na wszystkie pytania.',
-    email: 'welcome@kayon.pl',
-    phone: '+48 577 570 814',
-    address: ['KAYON Sp. z o.o.', 'Aleja Zwycięstwa 96/98', '81-451 Gdynia', 'Polska'],
+    cards: [
+      { title: 'Zapytania ogólne', value: 'welcome@kayon.pl', type: 'email' },
+      { title: 'Współpraca', value: 'joinus@kayon.pl', type: 'email' },
+      { title: 'Biznes', value: 'biz@kayon.pl', type: 'email' },
+      { title: 'Adres', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98\n81-451 Gdynia\nPolska', type: 'address' },
+      { title: 'Telefon', value: '+48 577 570 814', type: 'phone' },
+    ],
+    form: {
+      nameLabel: 'Imię i nazwisko',
+      namePlaceholder: 'Twoje imię i nazwisko',
+      emailLabel: 'Email',
+      emailPlaceholder: 'twoj@email.pl',
+      subjectLabel: 'Temat',
+      subjectPlaceholder: 'Temat wiadomości',
+      messageLabel: 'Wiadomość',
+      messagePlaceholder: 'Twoja wiadomość...',
+      submitButton: 'WYŚLIJ',
+    },
   },
 
   footer: {
@@ -1820,9 +1850,24 @@ const en: ContentStructure = {
     heading: "Get in touch",
     description:
       "Have questions about our products or services? Contact us, and our team will be happy to answer all your questions.",
-    email: "welcome@kayon.pl",
-    phone: "+48 577 570 814",
-    address: ["KAYON Sp. z o.o.", "Aleja Zwycięstwa 96/98", "81-451 Gdynia", "Poland"],
+    cards: [
+      { title: 'General inquiries', value: 'welcome@kayon.pl', type: 'email' },
+      { title: 'Careers', value: 'joinus@kayon.pl', type: 'email' },
+      { title: 'Business', value: 'biz@kayon.pl', type: 'email' },
+      { title: 'Address', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98\n81-451 Gdynia\nPoland', type: 'address' },
+      { title: 'Phone', value: '+48 577 570 814', type: 'phone' },
+    ],
+    form: {
+      nameLabel: 'Your Name',
+      namePlaceholder: 'Your name',
+      emailLabel: 'Your Email',
+      emailPlaceholder: 'your@email.com',
+      subjectLabel: 'Subject',
+      subjectPlaceholder: 'Message subject',
+      messageLabel: 'Your Message',
+      messagePlaceholder: 'Your message...',
+      submitButton: 'SEND',
+    },
   },
 
   footer: {
@@ -2642,9 +2687,24 @@ const de: ContentStructure = {
     heading: "Kontaktieren Sie uns",
     description:
       "Haben Sie Fragen zu unseren Produkten oder Dienstleistungen? Kontaktieren Sie uns, und unser Team beantwortet gerne alle Ihre Fragen.",
-    email: "welcome@kayon.pl",
-    phone: "+48 577 570 814",
-    address: ["KAYON Sp. z o.o.", "Aleja Zwycięstwa 96/98", "81-451 Gdynia", "Polen"],
+    cards: [
+      { title: 'Allgemeine Anfragen', value: 'welcome@kayon.pl', type: 'email' },
+      { title: 'Karriere', value: 'joinus@kayon.pl', type: 'email' },
+      { title: 'Geschäftlich', value: 'biz@kayon.pl', type: 'email' },
+      { title: 'Adresse', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98\n81-451 Gdynia\nPolen', type: 'address' },
+      { title: 'Telefon', value: '+48 577 570 814', type: 'phone' },
+    ],
+    form: {
+      nameLabel: 'Ihr Name',
+      namePlaceholder: 'Ihr Name',
+      emailLabel: 'Ihre E-Mail',
+      emailPlaceholder: 'ihre@email.de',
+      subjectLabel: 'Betreff',
+      subjectPlaceholder: 'Nachrichtenbetreff',
+      messageLabel: 'Ihre Nachricht',
+      messagePlaceholder: 'Ihre Nachricht...',
+      submitButton: 'SENDEN',
+    },
   },
 
   footer: {
