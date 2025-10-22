@@ -562,23 +562,27 @@ const pl: ContentStructure = {
 
     'wmbus-smart-plus': {
       slug: 'wmbus-smart-plus',
-      heading: 'Opis poszczególnych modulow komunikacyjnych',
-      title: 'wMBus Smart+',
+      heading: 'Opis poszczególnych modułów komunikacyjnych',
+      title: 'WMBus Smart+',
       intro:
-        'Radiowy modul nakladkowy dla wodomierzy i cieplomierzy serii Smart+, ktory zapewnia natychmiastowy dostep do danych w standardzie Wireless M-Bus.',
+        'WMBus Smart+ to kompaktowy moduł radiowy w standardzie Wireless M-Bus 868 MHz, przeznaczony do wodomierzy serii Smart+ i Smart C+ firmy Apator Powogaz. Umożliwia szybki, niezawodny zdalny odczyt. Oferuje zaawansowane funkcji monitoringu nieprawidłowości, takich jak: cofka, wyciek, manipulacja magnetyczna czy niski poziom baterii.',
       image: {
         src: '/images/products/moduly-komunikacyjne/wmbus-smart-plus.png',
-        alt: 'Modul radiowy wMBus Smart+',
+        alt: 'Moduł radiowy WMBus Smart+',
       },
       description: [
+        'WMBus Smart+ to innowacyjne rozwiązanie, które zapewnia elastyczność i bezpieczeństwo w zdalnym monitoringu wodomierzy, z możliwością zdalnej diagnostyki, zmiany ustawień i kasowania alarmów, bez potrzeby ręcznych odczytów czy ingerencji w instalację.',
       ],
       featuresHeading: 'Najważniejsze cechy',
       features: [
-        'Rownolegla wysylka logow zużycia oraz alarmow zdalnych',
-        'Szyfrowanie AES 128 dla bezpiecznego przesylania danych',
-        'Zdalna konfiguracja przez Range ONE lub koncentratory ECLIPSE',
-        'Bateria o typowej zywotnosci do 12 lat',
-        'Szczelna obudowa IP68 gotowa do pracy w studzienkach',
+        'Dwukierunkowa komunikacja radiowa umożliwiająca zdalny odczyt, konfigurację i diagnostykę urządzenia',
+        'Trzy tryby transmisji danych: short, long i long+ (z historią do 15 miesięcy)',
+        'Pełna kompatybilność z wodomierzami Smart+ i Smart C+ Apator Powogaz',
+        'Optyczny sensor odporny na zakłócenia magnetyczne',
+        'Łatwy montaż bez okablowania, konfiguracja przez Range One Bluetooth i aplikację Route One',
+        'Zasięg transmisji do 300 m w linii wzroku',
+        'Bateria litowa 3.6 V o żywotności do 11 lat',
+        'Stopień ochrony IP65, zgodność z normami EN 13757 i OMS',
       ],
     },
 
@@ -1390,22 +1394,26 @@ const en: ContentStructure = {
     'wmbus-smart-plus': {
       slug: 'wmbus-smart-plus',
       heading: 'Communication module portfolio',
-      title: 'wMBus Smart+',
+      title: 'WMBus Smart+',
       intro:
-        'Wireless add-on module for Smart+ water and heat meters, delivering instant access to data in the Wireless M-Bus standard.',
+        'WMBus Smart+ is a compact wireless module in the Wireless M-Bus 868 MHz standard, designed for Smart+ and Smart C+ water meters from Apator Powogaz. It enables fast, reliable remote reading. It offers advanced monitoring functions for irregularities such as: backflow, leak, magnetic manipulation or low battery level.',
       image: {
         src: '/images/products/moduly-komunikacyjne/wmbus-smart-plus.png',
-        alt: 'wMBus Smart+ wireless module',
+        alt: 'WMBus Smart+ wireless module',
       },
       description: [
+        'WMBus Smart+ is an innovative solution that ensures flexibility and security in remote water meter monitoring, with the ability to remotely diagnose, change settings and clear alarms, without the need for manual readings or intervention in the installation.',
       ],
       featuresHeading: 'Key features',
       features: [
-        'Parallel delivery of consumption logs and remote alarms',
-        'AES 128 encryption keeps data secure end to end',
-        'Remote configuration via Range ONE handheld or ECLIPSE gateways',
-        'Battery lifetime up to 12 years in typical duty cycle',
-        'IP68 sealed housing ready for underground chambers',
+        'Bidirectional radio communication enabling remote reading, configuration and device diagnostics',
+        'Three data transmission modes: short, long and long+ (with history up to 15 months)',
+        'Full compatibility with Smart+ and Smart C+ water meters from Apator Powogaz',
+        'Optical sensor resistant to magnetic interference',
+        'Easy mounting without wiring, configuration via Range One Bluetooth and Route One app',
+        'Transmission range up to 300 m in line of sight',
+        '3.6 V lithium battery with lifespan up to 11 years',
+        'IP65 protection rating, compliant with EN 13757 and OMS standards',
       ],
     },
 
@@ -2208,22 +2216,26 @@ const de: ContentStructure = {
     'wmbus-smart-plus': {
       slug: 'wmbus-smart-plus',
       heading: 'Kommunikationsmodule im Ueberblick',
-      title: 'wMBus Smart+',
+      title: 'WMBus Smart+',
       intro:
-        'Funkaufsatz für Smart+ Wasser- und Wärmezaehler, der sofortigen Zugriff auf Messdaten im Wireless-M-Bus-Standard liefert.',
+        'WMBus Smart+ ist ein kompaktes Funkmodul im Wireless M-Bus 868 MHz Standard, entwickelt für Smart+ und Smart C+ Wasserzaehler von Apator Powogaz. Es ermöglicht schnelle, zuverlaessige Fernauslesung. Es bietet erweiterte Ueberwachungsfunktionen für Unregelmaessigkeiten wie: Rueckfluss, Leckage, magnetische Manipulation oder niedrigen Batteriestand.',
       image: {
         src: '/images/products/moduly-komunikacyjne/wmbus-smart-plus.png',
-        alt: 'wMBus Smart+ Funkmodul',
+        alt: 'WMBus Smart+ Funkmodul',
       },
       description: [
+        'WMBus Smart+ ist eine innovative Lösung, die Flexibilitaet und Sicherheit bei der Fernueberwachung von Wasserzaehlern gewaehrleistet, mit der Moeglichkeit zur Ferndiagnose, Aenderung von Einstellungen und Loeschung von Alarmen, ohne die Notwendigkeit manueller Ablesungen oder Eingriffe in die Installation.',
       ],
       featuresHeading: 'Hauptmerkmale',
       features: [
-        'Parallele Uebertragung von Verbrauchsprotokollen und Fernalarmen',
-        'AES-128-Verschluesselung für durchgaengig gesicherte Daten',
-        'Fernkonfiguration ueber das Handgeraet Range ONE oder ECLIPSE-Gateways',
-        'Batterielebensdauer bis zu 12 Jahren im typischen Betrieb',
-        'IP68-geschuetztes Gehaeuse für den Einsatz in Schaechten',
+        'Bidirektionale Funkkommunikation zur Fernauslesung, Konfiguration und Geraetediagnose',
+        'Drei Datenuebertragungsmodi: short, long und long+ (mit Historie bis zu 15 Monaten)',
+        'Volle Kompatibilitaet mit Smart+ und Smart C+ Wasserzaehlern von Apator Powogaz',
+        'Optischer Sensor resistent gegen magnetische Stoerungen',
+        'Einfache Montage ohne Verkabelung, Konfiguration ueber Range One Bluetooth und Route One App',
+        'Uebertragungsreichweite bis zu 300 m in Sichtlinie',
+        '3,6 V Lithiumbatterie mit Lebensdauer bis zu 11 Jahren',
+        'Schutzart IP65, konform mit EN 13757 und OMS Normen',
       ],
     },
 
