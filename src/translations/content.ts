@@ -544,8 +544,8 @@ const pl: ContentStructure = {
     },
     {
       slug: 'moduly-komunikacyjne',
-      title: 'Moduly komunikacyjne',
-      description: 'Moduly radiowe i przewodowe do integracji licznikow z platformami Kayon.',
+      title: 'Moduły komunikacyjne',
+      description: 'Moduły radiowe i przewodowe do integracji liczników z platformami Kayon. Oferujemy rozwiązania łączności radiowej wMBus oraz przewodowej M-Bus, umożliwiające automatyczny, zdalny odczyt danych pomiarowych z wodomierzy i ciepłomierzy. Nasze moduły zapewniają niezawodną i bezpieczną transmisję danych do centralnych systemów zarządzania.',
       items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
     },
     {
@@ -587,6 +587,10 @@ const pl: ContentStructure = {
         'Bateria zywotna do 11 lat, opcjonalna szczelnosc IP68',
         'Zgodnosc z normami EN 13757 i OMS',
       ],
+      downloads: [
+        { label: 'Karta katalogowa (PL)', href: '/downloads/Modularis One_PL.pdf' },
+        { label: 'Karta katalogowa (DE)', href: '/downloads/Modularis One_DE.pdf' },
+      ],
     },
 
     'wmbus-smart-plus': {
@@ -613,6 +617,9 @@ const pl: ContentStructure = {
         'Bateria litowa 3.6 V o żywotności do 11 lat',
         'Stopień ochrony IP65, zgodność z normami EN 13757 i OMS',
       ],
+      downloads: [
+        { label: 'Karta katalogowa (DE)', href: '/downloads/WMBus Smart+_DE.pdf' },
+      ],
     },
 
     'mbus-smart-plus': {
@@ -635,6 +642,9 @@ const pl: ContentStructure = {
         'Diagnostyka magistrali oraz sygnalizacja zaklocen',
         'Wysoka odpornosc na przepiecia i niepoprawne podlaczenia',
         'Kompaktowa konstrukcja do montazu bez narzedzi',
+      ],
+      downloads: [
+        { label: 'Karta katalogowa (DE)', href: '/downloads/MBus Smart+_DE.pdf' },
       ],
     },
 
@@ -659,6 +669,9 @@ const pl: ContentStructure = {
         'Szybka konfiguracja poprzez NFC lub program Route ONE',
         'Praca w szerokim zakresie temperatur -10C do 55C',
       ],
+      downloads: [
+        { label: 'Karta katalogowa (DE)', href: '/downloads/MicroClima WMBUS_DE.pdf' },
+      ],
     },
 
     'wmbus-rc12': {
@@ -681,6 +694,9 @@ const pl: ContentStructure = {
         'Zdalna aktualizacja ustawien czestotliwosci odczytu',
         'Bateria zywotna do 12 lat przy interwale 15 minut',
         'Solidna obudowa IP67 odporna na wilgotne srodowisko',
+      ],
+      downloads: [
+        { label: 'Karta katalogowa (DE)', href: '/downloads/RC12  WMBUS_DE.pdf' },
       ],
     },
 
@@ -902,6 +918,10 @@ const pl: ContentStructure = {
         'Zewnetrzna antena i port USB do ladowania baterii',
         'Mozliwosc odczytu danych i zdalnej konfiguracji modulow radiowych',
       ],
+      downloads: [
+        { label: 'Karta katalogowa (EN)', href: '/downloads/Range One 3_EN.pdf' },
+        { label: 'Karta katalogowa (DE)', href: '/downloads/Range One 3_DE.pdf' },
+      ],
     },
 
     'eclipse-wmbus-gateway': {
@@ -927,6 +947,10 @@ const pl: ContentStructure = {
         'Odporna na kurz i UV obudowa o estetycznym designie',
         'Czujniki bezpieczenstwa wykrywajace otwarcie i demontaz urzadzenia',
       ],
+      downloads: [
+        { label: 'Karta katalogowa (EN)', href: '/downloads/ECLIPSE_EN.pdf' },
+        { label: 'Karta katalogowa (DE)', href: '/downloads/ECLIPSE_DE.pdf' },
+      ],
     },
 
     'eclipse-wmbus-repeater': {
@@ -943,6 +967,9 @@ const pl: ContentStructure = {
         'ECLIPSE WM-Bus Repeater to nowoczesne, energooszczedne rozwiązanie zwiekszajace zasieg i niezawodnosc transmisji w systemach telemetrycznych, redukujace koszty serwisowe i przyspieszajace wdrozenia.',
       ],
       featuresHeading: 'Najważniejsze cechy',
+      downloads: [
+        { label: 'Karta katalogowa (EN)', href: '/downloads/ECLIPSE_REPEATER_EN.pdf' },
+      ],
       features: [
         'Prosta konfiguracja, zdalna aktualizacja firmware',
         'Wysoka czulosc odbiornika 868 MHz dla skutecznego odczytu w trudnych warunkach',
@@ -1443,7 +1470,7 @@ const en: ContentStructure = {
     {
       slug: 'moduly-komunikacyjne',
       title: 'Communication modules',
-      description: 'Radio and wired modules connecting meters with Kayon platforms.',
+      description: 'Radio and wired modules for integrating meters with Kayon platforms. We offer wireless wMBus and wired M-Bus connectivity solutions, enabling automatic remote reading of measurement data from water and heat meters. Our modules ensure reliable and secure data transmission to central management systems.',
       items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
     },
     {
@@ -1484,6 +1511,10 @@ const en: ContentStructure = {
         'Battery lifetime up to 11 years, optional IP68 enclosure',
         'Compliance with EN 13757 and OMS standards',
       ],
+      downloads: [
+        { label: 'Product datasheet (PL)', href: '/downloads/Modularis One_PL.pdf' },
+        { label: 'Product datasheet (DE)', href: '/downloads/Modularis One_DE.pdf' },
+      ],
     },
 
     'wmbus-smart-plus': {
@@ -1510,6 +1541,9 @@ const en: ContentStructure = {
         '3.6 V lithium battery with lifespan up to 11 years',
         'IP65 protection rating, compliant with EN 13757 and OMS standards',
       ],
+      downloads: [
+        { label: 'Product datasheet (DE)', href: '/downloads/WMBus Smart+_DE.pdf' },
+      ],
     },
 
     'mbus-smart-plus': {
@@ -1533,6 +1567,10 @@ const en: ContentStructure = {
         'High immunity against surges and wiring mistakes',
         'Compact enclosure enabling tool-free installation',
       ],
+      downloads: [
+        { label: 'Product datasheet (EN)', href: '/downloads/MBus Smart+_EN.pdf' },
+        { label: 'Product datasheet (DE)', href: '/downloads/MBus Smart+_DE.pdf' },
+      ],
     },
 
     'wmbus-microclima': {
@@ -1545,6 +1583,10 @@ const en: ContentStructure = {
         src: '/images/products/moduly-komunikacyjne/wmbus-microclima.png',
         alt: 'wMBus MicroClima wireless module',
       },
+      downloads: [
+        { label: 'Product datasheet (EN)', href: '/downloads/MicroClima WMBUS_EN.pdf' },
+        { label: 'Product datasheet (DE)', href: '/downloads/MicroClima WMBUS_DE.pdf' },
+      ],
       description: [
       ],
       featuresHeading: 'Key features',
@@ -1568,6 +1610,10 @@ const en: ContentStructure = {
         src: '/images/products/moduly-komunikacyjne/wmbus-rc12.png',
         alt: 'wMBus RC12 communication module',
       },
+      downloads: [
+        { label: 'Product datasheet (EN)', href: '/downloads/RC12 WMBUS_EN.pdf' },
+        { label: 'Product datasheet (DE)', href: '/downloads/RC12  WMBUS_DE.pdf' },
+      ],
       description: [
       ],
       featuresHeading: 'Key features',
@@ -1799,6 +1845,10 @@ const en: ContentStructure = {
         'External antenna and USB port for battery charging',
         'Data reading and remote configuration capability of radio modules',
       ],
+      downloads: [
+        { label: 'Product datasheet (EN)', href: '/downloads/Range One 3_EN.pdf' },
+        { label: 'Product datasheet (DE)', href: '/downloads/Range One 3_DE.pdf' },
+      ],
     },
 
     'eclipse-wmbus-gateway': {
@@ -1811,6 +1861,10 @@ const en: ContentStructure = {
         src: '/images/products/infrastruktura/eclipse-wmbus-gateway.png',
         alt: 'ECLIPSE WM-Bus Gateway',
       },
+      downloads: [
+        { label: 'Product datasheet (EN)', href: '/downloads/ECLIPSE_EN.pdf' },
+        { label: 'Product datasheet (DE)', href: '/downloads/ECLIPSE_DE.pdf' },
+      ],
       description: [
         'ECLIPSE WM-Bus Gateway is a reliable, economical data concentrator offering full control over telemetric systems at low operating costs.',
       ],
@@ -1840,6 +1894,9 @@ const en: ContentStructure = {
         'ECLIPSE WM-Bus Repeater is a modern, energy-efficient solution increasing range and transmission reliability in telemetric systems, reducing service costs and accelerating deployments.',
       ],
       featuresHeading: 'Key features',
+      downloads: [
+        { label: 'Product datasheet (EN)', href: '/downloads/ECLIPSE_REPEATER_EN.pdf' },
+      ],
       features: [
         'Simple configuration, remote firmware update',
         'High sensitivity of 868 MHz receiver for effective reading in difficult conditions',
@@ -2330,7 +2387,7 @@ const de: ContentStructure = {
     {
       slug: 'moduly-komunikacyjne',
       title: 'Kommunikationsmodule',
-      description: 'Funk- und Kabelmodule zur Anbindung der Zaehler an Kayon Plattformen.',
+      description: 'Funk- und Kabelmodule zur Integration von Zaehlern in Kayon-Plattformen. Wir bieten drahtlose wMBus- und kabelgebundene M-Bus-Konnektivitaetsloesungen, die eine automatische Fernauslesung von Messdaten aus Wasser- und Waermezaehlern ermoeglichen. Unsere Module gewaehrleisten eine zuverlaessige und sichere Datenuebertragung zu zentralen Verwaltungssystemen.',
       items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
     },
     {
@@ -2371,6 +2428,10 @@ const de: ContentStructure = {
         'Batterielebensdauer bis zu 11 Jahren, optionales IP68-Gehaeuse',
         'Konform mit EN 13757 und OMS',
       ],
+      downloads: [
+        { label: 'Produktdatenblatt (PL)', href: '/downloads/Modularis One_PL.pdf' },
+        { label: 'Produktdatenblatt (DE)', href: '/downloads/Modularis One_DE.pdf' },
+      ],
     },
 
     'wmbus-smart-plus': {
@@ -2397,6 +2458,9 @@ const de: ContentStructure = {
         '3,6 V Lithiumbatterie mit Lebensdauer bis zu 11 Jahren',
         'Schutzart IP65, konform mit EN 13757 und OMS Normen',
       ],
+      downloads: [
+        { label: 'Produktdatenblatt (DE)', href: '/downloads/WMBus Smart+_DE.pdf' },
+      ],
     },
 
     'mbus-smart-plus': {
@@ -2419,6 +2483,10 @@ const de: ContentStructure = {
         'Busdiagnose und Stoerungsanzeige',
         'Hohe Bestaendigkeit gegen Ueberspannungen und Verdrahtungsfehler',
         'Kompaktes Gehaeuse für werkzeuglose Montage',
+      ],
+      downloads: [
+        { label: 'Produktdatenblatt (EN)', href: '/downloads/MBus Smart+_EN.pdf' },
+        { label: 'Produktdatenblatt (DE)', href: '/downloads/MBus Smart+_DE.pdf' },
       ],
     },
 
@@ -2443,6 +2511,10 @@ const de: ContentStructure = {
         'Schnelle Konfiguration via NFC oder dem Route-ONE-Tool',
         'Einsatzbereich von -10C bis 55C',
       ],
+      downloads: [
+        { label: 'Produktdatenblatt (EN)', href: '/downloads/MicroClima WMBUS_EN.pdf' },
+        { label: 'Produktdatenblatt (DE)', href: '/downloads/MicroClima WMBUS_DE.pdf' },
+      ],
     },
 
     'wmbus-rc12': {
@@ -2465,6 +2537,10 @@ const de: ContentStructure = {
         'Fernanpassung des Ausleseintervalls',
         'Batterielebensdauer bis zu 12 Jahren bei 15-Minuten-Intervall',
         'Robustes IP67-Gehaeuse widersteht Feuchtigkeit',
+      ],
+      downloads: [
+        { label: 'Produktdatenblatt (EN)', href: '/downloads/RC12 WMBUS_EN.pdf' },
+        { label: 'Produktdatenblatt (DE)', href: '/downloads/RC12  WMBUS_DE.pdf' },
       ],
     },
 
@@ -2686,6 +2762,10 @@ const de: ContentStructure = {
         'Externe Antenne und USB-Port zum Laden der Batterie',
         'Moeglichkeit zur Datenauslesung und Fernkonfiguration von Funkmodulen',
       ],
+      downloads: [
+        { label: 'Produktdatenblatt (EN)', href: '/downloads/Range One 3_EN.pdf' },
+        { label: 'Produktdatenblatt (DE)', href: '/downloads/Range One 3_DE.pdf' },
+      ],
     },
 
     'eclipse-wmbus-gateway': {
@@ -2711,6 +2791,10 @@ const de: ContentStructure = {
         'Staub- und UV-bestaendiges Gehaeuse mit aesthetischem Design',
         'Sicherheitssensoren zur Erkennung von Oeffnung und Demontage des Geraets',
       ],
+      downloads: [
+        { label: 'Produktdatenblatt (EN)', href: '/downloads/ECLIPSE_EN.pdf' },
+        { label: 'Produktdatenblatt (DE)', href: '/downloads/ECLIPSE_DE.pdf' },
+      ],
     },
 
     'eclipse-wmbus-repeater': {
@@ -2727,6 +2811,9 @@ const de: ContentStructure = {
         'ECLIPSE WM-Bus Repeater ist eine moderne, energiesparende Lösung, die Reichweite und Zuverlaessigkeit der Uebertragung in telemetrischen Systemen erhoeht, Servicekosten reduziert und Implementierungen beschleunigt.',
       ],
       featuresHeading: 'Hauptmerkmale',
+      downloads: [
+        { label: 'Produktdatenblatt (EN)', href: '/downloads/ECLIPSE_REPEATER_EN.pdf' },
+      ],
       features: [
         'Einfache Konfiguration, Firmware-Aktualisierung aus der Ferne',
         'Hohe Empfindlichkeit des 868-MHz-Empfaengers für effektives Auslesen unter schwierigen Bedingungen',

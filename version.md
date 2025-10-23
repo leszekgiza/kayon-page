@@ -1,3 +1,21 @@
+Version 2.4
+
+- Enhanced Communication Modules category page:
+  - Fixed Polish character encoding in category title ("Moduły komunikacyjne") and description ("liczników")
+  - Added comprehensive multi-sentence description for Communication Modules category in all 3 languages (PL/EN/DE)
+  - Added PDF download links to all communication module products:
+    - Modularis ONE (PL, DE)
+    - WMBus Smart+ (DE)
+    - MBus Smart+ (EN, DE)
+    - wMBus MicroClima (EN, DE)
+    - wMBus RC12 (EN, DE)
+  - Added PDF download links to all infrastructure products:
+    - Range ONE (EN, DE)
+    - ECLIPSE WM-Bus Gateway (EN, DE)
+    - ECLIPSE WM-Bus Repeater (EN)
+  - Copied all product catalog PDFs from "karty katalogowe" folder to public/downloads directory
+  - Added product datasheets in multiple languages where available
+
 Version 2.3
 
 - Fixed product category pages (Wodomierze, Ciepłomierze, etc.):
