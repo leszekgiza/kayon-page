@@ -32,7 +32,9 @@ const OfferSection = () => {
                 <ul className="space-y-3 text-sm text-primary/80">
                   {card.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-start gap-3">
-                      <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#2cbceb]" aria-hidden="true" />
+                      <span className="material-symbols-rounded text-2xl text-primary" aria-hidden="true">
+                        check
+                      </span>
                       <span>{bullet}</span>
                     </li>
                   ))}

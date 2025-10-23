@@ -3,7 +3,8 @@ Version 1.9
 - Fixed "Co oferujemy?" (Offer) section to match Figma design:
   - Changed background color from #35A8DD to #2cbceb (accent blue from Figma)
   - Fixed column proportions from 1.05:1 to 0.67:1 (text:cards) to match Figma layout
-  - Updated bullet point color to match new background color
+  - Replaced small bullet dots with Material Symbols "check" icons (24px x 24px)
+  - Changed bullet icons from colored dots to check icons in primary color
 
 Version 1.8
 
