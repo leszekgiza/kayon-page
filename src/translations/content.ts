@@ -557,7 +557,7 @@ const pl: ContentStructure = {
     {
       slug: 'infrastruktura',
       title: 'Infrastruktura',
-      description: 'Urzadzenia terenowe i stacjonarne budujace sieci odczytowe Kayon.',
+      description: 'Urządzenia terenowe i stacjonarne budujące sieci odczytowe Kayon. Odbiorniki radiowe, koncentratory danych i repeatery zapewniające niezawodną komunikację z licznikami w różnych konfiguracjach – od prostych systemów walk-by po zaawansowane sieci MESH z wielokrotnym przeskokiem.',
       items: ['range-one', 'eclipse-wmbus-gateway', 'eclipse-wmbus-repeater', 'eixo-wmbus-gateway', 'exio-wmbus-repeater'],
     },
   ],
@@ -1482,7 +1482,7 @@ const en: ContentStructure = {
     {
       slug: 'infrastruktura',
       title: 'Infrastructure',
-      description: 'Field and stationary devices building Kayon remote-reading networks.',
+      description: 'Field and stationary devices building Kayon remote-reading networks. Radio receivers, data concentrators and repeaters ensuring reliable communication with meters in various configurations – from simple walk-by systems to advanced MESH networks with multi-hop capabilities.',
       items: ['range-one', 'eclipse-wmbus-gateway', 'eclipse-wmbus-repeater', 'eixo-wmbus-gateway', 'exio-wmbus-repeater'],
     },
   ],
@@ -2399,7 +2399,7 @@ const de: ContentStructure = {
     {
       slug: 'infrastruktura',
       title: 'Infrastruktur',
-      description: 'Feld- und Netzwerktechnik für den Aufbau von Fernauslese-Netzen.',
+      description: 'Feld- und Netzwerktechnik für den Aufbau von Fernauslese-Netzen. Funkempfänger, Datenkonzentratoren und Repeater gewährleisten zuverlässige Kommunikation mit Zählern in verschiedenen Konfigurationen – von einfachen Walk-by-Systemen bis zu fortschrittlichen MESH-Netzwerken mit Multi-Hop-Fähigkeit.',
       items: ['range-one', 'eclipse-wmbus-gateway', 'eclipse-wmbus-repeater', 'eixo-wmbus-gateway', 'exio-wmbus-repeater'],
     },
   ],
