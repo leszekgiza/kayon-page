@@ -60,12 +60,12 @@ const HeroSection = () => {
 
       <div className="relative z-10 flex min-h-screen items-end">
         <div className="container-custom w-full pb-24 pt-36 md:pb-32 md:pt-44">
-          <div className="ml-auto flex max-w-xl flex-col items-end gap-7 text-right">
+          <div className="ml-auto flex max-w-xl flex-col items-start gap-7 text-left">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex flex-col items-end gap-6"
+              className="flex flex-col items-start gap-6"
             >
               <KayonLogo className="h-12 w-auto drop-shadow-[0_12px_45px_rgba(0,0,0,0.35)] md:h-14" />
               <h1 className="text-[15px] font-semibold leading-snug md:text-[21px] md:leading-tight">{hero.headline}</h1>

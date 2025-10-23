@@ -1,3 +1,7 @@
+Version 1.6
+
+- Fixed Hero section text alignment to match Figma design - changed from right-aligned to left-aligned text while keeping content positioned on the right side of the screen.
+
 Version 1.5
 
 - Removed "Rozwinięcie" / "Extended story" / "Hintergrund" heading from Hero section modal popup across all languages (PL/EN/DE).
