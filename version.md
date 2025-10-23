@@ -1,3 +1,10 @@
+Version 1.8
+
+- Fixed "Jak działamy?" (Benefits) section to match Figma design:
+  - Changed background color from #E8A33C to #f4b250 (lighter golden yellow from Figma)
+  - Fixed column proportions from 1.1:1 to 0.6:1 (text:cards) to match Figma layout
+  - Cards column now takes significantly more space as designed
+
 Version 1.7
 
 - Fixed "Nasi klienci" (Our clients) section to match Figma design:

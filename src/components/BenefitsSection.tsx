@@ -40,9 +40,9 @@ const BenefitsSection = () => {
 
   return (
     <>
-      <section className="bg-[#E8A33C] py-24 text-primary" id="jak-dzialamy">
+      <section className="bg-[#f4b250] py-24 text-primary" id="jak-dzialamy">
         <div className="container-custom">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.6fr)_minmax(0,1fr)]">
             <div className="space-y-6 text-black">
               <div className="inline-flex w-max items-center rounded-full border border-black/20 bg-white/40 px-6 py-2 text-sm font-semibold">
                 {benefits.label}
