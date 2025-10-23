@@ -165,7 +165,7 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
 
                 return (
                   <>
-                    <h2 className="text-xl font-semibold text-primary md:text-2xl">{product.title}</h2>
+                    <h2 className="pr-14 text-xl font-semibold text-primary md:text-2xl">{product.title}</h2>
                     <div className="mt-6">
                       <h3 className="text-lg font-semibold text-primary">{product.featuresHeading}</h3>
                       <ul className="mt-4 space-y-3 text-sm text-primary/90 md:text-base">
