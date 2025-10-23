@@ -1,3 +1,12 @@
+Version 2.7.5
+
+- Fixed Hero section layout on product category pages to match Figma:
+  - Changed from horizontal (title next to description) to vertical layout
+  - Title now appears above description box (flex-col instead of flex-row)
+  - Logo KAYON on left, title and description stacked vertically on right
+  - Increased gap between logo and content (gap-16)
+  - Matches Figma design exactly
+
 Version 2.7.4
 
 - Fixed Kayon Mark with complete LOGO component from Figma (pixel-perfect):
