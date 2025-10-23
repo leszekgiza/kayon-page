@@ -1,9 +1,10 @@
 Version 2.2
 
-- Fixed navigation:
-  - Added missing logo to desktop navigation (was empty div before)
-  - Logo now appears on the left side matching Figma design
-  - Fixed potential layout issues with navigation buttons
+- Fixed navigation button hover state:
+  - Changed hover from light (bg-white/15) to dark (bg-black/50)
+  - Buttons now remain visible on hover instead of disappearing
+  - Added border highlight on hover (border-white/50)
+  - Fixed issue where buttons would blend into background on light pages
 
 Version 2.1
 

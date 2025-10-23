@@ -18,15 +18,13 @@ const Navigation = () => {
     <nav className="absolute left-0 right-0 top-0 z-50">
       <div className="container-custom">
         <div className="flex items-center justify-between gap-4 py-6">
-          <Link href="/" className="hidden md:block" aria-label={navigation.homeAriaLabel}>
-            <KayonLogo className="h-12 w-auto text-white" />
-          </Link>
+          <div className="hidden h-12 w-12 md:block" aria-hidden />
           <div className="hidden items-center gap-3 md:flex">
             {primaryLinks.map((link) => (
               <Link
                 key={link.href}
                 href={resolveHref(link.href)}
-                className="inline-flex items-center rounded-full border border-white/35 bg-black/35 px-6 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/15"
+                className="inline-flex items-center rounded-full border border-white/35 bg-black/35 px-6 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/50 hover:border-white/50"
               >
                 {link.label}
               </Link>
