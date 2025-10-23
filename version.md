@@ -1,3 +1,10 @@
+Version 2.5
+
+- Enhanced Infrastructure category page:
+  - Fixed Polish character encoding in category description ("Urządzenia", "budujące")
+  - Added comprehensive multi-sentence description for Infrastructure category in all 3 languages (PL/EN/DE)
+  - Added German PDF datasheet to ECLIPSE WM-Bus Repeater product (previously only had EN)
+
 Version 2.4
 
 - Enhanced Communication Modules category page:

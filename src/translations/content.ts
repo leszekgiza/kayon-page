@@ -969,6 +969,7 @@ const pl: ContentStructure = {
       featuresHeading: 'Najważniejsze cechy',
       downloads: [
         { label: 'Karta katalogowa (EN)', href: '/downloads/ECLIPSE_REPEATER_EN.pdf' },
+        { label: 'Karta katalogowa (DE)', href: '/downloads/ECLIPSE_REPEATER_DE.pdf' },
       ],
       features: [
         'Prosta konfiguracja, zdalna aktualizacja firmware',
@@ -1896,6 +1897,7 @@ const en: ContentStructure = {
       featuresHeading: 'Key features',
       downloads: [
         { label: 'Product datasheet (EN)', href: '/downloads/ECLIPSE_REPEATER_EN.pdf' },
+        { label: 'Product datasheet (DE)', href: '/downloads/ECLIPSE_REPEATER_DE.pdf' },
       ],
       features: [
         'Simple configuration, remote firmware update',
@@ -2813,6 +2815,7 @@ const de: ContentStructure = {
       featuresHeading: 'Hauptmerkmale',
       downloads: [
         { label: 'Produktdatenblatt (EN)', href: '/downloads/ECLIPSE_REPEATER_EN.pdf' },
+        { label: 'Produktdatenblatt (DE)', href: '/downloads/ECLIPSE_REPEATER_DE.pdf' },
       ],
       features: [
         'Einfache Konfiguration, Firmware-Aktualisierung aus der Ferne',
