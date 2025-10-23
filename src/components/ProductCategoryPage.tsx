@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
+import KayonLogo from './KayonLogo';
 
 interface ProductCategoryPageProps {
   slug: string;
@@ -33,98 +34,105 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
 
   return (
     <>
-      <section className="bg-white py-16 md:py-24">
-        <div className="container-custom space-y-12 md:space-y-16">
-          <div className="space-y-4 text-primary">
-            <span className="inline-flex w-max items-center rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-primary/70">
-              {category.title}
-            </span>
-            <h1 className="text-3xl font-bold md:text-[44px]">{category.title}</h1>
-            <p className="text-base text-primary-lighter md:text-lg">{category.description}</p>
+      {/* Hero Section */}
+      <section className="relative min-h-[400px] overflow-hidden bg-[#3C3C3C] text-white">
+        {/* Decorative circle elements */}
+        <div className="pointer-events-none absolute left-[15%] top-1/2 h-[300px] w-[300px] -translate-y-1/2 rounded-full border border-white/10" />
+        <div className="pointer-events-none absolute right-[10%] top-1/2 h-[120px] w-[120px] -translate-y-1/2 rounded-full bg-white/5" />
+
+        <div className="container-custom relative z-10 flex min-h-[400px] items-center py-20">
+          <div className="grid w-full gap-12 lg:grid-cols-[auto_1fr]">
+            {/* Logo */}
+            <div className="flex items-center">
+              <KayonLogo className="h-16 w-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] md:h-20" />
+            </div>
+
+            {/* Title and Description */}
+            <div className="flex items-center gap-8">
+              <h1 className="text-3xl font-bold md:text-5xl lg:text-6xl">{category.title}</h1>
+              <div className="max-w-md rounded-[28px] border border-white/25 bg-white/10 px-6 py-5 backdrop-blur-sm md:px-8 md:py-6">
+                <p className="text-sm leading-relaxed text-white/90 md:text-base">{category.description}</p>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="space-y-12">
-            {items.map((detail) => {
-              const downloadLink = extractDownloadLink(detail.description);
-              const visibleFeatures = detail.features.slice(0, 3);
-              const hasMoreFeatures = detail.features.length > 3;
+      {/* Products Section */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="container-custom space-y-16 md:space-y-20">
+          {items.map((detail) => {
+            const downloadLink = extractDownloadLink(detail.description);
+            const visibleFeatures = detail.features.slice(0, 3);
+            const hasMoreFeatures = detail.features.length > 3;
 
-              return (
-                <article
-                  key={detail.slug}
-                  className="rounded-[36px] border border-neutral-gray-light/70 bg-neutral-white px-8 py-10 shadow-[0_24px_60px_-35px_rgba(16,16,16,0.35)] md:px-12 md:py-12"
-                >
-                  <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,400px)]">
-                    <div className="space-y-8">
-                      <div className="space-y-4">
-                        <h2 className="text-2xl font-semibold text-primary md:text-[30px]">{detail.title}</h2>
-                        <p className="text-base text-primary-lighter md:text-lg">{detail.intro}</p>
-                      </div>
+            return (
+              <article key={detail.slug} className="grid gap-8 lg:grid-cols-[280px_1fr_auto] lg:gap-12">
+                {/* Left Column - Product Name and Buttons */}
+                <div className="space-y-6">
+                  <div>
+                    <h2 className="text-3xl font-bold text-primary md:text-4xl">{detail.title}</h2>
+                    <p className="mt-2 text-base text-primary-lighter">{detail.intro}</p>
+                  </div>
 
-                      <div className="space-y-4">
-                        <h3 className="text-lg font-semibold text-primary md:text-xl">{detail.featuresHeading}</h3>
-                        <ul className="space-y-3 text-sm text-primary-lighter md:text-base">
-                          {visibleFeatures.map((feature) => (
-                            <li key={feature} className="flex items-start gap-3">
-                              <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-accent-green" />
-                              <span>{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        {hasMoreFeatures && (
-                          <button
-                            type="button"
-                            onClick={() => setExpandedProduct(detail.slug)}
-                            className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/70"
-                          >
-                            Czytaj więcej
-                            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                          </button>
-                        )}
-                      </div>
-
-                      <div className="flex flex-wrap gap-3">
-                        <Link
-                          href={`/produkty/${detail.slug}`}
-                          className="inline-flex items-center gap-2 rounded-full border border-primary/30 px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                        >
-                          {detail.title}
-                        </Link>
-                        {downloadLink && (
-                          <a
-                            href={downloadLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 rounded-full border border-accent-green/30 bg-accent-green/10 px-4 py-2 text-sm font-semibold text-accent-green transition hover:bg-accent-green/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-green"
-                          >
-                            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                            Pobierz kartę katalogową
-                          </a>
-                        )}
-                      </div>
-                    </div>
-
-                    {detail.image && (
-                      <div className="relative min-h-[280px] overflow-hidden rounded-[28px] border border-neutral-gray-light/60 bg-white shadow-[0_16px_40px_-25px_rgba(16,16,16,0.25)] sm:min-h-[320px] lg:min-h-[360px]">
-                        <Image
-                          src={detail.image.src}
-                          alt={detail.image.alt}
-                          fill
-                          sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 90vw"
-                          className="object-contain p-6 lg:p-8"
-                          priority={false}
-                        />
-                      </div>
+                  <div className="flex flex-col gap-3">
+                    <Link
+                      href={`/produkty/${detail.slug}`}
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 px-5 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    >
+                      Dowiedz się więcej
+                    </Link>
+                    {downloadLink && (
+                      <a
+                        href={downloadLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 px-5 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      >
+                        Pobierz PDF kartę
+                      </a>
                     )}
                   </div>
-                </article>
-              );
-            })}
-          </div>
+                </div>
+
+                {/* Center Column - Description Card */}
+                <div className="rounded-[32px] bg-neutral-gray-light/30 px-8 py-8 md:px-10 md:py-10">
+                  <h3 className="text-base font-semibold text-primary md:text-lg">{detail.featuresHeading}</h3>
+                  <ul className="mt-5 space-y-3 text-sm text-primary-lighter md:text-base">
+                    {visibleFeatures.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3">
+                        <span className="mt-1 inline-flex h-2 w-2 flex-none rounded-full bg-primary" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {hasMoreFeatures && (
+                    <button
+                      type="button"
+                      onClick={() => setExpandedProduct(detail.slug)}
+                      className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    >
+                      Read more
+                    </button>
+                  )}
+                </div>
+
+                {/* Right Column - Product Image */}
+                {detail.image && (
+                  <div className="relative h-[280px] w-full overflow-hidden rounded-[28px] bg-neutral-gray-light/30 lg:h-auto lg:w-[320px]">
+                    <Image
+                      src={detail.image.src}
+                      alt={detail.image.alt}
+                      fill
+                      sizes="(min-width: 1024px) 320px, 100vw"
+                      className="object-contain p-6 lg:p-8"
+                      priority={false}
+                    />
+                  </div>
+                )}
+              </article>
+            );
+          })}
         </div>
       </section>
 
@@ -166,12 +174,30 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
                 return (
                   <>
                     <h2 className="pr-14 text-xl font-semibold text-primary md:text-2xl">{product.title}</h2>
+
+                    {/* Product intro */}
+                    {product.intro && (
+                      <p className="mt-6 text-base leading-relaxed text-primary">{product.intro}</p>
+                    )}
+
+                    {/* Additional description paragraphs */}
+                    {product.description && product.description.length > 0 && (
+                      <div className="mt-4 space-y-3">
+                        {product.description.map((paragraph, index) => (
+                          <p key={index} className="text-base leading-relaxed text-primary/90">
+                            {paragraph}
+                          </p>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Features section */}
                     <div className="mt-6">
                       <h3 className="text-lg font-semibold text-primary">{product.featuresHeading}</h3>
                       <ul className="mt-4 space-y-3 text-sm text-primary/90 md:text-base">
                         {product.features.map((feature) => (
                           <li key={feature} className="flex items-start gap-3">
-                            <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-accent-green" />
+                            <span className="mt-1 inline-flex h-2 w-2 flex-none rounded-full bg-primary" />
                             <span>{feature}</span>
                           </li>
                         ))}

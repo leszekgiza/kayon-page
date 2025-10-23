@@ -1,3 +1,24 @@
+Version 2.7
+
+- Redesigned product category pages to match Figma design:
+  - Added Hero section with dark background (#3C3C3C), Kayon logo, category title, and description bubble
+  - Decorative circular elements in Hero background
+  - Completely reorganized product cards with 3-column layout:
+    - Left column: Product name, intro, action buttons ("Dowiedz się więcej", "Pobierz PDF kartę")
+    - Center column: Gray rounded card with features list and "Read more" button
+    - Right column: Product image in gray rounded container
+  - Updated button styling to match Figma specifications
+  - Black "Read more" button replaces text link for feature expansion
+- Added Kayon Mark logo to navigation:
+  - Logo positioned in top-left (57x57px equivalent)
+  - Clickable logo links to homepage
+  - White circle background with colorful Y symbol
+- Enhanced "Read more" modal popup to match Figma design:
+  - Now displays full product intro text
+  - Shows additional description paragraphs when available
+  - Organized layout: title → intro → description → features list
+  - Improved spacing and typography for better readability
+
 Version 2.6
 
 - Fixed mobile responsiveness issues:
