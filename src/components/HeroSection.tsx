@@ -123,9 +123,11 @@ const HeroSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 6l12 12M18 6 6 18" />
                 </svg>
               </button>
-              <h2 id="hero-modal-title" className="text-2xl font-semibold text-primary">
-                {hero.modalTitle}
-              </h2>
+              {hero.modalTitle && (
+                <h2 id="hero-modal-title" className="text-2xl font-semibold text-primary">
+                  {hero.modalTitle}
+                </h2>
+              )}
               <p className="mt-6 text-base font-semibold leading-relaxed text-primary">{hero.modalLead}</p>
               {hero.modalBody.map((paragraph, index) => (
                 <p

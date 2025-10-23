@@ -1,3 +1,7 @@
+Version 1.5
+
+- Removed "Rozwinięcie" / "Extended story" / "Hintergrund" heading from Hero section modal popup across all languages (PL/EN/DE).
+
 Version 1.4
 
 - Updated product translations with new water meter and infrastructure content across PL/EN/DE.

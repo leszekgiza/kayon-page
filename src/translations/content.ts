@@ -233,7 +233,7 @@ const pl: ContentStructure = {
     body:
       'Nasze systemy zdalnego odczytu wody i ciepła już dziś działają zgodnie z unijnymi regulacjami, które zaczną obowiązywać w 2027 roku.',
     ctaLabel: 'Czytaj więcej',
-    modalTitle: 'Rozwinięcie',
+    modalTitle: '',
     modalLead:
       'Projektujemy nasze rozwiązania z myślą o wszystkich uczestnikach rynku  -  dystrybutorach, instalatorach, zarządcach nieruchomości, deweloperach, spółdzielniach, wspólnotach oraz pojedynczych lokatorach.',
     modalBody: [
@@ -1078,7 +1078,7 @@ const en: ContentStructure = {
     body:
       'Our remote meter-reading systems for water and heat already comply with EU regulations that will become mandatory in 2027.',
     ctaLabel: 'Learn more',
-    modalTitle: 'Extended story',
+    modalTitle: '',
     modalLead:
       'We design our solutions with every market participant in mind  -  distributors, installers, property managers, developers, housing cooperatives, homeowner associations and individual residents.',
     modalBody: [
@@ -1914,7 +1914,7 @@ const de: ContentStructure = {
     body:
       'Unsere Systeme zur Fernablesung von Wasser- und Wärmezählern erfüllen bereits heute die EU-Vorgaben, die ab 2027 verpflichtend werden.',
     ctaLabel: 'Mehr erfahren',
-    modalTitle: 'Hintergrund',
+    modalTitle: '',
     modalLead:
       'Wir entwickeln unsere Lösungen für alle Marktteilnehmenden  -  Distributoren, Installationsbetriebe, Hausverwaltungen, Projektentwickler, Wohnungsgenossenschaften, Eigentümergemeinschaften sowie einzelne Bewohnerinnen und Bewohner.',
     modalBody: [
