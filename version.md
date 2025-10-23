@@ -4,7 +4,7 @@ Version 1.9
   - Changed background color from #35A8DD to #2cbceb (accent blue from Figma)
   - Fixed column proportions from 1.05:1 to 0.67:1 (text:cards) to match Figma layout
   - Replaced small bullet dots with Material Symbols "check" icons (24px x 24px)
-  - Changed bullet icons from colored dots to check icons in primary color
+  - Changed bullet icons from colored dots to check icons in accent blue (#2cbceb)
 
 Version 1.8
 
