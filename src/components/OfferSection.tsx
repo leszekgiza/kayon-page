@@ -7,9 +7,9 @@ const OfferSection = () => {
   const { offer } = useContent();
 
   return (
-    <section className="bg-[#35A8DD] py-24 text-white" id="oferta">
+    <section className="bg-[#2cbceb] py-24 text-white" id="oferta">
       <div className="container-custom">
-        <div className="grid gap-12 lg:grid-cols-[1.05fr_1fr]">
+        <div className="grid gap-12 lg:grid-cols-[0.67fr_1fr]">
           <div className="space-y-6">
             <div className="inline-flex w-max items-center rounded-full border border-white/40 bg-white/10 px-6 py-2 text-sm font-semibold">
               {offer.label}
@@ -32,7 +32,7 @@ const OfferSection = () => {
                 <ul className="space-y-3 text-sm text-primary/80">
                   {card.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-start gap-3">
-                      <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#35A8DD]" aria-hidden="true" />
+                      <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#2cbceb]" aria-hidden="true" />
                       <span>{bullet}</span>
                     </li>
                   ))}
