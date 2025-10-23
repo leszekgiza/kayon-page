@@ -1,3 +1,16 @@
+Version 2.6
+
+- Fixed mobile responsiveness issues:
+  - Added overflow-x-hidden to html and body elements to prevent horizontal scrolling
+  - Content no longer extends beyond viewport width on mobile devices
+  - Users can now properly view all content without unwanted horizontal scroll
+- Fixed modal popup close button:
+  - Added right padding (pr-14) to modal title to prevent text overlap with close button
+  - Close button (X) now has proper spacing and doesn't cover content
+  - Improved visual hierarchy in "Czytaj więcej" popup
+- Standardized PDF file naming:
+  - Renamed ECLIPSE REPEATER DE.pdf for consistency (removed extra space)
+
 Version 2.5
 
 - Enhanced Infrastructure category page:
