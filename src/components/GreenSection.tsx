@@ -85,7 +85,7 @@ const GreenSection = () => {
     clients.dotAriaTemplate.replace('%d', String(dotIndex + 1));
 
   return (
-    <section id="nasi-klienci" className="relative overflow-hidden bg-gradient-to-r from-[#2F8E5C] via-[#2F8E5C] to-[#4ABF73] py-24 text-white">
+    <section id="nasi-klienci" className="relative overflow-hidden bg-[#53923e] py-24 text-white">
       <div className="absolute inset-0 opacity-30">
         <div className="mx-auto h-full w-full max-w-5xl rounded-full border border-white/20 blur-3xl" />
       </div>
@@ -96,9 +96,6 @@ const GreenSection = () => {
               {clients.label}
             </div>
             <h2 className="text-3xl leading-tight md:text-[40px]">{clients.heading}</h2>
-            <p className="w-full max-w-xl text-sm leading-relaxed text-white/80 md:text-base">
-              {clients.description}
-            </p>
             <div className="w-full max-w-xl rounded-[40px] border border-white/30 bg-white/10 px-8 py-6 text-sm leading-relaxed md:text-base">
               {clients.highlight}
             </div>

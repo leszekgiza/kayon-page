@@ -1,3 +1,10 @@
+Version 1.7
+
+- Fixed "Nasi klienci" (Our clients) section to match Figma design:
+  - Changed background color from gradient (#2F8E5C to #4ABF73) to solid #53923e (darker olive green)
+  - Removed non-existent description text "Rozumiemy potrzeby każdej strony..." across all languages (PL/EN/DE)
+  - Updated ClientsSectionContent interface to remove description field
+
 Version 1.6
 
 - Fixed Hero section text alignment to match Figma design - changed from right-aligned to left-aligned text while keeping content positioned on the right side of the screen.

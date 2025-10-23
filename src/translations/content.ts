@@ -58,7 +58,6 @@ export interface ClientCardContent {
 export interface ClientsSectionContent {
   label: string;
   heading: string;
-  description: string;
   highlight: string;
   cards: ClientCardContent[];
   dotAriaTemplate: string;
@@ -282,8 +281,6 @@ const pl: ContentStructure = {
     label: 'Nasi klienci',
     heading:
       'Kayon oferuje konkretną odpowiedź na kluczowe wymagania wszystkich grup klientów',
-    description:
-      'Rozumiemy potrzeby każdej strony  -  od dystrybutorów i instalatorów po administratorów, zarządców oraz mieszkańców.',
     highlight:
       'To wszystko realizujemy z zachowaniem wysokiej efektywności energetycznej i minimalnego wpływu na środowisko. Dobrze zaprojektowane urządzenia muszą działać oszczędnie i bezawaryjnie  -  z korzyścią dla ludzi i planety.',
     cards: [
@@ -1127,8 +1124,6 @@ const en: ContentStructure = {
     label: 'Our clients',
     heading:
       'Kayon delivers a precise answer to the needs of every stakeholder group',
-    description:
-      'We understand the expectations of distributors, installers, administrators, managers and residents alike.',
     highlight:
       'We deliver all of this while maintaining high energy efficiency and minimising environmental impact. Well-designed systems should operate efficiently and without failure  -  to the benefit of people and the planet.',
     cards: [
@@ -1962,8 +1957,6 @@ const de: ContentStructure = {
   clients: {
     label: 'Unsere Kundinnen und Kunden',
     heading: 'Kayon bietet für jede Zielgruppe die passende Antwort',
-    description:
-      'Wir kennen die Anforderungen von Distributoren, Installationsbetrieben, Verwaltungen und Bewohnerinnen gleichermaßen.',
     highlight:
       'Wir gewährleisten all das und behalten zugleich Energieeffizienz und Umweltschutz im Blick. Gut gestaltete Systeme sollen effizient und störungsfrei laufen  -  zum Vorteil von Menschen und Umwelt.',
     cards: [
