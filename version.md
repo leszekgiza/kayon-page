@@ -1,3 +1,13 @@
+Version 2.7.1
+
+- Fixed Kayon Mark logo to match exact Figma specifications:
+  - Exact dimensions: 57x57px (fixed)
+  - Border radius: 30px for rounded square appearance
+  - Drop shadow: 0px 10px 40px rgba(0,0,0,0.15)
+  - White background: #FFFFFF
+  - Y symbol with three colored lines: green (#77BB61), cyan (#2CBCEB), orange (#F4B250)
+  - Added smooth opacity transition on hover (600ms ease-out)
+
 Version 2.7
 
 - Redesigned product category pages to match Figma design:

@@ -19,8 +19,12 @@ const Navigation = () => {
     <nav className="absolute left-0 right-0 top-0 z-50">
       <div className="container-custom">
         <div className="flex items-center justify-between gap-4 py-6">
-          <Link href="/" className="hidden md:block" aria-label="Kayon - Strona główna">
-            <KayonMark className="h-14 w-14" />
+          <Link
+            href="/"
+            className="hidden transition-opacity duration-[600ms] ease-out hover:opacity-80 md:block"
+            aria-label="Kayon - Strona główna"
+          >
+            <KayonMark />
           </Link>
           <div className="hidden items-center gap-3 md:flex">
             {primaryLinks.map((link) => (
