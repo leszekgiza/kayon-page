@@ -1,3 +1,10 @@
+Version 2.2
+
+- Fixed navigation:
+  - Added missing logo to desktop navigation (was empty div before)
+  - Logo now appears on the left side matching Figma design
+  - Fixed potential layout issues with navigation buttons
+
 Version 2.1
 
 - Added Privacy Policy and Cookie Policy pages:
