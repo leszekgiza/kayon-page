@@ -1,3 +1,12 @@
+Version 2.3
+
+- Fixed product category pages (Wodomierze, Ciepłomierze, etc.):
+  - Show only first 3 features on main page, rest in "Czytaj więcej" popup
+  - Added "Pobierz kartę katalogową" download button with link extraction
+  - Changed product image background from gray to white
+  - Moved GWF Sonico Nano to end of water meters list across all languages
+  - Added modal popup with full feature list when clicking "Czytaj więcej"
+
 Version 2.2
 
 - Fixed navigation button hover state:

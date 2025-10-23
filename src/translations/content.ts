@@ -534,7 +534,7 @@ const pl: ContentStructure = {
       slug: 'wodomierze',
       title: 'Wodomierze',
       description: 'Oferujemy wyłącznie urządzenia najwyższej jakości: niemieckich producentów Wehrle i Wasser - Geräte, szwajcarskiego GWF oraz wiodącej polskiej marki Apator Powogaz. Dla pełnego bezpieczeństwa i wygody oferujemy też niezawodny system odczytowy All in Kayon, który integruje wodomierze i zwiększa ich funkcjonalność.',
-      items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'gwf-sonico-nano', 'apator-js-smart-plus'],
+      items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'apator-js-smart-plus', 'gwf-sonico-nano'],
     },
     {
       slug: 'cieplomierze',
@@ -1432,7 +1432,7 @@ const en: ContentStructure = {
       slug: 'wodomierze',
       title: 'Water meters',
       description: 'Water meters engineered for Kayon remote-reading deployments.',
-      items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'gwf-sonico-nano', 'apator-js-smart-plus'],
+      items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'apator-js-smart-plus', 'gwf-sonico-nano'],
     },
     {
       slug: 'cieplomierze',
@@ -2319,7 +2319,7 @@ const de: ContentStructure = {
       slug: 'wodomierze',
       title: 'Wasserzaehler',
       description: 'Wasserzaehler für Kayon Fernauslese- und Abrechnungssysteme.',
-      items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'gwf-sonico-nano', 'apator-js-smart-plus'],
+      items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'apator-js-smart-plus', 'gwf-sonico-nano'],
     },
     {
       slug: 'cieplomierze',
