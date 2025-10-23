@@ -1,3 +1,14 @@
+Version 2.1
+
+- Added Privacy Policy and Cookie Policy pages:
+  - Created separate pages for privacy and cookie policies in all three languages (PL/EN/DE)
+  - Added content to translations: privacyPolicy and cookiePolicy sections
+  - Created routes:
+    - /polityka-prywatnosci, /privacy-policy, /datenschutz (Privacy Policy)
+    - /polityka-cookies, /cookie-policy, /cookie-richtlinie (Cookie Policy)
+  - Updated footer links to point to the new policy pages
+  - Removed "Regulamin/Terms of use/Nutzungsbedingungen" placeholder from footer
+
 Version 2.0
 
 - Fixed "Produkty" (Products) section to match Figma design:

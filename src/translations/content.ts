@@ -179,6 +179,21 @@ export interface FooterContent {
   copyright: string;
 }
 
+export interface PrivacyPolicyContent {
+  title: string;
+  sections: {
+    content: string[];
+  }[];
+}
+
+export interface CookiePolicyContent {
+  title: string;
+  sections: {
+    heading: string;
+    content: string[];
+  }[];
+}
+
 export interface ContentStructure {
   navigation: NavigationContent;
   menuOverlay: MenuOverlayContent;
@@ -193,6 +208,8 @@ export interface ContentStructure {
   productDetails: ProductDetailsContent;
   contact: ContactContent;
   footer: FooterContent;
+  privacyPolicy: PrivacyPolicyContent;
+  cookiePolicy: CookiePolicyContent;
 }
 
 const pl: ContentStructure = {
@@ -1030,11 +1047,66 @@ const pl: ContentStructure = {
 
   footer: {
     legalLinks: [
-      { label: 'Polityka prywatnosci', href: '#' },
-      { label: 'Regulamin', href: '#' },
-      { label: 'Cookies', href: '#' },
+      { label: 'Polityka prywatności', href: '/polityka-prywatnosci' },
+      { label: 'Polityka cookies', href: '/polityka-cookies' },
     ],
     copyright: 'KAYON',
+  },
+
+  privacyPolicy: {
+    title: 'Polityka prywatności',
+    sections: [
+      {
+        content: [
+          'Twoja prywatność jest dla nas bardzo ważna! Bycie niezawodnym partnerem obejmuje każdy aspekt Twojej działalności pomiarowej. Wszystkie informacje, które przekazujesz firmie Kayon, są bezpiecznie przechowywane w naszych systemach. Nie sprzedajemy zebranych danych osobom trzecim, dlatego możesz czuć się całkowicie bezpiecznie, decydując się na przekazanie nam swoich danych osobowych podczas kontaktu z nami.',
+          'Aby spełnić wymagania Rozporządzenia o Ochronie Danych Osobowych (RODO) i zachować zaufanie osób powierzających nam swoje dane osobowe (np. klientów, dostawców i pracowników), zawsze dążymy do poszanowania prywatności osób, których dane przetwarzamy, zgodnie z polityką prywatności Grupy Latour oraz naszą wewnętrzną polityką bezpieczeństwa informacji.',
+          'Firma Kayon działa zgodnie z zasadą minimalizacji danych — gromadzimy wyłącznie te dane osobowe, które są niezbędne do prowadzenia naszej działalności.',
+          'Żadne dane osobowe nie są przetwarzane bez jasno określonego celu. Kayon będzie przetwarzać lub przechowywać dane osobowe wyłącznie tak długo, jak długo istnieje cel ich przetwarzania lub np. w przypadkach, gdy przepisy prawa wymagają ich przechowywania.',
+          'Dane osobowe nie będą przekazywane do krajów spoza Unii Europejskiej ani Europejskiego Obszaru Gospodarczego (EOG). Dane zebrane i przechowywane są wykorzystywane wyłącznie przez Kayon, z wyjątkiem poniższych przypadków, w których możemy przekazać dane podmiotom trzecim:',
+          '• gdy wymagają tego przepisy prawa,',
+          '• w celu świadczenia usług związanych z tą stroną internetową lub jej funkcjami, ale tylko w zakresie niezbędnym do świadczenia tych usług.',
+          'Zawsze możesz skontaktować się z nami w sprawie pytań dotyczących bezpieczeństwa danych, RODO lub w celu skorzystania ze swoich praw do sprostowania lub usunięcia danych osobowych, które przechowujemy. Dane te można otrzymać w uporządkowanym, powszechnie używanym i nadającym się do odczytu maszynowego formacie.',
+        ],
+      },
+    ],
+  },
+
+  cookiePolicy: {
+    title: 'Polityka plików cookie',
+    sections: [
+      {
+        heading: 'Czym są pliki cookie?',
+        content: [
+          'Plik „cookie" to niewielki plik tekstowy zawierający informacje, który jest zapisywany na Twoim komputerze lub urządzeniu mobilnym. Pliki cookie są wykorzystywane wyłącznie ze względów technicznych oraz w celu ułatwienia korzystania ze strony internetowej. Jednym z typów plików cookie są tzw. pliki trwałe, które mogą być zapisane na urządzeniu użytkownika na dłuższy czas i umożliwiać dostosowanie wyglądu lub funkcjonalności strony do preferencji użytkownika. Inny rodzaj to tzw. „cookie sesyjne", które są tymczasowe i usuwane automatycznie po zamknięciu przeglądarki.',
+        ],
+      },
+      {
+        heading: 'Dlaczego używamy plików cookie?',
+        content: [
+          'Na stronie Kayon.eu wykorzystujemy wyłącznie niezbędne, techniczne pliki cookie, które umożliwiają prawidłowe funkcjonowanie witryny. Nie korzystamy obecnie z żadnych narzędzi analitycznych, reklamowych ani usług zbierających dane o ruchu użytkowników.',
+        ],
+      },
+      {
+        heading: 'Funkcje i treści zewnętrzne',
+        content: [
+          'Nasza strona może zawierać elementy umożliwiające odtwarzanie filmów, wyświetlanie map. Te funkcje mogą wykorzystywać własne pliki cookie, niezależne od Kayon. Zalecamy zapoznanie się z politykami prywatności tych dostawców w celu uzyskania informacji o tym, jak przetwarzają one dane.',
+        ],
+      },
+      {
+        heading: 'Jak można wyłączyć pliki cookie?',
+        content: [
+          'Większość przeglądarek internetowych umożliwia zarządzanie ustawieniami dotyczącymi plików cookie. Możesz je całkowicie wyłączyć, usunąć istniejące lub ustawić powiadomienia o próbie zapisu nowego pliku cookie. W przypadku zablokowania plików cookie niektóre funkcje strony mogą działać niepoprawnie lub być niedostępne.',
+        ],
+      },
+      {
+        heading: 'Więcej informacji',
+        content: [
+          'Więcej o plikach cookie i sposobach ich kontrolowania można przeczytać na stronie:',
+          'AboutCookies.org',
+          'Informacje o RODO na portalu Europa.eu',
+        ],
+      },
+    ],
   },
 };
 
@@ -1863,13 +1935,67 @@ const en: ContentStructure = {
 
   footer: {
     legalLinks: [
-      { label: 'Privacy policy', href: '#' },
-      { label: 'Terms of use', href: '#' },
-      { label: 'Cookies', href: '#' },
+      { label: 'Privacy policy', href: '/privacy-policy' },
+      { label: 'Cookie policy', href: '/cookie-policy' },
     ],
     copyright: 'KAYON',
   },
 
+  privacyPolicy: {
+    title: 'Privacy Policy',
+    sections: [
+      {
+        content: [
+          'Your privacy is very important to us! Being a reliable partner encompasses every aspect of your metering business. All information you provide to Kayon is securely stored in our systems. We do not sell collected data to third parties, so you can feel completely safe when deciding to share your personal data with us.',
+          'To meet the requirements of the General Data Protection Regulation (GDPR) and maintain the trust of individuals who entrust us with their personal data (such as customers, suppliers, and employees), we always strive to respect the privacy of individuals whose data we process, in accordance with the Latour Group privacy policy and our internal information security policy.',
+          'Kayon operates according to the principle of data minimization — we collect only the personal data necessary to conduct our business.',
+          'No personal data is processed without a clearly defined purpose. Kayon will process or store personal data only as long as there is a purpose for processing or, for example, in cases where legal regulations require their storage.',
+          'Personal data will not be transferred to countries outside the European Union or the European Economic Area (EEA). Collected and stored data is used exclusively by Kayon, with the exception of the following cases where we may transfer data to third parties:',
+          '• when required by law,',
+          '• for the purpose of providing services related to this website or its functions, but only to the extent necessary to provide these services.',
+          'You can always contact us regarding questions about data security, GDPR, or to exercise your rights to rectify or delete personal data we store. This data can be obtained in a structured, commonly used, and machine-readable format.',
+        ],
+      },
+    ],
+  },
+
+  cookiePolicy: {
+    title: 'Cookie Policy',
+    sections: [
+      {
+        heading: 'What are cookies?',
+        content: [
+          'A "cookie" is a small text file containing information that is stored on your computer or mobile device. Cookies are used solely for technical reasons and to facilitate the use of the website. One type of cookie is the so-called persistent cookie, which can be stored on a user\'s device for an extended period and allows customization of the appearance or functionality of the site to user preferences. Another type is the so-called "session cookie", which is temporary and automatically deleted after closing the browser.',
+        ],
+      },
+      {
+        heading: 'Why do we use cookies?',
+        content: [
+          'On the Kayon.eu website, we use only essential, technical cookies that enable proper functioning of the site. We do not currently use any analytical, advertising tools, or services that collect data about user traffic.',
+        ],
+      },
+      {
+        heading: 'External functions and content',
+        content: [
+          'Our site may contain elements enabling video playback or map display. These functions may use their own cookies, independent of Kayon. We recommend reviewing the privacy policies of these providers to learn how they process data.',
+        ],
+      },
+      {
+        heading: 'How can cookies be disabled?',
+        content: [
+          'Most web browsers allow management of cookie settings. You can completely disable them, delete existing ones, or set notifications about attempts to save a new cookie. If cookies are blocked, some site functions may not work properly or may be unavailable.',
+        ],
+      },
+      {
+        heading: 'More information',
+        content: [
+          'More about cookies and ways to control them can be found at:',
+          'AboutCookies.org',
+          'GDPR information on the Europa.eu portal',
+        ],
+      },
+    ],
+  },
 };
 
 const de: ContentStructure = {
@@ -2696,13 +2822,67 @@ const de: ContentStructure = {
 
   footer: {
     legalLinks: [
-      { label: 'Datenschutz', href: '#' },
-      { label: 'Nutzungsbedingungen', href: '#' },
-      { label: 'Cookies', href: '#' },
+      { label: 'Datenschutz', href: '/datenschutz' },
+      { label: 'Cookie-Richtlinie', href: '/cookie-richtlinie' },
     ],
     copyright: 'KAYON',
   },
 
+  privacyPolicy: {
+    title: 'Datenschutzerklärung',
+    sections: [
+      {
+        content: [
+          'Ihre Privatsphäre ist uns sehr wichtig! Ein zuverlässiger Partner zu sein umfasst jeden Aspekt Ihres Messgeschäfts. Alle Informationen, die Sie an Kayon weitergeben, werden sicher in unseren Systemen gespeichert. Wir verkaufen gesammelte Daten nicht an Dritte, daher können Sie sich völlig sicher fühlen, wenn Sie sich entscheiden, uns Ihre persönlichen Daten während der Kontaktaufnahme anzuvertrauen.',
+          'Um die Anforderungen der Datenschutz-Grundverordnung (DSGVO) zu erfüllen und das Vertrauen der Personen zu wahren, die uns ihre persönlichen Daten anvertrauen (wie Kunden, Lieferanten und Mitarbeiter), streben wir stets danach, die Privatsphäre der Personen zu respektieren, deren Daten wir verarbeiten, in Übereinstimmung mit der Datenschutzrichtlinie der Latour-Gruppe und unserer internen Informationssicherheitsrichtlinie.',
+          'Kayon arbeitet nach dem Prinzip der Datenminimierung – wir sammeln nur die persönlichen Daten, die für die Durchführung unseres Geschäfts erforderlich sind.',
+          'Keine persönlichen Daten werden ohne klar definierten Zweck verarbeitet. Kayon wird persönliche Daten nur so lange verarbeiten oder speichern, wie ein Zweck für die Verarbeitung besteht oder beispielsweise in Fällen, in denen gesetzliche Vorschriften ihre Speicherung erfordern.',
+          'Personenbezogene Daten werden nicht in Länder außerhalb der Europäischen Union oder des Europäischen Wirtschaftsraums (EWR) übermittelt. Gesammelte und gespeicherte Daten werden ausschließlich von Kayon verwendet, mit Ausnahme der folgenden Fälle, in denen wir Daten an Dritte weitergeben können:',
+          '• wenn dies gesetzlich vorgeschrieben ist,',
+          '• zum Zweck der Erbringung von Dienstleistungen im Zusammenhang mit dieser Website oder ihren Funktionen, jedoch nur in dem Umfang, der zur Erbringung dieser Dienstleistungen erforderlich ist.',
+          'Sie können sich jederzeit an uns wenden, wenn Sie Fragen zur Datensicherheit, DSGVO haben oder Ihre Rechte auf Berichtigung oder Löschung der von uns gespeicherten personenbezogenen Daten ausüben möchten. Diese Daten können in einem strukturierten, gängigen und maschinenlesbaren Format bereitgestellt werden.',
+        ],
+      },
+    ],
+  },
+
+  cookiePolicy: {
+    title: 'Cookie-Richtlinie',
+    sections: [
+      {
+        heading: 'Was sind Cookies?',
+        content: [
+          'Ein „Cookie" ist eine kleine Textdatei mit Informationen, die auf Ihrem Computer oder Mobilgerät gespeichert wird. Cookies werden ausschließlich aus technischen Gründen und zur Erleichterung der Nutzung der Website verwendet. Eine Art von Cookies sind sogenannte dauerhafte Cookies, die für einen längeren Zeitraum auf dem Gerät des Benutzers gespeichert werden können und die Anpassung des Erscheinungsbilds oder der Funktionalität der Website an die Benutzerpräferenzen ermöglichen. Eine andere Art sind sogenannte „Sitzungs-Cookies", die temporär sind und nach dem Schließen des Browsers automatisch gelöscht werden.',
+        ],
+      },
+      {
+        heading: 'Warum verwenden wir Cookies?',
+        content: [
+          'Auf der Website Kayon.eu verwenden wir ausschließlich notwendige, technische Cookies, die das ordnungsgemäße Funktionieren der Website ermöglichen. Wir verwenden derzeit keine analytischen, werblichen Tools oder Dienste, die Daten über den Benutzerverkehr sammeln.',
+        ],
+      },
+      {
+        heading: 'Externe Funktionen und Inhalte',
+        content: [
+          'Unsere Website kann Elemente enthalten, die die Videowiedergabe oder Kartenanzeige ermöglichen. Diese Funktionen können ihre eigenen Cookies verwenden, die unabhängig von Kayon sind. Wir empfehlen, die Datenschutzrichtlinien dieser Anbieter zu lesen, um zu erfahren, wie sie Daten verarbeiten.',
+        ],
+      },
+      {
+        heading: 'Wie können Cookies deaktiviert werden?',
+        content: [
+          'Die meisten Webbrowser ermöglichen die Verwaltung von Cookie-Einstellungen. Sie können sie vollständig deaktivieren, vorhandene löschen oder Benachrichtigungen über Versuche zum Speichern eines neuen Cookies einstellen. Wenn Cookies blockiert werden, funktionieren einige Website-Funktionen möglicherweise nicht ordnungsgemäß oder sind nicht verfügbar.',
+        ],
+      },
+      {
+        heading: 'Weitere Informationen',
+        content: [
+          'Mehr über Cookies und Möglichkeiten zu deren Kontrolle finden Sie unter:',
+          'AboutCookies.org',
+          'DSGVO-Informationen auf dem Portal Europa.eu',
+        ],
+      },
+    ],
+  },
 };
 
 export const CONTENT: Record<SupportedLanguage, ContentStructure> = {
