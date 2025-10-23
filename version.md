@@ -1,3 +1,12 @@
+Version 2.7.3
+
+- Fixed Kayon Mark logo using exact SVG paths from Figma:
+  - Retrieved LOGO SYMBOL component (ID: 111:2795) directly from Figma API
+  - Used exact path definitions exported from Figma design file
+  - Scaled from 76x76 to 57x57px (scale factor: 0.75) with proper centering
+  - Three precise vector paths: cyan (#2CBCEB), orange (#F4B250), green (#77BB61)
+  - Logo now matches Figma design pixel-perfect
+
 Version 2.7.2
 
 - Fixed Kayon Mark logo to use exact Y symbol from full KAYON logo:
