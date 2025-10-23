@@ -1,3 +1,11 @@
+Version 2.7.2
+
+- Fixed Kayon Mark logo to use exact Y symbol from full KAYON logo:
+  - Extracted exact path shapes from KayonLogo component
+  - Scaled original Y symbol paths to fit 57x57px container
+  - Maintains same rounded, smooth design as full logo
+  - Three colored paths: cyan (#2CBCEB), orange (#F4B250), green (#77BB61)
+
 Version 2.7.1
 
 - Fixed Kayon Mark logo to match exact Figma specifications:
