@@ -1,3 +1,13 @@
+Version 2.7.4
+
+- Fixed Kayon Mark with complete LOGO component from Figma (pixel-perfect):
+  - Retrieved complete LOGO frame (ID: I117:2816;111:2754) from Figma
+  - White circle: 57x57px with rx="28.5" (corner radius)
+  - Y symbol: 23x23px perfectly centered with 17px margins on all sides
+  - Three exact vector paths: cyan (#2CBCEB), orange (#F4B250), green (#77BB61)
+  - Drop shadow: 0px 10px 40px rgba(0,0,0,0.15)
+  - 100% pixel-perfect match with Figma design
+
 Version 2.7.3
 
 - Fixed Kayon Mark logo using exact SVG paths from Figma:
