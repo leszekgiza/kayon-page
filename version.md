@@ -1,3 +1,13 @@
+Version 2.0
+
+- Fixed "Produkty" (Products) section to match Figma design:
+  - Standardized product names across all language versions (PL/EN/DE):
+    - Changed "Engelman SensoStar" to "Engelmann SensoStar" (corrected spelling)
+    - Changed "RC12 PloMeter" to "Rota PloMeter"
+    - Moved "Repeater" from Infrastructure to Communication modules
+    - Removed "Modularis ONE" and "wMBus RC12" from Communication modules
+  - Reordered product categories: "Systemy i platformy" / "Systems and platforms" / "Systeme & Plattformen" now appears before "Infrastruktura" / "Infrastructure" / "Infrastruktur"
+
 Version 1.9
 
 - Fixed "Co oferujemy?" (Offer) section to match Figma design:

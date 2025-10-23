@@ -401,17 +401,12 @@ const pl: ContentStructure = {
       {
         title: 'Ciepłomierze',
         slug: 'cieplomierze',
-        items: ['Engelman SensoStar', 'Maddalena MicroClima', 'RC12 PloMeter'],
+        items: ['Engelmann SensoStar', 'Maddalena MicroClima', 'Rota PloMeter'],
       },
       {
         title: 'Moduły komunikacyjne',
         slug: 'moduly-komunikacyjne',
-        items: ['Modularis ONE', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
-      },
-      {
-        title: 'Infrastruktura',
-        slug: 'infrastruktura',
-        items: ['Range One', 'Koncentrator AC', 'Koncentrator BAT', 'Repeater'],
+        items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
       },
       {
         title: 'Systemy i platformy',
@@ -422,6 +417,11 @@ const pl: ContentStructure = {
           'Portal dystrybutora',
           'Dashboard technologiczny',
         ],
+      },
+      {
+        title: 'Infrastruktura',
+        slug: 'infrastruktura',
+        items: ['Range One', 'Koncentrator AC', 'Koncentrator BAT'],
       },
     ],
     ctaLabel: 'Dowiedz się więcej',
@@ -1244,12 +1244,12 @@ const en: ContentStructure = {
       {
         title: 'Heat meters',
         slug: 'cieplomierze',
-        items: ['Engelman SensoStar', 'Maddalena MicroClima', 'RC12 PloMeter'],
+        items: ['Engelmann SensoStar', 'Maddalena MicroClima', 'Rota PloMeter'],
       },
       {
         title: 'Communication modules',
         slug: 'moduly-komunikacyjne',
-        items: ['Modularis ONE', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
+        items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
       },
       {
         title: 'Systems and platforms',
@@ -1264,7 +1264,7 @@ const en: ContentStructure = {
       {
         title: 'Infrastructure',
         slug: 'infrastruktura',
-        items: ['Range One', 'AC concentrator', 'BAT concentrator', 'Repeater'],
+        items: ['Range One', 'AC concentrator', 'BAT concentrator'],
       },
     ],
     ctaLabel: 'Learn more',
@@ -2077,12 +2077,12 @@ const de: ContentStructure = {
       {
         title: 'Wärmezähler',
         slug: 'cieplomierze',
-        items: ['Engelman SensoStar', 'Maddalena MicroClima', 'RC12 PloMeter'],
+        items: ['Engelmann SensoStar', 'Maddalena MicroClima', 'Rota PloMeter'],
       },
       {
         title: 'Kommunikationsmodule',
         slug: 'moduly-komunikacyjne',
-        items: ['Modularis ONE', 'wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'wMBus RC12'],
+        items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
       },
       {
         title: 'Systeme & Plattformen',
@@ -2097,7 +2097,7 @@ const de: ContentStructure = {
       {
         title: 'Infrastruktur',
         slug: 'infrastruktura',
-        items: ['Range One', 'AC-Konzentrator', 'BAT-Konzentrator', 'Repeater'],
+        items: ['Range One', 'AC-Konzentrator', 'BAT-Konzentrator'],
       },
     ],
     ctaLabel: 'Mehr erfahren',
