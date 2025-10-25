@@ -61,44 +61,45 @@ const HeroSection = () => {
       {/* Decorative large circle - Figma: 1799x626px, corner radius 313px */}
       <div className="pointer-events-none absolute left-1/2 top-32 hidden h-[626px] w-[1799px] -translate-x-1/2 rounded-[313px] border border-white/25 md:block" />
 
-      {/* Main Content - centered vertically and horizontally */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center">
-        <div className="container-custom w-full px-6 py-24">
-          {/* Frame 1 - main content container centered */}
-          <div className="mx-auto flex w-full max-w-[800px] flex-col items-center gap-12 text-center">
-            {/* Logo KAYON */}
+      {/* Main Content - Figma: Frame 1 positioned left with specific dimensions */}
+      <div className="relative z-10 flex min-h-screen items-center">
+        <div className="container-custom w-full py-24">
+          {/* Frame 1 - Figma: Width 693px, Height 484px, Left aligned, GAP 80px */}
+          <div className="ml-auto flex w-full max-w-[693px] flex-col items-start gap-20 text-left">
+            {/* Logo KAYON - Figma: 300.9x50px */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <KayonLogo className="h-[40px] w-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.4)] md:h-[50px]" />
+              <KayonLogo className="h-[50px] w-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.4)]" />
             </motion.div>
 
-            {/* Frame 39 - Text + CTA box */}
+            {/* Frame 39 - Text + CTA box, GAP 40px */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.6 }}
-              className="flex w-full flex-col items-center gap-8"
+              className="flex w-full flex-col gap-10"
             >
-              {/* Headline Text - smaller and centered */}
-              <h1 className="max-w-[700px] text-[24px] font-semibold leading-snug text-white md:text-[32px] md:leading-tight">
+              {/* Headline Text - left aligned */}
+              <h1 className="text-[28px] font-semibold leading-snug text-white md:text-[36px] md:leading-tight lg:text-[42px]">
                 {hero.headline}
               </h1>
 
-              {/* Frame 2 - Box with text + CTA button */}
-              <div className="flex w-full max-w-[650px] flex-col items-center gap-6 rounded-[30px] border border-white/20 bg-white/10 px-8 py-6 backdrop-blur-md md:px-10 md:py-8">
+              {/* Frame 2 - Box with text + CTA button (horizontal on large screens) */}
+              {/* Figma: corner radius 30px, padding 40px, gap 40px */}
+              <div className="flex w-full flex-col items-start gap-10 rounded-[30px] border border-white/20 bg-white/10 p-10 backdrop-blur-md lg:flex-row lg:items-center">
                 {/* Body text */}
-                <p className="text-sm leading-relaxed text-white/90 md:text-base">
+                <p className="flex-1 text-base leading-relaxed text-white/90 md:text-lg">
                   {hero.body}
                 </p>
 
-                {/* CTA Button */}
+                {/* CTA Button - Figma: black #1d1d1b, corner radius 30px, padding 20px 30px */}
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(true)}
-                  className="inline-flex items-center gap-3 rounded-full bg-[#1d1d1b] px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#2a2a27]"
+                  className="inline-flex shrink-0 items-center gap-3 rounded-full bg-[#1d1d1b] px-[30px] py-[20px] text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#2a2a27]"
                 >
                   {hero.ctaLabel}
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,7 +111,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Scroll Down Icon - Figma: 57x57px, positioned at bottom */}
+        {/* Scroll Down Icon - Figma: 57x57px, positioned at bottom center */}
         <motion.button
           type="button"
           initial={{ opacity: 0, y: -16 }}
@@ -120,7 +121,7 @@ const HeroSection = () => {
             const nextSection = document.querySelector('section:nth-of-type(2)');
             nextSection?.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="absolute bottom-12 cursor-pointer transition-opacity duration-300 hover:opacity-80"
+          className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer transition-opacity duration-300 hover:opacity-80"
           aria-label="Scroll down"
         >
           <Image

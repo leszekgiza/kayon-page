@@ -1,3 +1,15 @@
+Version 2.13
+
+- Fixed Hero section layout to match Figma Frame 1 positioning:
+  - Changed from centered to left-aligned layout
+  - Frame 1 exact dimensions: max-width 693px (from Figma)
+  - GAP 80px between logo and content (gap-20)
+  - Logo height: 50px fixed
+  - Headline sizes: 28px/36px/42px responsive
+  - Text alignment: left (items-start, text-left)
+  - Frame 2 horizontal layout on large screens (lg:flex-row)
+  - Scroll down icon centered at bottom
+
 Version 2.12
 
 - Added scroll down icon to Hero section:
