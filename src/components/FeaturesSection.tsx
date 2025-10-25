@@ -43,17 +43,14 @@ const FeaturesSection = () => {
             return (
               <motion.div
                 key={feature.title}
-                className="relative inline-grid w-full shrink-0 grid-cols-[max-content] grid-rows-[max-content] place-items-start md:w-1/3"
+                className={`relative w-full flex-shrink-0 md:flex-1 ${bgColors[index]}`}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
-                {/* Background - responsive width to fill 1/3 of screen */}
-                <div className={`h-[400px] w-full [grid-area:1_/_1] md:h-[500px] ${bgColors[index]}`} />
-
-                {/* Content overlay - Desktop: h-[300px] ml-[100px] mt-[100px], Mobile: padding */}
-                <div className="[grid-area:1_/_1] relative box-border flex h-[350px] flex-col content-stretch items-start justify-between p-8 md:ml-[100px] md:mt-[100px] md:h-[300px] md:p-0">
+                {/* Content - Desktop: h-[300px] ml-[100px] mt-[100px], Mobile: padding */}
+                <div className="box-border flex h-[400px] flex-col items-start justify-between p-8 md:ml-[100px] md:mt-[100px] md:h-[500px] md:w-auto md:pb-[100px] md:pr-0 md:pt-[100px]">
                   {/* Icon - Desktop: 57px, Mobile: 48px */}
                   <div className="relative flex size-[48px] shrink-0 items-center justify-center rounded-[30px] bg-[#747171] content-stretch md:size-[57px]">
                     <span className="material-symbols-rounded relative shrink-0 text-[20px] leading-none text-white md:text-[24px]">
