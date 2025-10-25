@@ -218,6 +218,35 @@ export interface CookiePolicyContent {
   }[];
 }
 
+export interface SystemsPageContent {
+  hero: {
+    title: string;
+    description: string;
+  };
+  allInKayon: {
+    heading: string;
+    subheading: string;
+    description: string;
+  };
+  systems: {
+    walkby: {
+      title: string;
+      subtitle: string;
+      features: string[];
+    };
+    fix: {
+      title: string;
+      subtitle: string;
+      features: string[];
+    };
+    mesh: {
+      title: string;
+      subtitle: string;
+      features: string[];
+    };
+  };
+}
+
 export interface ContentStructure {
   navigation: NavigationContent;
   menuOverlay: MenuOverlayContent;
@@ -227,6 +256,7 @@ export interface ContentStructure {
   benefits: BenefitsSectionContent;
   offer: OfferSectionContent;
   systems: SystemsSectionContent;
+  systemsPage: SystemsPageContent;
   products: ProductsSectionContent;
   productPage: ProductDetailsPageContent;
   productCategories: ProductCategoryContent[];
@@ -432,6 +462,49 @@ const pl: ContentStructure = {
     heading: 'Systemy All in KAYON to inteligentne rozwiązania integrujące wiele urządzeń oraz wszystkie istotne dane i procesy.',
     ctaLabel: 'Nasze systemy',
     imageAlt: 'Diagram systemu All in KAYON',
+  },
+  systemsPage: {
+    hero: {
+      title: 'Systemy',
+      description:
+        'Każdy klient znajdzie tu rozwiązanie idealnie dopasowane do swojego sposobu pracy. To paleta rozwiązań od prostych systemów walk-by po inteligentną sieć MESH. Nasze systemy oferują coraz prostszy, bezpieczniejszy i coraz tańszy dostęp do danych pomiarowych. Obsługa może reagować coraz szybciej i tym samym efektywniej zarządzać mediami.',
+    },
+    allInKayon: {
+      heading: 'Systemy All in KAYON to inteligentne rozwiązania integrujące wiele urządzeń oraz wszystkie istotne dane i procesy.',
+      subheading:
+        'Automatyzują pracę, generują raporty, alarmują o awariach i wspierają użytkowników na każdym etapie –od montażu po zarządzanie zasobami.',
+      description:
+        'Integrują wodomierze, ciepłomierze, moduły komunikacyjne i infrastrukturę w jeden, spójny system, który działa niezawodnie i w pełni zdalnie. All in KAYON to wszystko w jednym miejscu – zawsze aktualne, zawsze pod kontrolą. Oferta zróżnicowanych rozwiązań pozwala dobrać system najlepiej odpowiadający stylowi pracy administratora, zarządcy nieruchomości, firmy instalacyjnej lub innego zarządzającego nimi podmiotu.',
+    },
+    systems: {
+      walkby: {
+        title: 'Walk-by',
+        subtitle: 'Szybki odczyt zdalny, bez błędów, bez przestojów.',
+        features: [
+          'Praca w terenie staje się prosta, jak nigdy dotąd. Przesył danych jest natychmiastowy i w pełni automatyczny, a dostęp do nich w systemie jest natychmiastowy.',
+          'Rozwiązanie pozwala szybko i bezbłędnie odczytywać dane z wodomierzy, ciepłomierzy, podzielników kosztów ogrzewania, gazomierzy i liczników prąd - bez fizycznego dostępu do nich.',
+          'System oparty na urządzeniu Range ONE i aplikacji Route ONE umożliwia także bieżącą diagnostykę i serwis różnego typu urządzeń pomiarowych.',
+        ],
+      },
+      fix: {
+        title: 'Fix',
+        subtitle: 'Stały nadzór i pełna kontrola – jedna sieć, która odczytuje wszystko.',
+        features: [
+          'Rozwiązanie działa w oparciu o topologię gwiazdy, w której urządzenia pomiarowe komunikują się z koncentratorem bezpośrednio lub przez repeatery zwiększające zasięg sieci.',
+          'System automatyzuje odczyty oraz zapewnia stały nadzór nad mediami i natychmiastową reakcję na awarie lub nieprawidłowości.',
+          'Fix obsługuje różne typy liczników zgodnych ze standardem Wireless M-Bus lub OMS, maksymalnie ułatwiając zarządzanie i bilansowanie zużycia poszczególnych mediów.',
+        ],
+      },
+      mesh: {
+        title: 'MESH',
+        subtitle: 'Niezawodność i niskie koszty – sieć, która sama się naprawia.',
+        features: [
+          'Rozwiązanie jest  inteligentną, samokonfigurującą i samonaprawiającą się siecią pomiarową, która zapewnia nieprzerwaną komunikację nawet w trudnych warunkach.',
+          'To innowacyjny system, który opiera się wyłącznie na jednym koncentratorze danych – montaż sprowadza się do kliknięcia „GO", a dane automatycznie trafiają do chmury.',
+          'MESH to najtańszy i najbardziej niezawodny sposób budowy infrastruktury zdalnego monitoringu mediów, gwarantujący pełną kontrolę i minimalne koszty utrzymania.',
+        ],
+      },
+    },
   },
   products: {
     label: 'Produkty',
@@ -1382,6 +1455,49 @@ const en: ContentStructure = {
     ctaLabel: 'Our systems',
     imageAlt: 'All in KAYON system diagram',
   },
+  systemsPage: {
+    hero: {
+      title: 'Systems',
+      description:
+        'Every client will find a solution perfectly tailored to their way of working. This is a range of solutions from simple walk-by systems to intelligent MESH networks. Our systems provide increasingly simpler, safer and more cost-effective access to measurement data. Operations can respond faster and manage utilities more efficiently.',
+    },
+    allInKayon: {
+      heading: 'All in KAYON systems are intelligent solutions that integrate multiple devices and all essential data and processes.',
+      subheading:
+        'They automate work, generate reports, alert about failures and support users at every stage – from installation to asset management.',
+      description:
+        'They integrate water meters, heat meters, communication modules and infrastructure into one cohesive system that works reliably and fully remotely. All in KAYON means everything in one place – always up-to-date, always under control. The range of diverse solutions allows you to choose the system that best suits the working style of the administrator, property manager, installation company or other managing entity.',
+    },
+    systems: {
+      walkby: {
+        title: 'Walk-by',
+        subtitle: 'Fast remote reading, no errors, no downtime.',
+        features: [
+          'Field work becomes simpler than ever. Data transmission is instantaneous and fully automatic, and access to it in the system is immediate.',
+          'The solution allows fast and error-free reading of data from water meters, heat meters, heat cost allocators, gas meters and electricity meters - without physical access to them.',
+          'The system based on the Range ONE device and Route ONE application also enables ongoing diagnostics and service of various types of measuring devices.',
+        ],
+      },
+      fix: {
+        title: 'Fix',
+        subtitle: 'Permanent supervision and full control – one network that reads everything.',
+        features: [
+          'The solution works based on a star topology, where measuring devices communicate with the concentrator directly or through repeaters that extend the network range.',
+          'The system automates readings and provides constant supervision over utilities and immediate response to failures or irregularities.',
+          'Fix supports various types of meters compatible with the Wireless M-Bus or OMS standard, making it as easy as possible to manage and balance the consumption of individual utilities.',
+        ],
+      },
+      mesh: {
+        title: 'MESH',
+        subtitle: 'Reliability and low costs – a network that repairs itself.',
+        features: [
+          'The solution is an intelligent, self-configuring and self-healing measurement network that ensures uninterrupted communication even in difficult conditions.',
+          'This is an innovative system that relies solely on one data concentrator – installation comes down to clicking "GO", and data automatically goes to the cloud.',
+          'MESH is the cheapest and most reliable way to build remote utility monitoring infrastructure, guaranteeing full control and minimal maintenance costs.',
+        ],
+      },
+    },
+  },
   products: {
     label: 'Products',
     heading: 'Products that set a new measurement standard',
@@ -2322,6 +2438,49 @@ const de: ContentStructure = {
     heading: 'ALL in KAYON-Systeme sind intelligente Lösungen, die mehrere Geräte sowie alle wesentlichen Daten und Prozesse integrieren.',
     ctaLabel: 'Unsere Systeme',
     imageAlt: 'ALL in KAYON Systemdiagramm',
+  },
+  systemsPage: {
+    hero: {
+      title: 'Systeme',
+      description:
+        'Jeder Kunde findet hier eine Lösung, die perfekt auf seine Arbeitsweise zugeschnitten ist. Dies ist eine Palette von Lösungen von einfachen Walk-by-Systemen bis hin zu intelligenten MESH-Netzwerken. Unsere Systeme bieten einen immer einfacheren, sichereren und kostengünstigeren Zugang zu Messdaten. Der Betrieb kann schneller reagieren und die Versorgungsunternehmen effizienter verwalten.',
+    },
+    allInKayon: {
+      heading: 'ALL in KAYON-Systeme sind intelligente Lösungen, die mehrere Geräte sowie alle wesentlichen Daten und Prozesse integrieren.',
+      subheading:
+        'Sie automatisieren die Arbeit, erstellen Berichte, warnen vor Ausfällen und unterstützen Benutzer in jeder Phase – von der Installation bis zur Asset-Verwaltung.',
+      description:
+        'Sie integrieren Wasserzähler, Wärmezähler, Kommunikationsmodule und Infrastruktur in ein kohärentes System, das zuverlässig und vollständig ferngesteuert funktioniert. ALL in KAYON bedeutet alles an einem Ort – immer aktuell, immer unter Kontrolle. Das Angebot an vielfältigen Lösungen ermöglicht es Ihnen, das System zu wählen, das am besten zum Arbeitsstil des Administrators, Immobilienverwalters, Installationsunternehmens oder einer anderen verwaltenden Einheit passt.',
+    },
+    systems: {
+      walkby: {
+        title: 'Walk-by',
+        subtitle: 'Schnelle Fernablesung, keine Fehler, keine Ausfallzeiten.',
+        features: [
+          'Die Feldarbeit wird einfacher als je zuvor. Die Datenübertragung erfolgt sofort und vollautomatisch, und der Zugriff darauf im System ist unmittelbar.',
+          'Die Lösung ermöglicht eine schnelle und fehlerfreie Ablesung von Daten von Wasserzählern, Wärmezählern, Heizkostenverteilern, Gaszählern und Stromzählern - ohne physischen Zugang zu ihnen.',
+          'Das auf dem Range ONE-Gerät und der Route ONE-Anwendung basierende System ermöglicht auch die laufende Diagnose und Wartung verschiedener Arten von Messgeräten.',
+        ],
+      },
+      fix: {
+        title: 'Fix',
+        subtitle: 'Ständige Überwachung und volle Kontrolle – ein Netzwerk, das alles abliest.',
+        features: [
+          'Die Lösung arbeitet auf Basis einer Sterntopologie, bei der Messgeräte direkt oder über Repeater, die die Netzreichweite erweitern, mit dem Konzentrator kommunizieren.',
+          'Das System automatisiert Ablesungen und bietet ständige Überwachung der Versorgungsunternehmen sowie sofortige Reaktion auf Ausfälle oder Unregelmäßigkeiten.',
+          'Fix unterstützt verschiedene Arten von Zählern, die mit dem Wireless M-Bus- oder OMS-Standard kompatibel sind, was die Verwaltung und Bilanzierung des Verbrauchs einzelner Versorgungsunternehmen so einfach wie möglich macht.',
+        ],
+      },
+      mesh: {
+        title: 'MESH',
+        subtitle: 'Zuverlässigkeit und niedrige Kosten – ein Netzwerk, das sich selbst repariert.',
+        features: [
+          'Die Lösung ist ein intelligentes, selbstkonfigurierendes und selbstheilendes Messnetzwerk, das auch unter schwierigen Bedingungen eine unterbrechungsfreie Kommunikation gewährleistet.',
+          'Dies ist ein innovatives System, das sich ausschließlich auf einen Datenkonzentrator stützt – die Installation läuft auf das Klicken auf „GO" hinaus, und die Daten gelangen automatisch in die Cloud.',
+          'MESH ist der kostengünstigste und zuverlässigste Weg zum Aufbau einer Fernüberwachungsinfrastruktur für Versorgungsunternehmen und garantiert volle Kontrolle und minimale Wartungskosten.',
+        ],
+      },
+    },
   },
   products: {
     label: 'Produkte',

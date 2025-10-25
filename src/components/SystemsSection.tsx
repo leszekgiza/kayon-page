@@ -26,7 +26,7 @@ const SystemsSection = () => {
               {systems.heading}
             </h2>
             <Link
-              href="/produkty/systemy-i-platformy"
+              href="/systemy"
               className="inline-flex w-max items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-light"
             >
               {systems.ctaLabel}
