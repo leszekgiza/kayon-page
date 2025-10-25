@@ -61,8 +61,21 @@ const HeroSection = () => {
       {/* Decorative large circle - Figma: 1799x626px, corner radius 313px */}
       <div className="pointer-events-none absolute left-1/2 top-32 hidden h-[626px] w-[1799px] -translate-x-1/2 rounded-[313px] border border-white/25 md:block" />
 
+      {/* AIM Target - Figma: 1250x1041, centered crosshair covering decorations but below content */}
+      <div className="pointer-events-none absolute inset-0 z-[8] hidden items-center justify-center md:flex">
+        <Image
+          src="/aim-target.svg"
+          alt=""
+          width={1250}
+          height={1041}
+          priority
+          className="opacity-40"
+          style={{ width: '1250px', height: '1041px' }}
+        />
+      </div>
+
       {/* Main Content - Figma: Frame 1 positioned left with specific dimensions */}
-      <div className="relative z-10 flex min-h-screen items-center">
+      <div className="relative z-20 flex min-h-screen items-center">
         <div className="container-custom w-full py-24">
           {/* Frame 1 - Figma: Width 693px, Height 484px, Left aligned, GAP 80px */}
           <div className="ml-auto flex w-full max-w-[693px] flex-col items-start gap-20 text-left">

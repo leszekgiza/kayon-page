@@ -6,7 +6,6 @@ import BenefitsSection from '@/components/BenefitsSection';
 import OfferSection from '@/components/OfferSection';
 import SystemsSection from '@/components/SystemsSection';
 import ProductsSection from '@/components/ProductsSection';
-import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -21,7 +20,6 @@ export default function Home() {
         <OfferSection />
         <SystemsSection />
         <ProductsSection />
-        <ContactSection />
       </main>
       <Footer />
     </>

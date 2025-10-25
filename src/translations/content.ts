@@ -166,7 +166,24 @@ export interface ContactCard {
 export interface ContactContent {
   label: string;
   heading: string;
+  subtitle: string;
   description: string;
+  emailLabel: string;
+  carriersLabel: string;
+  businessLabel: string;
+  addressLabel: string;
+  phoneLabel: string;
+  nameLabel: string;
+  emailInputLabel: string;
+  subjectLabel: string;
+  messageLabel: string;
+  submitLabel: string;
+  sendingLabel: string;
+  successMessage: string;
+  errorMessage: string;
+  mapHeading: string;
+  mapSubheading: string;
+  directionsLabel: string;
   cards: ContactCard[];
   form: {
     nameLabel: string;
@@ -425,6 +442,16 @@ const pl: ContentStructure = {
       'Produkcja wszystkich urządzeń Kayon odbywa się w 100% na terenie Unii Europejskiej, zgodnie z normami CE, RED i EMC.',
     groups: [
       {
+        title: 'Systemy i platformy',
+        slug: 'systemy-i-platformy',
+        items: [
+          'Aplikacja mobilna Route One',
+          'Platforma OpenMetering (2WayCom, FOTA)',
+          'Portal dystrybutora',
+          'Dashboard technologiczny',
+        ],
+      },
+      {
         title: 'Wodomierze',
         slug: 'wodomierze',
         items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'GWF Sonico Nano', 'Apator JS Smart+'],
@@ -438,16 +465,6 @@ const pl: ContentStructure = {
         title: 'Moduły komunikacyjne',
         slug: 'moduly-komunikacyjne',
         items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
-      },
-      {
-        title: 'Systemy i platformy',
-        slug: 'systemy-i-platformy',
-        items: [
-          'Aplikacja mobilna Route One',
-          'Platforma OpenMetering (2WayCom, FOTA)',
-          'Portal dystrybutora',
-          'Dashboard technologiczny',
-        ],
       },
       {
         title: 'Infrastruktura',
@@ -1066,9 +1083,26 @@ const pl: ContentStructure = {
 
   contact: {
     label: 'Kontakt',
-    heading: 'Skontaktuj się z nami',
+    heading: 'Get in touch',
+    subtitle: 'Contact us and let\'s collaborate! Let us get to know you and your business challenges.',
     description:
       'Masz pytania dotyczące naszych produktów lub usług? Skontaktuj się z nami, a nasz zespół chętnie odpowie na wszystkie pytania.',
+    emailLabel: 'GENERAL INQUIRIES',
+    carriersLabel: 'CARRIERS',
+    businessLabel: 'BUSINESS',
+    addressLabel: 'ADDRESS',
+    phoneLabel: 'PHONE',
+    nameLabel: 'Your Name (required)',
+    emailInputLabel: 'Your Email (required)',
+    subjectLabel: 'Subject',
+    messageLabel: 'Your Message',
+    submitLabel: 'Wyślij',
+    sendingLabel: 'Wysyłanie...',
+    successMessage: 'Wiadomość została wysłana pomyślnie!',
+    errorMessage: 'Wystąpił błąd. Spróbuj ponownie.',
+    mapHeading: 'We are in the heart of the Gdańsk University of Technology! Come and visit us!',
+    mapSubheading: 'ul. Gen. Józefa Fiszera 14, 80-231 Gdańsk',
+    directionsLabel: 'Wskazówka dojazdu',
     cards: [
       { title: 'Zapytania ogólne', value: 'welcome@kayon.pl', type: 'email' },
       { title: 'Adres', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98\n81-451 Gdynia\nPolska', type: 'address' },
@@ -1357,6 +1391,16 @@ const en: ContentStructure = {
       'All Kayon devices are manufactured entirely within the European Union in compliance with CE, RED and EMC standards.',
     groups: [
       {
+        title: 'Systems and platforms',
+        slug: 'systemy-i-platformy',
+        items: [
+          'Route One mobile app',
+          'OpenMetering platform (2WayCom, FOTA)',
+          'Distributor portal',
+          'Technology dashboard',
+        ],
+      },
+      {
         title: 'Water meters',
         slug: 'wodomierze',
         items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'GWF Sonico Nano', 'Apator JS Smart+'],
@@ -1370,16 +1414,6 @@ const en: ContentStructure = {
         title: 'Communication modules',
         slug: 'moduly-komunikacyjne',
         items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
-      },
-      {
-        title: 'Systems and platforms',
-        slug: 'systemy-i-platformy',
-        items: [
-          'Route One mobile app',
-          'OpenMetering platform (2WayCom, FOTA)',
-          'Distributor portal',
-          'Technology dashboard',
-        ],
       },
       {
         title: 'Infrastructure',
@@ -1992,8 +2026,25 @@ const en: ContentStructure = {
   contact: {
     label: "Contact",
     heading: "Get in touch",
+    subtitle: 'Contact us and let\'s collaborate! Let us get to know you and your business challenges.',
     description:
       "Have questions about our products or services? Contact us, and our team will be happy to answer all your questions.",
+    emailLabel: 'GENERAL INQUIRIES',
+    carriersLabel: 'CARRIERS',
+    businessLabel: 'BUSINESS',
+    addressLabel: 'ADDRESS',
+    phoneLabel: 'PHONE',
+    nameLabel: 'Your Name (required)',
+    emailInputLabel: 'Your Email (required)',
+    subjectLabel: 'Subject',
+    messageLabel: 'Your Message',
+    submitLabel: 'Send',
+    sendingLabel: 'Sending...',
+    successMessage: 'Message sent successfully!',
+    errorMessage: 'An error occurred. Please try again.',
+    mapHeading: 'We are in the heart of the Gdańsk University of Technology! Come and visit us!',
+    mapSubheading: 'ul. Gen. Józefa Fiszera 14, 80-231 Gdańsk',
+    directionsLabel: 'Get directions',
     cards: [
       { title: 'General inquiries', value: 'welcome@kayon.pl', type: 'email' },
       { title: 'Address', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98\n81-451 Gdynia\nPoland', type: 'address' },
@@ -2281,6 +2332,16 @@ const de: ContentStructure = {
       'Alle Kayon-Geräte werden vollständig in der Europäischen Union produziert und erfüllen die Normen CE, RED und EMC.',
     groups: [
       {
+        title: 'Systeme & Plattformen',
+        slug: 'systemy-i-platformy',
+        items: [
+          'Route One Mobile App',
+          'OpenMetering Plattform (2WayCom, FOTA)',
+          'Distributor-Portal',
+          'Technologie-Dashboard',
+        ],
+      },
+      {
         title: 'Wasserzaehler',
         slug: 'wodomierze',
         items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'GWF Sonico Nano', 'Apator JS Smart+'],
@@ -2294,16 +2355,6 @@ const de: ContentStructure = {
         title: 'Kommunikationsmodule',
         slug: 'moduly-komunikacyjne',
         items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
-      },
-      {
-        title: 'Systeme & Plattformen',
-        slug: 'systemy-i-platformy',
-        items: [
-          'Route One Mobile App',
-          'OpenMetering Plattform (2WayCom, FOTA)',
-          'Distributor-Portal',
-          'Technologie-Dashboard',
-        ],
       },
       {
         title: 'Infrastruktur',
@@ -2916,8 +2967,25 @@ const de: ContentStructure = {
   contact: {
     label: "Kontakt",
     heading: "Kontaktieren Sie uns",
+    subtitle: 'Kontaktieren Sie uns und lassen Sie uns zusammenarbeiten! Lernen Sie uns und Ihre geschäftlichen Herausforderungen kennen.',
     description:
       "Haben Sie Fragen zu unseren Produkten oder Dienstleistungen? Kontaktieren Sie uns, und unser Team beantwortet gerne alle Ihre Fragen.",
+    emailLabel: 'ALLGEMEINE ANFRAGEN',
+    carriersLabel: 'SPEDITEURE',
+    businessLabel: 'GESCHÄFTLICH',
+    addressLabel: 'ADRESSE',
+    phoneLabel: 'TELEFON',
+    nameLabel: 'Ihr Name (erforderlich)',
+    emailInputLabel: 'Ihre E-Mail (erforderlich)',
+    subjectLabel: 'Betreff',
+    messageLabel: 'Ihre Nachricht',
+    submitLabel: 'Senden',
+    sendingLabel: 'Wird gesendet...',
+    successMessage: 'Nachricht erfolgreich gesendet!',
+    errorMessage: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
+    mapHeading: 'Wir befinden uns im Herzen der Technischen Universität Danzig! Besuchen Sie uns!',
+    mapSubheading: 'ul. Gen. Józefa Fiszera 14, 80-231 Gdańsk',
+    directionsLabel: 'Wegbeschreibung',
     cards: [
       { title: 'Allgemeine Anfragen', value: 'welcome@kayon.pl', type: 'email' },
       { title: 'Adresse', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98\n81-451 Gdynia\nPolen', type: 'address' },

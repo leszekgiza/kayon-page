@@ -35,15 +35,18 @@ const FeaturesSection = () => {
       <section id="dla-kogo" className="relative bg-[#D9D9D9] py-20 md:py-28">
         <div className="container-custom">
           <div className="grid gap-8 md:grid-cols-3">
-            {featureCards.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                className="relative flex h-full flex-col justify-between rounded-[48px] border border-white/40 bg-white/60 px-10 py-12 shadow-sm backdrop-blur"
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.4 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-              >
+            {featureCards.map((feature, index) => {
+              const bgColors = ['bg-[#D9D9D9]', 'bg-[#CBCBCB]', 'bg-[#BCBCBC]'];
+              return (
+                <motion.div
+                  key={feature.title}
+                  className={`relative flex h-full flex-col justify-between rounded-[48px] border border-white/40 ${bgColors[index] || bgColors[0]} px-10 py-12 shadow-sm backdrop-blur`}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                >
+
                 <div>
                   <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black/80 text-white shadow-lg">
                     <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,7 +67,8 @@ const FeaturesSection = () => {
                   </svg>
                 </button>
               </motion.div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
