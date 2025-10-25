@@ -1,0 +1,59 @@
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useContent } from '@/hooks/useContent';
+
+const SystemsSection = () => {
+  const { systems } = useContent();
+
+  return (
+    <section className="relative overflow-hidden bg-white py-24" id="rozwiazania-systemowe">
+      <div className="container-custom">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
+          <motion.div
+            className="flex flex-col justify-center space-y-8"
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex w-max items-center rounded-full border border-primary/20 bg-neutral-gray-light px-6 py-2 text-sm font-semibold text-primary">
+              {systems.label}
+            </div>
+            <h2 className="text-3xl font-semibold leading-tight text-primary md:text-[40px]">
+              {systems.heading}
+            </h2>
+            <Link
+              href="/produkty/systemy-i-platformy"
+              className="inline-flex w-max items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-light"
+            >
+              {systems.ctaLabel}
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
+              </svg>
+            </Link>
+          </motion.div>
+          <motion.div
+            className="relative aspect-[4/3] overflow-hidden rounded-[32px] bg-gradient-to-br from-neutral-gray-light to-white lg:aspect-auto lg:h-full lg:min-h-[500px]"
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <Image
+              src="/systems-diagram.png"
+              alt={systems.imageAlt}
+              fill
+              className="object-contain p-8"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default SystemsSection;

@@ -1,3 +1,16 @@
+Version 2.14
+
+- Fixed Builder.io changes and added Systems section:
+  - Fixed corrupted Polish characters in content.ts (ł, ó, ą, ż)
+    - spółdzielniach (was spó��dzielniach)
+    - poszczególnych (was poszczeg��lnych)
+    - przepływu (was przep��ywu)
+    - dążymy (was dą��ymy)
+    - przeglądarek (was przegl��darek)
+  - Added new SystemsSection component created by Builder.io
+  - Created placeholder systems-diagram.png (needs real image from Figma/Builder.io)
+  - Integrated SystemsSection in page.tsx between OfferSection and ProductsSection
+
 Version 2.13
 
 - Fixed Hero section layout to match Figma Frame 1 positioning:

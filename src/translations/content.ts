@@ -91,6 +91,13 @@ export interface OfferSectionContent {
   cards: OfferCardContent[];
 }
 
+export interface SystemsSectionContent {
+  label: string;
+  heading: string;
+  ctaLabel: string;
+  imageAlt: string;
+}
+
 export interface ProductsGroupContent {
   title: string;
   items: string[];
@@ -202,6 +209,7 @@ export interface ContentStructure {
   clients: ClientsSectionContent;
   benefits: BenefitsSectionContent;
   offer: OfferSectionContent;
+  systems: SystemsSectionContent;
   products: ProductsSectionContent;
   productPage: ProductDetailsPageContent;
   productCategories: ProductCategoryContent[];
@@ -401,6 +409,12 @@ const pl: ContentStructure = {
         ],
       },
     ],
+  },
+  systems: {
+    label: 'Rozwiązania systemowe',
+    heading: 'Systemy All in KAYON to inteligentne rozwiązania integrujące wiele urządzeń oraz wszystkie istotne dane i procesy.',
+    ctaLabel: 'Nasze systemy',
+    imageAlt: 'Diagram systemu All in KAYON',
   },
   products: {
     label: 'Produkty',
@@ -1328,6 +1342,12 @@ const en: ContentStructure = {
       },
     ],
   },
+  systems: {
+    label: 'System Solutions',
+    heading: 'All in KAYON systems are intelligent solutions that integrate multiple devices and all essential data and processes.',
+    ctaLabel: 'Our systems',
+    imageAlt: 'All in KAYON system diagram',
+  },
   products: {
     label: 'Products',
     heading: 'Products that set a new measurement standard',
@@ -2246,6 +2266,12 @@ const de: ContentStructure = {
       },
     ],
   },
+  systems: {
+    label: 'Systemlösungen',
+    heading: 'ALL in KAYON-Systeme sind intelligente Lösungen, die mehrere Geräte sowie alle wesentlichen Daten und Prozesse integrieren.',
+    ctaLabel: 'Unsere Systeme',
+    imageAlt: 'ALL in KAYON Systemdiagramm',
+  },
   products: {
     label: 'Produkte',
     heading: 'Produkte, die einen neuen Messstandard setzen',
@@ -2980,4 +3006,3 @@ export const CONTENT: Record<SupportedLanguage, ContentStructure> = {
   en,
   de,
 };
-
