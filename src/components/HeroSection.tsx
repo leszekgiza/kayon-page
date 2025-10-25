@@ -46,31 +46,19 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/45 to-black/15" />
       </div>
 
-      {/* Decorative Pattern SVG with Y symbols */}
-      <div className="pointer-events-none absolute inset-0 hidden items-start justify-center md:flex">
-        <Image
-          src="/hero-pattern.svg"
-          alt=""
-          width={1120}
-          height={933}
-          priority
-          className="mt-10 w-[90vw] max-w-[1120px] opacity-85"
-        />
-      </div>
-
       {/* Decorative large circle - Figma: 1799x626px, corner radius 313px */}
       <div className="pointer-events-none absolute left-1/2 top-32 hidden h-[626px] w-[1799px] -translate-x-1/2 rounded-[313px] border border-white/25 md:block" />
 
-      {/* AIM Target - Figma: 1250x1041, centered crosshair covering decorations but below content */}
+      {/* AIM Target - Figma: 1250x1041.29, centered crosshair covering decorations but below content */}
       <div className="pointer-events-none absolute inset-0 z-[8] hidden items-center justify-center md:flex">
         <Image
           src="/aim-target.svg"
           alt=""
           width={1250}
-          height={1041}
+          height={1041.29}
           priority
           className="opacity-40"
-          style={{ width: '1250px', height: '1041px' }}
+          style={{ width: '1250px', height: '1041.29px' }}
         />
       </div>
 

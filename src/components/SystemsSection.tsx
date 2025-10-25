@@ -13,7 +13,7 @@ const SystemsSection = () => {
       <div className="container-custom">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
           <motion.div
-            className="flex flex-col justify-center space-y-8"
+            className="relative z-10 flex flex-col justify-center space-y-8 lg:-mt-[60px]"
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -36,7 +36,7 @@ const SystemsSection = () => {
             </Link>
           </motion.div>
           <motion.div
-            className="relative aspect-[4/3] overflow-hidden rounded-[32px] bg-gradient-to-br from-neutral-gray-light to-white lg:aspect-auto lg:h-full lg:min-h-[500px]"
+            className="relative z-0 aspect-[4/3] overflow-visible lg:aspect-auto lg:h-full lg:min-h-[500px]"
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -46,7 +46,7 @@ const SystemsSection = () => {
               src="/systems-diagram.png"
               alt={systems.imageAlt}
               fill
-              className="object-contain p-8"
+              className="object-cover lg:scale-[1.4] lg:origin-left lg:-translate-x-[120px]"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </motion.div>

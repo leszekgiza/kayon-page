@@ -1,8 +1,23 @@
+Version 2.23
+
+- Fixed HeroSection to display only one AIM symbol:
+  - Removed duplicate hero-pattern.svg (1120x933)
+  - Kept only aim-target.svg with correct dimensions (1250x1041.29)
+  - Matches Figma 01 TOP layer specification
+
+- Fixed SystemsSection image z-index:
+  - Added z-10 to text container to display above image
+  - Added z-0 to image container
+  - Text now visible and not covered by scaled image
+
 Version 2.22
 
 - Updated SystemsSection (Rozwiązania systemowe) image:
   - Replaced systems-diagram.png with new 3D building visualization
   - Image now matches Figma design from 06 ROZWIAZANIA SYSTEMOWE layer
+  - Image scaled to 1.4x with origin-left and -translate-x-[120px]
+  - Text container moved up by 60px (lg:-mt-[60px])
+  - Image fills entire section width without white spaces
 
 Version 2.21
 
