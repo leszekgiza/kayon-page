@@ -1,3 +1,16 @@
+Version 2.11
+
+- Fixed Hero section to match Figma design accurately:
+  - Restored KayonLogo component (white KAYON logo now visible)
+  - Removed duplicate AIM symbol (was conflicting with hero-pattern.svg)
+  - Centered layout: logo, headline, and CTA box all centered
+  - Reduced sizes to match Figma:
+    - Logo: 40px mobile, 50px desktop
+    - Headline: 24px/32px (was 28px/36px/42px)
+    - Gaps: 12 between logo and text, 8 in content box
+  - Smaller, more compact CTA box with centered text
+  - Button padding reduced: px-6 py-3
+
 Version 2.10
 
 - Complete Hero section rebuild to match Figma design (01 TOP v2) pixel-perfect:
