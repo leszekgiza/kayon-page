@@ -32,7 +32,8 @@ const HeroSection = () => {
   }, [isModalOpen]);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-primary text-white">
+    <section className="relative min-h-screen overflow-hidden bg-black text-white">
+      {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src="/hero-top.png"
@@ -45,6 +46,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/45 to-black/15" />
       </div>
 
+      {/* Decorative Pattern SVG */}
       <div className="pointer-events-none absolute inset-0 hidden items-start justify-center md:flex">
         <Image
           src="/hero-pattern.svg"
@@ -56,38 +58,55 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="pointer-events-none absolute left-1/2 top-32 hidden h-[520px] w-[1120px] -translate-x-1/2 rounded-[260px] border border-white/25 md:block" />
+      {/* Decorative large circle - Figma: 1799x626px, corner radius 313px */}
+      <div className="pointer-events-none absolute left-1/2 top-32 hidden h-[626px] w-[1799px] -translate-x-1/2 rounded-[313px] border border-white/25 md:block" />
 
-      <div className="relative z-10 flex min-h-screen items-end">
-        <div className="container-custom w-full pb-24 pt-36 md:pb-32 md:pt-44">
-          <div className="ml-auto flex max-w-xl flex-col items-start gap-7 text-left">
+      {/* Main Content - centered vertically */}
+      <div className="relative z-10 flex min-h-screen items-center">
+        <div className="container-custom w-full py-24">
+          {/* Frame 1 - main content container, max-width ~709px from Figma */}
+          <div className="ml-auto flex max-w-[709px] flex-col items-start gap-20 text-left">
+            {/* Logo KAYON - Figma: 300.9x50px */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex flex-col items-start gap-6"
             >
-              <KayonLogo className="h-12 w-auto drop-shadow-[0_12px_45px_rgba(0,0,0,0.35)] md:h-14" />
-              <h1 className="text-[15px] font-semibold leading-snug md:text-[21px] md:leading-tight">{hero.headline}</h1>
+              <KayonLogo className="h-[50px] w-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)]" />
             </motion.div>
 
+            {/* Frame 39 - Text + CTA box */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.6 }}
-              className="w-full rounded-[36px] border border-white/35 bg-black/40 px-8 py-6 backdrop-blur-md md:px-10 md:py-7"
+              className="flex w-full flex-col gap-10"
             >
-              <p className="text-sm leading-relaxed text-white/90 md:text-base">{hero.body}</p>
-              <button
-                type="button"
-                onClick={() => setIsModalOpen(true)}
-                className="mt-5 inline-flex items-center gap-3 rounded-full border border-white/50 px-5 py-2 text-sm font-semibold transition-colors duration-200 hover:bg-white/15"
-              >
-                {hero.ctaLabel}
-                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
-                </svg>
-              </button>
+              {/* Headline Text */}
+              <h1 className="text-[28px] font-semibold leading-snug text-white md:text-[36px] md:leading-tight lg:text-[42px]">
+                {hero.headline}
+              </h1>
+
+              {/* Frame 2 - Box with text + CTA button (horizontal layout) */}
+              {/* Figma: corner radius 30px, padding 40px, gap 40px, horizontal */}
+              <div className="flex w-full flex-col items-start gap-10 rounded-[30px] border border-white/20 bg-white/10 p-10 backdrop-blur-md lg:flex-row lg:items-center">
+                {/* Body text */}
+                <p className="flex-1 text-base leading-relaxed text-white/90 md:text-lg">
+                  {hero.body}
+                </p>
+
+                {/* CTA Button - Figma: black #1d1d1b, corner radius 30px, padding 20px 30px */}
+                <button
+                  type="button"
+                  onClick={() => setIsModalOpen(true)}
+                  className="inline-flex shrink-0 items-center gap-3 rounded-full bg-[#1d1d1b] px-[30px] py-[20px] text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#2a2a27]"
+                >
+                  {hero.ctaLabel}
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
+                  </svg>
+                </button>
+              </div>
             </motion.div>
           </div>
         </div>

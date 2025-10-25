@@ -1,3 +1,24 @@
+Version 2.9
+
+- Updated Hero section to match Figma design (01 TOP v2) precisely:
+  - Changed background to explicit black (#000000)
+  - Updated decorative circle: 1799x626px with 313px corner radius (from 1120x520px)
+  - Changed vertical alignment from bottom (items-end) to center (items-center)
+  - Updated content max-width to 709px to match Figma Frame 1
+  - Increased gap between logo and content from 28px to 80px (gap-20)
+  - Logo exact height: 50px (from responsive h-12/14)
+  - Headline moved outside the box, larger text sizes (28/36/42px)
+  - Frame 2 box styling:
+    - Corner radius: 30px (from 36px)
+    - Padding: 40px all sides (from 32/40px varied)
+    - Layout: horizontal on large screens (text + button side-by-side)
+    - Gap: 40px between text and button
+  - CTA button updated:
+    - Background: solid black #1d1d1b (from white border)
+    - Padding: 20px 30px exact (from 8px 20px)
+    - Rounded-full shape maintained
+    - Hover state: slight darken to #2a2a27
+
 Version 2.8.1
 
 - Fixed Netlify Forms compatibility with Next.js Runtime v5:
