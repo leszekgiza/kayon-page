@@ -1,3 +1,23 @@
+Version 2.10
+
+- Complete Hero section rebuild to match Figma design (01 TOP v2) pixel-perfect:
+  - Added giant AIM symbol (Y) from D:\kayon-page\picture\layout\Home\AIM.svg
+    - Size: 1395x1162px, positioned center, z-index 1, opacity 20%
+    - Creates dramatic background Y shape behind all content
+  - Replaced KayonLogo component with LOGO.png from layout folder
+    - Exact dimensions: 301x50px (from Figma specifications)
+    - File: D:\kayon-page\picture\layout\Home\LOGO.png → public/kayon-logo-white.png
+  - Proper z-index layering:
+    - z-0: Background image with gradient overlay
+    - z-1: Giant AIM symbol (Y)
+    - z-2: Decorative pattern SVG
+    - z-3: Decorative circle (1799x626px, radius 313px)
+    - z-10: Main content (logo, headline, CTA box)
+  - Frame 1 exact width: 709px
+  - Gap between logo and content: 80px (gap-20)
+  - Frame 39 gap: 40px (gap-10)
+  - All elements positioned according to Figma absoluteBoundingBox coordinates
+
 Version 2.9
 
 - Updated Hero section to match Figma design (01 TOP v2) precisely:

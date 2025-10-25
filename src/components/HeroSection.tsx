@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import KayonLogo from './KayonLogo';
 import { useContent } from '@/hooks/useContent';
 
 const HeroSection = () => {
@@ -33,8 +32,8 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-black text-white">
-      {/* Background Image */}
-      <div className="absolute inset-0">
+      {/* Background Image - z-index 0 */}
+      <div className="absolute inset-0 z-0">
         <Image
           src="/hero-top.png"
           alt={hero.imageAlt}
@@ -46,8 +45,20 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/45 to-black/15" />
       </div>
 
-      {/* Decorative Pattern SVG */}
-      <div className="pointer-events-none absolute inset-0 hidden items-start justify-center md:flex">
+      {/* Giant AIM Symbol (Y) - z-index 1, behind everything except background */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 z-[1] hidden -translate-x-1/2 -translate-y-1/2 lg:block">
+        <Image
+          src="/aim-symbol.svg"
+          alt=""
+          width={1395}
+          height={1162}
+          priority
+          className="opacity-20"
+        />
+      </div>
+
+      {/* Decorative Pattern SVG - z-index 2 */}
+      <div className="pointer-events-none absolute inset-0 z-[2] hidden items-start justify-center md:flex">
         <Image
           src="/hero-pattern.svg"
           alt=""
@@ -58,24 +69,31 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Decorative large circle - Figma: 1799x626px, corner radius 313px */}
-      <div className="pointer-events-none absolute left-1/2 top-32 hidden h-[626px] w-[1799px] -translate-x-1/2 rounded-[313px] border border-white/25 md:block" />
+      {/* Decorative large circle - z-index 3, Figma: 1799x626px, corner radius 313px */}
+      <div className="pointer-events-none absolute left-1/2 top-32 z-[3] hidden h-[626px] w-[1799px] -translate-x-1/2 rounded-[313px] border border-white/25 md:block" />
 
-      {/* Main Content - centered vertically */}
+      {/* Main Content - z-index 10, centered vertically */}
       <div className="relative z-10 flex min-h-screen items-center">
         <div className="container-custom w-full py-24">
-          {/* Frame 1 - main content container, max-width ~709px from Figma */}
-          <div className="ml-auto flex max-w-[709px] flex-col items-start gap-20 text-left">
-            {/* Logo KAYON - Figma: 300.9x50px */}
+          {/* Frame 1 - main content container, exact width 709px from Figma */}
+          <div className="ml-auto flex w-full max-w-[709px] flex-col items-start gap-20 text-left">
+            {/* Logo KAYON - Figma: 300.9x50px - using PNG from layout */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <KayonLogo className="h-[50px] w-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)]" />
+              <Image
+                src="/kayon-logo-white.png"
+                alt="KAYON"
+                width={301}
+                height={50}
+                priority
+                className="h-[50px] w-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)]"
+              />
             </motion.div>
 
-            {/* Frame 39 - Text + CTA box */}
+            {/* Frame 39 - Text + CTA box, gap 40px */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
