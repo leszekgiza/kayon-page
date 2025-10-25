@@ -33,8 +33,8 @@ const FeaturesSection = () => {
   return (
     <>
       {/* 02 DLACZEGO - Figma: 1920x500px, 3 cards without gaps */}
-      <section id="dla-kogo" className="relative h-auto bg-[#eaeaea] shadow-[0px_40px_40px_0px_rgba(0,0,0,0.02)] md:h-[500px]">
-        {/* Frame20 - flex container for 3 cards - responsive */}
+      <section id="dla-kogo" className="relative h-auto w-full bg-[#eaeaea] shadow-[0px_40px_40px_0px_rgba(0,0,0,0.02)] md:h-[500px]">
+        {/* Frame20 - flex container for 3 cards - NO GAPS */}
         <div className="flex w-full flex-col items-stretch leading-[0] md:flex-row">
           {featureCards.map((feature, index) => {
             // Figma colors for each card background
@@ -49,24 +49,24 @@ const FeaturesSection = () => {
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
-                {/* Background square - aspect ratio 1:1 to maintain square shape */}
-                <div className={`aspect-square w-full [grid-area:1_/_1] ${bgColors[index]}`} />
+                {/* Background - responsive width to fill 1/3 of screen */}
+                <div className={`h-[400px] w-full [grid-area:1_/_1] md:h-[500px] ${bgColors[index]}`} />
 
-                {/* Content overlay - responsive positioning */}
-                <div className="[grid-area:1_/_1] relative box-border flex h-full flex-col content-stretch items-start justify-between p-8 md:p-12 lg:p-16">
-                  {/* Icon - rounded circle with check */}
+                {/* Content overlay - Desktop: h-[300px] ml-[100px] mt-[100px], Mobile: padding */}
+                <div className="[grid-area:1_/_1] relative box-border flex h-[350px] flex-col content-stretch items-start justify-between p-8 md:ml-[100px] md:mt-[100px] md:h-[300px] md:p-0">
+                  {/* Icon - Desktop: 57px, Mobile: 48px */}
                   <div className="relative flex size-[48px] shrink-0 items-center justify-center rounded-[30px] bg-[#747171] content-stretch md:size-[57px]">
                     <span className="material-symbols-rounded relative shrink-0 text-[20px] leading-none text-white md:text-[24px]">
                       check
                     </span>
                   </div>
 
-                  {/* Title - responsive width and font size */}
-                  <p className="relative w-full shrink-0 font-['Montserrat'] text-[24px] font-bold leading-[1.2] text-[#1d1d1b] md:w-[90%] md:text-[28px] lg:text-[32px]">
+                  {/* Title - Desktop: w-[364px] text-[32px], Mobile: responsive */}
+                  <p className="relative shrink-0 w-full font-['Montserrat'] text-[24px] font-bold leading-[1.2] text-[#1d1d1b] md:w-[364px] md:text-[32px]">
                     {feature.title}
                   </p>
 
-                  {/* Button - responsive */}
+                  {/* Button - Desktop: px-[30px] py-[20px] text-[16px], Mobile: smaller */}
                   <button
                     type="button"
                     onClick={() => setActiveFeature(index)}
