@@ -5,6 +5,7 @@ Version 2.16.1
   - Card height: Fixed 441px (was auto)
   - Carousel slide calculation: 334px per card (310px + 24px gap)
   - Left column dimensions: Fixed 477x631px (from minmax(0,400px))
+  - Navigation layout: PROGRESS 01 dots on left, arrows on right (from centered)
   - Pixel-perfect match with Figma specifications
 
 Version 2.16

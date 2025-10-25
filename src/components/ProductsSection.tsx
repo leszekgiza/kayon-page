@@ -88,20 +88,9 @@ const ProductsSection = () => {
               </motion.div>
             </div>
 
-            {/* Navigation Arrows */}
-            <div className="mt-8 flex items-center justify-center gap-4">
-              <button
-                onClick={handlePrev}
-                disabled={currentIndex === 0}
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-white transition-all duration-200 hover:bg-primary/30 disabled:opacity-30 disabled:cursor-not-allowed"
-                aria-label="Previous"
-              >
-                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-
-              {/* Dot Navigation */}
+            {/* Navigation - PROGRESS 01 (dots on left, arrows on right) */}
+            <div className="mt-8 flex items-center justify-between">
+              {/* Dot Navigation - PROGRESS 01 */}
               <div className="flex gap-2">
                 {Array.from({ length: maxIndex + 1 }).map((_, index) => (
                   <button
@@ -115,16 +104,30 @@ const ProductsSection = () => {
                 ))}
               </div>
 
-              <button
-                onClick={handleNext}
-                disabled={currentIndex === maxIndex}
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-white transition-all duration-200 hover:bg-primary/30 disabled:opacity-30 disabled:cursor-not-allowed"
-                aria-label="Next"
-              >
-                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
+              {/* Navigation Arrows */}
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={handlePrev}
+                  disabled={currentIndex === 0}
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-white transition-all duration-200 hover:bg-primary/30 disabled:opacity-30 disabled:cursor-not-allowed"
+                  aria-label="Previous"
+                >
+                  <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+
+                <button
+                  onClick={handleNext}
+                  disabled={currentIndex === maxIndex}
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-white transition-all duration-200 hover:bg-primary/30 disabled:opacity-30 disabled:cursor-not-allowed"
+                  aria-label="Next"
+                >
+                  <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
