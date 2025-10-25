@@ -49,8 +49,8 @@ const FeaturesSection = () => {
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
-                {/* Content - Desktop: h-[300px] ml-[100px] mt-[100px], Mobile: padding */}
-                <div className="box-border flex h-[400px] flex-col items-start justify-between p-8 md:ml-[100px] md:mt-[100px] md:h-[500px] md:w-auto md:pb-[100px] md:pr-0 md:pt-[100px]">
+                {/* Content - Desktop: moved 55px up total, ml-[100px] mt-[45px], Mobile: padding */}
+                <div className="box-border flex h-[400px] flex-col items-start justify-between p-8 md:ml-[100px] md:mt-[45px] md:h-[500px] md:w-auto md:pb-[155px] md:pr-0 md:pt-[45px]">
                   {/* Icon - Desktop: 57px, Mobile: 48px */}
                   <div className="relative flex size-[48px] shrink-0 items-center justify-center rounded-[30px] bg-[#747171] content-stretch md:size-[57px]">
                     <span className="material-symbols-rounded relative shrink-0 text-[20px] leading-none text-white md:text-[24px]">
