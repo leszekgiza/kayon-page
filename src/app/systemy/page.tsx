@@ -35,17 +35,21 @@ export default function SystemyPage() {
 
           {/* Content Frame - Desktop: left-[1085px] top-[218px], Mobile: centered */}
           <div className="absolute left-1/2 top-24 flex w-[90%] -translate-x-1/2 flex-col items-start gap-[40px] md:top-32 lg:left-[1085px] lg:top-[218px] lg:w-auto lg:translate-x-0">
-            <h1 className="whitespace-pre font-['Montserrat'] text-[28px] font-bold leading-[1.2] text-white md:text-[34px] lg:text-[40px]">
-              {systemsPage.hero.title}
-            </h1>
-            <div className="relative rounded-[20px] p-6 md:rounded-[30px] md:p-8 lg:rounded-[30px] lg:p-[40px]">
+            {/* Title */}
+            <div className="flex flex-col justify-center font-['Montserrat'] font-bold leading-[0] text-white">
+              <h1 className="whitespace-pre text-[28px] leading-[1.2] md:text-[34px] lg:text-[40px]">
+                {systemsPage.hero.title}
+              </h1>
+            </div>
+            {/* Frame1 - Box with border and padding */}
+            <div className="relative box-border flex items-center justify-center gap-[40px] rounded-[20px] p-6 md:rounded-[30px] md:p-8 lg:rounded-[30px] lg:p-[40px]">
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 rounded-[20px] border-2 border-solid border-[#747171] md:rounded-[30px]"
               />
-              <p className="w-full font-['Montserrat'] text-[16px] font-bold leading-[1.3] text-white md:text-[18px] lg:w-[670px] lg:text-[20px] lg:leading-[1.2]">
-                {systemsPage.hero.description}
-              </p>
+              <div className="relative flex shrink-0 flex-col justify-center font-['Montserrat'] font-bold leading-[0] text-[16px] text-white md:text-[18px] lg:w-[670px] lg:text-[20px]">
+                <p className="leading-[1.2]">{systemsPage.hero.description}</p>
+              </div>
             </div>
           </div>
 
