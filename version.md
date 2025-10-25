@@ -1,3 +1,11 @@
+Version 2.16.1
+
+- Fixed ProductsSection card dimensions to match Figma exactly:
+  - Card width: Fixed 310px (from dynamic calc(33.333%-16px))
+  - Card height: Fixed 441px (was auto)
+  - Carousel slide calculation: 334px per card (310px + 24px gap)
+  - Pixel-perfect match with Figma "Rectangle 2" specifications
+
 Version 2.16
 
 - Rebuilt ProductsSection to match Figma carousel design:

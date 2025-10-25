@@ -9,6 +9,9 @@ const ProductsSection = () => {
   const { products } = useContent();
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const cardWidth = 310; // Fixed width from Figma
+  const gap = 24; // gap-6 = 24px
+  const cardWithGap = cardWidth + gap; // 334px total
   const cardsPerView = 3; // Show 3 cards at a time on desktop
   const totalCards = products.groups.length;
   const maxIndex = Math.max(0, totalCards - cardsPerView);
@@ -47,7 +50,7 @@ const ProductsSection = () => {
             <div className="overflow-hidden">
               <motion.div
                 className="flex gap-6"
-                animate={{ x: `-${currentIndex * (100 / cardsPerView)}%` }}
+                animate={{ x: `-${currentIndex * cardWithGap}px` }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
               >
                 {products.groups.map((group) => {
@@ -56,7 +59,7 @@ const ProductsSection = () => {
                   return (
                     <motion.div
                       key={group.title}
-                      className="flex min-w-[calc(33.333%-16px)] flex-col justify-between rounded-[24px] bg-white px-6 py-8 text-primary shadow-lg"
+                      className="flex w-[310px] h-[441px] flex-shrink-0 flex-col justify-between rounded-[24px] bg-white px-6 py-8 text-primary shadow-lg"
                       initial={{ opacity: 0, y: 24 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.3 }}
