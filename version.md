@@ -1,3 +1,17 @@
+Version 2.24
+
+- Fixed HeroSection AIM symbol positioning and visibility:
+  - Repositioned AIM to exact Figma coordinates (X:325, Y:-99.15)
+  - Fixed SVG viewBox to show all elements: viewBox="0 -50 1250 1042.15"
+  - Added z-10 to AIM layer to display above gradient overlay
+  - AIM now properly visible with all three lines (cyan, orange, green)
+  - Dimensions: 1250x1041.29px matching Figma specifications
+
+- Fine-tuned HeroSection text positioning:
+  - Reduced body text size: text-sm/md:text-base (was text-base/md:text-lg)
+  - Shifted all content 10px right with translate-x-[10px]
+  - Adjusted body text vertical position with -mt-5
+
 Version 2.23
 
 - Fixed HeroSection to display only one AIM symbol:

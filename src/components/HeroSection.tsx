@@ -49,8 +49,8 @@ const HeroSection = () => {
       {/* Decorative large circle - Figma: 1799x626px, corner radius 313px */}
       <div className="pointer-events-none absolute left-1/2 top-32 hidden h-[626px] w-[1799px] -translate-x-1/2 rounded-[313px] border border-white/25 md:block" />
 
-      {/* AIM Target - Figma: 1250x1041.29, centered crosshair covering decorations but below content */}
-      <div className="pointer-events-none absolute inset-0 z-[8] hidden items-center justify-center md:flex">
+      {/* AIM Target - Figma: 1250x1041.29, positioned at X:325 Y:-99.15 */}
+      <div className="pointer-events-none absolute z-10 hidden md:block" style={{ left: '325px', top: '-99.15px', width: '1250px', height: '1041.29px' }}>
         <Image
           src="/aim-target.svg"
           alt=""
@@ -58,7 +58,6 @@ const HeroSection = () => {
           height={1041.29}
           priority
           className="opacity-40"
-          style={{ width: '1250px', height: '1041.29px' }}
         />
       </div>
 
@@ -66,7 +65,7 @@ const HeroSection = () => {
       <div className="relative z-20 flex min-h-screen items-center">
         <div className="container-custom w-full py-24">
           {/* Frame 1 - Figma: Width 693px, Height 484px, Left aligned, GAP 80px */}
-          <div className="ml-auto flex w-full max-w-[693px] flex-col items-start gap-20 text-left">
+          <div className="ml-auto flex w-full max-w-[693px] translate-x-[10px] flex-col items-start gap-20 text-left">
             {/* Logo KAYON - Figma: 300.9x50px */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -92,7 +91,7 @@ const HeroSection = () => {
               {/* Figma: corner radius 30px, padding 40px, gap 40px */}
               <div className="flex w-full flex-col items-start gap-10 rounded-[30px] border border-white/20 bg-white/10 p-10 backdrop-blur-md lg:flex-row lg:items-center">
                 {/* Body text */}
-                <p className="flex-1 text-base leading-relaxed text-white/90 md:text-lg">
+                <p className="flex-1 -mt-5 text-sm leading-relaxed text-white/90 md:text-base">
                   {hero.body}
                 </p>
 
