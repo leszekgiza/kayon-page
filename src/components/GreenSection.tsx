@@ -116,7 +116,7 @@ const GreenSection = () => {
                 {extendedCards.map((card, cardIndex) => (
                   <div
                     key={`${card.title}-${cardIndex}`}
-                    style={{ ...cardStyle, minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}
+                    style={{ ...cardStyle, minWidth: 0, maxWidth: '100%', boxSizing: 'border-box', transform: 'scaleX(0.93)' }}
                     className="flex-shrink-0 rounded-[32px] bg-white px-6 py-8 text-primary shadow-lg"
                   >
                     <div className="min-w-0 space-y-4">

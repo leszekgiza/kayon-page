@@ -1,3 +1,10 @@
+Version 2.21
+
+- Adjusted GreenSection (Nasi klienci) white card width:
+  - Applied scaleX(0.93) transform to reduce card width visually
+  - Cards now have better proportions with more green background visible
+  - Maintains proper text wrapping and responsive behavior
+
 Version 2.20
 
 - Fixed text wrapping in GreenSection (Nasi klienci) carousel cards on mobile:

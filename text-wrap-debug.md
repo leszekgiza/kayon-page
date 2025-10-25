@@ -222,3 +222,61 @@ Zamiast używać % dla track, użyć stałych px bazując na szerokości karty.
 
 ### Rozwiązanie 14: Dodać min-width: 0 na wszystkich poziomach
 Od kontenera overflow w dół do tekstu.
+
+## Próby zmniejszenia szerokości białego boxa
+
+### Próba 10: Zmniejszenie paddingu px-6 → px-[14px]
+**Wynik**: ❌ Nie zmniejszyło szerokości boxa, tylko zwiększyło odstęp tekstu od krawędzi.
+
+### Próba 11: maxWidth: 'calc(100% - 20px)' w inline style
+```tsx
+style={{ ...cardStyle, minWidth: 0, maxWidth: 'calc(100% - 20px)', boxSizing: 'border-box' }}
+```
+**Wynik**: ❌ Nie zadziałało - cardStyle nadpisuje maxWidth.
+
+### Próba 12: Zmniejszenie szerokości w cardStyle + marginLeft
+```tsx
+width: `calc((100% - ${totalGaps}px) / ${extendedLength} - 20px)`,
+marginLeft: '5px'
+```
+**Wynik**: ❌ Było gorzej - layout się rozjechał.
+
+## Kolejne rozwiązania do wypróbowania
+
+### Rozwiązanie 15: Dodać scale transform
+```tsx
+transform: 'scaleX(0.95)'
+```
+
+### Rozwiązanie 16: Zmienić GAP_SIZE
+Zwiększyć gap między kartami aby box wydawał się mniejszy.
+
+### Rozwiązanie 17: Użyć CSS calc z konkretną wartością minus px
+```tsx
+width: `calc((100% - ${totalGaps}px) / ${extendedLength})`,
+// a potem w inline style karty:
+width: 'calc(var(--card-width) - 20px)'
+```
+
+### Rozwiązanie 18: Dodać wrapper div wewnątrz z mniejszą szerokością
+```tsx
+<div style={cardStyle}>
+  <div style={{ width: 'calc(100% - 20px)', margin: '0 auto' }}>
+    {/* content */}
+  </div>
+</div>
+```
+
+### Rozwiązanie 19: Użyć padding na track zamiast zmieniać szerokość kart
+```tsx
+className="flex min-w-0 gap-6 px-2.5"
+```
+
+### Rozwiązanie 20: Zmienić cardStyle aby odejmować pixele bezpośrednio
+```tsx
+const cardWidth = `calc((100% - ${totalGaps}px) / ${extendedLength})`;
+return {
+  width: cardWidth,
+  maxWidth: 'calc(100vw - 60px)' // bezpośrednie ograniczenie
+};
+```
