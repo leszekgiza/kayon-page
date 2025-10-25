@@ -1,3 +1,10 @@
+Version 2.26
+
+- Removed language indicator from layout:
+  - Removed LanguageIndicator component from layout.tsx
+  - Language indicator no longer appears in bottom-right corner
+  - Users can still switch languages via navigation menu
+
 Version 2.25
 
 - Fixed Systemy page (/systemy) layout adjustments:
