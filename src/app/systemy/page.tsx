@@ -34,13 +34,7 @@ export default function SystemyPage() {
           </div>
 
           {/* Content Frame - Desktop: left-[1055px] top-[218px], Mobile: centered */}
-          <div
-            className="absolute left-1/2 top-24 flex w-[90%] -translate-x-1/2 flex-col items-start gap-[40px] md:top-32 lg:w-auto"
-            style={{
-              left: window.innerWidth >= 1024 ? '1055px' : undefined,
-              top: window.innerWidth >= 1024 ? '218px' : undefined
-            }}
-          >
+          <div className="absolute left-1/2 top-24 flex w-[90%] -translate-x-1/2 flex-col items-start gap-[40px] md:top-32 lg:left-[1055px] lg:top-[218px] lg:w-auto lg:translate-x-0">
             {/* Title */}
             <div className="flex flex-col justify-center font-['Montserrat'] font-bold leading-[0] text-white">
               <h1 className="whitespace-pre text-[26px] leading-[1.2] md:text-[32px] lg:text-[38px]">
