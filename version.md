@@ -4,7 +4,8 @@ Version 2.16.1
   - Card width: Fixed 310px (from dynamic calc(33.333%-16px))
   - Card height: Fixed 441px (was auto)
   - Carousel slide calculation: 334px per card (310px + 24px gap)
-  - Pixel-perfect match with Figma "Rectangle 2" specifications
+  - Left column dimensions: Fixed 477x631px (from minmax(0,400px))
+  - Pixel-perfect match with Figma specifications
 
 Version 2.16
 

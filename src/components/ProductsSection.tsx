@@ -27,9 +27,9 @@ const ProductsSection = () => {
   return (
     <section id="produkty" className="bg-[#3C3C3C] py-24 text-white">
       <div className="container-custom">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,400px)_minmax(0,1fr)]">
-          {/* Left Column - Text Content */}
-          <div className="space-y-6">
+        <div className="grid gap-12 lg:grid-cols-[477px_minmax(0,1fr)]">
+          {/* Left Column - Text Content - Figma: 477x631px */}
+          <div className="space-y-6 lg:w-[477px] lg:h-[631px]">
             <div className="inline-flex w-max items-center rounded-full border border-white/20 bg-white/10 px-6 py-2 text-sm font-semibold text-white">
               {products.label}
             </div>
