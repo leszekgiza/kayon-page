@@ -1,3 +1,9 @@
+Version 2.22
+
+- Updated SystemsSection (Rozwiązania systemowe) image:
+  - Replaced systems-diagram.png with new 3D building visualization
+  - Image now matches Figma design from 06 ROZWIAZANIA SYSTEMOWE layer
+
 Version 2.21
 
 - Adjusted GreenSection (Nasi klienci) white card width:
