@@ -25,23 +25,23 @@ const ProductsSection = () => {
   };
 
   return (
-    <section id="produkty" className="bg-[#3C3C3C] py-24 text-white">
+    <section id="produkty" className="bg-[#474747] py-24 text-white">
       <div className="container-custom">
         <div className="grid gap-12 lg:grid-cols-[477px_minmax(0,1fr)]">
-          {/* Left Column - Text Content - Figma: 477x631px */}
-          <div className="space-y-6 lg:w-[477px] lg:h-[631px]">
-            <div className="inline-flex w-max items-center rounded-full border border-white/20 bg-white/10 px-6 py-2 text-sm font-semibold text-white">
+          {/* Left Column - Text Content - Figma: 477x631px, gap 40px SPACE_BETWEEN */}
+          <div className="flex flex-col justify-between lg:w-[477px] lg:h-[631px]">
+            <div className="inline-flex w-max items-center rounded-full bg-[#EAEAEA] px-[30px] py-5 text-2xl font-bold text-[#1D1D1B]">
               {products.label}
             </div>
-            <h2 className="text-3xl font-semibold leading-tight text-white md:text-[40px]">
+            <h2 className="text-3xl font-bold text-white md:text-[40px] md:leading-[52px]">
               {products.heading}
             </h2>
-            <div className="max-w-lg rounded-[24px] border border-white/30 px-6 py-6">
-              <p className="text-sm leading-relaxed text-white/90">
+            <div className="w-[467px] rounded-[30px] border-2 border-[#747171] p-10">
+              <p className="text-[20px] leading-[26px] text-white">
                 {products.description}
               </p>
             </div>
-            <p className="text-xs uppercase tracking-wide text-white/60">{products.footnote}</p>
+            <p className="w-[437px] text-base font-bold leading-[22.4px] text-white">{products.footnote}</p>
           </div>
 
           {/* Right Column - Carousel */}
@@ -59,19 +59,19 @@ const ProductsSection = () => {
                   return (
                     <motion.div
                       key={group.title}
-                      className="flex w-[310px] h-[441px] flex-shrink-0 flex-col justify-between rounded-[24px] bg-white px-6 py-8 text-primary shadow-lg"
+                      className="flex w-[310px] h-[441px] flex-shrink-0 flex-col justify-between rounded-[20px] bg-white px-6 py-8 text-primary"
                       initial={{ opacity: 0, y: 24 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.6 }}
                     >
                       <div>
-                        <h3 className="text-lg font-semibold text-primary">{group.title}</h3>
-                        <ul className="mt-4 space-y-2 text-sm text-primary/80">
+                        <h3 className="text-2xl font-bold text-[#1D1D1B]">{group.title}</h3>
+                        <ul className="mt-4 flex flex-col gap-[10px]">
                           {group.items.map((item) => (
-                            <li key={item} className="flex items-start gap-2">
-                              <span className="mt-1.5 inline-flex h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary/60" />
-                              <span>{item}</span>
+                            <li key={item} className="flex items-center gap-[10px]">
+                              <span className="material-symbols-rounded text-2xl text-[#2CBCEB]">arrow_right</span>
+                              <span className="text-base font-bold leading-[22.4px] text-[#1D1D1B]">{item}</span>
                             </li>
                           ))}
                         </ul>

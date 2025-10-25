@@ -1,3 +1,19 @@
+Version 2.17
+
+- Complete pixel-perfect rebuild of 06 PRODUKTY section matching Figma:
+  - Background: Changed #3C3C3C → #474747 (exact Figma color)
+  - Badge "Produkty": padding 30px/20px, font 24px Bold, bg #EAEAEA, text black (was white)
+  - Left column: Changed space-y-6 (24px) → justify-between (40px SPACE_BETWEEN)
+  - Heading: font-bold (700), line-height 52px/130% (was semibold 600, 120%)
+  - Description box: width 467px, padding 40px, font 20px, border 2px #747171, radius 30px
+  - Footnote: font 16px Bold, width 437px (was 12px uppercase)
+  - Product cards: border-radius 20px (was 24px), removed shadow
+  - Card title: font 24px Bold/700 (was 18px semibold/600)
+  - List icons: Changed from dots → Material Symbols arrow_right (24px, #2CBCEB)
+  - List text: font 16px Bold, gap 10px (was 14px, 8px)
+  - Added Material Symbols Rounded font to layout
+  - All dimensions, colors, fonts now match Figma exactly
+
 Version 2.16.1
 
 - Fixed ProductsSection card dimensions to match Figma exactly:
