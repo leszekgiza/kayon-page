@@ -1,3 +1,11 @@
+Version 2.25
+
+- Fixed Systemy page (/systemy) layout adjustments:
+  - Centered scroll down icon on all screen sizes (removed fixed desktop positioning)
+  - Repositioned hero content 30px left (from left-[1085px] to left-[1055px])
+  - Used inline styles to override Tailwind class conflicts
+  - Reduced text sizes by 2px: title 40→38px, description 20→18px on desktop
+
 Version 2.24
 
 - Fixed HeroSection AIM symbol positioning and visibility:

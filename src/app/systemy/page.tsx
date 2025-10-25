@@ -33,11 +33,17 @@ export default function SystemyPage() {
             <KayonLogo className="h-[40px] w-auto md:h-[60px] lg:h-[76px]" />
           </div>
 
-          {/* Content Frame - Desktop: left-[1085px] top-[218px], Mobile: centered */}
-          <div className="absolute left-1/2 top-24 flex w-[90%] -translate-x-1/2 flex-col items-start gap-[40px] md:top-32 lg:left-[1085px] lg:top-[218px] lg:w-auto lg:translate-x-0">
+          {/* Content Frame - Desktop: left-[1055px] top-[218px], Mobile: centered */}
+          <div
+            className="absolute left-1/2 top-24 flex w-[90%] -translate-x-1/2 flex-col items-start gap-[40px] md:top-32 lg:w-auto"
+            style={{
+              left: window.innerWidth >= 1024 ? '1055px' : undefined,
+              top: window.innerWidth >= 1024 ? '218px' : undefined
+            }}
+          >
             {/* Title */}
             <div className="flex flex-col justify-center font-['Montserrat'] font-bold leading-[0] text-white">
-              <h1 className="whitespace-pre text-[28px] leading-[1.2] md:text-[34px] lg:text-[40px]">
+              <h1 className="whitespace-pre text-[26px] leading-[1.2] md:text-[32px] lg:text-[38px]">
                 {systemsPage.hero.title}
               </h1>
             </div>
@@ -47,20 +53,20 @@ export default function SystemyPage() {
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 rounded-[20px] border-2 border-solid border-[#747171] md:rounded-[30px]"
               />
-              <div className="relative flex shrink-0 flex-col justify-center font-['Montserrat'] font-bold leading-[0] text-[16px] text-white md:text-[18px] lg:w-[670px] lg:text-[20px]">
+              <div className="relative flex shrink-0 flex-col justify-center font-['Montserrat'] font-bold leading-[0] text-[14px] text-white md:text-[16px] lg:w-[670px] lg:text-[18px]">
                 <p className="leading-[1.2]">{systemsPage.hero.description}</p>
               </div>
             </div>
           </div>
 
-          {/* Scroll Down Icon - Desktop: left-[931px] top-[503px], Mobile: centered bottom */}
+          {/* Scroll Down Icon - Centered bottom */}
           <button
             type="button"
             onClick={() => {
               const nextSection = document.querySelector('section:nth-of-type(2)');
               nextSection?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 md:bottom-12 lg:left-[931px] lg:top-[503px] lg:translate-x-0"
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 md:bottom-12"
             aria-label="Scroll down"
           >
             <div className="flex size-[50px] items-center justify-center rounded-[25px] bg-[#bcb7b7] md:size-[57px] md:rounded-[30px]">
