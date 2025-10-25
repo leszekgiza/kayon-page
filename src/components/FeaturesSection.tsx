@@ -32,7 +32,7 @@ const FeaturesSection = () => {
 
   return (
     <>
-      <section id="dla-kogo" className="relative bg-gradient-to-r from-[#F2F2F2] via-[#EAEAEA] to-[#F2F2F2] py-20 md:py-28">
+      <section id="dla-kogo" className="relative bg-[#D9D9D9] py-20 md:py-28">
         <div className="container-custom">
           <div className="grid gap-8 md:grid-cols-3">
             {featureCards.map((feature, index) => (

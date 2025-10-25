@@ -1,3 +1,19 @@
+Version 2.18
+
+- Fixed 02 DLACZEGO (FeaturesSection):
+  - Changed background from gradient to solid #D9D9D9
+
+- Complete rebuild of 04 JAK DZIAŁAMY (BenefitsSection) to match Figma:
+  - Removed white card backgrounds - items now directly on yellow background
+  - Changed grid from 2x2 to 2x3 (grid-cols-2 md:grid-cols-3)
+  - Icons: Changed from black circles with + to Material Symbols Rounded
+  - Icon mapping: autorenew, shield_with_house, schedule, description, ac_unit
+  - Icon background: bg-black/20 (brown/gold tint on yellow)
+  - Layout: vertical flex (icon → title → button) with gap-4
+  - Description box: Changed from <p> to <div> with border/background styling
+  - Grid gaps: gap-x-8 gap-y-12 (horizontal 32px, vertical 48px)
+  - Matches Figma layout exactly
+
 Version 2.17
 
 - Complete pixel-perfect rebuild of 06 PRODUKTY section matching Figma:

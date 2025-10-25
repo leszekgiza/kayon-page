@@ -4,13 +4,13 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 
-const BenefitIcon = () => (
-  <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full border border-black/20 bg-black/80 text-white shadow">
-    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 6v12m6-6H6" />
-    </svg>
-  </div>
-);
+const iconMap: Record<number, string> = {
+  0: 'autorenew',
+  1: 'shield_with_house',
+  2: 'schedule',
+  3: 'description',
+  4: 'ac_unit',
+};
 
 const BenefitsSection = () => {
   const [activeBenefit, setActiveBenefit] = useState<number | null>(null);
@@ -48,26 +48,30 @@ const BenefitsSection = () => {
                 {benefits.label}
               </div>
               <h2 className="text-3xl leading-tight md:text-[40px]">{benefits.heading}</h2>
-              <p className="max-w-xl text-sm leading-relaxed text-black/70 md:text-base">
+              <div className="max-w-xl rounded-[40px] border border-black/30 bg-black/10 px-8 py-6 text-sm leading-relaxed text-black md:text-base">
                 {benefits.description}
-              </p>
+              </div>
             </div>
             <div>
               <motion.div
-                className="grid gap-6 md:grid-cols-2"
+                className="grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-3"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6 }}
               >
                 {benefitCards.map((benefit, index) => (
-                  <div key={benefit.title} className="flex flex-col rounded-[28px] bg-white/70 px-6 py-6 shadow">
-                    <BenefitIcon />
+                  <div key={benefit.title} className="flex flex-col items-start gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-black">
+                      <span className="material-symbols-rounded text-2xl">
+                        {iconMap[index] || 'help'}
+                      </span>
+                    </div>
                     <h3 className="text-base font-semibold text-black">{benefit.title}</h3>
                     <button
                       type="button"
                       onClick={() => setActiveBenefit(index)}
-                      className="mt-4 inline-flex w-max items-center gap-2 rounded-full bg-black px-4 py-2 text-xs font-semibold text-white transition-colors duration-200 hover:bg-black/80"
+                      className="inline-flex w-max items-center gap-2 rounded-full bg-black px-6 py-2.5 text-xs font-semibold text-white transition-colors duration-200 hover:bg-black/80"
                     >
                       {benefits.readMoreLabel}
                       <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
