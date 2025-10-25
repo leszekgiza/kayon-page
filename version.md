@@ -1,3 +1,14 @@
+Version 2.8
+
+- Implemented Netlify Forms for contact form:
+  - Integrated native Netlify Forms (no external dependencies)
+  - Added success/error message states with styled notifications
+  - Added honeypot field (bot-field) for spam protection
+  - Form automatically sends submissions to Netlify dashboard
+  - Button shows loading state during submission
+  - Form clears automatically after successful submission
+  - Free 100 submissions/month included with Netlify
+
 Version 2.7.5
 
 - Fixed Hero section layout on product category pages to match Figma:

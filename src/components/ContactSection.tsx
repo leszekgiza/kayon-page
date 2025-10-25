@@ -12,11 +12,36 @@ const ContactSection = () => {
     subject: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: Implement form submission logic
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const form = e.currentTarget;
+      const formDataObj = new FormData(form);
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formDataObj as any).toString(),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -153,6 +178,10 @@ const ContactSection = () => {
 
               {/* Contact Form */}
               <motion.form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
                 className="rounded-[24px] border border-neutral-gray-light/70 bg-white p-8 shadow-md"
                 initial={{ opacity: 0, x: 20 }}
@@ -160,7 +189,29 @@ const ContactSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
+                {/* Netlify form fields */}
+                <input type="hidden" name="form-name" value="contact" />
+                {/* Honeypot field for spam protection */}
+                <div className="hidden">
+                  <label>
+                    Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+                  </label>
+                </div>
+
                 <div className="space-y-6">
+                  {/* Success Message */}
+                  {submitStatus === 'success' && (
+                    <div className="rounded-lg bg-green-50 border border-green-200 p-4 text-sm text-green-800">
+                      ✓ Dziękujemy za wiadomość! Odpowiemy najszybciej jak to możliwe.
+                    </div>
+                  )}
+
+                  {/* Error Message */}
+                  {submitStatus === 'error' && (
+                    <div className="rounded-lg bg-red-50 border border-red-200 p-4 text-sm text-red-800">
+                      ✗ Wystąpił błąd. Spróbuj ponownie lub skontaktuj się emailem.
+                    </div>
+                  )}
                   <div>
                     <label
                       htmlFor="name"
@@ -237,9 +288,10 @@ const ContactSection = () => {
 
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-primary px-8 py-4 text-sm font-semibold text-white transition-all duration-200 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    disabled={isSubmitting}
+                    className="w-full rounded-full bg-primary px-8 py-4 text-sm font-semibold text-white transition-all duration-200 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {contact.form.submitButton}
+                    {isSubmitting ? 'Wysyłanie...' : contact.form.submitButton}
                   </button>
                 </div>
               </motion.form>
