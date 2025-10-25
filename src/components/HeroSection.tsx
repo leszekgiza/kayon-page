@@ -62,7 +62,7 @@ const HeroSection = () => {
       <div className="pointer-events-none absolute left-1/2 top-32 hidden h-[626px] w-[1799px] -translate-x-1/2 rounded-[313px] border border-white/25 md:block" />
 
       {/* Main Content - centered vertically and horizontally */}
-      <div className="relative z-10 flex min-h-screen items-center justify-center">
+      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center">
         <div className="container-custom w-full px-6 py-24">
           {/* Frame 1 - main content container centered */}
           <div className="mx-auto flex w-full max-w-[800px] flex-col items-center gap-12 text-center">
@@ -109,6 +109,29 @@ const HeroSection = () => {
             </motion.div>
           </div>
         </div>
+
+        {/* Scroll Down Icon - Figma: 57x57px, positioned at bottom */}
+        <motion.button
+          type="button"
+          initial={{ opacity: 0, y: -16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          onClick={() => {
+            const nextSection = document.querySelector('section:nth-of-type(2)');
+            nextSection?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="absolute bottom-12 cursor-pointer transition-opacity duration-300 hover:opacity-80"
+          aria-label="Scroll down"
+        >
+          <Image
+            src="/scroll-down-icon.svg"
+            alt=""
+            width={57}
+            height={57}
+            priority
+            className="h-[57px] w-[57px]"
+          />
+        </motion.button>
       </div>
 
       <AnimatePresence initial={false}>

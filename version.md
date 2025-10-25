@@ -1,3 +1,12 @@
+Version 2.12
+
+- Added scroll down icon to Hero section:
+  - Copied ICON TOP.svg from D:\kayon-page\picture\layout\Home\ to public/scroll-down-icon.svg
+  - Icon positioned at bottom of Hero section: 57x57px
+  - Smooth scroll to next section on click
+  - Animated entrance with hover effect
+  - Matches Figma SCROLL DOWN element (ID: 216:631)
+
 Version 2.11
 
 - Fixed Hero section to match Figma design accurately:
