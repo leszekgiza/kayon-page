@@ -1,3 +1,11 @@
+Version 2.8.1
+
+- Fixed Netlify Forms compatibility with Next.js Runtime v5:
+  - Added static HTML form file in public/contact-form.html
+  - Required for @netlify/plugin-nextjs@5 to detect form structure
+  - React component remains unchanged, uses same form endpoint
+  - Resolves "Failed assembling prerendered content" build error
+
 Version 2.8
 
 - Implemented Netlify Forms for contact form:
