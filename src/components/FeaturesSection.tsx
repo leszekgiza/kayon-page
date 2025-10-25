@@ -34,8 +34,8 @@ const FeaturesSection = () => {
     <>
       {/* 02 DLACZEGO - Figma: 1920x500px, 3 cards without gaps */}
       <section id="dla-kogo" className="relative h-auto bg-[#eaeaea] shadow-[0px_40px_40px_0px_rgba(0,0,0,0.02)] md:h-[500px]">
-        {/* Frame20 - absolute flex container for 3 cards */}
-        <div className="absolute left-0 top-0 flex w-full flex-col items-center leading-[0] md:flex-row md:w-[1920px]">
+        {/* Frame20 - flex container for 3 cards - responsive */}
+        <div className="flex w-full flex-col items-stretch leading-[0] md:flex-row">
           {featureCards.map((feature, index) => {
             // Figma colors for each card background
             const bgColors = ['bg-[#d9d9d9]', 'bg-[#cbcbcb]', 'bg-[#bcbcbc]'];
@@ -43,36 +43,36 @@ const FeaturesSection = () => {
             return (
               <motion.div
                 key={feature.title}
-                className="relative inline-grid shrink-0 grid-cols-[max-content] grid-rows-[max-content] place-items-start"
+                className="relative inline-grid w-full shrink-0 grid-cols-[max-content] grid-rows-[max-content] place-items-start md:w-1/3"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
-                {/* Background rectangle - no border radius, exact 640x500px on desktop */}
-                <div className={`h-[400px] w-full [grid-area:1_/_1] md:h-[500px] md:w-[640px] ${bgColors[index]}`} />
+                {/* Background square - aspect ratio 1:1 to maintain square shape */}
+                <div className={`aspect-square w-full [grid-area:1_/_1] ${bgColors[index]}`} />
 
-                {/* Content overlay with padding from top-left */}
-                <div className="box-border flex h-[350px] flex-col items-start justify-between p-8 [grid-area:1_/_1] md:ml-[100px] md:mt-[100px] md:h-[300px] md:p-0">
+                {/* Content overlay - responsive positioning */}
+                <div className="[grid-area:1_/_1] relative box-border flex h-full flex-col content-stretch items-start justify-between p-8 md:p-12 lg:p-16">
                   {/* Icon - rounded circle with check */}
-                  <div className="flex size-[48px] shrink-0 items-center justify-center rounded-[30px] bg-[#747171] md:size-[57px]">
-                    <span className="material-symbols-rounded text-[20px] leading-none text-white md:text-[24px]">
+                  <div className="relative flex size-[48px] shrink-0 items-center justify-center rounded-[30px] bg-[#747171] content-stretch md:size-[57px]">
+                    <span className="material-symbols-rounded relative shrink-0 text-[20px] leading-none text-white md:text-[24px]">
                       check
                     </span>
                   </div>
 
-                  {/* Title - Figma: 32px, w-[364px], leading-[1.2] */}
-                  <p className="w-full font-['Montserrat'] text-[24px] font-bold leading-[1.2] text-[#1d1d1b] md:w-[364px] md:text-[32px]">
+                  {/* Title - responsive width and font size */}
+                  <p className="relative w-full shrink-0 font-['Montserrat'] text-[24px] font-bold leading-[1.2] text-[#1d1d1b] md:w-[90%] md:text-[28px] lg:text-[32px]">
                     {feature.title}
                   </p>
 
-                  {/* Button - Figma: rounded-[30px], bg-[#1d1d1b], 16px text */}
+                  {/* Button - responsive */}
                   <button
                     type="button"
                     onClick={() => setActiveFeature(index)}
-                    className="box-border flex shrink-0 items-center justify-center gap-[10px] rounded-[30px] bg-[#1d1d1b] px-[30px] py-[20px]"
+                    className="relative box-border flex shrink-0 items-center justify-center gap-[10px] rounded-[30px] bg-[#1d1d1b] px-[24px] py-[16px] content-stretch md:px-[30px] md:py-[20px]"
                   >
-                    <p className="font-['Montserrat'] text-[14px] font-bold leading-none text-white md:text-[16px]">
+                    <p className="relative shrink-0 whitespace-pre font-['Montserrat'] text-[14px] font-bold leading-none text-white md:text-[16px]">
                       {features.readMoreLabel}
                     </p>
                   </button>
