@@ -1,3 +1,11 @@
+Version 2.15
+
+- Replaced placeholder with real systems diagram image:
+  - Extracted PNG diagram from figma-data/screenshot rozwiazania systemowe.fig
+  - Unzipped .fig file and found 4096x1465px PNG diagram
+  - Replaced placeholder systems-diagram.png with real image (9.4MB)
+  - SystemsSection now displays actual system architecture diagram
+
 Version 2.14
 
 - Fixed Builder.io changes and added Systems section:
