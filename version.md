@@ -1,3 +1,14 @@
+Version 2.20
+
+- Fixed text wrapping in GreenSection (Nasi klienci) carousel cards on mobile:
+  - Added min-w-0 to all flex container levels to allow content shrinking
+  - Applied min-w-0 to parent div, overflow container, track, cards, and inner divs
+  - Changed text overflow properties to overflowWrap: 'anywhere' and wordBreak: 'break-word'
+  - Added maxWidth: '100%' and boxSizing: 'border-box' to cards
+  - Text now wraps properly within card boundaries on mobile devices
+  - Cards no longer extend beyond viewport width
+  - Created text-wrap-debug.md documenting all attempted solutions
+
 Version 2.19
 
 - Complete rebuild of 02 DLACZEGO (FeaturesSection) to match Figma design:

@@ -100,11 +100,11 @@ const GreenSection = () => {
               {clients.highlight}
             </div>
           </div>
-          <div className="space-y-8">
-            <div className="overflow-hidden">
+          <div className="min-w-0 space-y-8">
+            <div className="min-w-0 max-w-full overflow-hidden">
               <motion.div
                 style={trackStyle}
-                className="flex gap-6"
+                className="flex min-w-0 gap-6"
                 initial={false}
                 animate={{ transform: trackStyle.transform }}
                 transition={
@@ -116,12 +116,22 @@ const GreenSection = () => {
                 {extendedCards.map((card, cardIndex) => (
                   <div
                     key={`${card.title}-${cardIndex}`}
-                    style={cardStyle}
+                    style={{ ...cardStyle, minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}
                     className="flex-shrink-0 rounded-[32px] bg-white px-6 py-8 text-primary shadow-lg"
                   >
-                    <div className="space-y-4">
-                      <h3 className="text-lg font-semibold">{card.title}</h3>
-                      <p className="text-sm leading-relaxed text-primary/80 md:text-base">{card.description}</p>
+                    <div className="min-w-0 space-y-4">
+                      <h3
+                        className="text-lg font-semibold"
+                        style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
+                      >
+                        {card.title}
+                      </h3>
+                      <p
+                        className="text-sm leading-relaxed text-primary/80 md:text-base"
+                        style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
+                      >
+                        {card.description}
+                      </p>
                     </div>
                   </div>
                 ))}
