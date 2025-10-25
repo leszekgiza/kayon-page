@@ -1,3 +1,16 @@
+Version 2.16
+
+- Rebuilt ProductsSection to match Figma carousel design:
+  - Changed from 2x2 grid to horizontal carousel
+  - White cards on dark background (#3C3C3C)
+  - Shows 3 cards at a time on desktop
+  - Added navigation arrows (← →)
+  - Added dot navigation indicators
+  - Smooth animations with Framer Motion
+  - Cards: white bg, primary text, rounded-[24px]
+  - Button: solid primary bg instead of border
+  - Matches Figma "06 PRODUKTY" design exactly
+
 Version 2.15
 
 - Replaced placeholder with real systems diagram image:
