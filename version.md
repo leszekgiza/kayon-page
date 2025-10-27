@@ -1,3 +1,20 @@
+Version 2.27
+
+- Fixed Produkty section navigation to match Figma design:
+  - Increased navigation arrows from 48px to 57px (h-[57px] w-[57px])
+  - Increased navigation dots from 8px to 24px (h-6 w-6)
+  - Removed active dot width animation (was w-8, now consistent w-6)
+  - Navigation now matches GreenSection specifications
+
+- Fixed Kontakt button routing:
+  - Changed Navigation.tsx: href="/#kontakt" → href="/kontakt"
+  - Updated all translations (PL/EN/DE) in content.ts: '#kontakt' → '/kontakt'
+  - Kontakt button now opens dedicated contact form page instead of scrolling to anchor
+
+- Fixed "Dla kogo?" menu button text wrapping:
+  - Added whitespace-nowrap to prevent text breaking into two lines
+  - Text now displays in single line as designed in Figma
+
 Version 2.26
 
 - Removed language indicator from layout:

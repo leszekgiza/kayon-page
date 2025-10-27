@@ -25,7 +25,7 @@ const Navigation = () => {
 
         {/* Center Labels - Figma: 3 labels with specific positions */}
         <div className="absolute left-[688px] top-[40px] inline-flex h-[57px] w-[186px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
-          <Link href="/#dla-kogo" className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
+          <Link href="/#dla-kogo" className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white whitespace-nowrap">
             Dla kogo?
           </Link>
         </div>
