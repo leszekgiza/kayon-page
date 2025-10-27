@@ -96,8 +96,8 @@ const ProductsSection = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
-                    className={`h-2 w-2 rounded-full transition-all duration-200 ${
-                      index === currentIndex ? 'bg-white w-8' : 'bg-white/40'
+                    className={`h-6 w-6 rounded-full transition-all duration-200 ${
+                      index === currentIndex ? 'bg-white' : 'bg-white/40'
                     }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />
@@ -109,7 +109,7 @@ const ProductsSection = () => {
                 <button
                   onClick={handlePrev}
                   disabled={currentIndex === 0}
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-white transition-all duration-200 hover:bg-primary/30 disabled:opacity-30 disabled:cursor-not-allowed"
+                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-primary/20 text-white transition-all duration-200 hover:bg-primary/30 disabled:opacity-30 disabled:cursor-not-allowed"
                   aria-label="Previous"
                 >
                   <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,7 +120,7 @@ const ProductsSection = () => {
                 <button
                   onClick={handleNext}
                   disabled={currentIndex === maxIndex}
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-white transition-all duration-200 hover:bg-primary/30 disabled:opacity-30 disabled:cursor-not-allowed"
+                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-primary/20 text-white transition-all duration-200 hover:bg-primary/30 disabled:opacity-30 disabled:cursor-not-allowed"
                   aria-label="Next"
                 >
                   <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

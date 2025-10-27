@@ -46,7 +46,7 @@ const Navigation = () => {
         <div className="absolute right-[40px] top-[40px] inline-flex h-[57px] w-[211px] items-start justify-end gap-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
           {/* KONTAKT - chat_bubble */}
           <Link
-            href="/#kontakt"
+            href="/kontakt"
             className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7] transition-colors duration-200 hover:border-white"
             aria-label="Kontakt"
           >
