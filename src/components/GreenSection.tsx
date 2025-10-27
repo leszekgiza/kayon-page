@@ -117,17 +117,17 @@ const GreenSection = () => {
                   <div
                     key={`${card.title}-${cardIndex}`}
                     style={{ ...cardStyle, minWidth: 0, maxWidth: '100%', boxSizing: 'border-box', transform: 'scaleX(0.93)' }}
-                    className="flex-shrink-0 rounded-[32px] bg-white px-6 py-8 text-primary shadow-lg"
+                    className="flex-shrink-0 rounded-[20px] bg-white px-[30px] py-[40px] text-primary shadow-lg"
                   >
-                    <div className="min-w-0 space-y-4">
+                    <div className="min-w-0 flex flex-col">
                       <h3
-                        className="text-lg font-semibold"
+                        className="text-[24px] font-bold leading-[120%] min-h-[57.6px]"
                         style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
                       >
                         {card.title}
                       </h3>
                       <p
-                        className="text-sm leading-relaxed text-primary/80 md:text-base"
+                        className="text-base leading-[140%] text-primary/80 mt-4"
                         style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
                       >
                         {card.description}
@@ -144,7 +144,7 @@ const GreenSection = () => {
                     key={dotIndex}
                     type="button"
                     onClick={() => handleDot(dotIndex)}
-                    className={`h-2 w-2 rounded-full transition-colors ${
+                    className={`h-6 w-6 rounded-full transition-colors ${
                       dotIndex === activeDot ? 'bg-white' : 'bg-white/40'
                     }`}
                     aria-label={formatDotAria(dotIndex)}
@@ -155,7 +155,7 @@ const GreenSection = () => {
                 <button
                   type="button"
                   onClick={handlePrev}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 text-white transition-colors duration-200 hover:bg-white/10"
+                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full border border-white/40 text-white transition-colors duration-200 hover:bg-white/10"
                   aria-label={clients.previousAria}
                 >
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -165,7 +165,7 @@ const GreenSection = () => {
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white bg-white text-primary transition-colors duration-200 hover:bg-white/80"
+                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full border border-white bg-white text-primary transition-colors duration-200 hover:bg-white/80"
                   aria-label={clients.nextAria}
                 >
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

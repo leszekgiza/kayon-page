@@ -10,14 +10,14 @@ const OfferSection = () => {
     <section className="bg-[#2cbceb] py-24 text-white" id="oferta">
       <div className="container-custom">
         <div className="grid gap-12 lg:grid-cols-[0.67fr_1fr]">
-          <div className="space-y-6">
-            <div className="inline-flex w-max items-center rounded-full border border-white/40 bg-white/10 px-6 py-2 text-sm font-semibold">
+          <div className="space-y-6 text-black">
+            <div className="inline-flex w-max items-center rounded-full border border-black/20 bg-white/40 px-6 py-2 text-sm font-semibold">
               {offer.label}
             </div>
             <h2 className="text-3xl leading-tight md:text-[40px]">{offer.heading}</h2>
-            <p className="max-w-xl text-sm leading-relaxed text-white/80 md:text-base">
+            <div className="max-w-xl rounded-[40px] border-2 border-white/30 bg-white/10 px-10 py-10 text-sm leading-relaxed text-black md:text-base">
               {offer.description}
-            </p>
+            </div>
           </div>
           <motion.div
             className="grid gap-6 md:grid-cols-2"

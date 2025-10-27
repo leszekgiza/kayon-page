@@ -2,141 +2,112 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import KayonLogo from './KayonLogo';
 import KayonMark from './KayonMark';
-import LanguageSwitcher from './LanguageSwitcher';
 import MenuOverlay from './MenuOverlay';
 import { useContent } from '@/hooks/useContent';
 
 const Navigation = () => {
-  const [isDesktopMenuOpen, setDesktopMenuOpen] = useState(false);
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
   const { navigation } = useContent();
-  const { primaryLinks, actions, mobileMenu } = navigation;
-  const resolveHref = (href: string) => (href.startsWith('#') ? `/${href}` : href);
 
   return (
-    <nav className="absolute left-0 right-0 top-0 z-50">
-      <div className="container-custom">
-        <div className="flex items-center justify-between gap-4 py-6">
+    <>
+      {/* Desktop Navigation - Figma: MENU component, 1920x137px */}
+      <nav className="absolute left-0 right-0 top-0 z-50 hidden h-[137px] w-full md:block">
+        {/* Logo - Figma: left: 40px, top: 40px, 57x57px */}
+        <Link
+          href="/"
+          className="absolute left-[40px] top-[40px] flex h-[57px] w-[57px] items-center justify-center rounded-[30px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)] transition-opacity duration-200 hover:opacity-80"
+          aria-label="Kayon - Strona główna"
+        >
+          <KayonMark />
+        </Link>
+
+        {/* Center Labels - Figma: 3 labels with specific positions */}
+        <div className="absolute left-[688px] top-[40px] inline-flex h-[57px] w-[186px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
+          <Link href="/#dla-kogo" className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
+            Dla kogo?
+          </Link>
+        </div>
+
+        <div className="absolute left-[894px] top-[40px] inline-flex h-[57px] w-[141px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
+          <Link href="/#oferta" className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
+            Oferta
+          </Link>
+        </div>
+
+        <div className="absolute left-[1055px] top-[40px] inline-flex h-[57px] w-[177px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
+          <Link href="/produkty" className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
+            Produkty
+          </Link>
+        </div>
+
+        {/* Right Icons - Figma: right: 40px, top: 40px, 3 icons with gap 20px */}
+        <div className="absolute right-[40px] top-[40px] inline-flex h-[57px] w-[211px] items-start justify-end gap-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
+          {/* KONTAKT - chat_bubble */}
+          <Link
+            href="/#kontakt"
+            className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7] transition-colors duration-200 hover:border-white"
+            aria-label="Kontakt"
+          >
+            <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
+              chat_bubble
+            </span>
+          </Link>
+
+          {/* PLATFORMA - login */}
+          <a
+            href="https://openmetering.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7] transition-colors duration-200 hover:border-white"
+            aria-label="Platforma"
+          >
+            <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
+              login
+            </span>
+          </a>
+
+          {/* MENU - menu icon with black background */}
+          <button
+            type="button"
+            onClick={() => setMenuOpen(true)}
+            className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] bg-[#1D1D1B] transition-colors duration-200 hover:bg-[#343432]"
+            aria-label="Menu"
+          >
+            <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
+              menu
+            </span>
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Navigation - simplified for smaller screens */}
+      <nav className="absolute left-0 right-0 top-0 z-50 md:hidden">
+        <div className="flex items-center justify-between px-4 py-4">
           <Link
             href="/"
-            className="hidden transition-opacity duration-[600ms] ease-out hover:opacity-80 md:block"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 shadow-lg"
             aria-label="Kayon - Strona główna"
           >
             <KayonMark />
           </Link>
-          <div className="hidden items-center gap-3 md:flex">
-            {primaryLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={resolveHref(link.href)}
-                className="inline-flex items-center rounded-full border border-white/35 bg-black/35 px-6 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/50 hover:border-white/50"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          <div className="hidden items-center gap-2 md:flex">
-            <Link
-              href="/#kontakt"
-              aria-label="Kontakt"
-              title="Kontakt"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/55 bg-transparent text-white transition-colors duration-200 hover:border-white"
-            >
-              <span className="material-symbols-rounded" style={{ fontSize: '24px' }}>
-                chat_bubble
-              </span>
-            </Link>
-            <a
-              href="https://openmetering.co/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={actions.login.ariaLabel}
-              title={actions.login.label}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/55 bg-transparent text-white transition-colors duration-200 hover:border-white"
-            >
-              <svg className="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path
-                  d="M14.8 6h3.2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.2"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path d="M6 12h9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M12.5 9.5 15 12l-2.5 2.5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
-            <div className="rounded-full border border-white/35 bg-black/45 px-1 py-1">
-              <LanguageSwitcher variant="inline" />
-            </div>
-            <button
-              type="button"
-              aria-label={actions.menu.ariaLabel}
-              onClick={() => setDesktopMenuOpen(true)}
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-black/80 text-white transition-colors duration-200 hover:bg-black"
-            >
-              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M4 7h16M4 12h16M4 17h16" />
-              </svg>
-            </button>
-          </div>
 
           <button
-            onClick={() => setMobileMenuOpen((prev) => !prev)}
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 text-white md:hidden"
-            aria-label={
-              isMobileMenuOpen ? mobileMenu.toggleAria.close : mobileMenu.toggleAria.open
-            }
+            type="button"
+            onClick={() => setMenuOpen(true)}
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1D1D1B] shadow-lg"
+            aria-label="Menu"
           >
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
+            <span className="material-symbols-rounded text-[24px] text-white">
+              menu
+            </span>
           </button>
         </div>
+      </nav>
 
-        {isMobileMenuOpen && (
-          <div className="space-y-4 rounded-3xl border border-white/20 bg-black/75 p-6 text-white backdrop-blur md:hidden">
-            <div className="flex items-center justify-between">
-              <KayonLogo className="h-10 w-auto text-white" />
-              <LanguageSwitcher variant="menu" />
-            </div>
-            {primaryLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={resolveHref(link.href)}
-                className="block rounded-full border border-white/30 px-4 py-3 text-center text-sm font-semibold hover:bg-white/10"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="grid grid-cols-2 gap-3">
-              <a
-                href="https://openmetering.co/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-12 items-center justify-center rounded-full border border-white/30 text-sm font-semibold hover:bg-white/10"
-              >
-                {mobileMenu.login}
-              </a>
-              <button
-                type="button"
-                className="flex h-12 items-center justify-center rounded-full bg-black text-sm font-semibold"
-              >
-                {mobileMenu.menu}
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
-      <MenuOverlay open={isDesktopMenuOpen} onClose={() => setDesktopMenuOpen(false)} />
-    </nav>
+      <MenuOverlay open={isMenuOpen} onClose={() => setMenuOpen(false)} />
+    </>
   );
 };
 
