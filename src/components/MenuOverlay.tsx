@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import KayonLogo from './KayonLogo';
 import { useContent } from '@/hooks/useContent';
+import { useLanguage, SUPPORTED_LANGUAGES, LANGUAGE_LABELS } from './LanguageProvider';
 
 interface MenuOverlayProps {
   open: boolean;
@@ -12,6 +13,7 @@ interface MenuOverlayProps {
 
 const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
   const { menuOverlay } = useContent();
+  const { language, setLanguage } = useLanguage();
   const resolveHref = (href: string) => (href.startsWith('#') ? `/${href}` : href);
 
   return (
@@ -59,6 +61,24 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
                   </Link>
                 ))}
               </nav>
+
+              <div className="flex items-center gap-3">
+                {SUPPORTED_LANGUAGES.map((lang) => (
+                  <button
+                    key={lang}
+                    type="button"
+                    onClick={() => setLanguage(lang)}
+                    className={`flex h-12 w-12 items-center justify-center rounded-full text-sm font-semibold uppercase transition-colors ${
+                      language === lang
+                        ? 'bg-white text-[#1F1F1F]'
+                        : 'bg-[#2A2A2A] text-white hover:bg-[#3A3A3A]'
+                    }`}
+                    aria-label={`Switch to ${LANGUAGE_LABELS[lang]}`}
+                  >
+                    {LANGUAGE_LABELS[lang]}
+                  </button>
+                ))}
+              </div>
 
               <div className="h-px w-full bg-white/20" />
 

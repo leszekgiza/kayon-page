@@ -37,7 +37,7 @@ const Navigation = () => {
         </div>
 
         <div className="absolute left-[1055px] top-[40px] inline-flex h-[57px] w-[177px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
-          <Link href="/produkty" className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
+          <Link href="/#produkty" className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
             Produkty
           </Link>
         </div>

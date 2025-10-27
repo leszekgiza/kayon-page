@@ -11,6 +11,8 @@ const GreenSection = () => {
   const extendedCards = useMemo(() => [...baseCards, ...baseCards, ...baseCards], [baseCards]);
   const extendedLength = extendedCards.length;
   const GAP_SIZE = 24; // gap-6 in pixels
+  const CARD_WIDTH = 245; // Fixed width from Figma
+  const CARD_HEIGHT = 380; // Fixed height from Figma
 
   const [visibleCount, setVisibleCount] = useState(1);
   const [index, setIndex] = useState(baseLength);
@@ -57,20 +59,18 @@ const GreenSection = () => {
   }, [animateTransition]);
 
   const trackStyle = useMemo(() => {
-    const translatePercent = (index * 100) / extendedLength;
-    const totalGaps = (extendedLength - 1) * GAP_SIZE;
+    const offset = index * (CARD_WIDTH + GAP_SIZE);
     return {
-      width: `calc(${(extendedLength * 100) / visibleCount}% + ${totalGaps}px)`,
-      transform: `translateX(-${translatePercent}%)`,
+      transform: `translateX(-${offset}px)`,
     };
-  }, [index, extendedLength, visibleCount]);
+  }, [index]);
 
-  const cardStyle = useMemo(() => {
-    const totalGaps = (extendedLength - 1) * GAP_SIZE;
-    return {
-      width: `calc((100% - ${totalGaps}px) / ${extendedLength})`
-    };
-  }, [extendedLength]);
+  const cardStyle = {
+    width: `${CARD_WIDTH}px`,
+    height: `${CARD_HEIGHT}px`,
+    minWidth: `${CARD_WIDTH}px`,
+    flexShrink: 0,
+  };
 
   const activeDot = useMemo(() => {
     const normalized = (index - baseLength) % baseLength;
@@ -116,8 +116,8 @@ const GreenSection = () => {
                 {extendedCards.map((card, cardIndex) => (
                   <div
                     key={`${card.title}-${cardIndex}`}
-                    style={{ ...cardStyle, minWidth: 0, maxWidth: '100%', boxSizing: 'border-box', transform: 'scaleX(0.93)' }}
-                    className="flex-shrink-0 rounded-[20px] bg-white px-[30px] py-[40px] text-primary shadow-lg"
+                    style={cardStyle}
+                    className="rounded-[20px] bg-white px-[30px] py-[40px] text-primary shadow-lg"
                   >
                     <div className="min-w-0 flex flex-col">
                       <h3

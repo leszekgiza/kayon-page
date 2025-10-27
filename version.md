@@ -1,3 +1,27 @@
+Version 2.28
+
+- Added language switcher to MenuOverlay:
+  - Added PL/EN/DE language buttons to menu overlay
+  - Buttons styled with active state (white background for current language)
+  - Integrated with existing LanguageProvider system
+  - Users can now switch languages from the main menu
+
+- Fixed Produkty navigation link:
+  - Changed Navigation.tsx: href="/produkty" → href="/#produkty"
+  - Produkty link now scrolls to products section on homepage instead of navigating to separate page
+
+- Fixed GreenSection card dimensions to match Figma:
+  - Changed card size from dynamic calculation to fixed 245×380px
+  - Removed transform: scaleX(0.93) workaround
+  - Updated trackStyle to use fixed pixel offset instead of percentage
+  - Cards now display at exact Figma specifications
+
+- Fixed Polish contact page translations:
+  - Changed heading from "Get in touch" to "Skontaktuj się z nami"
+  - Changed subtitle to Polish version
+  - Translated all labels: GENERAL INQUIRIES → ZAPYTANIA OGÓLNE, CARRIERS → KARIERA, etc.
+  - Contact page now fully displays in Polish when PL language is selected
+
 Version 2.27
 
 - Fixed Produkty section navigation to match Figma design:
