@@ -1,3 +1,14 @@
+Version 2.29
+
+- Improved responsive behavior across the site:
+  - Navigation: Hide center menu buttons ("Dla kogo?", "Oferta", "Produkty") below 1536px (2xl breakpoint)
+  - Navigation: Center buttons only visible on very wide screens to prevent overlapping
+  - HeroSection: Hide AIM target graphic below 1536px to prevent overflow on narrow screens
+  - ProductsSection: Fixed text wrapping issue for heading "Produkty wyznaczające nowy standard pomiarów"
+  - ProductsSection: Changed layout from grid to flex for better responsiveness
+  - ProductsSection: Navigation buttons now stay visible on narrow screens (moved to left with gap-4)
+  - All changes ensure no UI elements overlap or get cut off on narrower viewports
+
 Version 2.28
 
 - Added language switcher to MenuOverlay:

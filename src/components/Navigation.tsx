@@ -23,20 +23,20 @@ const Navigation = () => {
           <KayonMark />
         </Link>
 
-        {/* Center Labels - Figma: 3 labels with specific positions */}
-        <div className="absolute left-[688px] top-[40px] inline-flex h-[57px] w-[186px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
+        {/* Center Labels - Figma: 3 labels with specific positions - only show on 2xl+ screens */}
+        <div className="absolute left-[688px] top-[40px] hidden 2xl:inline-flex h-[57px] w-[186px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
           <Link href="/#dla-kogo" className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white whitespace-nowrap">
             Dla kogo?
           </Link>
         </div>
 
-        <div className="absolute left-[894px] top-[40px] inline-flex h-[57px] w-[141px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
+        <div className="absolute left-[894px] top-[40px] hidden 2xl:inline-flex h-[57px] w-[141px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
           <Link href="/#oferta" className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
             Oferta
           </Link>
         </div>
 
-        <div className="absolute left-[1055px] top-[40px] inline-flex h-[57px] w-[177px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
+        <div className="absolute left-[1055px] top-[40px] hidden 2xl:inline-flex h-[57px] w-[177px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
           <Link href="/#produkty" className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
             Produkty
           </Link>

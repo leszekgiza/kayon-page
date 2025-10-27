@@ -27,7 +27,7 @@ const ProductsSection = () => {
   return (
     <section id="produkty" className="bg-[#474747] py-24 text-white">
       <div className="container-custom">
-        <div className="grid gap-12 lg:grid-cols-[477px_minmax(0,1fr)]">
+        <div className="flex flex-col gap-12 lg:flex-row">
           {/* Left Column - Text Content - Figma: 477x631px, gap 40px SPACE_BETWEEN */}
           <div className="flex flex-col justify-between lg:w-[477px] lg:h-[631px]">
             <div className="inline-flex w-max items-center rounded-full bg-[#EAEAEA] px-[30px] py-5 text-2xl font-bold text-[#1D1D1B]">
@@ -45,7 +45,7 @@ const ProductsSection = () => {
           </div>
 
           {/* Right Column - Carousel */}
-          <div className="relative">
+          <div className="relative flex-1">
             {/* Cards Container */}
             <div className="overflow-hidden">
               <motion.div
@@ -89,7 +89,7 @@ const ProductsSection = () => {
             </div>
 
             {/* Navigation - PROGRESS 01 (dots on left, arrows on right) */}
-            <div className="mt-8 flex items-center justify-between">
+            <div className="mt-8 flex flex-wrap items-center justify-start gap-4 lg:justify-between">
               {/* Dot Navigation - PROGRESS 01 */}
               <div className="flex gap-2">
                 {Array.from({ length: maxIndex + 1 }).map((_, index) => (

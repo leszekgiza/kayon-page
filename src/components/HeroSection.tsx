@@ -50,7 +50,7 @@ const HeroSection = () => {
       <div className="pointer-events-none absolute left-1/2 top-32 hidden h-[626px] w-[1799px] -translate-x-1/2 rounded-[313px] border border-white/25 md:block" />
 
       {/* AIM Target - Figma: 1250x1041px, positioned at X:335 Y:-49 */}
-      <div className="pointer-events-none absolute z-10 hidden md:block" style={{ left: '335px', top: '-49px', width: '1250px', height: '1041px' }}>
+      <div className="pointer-events-none absolute z-10 hidden 2xl:block" style={{ left: '335px', top: '-49px', width: '1250px', height: '1041px' }}>
         <Image
           src="/aim-target.svg"
           alt=""
