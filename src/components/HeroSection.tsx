@@ -49,13 +49,13 @@ const HeroSection = () => {
       {/* Decorative large circle - Figma: 1799x626px, corner radius 313px */}
       <div className="pointer-events-none absolute left-1/2 top-32 hidden h-[626px] w-[1799px] -translate-x-1/2 rounded-[313px] border border-white/25 md:block" />
 
-      {/* AIM Target - Figma: 1250x1041.29, positioned at X:325 Y:-99.15 */}
-      <div className="pointer-events-none absolute z-10 hidden md:block" style={{ left: '325px', top: '-99.15px', width: '1250px', height: '1041.29px' }}>
+      {/* AIM Target - Figma: 1250x1041px, positioned at X:335 Y:-49 */}
+      <div className="pointer-events-none absolute z-10 hidden md:block" style={{ left: '335px', top: '-49px', width: '1250px', height: '1041px' }}>
         <Image
           src="/aim-target.svg"
           alt=""
           width={1250}
-          height={1041.29}
+          height={1041}
           priority
           className="opacity-40"
         />
@@ -88,8 +88,8 @@ const HeroSection = () => {
               </h1>
 
               {/* Frame 2 - Box with text + CTA button (horizontal on large screens) */}
-              {/* Figma: corner radius 30px, padding 40px, gap 40px */}
-              <div className="flex w-full flex-col items-start gap-10 rounded-[30px] border border-white/20 bg-white/10 p-10 backdrop-blur-md lg:flex-row lg:items-center">
+              {/* Figma: corner radius 30px, padding 40px, gap 40px, border #484848 */}
+              <div className="flex w-full flex-col items-start gap-10 rounded-[30px] border-2 border-[#484848] bg-white/10 p-10 backdrop-blur-md lg:flex-row lg:items-center">
                 {/* Body text */}
                 <p className="flex-1 -mt-5 text-sm leading-relaxed text-white/90 md:text-base">
                   {hero.body}
@@ -121,7 +121,7 @@ const HeroSection = () => {
             const nextSection = document.querySelector('section:nth-of-type(2)');
             nextSection?.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer transition-opacity duration-300 hover:opacity-80"
+          className="absolute bottom-[146px] left-1/2 -translate-x-1/2 cursor-pointer transition-opacity duration-300 hover:opacity-80"
           aria-label="Scroll down"
         >
           <Image
