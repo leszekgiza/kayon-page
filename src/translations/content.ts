@@ -1634,7 +1634,7 @@ const en: ContentStructure = {
     {
       slug: 'cieplomierze',
       title: 'Heat meters',
-      description: 'Heat meters ready for residential and commercial monitoring networks.',
+      description: 'Precisely measure and calculate thermal energy consumption in various heating systems. Combined with communication modules, they create an intelligent All in Kayon remote reading system. Increase accuracy, reliability, and convenience in heat management.',
       items: ['engelmann-senso-star-e', 'maddalena-microclima-evo', 'ploumeter-rc12'],
     },
     {
@@ -2617,7 +2617,7 @@ const de: ContentStructure = {
     {
       slug: 'cieplomierze',
       title: 'Wärmezaehler',
-      description: 'Wärmezaehler für Wohn- und Gewerbeanwendungen mit Systemintegration.',
+      description: 'Präzise Messung und Berechnung des Wärmeenergieverbrauchs in verschiedenen Heizsystemen. In Verbindung mit Kommunikationsmodulen bilden sie ein intelligentes All in Kayon Fernauslesung-System. Erhöhen Sie Genauigkeit, Zuverlässigkeit und Komfort im Wärmemanagement.',
       items: ['engelmann-senso-star-e', 'maddalena-microclima-evo', 'ploumeter-rc12'],
     },
     {
