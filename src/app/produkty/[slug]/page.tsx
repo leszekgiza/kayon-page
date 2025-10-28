@@ -6,7 +6,7 @@ import ProductCategoryPage from '@/components/ProductCategoryPage';
 import ProductDetailPage from '@/components/ProductDetailPage';
 import { CONTENT } from '@/translations/content';
 
-const PRODUCT_SLUGS = Object.keys(CONTENT.pl.productDetails);
+const PRODUCT_SLUGS = Object.keys(CONTENT.pl.productDetails).filter((slug) => slug !== 'ploumeter-rc12');
 const CATEGORY_SLUGS = CONTENT.pl.productCategories.map((category) => category.slug);
 const ALL_SLUGS = [...PRODUCT_SLUGS, ...CATEGORY_SLUGS];
 
