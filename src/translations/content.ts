@@ -524,6 +524,11 @@ const pl: ContentStructure = {
         ],
       },
       {
+        title: 'Infrastruktura',
+        slug: 'infrastruktura',
+        items: ['Range One', 'Koncentrator AC', 'Koncentrator BAT'],
+      },
+      {
         title: 'Wodomierze',
         slug: 'wodomierze',
         items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'GWF Sonico Nano', 'Apator JS Smart+'],
@@ -537,11 +542,6 @@ const pl: ContentStructure = {
         title: 'Moduły komunikacyjne',
         slug: 'moduly-komunikacyjne',
         items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
-      },
-      {
-        title: 'Infrastruktura',
-        slug: 'infrastruktura',
-        items: ['Range One', 'Koncentrator AC', 'Koncentrator BAT'],
       },
     ],
     ctaLabel: 'Dowiedz się więcej',
@@ -1515,6 +1515,11 @@ const en: ContentStructure = {
         ],
       },
       {
+        title: 'Infrastructure',
+        slug: 'infrastruktura',
+        items: ['Range One', 'AC concentrator', 'BAT concentrator'],
+      },
+      {
         title: 'Water meters',
         slug: 'wodomierze',
         items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'GWF Sonico Nano', 'Apator JS Smart+'],
@@ -1528,11 +1533,6 @@ const en: ContentStructure = {
         title: 'Communication modules',
         slug: 'moduly-komunikacyjne',
         items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
-      },
-      {
-        title: 'Infrastructure',
-        slug: 'infrastruktura',
-        items: ['Range One', 'AC concentrator', 'BAT concentrator'],
       },
     ],
     ctaLabel: 'Learn more',
@@ -2498,6 +2498,11 @@ const de: ContentStructure = {
         ],
       },
       {
+        title: 'Infrastruktur',
+        slug: 'infrastruktura',
+        items: ['Range One', 'AC-Konzentrator', 'BAT-Konzentrator'],
+      },
+      {
         title: 'Wasserzaehler',
         slug: 'wodomierze',
         items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'GWF Sonico Nano', 'Apator JS Smart+'],
@@ -2511,11 +2516,6 @@ const de: ContentStructure = {
         title: 'Kommunikationsmodule',
         slug: 'moduly-komunikacyjne',
         items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
-      },
-      {
-        title: 'Infrastruktur',
-        slug: 'infrastruktura',
-        items: ['Range One', 'AC-Konzentrator', 'BAT-Konzentrator'],
       },
     ],
     ctaLabel: 'Mehr erfahren',
