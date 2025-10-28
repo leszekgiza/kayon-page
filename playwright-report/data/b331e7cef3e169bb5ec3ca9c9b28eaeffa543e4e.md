@@ -1,0 +1,102 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "KAYON homepage" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "KAYON emblem" [ref=e4]
+    - link "Who we help" [ref=e10] [cursor=pointer]:
+      - /url: /#nasi-klienci
+    - link "Offer" [ref=e12] [cursor=pointer]:
+      - /url: /#oferta
+    - link "Products" [ref=e14] [cursor=pointer]:
+      - /url: /#produkty
+    - generic [ref=e15]:
+      - link "Open presentation" [ref=e16] [cursor=pointer]:
+        - /url: /kontakt
+        - generic [ref=e17]: chat_bubble
+      - link "Go to sign in page" [ref=e18] [cursor=pointer]:
+        - /url: https://openmetering.co/
+        - generic [ref=e19]: login
+      - button "Open menu" [ref=e20] [cursor=pointer]:
+        - generic [ref=e21]: menu
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - img "KAYON" [ref=e28]
+      - generic [ref=e37]:
+        - heading "Systems" [level=1] [ref=e39]
+        - paragraph [ref=e42]: Every client will find a solution perfectly tailored to their way of working. This is a range of solutions from simple walk-by systems to intelligent MESH networks. Our systems provide increasingly simpler, safer and more cost-effective access to measurement data. Operations can respond faster and manage utilities more efficiently.
+      - button "Scroll down" [ref=e43] [cursor=pointer]:
+        - generic [ref=e45]: arrow_cool_down
+    - generic [ref=e48]:
+      - paragraph [ref=e49]: All in KAYON systems are intelligent solutions that integrate multiple devices and all essential data and processes.
+      - paragraph [ref=e50]
+      - paragraph [ref=e51]: They automate work, generate reports, alert about failures and support users at every stage – from installation to asset management.
+      - paragraph [ref=e52]
+      - paragraph [ref=e53]: They integrate water meters, heat meters, communication modules and infrastructure into one cohesive system that works reliably and fully remotely. All in KAYON means everything in one place – always up-to-date, always under control. The range of diverse solutions allows you to choose the system that best suits the working style of the administrator, property manager, installation company or other managing entity.
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - generic [ref=e57]:
+          - heading "Walk-by" [level=2] [ref=e58]
+          - paragraph [ref=e59]: Fast remote reading, no errors, no downtime.
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - generic [ref=e62]: arrow_right
+              - paragraph [ref=e63]: Field work becomes simpler than ever. Data transmission is instantaneous and fully automatic, and access to it in the system is immediate.
+            - generic [ref=e64]:
+              - generic [ref=e65]: arrow_right
+              - paragraph [ref=e66]: The solution allows fast and error-free reading of data from water meters, heat meters, heat cost allocators, gas meters and electricity meters - without physical access to them.
+            - generic [ref=e67]:
+              - generic [ref=e68]: arrow_right
+              - paragraph [ref=e69]: The system based on the Range ONE device and Route ONE application also enables ongoing diagnostics and service of various types of measuring devices.
+        - img "Walk-by system" [ref=e71]
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - heading "Fix (Star)" [level=2] [ref=e74]
+          - paragraph [ref=e75]: Permanent supervision and full control – one network that reads everything.
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: arrow_right
+              - paragraph [ref=e79]: The solution works based on a star topology, where measuring devices communicate with the concentrator directly or through repeaters that extend the network range.
+            - generic [ref=e80]:
+              - generic [ref=e81]: arrow_right
+              - paragraph [ref=e82]: The system automates readings and provides constant supervision over utilities and immediate response to failures or irregularities.
+            - generic [ref=e83]:
+              - generic [ref=e84]: arrow_right
+              - paragraph [ref=e85]: Fix supports various types of meters compatible with the Wireless M-Bus or OMS standard, making it as easy as possible to manage and balance the consumption of individual utilities.
+        - img "Fix (Star) system" [ref=e87]
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - heading "MESH" [level=2] [ref=e90]
+          - paragraph [ref=e91]: Reliability and low costs – a network that repairs itself.
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]: arrow_right
+              - paragraph [ref=e95]: The solution is an intelligent, self-configuring and self-healing measurement network that ensures uninterrupted communication even in difficult conditions.
+            - generic [ref=e96]:
+              - generic [ref=e97]: arrow_right
+              - paragraph [ref=e98]: This is an innovative system that relies solely on one data concentrator – installation comes down to clicking "GO", and data automatically goes to the cloud.
+            - generic [ref=e99]:
+              - generic [ref=e100]: arrow_right
+              - paragraph [ref=e101]: MESH is the cheapest and most reliable way to build remote utility monitoring infrastructure, guaranteeing full control and minimal maintenance costs.
+        - img "MESH system" [ref=e103]
+  - contentinfo [ref=e104]:
+    - generic [ref=e105]:
+      - generic [ref=e106]:
+        - generic [ref=e107]: "Y"
+        - generic [ref=e108]: © 2025 KAYON
+      - generic [ref=e109]:
+        - link "Privacy policy" [ref=e110] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Cookie policy" [ref=e111] [cursor=pointer]:
+          - /url: /cookie-policy
+  - status [ref=e112]:
+    - generic [ref=e113]:
+      - img [ref=e115]
+      - generic [ref=e117]:
+        - text: Static route
+        - button "Hide static indicator" [ref=e118] [cursor=pointer]:
+          - img [ref=e119]
+  - alert [ref=e122]
+```

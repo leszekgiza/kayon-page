@@ -1,0 +1,96 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "KAYON homepage" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "KAYON emblem" [ref=e4]
+    - link "Who we help" [ref=e10] [cursor=pointer]:
+      - /url: /#nasi-klienci
+    - link "Offer" [ref=e12] [cursor=pointer]:
+      - /url: /#oferta
+    - link "Products" [ref=e14] [cursor=pointer]:
+      - /url: /#produkty
+    - generic [ref=e15]:
+      - link "Open presentation" [ref=e16] [cursor=pointer]:
+        - /url: /kontakt
+        - generic [ref=e17]: chat_bubble
+      - link "Go to sign in page" [ref=e18] [cursor=pointer]:
+        - /url: https://openmetering.co/
+        - generic [ref=e19]: login
+      - button "Open menu" [ref=e20] [cursor=pointer]:
+        - generic [ref=e21]: menu
+  - main [ref=e22]:
+    - generic [ref=e28]:
+      - img "KAYON" [ref=e30]
+      - generic [ref=e39]:
+        - heading "Get in touch" [level=1] [ref=e40]
+        - paragraph [ref=e41]: Contact us and let's collaborate! Let us get to know you and your business challenges.
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - heading "GENERAL INQUIRIES" [level=3] [ref=e47]
+          - link "Welcome@kayon.pl" [ref=e48] [cursor=pointer]:
+            - /url: mailto:Welcome@kayon.pl
+        - generic [ref=e49]:
+          - heading "CARRIERS" [level=3] [ref=e50]
+          - link "JoinUs@kayon.pl" [ref=e51] [cursor=pointer]:
+            - /url: mailto:JoinUs@kayon.pl
+        - generic [ref=e52]:
+          - heading "BUSINESS" [level=3] [ref=e53]
+          - link "Biz@kayon.pl" [ref=e54] [cursor=pointer]:
+            - /url: mailto:Biz@kayon.pl
+        - generic [ref=e55]:
+          - heading "ADDRESS" [level=3] [ref=e56]
+          - paragraph [ref=e57]:
+            - text: ul. Gen. Józefa Fiszera 14
+            - text: 80-231 Gdańsk
+        - generic [ref=e58]:
+          - heading "PHONE" [level=3] [ref=e59]
+          - link "+48 577 570 814" [ref=e60] [cursor=pointer]:
+            - /url: tel:+48577570814
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - generic [ref=e63]: Your Name (required)
+          - textbox "Your Name (required)" [ref=e64]
+        - generic [ref=e65]:
+          - generic [ref=e66]: Your Email (required)
+          - textbox "Your Email (required)" [ref=e67]
+        - generic [ref=e68]:
+          - generic [ref=e69]: Subject
+          - textbox "Subject" [ref=e70]
+        - generic [ref=e71]:
+          - generic [ref=e72]: Your Message
+          - textbox "Your Message" [ref=e73]
+        - button "Send" [ref=e74] [cursor=pointer]
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - heading "We are in the heart of the Gdańsk University of Technology! Come and visit us!" [level=2] [ref=e79]
+          - paragraph [ref=e80]: ul. Gen. Józefa Fiszera 14, 80-231 Gdańsk
+        - link "Get directions" [ref=e81] [cursor=pointer]:
+          - /url: https://www.google.com/maps/dir//ul.+Gen.+J%C3%B3zefa+Fiszera+14,+80-231+Gda%C5%84sk
+          - text: Get directions
+          - img [ref=e82]
+      - iframe [ref=e85]:
+        
+  - contentinfo [ref=e86]:
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - generic [ref=e89]: "Y"
+        - generic [ref=e90]: © 2025 KAYON
+      - generic [ref=e91]:
+        - link "Privacy policy" [ref=e92] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Cookie policy" [ref=e93] [cursor=pointer]:
+          - /url: /cookie-policy
+  - status [ref=e94]:
+    - generic [ref=e95]:
+      - img [ref=e97]
+      - generic [ref=e99]:
+        - text: Static route
+        - button "Hide static indicator" [ref=e100] [cursor=pointer]:
+          - img [ref=e101]
+  - alert [ref=e104]
+```

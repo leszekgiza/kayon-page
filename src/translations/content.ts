@@ -654,7 +654,7 @@ const pl: ContentStructure = {
     {
       slug: 'moduly-komunikacyjne',
       title: 'Moduły komunikacyjne',
-      description: 'Moduły radiowe i przewodowe do integracji liczników z platformami Kayon. Oferujemy rozwiązania łączności radiowej wMBus oraz przewodowej M-Bus, umożliwiające automatyczny, zdalny odczyt danych pomiarowych z wodomierzy i ciepłomierzy. Nasze moduły zapewniają niezawodną i bezpieczną transmisję danych do centralnych systemów zarządzania.',
+      description: 'Pozwalają łatwo włączyć już zainstalowane urządzenia do systemów zdalnego odczytu, a następnie przeprowadzać zdalną diagnostykę, rekonfigurację i aktualizację oprogramowania (FOTA). Dzięki szyfrowaniu danych i uwierzytelnianiu sprzęt działa bezpiecznie, a żywotność baterii sięga nawet 15 lat.',
       items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
       moreButtonLabel: 'Więcej',
       downloadPdfButtonLabel: 'Pobierz PDF',
@@ -1656,7 +1656,7 @@ const en: ContentStructure = {
     {
       slug: 'moduly-komunikacyjne',
       title: 'Communication modules',
-      description: 'Radio and wired modules for integrating meters with Kayon platforms. We offer wireless wMBus and wired M-Bus connectivity solutions, enabling automatic remote reading of measurement data from water and heat meters. Our modules ensure reliable and secure data transmission to central management systems.',
+      description: 'Easily integrate already installed devices into remote reading systems, then perform remote diagnostics, reconfiguration and firmware updates (FOTA). With data encryption and authentication, the hardware operates securely, and battery life reaches up to 15 years.',
       items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
       moreButtonLabel: 'More',
       downloadPdfButtonLabel: 'Download PDF',
@@ -2650,7 +2650,7 @@ const de: ContentStructure = {
     {
       slug: 'moduly-komunikacyjne',
       title: 'Kommunikationsmodule',
-      description: 'Funk- und Kabelmodule zur Integration von Zaehlern in Kayon-Plattformen. Wir bieten drahtlose wMBus- und kabelgebundene M-Bus-Konnektivitaetsloesungen, die eine automatische Fernauslesung von Messdaten aus Wasser- und Waermezaehlern ermoeglichen. Unsere Module gewaehrleisten eine zuverlaessige und sichere Datenuebertragung zu zentralen Verwaltungssystemen.',
+      description: 'Ermöglichen die einfache Integration bereits installierter Geräte in Fernauslesungssysteme und anschließend Ferndiagnose, Rekonfiguration und Firmware-Updates (FOTA). Dank Datenverschlüsselung und Authentifizierung arbeitet die Hardware sicher und die Batterielebensdauer erreicht bis zu 15 Jahre.',
       items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
       moreButtonLabel: 'Mehr',
       downloadPdfButtonLabel: 'PDF herunterladen',

@@ -1,0 +1,322 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "KAYON homepage" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "KAYON emblem" [ref=e4]
+    - link "Who we help" [ref=e10] [cursor=pointer]:
+      - /url: /#nasi-klienci
+    - link "Offer" [ref=e12] [cursor=pointer]:
+      - /url: /#oferta
+    - link "Products" [ref=e14] [cursor=pointer]:
+      - /url: /#produkty
+    - generic [ref=e15]:
+      - link "Open presentation" [ref=e16] [cursor=pointer]:
+        - /url: /kontakt
+        - generic [ref=e17]: chat_bubble
+      - link "Go to sign in page" [ref=e18] [cursor=pointer]:
+        - /url: https://openmetering.co/
+        - generic [ref=e19]: login
+      - button "Open menu" [ref=e20] [cursor=pointer]:
+        - generic [ref=e21]: menu
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - img "Wind farm panorama" [ref=e25]
+      - generic [ref=e27]:
+        - generic [ref=e29]:
+          - img "KAYON" [ref=e31]
+          - generic [ref=e40]:
+            - heading "In a world where technology sets the pace of change, those who embrace it earlier gain the advantage." [level=1] [ref=e41]
+            - generic [ref=e42]:
+              - paragraph [ref=e43]: Our remote meter-reading systems for water and heat already comply with EU regulations that will become mandatory in 2027.
+              - button "Learn more" [ref=e44] [cursor=pointer]:
+                - text: Learn more
+                - img [ref=e45]
+        - button "Scroll down" [ref=e47] [cursor=pointer]
+    - generic [ref=e49]:
+      - generic [ref=e51]:
+        - generic [ref=e53]: check
+        - paragraph [ref=e54]: Experience that builds trust
+        - button "Learn more" [ref=e55] [cursor=pointer]:
+          - paragraph [ref=e56]: Learn more
+      - generic [ref=e58]:
+        - generic [ref=e60]: check
+        - paragraph [ref=e61]: Technology ready for tomorrow
+        - button "Learn more" [ref=e62] [cursor=pointer]:
+          - paragraph [ref=e63]: Learn more
+      - generic [ref=e65]:
+        - generic [ref=e67]: check
+        - paragraph [ref=e68]: Kayon is recognised across Europe
+        - button "Learn more" [ref=e69] [cursor=pointer]:
+          - paragraph [ref=e70]: Learn more
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - generic [ref=e77]: Our clients
+        - heading "Kayon delivers a precise answer to the needs of every stakeholder group" [level=2] [ref=e78]
+        - generic [ref=e79]: We deliver all of this while maintaining high energy efficiency and minimising environmental impact. Well-designed systems should operate efficiently and without failure - to the benefit of people and the planet.
+      - generic [ref=e80]:
+        - generic [ref=e82]:
+          - generic [ref=e84]:
+            - heading "Distributors" [level=3] [ref=e85]
+            - paragraph [ref=e86]: Value the flexibility of adapting technology to local requirements and the straightforward integration of ALL in KAYON with existing distribution platforms. They can offer a complete, scalable solution without costly customisation.
+          - generic [ref=e88]:
+            - heading "Installation companies" [level=3] [ref=e89]
+            - paragraph [ref=e90]: Appreciate the intuitive installation process, full component compatibility and the equipment’s resilience to installation mistakes. Deployment is fast, requires no specialised tools and configuration takes just a few logical steps.
+          - generic [ref=e92]:
+            - heading "Building administrators" [level=3] [ref=e93]
+            - paragraph [ref=e94]: Gain full control of their infrastructure in one place. ALL in KAYON consolidates data from many buildings - from meters to alerts and costs - in real time.
+          - generic [ref=e96]:
+            - heading "Property managers" [level=3] [ref=e97]
+            - paragraph [ref=e98]: Rely on uninterrupted readings and remote access to well-organised data. The system enables rapid consumption reporting, anomaly detection and instant access to the entire metering history.
+          - generic [ref=e100]:
+            - heading "Housing cooperatives and HOAs" [level=3] [ref=e101]
+            - paragraph [ref=e102]: Benefit from transparent billing and straightforward verification of individual consumption. Every resident can track their usage, easing the load on administrative teams and reducing enquiries.
+          - generic [ref=e104]:
+            - heading "Distributors" [level=3] [ref=e105]
+            - paragraph [ref=e106]: Value the flexibility of adapting technology to local requirements and the straightforward integration of ALL in KAYON with existing distribution platforms. They can offer a complete, scalable solution without costly customisation.
+          - generic [ref=e108]:
+            - heading "Installation companies" [level=3] [ref=e109]
+            - paragraph [ref=e110]: Appreciate the intuitive installation process, full component compatibility and the equipment’s resilience to installation mistakes. Deployment is fast, requires no specialised tools and configuration takes just a few logical steps.
+          - generic [ref=e112]:
+            - heading "Building administrators" [level=3] [ref=e113]
+            - paragraph [ref=e114]: Gain full control of their infrastructure in one place. ALL in KAYON consolidates data from many buildings - from meters to alerts and costs - in real time.
+          - generic [ref=e116]:
+            - heading "Property managers" [level=3] [ref=e117]
+            - paragraph [ref=e118]: Rely on uninterrupted readings and remote access to well-organised data. The system enables rapid consumption reporting, anomaly detection and instant access to the entire metering history.
+          - generic [ref=e120]:
+            - heading "Housing cooperatives and HOAs" [level=3] [ref=e121]
+            - paragraph [ref=e122]: Benefit from transparent billing and straightforward verification of individual consumption. Every resident can track their usage, easing the load on administrative teams and reducing enquiries.
+          - generic [ref=e124]:
+            - heading "Distributors" [level=3] [ref=e125]
+            - paragraph [ref=e126]: Value the flexibility of adapting technology to local requirements and the straightforward integration of ALL in KAYON with existing distribution platforms. They can offer a complete, scalable solution without costly customisation.
+          - generic [ref=e128]:
+            - heading "Installation companies" [level=3] [ref=e129]
+            - paragraph [ref=e130]: Appreciate the intuitive installation process, full component compatibility and the equipment’s resilience to installation mistakes. Deployment is fast, requires no specialised tools and configuration takes just a few logical steps.
+          - generic [ref=e132]:
+            - heading "Building administrators" [level=3] [ref=e133]
+            - paragraph [ref=e134]: Gain full control of their infrastructure in one place. ALL in KAYON consolidates data from many buildings - from meters to alerts and costs - in real time.
+          - generic [ref=e136]:
+            - heading "Property managers" [level=3] [ref=e137]
+            - paragraph [ref=e138]: Rely on uninterrupted readings and remote access to well-organised data. The system enables rapid consumption reporting, anomaly detection and instant access to the entire metering history.
+          - generic [ref=e140]:
+            - heading "Housing cooperatives and HOAs" [level=3] [ref=e141]
+            - paragraph [ref=e142]: Benefit from transparent billing and straightforward verification of individual consumption. Every resident can track their usage, easing the load on administrative teams and reducing enquiries.
+        - generic [ref=e143]:
+          - generic [ref=e144]:
+            - button "Show client group 1" [ref=e145] [cursor=pointer]
+            - button "Show client group 2" [ref=e146] [cursor=pointer]
+            - button "Show client group 3" [ref=e147] [cursor=pointer]
+            - button "Show client group 4" [ref=e148] [cursor=pointer]
+            - button "Show client group 5" [ref=e149] [cursor=pointer]
+          - generic [ref=e150]:
+            - button "Previous client group" [ref=e151] [cursor=pointer]:
+              - img [ref=e152]
+            - button "Next client group" [ref=e154] [cursor=pointer]:
+              - img [ref=e155]
+    - generic [ref=e159]:
+      - generic [ref=e160]:
+        - generic [ref=e161]: How we operate
+        - heading "We provide devices and services that minimise costs" [level=2] [ref=e162]
+        - generic [ref=e163]: Kayon solutions are designed so that every stakeholder - from distributor and installer to manager and resident - gains real savings, lower operating expenses and greater control.
+      - generic [ref=e165]:
+        - generic [ref=e166]:
+          - generic [ref=e168]: autorenew
+          - heading "Pay only for actual consumption" [level=3] [ref=e169]
+          - button "Learn more" [ref=e170] [cursor=pointer]:
+            - text: Learn more
+            - img [ref=e171]
+        - generic [ref=e173]:
+          - generic [ref=e175]: shield_with_house
+          - heading "No downtime or failures" [level=3] [ref=e176]
+          - button "Learn more" [ref=e177] [cursor=pointer]:
+            - text: Learn more
+            - img [ref=e178]
+        - generic [ref=e180]:
+          - generic [ref=e182]: schedule
+          - heading "Installation time saved" [level=3] [ref=e183]
+          - button "Learn more" [ref=e184] [cursor=pointer]:
+            - text: Learn more
+            - img [ref=e185]
+        - generic [ref=e187]:
+          - generic [ref=e189]: description
+          - heading "Straightforward management of large data sets" [level=3] [ref=e190]
+          - button "Learn more" [ref=e191] [cursor=pointer]:
+            - text: Learn more
+            - img [ref=e192]
+        - generic [ref=e194]:
+          - generic [ref=e196]: ac_unit
+          - heading "Full compatibility and flexibility" [level=3] [ref=e197]
+          - button "Learn more" [ref=e198] [cursor=pointer]:
+            - text: Learn more
+            - img [ref=e199]
+    - generic [ref=e203]:
+      - generic [ref=e204]:
+        - generic [ref=e205]: What we offer
+        - heading "We combine modern products with a system-wide approach" [level=2] [ref=e206]
+        - generic [ref=e207]: We streamline daily operations and keep every user of the system satisfied - from distributors to end users.
+      - generic [ref=e208]:
+        - generic [ref=e209]:
+          - heading "Products designed to benefit the end user" [level=3] [ref=e210]
+          - list [ref=e211]:
+            - listitem [ref=e212]:
+              - generic [ref=e213]: check
+              - generic [ref=e214]: operate for years - up to 15 on a single battery,
+            - listitem [ref=e215]:
+              - generic [ref=e216]: check
+              - generic [ref=e217]: remain reliable in demanding environments,
+            - listitem [ref=e218]:
+              - generic [ref=e219]: check
+              - generic [ref=e220]: are easy to install and configure (no specialised tools),
+            - listitem [ref=e221]:
+              - generic [ref=e222]: check
+              - generic [ref=e223]: withstand installation errors.
+        - generic [ref=e224]:
+          - heading "One system - ALL in KAYON working together" [level=3] [ref=e225]
+          - list [ref=e226]:
+            - listitem [ref=e227]:
+              - generic [ref=e228]: check
+              - generic [ref=e229]: real-time remote readings without site visits,
+            - listitem [ref=e230]:
+              - generic [ref=e231]: check
+              - generic [ref=e232]: automatic alerts and reports that save time,
+            - listitem [ref=e233]:
+              - generic [ref=e234]: check
+              - generic [ref=e235]: full control and remote firmware updates (OTA - Over-the-Air),
+            - listitem [ref=e236]:
+              - generic [ref=e237]: check
+              - generic [ref=e238]: less stress and less manual work for installers, administrators and users.
+    - generic [ref=e241]:
+      - generic [ref=e242]:
+        - generic [ref=e243]: System Solutions
+        - heading "All in KAYON systems are intelligent solutions that integrate multiple devices and all essential data and processes." [level=2] [ref=e244]
+        - link "Our systems" [ref=e245] [cursor=pointer]:
+          - /url: /systemy
+          - text: Our systems
+          - img [ref=e246]
+      - img "All in KAYON system diagram" [ref=e249]
+    - generic [ref=e252]:
+      - generic [ref=e253]:
+        - generic [ref=e254]: Products
+        - heading "Products that set a new measurement standard" [level=2] [ref=e255]
+        - paragraph [ref=e257]: We deliver more than technology - we provide tools for savings, automation and control. Our products form a cohesive ALL in KAYON ecosystem where every component works together.
+        - paragraph [ref=e258]: All Kayon devices are manufactured entirely within the European Union in compliance with CE, RED and EMC standards.
+      - generic [ref=e259]:
+        - generic [ref=e261]:
+          - generic [ref=e262]:
+            - generic [ref=e263]:
+              - heading "Systems and platforms" [level=3] [ref=e264]
+              - list [ref=e265]:
+                - listitem [ref=e266]:
+                  - generic [ref=e267]: arrow_right
+                  - generic [ref=e268]: Route One mobile app
+                - listitem [ref=e269]:
+                  - generic [ref=e270]: arrow_right
+                  - generic [ref=e271]: OpenMetering platform (2WayCom, FOTA)
+                - listitem [ref=e272]:
+                  - generic [ref=e273]: arrow_right
+                  - generic [ref=e274]: Distributor portal
+                - listitem [ref=e275]:
+                  - generic [ref=e276]: arrow_right
+                  - generic [ref=e277]: Technology dashboard
+            - link "Learn more" [ref=e278] [cursor=pointer]:
+              - /url: /produkty/systemy-i-platformy
+          - generic [ref=e279]:
+            - generic [ref=e280]:
+              - heading "Water meters" [level=3] [ref=e281]
+              - list [ref=e282]:
+                - listitem [ref=e283]:
+                  - generic [ref=e284]: arrow_right
+                  - generic [ref=e285]: Wehrle
+                - listitem [ref=e286]:
+                  - generic [ref=e287]: arrow_right
+                  - generic [ref=e288]: Maddalena
+                - listitem [ref=e289]:
+                  - generic [ref=e290]: arrow_right
+                  - generic [ref=e291]: Wasser-Geräte
+                - listitem [ref=e292]:
+                  - generic [ref=e293]: arrow_right
+                  - generic [ref=e294]: GWF Sonico Nano
+                - listitem [ref=e295]:
+                  - generic [ref=e296]: arrow_right
+                  - generic [ref=e297]: Apator JS Smart+
+            - link "Learn more" [ref=e298] [cursor=pointer]:
+              - /url: /produkty/wodomierze
+          - generic [ref=e299]:
+            - generic [ref=e300]:
+              - heading "Heat meters" [level=3] [ref=e301]
+              - list [ref=e302]:
+                - listitem [ref=e303]:
+                  - generic [ref=e304]: arrow_right
+                  - generic [ref=e305]: Engelmann SensoStar
+                - listitem [ref=e306]:
+                  - generic [ref=e307]: arrow_right
+                  - generic [ref=e308]: Maddalena MicroClima
+                - listitem [ref=e309]:
+                  - generic [ref=e310]: arrow_right
+                  - generic [ref=e311]: Rota PloMeter
+            - link "Learn more" [ref=e312] [cursor=pointer]:
+              - /url: /produkty/cieplomierze
+          - generic [ref=e313]:
+            - generic [ref=e314]:
+              - heading "Communication modules" [level=3] [ref=e315]
+              - list [ref=e316]:
+                - listitem [ref=e317]:
+                  - generic [ref=e318]: arrow_right
+                  - generic [ref=e319]: wMBus Smart+
+                - listitem [ref=e320]:
+                  - generic [ref=e321]: arrow_right
+                  - generic [ref=e322]: MBus Smart+
+                - listitem [ref=e323]:
+                  - generic [ref=e324]: arrow_right
+                  - generic [ref=e325]: wMBus MicroClima
+                - listitem [ref=e326]:
+                  - generic [ref=e327]: arrow_right
+                  - generic [ref=e328]: Repeater
+            - link "Learn more" [ref=e329] [cursor=pointer]:
+              - /url: /produkty/moduly-komunikacyjne
+          - generic [ref=e330]:
+            - generic [ref=e331]:
+              - heading "Infrastructure" [level=3] [ref=e332]
+              - list [ref=e333]:
+                - listitem [ref=e334]:
+                  - generic [ref=e335]: arrow_right
+                  - generic [ref=e336]: Range One
+                - listitem [ref=e337]:
+                  - generic [ref=e338]: arrow_right
+                  - generic [ref=e339]: AC concentrator
+                - listitem [ref=e340]:
+                  - generic [ref=e341]: arrow_right
+                  - generic [ref=e342]: BAT concentrator
+            - link "Learn more" [ref=e343] [cursor=pointer]:
+              - /url: /produkty/infrastruktura
+        - generic [ref=e344]:
+          - generic [ref=e345]:
+            - button "Go to slide 1" [ref=e346] [cursor=pointer]
+            - button "Go to slide 2" [ref=e347] [cursor=pointer]
+            - button "Go to slide 3" [ref=e348] [cursor=pointer]
+          - generic [ref=e349]:
+            - button "Previous" [disabled] [ref=e350]:
+              - img [ref=e351]
+            - button "Next" [ref=e353] [cursor=pointer]:
+              - img [ref=e354]
+  - contentinfo [ref=e356]:
+    - generic [ref=e357]:
+      - generic [ref=e358]:
+        - generic [ref=e359]: "Y"
+        - generic [ref=e360]: © 2025 KAYON
+      - generic [ref=e361]:
+        - link "Privacy policy" [ref=e362] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Cookie policy" [ref=e363] [cursor=pointer]:
+          - /url: /cookie-policy
+  - status [ref=e364]:
+    - generic [ref=e365]:
+      - img [ref=e367]
+      - generic [ref=e369]:
+        - text: Static route
+        - button "Hide static indicator" [ref=e370] [cursor=pointer]:
+          - img [ref=e371]
+  - alert [ref=e374]
+```

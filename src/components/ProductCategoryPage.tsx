@@ -24,15 +24,6 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
     .map((itemSlug) => productDetails?.[itemSlug])
     .filter((detail): detail is NonNullable<typeof detail> => Boolean(detail));
 
-  const extractDownloadLink = (description: string[]) => {
-    for (const para of description) {
-      // Match both absolute URLs (http://, https://) and relative paths starting with /
-      const match = para.match(/(https?:\/\/|\/)[^\s]+\.(pdf|PDF)/);
-      if (match) return match[0];
-    }
-    return null;
-  };
-
   return (
     <>
       {/* Hero Section */}
@@ -63,7 +54,7 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
       <section className="bg-white py-16 md:py-24">
         <div className="container-custom space-y-16 md:space-y-20">
           {items.map((detail) => {
-            const downloadLink = extractDownloadLink(detail.description);
+            const hasDownloads = detail.downloads && detail.downloads.length > 0;
             const visibleFeatures = detail.features.slice(0, 3);
             const hasMoreFeatures = detail.features.length > 3;
 
@@ -77,15 +68,20 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
                   </div>
 
                   <div className="flex flex-col gap-3">
-                    {downloadLink ? (
-                      <a
-                        href={downloadLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-white px-5 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                      >
-                        {category.downloadPdfButtonLabel}
-                      </a>
+                    {hasDownloads ? (
+                      <>
+                        {detail.downloads!.map((download) => (
+                          <a
+                            key={download.href}
+                            href={download.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-white px-5 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                          >
+                            {download.label}
+                          </a>
+                        ))}
+                      </>
                     ) : (
                       <Link
                         href={`/produkty/${detail.slug}`}

@@ -1,0 +1,6 @@
+{
+  "command": "npx \"@builder.io/dev-tools@latest\" code  --url vcp://quickcopy/vcp-da51d26e6fe7494f95c38ca8333a6bf3 --spaceId ",
+  "serverUrl": "http://localhost:3000",
+  "authenticateProxy": false,
+  "commitMode": "commits"
+}
