@@ -114,7 +114,7 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
                       onClick={() => setExpandedProduct(detail.slug)}
                       className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
-                      Więcej
+                      {category.moreButtonLabel}
                     </button>
                   )}
                 </div>
