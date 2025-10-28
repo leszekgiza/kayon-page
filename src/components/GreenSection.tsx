@@ -101,10 +101,10 @@ const GreenSection = () => {
             </div>
           </div>
           <div className="min-w-0 space-y-8">
-            <div className="min-w-0 max-w-full overflow-hidden">
+            <div className="overflow-hidden">
               <motion.div
                 style={trackStyle}
-                className="flex min-w-0 gap-6"
+                className="flex min-w-0 gap-6 -mr-[2000px]"
                 initial={false}
                 animate={{ transform: trackStyle.transform }}
                 transition={

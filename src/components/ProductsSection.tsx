@@ -45,11 +45,11 @@ const ProductsSection = () => {
           </div>
 
           {/* Right Column - Carousel */}
-          <div className="relative flex-1">
+          <div className="relative min-w-0 flex-1">
             {/* Cards Container */}
             <div className="overflow-hidden">
               <motion.div
-                className="flex gap-6"
+                className="flex gap-6 -mr-[2000px]"
                 animate={{ x: `-${currentIndex * cardWithGap}px` }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
               >
@@ -89,9 +89,9 @@ const ProductsSection = () => {
             </div>
 
             {/* Navigation - PROGRESS 01 (dots on left, arrows on right) */}
-            <div className="mt-8 flex flex-wrap items-center justify-start gap-4 lg:justify-between">
+            <div className="mt-8 flex items-center justify-between">
               {/* Dot Navigation - PROGRESS 01 */}
-              <div className="flex gap-2">
+              <div className="flex items-center gap-2">
                 {Array.from({ length: maxIndex + 1 }).map((_, index) => (
                   <button
                     key={index}
@@ -105,7 +105,7 @@ const ProductsSection = () => {
               </div>
 
               {/* Navigation Arrows */}
-              <div className="flex items-center gap-4">
+              <div className="flex gap-4">
                 <button
                   onClick={handlePrev}
                   disabled={currentIndex === 0}
