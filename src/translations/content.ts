@@ -498,7 +498,7 @@ const pl: ContentStructure = {
       },
       mesh: {
         title: 'MESH',
-        subtitle: 'Niezawodność i niskie koszty – sieć, która sama się naprawia.',
+        subtitle: 'Automatyczny, niezawodny i najtańszy w utrzymaniu system odczytowy. Tak samodzielny, że można odnieść wrażenie, że myśli za użytkowników.',
         features: [
           'Rozwiązanie jest  inteligentną, samokonfigurującą i samonaprawiającą się siecią pomiarową, która zapewnia nieprzerwaną komunikację nawet w trudnych warunkach.',
           'To innowacyjny system, który opiera się wyłącznie na jednym koncentratorze danych – montaż sprowadza się do kliknięcia „GO", a dane automatycznie trafiają do chmury.',
@@ -1123,7 +1123,7 @@ const pl: ContentStructure = {
     'star-fix': {
       slug: 'star-fix',
       heading: 'Opis poszczególnych systemów',
-      title: 'Star/Fix',
+      title: 'Fix',
       intro:
         'Stały nadzór i pełna kontrola – jedna sieć, która odczytuje wszystko.',
       description: [
@@ -2124,7 +2124,7 @@ const en: ContentStructure = {
     'star-fix': {
       slug: 'star-fix',
       heading: 'Systems and platforms',
-      title: 'Star/Fix',
+      title: 'Fix',
       intro:
         'Continuous supervision and full control over media using a star topology. Meters communicate directly with the concentrator or via repeaters to maintain visibility of the network.',
       description: [
@@ -3118,7 +3118,7 @@ const de: ContentStructure = {
     'star-fix': {
       slug: 'star-fix',
       heading: 'Systeme und Plattformen',
-      title: 'Star/Fix',
+      title: 'Fix',
       intro:
         'Kontinuierliche Ueberwachung und volle Kontrolle ueber Medien in einer Stern-Topologie. Zaehler kommunizieren direkt mit dem Konzentrator oder ueber Repeater, um die Netzabdeckung sicherzustellen.',
       description: [
