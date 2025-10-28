@@ -84,14 +84,14 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-white px-5 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       >
-                        Pobierz PDF
+                        {category.downloadPdfButtonLabel}
                       </a>
                     ) : (
                       <Link
                         href={`/produkty/${detail.slug}`}
                         className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-white px-5 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       >
-                        Więcej
+                        {category.moreButtonLabel}
                       </Link>
                     )}
                   </div>

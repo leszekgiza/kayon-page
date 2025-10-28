@@ -134,6 +134,8 @@ export interface ProductCategoryContent {
   title: string;
   description: string;
   items: string[];
+  moreButtonLabel: string;
+  downloadPdfButtonLabel: string;
 }
 
 export interface ProductDetailsPageContent {
@@ -638,30 +640,40 @@ const pl: ContentStructure = {
       title: 'Wodomierze',
       description: 'Oferujemy wyłącznie urządzenia najwyższej jakości: niemieckich producentów Wehrle i Wasser - Geräte, szwajcarskiego GWF oraz wiodącej polskiej marki Apator Powogaz. Dla pełnego bezpieczeństwa i wygody oferujemy też niezawodny system odczytowy All in Kayon, który integruje wodomierze i zwiększa ich funkcjonalność.',
       items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'apator-js-smart-plus', 'gwf-sonico-nano'],
+      moreButtonLabel: 'Więcej',
+      downloadPdfButtonLabel: 'Pobierz PDF',
     },
     {
       slug: 'cieplomierze',
       title: 'Ciepłomierze',
       description: 'Precyzyjnie mierzą i liczą zużycie energii cieplnej w różnych typach instalacji grzewczych. Połączone z modułami komunikacyjnymi tworzą inteligentny system zdalnego odczytu All in Kayon. Zwiększają dokładność i niezawodność oraz wygodę w zarządzaniu ciepłem.',
       items: ['engelmann-senso-star-e', 'maddalena-microclima-evo', 'ploumeter-rc12'],
+      moreButtonLabel: 'Więcej',
+      downloadPdfButtonLabel: 'Pobierz PDF',
     },
     {
       slug: 'moduly-komunikacyjne',
       title: 'Moduły komunikacyjne',
       description: 'Moduły radiowe i przewodowe do integracji liczników z platformami Kayon. Oferujemy rozwiązania łączności radiowej wMBus oraz przewodowej M-Bus, umożliwiające automatyczny, zdalny odczyt danych pomiarowych z wodomierzy i ciepłomierzy. Nasze moduły zapewniają niezawodną i bezpieczną transmisję danych do centralnych systemów zarządzania.',
       items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
+      moreButtonLabel: 'Więcej',
+      downloadPdfButtonLabel: 'Pobierz PDF',
     },
     {
       slug: 'systemy-i-platformy',
       title: 'Systemy i platformy',
       description: 'Każdy klient znajdzie tu rozwiązanie idealnie dopasowane do swojego sposobu pracy. To paleta rozwiązań od prostych systemów walk-by po inteligentną sieć MESH. Nasze systemy oferują coraz prostszy, bezpieczniejszy i coraz tańszy dostęp do danych pomiarowych.',
       items: ['walk-by', 'star-fix', 'mesh'],
+      moreButtonLabel: 'Więcej',
+      downloadPdfButtonLabel: 'Pobierz PDF',
     },
     {
       slug: 'infrastruktura',
       title: 'Infrastruktura',
       description: 'Urządzenia terenowe i stacjonarne budujące sieci odczytowe Kayon. Odbiorniki radiowe, koncentratory danych i repeatery zapewniające niezawodną komunikację z licznikami w różnych konfiguracjach – od prostych systemów walk-by po zaawansowane sieci MESH z wielokrotnym przeskokiem.',
       items: ['range-one', 'eclipse-wmbus-gateway', 'eclipse-wmbus-repeater', 'eixo-wmbus-gateway', 'exio-wmbus-repeater'],
+      moreButtonLabel: 'Więcej',
+      downloadPdfButtonLabel: 'Pobierz PDF',
     },
   ],
 
@@ -1630,30 +1642,40 @@ const en: ContentStructure = {
       title: 'Water meters',
       description: 'Water meters engineered for Kayon remote-reading deployments.',
       items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'apator-js-smart-plus', 'gwf-sonico-nano'],
+      moreButtonLabel: 'More',
+      downloadPdfButtonLabel: 'Download PDF',
     },
     {
       slug: 'cieplomierze',
       title: 'Heat meters',
       description: 'Precisely measure and calculate thermal energy consumption in various heating systems. Combined with communication modules, they create an intelligent All in Kayon remote reading system. Increase accuracy, reliability, and convenience in heat management.',
       items: ['engelmann-senso-star-e', 'maddalena-microclima-evo', 'ploumeter-rc12'],
+      moreButtonLabel: 'More',
+      downloadPdfButtonLabel: 'Download PDF',
     },
     {
       slug: 'moduly-komunikacyjne',
       title: 'Communication modules',
       description: 'Radio and wired modules for integrating meters with Kayon platforms. We offer wireless wMBus and wired M-Bus connectivity solutions, enabling automatic remote reading of measurement data from water and heat meters. Our modules ensure reliable and secure data transmission to central management systems.',
       items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
+      moreButtonLabel: 'More',
+      downloadPdfButtonLabel: 'Download PDF',
     },
     {
       slug: 'systemy-i-platformy',
       title: 'Systems & platforms',
       description: 'All in Kayon solutions for automation and data management.',
       items: ['walk-by', 'star-fix', 'mesh'],
+      moreButtonLabel: 'More',
+      downloadPdfButtonLabel: 'Download PDF',
     },
     {
       slug: 'infrastruktura',
       title: 'Infrastructure',
       description: 'Field and stationary devices building Kayon remote-reading networks. Radio receivers, data concentrators and repeaters ensuring reliable communication with meters in various configurations – from simple walk-by systems to advanced MESH networks with multi-hop capabilities.',
       items: ['range-one', 'eclipse-wmbus-gateway', 'eclipse-wmbus-repeater', 'eixo-wmbus-gateway', 'exio-wmbus-repeater'],
+      moreButtonLabel: 'More',
+      downloadPdfButtonLabel: 'Download PDF',
     },
   ],
 
@@ -2614,30 +2636,40 @@ const de: ContentStructure = {
       title: 'Wasserzaehler',
       description: 'Wasserzaehler für Kayon Fernauslese- und Abrechnungssysteme.',
       items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'apator-js-smart-plus', 'gwf-sonico-nano'],
+      moreButtonLabel: 'Mehr',
+      downloadPdfButtonLabel: 'PDF herunterladen',
     },
     {
       slug: 'cieplomierze',
       title: 'Wärmezaehler',
       description: 'Präzise Messung und Berechnung des Wärmeenergieverbrauchs in verschiedenen Heizsystemen. In Verbindung mit Kommunikationsmodulen bilden sie ein intelligentes All in Kayon Fernauslesung-System. Erhöhen Sie Genauigkeit, Zuverlässigkeit und Komfort im Wärmemanagement.',
       items: ['engelmann-senso-star-e', 'maddalena-microclima-evo', 'ploumeter-rc12'],
+      moreButtonLabel: 'Mehr',
+      downloadPdfButtonLabel: 'PDF herunterladen',
     },
     {
       slug: 'moduly-komunikacyjne',
       title: 'Kommunikationsmodule',
       description: 'Funk- und Kabelmodule zur Integration von Zaehlern in Kayon-Plattformen. Wir bieten drahtlose wMBus- und kabelgebundene M-Bus-Konnektivitaetsloesungen, die eine automatische Fernauslesung von Messdaten aus Wasser- und Waermezaehlern ermoeglichen. Unsere Module gewaehrleisten eine zuverlaessige und sichere Datenuebertragung zu zentralen Verwaltungssystemen.',
       items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
+      moreButtonLabel: 'Mehr',
+      downloadPdfButtonLabel: 'PDF herunterladen',
     },
     {
       slug: 'systemy-i-platformy',
       title: 'Systeme & Plattformen',
       description: 'ALL in KAYON Systeme für Automatisierung und Datenmanagement.',
       items: ['walk-by', 'star-fix', 'mesh'],
+      moreButtonLabel: 'Mehr',
+      downloadPdfButtonLabel: 'PDF herunterladen',
     },
     {
       slug: 'infrastruktura',
       title: 'Infrastruktur',
       description: 'Feld- und Netzwerktechnik für den Aufbau von Fernauslese-Netzen. Funkempfänger, Datenkonzentratoren und Repeater gewährleisten zuverlässige Kommunikation mit Zählern in verschiedenen Konfigurationen – von einfachen Walk-by-Systemen bis zu fortschrittlichen MESH-Netzwerken mit Multi-Hop-Fähigkeit.',
       items: ['range-one', 'eclipse-wmbus-gateway', 'eclipse-wmbus-repeater', 'eixo-wmbus-gateway', 'exio-wmbus-repeater'],
+      moreButtonLabel: 'Mehr',
+      downloadPdfButtonLabel: 'PDF herunterladen',
     },
   ],
 
