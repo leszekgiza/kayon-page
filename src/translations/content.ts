@@ -1984,6 +1984,7 @@ const en: ContentStructure = {
       },
       description: [
         'The heat meter is compatible with the RC12 WMBUS communication module.',
+        'Download documentation: /downloads/RC12_Ultrasonic_Heat_Meter_EN.pdf',
       ],
       featuresHeading: 'Key features',
       features: [
@@ -2967,6 +2968,7 @@ const de: ContentStructure = {
       },
       description: [
         'Der Wärmezaehler ist kompatibel mit dem Kommunikationsmodul RC12 WMBUS.',
+        'Dokumentation herunterladen: /downloads/RC12  WMBUS_DE.pdf',
       ],
       featuresHeading: 'Hauptmerkmale',
       features: [

@@ -26,7 +26,8 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
 
   const extractDownloadLink = (description: string[]) => {
     for (const para of description) {
-      const match = para.match(/https?:\/\/[^\s]+/);
+      // Match both absolute URLs (http://, https://) and relative paths starting with /
+      const match = para.match(/(https?:\/\/|\/)[^\s]+\.(pdf|PDF)/);
       if (match) return match[0];
     }
     return null;
