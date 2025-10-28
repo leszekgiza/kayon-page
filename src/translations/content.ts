@@ -567,14 +567,14 @@ const pl: ContentStructure = {
         readMoreHref: '/produkty/wodomierze',
       },
       {
-        title: 'Cieplomierze',
-        subtitle: 'Monitoring ciepla',
+        title: 'Ciepłomierze',
+        subtitle: 'Monitoring ciepła',
         description:
-          'Urzadzenia do zdalnego pomiaru energii cieplnej w budynkach wielorodzinnych i komercyjnych.',
+          'Urządzenia do zdalnego pomiaru energii cieplnej w budynkach wielorodzinnych i komercyjnych.',
         features: [
-          'Cieplomierz Engelmann - Senso Star E',
-          'Cieplomierz Maddalena - MicroClima Evo',
-          'Cieplomierz Ploumeter - RC12',
+          'Ciepłomierz Engelmann - Senso Star E',
+          'Ciepłomierz Maddalena - MicroClima Evo',
+          'Ciepłomierz Ploumeter - RC12',
         ],
         downloads: [],
         readMoreLabel: 'Zobacz produkty',
@@ -641,8 +641,8 @@ const pl: ContentStructure = {
     },
     {
       slug: 'cieplomierze',
-      title: 'Cieplomierze',
-      description: 'Cieplomierze do instalacji mieszkaniowych i komercyjnych z gotowa integracja systemowa.',
+      title: 'Ciepłomierze',
+      description: 'Precyzyjnie mierzą i liczą zużycie energii cieplnej w różnych typach instalacji grzewczych. Połączone z modułami komunikacyjnymi tworzą inteligentny system zdalnego odczytu All in Kayon. Zwiększają dokładność i niezawodność oraz wygodę w zarządzaniu ciepłem.',
       items: ['engelmann-senso-star-e', 'maddalena-microclima-evo', 'ploumeter-rc12'],
     },
     {
@@ -983,13 +983,14 @@ const pl: ContentStructure = {
       heading: 'Opis poszczególnych cieplomierzy',
       title: 'Ploumeter RC12',
       intro:
-        'Cieplomierz RC12 Ploumeter to precyzyjne i niezawodne urządzenie pomiarowe do zastosowań w instalacjach grzewczych, znane z solidnej konstrukcji i precyzji pomiaru. Idealny do systemow wymagajacych nowoczesnych rozwiazan komunikacyjnych.',
+        'Ciepłomierz RC12 Ploumeter to precyzyjne i niezawodne urządzenie pomiarowe do zastosowań w instalacjach grzewczych, znane z solidnej konstrukcji i precyzji pomiaru. Idealny do systemów wymagających nowoczesnych rozwiązań komunikacyjnych.',
       image: {
         src: '/images/products/cieplomierze/ploumeter-rc12.png',
-        alt: 'Cieplomierz Ploumeter RC12',
+        alt: 'Ciepłomierz Ploumeter RC12',
       },
       description: [
-        'Cieplomierz kompatybilny z nakladka komunikacyjna RC12 WMBUS.',
+        'Ciepłomierz kompatybilny z nakładką komunikacyjną RC12 WMBUS.',
+        'Pobierz dokumentację: /downloads/RC12_Ultrasonic_Heat_Meter_EN.pdf',
       ],
       featuresHeading: 'Najważniejsze cechy',
       features: [
