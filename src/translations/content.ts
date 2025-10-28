@@ -990,7 +990,7 @@ const pl: ContentStructure = {
       },
       description: [
         'Ciepłomierz kompatybilny z nakładką komunikacyjną RC12 WMBUS.',
-        'Pobierz dokumentacje: /downloads/RC12 WMBUS_EN.pdf',
+        'Pobierz PDF: /downloads/RC12 WMBUS_EN.pdf',
       ],
       featuresHeading: 'Najważniejsze cechy',
       features: [
@@ -1984,7 +1984,7 @@ const en: ContentStructure = {
       },
       description: [
         'The heat meter is compatible with the RC12 WMBUS communication module.',
-        'Download documentation: /downloads/RC12 WMBUS_EN.pdf',
+        'Download PDF: /downloads/RC12 WMBUS_EN.pdf',
       ],
       featuresHeading: 'Key features',
       features: [
@@ -2968,7 +2968,7 @@ const de: ContentStructure = {
       },
       description: [
         'Der Wärmezaehler ist kompatibel mit dem Kommunikationsmodul RC12 WMBUS.',
-        'Dokumentation herunterladen: /downloads/RC12  WMBUS_DE.pdf',
+        'PDF herunterladen: /downloads/RC12  WMBUS_DE.pdf',
       ],
       featuresHeading: 'Hauptmerkmale',
       features: [
