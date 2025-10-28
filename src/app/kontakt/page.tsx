@@ -122,9 +122,9 @@ export default function KontaktPage() {
                     {contact.addressLabel}
                   </h3>
                   <p className="text-lg font-semibold text-primary">
-                    ul. Gen. Józefa Fiszera 14
+                    Aleja Zwycięstwa 96/98
                     <br />
-                    80-231 Gdańsk
+                    81-451 Gdynia
                   </p>
                 </div>
 
@@ -247,10 +247,9 @@ export default function KontaktPage() {
             <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
               <div>
                 <h2 className="text-2xl font-bold text-primary md:text-3xl">{contact.mapHeading}</h2>
-                <p className="mt-2 text-base text-primary/70">{contact.mapSubheading}</p>
               </div>
               <a
-                href="https://www.google.com/maps/dir//ul.+Gen.+J%C3%B3zefa+Fiszera+14,+80-231+Gda%C5%84sk"
+                href="https://www.google.com/maps/dir//Aleja+Zwyci%C4%99stwa+96%2F98,+81-451+Gdynia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-primary-light"
@@ -264,7 +263,7 @@ export default function KontaktPage() {
 
             <div className="overflow-hidden rounded-2xl shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2323.8406729794246!2d18.57169!3d54.37776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd749c0b8d3b33%3A0x8c8e8c8e8c8e8c8e!2sul.%20Gen.%20J%C3%B3zefa%20Fiszera%2014%2C%2080-231%20Gda%C5%84sk!5e0!3m2!1spl!2spl!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2321.123!2d18.5395!3d54.5186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTTCsDMxJzA3LjAiTiAxOMKwMzInMjIuMiJF!5e0!3m2!1spl!2spl!4v1234567890"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}

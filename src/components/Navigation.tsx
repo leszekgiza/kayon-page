@@ -18,27 +18,27 @@ const Navigation = () => {
         <Link
           href="/"
           className="absolute left-[40px] top-[40px] flex h-[57px] w-[57px] items-center justify-center rounded-[30px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)] transition-opacity duration-200 hover:opacity-80"
-          aria-label="Kayon - Strona główna"
+          aria-label={navigation.homeAriaLabel}
         >
           <KayonMark />
         </Link>
 
         {/* Center Labels - Figma: 3 labels with specific positions - only show on 2xl+ screens */}
         <div className="absolute left-[688px] top-[40px] hidden 2xl:inline-flex h-[57px] w-[186px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
-          <Link href="/#dla-kogo" className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white whitespace-nowrap">
-            Dla kogo?
+          <Link href={`/${navigation.primaryLinks[0].href}`} className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white whitespace-nowrap">
+            {navigation.primaryLinks[0].label}
           </Link>
         </div>
 
         <div className="absolute left-[894px] top-[40px] hidden 2xl:inline-flex h-[57px] w-[141px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
-          <Link href="/#oferta" className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
-            Oferta
+          <Link href={`/${navigation.primaryLinks[1].href}`} className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
+            {navigation.primaryLinks[1].label}
           </Link>
         </div>
 
         <div className="absolute left-[1055px] top-[40px] hidden 2xl:inline-flex h-[57px] w-[177px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
-          <Link href="/#produkty" className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
-            Produkty
+          <Link href={`/${navigation.primaryLinks[2].href}`} className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
+            {navigation.primaryLinks[2].label}
           </Link>
         </div>
 
@@ -48,7 +48,7 @@ const Navigation = () => {
           <Link
             href="/kontakt"
             className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7] transition-colors duration-200 hover:border-white"
-            aria-label="Kontakt"
+            aria-label={navigation.actions.presentation.ariaLabel}
           >
             <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
               chat_bubble
@@ -61,7 +61,7 @@ const Navigation = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7] transition-colors duration-200 hover:border-white"
-            aria-label="Platforma"
+            aria-label={navigation.actions.login.ariaLabel}
           >
             <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
               login
@@ -73,7 +73,7 @@ const Navigation = () => {
             type="button"
             onClick={() => setMenuOpen(true)}
             className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] bg-[#1D1D1B] transition-colors duration-200 hover:bg-[#343432]"
-            aria-label="Menu"
+            aria-label={navigation.actions.menu.ariaLabel}
           >
             <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
               menu
@@ -88,7 +88,7 @@ const Navigation = () => {
           <Link
             href="/"
             className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 shadow-lg"
-            aria-label="Kayon - Strona główna"
+            aria-label={navigation.homeAriaLabel}
           >
             <KayonMark />
           </Link>
@@ -97,7 +97,7 @@ const Navigation = () => {
             type="button"
             onClick={() => setMenuOpen(true)}
             className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1D1D1B] shadow-lg"
-            aria-label="Menu"
+            aria-label={navigation.actions.menu.ariaLabel}
           >
             <span className="material-symbols-rounded text-[24px] text-white">
               menu

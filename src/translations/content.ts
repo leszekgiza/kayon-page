@@ -1174,11 +1174,10 @@ const pl: ContentStructure = {
     successMessage: 'Wiadomość została wysłana pomyślnie!',
     errorMessage: 'Wystąpił błąd. Spróbuj ponownie.',
     mapHeading: 'Jesteśmy w sercu Politechniki Gdańskiej! Odwiedź nas!',
-    mapSubheading: 'ul. Gen. Józefa Fiszera 14, 80-231 Gdańsk',
     directionsLabel: 'Wskazówki dojazdu',
     cards: [
       { title: 'Zapytania ogólne', value: 'welcome@kayon.pl', type: 'email' },
-      { title: 'Adres', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98\n81-451 Gdynia\nPolska', type: 'address' },
+      { title: 'Adres', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98,\n81-451 Gdynia\nPolska', type: 'address' },
       { title: 'Telefon', value: '+48 577 570 814', type: 'phone' },
     ],
     form: {
@@ -2159,11 +2158,10 @@ const en: ContentStructure = {
     successMessage: 'Message sent successfully!',
     errorMessage: 'An error occurred. Please try again.',
     mapHeading: 'We are in the heart of the Gdańsk University of Technology! Come and visit us!',
-    mapSubheading: 'ul. Gen. Józefa Fiszera 14, 80-231 Gdańsk',
     directionsLabel: 'Get directions',
     cards: [
       { title: 'General inquiries', value: 'welcome@kayon.pl', type: 'email' },
-      { title: 'Address', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98\n81-451 Gdynia\nPoland', type: 'address' },
+      { title: 'Address', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98,\n81-451 Gdynia\nPoland', type: 'address' },
       { title: 'Phone', value: '+48 577 570 814', type: 'phone' },
     ],
     form: {
@@ -3143,11 +3141,10 @@ const de: ContentStructure = {
     successMessage: 'Nachricht erfolgreich gesendet!',
     errorMessage: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
     mapHeading: 'Wir befinden uns im Herzen der Technischen Universität Danzig! Besuchen Sie uns!',
-    mapSubheading: 'ul. Gen. Józefa Fiszera 14, 80-231 Gdańsk',
     directionsLabel: 'Wegbeschreibung',
     cards: [
       { title: 'Allgemeine Anfragen', value: 'welcome@kayon.pl', type: 'email' },
-      { title: 'Adresse', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98\n81-451 Gdynia\nPolen', type: 'address' },
+      { title: 'Adresse', value: 'KAYON Sp. z o.o.\nAleja Zwycięstwa 96/98,\n81-451 Gdynia\nPolen', type: 'address' },
       { title: 'Telefon', value: '+48 577 570 814', type: 'phone' },
     ],
     form: {
