@@ -182,7 +182,6 @@ export interface ContactContent {
   successMessage: string;
   errorMessage: string;
   mapHeading: string;
-  mapSubheading: string;
   directionsLabel: string;
   cards: ContactCard[];
   form: {
