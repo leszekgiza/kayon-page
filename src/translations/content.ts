@@ -980,13 +980,16 @@ const pl: ContentStructure = {
       },
       description: [
         'Cieplomierz kompatybilny z nakladka komunikacyjna MicroClima WMBus.',
-        'Pobierz dokumentacje: https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf',
       ],
       featuresHeading: 'Najważniejsze cechy',
+      downloads: [
+        { label: 'Karta katalogowa (EN)', href: 'https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf' },
+      ],
       features: [
         'Jednostrumieniowy przeplywomierz dostosowany do pracy w szerokim zakresie temperatur',
         'Wysoka klasa metrologiczna i stabilnosc wskazan dzieki zaawansowanym rozwiazaniom technicznym',
         'Intuicyjny interfejs uzytkownika oraz mozliwosc zdalnego odczytu danych',
+        'Kompaktowa konstrukcja umozliwiajaca instalacje w ograniczonej przestrzeni',
       ],
     },
 
@@ -1002,13 +1005,16 @@ const pl: ContentStructure = {
       },
       description: [
         'Ciepłomierz kompatybilny z nakładką komunikacyjną RC12 WMBUS.',
-        '/downloads/RC12_WMBUS_EN.pdf',
       ],
       featuresHeading: 'Najważniejsze cechy',
+      downloads: [
+        { label: 'Karta katalogowa (EN)', href: '/downloads/RC12_WMBUS_EN.pdf' },
+      ],
       features: [
         'Jednostrumieniowy mechaniczny przeplywomierz',
         'Obsluga wysokich temperatur i cisnien roboczych zgodnie z normami branzowymi',
         'Latwy montaz i obsluga, oraz wytrzymala konstrukcja',
+        'Kompatybilnosc z nakladka komunikacyjna RC12 WMBUS umozliwiajaca zdalne monitorowanie',
       ],
     },
 
@@ -1984,13 +1990,16 @@ const en: ContentStructure = {
       },
       description: [
         'The heat meter is compatible with the MicroClima WMBus communication module.',
-        'Download documentation: https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf',
       ],
       featuresHeading: 'Key features',
+      downloads: [
+        { label: 'Product datasheet (EN)', href: 'https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf' },
+      ],
       features: [
         'Single-jet flowmeter adapted for operation in a wide temperature range',
         'High metrological class and reading stability thanks to advanced technical solutions',
         'Intuitive user interface and remote data reading capability',
+        'Compact design allowing installation in limited space',
       ],
     },
 
@@ -2006,13 +2015,16 @@ const en: ContentStructure = {
       },
       description: [
         'The heat meter is compatible with the RC12 WMBUS communication module.',
-        '/downloads/RC12_WMBUS_EN.pdf',
       ],
       featuresHeading: 'Key features',
+      downloads: [
+        { label: 'Product datasheet (EN)', href: '/downloads/RC12_WMBUS_EN.pdf' },
+      ],
       features: [
         'Single-jet mechanical flowmeter',
         'Support for high temperatures and working pressures in accordance with industry standards',
         'Easy installation and operation, as well as durable construction',
+        'Compatible with RC12 WMBUS communication module enabling remote monitoring',
       ],
     },
 
@@ -2978,13 +2990,16 @@ const de: ContentStructure = {
       },
       description: [
         'Der Wärmezaehler ist kompatibel mit dem Kommunikationsmodul MicroClima WMBus.',
-        'Dokumentation herunterladen: https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf',
       ],
       featuresHeading: 'Hauptmerkmale',
+      downloads: [
+        { label: 'Produktdatenblatt (EN)', href: 'https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf' },
+      ],
       features: [
         'Einstrahl-Durchflussmesser für den Betrieb in einem weiten Temperaturbereich',
         'Hohe metrologische Klasse und Anzeigenstabilitaet dank fortschrittlicher technischer Lösungen',
         'Intuitive Benutzeroberflaeche und Moeglichkeit zur Fernauslesung der Daten',
+        'Kompakte Bauweise ermoeglicht Installation in begrenztem Raum',
       ],
     },
 
@@ -3000,13 +3015,16 @@ const de: ContentStructure = {
       },
       description: [
         'Der Wärmezaehler ist kompatibel mit dem Kommunikationsmodul RC12 WMBUS.',
-        '/downloads/RC12_WMBUS_DE.pdf',
       ],
       featuresHeading: 'Hauptmerkmale',
+      downloads: [
+        { label: 'Produktdatenblatt (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
+      ],
       features: [
         'Mechanischer Einstrahl-Durchflussmesser',
         'Unterstuetzung hoher Temperaturen und Betriebsdruecke gemaess Branchennormen',
         'Einfache Montage und Bedienung sowie langlebige Konstruktion',
+        'Kompatibel mit RC12 WMBUS Kommunikationsmodul für Fernueberwachung',
       ],
     },
 
