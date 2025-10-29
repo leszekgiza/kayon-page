@@ -24,6 +24,9 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
     .map((itemSlug) => productDetails?.[itemSlug])
     .filter((detail): detail is NonNullable<typeof detail> => Boolean(detail));
 
+  // Check if this is the water meters category
+  const isWaterMetersCategory = slug === 'wodomierze';
+
   return (
     <>
       {/* Hero Section */}
@@ -83,12 +86,14 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
                         ))}
                       </>
                     ) : (
-                      <Link
-                        href={`/produkty/${detail.slug}`}
-                        className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-white px-5 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                      >
-                        {category.moreButtonLabel}
-                      </Link>
+                      !isWaterMetersCategory && (
+                        <Link
+                          href={`/produkty/${detail.slug}`}
+                          className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-white px-5 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        >
+                          {category.moreButtonLabel}
+                        </Link>
+                      )
                     )}
                   </div>
                 </div>
