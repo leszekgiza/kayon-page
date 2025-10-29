@@ -8,9 +8,10 @@ import { useContent } from '@/hooks/useContent';
 
 interface NavigationProps {
   showCenterLinks?: boolean;
+  isHomePage?: boolean;
 }
 
-const Navigation = ({ showCenterLinks = true }: NavigationProps) => {
+const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationProps) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const { navigation } = useContent();
 
@@ -51,32 +52,37 @@ const Navigation = ({ showCenterLinks = true }: NavigationProps) => {
         )}
 
         {/* Right Icons - Figma: right: 40px, top: 40px, 3 icons with gap 20px */}
-        <div className="absolute right-[40px] top-[40px] inline-flex h-[57px] w-[211px] items-start justify-end gap-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
-          {/* KONTAKT - chat_bubble */}
-          <Link
-            href="/kontakt"
-            className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7] transition-colors duration-200 hover:border-white"
-            aria-label={navigation.actions.presentation.ariaLabel}
-          >
-            <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
-              chat_bubble
-            </span>
-          </Link>
+        <div className={`absolute right-[40px] top-[40px] inline-flex h-[57px] items-start justify-end gap-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)] ${isHomePage ? 'w-[211px]' : 'w-[57px]'}`}>
+          {/* Show contact and login icons ONLY on homepage */}
+          {isHomePage && (
+            <>
+              {/* KONTAKT - chat_bubble */}
+              <Link
+                href="/kontakt"
+                className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7] transition-colors duration-200 hover:border-white"
+                aria-label={navigation.actions.presentation.ariaLabel}
+              >
+                <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
+                  chat_bubble
+                </span>
+              </Link>
 
-          {/* PLATFORMA - login */}
-          <a
-            href="https://openmetering.co/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7] transition-colors duration-200 hover:border-white"
-            aria-label={navigation.actions.login.ariaLabel}
-          >
-            <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
-              login
-            </span>
-          </a>
+              {/* PLATFORMA - login */}
+              <a
+                href="https://openmetering.co/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7] transition-colors duration-200 hover:border-white"
+                aria-label={navigation.actions.login.ariaLabel}
+              >
+                <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
+                  login
+                </span>
+              </a>
+            </>
+          )}
 
-          {/* MENU - menu icon with black background */}
+          {/* MENU - menu icon with black background - ALWAYS VISIBLE */}
           <button
             type="button"
             onClick={() => setMenuOpen(true)}

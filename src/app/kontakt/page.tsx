@@ -44,7 +44,7 @@ export default function KontaktPage() {
 
   return (
     <>
-      <Navigation showCenterLinks={false} />
+      <Navigation showCenterLinks={false} isHomePage={false} />
       <main>
         {/* Hero Section with dark background */}
         <section className="relative min-h-[60vh] overflow-hidden bg-[#2A2A2A] text-white">
