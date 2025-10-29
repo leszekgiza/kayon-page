@@ -122,6 +122,8 @@ export default function KontaktPage() {
                     {contact.addressLabel}
                   </h3>
                   <p className="text-lg font-semibold text-primary">
+                    KAYON Sp. z o.o.
+                    <br />
                     Aleja Zwycięstwa 96/98
                     <br />
                     81-451 Gdynia
