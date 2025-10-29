@@ -91,7 +91,7 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-2 rounded-full bg-[#BCB7B7] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#9E9E9E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BCB7B7]"
                           >
-                            Pobierz PDF
+                            {category.downloadPdfButtonLabel}
                           </a>
                         </div>
                       )}
