@@ -960,7 +960,7 @@ const pl: ContentStructure = {
       ],
       featuresHeading: 'Najważniejsze cechy',
       downloads: [
-        { label: 'Karta katalogowa (DE)', href: 'https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf' },
+        { label: 'Pobierz PDF (DE)', href: 'https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf' },
       ],
       features: [
         'Mechaniczny, jednostrumieniowy przetwornik przepływu z dynamicznym cyklem pomiarowym (2/60 s)',
@@ -985,7 +985,7 @@ const pl: ContentStructure = {
       ],
       featuresHeading: 'Najważniejsze cechy',
       downloads: [
-        { label: 'Karta katalogowa (EN)', href: 'https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf' },
+        { label: 'Pobierz PDF (EN)', href: 'https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf' },
       ],
       features: [
         'Jednostrumieniowy przeplywomierz dostosowany do pracy w szerokim zakresie temperatur',
@@ -1010,7 +1010,7 @@ const pl: ContentStructure = {
       ],
       featuresHeading: 'Najważniejsze cechy',
       downloads: [
-        { label: 'Karta katalogowa (EN)', href: '/downloads/RC12_WMBUS_EN.pdf' },
+        { label: 'Pobierz PDF (EN)', href: '/downloads/RC12_WMBUS_EN.pdf' },
       ],
       features: [
         'Jednostrumieniowy mechaniczny przeplywomierz',
@@ -1972,7 +1972,7 @@ const en: ContentStructure = {
       ],
       featuresHeading: 'Key features',
       downloads: [
-        { label: 'Product datasheet (DE)', href: 'https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf' },
+        { label: 'Download PDF (DE)', href: 'https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf' },
       ],
       features: [
         'Mechanical single-jet flow transducer with dynamic measurement cycle (2/60 s)',
@@ -1997,7 +1997,7 @@ const en: ContentStructure = {
       ],
       featuresHeading: 'Key features',
       downloads: [
-        { label: 'Product datasheet (EN)', href: 'https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf' },
+        { label: 'Download PDF (EN)', href: 'https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf' },
       ],
       features: [
         'Single-jet flowmeter adapted for operation in a wide temperature range',
@@ -2022,7 +2022,7 @@ const en: ContentStructure = {
       ],
       featuresHeading: 'Key features',
       downloads: [
-        { label: 'Product datasheet (EN)', href: '/downloads/RC12_WMBUS_EN.pdf' },
+        { label: 'Download PDF (EN)', href: '/downloads/RC12_WMBUS_EN.pdf' },
       ],
       features: [
         'Single-jet mechanical flowmeter',
@@ -2974,7 +2974,7 @@ const de: ContentStructure = {
       ],
       featuresHeading: 'Hauptmerkmale',
       downloads: [
-        { label: 'Produktdatenblatt (DE)', href: 'https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf' },
+        { label: 'PDF herunterladen (DE)', href: 'https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf' },
       ],
       features: [
         'Mechanischer Einstrahl-Durchflusswandler mit dynamischem Messzyklus (2/60 s)',
@@ -2999,7 +2999,7 @@ const de: ContentStructure = {
       ],
       featuresHeading: 'Hauptmerkmale',
       downloads: [
-        { label: 'Produktdatenblatt (EN)', href: 'https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf' },
+        { label: 'PDF herunterladen (EN)', href: 'https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnicamicroclimaevo-en-v4.pdf' },
       ],
       features: [
         'Einstrahl-Durchflussmesser für den Betrieb in einem weiten Temperaturbereich',
@@ -3024,7 +3024,7 @@ const de: ContentStructure = {
       ],
       featuresHeading: 'Hauptmerkmale',
       downloads: [
-        { label: 'Produktdatenblatt (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
+        { label: 'PDF herunterladen (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
       ],
       features: [
         'Mechanischer Einstrahl-Durchflussmesser',

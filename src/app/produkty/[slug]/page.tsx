@@ -58,7 +58,7 @@ const ProductDetailRoute = async ({ params }: { params: Promise<ProductDetailPar
 
   return (
     <>
-      <Navigation />
+      <Navigation showCenterLinks={false} />
       <main>
         {isCategory ? <ProductCategoryPage slug={slug} /> : <ProductDetailPage slug={slug} />}
       </main>

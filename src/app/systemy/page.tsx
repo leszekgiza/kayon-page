@@ -12,7 +12,7 @@ export default function SystemyPage() {
 
   return (
     <>
-      <Navigation />
+      <Navigation showCenterLinks={false} />
       <main>
         {/* 01 TOP - Hero Section - Desktop: 1920x600px, exact Figma positioning */}
         <section className="relative h-[400px] overflow-hidden bg-[#343432] text-white md:h-[500px] lg:h-[600px]">
