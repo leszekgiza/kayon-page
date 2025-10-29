@@ -811,7 +811,7 @@ const pl: ContentStructure = {
         'Solidna obudowa IP67 odporna na wilgotne srodowisko',
       ],
       downloads: [
-        { label: 'Karta katalogowa (DE)', href: '/downloads/RC12  WMBUS_DE.pdf' },
+        { label: 'Karta katalogowa (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
       ],
     },
 
@@ -1803,8 +1803,8 @@ const en: ContentStructure = {
         alt: 'wMBus RC12 communication module',
       },
       downloads: [
-        { label: 'Product datasheet (EN)', href: '/downloads/RC12 WMBUS_EN.pdf' },
-        { label: 'Product datasheet (DE)', href: '/downloads/RC12  WMBUS_DE.pdf' },
+        { label: 'Product datasheet (EN)', href: '/downloads/RC12_WMBUS_EN.pdf' },
+        { label: 'Product datasheet (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
       ],
       description: [
       ],
@@ -2808,8 +2808,8 @@ const de: ContentStructure = {
         'Robustes IP67-Gehaeuse widersteht Feuchtigkeit',
       ],
       downloads: [
-        { label: 'Produktdatenblatt (EN)', href: '/downloads/RC12 WMBUS_EN.pdf' },
-        { label: 'Produktdatenblatt (DE)', href: '/downloads/RC12  WMBUS_DE.pdf' },
+        { label: 'Produktdatenblatt (EN)', href: '/downloads/RC12_WMBUS_EN.pdf' },
+        { label: 'Produktdatenblatt (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
       ],
     },
 
