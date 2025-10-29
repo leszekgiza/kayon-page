@@ -957,9 +957,11 @@ const pl: ContentStructure = {
       },
       description: [
         'Cieplomierz kompatybilny z nakladka komunikacyjna MicroClima WMBus.',
-        'Pobierz dokumentacje: https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf',
       ],
       featuresHeading: 'Najważniejsze cechy',
+      downloads: [
+        { label: 'Karta katalogowa (DE)', href: 'https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf' },
+      ],
       features: [
         'Mechaniczny, jednostrumieniowy przetwornik przepływu z dynamicznym cyklem pomiarowym (2/60 s)',
         'Zakres temperatur pracy od 15C do 90C, maksymalne cisnienie robocze do 16 bar',
@@ -1967,9 +1969,11 @@ const en: ContentStructure = {
       },
       description: [
         'The heat meter is compatible with the MicroClima WMBus communication module.',
-        'Download documentation: https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf',
       ],
       featuresHeading: 'Key features',
+      downloads: [
+        { label: 'Product datasheet (DE)', href: 'https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf' },
+      ],
       features: [
         'Mechanical single-jet flow transducer with dynamic measurement cycle (2/60 s)',
         'Operating temperature range from 15C to 90C, maximum working pressure up to 16 bar',
@@ -2967,9 +2971,11 @@ const de: ContentStructure = {
       },
       description: [
         'Der Wärmezaehler ist kompatibel mit dem Kommunikationsmodul MicroClima WMBus.',
-        'Dokumentation herunterladen: https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf',
       ],
       featuresHeading: 'Hauptmerkmale',
+      downloads: [
+        { label: 'Produktdatenblatt (DE)', href: 'https://www.engelmann.de/wp-content/uploads/2024/03/Datenblatt_SensoStar_E_2023_12_01_de.pdf' },
+      ],
       features: [
         'Mechanischer Einstrahl-Durchflusswandler mit dynamischem Messzyklus (2/60 s)',
         'Betriebstemperaturbereich von 15C bis 90C, maximaler Betriebsdruck bis 16 bar',
