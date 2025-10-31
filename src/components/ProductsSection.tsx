@@ -60,7 +60,7 @@ const ProductsSection = () => {
                   return (
                     <motion.div
                       key={group.title}
-                      className="flex max-w-[250px] h-[441px] flex-shrink-0 flex-col justify-between rounded-[20px] bg-white px-6 py-8 text-primary"
+                      className="flex w-[250px] h-[441px] flex-shrink-0 flex-col justify-between rounded-[20px] bg-white px-6 py-8 text-primary"
                       initial={{ opacity: 0, y: 24 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.3 }}
