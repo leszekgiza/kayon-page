@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
+import './ProductsSection.css'
 
 const ProductsSection = () => {
   const { products } = useContent();
@@ -25,19 +26,19 @@ const ProductsSection = () => {
   };
 
   return (
-    <section id="produkty" className="bg-[#474747] py-24 text-white">
-      <div className="container-custom">
-        <div className="grid gap-12 lg:grid-cols-[477px_minmax(0,1fr)]">
+    <section id="produkty" className="flex bg-[#343432] text-white">
+      {/*<div className="container-custom bg-green-700">*/}
+        {/*<div className="flex ">*/}
           {/* Left Column - Text Content - Figma: 477x631px, gap 40px SPACE_BETWEEN */}
-          <div className="flex flex-col justify-between lg:w-[477px] lg:h-[631px]">
-            <div className="inline-flex w-max items-center rounded-full bg-[#EAEAEA] px-[30px] py-5 text-2xl font-bold text-[#1D1D1B]">
+          <div className="py-24 px-16 flex flex-col justify-between lg:min-h-[631px]">
+            <div className="mb-4 inline-flex w-max items-center rounded-full border border-primary/20 bg-neutral-gray-light px-6 py-2 text-sm font-semibold text-primary">
               {products.label}
             </div>
-            <h2 className="text-3xl font-bold text-white md:text-[40px] md:leading-[52px]">
+            <h2 className="text-3xl font-bold text-white md:text-[36px] md:leading-[52px]">
               {products.heading}
             </h2>
-            <div className="w-[467px] rounded-[30px] border-2 border-[#747171] p-10">
-              <p className="text-[20px] leading-[26px] text-white">
+            <div className="my-8 max-w-[477px] rounded-[30px] border-2 border-[#747171] p-10">
+              <p className="leading-[26px] text-white">
                 {products.description}
               </p>
             </div>
@@ -45,9 +46,9 @@ const ProductsSection = () => {
           </div>
 
           {/* Right Column - Carousel */}
-          <div className="relative">
+          <div className="ps-16 flex flex-col justify-center bg-[#484848]">
             {/* Cards Container */}
-            <div className="overflow-hidden">
+            <div className="overflow-hidden w-[990px]">
               <motion.div
                 className="flex gap-6"
                 animate={{ x: `-${currentIndex * cardWithGap}px` }}
@@ -59,7 +60,7 @@ const ProductsSection = () => {
                   return (
                     <motion.div
                       key={group.title}
-                      className="flex w-[310px] h-[441px] flex-shrink-0 flex-col justify-between rounded-[20px] bg-white px-6 py-8 text-primary"
+                      className="flex max-w-[250px] h-[441px] flex-shrink-0 flex-col justify-between rounded-[20px] bg-white px-6 py-8 text-primary"
                       initial={{ opacity: 0, y: 24 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.3 }}
@@ -89,15 +90,15 @@ const ProductsSection = () => {
             </div>
 
             {/* Navigation - PROGRESS 01 (dots on left, arrows on right) */}
-            <div className="mt-8 flex items-center justify-between">
+            <div className="mt-8 max-w-[800px] flex justify-between">
               {/* Dot Navigation - PROGRESS 01 */}
               <div className="flex gap-2">
                 {Array.from({ length: maxIndex + 1 }).map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
-                    className={`h-6 w-6 rounded-full transition-all duration-200 ${
-                      index === currentIndex ? 'bg-white' : 'bg-white/40'
+                    className={`h-6 w-6 flex justify-center items-center rounded-full bg-[#484848] border-2 border-[#747171] transition-all duration-200 ${
+                      index === currentIndex ? 'carousel-progress-is-current bg-[#484848]' : ''
                     }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />
@@ -105,11 +106,11 @@ const ProductsSection = () => {
               </div>
 
               {/* Navigation Arrows */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-">
                 <button
                   onClick={handlePrev}
                   disabled={currentIndex === 0}
-                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-primary/20 text-white transition-all duration-200 hover:bg-primary/30 disabled:opacity-30 disabled:cursor-not-allowed"
+                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#1D1D1B] text-white transition-all duration-200 hover:bg-primary/30 disabled:cursor-not-allowed"
                   aria-label="Previous"
                 >
                   <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,7 +121,7 @@ const ProductsSection = () => {
                 <button
                   onClick={handleNext}
                   disabled={currentIndex === maxIndex}
-                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-primary/20 text-white transition-all duration-200 hover:bg-primary/30 disabled:opacity-30 disabled:cursor-not-allowed"
+                  className="ms-4 flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#1D1D1B] text-white transition-all duration-200 hover:bg-primary/30 disabled:opacity-30 disabled:cursor-not-allowed"
                   aria-label="Next"
                 >
                   <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,8 +131,8 @@ const ProductsSection = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        {/*</div>*/}
+      {/*</div>*/}
     </section>
   );
 };

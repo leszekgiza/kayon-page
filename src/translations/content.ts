@@ -545,7 +545,7 @@ const pl: ContentStructure = {
         items: ['Range One', 'Koncentrator AC', 'Koncentrator BAT'],
       },
     ],
-    ctaLabel: 'Dowiedz się więcej',
+    ctaLabel: 'Więcej',
   },
 
   productPage: {
