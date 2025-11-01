@@ -103,7 +103,7 @@ const GreenSection = () => {
               {clients.highlight}
             </div>
           </div>
-          <div className="min-w-0 space-y-8 lg:pl-[150px]">
+          <div className="min-w-0 space-y-8 lg:pl-[200px]">
             <div className="overflow-hidden">
               <motion.div
                 style={trackStyle}
