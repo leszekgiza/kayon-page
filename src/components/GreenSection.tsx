@@ -87,7 +87,7 @@ const GreenSection = () => {
   return (
     <section id="nasi-klienci" className="relative overflow-hidden bg-[#53923e] py-24 text-white">
       {/* Rectangle 3 - lighter green on the right side - Figma: left-[953px] width-[967px] */}
-      <div className="absolute right-0 top-0 hidden h-full w-[967px] bg-[#77bb61] lg:block" />
+      <div className="absolute left-[953px] top-0 hidden h-full w-[967px] bg-[#77bb61] lg:block" />
 
       <div className="absolute inset-0 opacity-30">
         <div className="mx-auto h-full w-full max-w-5xl rounded-full border border-white/20 blur-3xl" />
