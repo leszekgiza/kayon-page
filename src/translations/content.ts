@@ -536,7 +536,7 @@ const pl: ContentStructure = {
         items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
       },
     ],
-    ctaLabel: 'Dowiedz się więcej',
+    ctaLabel: 'Więcej',
   },
 
   productPage: {
@@ -1546,7 +1546,7 @@ const en: ContentStructure = {
         items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
       },
     ],
-    ctaLabel: 'Learn more',
+    ctaLabel: 'More',
   },
 
   productPage: {
@@ -2548,7 +2548,7 @@ const de: ContentStructure = {
         items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
       },
     ],
-    ctaLabel: 'Mehr erfahren',
+    ctaLabel: 'Mehr',
   },
 
   productPage: {
