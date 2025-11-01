@@ -11,9 +11,9 @@ const SystemsSection = () => {
   return (
     <section className="relative overflow-hidden bg-white py-24" id="rozwiazania-systemowe">
       <div className="px-4 md:px-0">
-        <div className="grid gap-12 md:ml-[100px] lg:grid-cols-[minmax(0,672px)_minmax(0,1fr)]">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,672px)_minmax(0,1fr)]">
           <motion.div
-            className="relative z-10 flex flex-col justify-center space-y-8 lg:-mt-[60px]"
+            className="relative z-10 flex flex-col justify-center space-y-8 md:ml-[100px] md:pl-8 lg:-mt-[60px]"
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
