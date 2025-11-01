@@ -73,6 +73,7 @@ export interface BenefitContent {
 export interface BenefitsSectionContent {
   label: string;
   heading: string;
+  listTitle: string;
   description: string;
   items: BenefitContent[];
   readMoreLabel: string;
@@ -346,7 +347,7 @@ const pl: ContentStructure = {
         ],
       },
     ],
-    readMoreLabel: 'Czytaj więcej',
+    readMoreLabel: 'Więcej',
     modalCloseAria: 'Zamknij okno',
   },
   clients: {
@@ -354,32 +355,32 @@ const pl: ContentStructure = {
     heading:
       'Kayon oferuje konkretną odpowiedź na kluczowe wymagania wszystkich grup klientów',
     highlight:
-      'To wszystko realizujemy z zachowaniem wysokiej efektywności energetycznej i minimalnego wpływu na środowisko. Dobrze zaprojektowane urządzenia muszą działać oszczędnie i bezawaryjnie  -  z korzyścią dla ludzi i planety.',
+      'To wszystko realizujemy z zachowaniem wysokiej efektywności energetycznej i minimalnego wpływu na środowisko. Nie dlatego, że o środowisko dbać wypada, ale dlatego, że dobrze zaprojektowane systemy działają oszczędnie i bezawaryjnie – z korzyścią dla ludzi i planety.',
     cards: [
       {
         title: 'Dystrybutorzy',
         description:
-          'Cenią elastyczność dopasowania technologii do lokalnych standardów oraz łatwą integrację ALL in KAYON z istniejącymi platformami. Mogą oferować kompletne, skalowalne rozwiązanie bez kosztownych modyfikacji.',
+          'Cenią nas za elastyczność w dopasowaniu technologii do lokalnych standardów oraz prosty model integracji systemu <b>ALL in KAYON</b> z innymi platformami dystrybucyjnymi, które oferowali wcześniej. Mogą sprzedawać produkt, który jest kompletny, skalowalny i gotowy do wdrożenia bez konieczności kosztownych modyfikacji.',
       },
       {
         title: 'Firmy instalatorskie',
         description:
-          'Doceniają intuicyjny montaż, pełną kompatybilność komponentów i odporność urządzeń na błędy instalacyjne. Instalacja przebiega szybko, bez specjalistycznych narzędzi, a konfiguracja to kilka prostych kroków.',
+          '– za intuicyjny montaż, pełną kompatybilność komponentów i wysoką odporność sprzętu na błędy montażowe. Montaż jest szybki, bez potrzeby specjalistycznych narzędzi, a konfiguracja sprowadzona do kilku logicznych kroków.',
       },
       {
         title: 'Administratorzy budynków',
         description:
-          'Zyskują pełną kontrolę nad infrastrukturą w jednym miejscu. ALL in KAYON łączy dane z wielu obiektów  -  od liczników po alerty i koszty  -  w czasie rzeczywistym.',
+          '– za pełną kontrolę nad infrastrukturą w jednym miejscu. <b>ALL in KAYON</b> łączy dane z wielu obiektów w jeden system – wszystko, od liczników po alerty i koszty, dostępne jest w czasie rzeczywistym i zawsze pod ręką.',
       },
       {
         title: 'Zarządcy nieruchomości',
         description:
-          'Mają pewność nieprzerwanych odczytów i zdalny dostęp do uporządkowanych danych. System umożliwia szybkie raportowanie zużycia, identyfikację nieprawidłowości i natychmiastowy dostęp do historii pomiarów.',
+          '– za pewność nieprzerwanych odczytów i zdalny dostęp do uporządkowanych danych. System umożliwia błyskawiczne raportowanie zużycia, identyfikację nieprawidłowości oraz natychmiastowy dostęp do historii pomiarów – bez ryzyka utraty informacji.',
       },
       {
-        title: 'Wspólnoty i spółdzielnie',
+        title: 'Wspólnoty i spółdzielnie mieszkaniowe',
         description:
-          'Zyskują przejrzyste rozliczenia i łatwą weryfikację zużycia wśród mieszkańców. Każdy lokator ma dostęp do własnych danych, co odciąża administrację i redukuje zapytania.',
+          '– za przejrzystość rozliczeń i łatwość weryfikacji zużycia wśród mieszkańców. Każdy lokator ma dostęp do danych o własnym zużyciu, co odciąża obsługę.',
       },
     ],
     dotAriaTemplate: 'Pokaż grupę %d',
@@ -390,45 +391,45 @@ const pl: ContentStructure = {
     label: 'Jak działamy?',
     heading: 'Dostarczamy urządzenia i serwis, które minimalizują koszty',
     description:
-      'Rozwiązania Kayon są projektowane tak, by każdy uczestnik łańcucha interesariuszy  -  od dystrybutora i instalatora po zarządcę oraz mieszkańca  -  zyskał realne oszczędności, mniej pracy operacyjnej i większą kontrolę.',
+      'Rozwiązania Kayon są projektowane tak, by każdy uczestnik łańcucha interesariuszy — od dystrybutora, przez instalatora, po zarządcę i mieszkańca nieruchomości — zyskał realne oszczędności, zmniejszenie wydatków, mniej pracy operacyjnej i większą kontrolę.',
+    listTitle: 'Co to<br />oznacza<br />w praktyce?',
     items: [
       {
         title: 'Opłaty wyłącznie za realne zużycie',
         detail: [
-          'Dokładne i stabilne pomiary eliminują szacowanie oraz niedoszacowania.',
-          'Przejrzyste, sprawiedliwe rozliczenia budują zaufanie i długoterminową współpracę.',
+          'Dokładne i stabilne pomiary eliminują szacowanie i niedoszacowania.',
+          'To przejrzyste, sprawiedliwe rozliczenia, które budują zaufanie i długoterminową współpracę.',
         ],
       },
       {
         title: 'Brak przestojów i awarii',
         detail: [
           'Urządzenia działają do 15 lat na jednej baterii.',
-          'Instalatorzy i administratorzy mogą skupić się na zarządzaniu zamiast na naprawach.',
+          'Dzięki temu użytkownicy — od instalatora po administratora — mogą skupić się na zarządzaniu, a nie na naprawianiu.',
         ],
       },
       {
         title: 'Oszczędność czasu przy instalacji',
         detail: [
-          'Sprzęt typu plug & play można szybko zamontować nawet w trudnych warunkach.',
-          'Konfiguracja to kilka prostych kroków i może odbywać się zdalnie, bez dostępu na miejscu.',
+          'Sprzęt typu „plug & play” można szybko zamontować nawet w trudnych warunkach.',
+          'Konfiguracja sprowadza się do kilku prostych kroków i może być wykonana zdalnie, bez fizycznego dostępu do urządzenia — nawet przez mniej doświadczonego technika.',
         ],
       },
       {
-        title: 'Proste zarządzanie dużymi zbiorami danych',
+        title: 'Proste zarządzanie dużymi zbiorami danymi',
         detail: [
-          'Intuicyjne aplikacje mobilne i webowe są dostępne z każdego miejsca.',
-          'Odczyty, historia, raporty i alarmy są uporządkowane tak, by maksymalnie ułatwić pracę zarządcom i wspólnotom.',
+          'Aplikacje mobilne i webowe są intuicyjne, przejrzyste i dostępne z każdego miejsca.',
+          'Odczyty, historia zużycia, raporty i alarmy — wszystko zorganizowane tak, by maksymalnie ułatwić życie zarządcom i wspólnotom.',
         ],
       },
       {
         title: 'Pełna kompatybilność i elastyczność',
         detail: [
-          'Nasze urządzenia obsługują popularne protokoły (MBus, wMBus, LoRaWAN, NB-IoT, LTE, Bluetooth).',
-          'Klient decyduje, z jakiego sprzętu chce korzystać, zachowując niezależność od pojedynczych producentów.',
+          'Nasze urządzenia obsługują najpopularniejsze protokoły (MBus, WMBus, LoRaWAN, NB-IoT, LTE, Bluetooth).',
         ],
       },
     ],
-    readMoreLabel: 'Czytaj więcej',
+    readMoreLabel: 'Więcej',
     modalCloseAria: 'Zamknij okno',
   },
   offer: {
