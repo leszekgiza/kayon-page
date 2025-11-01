@@ -22,17 +22,9 @@ export default function PrivacyPolicyPage() {
 
         <article className="prose prose-lg max-w-4xl">
           <h1 className="text-3xl font-bold text-primary md:text-5xl">{privacyPolicy.title}</h1>
-
-          {privacyPolicy.sections.map((section, index) => (
-            <div key={index} className="mt-8 space-y-4">
-              {/* {section.content.map((paragraph, pIndex) => (
-                <p key={pIndex} className="text-base leading-relaxed text-primary/80">
-                  {paragraph}
-                </p>
-              ))} */}
-              {parse(section.content)}
-            </div>
-          ))}
+          <div className="mt-8 space-y-4">
+            {parse(privacyPolicy.content)}
+          </div>
         </article>
       </div>
     </div>

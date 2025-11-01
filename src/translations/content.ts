@@ -208,9 +208,7 @@ export interface FooterContent {
 
 export interface PrivacyPolicyContent {
   title: string;
-  sections: {
-    content: string;
-  }[];
+  content: string;
 }
 
 export interface CookiePolicyContent {
@@ -1217,9 +1215,7 @@ const pl: ContentStructure = {
 
   privacyPolicy: {
     title: 'Polityka prywatności',
-    sections: [
-      {
-        content: `<p>Twoja prywatność jest dla nas bardzo ważna. Dbamy o bezpieczeństwo i transparentność w zakresie przetwarzania danych osobowych wszystkich użytkowników odwiedzających stronę internetową firmy Kayon, hostowaną przy użyciu platformy Netlify.</p><h2>Gromadzenie i wykorzystanie danych</h2><p>Podczas korzystania ze strony mogą być zbierane dane osobowe, takie jak imię, adres e-mail czy inne informacje przekazane dobrowolnie przez formularze kontaktowe. Dane te są przetwarzane wyłącznie w celu:</p>
+    content: `<p>Twoja prywatność jest dla nas bardzo ważna. Dbamy o bezpieczeństwo i transparentność w zakresie przetwarzania danych osobowych wszystkich użytkowników odwiedzających stronę internetową firmy Kayon, hostowaną przy użyciu platformy Netlify.</p><h2>Gromadzenie i wykorzystanie danych</h2><p>Podczas korzystania ze strony mogą być zbierane dane osobowe, takie jak imię, adres e-mail czy inne informacje przekazane dobrowolnie przez formularze kontaktowe. Dane te są przetwarzane wyłącznie w celu:</p>
         <ul className="list-disc list-inside">
           <li>udzielenia odpowiedzi na zgłoszenia przesłane przez użytkownika,</li>
           <li>realizacji usług, o które użytkownik poprosił,</li>
@@ -1245,8 +1241,6 @@ const pl: ContentStructure = {
         <h2>Bezpieczeństwo danych</h2>
         <p>Firma Kayon stosuje odpowiednie środki techniczne i organizacyjne, aby chronić dane użytkowników przed nieuprawnionym dostępem, utratą czy ujawnieniem. Dzięki współpracy z platformą Netlify korzystamy również z zabezpieczeń oferowanych przez tę usługę, takich jak szyfrowanie HTTPS i ochrona przed atakami DDoS.</p>
         `
-      },
-    ],
   },
 
   cookiePolicy: {
@@ -2239,9 +2233,7 @@ const en: ContentStructure = {
 
   privacyPolicy: {
     title: 'Privacy Policy',
-    sections: [
-      {
-        content: `
+    content: `
           <p>Your privacy is very important to us! Being a reliable partner encompasses every aspect of your metering business. All information you provide to Kayon is securely stored in our systems. We do not sell collected data to third parties, so you can feel completely safe when deciding to share your personal data with us.</p>
           <p>To meet the requirements of the General Data Protection Regulation (GDPR) and maintain the trust of individuals who entrust us with their personal data (such as customers, suppliers, and employees), we always strive to respect the privacy of individuals whose data we process, in accordance with the Latour Group privacy policy and our internal information security policy.</p>
           <p>Kayon operates according to the principle of data minimization — we collect only the personal data necessary to conduct our business.</p>
@@ -2253,8 +2245,6 @@ const en: ContentStructure = {
           </ul>
           <p>You can always contact us regarding questions about data security, GDPR, or to exercise your rights to rectify or delete personal data we store. This data can be obtained in a structured, commonly used, and machine-readable format.</p>
         `
-      },
-    ],
   },
 
   cookiePolicy: {
@@ -3246,22 +3236,18 @@ const de: ContentStructure = {
 
   privacyPolicy: {
     title: 'Datenschutzerklärung',
-    sections: [
-      {
-        content: `
+    content: `
           <p>Ihre Privatsphäre ist uns sehr wichtig! Ein zuverlässiger Partner zu sein umfasst jeden Aspekt Ihres Messgeschäfts. Alle Informationen, die Sie an Kayon weitergeben, werden sicher in unseren Systemen gespeichert. Wir verkaufen gesammelte Daten nicht an Dritte, daher können Sie sich völlig sicher fühlen, wenn Sie sich entscheiden, uns Ihre persönlichen Daten während der Kontaktaufnahme anzuvertrauen.</p>
           <p>Um die Anforderungen der Datenschutz-Grundverordnung (DSGVO) zu erfüllen und das Vertrauen der Personen zu wahren, die uns ihre persönlichen Daten anvertrauen (wie Kunden, Lieferanten und Mitarbeiter), streben wir stets danach, die Privatsphäre der Personen zu respektieren, deren Daten wir verarbeiten, in Übereinstimmung mit der Datenschutzrichtlinie der Latour-Gruppe und unserer internen Informationssicherheitsrichtlinie.</p>
           <p>Kayon arbeitet nach dem Prinzip der Datenminimierung – wir sammeln nur die persönlichen Daten, die für die Durchführung unseres Geschäfts erforderlich sind.</p>
           <p>Keine persönlichen Daten werden ohne klar definierten Zweck verarbeitet. Kayon wird persönliche Daten nur so lange verarbeiten oder speichern, wie ein Zweck für die Verarbeitung besteht oder beispielsweise in Fällen, in denen gesetzliche Vorschriften ihre Speicherung erfordern.</p>
           <p>Personenbezogene Daten werden nicht in Länder außerhalb der Europäischen Union oder des Europäischen Wirtschaftsraums (EWR) übermittelt. Gesammelte und gespeicherte Daten werden ausschließlich von Kayon verwendet, mit Ausnahme der folgenden Fälle, in denen wir Daten an Dritte weitergeben können:</p>
-          <ul className="list-disc list-inside>
+          <ul className="list-disc list-inside">
             <li>wenn dies gesetzlich vorgeschrieben ist,</li>
             <li>zum Zweck der Erbringung von Dienstleistungen im Zusammenhang mit dieser Website oder ihren Funktionen, jedoch nur in dem Umfang, der zur Erbringung dieser Dienstleistungen erforderlich ist.</li>
           </ul>
           <p>Sie können sich jederzeit an uns wenden, wenn Sie Fragen zur Datensicherheit, DSGVO haben oder Ihre Rechte auf Berichtigung oder Löschung der von uns gespeicherten personenbezogenen Daten ausüben möchten. Diese Daten können in einem strukturierten, gängigen und maschinenlesbaren Format bereitgestellt werden.</p>
         `
-      },
-    ],
   },
 
   cookiePolicy: {
