@@ -491,7 +491,7 @@ const pl: ContentStructure = {
         title: 'Fix',
         subtitle: 'Stały nadzór i pełna kontrola – jedna sieć, która odczytuje wszystko.',
         features: [
-          'Rozwiązanie działa w oparciu o topologię gwiazdy, w której urządzenia pomiarówe komunikują się z koncentratorem bezpośrednio lub przez repeatery zwiększające zasięg sieci.',
+          'Rozwiązanie działa w oparciu o topologię gwiazdy, w której urządzenia pomiarowe komunikują się z koncentratorem bezpośrednio lub przez repeatery zwiększające zasięg sieci.',
           'System automatyzuje odczyty oraz zapewnia stały nadzór nad mediami i natychmiastową reakcję na awarie lub nieprawidłowości.',
           'Fix obsługuje różne typy liczników zgodnych ze standardem Wireless M-Bus lub OMS, maksymalnie ułatwiając zarządzanie i bilansowanie zużycia poszczególnych mediów.',
         ],
@@ -500,7 +500,7 @@ const pl: ContentStructure = {
         title: 'MESH',
         subtitle: 'Automatyczny, niezawodny i najtańszy w utrzymaniu system odczytówy. Tak samodzielny, że można odnieść wrażenie, że myśli za użytkowników.',
         features: [
-          'Rozwiązanie jest  inteligentną, samokonfigurującą i samonaprawiającą się siecią pomiarówą, która zapewnia nieprzerwaną komunikację nawet w trudnych warunkach.',
+          'Rozwiązanie jest  inteligentną, samokonfigurującą i samonaprawiającą się siecią pomiarową, która zapewnia nieprzerwaną komunikację nawet w trudnych warunkach.',
           'To innowacyjny system, który opiera się wyłącznie na jednym koncentratorze danych – montaż sprowadza się do kliknięcia „GO", a dane automatycznie trafiają do chmury.',
           'MESH to najtańszy i najbardziej niezawodny sposób budowy infrastruktury zdalnego monitoringu mediów, gwarantujący pełną kontrolę i minimalne koszty utrzymania.',
         ],
