@@ -47,7 +47,7 @@ const ProductsSection = () => {
           {/* Right Column - Carousel */}
           <div className="relative min-w-0 flex-1 lg:pl-12">
             {/* Cards Container */}
-            <div className="overflow-hidden -mr-[300px]">
+            <div className="overflow-hidden">
               <motion.div
                 className="flex gap-6"
                 animate={{ x: `-${currentIndex * cardWithGap}px` }}
