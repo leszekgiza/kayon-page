@@ -144,7 +144,7 @@ export default function KontaktPage() {
                     <br />
                     Aleja Zwycięstwa 96/98
                     <br />
-                    81-451 Gdynia
+                    81-451 Gdynia, PL
                   </p>
                 </div>
 
