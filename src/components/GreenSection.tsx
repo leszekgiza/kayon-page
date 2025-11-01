@@ -86,8 +86,8 @@ const GreenSection = () => {
 
   return (
     <section id="nasi-klienci" className="relative overflow-hidden bg-[#53923e] py-24 text-white">
-      {/* Rectangle 3 - lighter green on the right side - starts where right grid column begins (752px + 48px gap = 800px) */}
-      <div className="absolute left-[800px] top-0 hidden h-full w-[1120px] bg-[#77bb61] lg:block" />
+      {/* Rectangle 3 - lighter green on the right side - splits screen 50/50 */}
+      <div className="absolute left-1/2 top-0 hidden h-full w-1/2 bg-[#77bb61] lg:block" />
 
       <div className="absolute inset-0 opacity-30">
         <div className="mx-auto h-full w-full max-w-5xl rounded-full border border-white/20 blur-3xl" />
