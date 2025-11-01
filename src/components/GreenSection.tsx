@@ -154,7 +154,7 @@ const GreenSection = () => {
                 <button
                   type="button"
                   onClick={handlePrev}
-                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full border border-white/40 text-white transition-colors duration-200 hover:bg-white/10"
+                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#53923F] text-white transition-colors duration-200 hover:bg-white/10"
                   aria-label={clients.previousAria}
                 >
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,7 +164,7 @@ const GreenSection = () => {
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full border border-white bg-white text-primary transition-colors duration-200 hover:bg-white/80"
+                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#53923F] text-white transition-colors duration-200 hover:bg-white/80"
                   aria-label={clients.nextAria}
                 >
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
