@@ -516,16 +516,6 @@ const pl: ContentStructure = {
       'Produkcja wszystkich urządzeń Kayon odbywa się w 100% na terenie Unii Europejskiej, zgodnie z normami CE, RED i EMC.',
     groups: [
       {
-        title: 'Systemy i platformy',
-        slug: 'systemy-i-platformy',
-        items: [
-          'Aplikacja mobilna Route One',
-          'Platforma OpenMetering (2WayCom, FOTA)',
-          'Portal dystrybutora',
-          'Dashboard technologiczny',
-        ],
-      },
-      {
         title: 'Infrastruktura',
         slug: 'infrastruktura',
         items: ['Range One', 'Koncentrator AC', 'Koncentrator BAT'],
