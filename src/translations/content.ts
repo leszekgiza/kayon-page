@@ -347,7 +347,7 @@ const pl: ContentStructure = {
         ],
       },
     ],
-    readMoreLabel: 'Czytaj więcej',
+    readMoreLabel: 'Więcej',
     modalCloseAria: 'Zamknij okno',
   },
   clients: {
@@ -429,7 +429,7 @@ const pl: ContentStructure = {
         ],
       },
     ],
-    readMoreLabel: 'Czytaj więcej',
+    readMoreLabel: 'Więcej',
     modalCloseAria: 'Zamknij okno',
   },
   offer: {
