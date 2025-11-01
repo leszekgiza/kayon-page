@@ -10,9 +10,9 @@ const GreenSection = () => {
   const baseLength = baseCards.length;
   const extendedCards = useMemo(() => [...baseCards, ...baseCards, ...baseCards], [baseCards]);
   const extendedLength = extendedCards.length;
-  const GAP_SIZE = 24; // gap-6 in pixels
-  const CARD_WIDTH = 245; // Fixed width from Figma
-  const CARD_HEIGHT = 380; // Fixed height from Figma
+  const GAP_SIZE = 40; // gap-10 in pixels (Figma)
+  const CARD_WIDTH = 305; // Fixed width from Figma
+  const CARD_HEIGHT = 460; // Fixed height from Figma
 
   const [visibleCount, setVisibleCount] = useState(1);
   const [index, setIndex] = useState(baseLength);
@@ -104,7 +104,7 @@ const GreenSection = () => {
             <div className="overflow-hidden">
               <motion.div
                 style={trackStyle}
-                className="flex min-w-0 gap-6 -mr-[2000px]"
+                className="flex min-w-0 gap-10 -mr-[2000px]"
                 initial={false}
                 animate={{ transform: trackStyle.transform }}
                 transition={
@@ -117,22 +117,20 @@ const GreenSection = () => {
                   <div
                     key={`${card.title}-${cardIndex}`}
                     style={cardStyle}
-                    className="rounded-[20px] bg-white px-[30px] py-[40px] text-primary shadow-lg"
+                    className="rounded-[20px] bg-white px-[30px] py-[40px] text-primary shadow-lg flex flex-col justify-between"
                   >
-                    <div className="min-w-0 flex flex-col">
-                      <h3
-                        className="text-[24px] font-bold leading-[120%] min-h-[57.6px]"
-                        style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
-                      >
-                        {card.title}
-                      </h3>
-                      <p
-                        className="text-base leading-[140%] text-primary/80 mt-4"
-                        style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
-                      >
-                        {card.description}
-                      </p>
-                    </div>
+                    <h3
+                      className="text-[24px] font-bold leading-[120%]"
+                      style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
+                    >
+                      {card.title}
+                    </h3>
+                    <p
+                      className="text-base leading-[140%] text-primary/80"
+                      style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
+                    >
+                      {card.description}
+                    </p>
                   </div>
                 ))}
               </motion.div>
