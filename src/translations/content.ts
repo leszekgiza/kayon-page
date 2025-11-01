@@ -73,6 +73,7 @@ export interface BenefitContent {
 export interface BenefitsSectionContent {
   label: string;
   heading: string;
+  listTitle: string;
   description: string;
   items: BenefitContent[];
   readMoreLabel: string;
@@ -81,6 +82,7 @@ export interface BenefitsSectionContent {
 
 export interface OfferCardContent {
   title: string;
+  textBeforeBullets: string;
   bullets: string[];
 }
 
@@ -322,8 +324,8 @@ const pl: ContentStructure = {
           'Setki wdrożeń pozwoliły nam dopracować technologię na miarę oczekiwań rynku.',
         detail: [
           'Kayon to polska firma technologiczna z wieloletnim doświadczeniem w projektowaniu i produkcji nowoczesnych urządzeń oraz systemów do zdalnego odczytu wody i ciepła.',
-          'Nasz zespół tworzą inżynierowie i specjaliści z ponad dwudziestoletnim doświadczeniem w branży pomiarówej  -  ludzie, którzy współtworzyli obowiązujące dziś standardy.',
-          'Dlatego nasze rozwiązania są dopracowane technicznie, trwałe, sprawdzone i przyjazne w obsłudze  -  gotowe na wyzwania przyszłości.',
+          'Nasz zespół tworzą inżynierowie i specjaliści z ponad dwudziestoletnim doświadczeniem w branży pomiarowej  -  ludzie, którzy współtworzyli obowiązujące dziś standardy.',
+          'Dzięki temu nasze rozwiązania są nie tylko dopracowane technicznie, ale też trwałe, sprawdzone, przyjazne w obsłudze - gotowe na wyzwania przyszłości.',
         ],
       },
       {
@@ -331,9 +333,9 @@ const pl: ContentStructure = {
         description:
           'Urządzenia spełniające normy, które dopiero staną się obowiązkowe w nadchodzących latach.',
         detail: [
-          'Przewaga naszych rozwiązań wynika nie tylko z jakości urządzeń, ale także z oprogramowania. System ALL in KAYON umożliwia zarządzanie i raportowanie danych z tysięcy liczników jednocześnie.',
-          'Zastępuje czasochłonne papierowe raporty, rozbudowane arkusze i inne narzędzia jednym, prostym środowiskiem pracy dla wszystkich interesariuszy. Przejrzysty interfejs pozwala administratorom, zarządcom i instalatorom łatwo kontrolować zużycie, generować raporty i komunikować się z lokatorami.',
-          'ALL in KAYON umożliwia korzystanie z dowolnych urządzeń pomiarówych dowolnych producentów, dając klientom swobodę wyboru i niezależność od zamkniętych systemów.',
+          'Przewaga naszych rozwiązań wynika nie tylko z jakości urządzeń, ale także z oprogramowania. System <b>ALL in KAYON</b> umożliwia zarządzanie i raportowanie danych z tysięcy liczników jednocześnie.',
+          'Zastępuje czasochłonne papierowe raporty, rozbudowane tabele EXCELL i inne programy jednym, prostym środowiskiem pracy dla wszystkich interesariuszy. Interfejs jest przejrzysty i intuicyjny, dzięki czemu administratorzy, zarządcy i instalatorzy mogą w prosty sposób kontrolować zużycie, generować raporty, komunikować się z lokatorami.',
+          '<b>ALL in KAYON</b> umożliwia korzystanie z dowolnych urządzeń pomiarowych, dowolnych producentów przez co nasi klienci otrzymują swobodę w doborze urządzeń pomiarowych różnych marek oraz niezależność od producentów oferujących zamknięte systemy.',
         ],
       },
       {
@@ -341,9 +343,9 @@ const pl: ContentStructure = {
         description:
           'Partnerzy z wielu krajów wybierają KAYON jako standard pomiarów i zarządzania energią.',
         detail: [
-          'Nasze rozwiązania działają w Polsce, Czechach, na Ukrainie oraz rynkach Europy Zachodniej.',
-          'Od 2025 roku są dostępne w Niemczech i całej Europie za pośrednictwem firmy GWF AG  -  renomowanego szwajcarskiego dostawcy precyzyjnych technologii pomiarówych.',
-          'Obecnie Kayon rozwija również własną sieć partnerów i dystrybucji na rynku niemieckim.',
+          'Nasze rozwiązania z powodzeniem działają w Polsce, a także w Czechach, na Ukrainie i na rynkach Europy Zachodniej.',
+          'Od 2025 roku są  dostępne w Niemczech i całej Europie za pośrednictwem firmy GWF AG – renomowanego szwajcarskiego dostawcy precyzyjnych technologii pomiarowych.',
+          'Obecnie Kayon jest już obecny na rynku niemieckim samodzielnie, rozwijając własną sieć partnerów i dystrybucji.',
         ],
       },
     ],
@@ -355,32 +357,32 @@ const pl: ContentStructure = {
     heading:
       'Kayon oferuje konkretną odpowiedź na kluczowe wymagania wszystkich grup klientów',
     highlight:
-      'To wszystko realizujemy z zachowaniem wysokiej efektywności energetycznej i minimalnego wpływu na środowisko. Dobrze zaprojektowane urządzenia muszą działać oszczędnie i bezawaryjnie  -  z korzyścią dla ludzi i planety.',
+      'To wszystko realizujemy z zachowaniem wysokiej efektywności energetycznej i minimalnego wpływu na środowisko. Nie dlatego, że o środowisko dbać wypada, ale dlatego, że dobrze zaprojektowane systemy działają oszczędnie i bezawaryjnie – z korzyścią dla ludzi i planety.',
     cards: [
       {
         title: 'Dystrybutorzy',
         description:
-          'Cenią elastyczność dopasowania technologii do lokalnych standardów oraz łatwą integrację ALL in KAYON z istniejącymi platformami. Mogą oferować kompletne, skalowalne rozwiązanie bez kosztownych modyfikacji.',
+          'Cenią nas za elastyczność w dopasowaniu technologii do lokalnych standardów oraz prosty model integracji systemu <b>ALL in KAYON</b> z innymi platformami dystrybucyjnymi, które oferowali wcześniej. Mogą sprzedawać produkt, który jest kompletny, skalowalny i gotowy do wdrożenia bez konieczności kosztownych modyfikacji.',
       },
       {
         title: 'Firmy instalatorskie',
         description:
-          'Doceniają intuicyjny montaż, pełną kompatybilność komponentów i odporność urządzeń na błędy instalacyjne. Instalacja przebiega szybko, bez specjalistycznych narzędzi, a konfiguracja to kilka prostych kroków.',
+          '– za intuicyjny montaż, pełną kompatybilność komponentów i wysoką odporność sprzętu na błędy montażowe. Montaż jest szybki, bez potrzeby specjalistycznych narzędzi, a konfiguracja sprowadzona do kilku logicznych kroków.',
       },
       {
         title: 'Administratorzy budynków',
         description:
-          'Zyskują pełną kontrolę nad infrastrukturą w jednym miejscu. ALL in KAYON łączy dane z wielu obiektów  -  od liczników po alerty i koszty  -  w czasięrzeczywistym.',
+          '– za pełną kontrolę nad infrastrukturą w jednym miejscu. <b>ALL in KAYON</b> łączy dane z wielu obiektów w jeden system – wszystko, od liczników po alerty i koszty, dostępne jest w czasie rzeczywistym i zawsze pod ręką.',
       },
       {
         title: 'Zarządcy nieruchomości',
         description:
-          'Mają pewność nieprzerwanych odczytów i zdalny dostęp do uporządkowanych danych. System umożliwia szybkie raportowanie zużycia, identyfikację nieprawidłowości i natychmiastowy dostęp do historii pomiarów.',
+          '– za pewność nieprzerwanych odczytów i zdalny dostęp do uporządkowanych danych. System umożliwia błyskawiczne raportowanie zużycia, identyfikację nieprawidłowości oraz natychmiastowy dostęp do historii pomiarów – bez ryzyka utraty informacji.',
       },
       {
-        title: 'Wspólnoty i spółdzielnie',
+        title: 'Wspólnoty i spółdzielnie mieszkaniowe',
         description:
-          'Zyskują przejrzyste rozliczenia i łatwą weryfikację zużycia wśród mieszkańców. Każdy lokator ma dostęp do własnych danych, co odciąża administrację i redukuje zapytania.',
+          '– za przejrzystość rozliczeń i łatwość weryfikacji zużycia wśród mieszkańców. Każdy lokator ma dostęp do danych o własnym zużyciu, co odciąża obsługę.',
       },
     ],
     dotAriaTemplate: 'Pokaż grupę %d',
@@ -391,41 +393,41 @@ const pl: ContentStructure = {
     label: 'Jak działamy?',
     heading: 'Dostarczamy urządzenia i serwis, które minimalizują koszty',
     description:
-      'Rozwiązania Kayon są projektowane tak, by każdy uczestnik łańcucha interesariuszy  -  od dystrybutora i instalatora po zarządcę oraz mieszkańca  -  zyskał realne oszczędności, mniej pracy operacyjnej i większą kontrolę.',
+      'Rozwiązania Kayon są projektowane tak, by każdy uczestnik łańcucha interesariuszy — od dystrybutora, przez instalatora, po zarządcę i mieszkańca nieruchomości — zyskał realne oszczędności, zmniejszenie wydatków, mniej pracy operacyjnej i większą kontrolę.',
+    listTitle: 'Co to<br />oznacza<br />w praktyce?',
     items: [
       {
         title: 'Opłaty wyłącznie za realne zużycie',
         detail: [
-          'Dokładne i stabilne pomiary eliminują szacowanie oraz niedoszacowania.',
-          'Przejrzyste, sprawiedliwe rozliczenia budują zaufanie i długoterminową współpracę.',
+          'Dokładne i stabilne pomiary eliminują szacowanie i niedoszacowania.',
+          'To przejrzyste, sprawiedliwe rozliczenia, które budują zaufanie i długoterminową współpracę.',
         ],
       },
       {
         title: 'Brak przestojów i awarii',
         detail: [
           'Urządzenia działają do 15 lat na jednej baterii.',
-          'Instalatorzy i administratorzy mogą skupić się na zarządzaniu zamiast na naprawach.',
+          'Dzięki temu użytkownicy — od instalatora po administratora — mogą skupić się na zarządzaniu, a nie na naprawianiu.',
         ],
       },
       {
         title: 'Oszczędność czasu przy instalacji',
         detail: [
-          'Sprzęt typu plug & play można szybko zamontować nawet w trudnych warunkach.',
-          'Konfiguracja to kilka prostych kroków i może odbywać się zdalnie, bez dostępu na miejscu.',
+          'Sprzęt typu „plug & play” można szybko zamontować nawet w trudnych warunkach.',
+          'Konfiguracja sprowadza się do kilku prostych kroków i może być wykonana zdalnie, bez fizycznego dostępu do urządzenia — nawet przez mniej doświadczonego technika.',
         ],
       },
       {
-        title: 'Proste zarządzanie dużymi zbiorami danych',
+        title: 'Proste zarządzanie dużymi zbiorami danymi',
         detail: [
-          'Intuicyjne aplikacje mobilne i webowe są dostępne z każdego miejsca.',
-          'Odczyty, historia, raporty i alarmy są uporządkowane tak, by maksymalnie ułatwić pracę zarządcom i wspólnotom.',
+          'Aplikacje mobilne i webowe są intuicyjne, przejrzyste i dostępne z każdego miejsca.',
+          'Odczyty, historia zużycia, raporty i alarmy — wszystko zorganizowane tak, by maksymalnie ułatwić życie zarządcom i wspólnotom.',
         ],
       },
       {
         title: 'Pełna kompatybilność i elastyczność',
         detail: [
-          'Nasze urządzenia obsługują popularne protokoły (MBus, wMBus, LoRaWAN, NB-IoT, LTE, Bluetooth).',
-          'Klient decyduje, z jakiego sprzętu chce korzystać, zachowując niezależność od pojedynczych producentów.',
+          'Nasze urządzenia obsługują najpopularniejsze protokoły (MBus, WMBus, LoRaWAN, NB-IoT, LTE, Bluetooth).',
         ],
       },
     ],
@@ -436,24 +438,26 @@ const pl: ContentStructure = {
     label: 'Co oferujemy?',
     heading: 'Łączymy nowoczesne produkty z systemowym podejściem',
     description:
-      'Usprawniamy codzienne funkcjonowanie i gwarantujemy satysfakcję wszystkim użytkownikom  -  od dystrybutora po odbiorcę końcowego.',
+      'Usprawniamy codzienne funkcjonowanie i gwarantujemy satysfakcję wszystkim użytkownikom systemu.',
     cards: [
       {
-        title: 'Produkty zaprojektowane z myślą o użytkowniku',
+        title: 'Produkty zaprojektowane<br />z myślą o użytkowniku',
+        textBeforeBullets: 'Każde nasze urządzenie zostało zaprojektowane tak, aby:',
         bullets: [
-          'działają długo  -  nawet 15 lat na baterii,',
-          'są niezawodne w wymagających warunkach,',
-          'są łatwe w montażu i konfiguracji (bez specjalistycznych narzędzi),',
-          'są odporne na błędy instalacyjne.',
+          '<b>działało długo</b> (do 15 lat na baterii),',
+          '<b>działało niezawodnie</b> (także w warunkach wilgoci, kurzu czy różnic temperatur),',
+          '<b>było łatwe w montażu i konfiguracji</b> (bez użycia specjalistycznych narzędzi),',
+          '<b>było odporne na błędy instalacyjne</b> (np. błędne podłączenie nie powoduje uszkodzeń).',
         ],
       },
       {
-        title: 'Jeden system ALL in KAYON  -  współpraca wszystkich elementów',
+        title: 'Jeden system ALL in KAYON<br />— integrowanie produktów wszystkich producentów',
+        textBeforeBullets: 'Nasze rozwiązania tworzą kompletny ekosystem <b>ALL in KAYON</b>: od modułu komunikacyjnego, przez koncentrator, aż po aplikacje zarządzające także czujnikami innych marek niż Kayon i dane w chmurze. To oznacza:',
         bullets: [
-          'zdalny odczyt w czasięrzeczywistym, bez wizyt na miejscu,',
-          'automatyczne alerty i raporty, które oszczędzają czas,',
-          'pełna kontrola i zdalne aktualizacje oprogramowania (OTA  -  Over-the-Air),',
-          'mniej stresu i mniej pracy dla instalatorów, administratorów i użytkowników.',
+          '<b>zdalny odczyt w czasie rzeczywistym</b>, bez wizyt na miejscu,',
+          '<b>automatyczne alerty i raporty</b>, które oszczędzają czas,',
+          '<b>pełna kontrola i zdalne aktualizacje oprogramowania</b> (<b>OTA</b> - Over-the-Air updates),',
+          '<b>mniej stresu i mniej pracy</b> dla instalatorów, administratorów i użytkowników.',
         ],
       },
     ],
@@ -511,29 +515,29 @@ const pl: ContentStructure = {
     label: 'Produkty',
     heading: 'Produkty wyznaczające nowy standard pomiarów',
     description:
-      'Oferujemy nie tylko technologię — oferujemy realne narzędzia do oszczędności, automatyzacji i kontroli. Nasze produkty tworzą spójny system ALL in KAYON, w którym każdy element współpracuje z pozostałymi.',
+      '<b>Oferujemy nie tylko technologię — oferujemy realne narzędzia do oszczędności, automatyzacji <br />i kontroli.</b><br /><br />Nasze produkty tworzą spójny system ALL in KAYON, w którym każdy element współpracuje z pozostałymi.',
     footnote:
       'Produkcja wszystkich urządzeń Kayon odbywa się w 100% na terenie Unii Europejskiej, zgodnie z normami CE, RED i EMC.',
     groups: [
       {
         title: 'Infrastruktura',
         slug: 'infrastruktura',
-        items: ['Range One', 'Koncentrator AC', 'Koncentrator BAT'],
-      },
-      {
-        title: 'Wodomierze',
-        slug: 'wodomierze',
-        items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'GWF Sonico Nano', 'Apator JS Smart+'],
-      },
-      {
-        title: 'Ciepłomierze',
-        slug: 'cieplomierze',
-        items: ['Engelmann SensoStar', 'Maddalena MicroClima', 'Rota PloMeter'],
+        items: ['Range One', 'ECLIPSE WMBus Gateway', 'ECLIPSE WMBus Repeater', 'EIXO WMBus Gateway', 'EXIO WMBus Repeater'],
       },
       {
         title: 'Moduły komunikacyjne',
         slug: 'moduly-komunikacyjne',
-        items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
+        items: ['Modularis One', 'WMBus Smart+', 'MBus Smart+ ', 'WMBus MicroClima', 'WMBus RC12'],
+      },
+      {
+        title: 'Ciepłomierze',
+        slug: 'cieplomierze',
+        items: ['Engelman SensoStar', 'Maddalena MicroClima', 'RC12 Ploumeter'],
+      },
+      {
+        title: 'Wodomierze',
+        slug: 'wodomierze',
+        items: ['Wherle', 'Maddalena', 'Wasser-Geräte', 'GWF', 'Apator Powogaz'],
       },
     ],
     ctaLabel: 'Więcej',
@@ -1390,6 +1394,7 @@ const en: ContentStructure = {
   benefits: {
     label: 'How we operate',
     heading: 'We provide devices and services that minimise costs',
+    listTitle: 'What does this mean in practice?',
     description:
       'Kayon solutions are designed so that every stakeholder  -  from distributor and installer to manager and resident  -  gains real savings, lower operating expenses and greater control.',
     items: [
@@ -1440,6 +1445,7 @@ const en: ContentStructure = {
     cards: [
       {
         title: 'Products designed to benefit the end user',
+        textBeforeBullets: 'Each of our devices has been designed to:',
         bullets: [
           'operate for years  -  up to 15 on a single battery,',
           'remain reliable in demanding environments,',
@@ -1449,6 +1455,7 @@ const en: ContentStructure = {
       },
       {
         title: 'One system  -  ALL in KAYON working together',
+        textBeforeBullets: 'Our solutions create a complete <b>ALL in KAYON</b> ecosystem: from the communication module, through the concentrator, to management applications that also support sensors from brands other than Kayon and data in the cloud. This means:',
         bullets: [
           'real-time remote readings without site visits,',
           'automatic alerts and reports that save time,',
@@ -2392,6 +2399,7 @@ const de: ContentStructure = {
   benefits: {
     label: 'Wie wir arbeiten',
     heading: 'Wir liefern Geräte und Services, die Kosten minimieren',
+    listTitle: 'Was bedeutet das in der Praxis?',
     description:
       'Kayon-Lösungen sind so konzipiert, dass jede beteiligte Person  -  vom Distributor über den Installateur bis zur Verwaltung und den Bewohnerinnen  -  echte Einsparungen erzielt, Ausgaben reduziert, manuelle Arbeit minimiert und mehr Kontrolle erhält.',
     items: [
@@ -2442,6 +2450,7 @@ const de: ContentStructure = {
     cards: [
       {
         title: 'Produkte, die den Anwender in den Fokus stellen',
+        textBeforeBullets: 'Jedes unserer Geräte wurde so konzipiert, dass es:',
         bullets: [
           'laufen lange  -  bis zu 15 Jahre mit einer Batterie,',
           'arbeiten zuverlässig  -  auch bei Feuchtigkeit, Staub und Temperaturschwankungen,',
@@ -2451,6 +2460,7 @@ const de: ContentStructure = {
       },
       {
         title: 'Ein System  -  ALL in KAYON für alle Komponenten',
+        textBeforeBullets: 'Unsere Lösungen bilden ein komplettes ALL-in-KAYON-Ökosystem: vom Kommunikationsmodul über den Konzentrator bis hin zu Anwendungen, die auch Sensoren anderer Marken als Kayon und Daten in der Cloud verwalten. Das bedeutet:',
         bullets: [
           'Fernablesung in Echtzeit ohne Vor-Ort-Termine,',
           'automatische Warnungen und Berichte, die Zeit sparen,',

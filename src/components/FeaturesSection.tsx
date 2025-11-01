@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
+import parse from 'html-react-parser';
 
 const FeaturesSection = () => {
   const [activeFeature, setActiveFeature] = useState<number | null>(null);
@@ -59,8 +60,8 @@ const FeaturesSection = () => {
                   </div>
 
                   {/* Title - Desktop: w-[364px] text-[32px], Mobile: responsive */}
-                  <p className="relative shrink-0 w-full font-['Montserrat'] text-[24px] font-bold leading-[1.2] text-[#1d1d1b] md:w-[364px] md:text-[32px]">
-                    {feature.title}
+                  <p className="relative shrink-0 w-full font-['Montserrat'] text-[24px] font-bold leading-[1.2] text-[#1d1d1b] md:max-w-[280px] md:text-[32px]">
+                    {parse(feature.title)}
                   </p>
 
                   {/* Button - Desktop: px-[30px] py-[20px] text-[16px], Mobile: smaller */}
@@ -112,11 +113,11 @@ const FeaturesSection = () => {
                 </svg>
               </button>
               <h2 id="features-modal-title" className="text-xl font-semibold text-primary md:text-2xl">
-                {featureCards[activeFeature].title}
+                {parse(featureCards[activeFeature].title)}
               </h2>
               <div className="mt-6 space-y-4 text-sm leading-relaxed text-primary/90 md:text-base">
                 {featureCards[activeFeature].detail.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p key={paragraph}>{parse(paragraph)}</p>
                 ))}
               </div>
             </motion.div>

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
+import parse from 'html-react-parser';
 
 const ProductsSection = () => {
   const { products } = useContent();
@@ -41,7 +42,7 @@ const ProductsSection = () => {
 
         <div className="w-full rounded-[30px] border-2 border-[#747171] p-8 md:w-auto md:p-[40px]">
           <p className="text-[18px] font-bold leading-[1.3] text-white md:w-[387px] md:text-[20px]">
-            {products.description}
+            {parse(products.description)}
           </p>
         </div>
 

@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
+import parse from 'html-react-parser';
 
 const iconMap: Record<number, string> = {
   0: 'autorenew',
@@ -60,6 +61,7 @@ const BenefitsSection = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6 }}
               >
+                <h3 className="pb-4 w-[242px] h-[242px] flex justify-center items-end text-3xl bg-[#c99446] text-black rounded-2xl">{parse(benefits.listTitle)}</h3>
                 {benefitCards.map((benefit, index) => (
                   <div key={benefit.title} className="flex flex-col items-start gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-black">
@@ -67,7 +69,7 @@ const BenefitsSection = () => {
                         {iconMap[index] || 'help'}
                       </span>
                     </div>
-                    <h3 className="text-base font-semibold text-black">{benefit.title}</h3>
+                    <h4 className="text-base font-semibold text-black">{benefit.title}</h4>
                     <button
                       type="button"
                       onClick={() => setActiveBenefit(index)}
