@@ -20,59 +20,82 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-[#1F1F1F] px-4 text-white"
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-[#343432] px-4 text-white overflow-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
+          {/* AIM decorative graphic */}
+          <div className="absolute left-[335px] top-[-49px] w-[1250px] h-[1041px] pointer-events-none hidden lg:block">
+            {/* Blue triangle */}
+            <div className="absolute left-0 right-[86.79%] top-0 bottom-[84.24%]">
+              <svg viewBox="0 0 165 164" fill="none" className="w-full h-full">
+                <path d="M0 164L165 0V164H0Z" fill="#2CBCEB"/>
+              </svg>
+            </div>
+            {/* Orange triangle */}
+            <div className="absolute left-[86.88%] right-0 top-0 bottom-[84.24%]">
+              <svg viewBox="0 0 165 164" fill="none" className="w-full h-full">
+                <path d="M165 164L0 0V164H165Z" fill="#F4B250"/>
+              </svg>
+            </div>
+            {/* Green indicator */}
+            <div className="absolute left-[48.04%] right-[48.04%] top-[82.96%] bottom-0">
+              <svg viewBox="0 0 49 178" fill="none" className="w-full h-full">
+                <rect width="49" height="178" rx="24.5" fill="#77BB61"/>
+              </svg>
+            </div>
+          </div>
+
+          {/* Decorative circle */}
+          <div className="absolute left-[-555px] top-[240px] w-[1420px] h-[494px] pointer-events-none hidden lg:block">
+            <div className="w-full h-full rounded-[247px] border-2 border-[#747171]" />
+          </div>
+
           <button
             type="button"
-            className="absolute right-8 top-8 flex h-12 w-12 items-center justify-center rounded-full border border-white/30 text-white transition-colors hover:bg-white/10"
+            className="absolute right-[40px] top-[41px] flex h-[57px] w-[57px] items-center justify-center rounded-[30px] bg-[#1d1d1b] text-white transition-colors hover:bg-[#2d2d2b]"
             onClick={onClose}
             aria-label={menuOverlay.closeAria}
           >
-            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 6l12 12M18 6 6 18" />
-            </svg>
+            <span className="material-symbols-rounded text-2xl">close</span>
           </button>
 
           <motion.div
-            className="grid w-full max-w-5xl gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]"
+            className="grid w-full max-w-[1720px] gap-10 lg:grid-cols-[minmax(0,458px)_minmax(0,1fr)]"
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 24 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="relative flex flex-col items-center justify-center gap-10 rounded-[280px] border border-white/20 bg-[#2A2A2A] px-12 py-16 text-center lg:px-20">
-              <KayonLogo className="h-14 w-auto drop-shadow-[0_18px_60px_rgba(0,0,0,0.35)] lg:h-16" />
+            <div className="relative flex flex-col items-center justify-center lg:ml-[100px]">
+              <KayonLogo className="h-[76px] w-auto drop-shadow-[0_18px_60px_rgba(0,0,0,0.35)]" />
             </div>
 
-            <div className="flex flex-col justify-center gap-10 lg:pl-16">
-              <nav className="space-y-5">
+            <div className="flex flex-col justify-center gap-[60px] lg:pl-[1205px] lg:ml-[-458px]">
+              <nav className="space-y-[60px]">
                 {menuOverlay.items.map((item) => (
                   <Link
                     key={item.href}
                     href={resolveHref(item.href)}
                     onClick={onClose}
-                    className="group flex items-center gap-4 text-xl font-semibold leading-tight lg:text-2xl"
+                    className="group flex items-center gap-10 text-5xl font-bold leading-[1.2]"
                   >
-                    <span className="inline-flex h-2 w-10 items-center rounded-full bg-accent-green transition-colors duration-200 group-hover:bg-accent-blue" />
+                    <svg width="13" height="47" viewBox="0 0 13 47" fill="none" className="flex-shrink-0 rotate-90 scale-y-[-1]">
+                      <path d="M6.5 0L13 47H0L6.5 0Z" fill="#77BB61" className="transition-colors duration-200 group-hover:fill-[#2CBCEB]"/>
+                    </svg>
                     <span>{item.label}</span>
                   </Link>
                 ))}
               </nav>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-[10px]">
                 {SUPPORTED_LANGUAGES.map((lang) => (
                   <button
                     key={lang}
                     type="button"
                     onClick={() => setLanguage(lang)}
-                    className={`flex h-12 w-12 items-center justify-center rounded-full text-sm font-semibold uppercase transition-colors ${
-                      language === lang
-                        ? 'bg-white text-[#1F1F1F]'
-                        : 'bg-[#2A2A2A] text-white hover:bg-[#3A3A3A]'
-                    }`}
+                    className="flex items-center justify-center rounded-[30px] bg-[#1d1d1b] px-[30px] py-5 text-base font-bold uppercase transition-colors hover:bg-[#2d2d2b]"
                     aria-label={`Switch to ${LANGUAGE_LABELS[lang]}`}
                   >
                     {LANGUAGE_LABELS[lang]}
@@ -80,12 +103,12 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
                 ))}
               </div>
 
-              <div className="h-px w-full bg-white/20" />
+              <div className="h-px w-[338px] bg-[#747171]" />
 
               <Link
                 href={resolveHref(menuOverlay.cta.href)}
                 onClick={onClose}
-                className="inline-flex w-max items-center gap-3 rounded-full bg-accent-blue px-8 py-3 text-sm font-semibold uppercase tracking-wide text-primary transition-colors hover:bg-accent-blue/80"
+                className="flex w-[338px] items-center justify-center rounded-[30px] bg-[#2cbceb] px-[30px] py-5 text-2xl font-bold leading-[1.2] text-white transition-colors hover:bg-[#2cbceb]/80"
               >
                 {menuOverlay.cta.label}
               </Link>
