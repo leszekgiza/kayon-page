@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
+import parse from 'html-react-parser';
 
 const FeaturesSection = () => {
   const [activeFeature, setActiveFeature] = useState<number | null>(null);
@@ -116,7 +117,7 @@ const FeaturesSection = () => {
               </h2>
               <div className="mt-6 space-y-4 text-sm leading-relaxed text-primary/90 md:text-base">
                 {featureCards[activeFeature].detail.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p key={paragraph}>{parse(paragraph)}</p>
                 ))}
               </div>
             </motion.div>

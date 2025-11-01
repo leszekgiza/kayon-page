@@ -322,7 +322,7 @@ const pl: ContentStructure = {
         detail: [
           'Kayon to polska firma technologiczna z wieloletnim doświadczeniem w projektowaniu i produkcji nowoczesnych urządzeń oraz systemów do zdalnego odczytu wody i ciepła.',
           'Nasz zespół tworzą inżynierowie i specjaliści z ponad dwudziestoletnim doświadczeniem w branży pomiarowej  -  ludzie, którzy współtworzyli obowiązujące dziś standardy.',
-          'Dlatego nasze rozwiązania są dopracowane technicznie, trwałe, sprawdzone i przyjazne w obsłudze  -  gotowe na wyzwania przyszłości.',
+          'Dzięki temu nasze rozwiązania są nie tylko dopracowane technicznie, ale też trwałe, sprawdzone, przyjazne w obsłudze - gotowe na wyzwania przyszłości.',
         ],
       },
       {
@@ -330,9 +330,9 @@ const pl: ContentStructure = {
         description:
           'Urządzenia spełniające normy, które dopiero staną się obowiązkowe w nadchodzących latach.',
         detail: [
-          'Przewaga naszych rozwiązań wynika nie tylko z jakości urządzeń, ale także z oprogramowania. System ALL in KAYON umożliwia zarządzanie i raportowanie danych z tysięcy liczników jednocześnie.',
-          'Zastępuje czasochłonne papierowe raporty, rozbudowane arkusze i inne narzędzia jednym, prostym środowiskiem pracy dla wszystkich interesariuszy. Przejrzysty interfejs pozwala administratorom, zarządcom i instalatorom łatwo kontrolować zużycie, generować raporty i komunikować się z lokatorami.',
-          'ALL in KAYON umożliwia korzystanie z dowolnych urządzeń pomiarowych dowolnych producentów, dając klientom swobodę wyboru i niezależność od zamkniętych systemów.',
+          'Przewaga naszych rozwiązań wynika nie tylko z jakości urządzeń, ale także z oprogramowania. System <b>ALL in KAYON</b> umożliwia zarządzanie i raportowanie danych z tysięcy liczników jednocześnie.',
+          'Zastępuje czasochłonne papierowe raporty, rozbudowane tabele EXCELL i inne programy jednym, prostym środowiskiem pracy dla wszystkich interesariuszy. Interfejs jest przejrzysty i intuicyjny, dzięki czemu administratorzy, zarządcy i instalatorzy mogą w prosty sposób kontrolować zużycie, generować raporty, komunikować się z lokatorami.',
+          '<b>ALL in KAYON</b> umożliwia korzystanie z dowolnych urządzeń pomiarowych, dowolnych producentów przez co nasi klienci otrzymują swobodę w doborze urządzeń pomiarowych różnych marek oraz niezależność od producentów oferujących zamknięte systemy.',
         ],
       },
       {
@@ -340,9 +340,9 @@ const pl: ContentStructure = {
         description:
           'Partnerzy z wielu krajów wybierają KAYON jako standard pomiarów i zarządzania energią.',
         detail: [
-          'Nasze rozwiązania działają w Polsce, Czechach, na Ukrainie oraz rynkach Europy Zachodniej.',
-          'Od 2025 roku są dostępne w Niemczech i całej Europie za pośrednictwem firmy GWF AG  -  renomowanego szwajcarskiego dostawcy precyzyjnych technologii pomiarowych.',
-          'Obecnie Kayon rozwija również własną sieć partnerów i dystrybucji na rynku niemieckim.',
+          'Nasze rozwiązania z powodzeniem działają w Polsce, a także w Czechach, na Ukrainie i na rynkach Europy Zachodniej.',
+          'Od 2025 roku są  dostępne w Niemczech i całej Europie za pośrednictwem firmy GWF AG – renomowanego szwajcarskiego dostawcy precyzyjnych technologii pomiarowych.',
+          'Obecnie Kayon jest już obecny na rynku niemieckim samodzielnie, rozwijając własną sieć partnerów i dystrybucji.',
         ],
       },
     ],
