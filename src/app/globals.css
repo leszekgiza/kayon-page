@@ -21,6 +21,11 @@
     @apply font-bold;
   }
 
+ ul {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
   .material-symbols-rounded {
     font-family: 'Material Symbols Rounded';
     font-weight: normal;

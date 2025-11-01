@@ -2,6 +2,7 @@
 
 import { useContent } from '@/hooks/useContent';
 import Link from 'next/link';
+import parse from 'html-react-parser';
 
 export default function PrivacyPolicyPage() {
   const { privacyPolicy } = useContent();
@@ -24,11 +25,12 @@ export default function PrivacyPolicyPage() {
 
           {privacyPolicy.sections.map((section, index) => (
             <div key={index} className="mt-8 space-y-4">
-              {section.content.map((paragraph, pIndex) => (
+              {/* {section.content.map((paragraph, pIndex) => (
                 <p key={pIndex} className="text-base leading-relaxed text-primary/80">
                   {paragraph}
                 </p>
-              ))}
+              ))} */}
+              {parse(section.content)}
             </div>
           ))}
         </article>
