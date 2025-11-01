@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
+import parse from 'html-react-parser';
 
 const GreenSection = () => {
   const { clients } = useContent();
@@ -124,13 +125,13 @@ const GreenSection = () => {
                         className="text-[24px] font-bold leading-[120%] min-h-[57.6px]"
                         style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
                       >
-                        {card.title}
+                        {parse(card.title)}
                       </h3>
                       <p
                         className="text-base leading-[140%] text-primary/80 mt-4"
                         style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
                       >
-                        {card.description}
+                        {parse(card.description)}
                       </p>
                     </div>
                   </div>
