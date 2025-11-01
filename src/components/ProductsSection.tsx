@@ -107,23 +107,27 @@ const ProductsSection = () => {
           </div>
 
           {/* Navigation Arrows */}
-          <div className="flex gap-5">
+          <div className="flex items-center">
             <button
               onClick={handlePrev}
               disabled={currentIndex === 0}
-              className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] bg-[#1D1D1B] text-white transition-all duration-200 hover:bg-[#2a2a27] disabled:cursor-not-allowed disabled:opacity-30"
+              className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#1D1D1B] text-white transition-all duration-200 hover:bg-primary/30 disabled:cursor-not-allowed"
               aria-label="Previous"
             >
-              <span className="material-symbols-rounded text-2xl leading-none">chevron_left</span>
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
             </button>
 
             <button
               onClick={handleNext}
               disabled={currentIndex === maxIndex}
-              className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] bg-[#1D1D1B] text-white transition-all duration-200 hover:bg-[#2a2a27] disabled:cursor-not-allowed disabled:opacity-30"
+              className="ms-4 flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#1D1D1B] text-white transition-all duration-200 hover:bg-primary/30 disabled:opacity-30 disabled:cursor-not-allowed"
               aria-label="Next"
             >
-              <span className="material-symbols-rounded text-2xl leading-none">chevron_right</span>
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </button>
           </div>
         </div>
