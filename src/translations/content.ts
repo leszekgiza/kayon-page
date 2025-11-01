@@ -532,7 +532,7 @@ const pl: ContentStructure = {
       },
       {
         title: 'Moduły komunikacyjne',
-        slug: 'moduły-komunikacyjne',
+        slug: 'moduly-komunikacyjne',
         items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
       },
     ],
@@ -587,7 +587,7 @@ const pl: ContentStructure = {
         downloads: [],
         readMoreLabel: 'Zobacz produkty',
         slug: 'modularis-one',
-        readMoreHref: '/produkty/moduły-komunikacyjne',
+        readMoreHref: '/produkty/moduly-komunikacyjne',
       },
       {
         title: 'Infrastruktura',
@@ -642,7 +642,7 @@ const pl: ContentStructure = {
       downloadPdfButtonLabel: 'Pobierz PDF',
     },
     {
-      slug: 'moduły-komunikacyjne',
+      slug: 'moduly-komunikacyjne',
       title: 'Moduły komunikacyjne',
       description: 'Pozwalają łatwo włączyć już zainstalowane urządzenia do systemów zdalnego odczytu, a następnie przeprowadzać zdalną diagnostykę, rekonfigurację i aktualizację oprogramowania (FOTA). Dzięki szyfrowaniu danych i uwierzytelnianiu sprzęt działa bezpiecznie, a żywotność baterii sięga nawet 15 lat.',
       items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
@@ -678,7 +678,7 @@ const pl: ContentStructure = {
       intro:
         'Kompaktowy moduł radiowy 868 MHz przeznaczony do wodomierzy Modularis, umożliwiający odczyt i zdalną konfigurację w systemach walk-by oraz AMR.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/modularis-one.png',
+        src: '/images/products/moduly-komunikacyjne/modularis-one.png',
         alt: 'Moduł komunikacyjny Modularis ONE',
       },
       description: [
@@ -705,7 +705,7 @@ const pl: ContentStructure = {
       intro:
         'WMBus Smart+ to kompaktowy moduł radiowy w standardzie Wireless M-Bus 868 MHz, przeznaczony do wodomierzy serii Smart+ i Smart C+ firmy Apator Powogaz. Umożliwia szybki, niezawodny zdalny odczyt. Oferuje zaawansowane funkcji monitoringu nieprawidłowości, takich jak: cofka, wyciek, manipulacja magnetyczna czy niski poziom baterii.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/wmbus-smart-plus.png',
+        src: '/images/products/moduly-komunikacyjne/wmbus-smart-plus.png',
         alt: 'Moduł radiowy WMBus Smart+',
       },
       description: [
@@ -734,7 +734,7 @@ const pl: ContentStructure = {
       intro:
         'Modułprzewodowy M-Bus umożliwiający pełną integrację liczników Smart+ z sieciami automatyki budynkowej i systemami BMS.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/mbus-smart-plus.png',
+        src: '/images/products/moduly-komunikacyjne/mbus-smart-plus.png',
         alt: 'Modułprzewodowy MBus Smart+',
       },
       description: [
@@ -760,7 +760,7 @@ const pl: ContentStructure = {
       intro:
         'Nakładka radiowa dla cieplomierzy MicroClima, dedykowana do zastosowań mieszkaniowych z częstymi odczytami zdalnymi.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/wmbus-microclima.png',
+        src: '/images/products/moduly-komunikacyjne/wmbus-microclima.png',
         alt: 'Modułradiowy wMBus MicroClima',
       },
       description: [
@@ -786,7 +786,7 @@ const pl: ContentStructure = {
       intro:
         'Modułkomunikacyjny dla cieplomierzy RC12, przygotowany do pracy w sieciach walk-by oraz instalacjach stacjonarnych.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/wmbus-rc12.png',
+        src: '/images/products/moduly-komunikacyjne/wmbus-rc12.png',
         alt: 'Modułradiowy wMBus RC12',
       },
       description: [
@@ -1542,7 +1542,7 @@ const en: ContentStructure = {
       },
       {
         title: 'Communication modules',
-        slug: 'moduły-komunikacyjne',
+        slug: 'moduly-komunikacyjne',
         items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
       },
     ],
@@ -1597,7 +1597,7 @@ const en: ContentStructure = {
         downloads: [],
         readMoreLabel: 'Explore products',
         slug: 'modularis-one',
-        readMoreHref: '/produkty/moduły-komunikacyjne',
+        readMoreHref: '/produkty/moduly-komunikacyjne',
       },
       {
         title: 'Systems & platforms',
@@ -1652,7 +1652,7 @@ const en: ContentStructure = {
       downloadPdfButtonLabel: 'Download PDF',
     },
     {
-      slug: 'moduły-komunikacyjne',
+      slug: 'moduly-komunikacyjne',
       title: 'Communication modules',
       description: 'Easily integrate already installed devices into remote reading systems, then perform remote diagnostics, reconfiguration and firmware updates (FOTA). With data encryption and authentication, the hardware operates securely, and battery life reaches up to 15 years.',
       items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
@@ -1687,7 +1687,7 @@ const en: ContentStructure = {
       intro:
         'Compact 868 MHz radio module for Modularis water meters, enabling remote reading and configuration in both walk-by and AMR deployments.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/modularis-one.png',
+        src: '/images/products/moduly-komunikacyjne/modularis-one.png',
         alt: 'Modularis ONE communication module',
       },
       description: [
@@ -1714,7 +1714,7 @@ const en: ContentStructure = {
       intro:
         'WMBus Smart+ is a compact wireless module in the Wireless M-Bus 868 MHz standard, designed for Smart+ and Smart C+ water meters from Apator Powogaz. It enables fast, reliable remote reading. It offers advanced monitoring functions for irregularities such as: backflow, leak, magnetic manipulation or low battery level.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/wmbus-smart-plus.png',
+        src: '/images/products/moduly-komunikacyjne/wmbus-smart-plus.png',
         alt: 'WMBus Smart+ wireless module',
       },
       description: [
@@ -1743,7 +1743,7 @@ const en: ContentStructure = {
       intro:
         'Wired M-Bus module that connects Smart+ meters with building automation and BMS infrastructures.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/mbus-smart-plus.png',
+        src: '/images/products/moduly-komunikacyjne/mbus-smart-plus.png',
         alt: 'MBus Smart+ wired module',
       },
       description: [
@@ -1770,7 +1770,7 @@ const en: ContentStructure = {
       intro:
         'Wireless add-on for MicroClima heat meters, dedicated to residential deployments with frequent remote reads.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/wmbus-microclima.png',
+        src: '/images/products/moduly-komunikacyjne/wmbus-microclima.png',
         alt: 'wMBus MicroClima wireless module',
       },
       downloads: [
@@ -1797,7 +1797,7 @@ const en: ContentStructure = {
       intro:
         'Communication module for RC12 heat meters designed for both walk-by and stationary networks.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/wmbus-rc12.png',
+        src: '/images/products/moduly-komunikacyjne/wmbus-rc12.png',
         alt: 'wMBus RC12 communication module',
       },
       downloads: [
@@ -2544,7 +2544,7 @@ const de: ContentStructure = {
       },
       {
         title: 'Kommunikationsmodule',
-        slug: 'moduły-komunikacyjne',
+        slug: 'moduly-komunikacyjne',
         items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
       },
     ],
@@ -2599,7 +2599,7 @@ const de: ContentStructure = {
         downloads: [],
         readMoreLabel: 'Produkte ansehen',
         slug: 'modularis-one',
-        readMoreHref: '/produkty/moduły-komunikacyjne',
+        readMoreHref: '/produkty/moduly-komunikacyjne',
       },
       {
         title: 'Systeme & Plattformen',
@@ -2654,7 +2654,7 @@ const de: ContentStructure = {
       downloadPdfButtonLabel: 'PDF herunterladen',
     },
     {
-      slug: 'moduły-komunikacyjne',
+      slug: 'moduly-komunikacyjne',
       title: 'Kommunikationsmodule',
       description: 'Ermöglichen die einfache Integration bereits installierter Geräte in Fernauslesungssysteme und anschließend Ferndiagnose, Rekonfiguration und Firmware-Updates (FOTA). Dank Datenverschlüsselung und Authentifizierung arbeitet die Hardware sicher und die Batterielebensdauer erreicht bis zu 15 Jahre.',
       items: ['modularis-one', 'wmbus-smart-plus', 'mbus-smart-plus', 'wmbus-microclima', 'wmbus-rc12'],
@@ -2689,7 +2689,7 @@ const de: ContentStructure = {
       intro:
         'Kompaktes 868-MHz-Funkmodułfür Modularis-Wasserzaehler, das Fernauslesung und Konfiguration in Walk-by- und AMR-Installationen ermoeglicht.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/modularis-one.png',
+        src: '/images/products/moduly-komunikacyjne/modularis-one.png',
         alt: 'Modularis ONE Kommunikationsmodul',
       },
       description: [
@@ -2716,7 +2716,7 @@ const de: ContentStructure = {
       intro:
         'WMBus Smart+ ist ein kompaktes Funkmodułim Wireless M-Bus 868 MHz Standard, entwickelt für Smart+ und Smart C+ Wasserzaehler von Apator Powogaz. Es ermöglicht schnelle, zuverlaessige Fernauslesung. Es bietet erweiterte Ueberwachungsfunktionen für Unregelmaessigkeiten wie: Rueckfluss, Leckage, magnetische Manipulation oder niedrigen Batteriestand.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/wmbus-smart-plus.png',
+        src: '/images/products/moduly-komunikacyjne/wmbus-smart-plus.png',
         alt: 'WMBus Smart+ Funkmodul',
       },
       description: [
@@ -2745,7 +2745,7 @@ const de: ContentStructure = {
       intro:
         'Drahtgebundenes M-Bus-Modul, das Smart+-Zaehler mit Gebaeudeautomation und BMS-Infrastrukturen verbindet.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/mbus-smart-plus.png',
+        src: '/images/products/moduly-komunikacyjne/mbus-smart-plus.png',
         alt: 'MBus Smart+ Modul',
       },
       description: [
@@ -2772,7 +2772,7 @@ const de: ContentStructure = {
       intro:
         'Funkmodułfür MicroClima-Wärmezaehler, optimiert für Wohnanlagen mit haeufigen Fernauslesungen.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/wmbus-microclima.png',
+        src: '/images/products/moduly-komunikacyjne/wmbus-microclima.png',
         alt: 'wMBus MicroClima Funkmodul',
       },
       description: [
@@ -2799,7 +2799,7 @@ const de: ContentStructure = {
       intro:
         'Kommunikationsmodułfür RC12-Wärmezaehler, ausgelegt für Walk-by- und stationaere Netze.',
       image: {
-        src: '/images/products/moduły-komunikacyjne/wmbus-rc12.png',
+        src: '/images/products/moduly-komunikacyjne/wmbus-rc12.png',
         alt: 'wMBus RC12 Kommunikationsmodul',
       },
       description: [
