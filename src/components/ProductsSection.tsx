@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
+import SectionLabel from './ui/SectionLabel';
 
 const ProductsSection = () => {
   const { products } = useContent();
@@ -32,10 +33,7 @@ const ProductsSection = () => {
 
       {/* Left Column - Text Content - Figma: left-[100px], top-[100px], 477x631px */}
       <div className="absolute left-4 top-[50px] z-10 flex h-auto w-[calc(100%-2rem)] flex-col justify-between gap-8 md:left-[100px] md:top-[100px] md:h-[631px] md:w-[477px] md:gap-0">
-        <div className="inline-flex w-max items-center rounded-[30px] bg-[#EAEAEA] px-[30px] py-5 text-2xl font-bold leading-[1.2] text-[#1D1D1B]">
-          {products.label}
-        </div>
-
+        <SectionLabel label={products.label} bgClass="bg-[#EAEAEA]" />
         <h2 className="w-full text-[32px] font-bold leading-[1.3] text-white md:w-[477px] md:text-[40px]">
           {products.heading}
         </h2>
@@ -105,9 +103,8 @@ const ProductsSection = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-6 w-6 rounded-full transition-all duration-200 ${
-                  index === currentIndex ? 'bg-white' : 'bg-[#747171]'
-                }`}
+                className={`h-6 w-6 rounded-full transition-all duration-200 ${index === currentIndex ? 'bg-white' : 'bg-[#747171]'
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}

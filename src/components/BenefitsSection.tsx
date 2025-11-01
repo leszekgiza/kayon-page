@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
+import SectionLabel from './ui/SectionLabel';
 
 const iconMap: Record<number, string> = {
   0: 'autorenew',
@@ -45,9 +46,7 @@ const BenefitsSection = () => {
         <div className="px-4 md:px-0">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,575px)_minmax(0,1fr)]">
             <div className="space-y-6 text-black md:ml-[100px] md:pl-8">
-              <div className="inline-flex w-max items-center rounded-full border border-black/20 bg-white/40 px-6 py-2 text-sm font-semibold">
-                {benefits.label}
-              </div>
+              <SectionLabel label={benefits.label} bgClass="bg-[#fad8a8]" />
               <h2 className="text-3xl leading-tight md:text-[40px]">{benefits.heading}</h2>
               <div className="max-w-xl rounded-[40px] border border-black/30 bg-black/10 px-8 py-6 text-sm leading-relaxed text-black md:text-base">
                 {benefits.description}

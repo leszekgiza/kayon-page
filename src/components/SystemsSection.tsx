@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
+import SectionLabel from './ui/SectionLabel';
 
 const SystemsSection = () => {
   const { systems } = useContent();
@@ -19,9 +20,7 @@ const SystemsSection = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex w-max items-center rounded-full border border-primary/20 bg-neutral-gray-light px-6 py-2 text-sm font-semibold text-primary">
-              {systems.label}
-            </div>
+            <SectionLabel label={systems.label} bgClass="bg-[#EAEAEA]" />
             <h2 className="text-3xl font-semibold leading-tight text-primary md:text-[40px]">
               {systems.heading}
             </h2>

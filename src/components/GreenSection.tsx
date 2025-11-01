@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
+import SectionLabel from './ui/SectionLabel';
 
 const GreenSection = () => {
   const { clients } = useContent();
@@ -96,9 +97,7 @@ const GreenSection = () => {
       <div className="relative z-10 px-4 md:px-0">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,752px)_minmax(0,1fr)]">
           <div className="flex flex-col gap-8 md:ml-[100px] md:pl-8">
-            <div className="inline-flex w-max items-center rounded-full border border-white/40 bg-white/10 px-6 py-2 text-sm font-semibold">
-              {clients.label}
-            </div>
+            <SectionLabel label={clients.label} bgClass="bg-[#EAEAEA]" />
             <h2 className="text-3xl leading-tight md:text-[40px]">{clients.heading}</h2>
             <div className="w-full max-w-xl rounded-[40px] border border-white/30 bg-white/10 px-8 py-6 text-sm leading-relaxed md:text-base">
               {clients.highlight}
@@ -146,9 +145,8 @@ const GreenSection = () => {
                     key={dotIndex}
                     type="button"
                     onClick={() => handleDot(dotIndex)}
-                    className={`h-6 w-6 rounded-full transition-colors ${
-                      dotIndex === activeDot ? 'bg-white' : 'bg-white/40'
-                    }`}
+                    className={`h-6 w-6 rounded-full transition-colors ${dotIndex === activeDot ? 'bg-white' : 'bg-white/40'
+                      }`}
                     aria-label={formatDotAria(dotIndex)}
                   />
                 ))}
