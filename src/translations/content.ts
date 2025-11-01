@@ -515,7 +515,7 @@ const pl: ContentStructure = {
     label: 'Produkty',
     heading: 'Produkty wyznaczające nowy standard pomiarów',
     description:
-      '<b>Oferujemy nie tylko technologię — oferujemy realne narzędzia do oszczędności, automatyzacji <br />i kontroli.</b><br /><br />Nasze produkty tworzą spójny system ALL in KAYON, w którym każdy element współpracuje z pozostałymi.',
+      '<b>Oferujemy nie tylko technologię — oferujemy realne narzędzia do oszczędności, automatyzacji <br />i kontroli.</b><br /><br /><span class="font-normal">Nasze produkty tworzą spójny system ALL in KAYON, w którym każdy element współpracuje z pozostałymi.</span>',
     footnote:
       'Produkcja wszystkich urządzeń Kayon odbywa się w 100% na terenie Unii Europejskiej, zgodnie z normami CE, RED i EMC.',
     groups: [

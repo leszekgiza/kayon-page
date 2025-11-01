@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
 import SectionLabel from './ui/SectionLabel';
+import SectionDescription from './ui/SectionDescription';
 
 const OfferSection = () => {
   const { offer } = useContent();
@@ -15,9 +16,7 @@ const OfferSection = () => {
           <div className="space-y-6 text-black md:ml-[100px] md:pl-8">
             <SectionLabel label={offer.label} bgClass="bg-[#96def6]" />
             <h2 className="text-3xl leading-[1.3] md:text-[40px]">{offer.heading}</h2>
-            <div className="max-w-xl rounded-[30px] border-2 border-white/30 px-10 py-10 text-xl leading-[1.3] text-black">
-              {offer.description}
-            </div>
+            <SectionDescription text={offer.description} textColorClass="text-[#1D1D1B]" />
           </div>
           <motion.div
             className="grid gap-10 md:grid-cols-2"

@@ -7,6 +7,7 @@ import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
 import SectionLabel from './ui/SectionLabel';
 import './ProductsSection.css'
+import SectionDescription from './ui/SectionDescription';
 
 const ProductsSection = () => {
   const { products } = useContent();
@@ -38,13 +39,7 @@ const ProductsSection = () => {
         <h2 className="w-full text-[32px] font-bold leading-[1.3] text-white md:w-[477px] md:text-[40px]">
           {products.heading}
         </h2>
-
-        <div className="w-full rounded-[30px] border-2 border-[#747171] p-8 md:w-auto md:p-[40px]">
-          <p className="text-[18px] font-bold leading-[1.3] text-white md:w-[387px] md:text-[20px]">
-            {parse(products.description)}
-          </p>
-        </div>
-
+        <SectionDescription text={products.description} textColorClass="text-white" />
         <p className="w-full text-sm font-bold leading-[1.4] text-white md:w-[437px] md:text-base">
           {products.footnote}
         </p>

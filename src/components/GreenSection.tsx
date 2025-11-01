@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
 import SectionLabel from './ui/SectionLabel';
+import SectionDescription from './ui/SectionDescription';
 
 const GreenSection = () => {
   const { clients } = useContent();
@@ -99,9 +100,7 @@ const GreenSection = () => {
           <div className="flex flex-col gap-8 md:ml-[100px] md:pl-8">
             <SectionLabel label={clients.label} bgClass="bg-[#EAEAEA]" />
             <h2 className="text-3xl leading-tight md:text-[40px]">{clients.heading}</h2>
-            <div className="w-full max-w-xl rounded-[40px] border border-white/30 bg-white/10 px-8 py-6 text-sm leading-relaxed md:text-base">
-              {clients.highlight}
-            </div>
+            <SectionDescription text={clients.highlight} textColorClass="text-white" />
           </div>
           <div className="min-w-0 space-y-8 lg:pl-[200px]">
             <div className="overflow-hidden">

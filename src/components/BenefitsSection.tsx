@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
 import SectionLabel from './ui/SectionLabel';
+import SectionDescription from './ui/SectionDescription';
 
 const iconMap: Record<number, string> = {
   0: 'autorenew',
@@ -48,9 +49,7 @@ const BenefitsSection = () => {
             <div className="space-y-6 text-black md:ml-[100px] md:pl-8">
               <SectionLabel label={benefits.label} bgClass="bg-[#fad8a8]" />
               <h2 className="text-3xl leading-tight md:text-[40px]">{benefits.heading}</h2>
-              <div className="max-w-xl rounded-[40px] border border-black/30 bg-black/10 px-8 py-6 text-sm leading-relaxed text-black md:text-base">
-                {benefits.description}
-              </div>
+              <SectionDescription text={benefits.description} textColorClass="text-[#1D1D1B]" />
             </div>
             <div>
               <motion.div
