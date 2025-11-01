@@ -26,19 +26,25 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
           exit={{ opacity: 0 }}
         >
           {/* AIM decorative graphic */}
-          <div className="absolute left-[335px] top-[-49px] w-[1250px] h-[1041px] pointer-events-none hidden lg:block">
-            {/* Blue triangle - top left */}
-            <svg className="absolute left-0 top-0 w-[165px] h-[164px]" viewBox="0 0 165 164" fill="none">
-              <path d="M0 164L165 0V164H0Z" fill="#2CBCEB"/>
-            </svg>
-            {/* Orange triangle - top right */}
-            <svg className="absolute right-0 top-0 w-[165px] h-[164px]" viewBox="0 0 165 164" fill="none">
-              <path d="M165 164L0 0V164H165Z" fill="#F4B250"/>
-            </svg>
+          <div className="absolute left-[17.5%] top-[-49px] w-[65%] h-[1041px] pointer-events-none hidden lg:block">
+            {/* Blue shape - top left diagonal */}
+            <div className="absolute left-0 top-0 w-[165px] h-[164px]">
+              <svg className="w-full h-full" viewBox="0 0 165 164" fill="none">
+                <path d="M0 164L165 0V164H0Z" fill="#2CBCEB"/>
+              </svg>
+            </div>
+            {/* Orange shape - top right diagonal */}
+            <div className="absolute right-0 top-0 w-[165px] h-[164px]">
+              <svg className="w-full h-full" viewBox="0 0 165 164" fill="none">
+                <path d="M165 164L0 0V164H165Z" fill="#F4B250"/>
+              </svg>
+            </div>
             {/* Green indicator - bottom center */}
-            <svg className="absolute left-1/2 bottom-0 -translate-x-1/2 w-[49px] h-[178px]" viewBox="0 0 49 178" fill="none">
-              <rect width="49" height="178" rx="24.5" fill="#77BB61"/>
-            </svg>
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[49px] h-[178px]">
+              <svg className="w-full h-full" viewBox="0 0 49 178" fill="none">
+                <rect width="49" height="178" rx="24.5" fill="#77BB61"/>
+              </svg>
+            </div>
           </div>
 
           {/* Decorative circle */}
