@@ -514,42 +514,32 @@ const pl: ContentStructure = {
     label: 'Produkty',
     heading: 'Produkty wyznaczające nowy standard pomiarów',
     description:
-      'Oferujemy nie tylko technologię — oferujemy realne narzędzia do oszczędności, automatyzacji i kontroli. Nasze produkty tworzą spójny system ALL in KAYON, w którym każdy element współpracuje z pozostałymi.',
+      '<b>Oferujemy nie tylko technologię — oferujemy realne narzędzia do oszczędności, automatyzacji <br />i kontroli.</b><br /><br />Nasze produkty tworzą spójny system ALL in KAYON, w którym każdy element współpracuje z pozostałymi.',
     footnote:
       'Produkcja wszystkich urządzeń Kayon odbywa się w 100% na terenie Unii Europejskiej, zgodnie z normami CE, RED i EMC.',
     groups: [
       {
-        title: 'Systemy i platformy',
-        slug: 'systemy-i-platformy',
-        items: [
-          'Aplikacja mobilna Route One',
-          'Platforma OpenMetering (2WayCom, FOTA)',
-          'Portal dystrybutora',
-          'Dashboard technologiczny',
-        ],
-      },
-      {
-        title: 'Wodomierze',
-        slug: 'wodomierze',
-        items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'GWF Sonico Nano', 'Apator JS Smart+'],
-      },
-      {
-        title: 'Ciepłomierze',
-        slug: 'cieplomierze',
-        items: ['Engelmann SensoStar', 'Maddalena MicroClima', 'Rota PloMeter'],
+        title: 'Infrastruktura',
+        slug: 'infrastruktura',
+        items: ['Range One', 'ECLIPSE WMBus Gateway', 'ECLIPSE WMBus Repeater', 'EIXO WMBus Gateway', 'EXIO WMBus Repeater'],
       },
       {
         title: 'Moduły komunikacyjne',
         slug: 'moduly-komunikacyjne',
-        items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
+        items: ['Modularis One', 'WMBus Smart+', 'MBus Smart+ ', 'WMBus MicroClima', 'WMBus RC12'],
       },
       {
-        title: 'Infrastruktura',
-        slug: 'infrastruktura',
-        items: ['Range One', 'Koncentrator AC', 'Koncentrator BAT'],
+        title: 'Ciepłomierze',
+        slug: 'cieplomierze',
+        items: ['Engelman SensoStar', 'Maddalena MicroClima', 'RC12 Ploumeter'],
+      },
+      {
+        title: 'Wodomierze',
+        slug: 'wodomierze',
+        items: ['Wherle', 'Maddalena', 'Wasser-Geräte', 'GWF', 'Apator Powogaz'],
       },
     ],
-    ctaLabel: 'Dowiedz się więcej',
+    ctaLabel: 'Więcej',
   },
 
   productPage: {

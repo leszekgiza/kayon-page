@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
+import parse from 'html-react-parser';
 
 const ProductsSection = () => {
   const { products } = useContent();
@@ -38,7 +39,7 @@ const ProductsSection = () => {
             </h2>
             <div className="w-[467px] rounded-[30px] border-2 border-[#747171] p-10">
               <p className="text-[20px] leading-[26px] text-white">
-                {products.description}
+                {parse(products.description)}
               </p>
             </div>
             <p className="w-[437px] text-base font-bold leading-[22.4px] text-white">{products.footnote}</p>
@@ -96,9 +97,8 @@ const ProductsSection = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
-                    className={`h-6 w-6 rounded-full transition-all duration-200 ${
-                      index === currentIndex ? 'bg-white' : 'bg-white/40'
-                    }`}
+                    className={`h-6 w-6 rounded-full transition-all duration-200 ${index === currentIndex ? 'bg-white' : 'bg-white/40'
+                      }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />
                 ))}
