@@ -89,8 +89,8 @@ const GreenSection = () => {
       <div className="absolute inset-0 opacity-30">
         <div className="mx-auto h-full w-full max-w-5xl rounded-full border border-white/20 blur-3xl" />
       </div>
-      <div className="container-custom relative z-10">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]">
+      <div className="relative z-10 px-4 md:px-0">
+        <div className="grid gap-12 md:ml-[100px] lg:grid-cols-[minmax(0,752px)_minmax(0,1fr)]">
           <div className="flex flex-col gap-8">
             <div className="inline-flex w-max items-center rounded-full border border-white/40 bg-white/10 px-6 py-2 text-sm font-semibold">
               {clients.label}
