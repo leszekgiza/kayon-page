@@ -26,24 +26,30 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
           exit={{ opacity: 0 }}
         >
           {/* AIM decorative graphic */}
-          <div className="absolute left-[17.5%] top-[-49px] w-[65%] h-[1041px] pointer-events-none hidden lg:block">
-            {/* Blue shape - top left diagonal */}
-            <div className="absolute left-0 top-0 w-[165px] h-[164px]">
-              <svg className="w-full h-full" viewBox="0 0 165 164" fill="none">
-                <path d="M0 164L165 0V164H0Z" fill="#2CBCEB"/>
-              </svg>
+          <div className="absolute left-[335px] top-[-49.15px] w-[1250px] h-[1041.295px] pointer-events-none hidden lg:block">
+            {/* Blue diagonal line - top left */}
+            <div className="absolute left-0 top-0 right-[86.79%] bottom-[84.24%]">
+              <img
+                alt=""
+                className="block size-full object-fill"
+                src="https://www.figma.com/api/mcp/asset/15264cd8-9e66-4b4c-8322-6535113f01de"
+              />
             </div>
-            {/* Orange shape - top right diagonal */}
-            <div className="absolute right-0 top-0 w-[165px] h-[164px]">
-              <svg className="w-full h-full" viewBox="0 0 165 164" fill="none">
-                <path d="M165 164L0 0V164H165Z" fill="#F4B250"/>
-              </svg>
+            {/* Orange diagonal line - top right */}
+            <div className="absolute left-[86.88%] top-0 right-0 bottom-[84.24%]">
+              <img
+                alt=""
+                className="block size-full object-fill"
+                src="https://www.figma.com/api/mcp/asset/06d724e8-d9e0-4856-b84c-e1e4bb65f27a"
+              />
             </div>
             {/* Green indicator - bottom center */}
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[49px] h-[178px]">
-              <svg className="w-full h-full" viewBox="0 0 49 178" fill="none">
-                <rect width="49" height="178" rx="24.5" fill="#77BB61"/>
-              </svg>
+            <div className="absolute left-[48.04%] right-[48.04%] top-[82.96%] bottom-0">
+              <img
+                alt=""
+                className="block size-full object-fill"
+                src="https://www.figma.com/api/mcp/asset/3ca00548-19f2-4a0e-bbfd-8259c3eac34e"
+              />
             </div>
           </div>
 
@@ -54,7 +60,7 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
 
           <button
             type="button"
-            className="absolute right-[40px] top-[41px] flex h-[57px] w-[57px] items-center justify-center rounded-[30px] bg-[#1d1d1b] text-white transition-colors hover:bg-[#2d2d2b]"
+            className="absolute left-[1823px] top-[41px] flex h-[57px] w-[57px] items-center justify-center rounded-[30px] bg-[#1d1d1b] text-white transition-colors hover:bg-[#2d2d2b]"
             onClick={onClose}
             aria-label={menuOverlay.closeAria}
           >
@@ -69,10 +75,10 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
             transition={{ duration: 0.3 }}
           >
             <div className="relative flex flex-col items-center justify-center lg:ml-[100px]">
-              <KayonLogo className="h-[76px] w-auto drop-shadow-[0_18px_60px_rgba(0,0,0,0.35)]" />
+              <KayonLogo className="h-[90px] w-auto drop-shadow-[0_18px_60px_rgba(0,0,0,0.35)]" />
             </div>
 
-            <div className="flex flex-col justify-center gap-[60px] lg:pl-[1205px] lg:ml-[-458px]">
+            <div className="absolute left-[1205px] top-[185px] hidden lg:flex flex-col gap-[60px]">
               <nav className="space-y-[60px]">
                 {menuOverlay.items.map((item) => (
                   <Link
@@ -81,9 +87,18 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
                     onClick={onClose}
                     className="group flex items-center gap-10 text-5xl font-bold leading-[1.2]"
                   >
-                    <svg width="13" height="47" viewBox="0 0 13 47" fill="none" className="flex-shrink-0 rotate-90 scale-y-[-1]">
-                      <path d="M6.5 0L13 47H0L6.5 0Z" fill="#77BB61" className="transition-colors duration-200 group-hover:fill-[#2CBCEB]"/>
-                    </svg>
+                    <div className="flex h-[13px] w-[47px] items-center justify-center flex-shrink-0">
+                      <div className="rotate-90 scale-y-[-1]">
+                        <div className="relative h-[47px] w-[13px]">
+                          <img
+                            alt=""
+                            className="block size-full transition-opacity duration-200 group-hover:opacity-0"
+                            src="https://www.figma.com/api/mcp/asset/55620f11-e657-4f94-af14-a817a7a4f6e2"
+                          />
+                          <div className="absolute inset-0 bg-[#2CBCEB] rounded-full opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+                        </div>
+                      </div>
+                    </div>
                     <span>{item.label}</span>
                   </Link>
                 ))}
@@ -95,7 +110,7 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
                     key={lang}
                     type="button"
                     onClick={() => setLanguage(lang)}
-                    className="flex items-center justify-center rounded-[30px] bg-[#1d1d1b] px-[30px] py-5 text-base font-bold uppercase transition-colors hover:bg-[#2d2d2b]"
+                    className="flex items-center justify-center rounded-[30px] bg-[#1d1d1b] px-[30px] py-5 text-base font-bold leading-none transition-colors hover:bg-[#2d2d2b]"
                     aria-label={`Switch to ${LANGUAGE_LABELS[lang]}`}
                   >
                     {LANGUAGE_LABELS[lang]}

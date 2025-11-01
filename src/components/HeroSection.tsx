@@ -32,22 +32,37 @@ const HeroSection = () => {
   }, [isModalOpen]);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black text-white">
-      {/* Background Image */}
-      <div className="absolute inset-0">
+    <section className="relative h-[900px] overflow-hidden bg-black text-white">
+      {/* Background Image with overlay - Figma: combined layer */}
+      <div className="absolute inset-0 pointer-events-none">
         <Image
           src="/hero-top.png"
           alt={hero.imageAlt}
           fill
           priority
-          className="object-cover"
+          className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/45 to-black/15" />
+        <div className="absolute inset-0 bg-black/25" />
       </div>
 
-      {/* Decorative large circle - Figma: 1799x626px, corner radius 313px */}
-      <div className="pointer-events-none absolute left-1/2 top-32 hidden h-[626px] w-[1799px] -translate-x-1/2 rounded-[313px] border border-white/25 md:block" />
+      {/* Pattern overlay - top: 256px, height: 644px, opacity: 50% */}
+      <div className="absolute left-0 top-[256px] h-[644px] w-full overflow-hidden opacity-50">
+        {/* Pattern placeholder - można dodać pattern image tutaj jeśli potrzebny */}
+      </div>
+
+      {/* Gradient from right - from #040718 to transparent */}
+      <div className="absolute right-0 top-0 h-full w-[946px] bg-gradient-to-l from-[#040718] to-transparent" />
+
+      {/* Gradient from left - from #040718 to transparent, rotated 180° */}
+      <div className="absolute left-0 top-0 h-full w-[390px]">
+        <div className="h-full w-full rotate-180 bg-gradient-to-l from-[#040718] to-transparent" />
+      </div>
+
+      {/* Decorative large circle - Figma: left: -999px, top: -215px, rotated 180° */}
+      <div className="pointer-events-none absolute left-[-999px] top-[-215px] hidden h-[626px] w-[1799px] md:block">
+        <div className="h-full w-full rotate-180 rounded-[313px] border-2 border-[#eaeaea] opacity-[0.15]" />
+      </div>
 
       {/* AIM Target - Figma: 1250x1041px, positioned at X:335 Y:-49 */}
       <div className="pointer-events-none absolute z-10 hidden 2xl:block" style={{ left: '335px', top: '-49px', width: '1250px', height: '1041px' }}>
@@ -57,15 +72,12 @@ const HeroSection = () => {
           width={1250}
           height={1041}
           priority
-          className="opacity-40"
         />
       </div>
 
-      {/* Main Content - Figma: Frame 1 positioned left with specific dimensions */}
-      <div className="relative z-20 flex min-h-screen items-center">
-        <div className="container-custom w-full py-24">
-          {/* Frame 1 - Figma: Width 693px, Height 484px, Left aligned, GAP 80px */}
-          <div className="ml-auto flex w-full max-w-[693px] translate-x-[10px] flex-col items-start gap-20 text-left">
+      {/* Main Content - Figma: absolute positioning left: 1085px, top: 230px */}
+      <div className="relative z-20 h-full">
+        <div className="absolute left-4 top-[230px] flex flex-col items-start gap-20 md:left-[1085px]">
             {/* Logo KAYON - Figma: 300.9x50px */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -82,58 +94,57 @@ const HeroSection = () => {
               transition={{ delay: 0.15, duration: 0.6 }}
               className="flex w-full flex-col gap-10"
             >
-              {/* Headline Text - left aligned */}
-              <h1 className="text-[28px] font-semibold leading-snug text-white md:text-[36px] md:leading-tight lg:text-[42px]">
+              {/* Headline Text - Figma: 40px, Bold (700), line-height 1.2, width 693px, left-aligned */}
+              <h1 className="w-full text-[28px] font-bold leading-[1.2] text-left text-white md:w-[693px] md:text-[40px]">
                 {hero.headline}
               </h1>
 
               {/* Frame 2 - Box with text + CTA button (horizontal on large screens) */}
               {/* Figma: corner radius 30px, padding 40px, gap 40px, border #484848 */}
               <div className="flex w-full flex-col items-start gap-10 rounded-[30px] border-2 border-[#484848] bg-white/10 p-10 backdrop-blur-md lg:flex-row lg:items-center">
-                {/* Body text */}
-                <p className="flex-1 -mt-5 text-sm leading-relaxed text-white/90 md:text-base">
+                {/* Body text - Figma: 20px, Bold (700), line-height 1.2, width 437px on desktop */}
+                <p className="w-full text-base font-bold leading-[1.2] text-white md:w-[437px] md:text-[20px]">
                   {hero.body}
                 </p>
 
-                {/* CTA Button - Figma: black #1d1d1b, corner radius 30px, padding 20px 30px */}
+                {/* CTA Button - Figma: bg #1d1d1b, radius 30px, padding 20px/30px, text 16px Bold (700), leading-none */}
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(true)}
-                  className="inline-flex shrink-0 items-center gap-3 rounded-full bg-[#1d1d1b] px-[30px] py-[20px] text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#2a2a27]"
+                  className="inline-flex shrink-0 items-center gap-[10px] rounded-[30px] bg-[#1d1d1b] px-[30px] py-[20px] text-base font-bold leading-none text-white transition-colors duration-200 hover:bg-[#2a2a27]"
                 >
                   {hero.ctaLabel}
-                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
-                  </svg>
                 </button>
               </div>
             </motion.div>
-          </div>
         </div>
+      </div>
 
-        {/* Scroll Down Icon - Figma: 57x57px, positioned at bottom center */}
+        {/* Scroll Down Icon - Figma: centered at bottom */}
         <motion.button
           type="button"
           initial={{ opacity: 0, y: -16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
+          animate={{ opacity: 1, y: 0, transition: { delay: 0.5, duration: 0.6 } }}
+          whileHover={{ y: -8 }}
+          transition={{
+            y: {
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 1.5,
+              ease: "easeInOut"
+            }
+          }}
           onClick={() => {
             const nextSection = document.querySelector('section:nth-of-type(2)');
             nextSection?.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="absolute bottom-[146px] left-1/2 -translate-x-1/2 cursor-pointer transition-opacity duration-300 hover:opacity-80"
+          className="absolute bottom-[57px] left-1/2 flex h-[57px] w-[57px] -translate-x-1/2 cursor-pointer items-center justify-center rounded-[30px] bg-[#bcb7b7] transition-colors duration-300 hover:bg-[#d0d0d0]"
           aria-label="Scroll down"
         >
-          <Image
-            src="/scroll-down-icon.svg"
-            alt=""
-            width={57}
-            height={57}
-            priority
-            className="h-[57px] w-[57px]"
-          />
+          <span className="material-symbols-rounded text-[24px] text-white">
+            arrow_cool_down
+          </span>
         </motion.button>
-      </div>
 
       <AnimatePresence initial={false}>
         {isModalOpen && (

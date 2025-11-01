@@ -1183,7 +1183,7 @@ const pl: ContentStructure = {
     sendingLabel: 'Wysyłanie...',
     successMessage: 'Wiadomość została wysłana pomyślnie!',
     errorMessage: 'Wystąpił błąd. Spróbuj ponownie.',
-    mapHeading: 'Jesteśmy w sercu Politechniki Gdańskiej! Odwiedź nas!',
+    mapHeading: 'Jesteśmy w sercu Pomorski Park Naukowo-Technologicznym w Gdyni! Odwiedź nas!',
     directionsLabel: 'Wskazówki dojazdu',
     cards: [
       { title: 'Zapytania ogólne', value: 'welcome@kayon.pl', type: 'email' },
@@ -2186,7 +2186,7 @@ const en: ContentStructure = {
     sendingLabel: 'Sending...',
     successMessage: 'Message sent successfully!',
     errorMessage: 'An error occurred. Please try again.',
-    mapHeading: 'We are in the heart of the Gdańsk University of Technology! Come and visit us!',
+    mapHeading: 'We are in the heart of the Pomeranian Science and Technology Park in Gdynia! Come and visit us!',
     directionsLabel: 'Get directions',
     cards: [
       { title: 'General inquiries', value: 'welcome@kayon.pl', type: 'email' },
@@ -3188,7 +3188,7 @@ const de: ContentStructure = {
     sendingLabel: 'Wird gesendet...',
     successMessage: 'Nachricht erfolgreich gesendet!',
     errorMessage: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
-    mapHeading: 'Wir befinden uns im Herzen der Technischen Universität Danzig! Besuchen Sie uns!',
+    mapHeading: 'Wir befinden uns im Herzen des Pommerschen Wissenschafts- und Technologieparks in Gdynia! Besuchen Sie uns!',
     directionsLabel: 'Wegbeschreibung',
     cards: [
       { title: 'Allgemeine Anfragen', value: 'welcome@kayon.pl', type: 'email' },
