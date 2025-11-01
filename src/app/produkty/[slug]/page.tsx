@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ProductCategoryPage from '@/components/ProductCategoryPage';
 import ProductDetailPage from '@/components/ProductDetailPage';
+import ProductsSection from '@/components/ProductsSection';
 import { CONTENT } from '@/translations/content';
 
 const PRODUCT_SLUGS = Object.keys(CONTENT.pl.productDetails).filter((slug) => slug !== 'ploumeter-rc12');
@@ -61,6 +62,7 @@ const ProductDetailRoute = async ({ params }: { params: Promise<ProductDetailPar
       <Navigation showCenterLinks={false} isHomePage={false} />
       <main>
         {isCategory ? <ProductCategoryPage slug={slug} /> : <ProductDetailPage slug={slug} />}
+        <ProductsSection />
       </main>
       <Footer />
     </>

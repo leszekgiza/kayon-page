@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import KayonLogo from '@/components/KayonLogo';
+import ProductsSection from '@/components/ProductsSection';
 import { useContent } from '@/hooks/useContent';
 
 export default function SystemyPage() {
@@ -226,6 +227,9 @@ export default function SystemyPage() {
             </motion.div>
           </div>
         </section>
+
+        {/* Products Section */}
+        <ProductsSection />
       </main>
       <Footer />
     </>
