@@ -82,6 +82,7 @@ export interface BenefitsSectionContent {
 
 export interface OfferCardContent {
   title: string;
+  textBeforeBullets: string;
   bullets: string[];
 }
 
@@ -436,24 +437,26 @@ const pl: ContentStructure = {
     label: 'Co oferujemy?',
     heading: 'Łączymy nowoczesne produkty z systemowym podejściem',
     description:
-      'Usprawniamy codzienne funkcjonowanie i gwarantujemy satysfakcję wszystkim użytkownikom  -  od dystrybutora po odbiorcę końcowego.',
+      'Usprawniamy codzienne funkcjonowanie i gwarantujemy satysfakcję wszystkim użytkownikom systemu.',
     cards: [
       {
-        title: 'Produkty zaprojektowane z myślą o użytkowniku',
+        title: 'Produkty zaprojektowane<br />z myślą o użytkowniku',
+        textBeforeBullets: 'Każde nasze urządzenie zostało zaprojektowane tak, aby:',
         bullets: [
-          'działają długo  -  nawet 15 lat na baterii,',
-          'są niezawodne w wymagających warunkach,',
-          'są łatwe w montażu i konfiguracji (bez specjalistycznych narzędzi),',
-          'są odporne na błędy instalacyjne.',
+          '<b>działało długo</b> (do 15 lat na baterii),',
+          '<b>działało niezawodnie</b> (także w warunkach wilgoci, kurzu czy różnic temperatur),',
+          '<b>było łatwe w montażu i konfiguracji</b> (bez użycia specjalistycznych narzędzi),',
+          '<b>było odporne na błędy instalacyjne</b> (np. błędne podłączenie nie powoduje uszkodzeń).',
         ],
       },
       {
-        title: 'Jeden system ALL in KAYON  -  współpraca wszystkich elementów',
+        title: 'Jeden system ALL in KAYON<br />— integrowanie produktów wszystkich producentów',
+        textBeforeBullets: 'Nasze rozwiązania tworzą kompletny ekosystem <b>ALL in KAYON</b>: od modułu komunikacyjnego, przez koncentrator, aż po aplikacje zarządzające także czujnikami innych marek niż Kayon i dane w chmurze. To oznacza:',
         bullets: [
-          'zdalny odczyt w czasie rzeczywistym, bez wizyt na miejscu,',
-          'automatyczne alerty i raporty, które oszczędzają czas,',
-          'pełna kontrola i zdalne aktualizacje oprogramowania (OTA  -  Over-the-Air),',
-          'mniej stresu i mniej pracy dla instalatorów, administratorów i użytkowników.',
+          '<b>zdalny odczyt w czasie rzeczywistym</b>, bez wizyt na miejscu,',
+          '<b>automatyczne alerty i raporty</b>, które oszczędzają czas,',
+          '<b>pełna kontrola i zdalne aktualizacje oprogramowania</b> (<b>OTA</b> - Over-the-Air updates),',
+          '<b>mniej stresu i mniej pracy</b> dla instalatorów, administratorów i użytkowników.',
         ],
       },
     ],

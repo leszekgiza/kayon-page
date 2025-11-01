@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
+import parse from 'html-react-parser';
 
 const OfferSection = () => {
   const { offer } = useContent();
@@ -28,14 +29,15 @@ const OfferSection = () => {
           >
             {offer.cards.map((card) => (
               <div key={card.title} className="flex h-full flex-col gap-4 rounded-[32px] bg-white text-primary px-6 py-8 shadow-lg">
-                <h3 className="text-lg font-semibold">{card.title}</h3>
+                <h3 className="text-lg font-semibold">{parse(card.title)}</h3>
+                <p className="my-2"><strong>{parse(card.textBeforeBullets)}</strong></p>
                 <ul className="space-y-3 text-sm text-primary/80">
                   {card.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-start gap-3">
                       <span className="material-symbols-rounded text-2xl text-[#2cbceb]" aria-hidden="true">
                         check
                       </span>
-                      <span>{bullet}</span>
+                      <span>{parse(bullet)}</span>
                     </li>
                   ))}
                 </ul>
