@@ -23,5 +23,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "figma-data"]
+  "exclude": ["node_modules", "figma-data", "playwright.config.ts", "tests", "test-results", "playwright-report"]
 }
