@@ -145,7 +145,7 @@ const GreenSection = () => {
                     key={dotIndex}
                     type="button"
                     onClick={() => handleDot(dotIndex)}
-                    className={`h-6 w-6 rounded-full transition-colors ${dotIndex === activeDot ? 'bg-white' : 'bg-white/40'
+                    className={`h-6 w-6 flex justify-center items-center rounded-full bg-[#77bb61] border-2 border-[#5f904f] transition-all duration-200 ${dotIndex === activeDot ? 'carousel-progress-is-current border-green bg-[#77bb61]' : ''
                       }`}
                     aria-label={formatDotAria(dotIndex)}
                   />

@@ -1,0 +1,12 @@
+.carousel-progress-is-current::before {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #747171;
+  border-radius: 50%;
+}
+
+.carousel-progress-is-current.border-green::before {
+  background: #5f904f;
+}

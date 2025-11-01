@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
 import SectionLabel from './ui/SectionLabel';
+import './ProductsSection.css'
 
 const ProductsSection = () => {
   const { products } = useContent();
@@ -103,7 +104,7 @@ const ProductsSection = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-6 w-6 rounded-full transition-all duration-200 ${index === currentIndex ? 'bg-white' : 'bg-[#747171]'
+                className={`h-6 w-6 flex justify-center items-center rounded-full bg-[#484848] border-2 border-[#747171] transition-all duration-200 ${index === currentIndex ? 'carousel-progress-is-current bg-[#484848]' : ''
                   }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
