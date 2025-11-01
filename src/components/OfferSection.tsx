@@ -8,8 +8,8 @@ const OfferSection = () => {
 
   return (
     <section className="bg-[#2cbceb] py-24 text-white" id="oferta">
-      <div className="container-custom">
-        <div className="grid gap-12 lg:grid-cols-[0.67fr_1fr]">
+      <div className="px-4 md:px-0">
+        <div className="grid gap-12 md:ml-[100px] lg:grid-cols-[minmax(0,575px)_minmax(0,1fr)]">
           <div className="space-y-6 text-black">
             <div className="inline-flex w-max items-center rounded-full border border-black/20 bg-white/40 px-6 py-2 text-sm font-semibold">
               {offer.label}

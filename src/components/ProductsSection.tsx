@@ -26,8 +26,8 @@ const ProductsSection = () => {
 
   return (
     <section id="produkty" className="bg-[#474747] py-24 text-white">
-      <div className="container-custom">
-        <div className="flex flex-col gap-12 lg:flex-row">
+      <div className="px-4 md:px-0">
+        <div className="flex flex-col gap-12 md:ml-[100px] lg:flex-row">
           {/* Left Column - Text Content - Figma: 477x631px, gap 40px SPACE_BETWEEN */}
           <div className="flex flex-col justify-between lg:w-[477px] lg:h-[631px]">
             <div className="inline-flex w-max items-center rounded-full bg-[#EAEAEA] px-[30px] py-5 text-2xl font-bold text-[#1D1D1B]">
