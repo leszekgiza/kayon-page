@@ -2,10 +2,10 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import Navigation from '@/components/Navigation';
+import Navigation from '@/components/ui/Navigation';
 import Footer from '@/components/sections/Footer';
 import KayonLogo from '@/components/ui/KayonLogo';
-import ProductsSection from '@/components/ProductsSection';
+import ProductsSection from '@/components/sections/ProductsSection';
 import { useContent } from '@/hooks/useContent';
 
 export default function SystemyPage() {

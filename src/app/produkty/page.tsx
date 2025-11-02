@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Navigation from '@/components/Navigation';
+import Navigation from '@/components/ui/Navigation';
 import Footer from '@/components/sections/Footer';
 import ProductListingPage from '@/components/ProductListingPage';
 
