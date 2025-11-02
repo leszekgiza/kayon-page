@@ -150,25 +150,25 @@ const GreenSection = () => {
                   />
                 ))}
               </div>
-              <div className="flex gap-3">
+              <div className="flex items-center">
                 <button
-                  type="button"
                   onClick={handlePrev}
-                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#53923F] text-white transition-colors duration-200 hover:bg-white/10"
+                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#53923F] text-white transition-all duration-200 hover:bg-[#437633] disabled:cursor-not-allowed"
                   aria-label={clients.previousAria}
                 >
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M15 6 9 12l6 6" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"></path>
                   </svg>
+
                 </button>
+
                 <button
-                  type="button"
                   onClick={handleNext}
-                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#53923F] text-white transition-colors duration-200 hover:bg-white/80"
+                  className="ms-4 flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#53923F] text-white transition-all duration-200 hover:bg-[#437633] disabled:opacity-30 disabled:cursor-not-allowed"
                   aria-label={clients.nextAria}
                 >
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="m9 6 6 6-6 6" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
               </div>
