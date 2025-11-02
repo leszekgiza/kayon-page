@@ -60,13 +60,13 @@ const ProductsSection = () => {
               return (
                 <motion.div
                   key={group.title}
-                  className="relative h-[441px] w-[310px] flex-shrink-0 rounded-[20px] bg-white"
+                  className="p-[30px] relative h-[441px] w-[310px] flex flex-col flex-shrink-0 rounded-[20px] bg-white"
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <div className="px-[30px] py-[40px]">
+                  <div className="mb-4 h-full flex flex-col justify-between">
                     <h3 className="text-2xl font-bold leading-[1.2] text-[#1D1D1B]">{group.title}</h3>
                     <ul className="mt-[30px] flex flex-col gap-[15px]">
                       {group.items.map((item) => (
@@ -79,9 +79,10 @@ const ProductsSection = () => {
                       ))}
                     </ul>
                   </div>
+
                   <Link
                     href={targetHref}
-                    className="px-8 min-h-[51px] absolute bottom-[20px] left-1/2 inline-flex -translate-x-1/2 items-center gap-[10px] rounded-[30px] bg-[#1D1D1B] font-bold leading-none text-white transition-colors duration-200 hover:bg-[#2a2a27]"
+                    className="mt-auto px-8 w-max min-h-[51px] inline-flex items-center rounded-full bg-[#1D1D1B] font-bold leading-none text-white transition-colors duration-200 hover:bg-[#2a2a27]"
                   >
                     {products.ctaLabel}
                   </Link>
