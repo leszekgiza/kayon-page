@@ -1,6 +1,6 @@
 "use client";
 
-import { SupportedLanguage, useLanguage } from "./LanguageProvider";
+import { SupportedLanguage, useLanguage } from "@/components/LanguageProvider";
 
 const LANGUAGE_WORDS: Record<SupportedLanguage, string> = {
   pl: "Polski",
