@@ -1,6 +1,6 @@
 "use client";
 
-import { LANGUAGE_LABELS, SUPPORTED_LANGUAGES, useLanguage } from "./LanguageProvider";
+import { LANGUAGE_LABELS, SUPPORTED_LANGUAGES, useLanguage } from "@/components/LanguageProvider";
 
 type Variant = "inline" | "menu";
 
