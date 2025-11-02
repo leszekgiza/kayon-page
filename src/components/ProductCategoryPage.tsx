@@ -25,18 +25,6 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
     .map((itemSlug) => productDetails?.[itemSlug])
     .filter((detail): detail is NonNullable<typeof detail> => Boolean(detail));
 
-  // Check if this is the water meters category
-  const isWaterMetersCategory = slug === 'wodomierze';
-
-  // Extract documentation link from description for water meters
-  const extractDocLink = (description: string[] | undefined) => {
-    if (!description || !isWaterMetersCategory) return null;
-    const docLine = description.find((line) => line.includes('http'));
-    if (!docLine) return null;
-    const match = docLine.match(/(https?:\/\/[^\s]+)/);
-    return match ? match[1] : null;
-  };
-
   return (
     <>
       <HeroSimple title={category.title} desc={category.description} />
