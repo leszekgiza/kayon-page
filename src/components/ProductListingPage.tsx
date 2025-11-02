@@ -29,11 +29,10 @@ const ProductListingPage = () => {
                   const interactive = isInteractiveHref(download.href);
                   const baseClasses =
                     'inline-flex w-max items-center rounded-full px-6 py-2 text-xs font-semibold uppercase tracking-wide';
-                  const sharedClasses = `${baseClasses} ${
-                    interactive
+                  const sharedClasses = `${baseClasses} ${interactive
                       ? 'bg-primary text-white transition hover:bg-primary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary'
                       : 'cursor-not-allowed bg-neutral-gray-light/80 text-primary-light'
-                  }`;
+                    }`;
 
                   return interactive ? (
                     <Link key={download.label} href={download.href} className={sharedClasses}>
