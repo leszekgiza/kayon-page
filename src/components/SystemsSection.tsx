@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import SectionLabel from './ui/SectionLabel';
-import ButtonSimple from './ui/ButtonSimple';
+import parse from 'html-react-parser';
 
 const SystemsSection = () => {
   const { systems } = useContent();
@@ -21,7 +21,7 @@ const SystemsSection = () => {
       >
         <SectionLabel label={systems.label} bgClass="bg-[#EAEAEA]" />
         <h2 className="font-semibold leading-tight text-primary text-3xl md:text-[40px]">
-          {systems.heading}
+          {parse(systems.heading)}
         </h2>
         <Link
           href="/systemy"

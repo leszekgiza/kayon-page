@@ -462,7 +462,7 @@ const pl: ContentStructure = {
   },
   systems: {
     label: 'Rozwiązania systemowe',
-    heading: 'Systemy All in KAYON to inteligentne rozwiązania integrujące wiele urządzeń oraz wszystkie istotne dane i procesy.',
+    heading: 'Systemy All in KAYON to inteligentne rozwiązania<br />integrujące wiele urządzeń<br />oraz wszystkie istotne<br />dane i procesy.',
     ctaLabel: 'Nasze systemy',
     imageAlt: 'Diagram systemu All in KAYON',
   },
