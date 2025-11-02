@@ -87,7 +87,7 @@ const ProductsSection = () => {
           </div>
 
           {/* Navigation - PROGRESS 01 (dots on left, arrows on right) */}
-          <div className="mt-[70px] md:max-w-[calc(1280px - 160px)] flex items-center justify-between px-4 lg:px-0">
+          <div className="mt-[70px] md:max-w-[888px] flex items-center justify-between px-4 lg:px-0">
             {/* Dot Navigation - PROGRESS 01 */}
             <div className="flex items-center gap-[13px]">
               {Array.from({ length: maxIndex + 1 }).map((_, index) => (
