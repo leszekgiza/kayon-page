@@ -695,8 +695,8 @@ const pl: ContentStructure = {
         'Zgodność z normami EN 13757 i OMS',
       ],
       downloads: [
-        { label: 'Karta katalogowa (PL)', href: '/downloads/Modularis One_PL.pdf' },
-        { label: 'Karta katalogowa (DE)', href: '/downloads/Modularis One_DE.pdf' },
+        { label: 'Pobierz (PL)', href: '/downloads/Modularis One_PL.pdf' },
+        { label: 'Pobierz (DE)', href: '/downloads/Modularis One_DE.pdf' },
       ],
     },
 
@@ -725,7 +725,7 @@ const pl: ContentStructure = {
         'Stopień ochrony IP65, zgodność z normami EN 13757 i OMS',
       ],
       downloads: [
-        { label: 'Karta katalogowa (DE)', href: '/downloads/WMBus Smart+_DE.pdf' },
+        { label: 'Pobierz (DE)', href: '/downloads/WMBus Smart+_DE.pdf' },
       ],
     },
 
@@ -751,7 +751,7 @@ const pl: ContentStructure = {
         'Kompaktowa konstrukcja do montażu bez narzędzi',
       ],
       downloads: [
-        { label: 'Karta katalogowa (DE)', href: '/downloads/MBus Smart+_DE.pdf' },
+        { label: 'Pobierz (DE)', href: '/downloads/MBus Smart+_DE.pdf' },
       ],
     },
 
@@ -777,7 +777,7 @@ const pl: ContentStructure = {
         'Praca w szerokim zakresiętemperatur -10C do 55C',
       ],
       downloads: [
-        { label: 'Karta katalogowa (DE)', href: '/downloads/MicroClima WMBUS_DE.pdf' },
+        { label: 'Pobierz (DE)', href: '/downloads/MicroClima WMBUS_DE.pdf' },
       ],
     },
 
@@ -803,7 +803,7 @@ const pl: ContentStructure = {
         'Solidna obudowa IP67 odporna na wilgotne środowisko',
       ],
       downloads: [
-        { label: 'Karta katalogowa (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
+        { label: 'Pobierz (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
       ],
     },
 
@@ -1035,8 +1035,8 @@ const pl: ContentStructure = {
         'Możliwość odczytu danych i zdalnej konfiguracji modułów radiowych',
       ],
       downloads: [
-        { label: 'Karta katalogowa (EN)', href: '/downloads/Range One 3_EN.pdf' },
-        { label: 'Karta katalogowa (DE)', href: '/downloads/Range One 3_DE.pdf' },
+        { label: 'Pobierz (EN)', href: '/downloads/Range One 3_EN.pdf' },
+        { label: 'Pobierz (DE)', href: '/downloads/Range One 3_DE.pdf' },
       ],
     },
 
@@ -1064,8 +1064,8 @@ const pl: ContentStructure = {
         'Czujniki bezpieczeństwa wykrywające otwarcie i demontaż urządzenia',
       ],
       downloads: [
-        { label: 'Karta katalogowa (EN)', href: '/downloads/ECLIPSE_EN.pdf' },
-        { label: 'Karta katalogowa (DE)', href: '/downloads/ECLIPSE_DE.pdf' },
+        { label: 'Pobierz (EN)', href: '/downloads/ECLIPSE_EN.pdf' },
+        { label: 'Pobierz (DE)', href: '/downloads/ECLIPSE_DE.pdf' },
       ],
     },
 
@@ -1084,8 +1084,8 @@ const pl: ContentStructure = {
       ],
       featuresHeading: 'Najważniejsze cechy',
       downloads: [
-        { label: 'Karta katalogowa (EN)', href: '/downloads/ECLIPSE_REPEATER_EN.pdf' },
-        { label: 'Karta katalogowa (DE)', href: '/downloads/ECLIPSE_REPEATER_DE.pdf' },
+        { label: 'Pobierz (EN)', href: '/downloads/ECLIPSE_REPEATER_EN.pdf' },
+        { label: 'Pobierz (DE)', href: '/downloads/ECLIPSE_REPEATER_DE.pdf' },
       ],
       features: [
         'Prosta konfiguracja, zdalna aktualizacja firmware',
@@ -1719,8 +1719,8 @@ const en: ContentStructure = {
         'Compliance with EN 13757 and OMS standards',
       ],
       downloads: [
-        { label: 'Product datasheet (PL)', href: '/downloads/Modularis One_PL.pdf' },
-        { label: 'Product datasheet (DE)', href: '/downloads/Modularis One_DE.pdf' },
+        { label: 'Download PDF (PL)', href: '/downloads/Modularis One_PL.pdf' },
+        { label: 'Download PDF (DE)', href: '/downloads/Modularis One_DE.pdf' },
       ],
     },
 
@@ -1749,7 +1749,7 @@ const en: ContentStructure = {
         'IP65 protection rating, compliant with EN 13757 and OMS standards',
       ],
       downloads: [
-        { label: 'Product datasheet (DE)', href: '/downloads/WMBus Smart+_DE.pdf' },
+        { label: 'Download PDF (DE)', href: '/downloads/WMBus Smart+_DE.pdf' },
       ],
     },
 
@@ -1775,8 +1775,8 @@ const en: ContentStructure = {
         'Compact enclosure enabling tool-free installation',
       ],
       downloads: [
-        { label: 'Product datasheet (EN)', href: '/downloads/MBus Smart+_EN.pdf' },
-        { label: 'Product datasheet (DE)', href: '/downloads/MBus Smart+_DE.pdf' },
+        { label: 'Download PDF (EN)', href: '/downloads/MBus Smart+_EN.pdf' },
+        { label: 'Download PDF (DE)', href: '/downloads/MBus Smart+_DE.pdf' },
       ],
     },
 
@@ -1791,8 +1791,8 @@ const en: ContentStructure = {
         alt: 'wMBus MicroClima wireless module',
       },
       downloads: [
-        { label: 'Product datasheet (EN)', href: '/downloads/MicroClima WMBUS_EN.pdf' },
-        { label: 'Product datasheet (DE)', href: '/downloads/MicroClima WMBUS_DE.pdf' },
+        { label: 'Download PDF (EN)', href: '/downloads/MicroClima WMBUS_EN.pdf' },
+        { label: 'Download PDF (DE)', href: '/downloads/MicroClima WMBUS_DE.pdf' },
       ],
       description: [
       ],
@@ -1818,8 +1818,8 @@ const en: ContentStructure = {
         alt: 'wMBus RC12 communication module',
       },
       downloads: [
-        { label: 'Product datasheet (EN)', href: '/downloads/RC12_WMBUS_EN.pdf' },
-        { label: 'Product datasheet (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
+        { label: 'Download PDF (EN)', href: '/downloads/RC12_WMBUS_EN.pdf' },
+        { label: 'Download PDF (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
       ],
       description: [
       ],
@@ -2062,8 +2062,8 @@ const en: ContentStructure = {
         'Data reading and remote configuration capability of radio modules',
       ],
       downloads: [
-        { label: 'Product datasheet (EN)', href: '/downloads/Range One 3_EN.pdf' },
-        { label: 'Product datasheet (DE)', href: '/downloads/Range One 3_DE.pdf' },
+        { label: 'Download PDF (EN)', href: '/downloads/Range One 3_EN.pdf' },
+        { label: 'Download PDF (DE)', href: '/downloads/Range One 3_DE.pdf' },
       ],
     },
 
@@ -2078,8 +2078,8 @@ const en: ContentStructure = {
         alt: 'ECLIPSE WM-Bus Gateway',
       },
       downloads: [
-        { label: 'Product datasheet (EN)', href: '/downloads/ECLIPSE_EN.pdf' },
-        { label: 'Product datasheet (DE)', href: '/downloads/ECLIPSE_DE.pdf' },
+        { label: 'Download PDF (EN)', href: '/downloads/ECLIPSE_EN.pdf' },
+        { label: 'Download PDF (DE)', href: '/downloads/ECLIPSE_DE.pdf' },
       ],
       description: [
         'ECLIPSE WM-Bus Gateway is a reliable, economical data concentrator offering full control over telemetric systems at low operating costs.',
@@ -2111,8 +2111,8 @@ const en: ContentStructure = {
       ],
       featuresHeading: 'Key features',
       downloads: [
-        { label: 'Product datasheet (EN)', href: '/downloads/ECLIPSE_REPEATER_EN.pdf' },
-        { label: 'Product datasheet (DE)', href: '/downloads/ECLIPSE_REPEATER_DE.pdf' },
+        { label: 'Download PDF (EN)', href: '/downloads/ECLIPSE_REPEATER_EN.pdf' },
+        { label: 'Download PDF (DE)', href: '/downloads/ECLIPSE_REPEATER_DE.pdf' },
       ],
       features: [
         'Simple configuration, remote firmware update',
@@ -2722,8 +2722,8 @@ const de: ContentStructure = {
         'Konform mit EN 13757 und OMS',
       ],
       downloads: [
-        { label: 'Produktdatenblatt (PL)', href: '/downloads/Modularis One_PL.pdf' },
-        { label: 'Produktdatenblatt (DE)', href: '/downloads/Modularis One_DE.pdf' },
+        { label: 'PDF herunterladen (PL)', href: '/downloads/Modularis One_PL.pdf' },
+        { label: 'PDF herunterladen (DE)', href: '/downloads/Modularis One_DE.pdf' },
       ],
     },
 
@@ -2752,7 +2752,7 @@ const de: ContentStructure = {
         'Schutzart IP65, konform mit EN 13757 und OMS Normen',
       ],
       downloads: [
-        { label: 'Produktdatenblatt (DE)', href: '/downloads/WMBus Smart+_DE.pdf' },
+        { label: 'PDF herunterladen (DE)', href: '/downloads/WMBus Smart+_DE.pdf' },
       ],
     },
 
@@ -2778,8 +2778,8 @@ const de: ContentStructure = {
         'Kompaktes Gehaeuse für werkzeuglose Montage',
       ],
       downloads: [
-        { label: 'Produktdatenblatt (EN)', href: '/downloads/MBus Smart+_EN.pdf' },
-        { label: 'Produktdatenblatt (DE)', href: '/downloads/MBus Smart+_DE.pdf' },
+        { label: 'PDF herunterladen (EN)', href: '/downloads/MBus Smart+_EN.pdf' },
+        { label: 'PDF herunterladen (DE)', href: '/downloads/MBus Smart+_DE.pdf' },
       ],
     },
 
@@ -2805,8 +2805,8 @@ const de: ContentStructure = {
         'Einsatzbereich von -10C bis 55C',
       ],
       downloads: [
-        { label: 'Produktdatenblatt (EN)', href: '/downloads/MicroClima WMBUS_EN.pdf' },
-        { label: 'Produktdatenblatt (DE)', href: '/downloads/MicroClima WMBUS_DE.pdf' },
+        { label: 'PDF herunterladen (EN)', href: '/downloads/MicroClima WMBUS_EN.pdf' },
+        { label: 'PDF herunterladen (DE)', href: '/downloads/MicroClima WMBUS_DE.pdf' },
       ],
     },
 
@@ -2832,8 +2832,8 @@ const de: ContentStructure = {
         'Robustes IP67-Gehaeuse widersteht Feuchtigkeit',
       ],
       downloads: [
-        { label: 'Produktdatenblatt (EN)', href: '/downloads/RC12_WMBUS_EN.pdf' },
-        { label: 'Produktdatenblatt (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
+        { label: 'PDF herunterladen (EN)', href: '/downloads/RC12_WMBUS_EN.pdf' },
+        { label: 'PDF herunterladen (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
       ],
     },
 
@@ -3065,8 +3065,8 @@ const de: ContentStructure = {
         'Moeglichkeit zur Datenauslesung und Fernkonfiguration von Funkmodulen',
       ],
       downloads: [
-        { label: 'Produktdatenblatt (EN)', href: '/downloads/Range One 3_EN.pdf' },
-        { label: 'Produktdatenblatt (DE)', href: '/downloads/Range One 3_DE.pdf' },
+        { label: 'PDF herunterladen (EN)', href: '/downloads/Range One 3_EN.pdf' },
+        { label: 'PDF herunterladen (DE)', href: '/downloads/Range One 3_DE.pdf' },
       ],
     },
 
@@ -3094,8 +3094,8 @@ const de: ContentStructure = {
         'Sicherheitssensoren zur Erkennung von Oeffnung und Demontage des Geraets',
       ],
       downloads: [
-        { label: 'Produktdatenblatt (EN)', href: '/downloads/ECLIPSE_EN.pdf' },
-        { label: 'Produktdatenblatt (DE)', href: '/downloads/ECLIPSE_DE.pdf' },
+        { label: 'PDF herunterladen (EN)', href: '/downloads/ECLIPSE_EN.pdf' },
+        { label: 'PDF herunterladen (DE)', href: '/downloads/ECLIPSE_DE.pdf' },
       ],
     },
 
@@ -3114,8 +3114,8 @@ const de: ContentStructure = {
       ],
       featuresHeading: 'Hauptmerkmale',
       downloads: [
-        { label: 'Produktdatenblatt (EN)', href: '/downloads/ECLIPSE_REPEATER_EN.pdf' },
-        { label: 'Produktdatenblatt (DE)', href: '/downloads/ECLIPSE_REPEATER_DE.pdf' },
+        { label: 'PDF herunterladen (EN)', href: '/downloads/ECLIPSE_REPEATER_EN.pdf' },
+        { label: 'PDF herunterladen (DE)', href: '/downloads/ECLIPSE_REPEATER_DE.pdf' },
       ],
       features: [
         'Einfache Konfiguration, Firmware-Aktualisierung aus der Ferne',
