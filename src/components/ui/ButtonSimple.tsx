@@ -5,7 +5,7 @@ const ButtonSimple = ({ text, bgClass, callbackFunction, children }: { text: str
     <button
       type="button"
       onClick={callbackFunction}
-      className={`px-8 min-h-[51px] inline-flex items-center gap-2 rounded-full ${bgClass || 'bg-primary'} text-white font-bold`}
+      className={`px-8 min-h-[51px] inline-flex items-center gap-2 rounded-full ${bgClass || 'bg-primary'} whitespace-nowrap text-white font-bold`}
     >
       {parse(text)} {children}
     </button>
