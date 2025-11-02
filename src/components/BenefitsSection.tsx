@@ -69,13 +69,7 @@ const BenefitsSection = () => {
                       </span>
                     </div>
                     <h4 className="text-base font-semibold text-black">{benefit.title}</h4>
-
                     <ButtonSimple text={benefits.readMoreLabel} callbackFunction={() => setActiveBenefit(index)} bgClass="bg-[#1d1d1b]" />
-                    {/* <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
-                      </svg> */}
-                    {/* </ButtonSimple> */}
-
                   </div>
                 ))}
               </motion.div>
