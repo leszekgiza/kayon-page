@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
-import KayonLogo from '@/components/ui/KayonLogo';
+import HeroSimple from '@/components/sections/HeroSimple';
 
 interface ProductCategoryPageProps {
   slug: string;
@@ -38,29 +38,7 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative min-h-[400px] overflow-hidden bg-[#3C3C3C] text-white">
-        {/* Decorative circle elements */}
-        <div className="pointer-events-none absolute left-[15%] top-1/2 h-[300px] w-[300px] -translate-y-1/2 rounded-full border border-white/10" />
-        <div className="pointer-events-none absolute right-[10%] top-1/2 h-[120px] w-[120px] -translate-y-1/2 rounded-full bg-white/5" />
-
-        <div className="container-custom relative z-10 flex min-h-[400px] items-center py-20">
-          <div className="grid w-full items-center gap-16 lg:grid-cols-[auto_1fr]">
-            {/* Logo */}
-            <div className="flex items-center justify-start">
-              <KayonLogo className="h-16 w-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)] md:h-20 lg:h-24" />
-            </div>
-
-            {/* Title and Description - stacked vertically */}
-            <div className="flex flex-col gap-6">
-              <h1 className="text-3xl font-bold md:text-5xl lg:text-6xl">{category.title}</h1>
-              <div className="max-w-md rounded-[28px] border border-white/25 bg-white/10 px-6 py-5 backdrop-blur-sm md:px-8 md:py-6">
-                <p className="text-sm leading-relaxed text-white/90 md:text-base">{category.description}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSimple title={category.title} desc={category.description} />
 
       {/* Products Section */}
       <section className="bg-white py-16 md:py-24">

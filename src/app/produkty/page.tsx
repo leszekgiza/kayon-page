@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const ProductsPage = () => (
   <>
-    <Navigation showCenterLinks={false} isHomePage={false} />
+    <Navigation showCenterLinks={false} isHomePage />
     <main>
       <ProductListingPage />
     </main>
