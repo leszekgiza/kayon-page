@@ -15,7 +15,7 @@ const ProductDetailPage = ({ slug }: ProductDetailPageProps) => {
 
   if (!detail) {
     return (
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="container-custom">
           <div className="rounded-[28px] border border-neutral-gray-light/60 bg-neutral-gray-light/20 px-6 py-10 text-primary-lighter md:px-10">
             <p className="text-lg font-semibold">Ten produkt jest w przygotowaniu.</p>
