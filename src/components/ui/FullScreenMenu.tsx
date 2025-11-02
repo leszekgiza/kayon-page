@@ -59,8 +59,9 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
           </div>
 
           <button
+            id='fullscreen-menu-close-button'
             type="button"
-            className="absolute left-[1823px] top-[41px] flex h-[57px] w-[57px] items-center justify-center rounded-[30px] bg-[#1d1d1b] text-white transition-colors hover:bg-[#2d2d2b]"
+            className="fixed top-[60px] right-[60px] z-50 flex h-[57px] w-[57px] items-center justify-center rounded-[30px] bg-[#1d1d1b] text-white transition-colors hover:bg-[#2d2d2b]"
             onClick={onClose}
             aria-label={menuOverlay.closeAria}
           >
