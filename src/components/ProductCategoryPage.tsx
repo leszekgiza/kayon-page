@@ -52,75 +52,75 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
             const firstDescription = detail.description?.[0];
 
             // Water meters special layout
-            if (isWaterMetersCategory) {
-              return (
-                <div key={detail.slug}>
-                  <article className="grid gap-8 lg:grid-cols-[280px_1fr_auto] lg:gap-12">
-                    {/* Left Column - Product Name and Download Button */}
-                    <div className="flex flex-col justify-between space-y-6">
-                      <div>
-                        <h2 className="text-3xl font-normal text-primary md:text-4xl">{detail.title}</h2>
-                      </div>
+            // if (isWaterMetersCategory) {
+            //   return (
+            //     <div key={detail.slug}>
+            //       <article className="grid gap-8 lg:grid-cols-[280px_1fr_auto] lg:gap-12">
+            //         {/* Left Column - Product Name and Download Button */}
+            //         <div className="flex flex-col justify-between space-y-6">
+            //           <div>
+            //             <h2 className="text-3xl font-normal text-primary md:text-4xl">{detail.title}</h2>
+            //           </div>
 
-                      {docLink && (
-                        <div className="flex flex-col gap-3">
-                          <a
-                            href={docLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#BCB7B7] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#9E9E9E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BCB7B7]"
-                          >
-                            {category.downloadPdfButtonLabel}
-                          </a>
-                        </div>
-                      )}
-                    </div>
+            //           {docLink && (
+            //             <div className="flex flex-col gap-3">
+            //               <a
+            //                 href={docLink}
+            //                 target="_blank"
+            //                 rel="noopener noreferrer"
+            //                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#BCB7B7] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#9E9E9E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BCB7B7]"
+            //               >
+            //                 {category.downloadPdfButtonLabel}
+            //               </a>
+            //             </div>
+            //           )}
+            //         </div>
 
-                    {/* Center Column - Description Card with border */}
-                    <div className="rounded-[32px] border border-neutral-gray-light/60 bg-white px-8 py-8 md:px-10 md:py-10">
-                      {firstDescription && (
-                        <p className="text-sm text-primary-lighter md:text-base">{firstDescription}</p>
-                      )}
-                      <ul className="mt-5 space-y-3 text-sm text-primary-lighter md:text-base">
-                        {visibleFeatures.map((feature) => (
-                          <li key={feature} className="flex items-start gap-3">
-                            <span className="material-symbols-rounded mt-0.5 text-[20px] leading-none text-[#77bb61]">
-                              arrow_right
-                            </span>
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      {hasMoreFeatures && (
-                        <button
-                          type="button"
-                          onClick={() => setExpandedProduct(detail.slug)}
-                          className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                        >
-                          {category.moreButtonLabel}
-                        </button>
-                      )}
-                    </div>
+            //         {/* Center Column - Description Card with border */}
+            //         <div className="rounded-[32px] border border-neutral-gray-light/60 bg-white px-8 py-8 md:px-10 md:py-10">
+            //           {firstDescription && (
+            //             <p className="text-sm text-primary-lighter md:text-base">{firstDescription}</p>
+            //           )}
+            //           <ul className="mt-5 space-y-3 text-sm text-primary-lighter md:text-base">
+            //             {visibleFeatures.map((feature) => (
+            //               <li key={feature} className="flex items-start gap-3">
+            //                 <span className="material-symbols-rounded mt-0.5 text-[20px] leading-none text-[#77bb61]">
+            //                   arrow_right
+            //                 </span>
+            //                 <span>{feature}</span>
+            //               </li>
+            //             ))}
+            //           </ul>
+            //           {hasMoreFeatures && (
+            //             <button
+            //               type="button"
+            //               onClick={() => setExpandedProduct(detail.slug)}
+            //               className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            //             >
+            //               {category.moreButtonLabel}
+            //             </button>
+            //           )}
+            //         </div>
 
-                    {/* Right Column - Product Image with white background */}
-                    {detail.image && (
-                      <div className="relative h-[280px] w-full overflow-hidden rounded-[28px] bg-white lg:h-auto lg:w-[320px]">
-                        <Image
-                          src={detail.image.src}
-                          alt={detail.image.alt}
-                          fill
-                          sizes="(min-width: 1024px) 320px, 100vw"
-                          className="object-contain p-6 lg:p-8"
-                          priority={false}
-                        />
-                      </div>
-                    )}
-                  </article>
-                  {/* Separator line between products */}
-                  {index < items.length - 1 && <hr className="my-16 border-t border-neutral-gray-light/40 md:my-20" />}
-                </div>
-              );
-            }
+            //         {/* Right Column - Product Image with white background */}
+            //         {detail.image && (
+            //           <div className="relative h-[280px] w-full overflow-hidden rounded-[28px] bg-white lg:h-auto lg:w-[320px]">
+            //             <Image
+            //               src={detail.image.src}
+            //               alt={detail.image.alt}
+            //               fill
+            //               sizes="(min-width: 1024px) 320px, 100vw"
+            //               className="object-contain p-6 lg:p-8"
+            //               priority={false}
+            //             />
+            //           </div>
+            //         )}
+            //       </article>
+            //       {/* Separator line between products */}
+            //       {index < items.length - 1 && <hr className="my-16 border-t border-neutral-gray-light/40 md:my-20" />}
+            //     </div>
+            //   );
+            // }
 
             // Default layout for other categories
             return (
@@ -140,7 +140,7 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
                             href={download.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2 rounded-full bo px-5 py-2.5 text-sm font-semibold bg-[#747171] text-white transition hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                            className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 w-max text-sm font-bold bg-[#747171] text-white transition hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                           >
                             {download.label}
                             <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -153,7 +153,7 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
                     ) : (
                       <Link
                         href={`/produkty/${detail.slug}`}
-                        className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-white px-5 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 w-max text-sm font-bold bg-[#747171] text-white transition hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       >
                         {category.moreButtonLabel}
                       </Link>

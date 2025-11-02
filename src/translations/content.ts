@@ -810,7 +810,7 @@ const pl: ContentStructure = {
     'wehrle-etkw-eax': {
       slug: 'wehrle-etkw-eax',
       heading: 'Opis poszczególnych wodomierzy',
-      title: 'Wehrle ETK(W)-EAX',
+      title: 'Wehrle<br /><span className="font-medium">ETK(W)-EAX</span>',
       intro:
         'Wodomierz jednostrumieniowy Wehrle to precyzyjne i niezawodne urządzenie do pomiaru zużycia wody w instalacjach domowych i komercyjnych, zaprojektowane z myślą o długotrwałą pracę w trudnych warunkach.',
       image: {
@@ -837,7 +837,7 @@ const pl: ContentStructure = {
     'maddalena-sj-plus-evo': {
       slug: 'maddalena-sj-plus-evo',
       heading: 'Opis poszczególnych wodomierzy',
-      title: 'Maddalena SJ PLUS-EVO',
+      title: 'Maddalena<br /><span className="font-medium">SJ PLUS-EVO</span>',
       intro:
         'Wodomierz SJ PLUS-EVO to nowoczesne rozwiązanie do zastosowań domowych, charakteryzujące sięnajwyższą jakością wykonania i niezawodną precyzją pomiarówa.',
       image: {
@@ -864,7 +864,7 @@ const pl: ContentStructure = {
     'wasser-geraete-eco': {
       slug: 'wasser-geraete-eco',
       heading: 'Opis poszczególnych wodomierzy',
-      title: 'Wasser-Geräte ECO',
+      title: 'Wasser-Geräte<br /><span className="font-medium">ECO</span>',
       intro:
         'Wodomierz ECO od Wasser-Geräte zapewnia niezawodny pomiar zarówno ciepłej, jak i zimnej wody (do 90C) i jest idealnym rozwiązaniem do zastosowań mieszkaniowych i komercyjnych.',
       image: {
@@ -888,7 +888,7 @@ const pl: ContentStructure = {
     'gwf-sonico-nano': {
       slug: 'gwf-sonico-nano',
       heading: 'Opis poszczególnych wodomierzy',
-      title: 'GWF Sonico Nano',
+      title: 'GWF Sonico<br /><span className="font-medium">Nano</span>',
       intro:
         'GWF Sonico Nano to zaawansowany, ultradźwiękowy wodomierz oferujący najwyższą precyzję i trwałość w pomiarach zimnej wody w budownictwie mieszkaniowym oraz w przemyśle.',
       image: {
@@ -914,7 +914,7 @@ const pl: ContentStructure = {
     'apator-js-smart-plus': {
       slug: 'apator-js-smart-plus',
       heading: 'Opis poszczególnych wodomierzy',
-      title: 'Apator Powogaz JS Smart+',
+      title: 'Apator<br /><span className="font-medium">Powogaz JS Smart+</span>',
       intro:
         'Wodomierz Apator Powogaz JS Smart+ to sprawdzone i niezawodne rozwiązanie od polskiego lidera rynku wodomierzy. Zaprojektowane do pomiaru przepływu wody w instalacjach domowych, cechujące sięwysoką trwałością i odpornością na warunki środowiskowe.',
       image: {
@@ -1837,7 +1837,7 @@ const en: ContentStructure = {
     'wehrle-etkw-eax': {
       slug: 'wehrle-etkw-eax',
       heading: 'Water meter portfolio',
-      title: 'Wehrle ETK(W)-EAX',
+      title: 'Wehrle<br /><span className="font-medium">ETK(W)-EAX</span>',
       intro:
         'The Wehrle single-jet water meter is a precise and reliable device for measuring water consumption in residential and commercial installations, designed for long-term operation in challenging conditions.',
       image: {
@@ -1864,7 +1864,7 @@ const en: ContentStructure = {
     'maddalena-sj-plus-evo': {
       slug: 'maddalena-sj-plus-evo',
       heading: 'Water meter portfolio',
-      title: 'Maddalena SJ PLUS-EVO',
+      title: 'Maddalena<br /><span className="font-medium">SJ PLUS-EVO</span>',
       intro:
         'The SJ PLUS-EVO water meter is a modern solution for residential applications, characterized by the highest quality workmanship and reliable measurement accuracy.',
       image: {
@@ -1891,7 +1891,7 @@ const en: ContentStructure = {
     'wasser-geraete-eco': {
       slug: 'wasser-geraete-eco',
       heading: 'Water meter portfolio',
-      title: 'Wasser-Geräte ECO',
+      title: 'Wasser-Geräte<br /><span className="font-medium">ECO</span>',
       intro:
         'The ECO water meter from Wasser-Geräte ensures reliable measurement of both hot and cold water (up to 90C) and is an ideal solution for residential and commercial applications.',
       image: {
@@ -1915,7 +1915,7 @@ const en: ContentStructure = {
     'gwf-sonico-nano': {
       slug: 'gwf-sonico-nano',
       heading: 'Water meter portfolio',
-      title: 'GWF Sonico Nano',
+      title: 'GWF Sonico<br /><span className="font-medium">Nano</span>',
       intro:
         'GWF Sonico Nano is an advanced ultrasonic water meter offering the highest precision and durability in cold water measurements in residential construction and industry.',
       image: {
@@ -1941,7 +1941,7 @@ const en: ContentStructure = {
     'apator-js-smart-plus': {
       slug: 'apator-js-smart-plus',
       heading: 'Water meter portfolio',
-      title: 'Apator Powogaz JS Smart+',
+      title: 'Apator<br /><span className="font-medium">Powogaz JS Smart+</span>',
       intro:
         'The Apator Powogaz JS Smart+ water meter is a proven and reliable solution from the Polish market leader in water meters. Designed to measure water flow in residential installations, characterized by high durability and resistance to environmental conditions.',
       image: {
@@ -2840,7 +2840,7 @@ const de: ContentStructure = {
     'wehrle-etkw-eax': {
       slug: 'wehrle-etkw-eax',
       heading: 'Wasserzaehler im Ueberblick',
-      title: 'Wehrle ETK(W)-EAX',
+      title: 'Wehrle<br /><span className="font-medium">ETK(W)-EAX</span>',
       intro:
         'Der Einstrahl-Wasserzaehler Wehrle ist ein präzises und zuverlässiges Geraet zur Messung des Wasserverbrauchs in privaten und gewerblichen Installationen, entwickelt für langfristigen Betrieb unter schwierigen Bedingungen.',
       image: {
@@ -2867,7 +2867,7 @@ const de: ContentStructure = {
     'maddalena-sj-plus-evo': {
       slug: 'maddalena-sj-plus-evo',
       heading: 'Wasserzaehler im Ueberblick',
-      title: 'Maddalena SJ PLUS-EVO',
+      title: 'Maddalena<br /><span className="font-medium">SJ PLUS-EVO</span>',
       intro:
         'Der Wasserzaehler SJ PLUS-EVO ist eine moderne Lösung für den Hausgebrauch, die sich durch hoechste Verarbeitungsqualitaet und zuverlässige Messgenauigkeit auszeichnet.',
       image: {
@@ -2894,7 +2894,7 @@ const de: ContentStructure = {
     'wasser-geraete-eco': {
       slug: 'wasser-geraete-eco',
       heading: 'Wasserzaehler im Ueberblick',
-      title: 'Wasser-Geräte ECO',
+      title: 'Wasser-Geräte<br /><span className="font-medium">ECO</span>',
       intro:
         'Der Wasserzaehler ECO von Wasser-Geräte gewährleistet zuverlässige Messung sowohl von warmem als auch kaltem Wasser (bis 90C) und ist die ideale Lösung für Wohn- und Gewerbeanwendungen.',
       image: {
@@ -2918,7 +2918,7 @@ const de: ContentStructure = {
     'gwf-sonico-nano': {
       slug: 'gwf-sonico-nano',
       heading: 'Wasserzaehler im Ueberblick',
-      title: 'GWF Sonico Nano',
+      title: 'GWF Sonico<br /><span className="font-medium">Nano</span>',
       intro:
         'GWF Sonico Nano ist ein fortschrittlicher Ultraschall-Wasserzaehler, der hoechste Praezision und Langlebigkeit bei der Kaltwassermessung im Wohnungsbau und in der Industrie bietet.',
       image: {
@@ -2944,7 +2944,7 @@ const de: ContentStructure = {
     'apator-js-smart-plus': {
       slug: 'apator-js-smart-plus',
       heading: 'Wasserzaehler im Ueberblick',
-      title: 'Apator Powogaz JS Smart+',
+      title: 'Apator<br /><span className="font-medium">Powogaz JS Smart+</span>',
       intro:
         'Der Wasserzaehler Apator Powogaz JS Smart+ ist eine bewaehrte und zuverlässige Lösung vom polnischen Marktfuehrer für Wasserzaehler. Entwickelt zur Messung des Wasserdurchflusses in Hausinstallationen, zeichnet er sich durch hohe Langlebigkeit und Bestaendigkeit gegen Umweltbedingungen aus.',
       image: {
