@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import KayonMark from '@/components/ui/KayonMark';
-import MenuOverlay from '@/components/ui/MenuOverlay';
+import FullScreenMenu from '@/components/ui/FullScreenMenu';
 import { useContent } from '@/hooks/useContent';
 
 interface NavigationProps {
@@ -117,7 +117,7 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
         </div>
       </nav>
 
-      <MenuOverlay open={isMenuOpen} onClose={() => setMenuOpen(false)} />
+      <FullScreenMenu open={isMenuOpen} onClose={() => setMenuOpen(false)} />
     </>
   );
 };

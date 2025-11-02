@@ -6,12 +6,12 @@ import KayonLogo from '@/components/ui/KayonLogo';
 import { useContent } from '@/hooks/useContent';
 import { useLanguage, SUPPORTED_LANGUAGES, LANGUAGE_LABELS } from '@/components/LanguageProvider';
 
-interface MenuOverlayProps {
+interface FullScreenMenuProps {
   open: boolean;
   onClose: () => void;
 }
 
-const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
+const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
   const { menuOverlay } = useContent();
   const { language, setLanguage } = useLanguage();
   const resolveHref = (href: string) => (href.startsWith('#') ? `/${href}` : href);
@@ -135,4 +135,4 @@ const MenuOverlay = ({ open, onClose }: MenuOverlayProps) => {
   );
 };
 
-export default MenuOverlay;
+export default FullScreenMenu;
