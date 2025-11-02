@@ -353,7 +353,7 @@ const pl: ContentStructure = {
   clients: {
     label: 'Nasi klienci',
     heading:
-      'Kayon oferuje konkretną odpowiedź na kluczowe wymagania wszystkich grup klientów',
+      'Kayon oferuje konkretną<br />odpowiedź na kluczowe<br />wymagania wszystkich<br />grup klientów',
     highlight:
       'To wszystko realizujemy z zachowaniem wysokiej efektywności energetycznej i minimalnego wpływu na środowisko. Nie dlatego, że o środowisko dbać wypada, ale dlatego, że dobrze zaprojektowane systemy działają oszczędnie i bezawaryjnie – z korzyścią dla ludzi i planety.',
     cards: [
@@ -391,7 +391,7 @@ const pl: ContentStructure = {
     label: 'Jak działamy?',
     heading: 'Dostarczamy urządzenia<br />i serwis, które<br />minimalizują koszty',
     description:
-      'Rozwiązania Kayon są projektowane tak,<br />by każdy uczestnik łańcucha interesariuszy —<br />od dystrybutora, przez instalatora, po zarządcę<br />i mieszkańca nieruchomości — zyskał realne<br />oszczędności, zmniejszenie wydatków, mniej<br />pracy operacyjnej i większą kontrolę.',
+      'Rozwiązania Kayon są projektowane tak,<br />by każdy uczestnik łańcucha interesariuszy —<br />od dystrybutora, przez instalatora, po zarządcę i mieszkańca nieruchomości — zyskał realne oszczędności, zmniejszenie wydatków, mniej pracy operacyjnej i większą kontrolę.',
     listTitle: 'Co to<br />oznacza<br />w praktyce?',
     items: [
       {
