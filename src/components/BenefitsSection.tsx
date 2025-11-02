@@ -48,7 +48,7 @@ const BenefitsSection = () => {
         <div className="mx-auto px-8 md:px-0 py-12 md:py-24 max-w-[1660px] lg:min-h-[800px] flex flex-col md:flex-row justify-between gap-8 md:gap-28">
           <div className="flex flex-col gap-8 md:gap-y-16">
             <SectionLabel label={benefits.label} bgClass="bg-[#fad8a8]" />
-            <h2 className="text-3xl leading-tight md:text-[40px]">{parse(benefits.heading)}</h2>
+            <h2 className="leading-tight text-3xl md:text-[40px]">{parse(benefits.heading)}</h2>
             <SectionDescription text={benefits.description} textColorClass="text-[#1D1D1B]" />
           </div>
 
@@ -67,7 +67,7 @@ const BenefitsSection = () => {
                     {iconMap[index] || 'help'}
                   </span>
                 </div>
-                <h4 className="text-lg md:text-2xl font-bold">{benefit.title}</h4>
+                <h4 className="text-lg lg:text-2xl font-bold">{parse(benefit.title)}</h4>
                 <ButtonSimple text={benefits.readMoreLabel} callbackFunction={() => setActiveBenefit(index)} bgClass="bg-[#1d1d1b]" />
               </div>
             ))}
@@ -105,10 +105,10 @@ const BenefitsSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 6l12 12M18 6 6 18" />
                 </svg>
               </button>
-              <h2 id="benefits-modal-title" className="text-xl font-semibold text-primary md:text-2xl">
+              <h2 id="benefits-modal-title" className="text-xl font-semibold text-primary 2xl:text-2xl">
                 {benefitCards[activeBenefit].title}
               </h2>
-              <div className="mt-6 space-y-4 text-sm leading-relaxed text-primary/90 md:text-base">
+              <div className="mt-6 space-y-4 leading-relaxed text-primary/90 text-sm 2xl:text-base">
                 {benefitCards[activeBenefit].detail.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
