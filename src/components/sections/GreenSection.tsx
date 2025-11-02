@@ -6,6 +6,7 @@ import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
 import SectionLabel from '@/components/ui/SectionLabel';
 import SectionDescription from '@/components/ui/SectionDescription';
+import './GreenSection.css';
 
 const GreenSection = () => {
   const { clients } = useContent();
@@ -88,90 +89,82 @@ const GreenSection = () => {
     clients.dotAriaTemplate.replace('%d', String(dotIndex + 1));
 
   return (
-    <section id="nasi-klienci" className="relative overflow-hidden bg-[#53923e] py-24 text-white">
-      {/* Rectangle 3 - lighter green on the right side - splits screen 50/50 */}
-      <div className="absolute left-1/2 top-0 hidden h-full w-1/2 bg-[#77bb61] lg:block" />
-
-      <div className="absolute inset-0 opacity-30">
-        <div className="mx-auto h-full w-full max-w-5xl rounded-full border border-white/20 blur-3xl" />
-      </div>
-      <div className="relative z-10 px-4 md:px-0">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,752px)_minmax(0,1fr)]">
-          <div className="flex flex-col gap-8 md:ml-[100px] md:pl-8">
-            <SectionLabel label={clients.label} bgClass="bg-[#EAEAEA]" />
-            <h2 className="text-3xl leading-tight md:text-[40px]">{clients.heading}</h2>
-            <SectionDescription text={clients.highlight} textColorClass="text-white" />
-          </div>
-          <div className="min-w-0 space-y-8 lg:pl-[200px]">
-            <div className="overflow-hidden">
-              <motion.div
-                style={trackStyle}
-                className="flex min-w-0 gap-10 -mr-[2000px]"
-                initial={false}
-                animate={{ transform: trackStyle.transform }}
-                transition={
-                  animateTransition
-                    ? { duration: 0.45, ease: 'easeInOut' }
-                    : { duration: 0 }
-                }
-              >
-                {extendedCards.map((card, cardIndex) => (
-                  <div
-                    key={`${card.title}-${cardIndex}`}
-                    style={cardStyle}
-                    className="rounded-[20px] bg-white px-[30px] py-[40px] text-primary shadow-lg flex flex-col justify-between"
+    <section id="nasi-klienci" className="bg-[#77bb61] bg-gradient-to-r from-[#53923e] via-[#53923e] to-[#77bb61] text-white">
+      <div className="flex items-center relative overflow-hidden bg-[#53923e]">
+        <div className="green-section-left-col md:py-24 md:min-h-[800px] md:min-w-[50%] flex flex-col justify-between gap-8 bg-[#53923e]">
+          <SectionLabel label={clients.label} bgClass="bg-[#EAEAEA]" />
+          <h2 className="text-3xl leading-tight md:text-[40px]">{parse(clients.heading)}</h2>
+          <SectionDescription text={clients.highlight} textColorClass="text-white" />
+        </div>
+        <div className="ps-8 md:ps-16 md:py-24 md:min-h-[800px] md:min-w-[50%] flex flex-col justify-between gap-8 bg-[#77bb61]">
+          <div className="overflow-hidden">
+            <motion.div
+              style={trackStyle}
+              className="flex min-w-0 gap-10 -mr-[2000px]"
+              initial={false}
+              animate={{ transform: trackStyle.transform }}
+              transition={
+                animateTransition
+                  ? { duration: 0.45, ease: 'easeInOut' }
+                  : { duration: 0 }
+              }
+            >
+              {extendedCards.map((card, cardIndex) => (
+                <div
+                  key={`${card.title}-${cardIndex}`}
+                  style={cardStyle}
+                  className="rounded-[20px] bg-white px-[30px] py-[40px] text-primary shadow-lg flex flex-col justify-between"
+                >
+                  <h3
+                    className="text-[24px] font-bold leading-[120%]"
+                    style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
                   >
-                    <h3
-                      className="text-[24px] font-bold leading-[120%]"
-                      style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
-                    >
-                      {parse(card.title)}
-                    </h3>
-                    <p
-                      className="text-base leading-[140%] text-primary/80"
-                      style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
-                    >
-                      {parse(card.description)}
-                    </p>
-                  </div>
-                ))}
-              </motion.div>
+                    {parse(card.title)}
+                  </h3>
+                  <p
+                    className="text-base leading-[140%] text-primary/80"
+                    style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
+                  >
+                    {parse(card.description)}
+                  </p>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+          <div className="pe-[122px] flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              {baseCards.map((_, dotIndex) => (
+                <button
+                  key={dotIndex}
+                  type="button"
+                  onClick={() => handleDot(dotIndex)}
+                  className={`h-6 w-6 flex justify-center items-center rounded-full bg-[#77bb61] border-2 border-[#5f904f] transition-all duration-200 ${dotIndex === activeDot ? 'carousel-progress-is-current border-green bg-[#77bb61]' : ''
+                    }`}
+                  aria-label={formatDotAria(dotIndex)}
+                />
+              ))}
             </div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                {baseCards.map((_, dotIndex) => (
-                  <button
-                    key={dotIndex}
-                    type="button"
-                    onClick={() => handleDot(dotIndex)}
-                    className={`h-6 w-6 flex justify-center items-center rounded-full bg-[#77bb61] border-2 border-[#5f904f] transition-all duration-200 ${dotIndex === activeDot ? 'carousel-progress-is-current border-green bg-[#77bb61]' : ''
-                      }`}
-                    aria-label={formatDotAria(dotIndex)}
-                  />
-                ))}
-              </div>
-              <div className="flex items-center">
-                <button
-                  onClick={handlePrev}
-                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#53923F] text-white transition-all duration-200 hover:bg-[#437633] disabled:cursor-not-allowed"
-                  aria-label={clients.previousAria}
-                >
-                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"></path>
-                  </svg>
+            <div className="flex items-center">
+              <button
+                onClick={handlePrev}
+                className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#53923F] text-white transition-all duration-200 hover:bg-[#437633] disabled:cursor-not-allowed"
+                aria-label={clients.previousAria}
+              >
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"></path>
+                </svg>
 
-                </button>
+              </button>
 
-                <button
-                  onClick={handleNext}
-                  className="ms-4 flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#53923F] text-white transition-all duration-200 hover:bg-[#437633] disabled:opacity-30 disabled:cursor-not-allowed"
-                  aria-label={clients.nextAria}
-                >
-                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
+              <button
+                onClick={handleNext}
+                className="ms-4 flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#53923F] text-white transition-all duration-200 hover:bg-[#437633] disabled:opacity-30 disabled:cursor-not-allowed"
+                aria-label={clients.nextAria}
+              >
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
