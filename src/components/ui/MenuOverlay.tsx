@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
-import KayonLogo from './KayonLogo';
+import KayonLogo from '@/components/ui/KayonLogo';
 import { useContent } from '@/hooks/useContent';
-import { useLanguage, SUPPORTED_LANGUAGES, LANGUAGE_LABELS } from './LanguageProvider';
+import { useLanguage, SUPPORTED_LANGUAGES, LANGUAGE_LABELS } from '@/components/LanguageProvider';
 
 interface MenuOverlayProps {
   open: boolean;

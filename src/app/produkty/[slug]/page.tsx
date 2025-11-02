@@ -1,10 +1,10 @@
 ﻿import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import Navigation from '@/components/ui/Navigation';
+import Footer from '@/components/sections/Footer';
 import ProductCategoryPage from '@/components/ProductCategoryPage';
 import ProductDetailPage from '@/components/ProductDetailPage';
-import ProductsSection from '@/components/ProductsSection';
+import ProductsSection from '@/components/sections/ProductsSection';
 import { CONTENT } from '@/translations/content';
 
 const PRODUCT_SLUGS = Object.keys(CONTENT.pl.productDetails).filter((slug) => slug !== 'ploumeter-rc12');

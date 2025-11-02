@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
-import ButtonSimple from './ui/ButtonSimple';
+import ButtonSimple from '@/components/ui/ButtonSimple';
 
 const FeaturesSection = () => {
   const [activeFeature, setActiveFeature] = useState<number | null>(null);

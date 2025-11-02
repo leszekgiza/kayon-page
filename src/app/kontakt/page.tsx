@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import KayonLogo from '@/components/KayonLogo';
+import Navigation from '@/components/ui/Navigation';
+import Footer from '@/components/sections/Footer';
+import KayonLogo from '@/components/ui/KayonLogo';
 import { useContent } from '@/hooks/useContent';
 
 export default function KontaktPage() {

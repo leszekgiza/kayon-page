@@ -3,9 +3,9 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import KayonLogo from './KayonLogo';
+import KayonLogo from '@/components/ui/KayonLogo';
 import { useContent } from '@/hooks/useContent';
-import ButtonSimple from './ui/ButtonSimple';
+import ButtonSimple from '@/components/ui/ButtonSimple';
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

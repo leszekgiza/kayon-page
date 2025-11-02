@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import KayonMark from '../KayonMark';
+import KayonMark from '../ui/KayonMark';
 
 const ReferenceNavigation = () => {
   return (

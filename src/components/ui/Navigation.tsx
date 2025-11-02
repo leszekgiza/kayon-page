@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import KayonMark from './KayonMark';
-import MenuOverlay from './MenuOverlay';
+import KayonMark from '@/components/ui/KayonMark';
+import MenuOverlay from '@/components/ui/MenuOverlay';
 import { useContent } from '@/hooks/useContent';
 
 interface NavigationProps {

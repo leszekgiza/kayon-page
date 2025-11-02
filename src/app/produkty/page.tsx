@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import Footer from '@/components/sections/Footer';
 import ProductListingPage from '@/components/ProductListingPage';
 
 export const metadata: Metadata = {

@@ -4,8 +4,8 @@ import { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
-import SectionLabel from './ui/SectionLabel';
-import SectionDescription from './ui/SectionDescription';
+import SectionLabel from '@/components/ui/SectionLabel';
+import SectionDescription from '@/components/ui/SectionDescription';
 
 const GreenSection = () => {
   const { clients } = useContent();

@@ -1,12 +1,12 @@
-import Navigation from '@/components/Navigation';
-import HeroSection from '@/components/HeroSection';
-import FeaturesSection from '@/components/FeaturesSection';
-import GreenSection from '@/components/GreenSection';
-import BenefitsSection from '@/components/BenefitsSection';
-import OfferSection from '@/components/OfferSection';
-import SystemsSection from '@/components/SystemsSection';
-import ProductsSection from '@/components/ProductsSection';
-import Footer from '@/components/Footer';
+import Navigation from '@/components/ui/Navigation';
+import HeroSection from '@/components/sections/HeroSection';
+import FeaturesSection from '@/components/sections/FeaturesSection';
+import GreenSection from '@/components/sections/GreenSection';
+import BenefitsSection from '@/components/sections/BenefitsSection';
+import OfferSection from '@/components/sections/OfferSection';
+import SystemsSection from '@/components/sections/SystemsSection';
+import ProductsSection from '@/components/sections/ProductsSection';
+import Footer from '@/components/sections/Footer';
 
 export default function Home() {
   return (

@@ -3,8 +3,8 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import KayonLogo from '@/components/KayonLogo';
+import Footer from '@/components/sections/Footer';
+import KayonLogo from '@/components/ui/KayonLogo';
 import ProductsSection from '@/components/ProductsSection';
 import { useContent } from '@/hooks/useContent';
 

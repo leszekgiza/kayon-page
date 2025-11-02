@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import KayonLogo from '../KayonLogo';
+import KayonLogo from '../ui/KayonLogo';
 
 const ReferenceHero = () => {
   return (
@@ -20,7 +20,7 @@ const ReferenceHero = () => {
 
       {/* Decorative elements */}
       <div className="pointer-events-none absolute left-1/2 top-32 h-[626px] w-[1799px] -translate-x-1/2 rounded-[313px] border border-white/25" />
-      
+
       <div className="pointer-events-none absolute z-10" style={{ left: '335px', top: '-49px', width: '1250px', height: '1041.295px' }}>
         <Image
           src="/aim-target.svg"

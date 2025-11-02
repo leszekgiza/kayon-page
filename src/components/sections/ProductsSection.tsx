@@ -5,9 +5,9 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
-import SectionLabel from './ui/SectionLabel';
+import SectionLabel from '@/components/ui/SectionLabel';
 import './ProductsSection.css'
-import SectionDescription from './ui/SectionDescription';
+import SectionDescription from '@/components/ui/SectionDescription';
 
 const ProductsSection = () => {
   const { products } = useContent();

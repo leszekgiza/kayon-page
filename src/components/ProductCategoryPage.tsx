@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
-import KayonLogo from './KayonLogo';
+import KayonLogo from '@/components/ui/KayonLogo';
 
 interface ProductCategoryPageProps {
   slug: string;

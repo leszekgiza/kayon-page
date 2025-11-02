@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
-import SectionLabel from './ui/SectionLabel';
+import SectionLabel from '../ui/SectionLabel';
 import parse from 'html-react-parser';
 
 const SystemsSection = () => {
