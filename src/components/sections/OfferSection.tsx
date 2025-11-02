@@ -12,7 +12,7 @@ const OfferSection = () => {
   return (
     <section id="oferta" className="bg-[#2cbceb] text-white">
       <div className="mx-auto px-8 md:px-0 py-12 md:py-24 max-w-[1660px] lg:min-h-[800px] flex flex-col md:flex-row justify-between gap-8 md:gap-28">
-        <div className="max-w-[510px] flex flex-col gap-8 md:gap-y-16 text-primary">
+        <div className="max-w-[600px] flex flex-col gap-8 md:gap-y-16 text-primary">
           <SectionLabel label={offer.label} bgClass="bg-[#96def6]" />
           <h2 className="text-3xl leading-[1.3] md:text-[40px]">{parse(offer.heading)}</h2>
           <SectionDescription text={offer.description} textColorClass="text-[#1D1D1B]" />
