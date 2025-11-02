@@ -35,9 +35,9 @@ const FeaturesSection = () => {
   return (
     <>
       {/* 02 DLACZEGO - Figma: 1920x500px, 3 cards without gaps */}
-      <section id="dla-kogo" className="relative h-auto w-full bg-[#eaeaea] shadow-[0px_40px_40px_0px_rgba(0,0,0,0.02)] md:h-[500px]">
-        {/* Frame20 - flex container for 3 cards - NO GAPS */}
-        <div className="flex w-full flex-col items-stretch leading-[0] md:flex-row">
+      <section id="dla-kogo" className="bg-gradient-to-r from-[#d9d9d9] via-[#cbcbcb] to-[#bcbcbc]">
+
+        <div className="mx-auto max-w-[1660px] md:h-[500px] flex flex-col md:flex-row">
           {featureCards.map((feature, index) => {
             // Figma colors for each card background
             const bgColors = ['bg-[#d9d9d9]', 'bg-[#cbcbcb]', 'bg-[#bcbcbc]'];
@@ -45,29 +45,26 @@ const FeaturesSection = () => {
             return (
               <motion.div
                 key={feature.title}
-                className={`relative w-full flex-shrink-0 md:flex-1 ${bgColors[index]}`}
+                className={`md:w-1/3 md:p-20 flex flex-col items-start justify-between ${bgColors[index]}`}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
                 {/* Content - Desktop: moved 55px up total, ml-[100px] mt-[45px], Mobile: padding */}
-                <div className="box-border flex h-[400px] flex-col items-start justify-between p-8 md:ml-[100px] md:mt-[45px] md:h-[500px] md:w-auto md:pb-[155px] md:pr-0 md:pt-[45px]">
-                  {/* Icon - Desktop: 57px, Mobile: 48px */}
-                  <div className="relative flex size-[48px] shrink-0 items-center justify-center rounded-[30px] bg-[#747171] content-stretch md:size-[57px]">
-                    <span className="material-symbols-rounded relative shrink-0 text-[20px] leading-none text-white md:text-[24px]">
-                      check
-                    </span>
-                  </div>
-
-                  {/* Title - Desktop: w-[364px] text-[32px], Mobile: responsive */}
-                  <p className="relative shrink-0 w-full font-['Montserrat'] text-[24px] font-bold leading-[1.2] text-[#1d1d1b] md:max-w-[280px] md:text-[32px]">
-                    {parse(feature.title)}
-                  </p>
-
-                  <ButtonSimple text={features.readMoreLabel} callbackFunction={() => setActiveFeature(index)} bgClass="bg-[#1d1d1b]" />
-
+                {/* Icon - Desktop: 57px, Mobile: 48px */}
+                <div className="md:min-w-1/3 flex size-[48px] shrink-0 items-center justify-center rounded-[30px] bg-[#747171] content-stretch md:size-[57px]">
+                  <span className="material-symbols-rounded relative shrink-0 text-[20px] leading-none text-white md:text-[24px]">
+                    check
+                  </span>
                 </div>
+
+                {/* Title - Desktop: w-[364px] text-[32px], Mobile: responsive */}
+                <p className="shrink-0 w-full text-[24px] font-bold leading-[1.2] text-[#1d1d1b] md:max-w-[280px] md:text-[32px]">
+                  {parse(feature.title)}
+                </p>
+
+                <ButtonSimple text={features.readMoreLabel} callbackFunction={() => setActiveFeature(index)} bgClass="bg-[#1d1d1b]" />
               </motion.div>
             );
           })}
