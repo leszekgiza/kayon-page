@@ -40,7 +40,7 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
           <button
             id='fullscreen-menu-close-button'
             type="button"
-            className="fixed top-[60px] right-[60px] z-50 flex h-[57px] w-[57px] items-center justify-center rounded-[30px] bg-[#1d1d1b] text-white transition-colors hover:bg-[#2d2d2b]"
+            className="fixed top-[10px] right-4 md:top-[60px] md:right-[60px] z-50 flex h-[57px] w-[57px] items-center justify-center rounded-[30px] bg-[#1d1d1b] text-white transition-colors hover:bg-[#2d2d2b]"
             onClick={onClose}
             aria-label={menuOverlay.closeAria}
           >
@@ -49,7 +49,7 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
 
           <motion.div
             id='fullscreen-menu-cols'
-            className="md:pt-28 w-screen flex flex-col md:flex-row gap-16 justify-between items-center"
+            className="md:pt-28 w-screen flex flex-col md:flex-row gap-16 justify-center md:justify-between items-center"
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 24 }}
@@ -57,20 +57,20 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
           >
             <div
               id='fullscreen-menu-left-col'
-              className="md:py-16 2xl:py-24 md:px-[5vw] 2xl:pe-52 w-1/2 max-w-[700px] md:h-[400px] relative flex flex-col items-center justify-center border-y-2 border-e-2 border-[#747171] rounded-r-full">
-              <KayonLogo className="h-[76px] w-auto max-w-[457px]" />
+              className="py-8 md:py-16 2xl:py-24 md:px-[5vw] 2xl:pe-52 w-full md:w-1/2 max-w-[700px] md:h-[400px] relative flex flex-col items-center justify-center border-y-2 border-e-2 border-[#747171] rounded-r-full">
+              <KayonLogo className="h-10 md:h-[76px] w-auto max-w-[457px]" />
             </div>
 
             <div
               id='fullscreen-menu-right-col'
-              className="px-[5vw] 2xl:pe-52 w-[50%] lg:flex flex-col gap-[60px]">
+              className="px-[5vw] 2xl:pe-52 md:w-[50%] lg:flex flex-col gap-[60px]">
               <nav className="space-y-[40px] lg:space-y-[60px]">
                 {menuOverlay.items.map((item) => (
                   <Link
                     key={item.href}
                     href={resolveHref(item.href)}
                     onClick={onClose}
-                    className="group flex items-center gap-10 text-[3vw] 2xl:text-5xl font-bold leading-[1.2]"
+                    className="group flex items-center gap-10 text-lg md:text-[3vw] 2xl:text-5xl font-bold leading-[1.2]"
                   >
                     <div className="flex h-[13px] w-[47px] items-center justify-center flex-shrink-0">
                       <div className="rotate-90 scale-y-[-1]">
@@ -89,13 +89,13 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
                 ))}
               </nav>
 
-              <div className="flex items-center gap-[10px]">
+              <div className="my-8 md:my-0 flex items-center gap-[10px]">
                 {SUPPORTED_LANGUAGES.map((lang) => (
                   <button
                     key={lang}
                     type="button"
                     onClick={() => setLanguage(lang)}
-                    className="flex items-center justify-center rounded-[30px] bg-[#1d1d1b] px-[30px] py-5 text-base font-bold leading-none transition-colors hover:bg-[#2d2d2b]"
+                    className="px-[30px] py-5 flex items-center justify-center rounded-[30px] bg-[#1d1d1b] text-base font-bold leading-none transition-colors hover:bg-[#2d2d2b]"
                     aria-label={`Switch to ${LANGUAGE_LABELS[lang]}`}
                   >
                     {LANGUAGE_LABELS[lang]}
@@ -108,7 +108,7 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
               <Link
                 href={resolveHref(menuOverlay.cta.href)}
                 onClick={onClose}
-                className="flex w-[338px] items-center justify-center rounded-full bg-[#2cbceb] px-[30px] py-5 text-2xl font-bold leading-[1.2] text-white transition-colors hover:bg-[#2cbceb]/80"
+                className="mt-8 md:mt-0 block text-center rounded-full bg-[#2cbceb] md:px-[30px] py-4 md:py-5 text-xl md:text-2xl font-bold leading-[1.2] text-white transition-colors hover:bg-[#2cbceb]/80"
               >
                 {menuOverlay.cta.label}
               </Link>
