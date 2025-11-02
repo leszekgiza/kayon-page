@@ -395,14 +395,14 @@ const pl: ContentStructure = {
     listTitle: 'Co to<br />oznacza<br />w praktyce?',
     items: [
       {
-        title: 'Opłaty wyłącznie za realne zużycie',
+        title: 'Opłaty wyłącznie<br />za realne zużycie',
         detail: [
           'Dokładne i stabilne pomiary eliminują szacowanie i niedoszacowania.',
           'To przejrzyste, sprawiedliwe rozliczenia, które budują zaufanie i długoterminową współpracę.',
         ],
       },
       {
-        title: 'Brak przestojów i awarii',
+        title: 'Brak przestojów<br />i awarii',
         detail: [
           'Urządzenia działają do 15 lat na jednej baterii.',
           'Dzięki temu użytkownicy — od instalatora po administratora — mogą skupić się na zarządzaniu, a nie na naprawianiu.',
@@ -423,7 +423,7 @@ const pl: ContentStructure = {
         ],
       },
       {
-        title: 'Pełna kompatybilność i elastyczność',
+        title: 'Pełna kompatybilność<br />i elastyczność',
         detail: [
           'Nasze urządzenia obsługują najpopularniejsze protokoły (MBus, WMBus, LoRaWAN, NB-IoT, LTE, Bluetooth).',
         ],
@@ -434,9 +434,9 @@ const pl: ContentStructure = {
   },
   offer: {
     label: 'Co oferujemy?',
-    heading: 'Łączymy nowoczesne produkty z systemowym podejściem',
+    heading: 'Łączymy nowoczesne<br />produkty z systemowym<br />podejściem',
     description:
-      'Usprawniamy codzienne funkcjonowanie i gwarantujemy satysfakcję wszystkim użytkownikom systemu.',
+      'Usprawniamy codzienne funkcjonowanie<br />i gwarantujemy satysfakcję wszystkim użytkownikom systemu.',
     cards: [
       {
         title: 'Produkty zaprojektowane<br />z myślą o użytkowniku',
