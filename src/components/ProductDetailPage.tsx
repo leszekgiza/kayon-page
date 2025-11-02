@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useContent } from '@/hooks/useContent';
+import parse from 'html-react-parser';
 
 interface ProductDetailPageProps {
   slug: string;
@@ -41,7 +42,7 @@ const ProductDetailPage = ({ slug }: ProductDetailPageProps) => {
         </div>
 
         <div className="space-y-6">
-          <h1 className="text-3xl font-bold text-primary md:text-[44px]">{detail.title}</h1>
+          <h1 className="text-3xl font-bold text-primary md:text-[44px]">{parse(detail.title)}</h1>
           <p className="text-lg leading-relaxed text-primary-lighter md:text-xl">{detail.intro}</p>
           {detail.description.map((paragraph) => (
             <p key={paragraph} className="text-base leading-relaxed text-primary-lighter md:text-lg">
