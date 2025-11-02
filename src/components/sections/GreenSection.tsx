@@ -131,7 +131,7 @@ const GreenSection = () => {
               ))}
             </motion.div>
           </div>
-          <div className="pe-[122px] flex items-center justify-between">
+          <div className="md:pe-[122px] md:max-w-[calc(952px - 128px)] flex items-center justify-between">
             <div className="flex items-center gap-2">
               {baseCards.map((_, dotIndex) => (
                 <button
