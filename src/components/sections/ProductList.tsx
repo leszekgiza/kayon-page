@@ -8,11 +8,11 @@ import { useContent } from '@/hooks/useContent';
 import HeroSimple from '@/components/sections/HeroSimple';
 import parse from 'html-react-parser';
 
-interface ProductCategoryPageProps {
+interface ProductListProps {
   slug: string;
 }
 
-const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
+const ProductList = ({ slug }: ProductListProps) => {
   const { productCategories, productDetails } = useContent();
   const category = productCategories?.find((item) => item.slug === slug);
   const [expandedProduct, setExpandedProduct] = useState<string | null>(null);
@@ -195,4 +195,4 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
   );
 };
 
-export default ProductCategoryPage;
+export default ProductList;

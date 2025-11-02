@@ -2,7 +2,7 @@
 import { notFound } from 'next/navigation';
 import Navigation from '@/components/ui/Navigation';
 import Footer from '@/components/sections/Footer';
-import ProductCategoryPage from '@/components/ProductCategoryPage';
+import ProductList from '@/components/sections/ProductList';
 import ProductDetailPage from '@/components/ProductDetailPage';
 import ProductsSection from '@/components/sections/ProductsSection';
 import { CONTENT } from '@/translations/content';
@@ -48,7 +48,7 @@ const ProductDetailRoute = async ({ params }: { params: Promise<ProductDetailPar
     <>
       <Navigation showCenterLinks={false} isHomePage />
       <main>
-        <ProductCategoryPage slug={slug} />
+        <ProductList slug={slug} />
         <ProductsSection />
       </main>
       <Footer />
