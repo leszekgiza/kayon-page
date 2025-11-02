@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import HeroSimple from '@/components/sections/HeroSimple';
+import parse from 'html-react-parser';
 
 interface ProductCategoryPageProps {
   slug: string;
@@ -123,12 +124,11 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
 
             // Default layout for other categories
             return (
-              <article key={detail.slug} className="grid gap-8 lg:grid-cols-[280px_1fr_auto] lg:gap-12">
+              <article key={detail.slug} className="pb-16 last:pb-0 grid gap-8 lg:grid-cols-[280px_1fr_auto] lg:gap-12 border-b-2 last:border-none">
                 {/* Left Column - Product Name and Buttons */}
-                <div className="space-y-6">
+                <div className="flex flex-col justify-between">
                   <div>
-                    <h2 className="text-3xl font-bold text-primary md:text-4xl">{detail.title}</h2>
-                    <p className="mt-2 text-base text-primary-lighter">{detail.intro}</p>
+                    <h2 className="text-3xl md:text-4xl font-bold text-primary">{parse(detail.title)}</h2>
                   </div>
 
                   <div className="flex flex-col gap-3">
@@ -162,12 +162,16 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
                 </div>
 
                 {/* Center Column - Description Card */}
-                <div className="rounded-[32px] bg-neutral-gray-light/30 px-8 py-8 md:px-10 md:py-10">
-                  <h3 className="text-base font-semibold text-primary md:text-lg">{detail.featuresHeading}</h3>
-                  <ul className="mt-5 space-y-3 text-sm text-primary-lighter md:text-base">
+                <div className="rounded-[30px] border-2 border-[#EAEAEA] text-primary px-8 py-8 md:px-10 md:py-10">
+                  {/* <h3 className="text-base text-primary md:text-lg">{parse(detail.featuresHeading)}</h3> */}
+                  <p className="mt-2 text-xl font-bold">{parse(detail.intro)}</p>
+                  <ul className="mt-5 space-y-3 text-sm md:text-base">
                     {visibleFeatures.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <span className="mt-1 inline-flex h-2 w-2 flex-none rounded-full bg-primary" />
+                        <span className="material-symbols-rounded mt-0.5 text-[20px] leading-none text-[#77bb61]">
+                          arrow_right
+                        </span>
+                        {/* <span className="mt-1 inline-flex h-2 w-2 flex-none rounded-full bg-primary" /> */}
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -185,7 +189,7 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
 
                 {/* Right Column - Product Image */}
                 {detail.image && (
-                  <div className="relative h-[280px] w-full overflow-hidden rounded-[28px] bg-neutral-gray-light/30 lg:h-auto lg:w-[320px]">
+                  <div className="relative h-[280px] w-full overflow-hidden rounded-[28px] lg:h-auto lg:w-[320px]">
                     <Image
                       src={detail.image.src}
                       alt={detail.image.alt}

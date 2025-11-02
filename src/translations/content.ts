@@ -676,7 +676,7 @@ const pl: ContentStructure = {
     'modularis-one': {
       slug: 'modularis-one',
       heading: 'Opis poszczególnych modułów komunikacyjnych',
-      title: 'Modularis ONE',
+      title: 'Modularis<br /><span className="font-medium">ONE</span>',
       intro:
         'Kompaktowy moduł radiowy 868 MHz przeznaczony do wodomierzy Modularis, umożliwiający odczyt i zdalną konfigurację w systemach walk-by oraz AMR.',
       image: {
@@ -703,7 +703,7 @@ const pl: ContentStructure = {
     'wmbus-smart-plus': {
       slug: 'wmbus-smart-plus',
       heading: 'Opis poszczególnych modułów komunikacyjnych',
-      title: 'WMBus Smart+',
+      title: 'WMBus<br /><span className="font-medium">Smart+</span>',
       intro:
         'WMBus Smart+ to kompaktowy moduł radiowy w standardzie Wireless M-Bus 868 MHz, przeznaczony do wodomierzy serii Smart+ i Smart C+ firmy Apator Powogaz. Umożliwia szybki, niezawodny zdalny odczyt. Oferuje zaawansowane funkcji monitoringu nieprawidłowości, takich jak: cofka, wyciek, manipulacja magnetyczna czy niski poziom baterii.',
       image: {
@@ -732,7 +732,7 @@ const pl: ContentStructure = {
     'mbus-smart-plus': {
       slug: 'mbus-smart-plus',
       heading: 'Opis poszczególnych modułów komunikacyjnych',
-      title: 'MBus Smart+',
+      title: 'MBus<br /><span className="font-medium">Smart+</span>',
       intro:
         'Modułprzewodowy M-Bus umożliwiający pełną integrację liczników Smart+ z sieciami automatyki budynkowej i systemami BMS.',
       image: {
@@ -758,7 +758,7 @@ const pl: ContentStructure = {
     'wmbus-microclima': {
       slug: 'wmbus-microclima',
       heading: 'Opis poszczególnych modułów komunikacyjnych',
-      title: 'wMBus MicroClima',
+      title: 'wMBus<br /><span className="font-medium">MicroClima</span>',
       intro:
         'Nakładka radiowa dla cieplomierzy MicroClima, dedykowana do zastosowań mieszkaniowych z częstymi odczytami zdalnymi.',
       image: {
@@ -784,7 +784,7 @@ const pl: ContentStructure = {
     'wmbus-rc12': {
       slug: 'wmbus-rc12',
       heading: 'Opis poszczególnych modułów komunikacyjnych',
-      title: 'wMBus RC12',
+      title: 'wMBus<br /><span className="font-medium">RC12</span>',
       intro:
         'Modułkomunikacyjny dla cieplomierzy RC12, przygotowany do pracy w sieciach walk-by oraz instalacjach stacjonarnych.',
       image: {
@@ -940,7 +940,7 @@ const pl: ContentStructure = {
     'engelmann-senso-star-e': {
       slug: 'engelmann-senso-star-e',
       heading: 'Opis poszczególnych cieplomierzy',
-      title: 'Engelmann Senso Star E',
+      title: 'Engelmann<br /><span className="font-medium">Senso Star E</span>',
       intro:
         'Cieplomierz Engelmann Senso Star E to precyzyjne i trwałe urządzenie do pomiaru zużycia ciepła w układach zamkniętych, zapewniające niezawodność i dokładność zgodną z norma EN 1434.',
       image: {
@@ -965,7 +965,7 @@ const pl: ContentStructure = {
     'maddalena-microclima-evo': {
       slug: 'maddalena-microclima-evo',
       heading: 'Opis poszczególnych cieplomierzy',
-      title: 'Maddalena MicroClima Evo',
+      title: 'Maddalena<br /><span className="font-medium">MicroClima Evo</span>',
       intro:
         'Maddalena MicroClima Evo to nowoczesny, kompaktowy cieplomierz przeznaczony do precyzyjnego pomiaru zużycia ciepła w systemach grzewczych, szczególnie w budownictwie mieszkaniowym. Zapewnia trwałość i wysoką dokładność.',
       image: {
@@ -990,7 +990,7 @@ const pl: ContentStructure = {
     'ploumeter-rc12': {
       slug: 'ploumeter-rc12',
       heading: 'Opis poszczególnych cieplomierzy',
-      title: 'Ploumeter RC12',
+      title: 'Ploumeter<br /><span className="font-medium">RC12</span>',
       intro:
         'Ciepłomierz RC12 Ploumeter to precyzyjne i niezawodne urządzenie pomiarówe do zastosowań w instalacjach grzewczych, znane z solidnej konstrukcji i precyzji pomiaru. Idealny do systemów wymagających nowoczesnych rozwiązań komunikacyjnych.',
       image: {
@@ -1043,7 +1043,7 @@ const pl: ContentStructure = {
     'eclipse-wmbus-gateway': {
       slug: 'eclipse-wmbus-gateway',
       heading: 'Opis poszczególnych elementów infrastruktury',
-      title: 'ECLIPSE WM-Bus Gateway',
+      title: 'ECLIPSE<br /><span className="font-medium">WM-Bus Gateway</span>',
       intro:
         'Bateryjny koncentrator danych do zbierania informacji z liczników wody, ciepła, gazu i energii. Zasilany bateria o żywotności do 11 lat, umożliwia szybkie wdrożenie i minimalne koszty instalacji w dowolnej lokalizacji.',
       image: {
@@ -1072,7 +1072,7 @@ const pl: ContentStructure = {
     'eclipse-wmbus-repeater': {
       slug: 'eclipse-wmbus-repeater',
       heading: 'Opis poszczególnych elementów infrastruktury',
-      title: 'ECLIPSE WM-Bus Repeater',
+      title: 'ECLIPSE<br /><span className="font-medium">WM-Bus Repeater</span>',
       intro:
         'Bateryjne urządzenie wzmacniające sygnał w systemach Wireless M-Bus, zapewniające nieprzerwaną pracę przez 11 lat. Idealne do rozległych sieci pomiarówych, gdzie liczy sięprostota montażu i minimalne koszty obsługi.',
       image: {
@@ -1700,7 +1700,7 @@ const en: ContentStructure = {
     'modularis-one': {
       slug: 'modularis-one',
       heading: 'Communication module portfolio',
-      title: 'Modularis ONE',
+      title: 'Modularis<br /><span className="font-medium">ONE</span>',
       intro:
         'Compact 868 MHz radio module for Modularis water meters, enabling remote reading and configuration in both walk-by and AMR deployments.',
       image: {
@@ -1967,7 +1967,7 @@ const en: ContentStructure = {
     'engelmann-senso-star-e': {
       slug: 'engelmann-senso-star-e',
       heading: 'Heat meter portfolio',
-      title: 'Engelmann Senso Star E',
+      title: 'Engelmann<br /><span className="font-medium">Senso Star E</span>',
       intro:
         'The Engelmann Senso Star E heat meter is a precise and durable device for measuring heat consumption in closed systems, ensuring reliability and accuracy in accordance with EN 1434 standard.',
       image: {
@@ -1992,7 +1992,7 @@ const en: ContentStructure = {
     'maddalena-microclima-evo': {
       slug: 'maddalena-microclima-evo',
       heading: 'Heat meter portfolio',
-      title: 'Maddalena MicroClima Evo',
+      title: 'Maddalena<br /><span className="font-medium">MicroClima Evo</span>',
       intro:
         'Maddalena MicroClima Evo is a modern, compact heat meter designed for precise measurement of heat consumption in heating systems, particularly in residential buildings. It ensures durability and high accuracy.',
       image: {
@@ -2017,7 +2017,7 @@ const en: ContentStructure = {
     'ploumeter-rc12': {
       slug: 'ploumeter-rc12',
       heading: 'Heat meter portfolio',
-      title: 'Ploumeter RC12',
+      title: 'Ploumeter<br /><span className="font-medium">RC12</span>',
       intro:
         'The RC12 Ploumeter heat meter is a precise and reliable measuring device for heating system applications, known for its solid construction and measurement accuracy. Ideal for systems requiring modern communication solutions.',
       image: {
@@ -2703,7 +2703,7 @@ const de: ContentStructure = {
     'modularis-one': {
       slug: 'modularis-one',
       heading: 'Kommunikationsmodule im Ueberblick',
-      title: 'Modularis ONE',
+      title: 'Modularis<br /><span className="font-medium">ONE</span>',
       intro:
         'Kompaktes 868-MHz-Funkmodułfür Modularis-Wasserzaehler, das Fernauslesung und Konfiguration in Walk-by- und AMR-Installationen ermoeglicht.',
       image: {
@@ -2970,7 +2970,7 @@ const de: ContentStructure = {
     'engelmann-senso-star-e': {
       slug: 'engelmann-senso-star-e',
       heading: 'Warmezaehler im Ueberblick',
-      title: 'Engelmann Senso Star E',
+      title: 'Engelmann<br /><span className="font-medium">Senso Star E</span>',
       intro:
         'Der Wärmezaehler Engelmann Senso Star E ist ein präzises und langlebiges Geraet zur Messung des Wärmeverbrauchs in geschlossenen Systemen und gewährleistet Zuverlaessigkeit und Genauigkeit gemaess der Norm EN 1434.',
       image: {
@@ -2995,7 +2995,7 @@ const de: ContentStructure = {
     'maddalena-microclima-evo': {
       slug: 'maddalena-microclima-evo',
       heading: 'Warmezaehler im Ueberblick',
-      title: 'Maddalena MicroClima Evo',
+      title: 'Maddalena<br /><span className="font-medium">MicroClima Evo</span>',
       intro:
         'Maddalena MicroClima Evo ist ein moderner, kompakter Wärmezaehler für die präzise Messung des Wärmeverbrauchs in Heizsystemen, insbesondere im Wohnungsbau. Er gewährleistet Langlebigkeit und hohe Genauigkeit.',
       image: {
@@ -3020,7 +3020,7 @@ const de: ContentStructure = {
     'ploumeter-rc12': {
       slug: 'ploumeter-rc12',
       heading: 'Warmezaehler im Ueberblick',
-      title: 'Ploumeter RC12',
+      title: 'Ploumeter<br /><span className="font-medium">RC12</span>',
       intro:
         'Der Wärmezaehler RC12 Ploumeter ist ein präzises und zuverlässiges Messgeraet für den Einsatz in Heizungsanlagen, bekannt für seine solide Konstruktion und Messgenauigkeit. Ideal für Systeme, die moderne Kommunikationsloesungen erfordern.',
       image: {
