@@ -42,168 +42,93 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
       <HeroSimple title={category.title} desc={category.description} />
 
       {/* Products Section */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="container-custom space-y-16 md:space-y-20">
-          {items.map((detail, index) => {
-            const hasDownloads = detail.downloads && detail.downloads.length > 0;
-            const visibleFeatures = detail.features.slice(0, 3);
-            const hasMoreFeatures = detail.features.length > 3;
-            const docLink = extractDocLink(detail.description);
-            const firstDescription = detail.description?.[0];
+      <section className="mx-auto px-8 md:px-0 py-12 md:py-24 max-w-[1440px]">
+        {/* <div className="container-custom space-y-16 md:space-y-20"> */}
+        {items.map((detail, index) => {
+          const hasDownloads = detail.downloads && detail.downloads.length > 0;
+          const visibleFeatures = detail.features.slice(0, 3);
+          const hasMoreFeatures = detail.features.length > 3;
 
-            // Water meters special layout
-            // if (isWaterMetersCategory) {
-            //   return (
-            //     <div key={detail.slug}>
-            //       <article className="grid gap-8 lg:grid-cols-[280px_1fr_auto] lg:gap-12">
-            //         {/* Left Column - Product Name and Download Button */}
-            //         <div className="flex flex-col justify-between space-y-6">
-            //           <div>
-            //             <h2 className="text-3xl font-normal text-primary md:text-4xl">{detail.title}</h2>
-            //           </div>
+          // Default layout for other categories
+          return (
+            <article key={detail.slug} className="py-16 last:pb-0 flex justify-between lg:gap-12 border-b-2 last:border-none">
 
-            //           {docLink && (
-            //             <div className="flex flex-col gap-3">
-            //               <a
-            //                 href={docLink}
-            //                 target="_blank"
-            //                 rel="noopener noreferrer"
-            //                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#BCB7B7] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#9E9E9E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BCB7B7]"
-            //               >
-            //                 {category.downloadPdfButtonLabel}
-            //               </a>
-            //             </div>
-            //           )}
-            //         </div>
+              {/* Left Column - Product Name and Buttons */}
+              <div className="md:min-w-[400px] flex flex-col justify-between">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary">{parse(detail.title)}</h2>
+                <div className="flex flex-col gap-3">
+                  {hasDownloads ? (
+                    <>
+                      {detail.downloads!.map((download) => (
+                        <a
+                          key={download.href}
+                          href={download.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 w-max text-sm font-bold bg-[#747171] text-white transition hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        >
+                          {download.label}
+                          <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.64592 4.49996L0.208415 1.06246C0.13897 0.993014 0.083415 0.92357 0.0417485 0.854126C0.0139708 0.770792 8.18968e-05 0.687458 8.18968e-05 0.604125C8.18968e-05 0.451348 0.0556374 0.312459 0.166748 0.187459C0.291748 0.0624588 0.444526 -4.1008e-05 0.625082 -4.1008e-05H7.95842C8.13897 -4.1008e-05 8.2848 0.0694032 8.39592 0.208292C8.52092 0.333292 8.58342 0.472181 8.58342 0.624959C8.58342 0.666626 8.51397 0.812459 8.37508 1.06246L4.93758 4.49996C4.85425 4.58329 4.75008 4.64579 4.62508 4.68746C4.51397 4.72913 4.40286 4.74996 4.29175 4.74996C4.18064 4.74996 4.06258 4.72913 3.93758 4.68746C3.82647 4.64579 3.72925 4.58329 3.64592 4.49996Z" fill="white" />
+                          </svg>
 
-            //         {/* Center Column - Description Card with border */}
-            //         <div className="rounded-[32px] border border-neutral-gray-light/60 bg-white px-8 py-8 md:px-10 md:py-10">
-            //           {firstDescription && (
-            //             <p className="text-sm text-primary-lighter md:text-base">{firstDescription}</p>
-            //           )}
-            //           <ul className="mt-5 space-y-3 text-sm text-primary-lighter md:text-base">
-            //             {visibleFeatures.map((feature) => (
-            //               <li key={feature} className="flex items-start gap-3">
-            //                 <span className="material-symbols-rounded mt-0.5 text-[20px] leading-none text-[#77bb61]">
-            //                   arrow_right
-            //                 </span>
-            //                 <span>{feature}</span>
-            //               </li>
-            //             ))}
-            //           </ul>
-            //           {hasMoreFeatures && (
-            //             <button
-            //               type="button"
-            //               onClick={() => setExpandedProduct(detail.slug)}
-            //               className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-            //             >
-            //               {category.moreButtonLabel}
-            //             </button>
-            //           )}
-            //         </div>
-
-            //         {/* Right Column - Product Image with white background */}
-            //         {detail.image && (
-            //           <div className="relative h-[280px] w-full overflow-hidden rounded-[28px] bg-white lg:h-auto lg:w-[320px]">
-            //             <Image
-            //               src={detail.image.src}
-            //               alt={detail.image.alt}
-            //               fill
-            //               sizes="(min-width: 1024px) 320px, 100vw"
-            //               className="object-contain p-6 lg:p-8"
-            //               priority={false}
-            //             />
-            //           </div>
-            //         )}
-            //       </article>
-            //       {/* Separator line between products */}
-            //       {index < items.length - 1 && <hr className="my-16 border-t border-neutral-gray-light/40 md:my-20" />}
-            //     </div>
-            //   );
-            // }
-
-            // Default layout for other categories
-            return (
-              <article key={detail.slug} className="pb-16 last:pb-0 grid gap-8 lg:grid-cols-[280px_1fr_auto] lg:gap-12 border-b-2 last:border-none">
-                {/* Left Column - Product Name and Buttons */}
-                <div className="flex flex-col justify-between">
-                  <div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-primary">{parse(detail.title)}</h2>
-                  </div>
-
-                  <div className="flex flex-col gap-3">
-                    {hasDownloads ? (
-                      <>
-                        {detail.downloads!.map((download) => (
-                          <a
-                            key={download.href}
-                            href={download.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 w-max text-sm font-bold bg-[#747171] text-white transition hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                          >
-                            {download.label}
-                            <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M3.64592 4.49996L0.208415 1.06246C0.13897 0.993014 0.083415 0.92357 0.0417485 0.854126C0.0139708 0.770792 8.18968e-05 0.687458 8.18968e-05 0.604125C8.18968e-05 0.451348 0.0556374 0.312459 0.166748 0.187459C0.291748 0.0624588 0.444526 -4.1008e-05 0.625082 -4.1008e-05H7.95842C8.13897 -4.1008e-05 8.2848 0.0694032 8.39592 0.208292C8.52092 0.333292 8.58342 0.472181 8.58342 0.624959C8.58342 0.666626 8.51397 0.812459 8.37508 1.06246L4.93758 4.49996C4.85425 4.58329 4.75008 4.64579 4.62508 4.68746C4.51397 4.72913 4.40286 4.74996 4.29175 4.74996C4.18064 4.74996 4.06258 4.72913 3.93758 4.68746C3.82647 4.64579 3.72925 4.58329 3.64592 4.49996Z" fill="white" />
-                            </svg>
-
-                          </a>
-                        ))}
-                      </>
-                    ) : (
-                      <Link
-                        href={`/produkty/${detail.slug}`}
-                        className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 w-max text-sm font-bold bg-[#747171] text-white transition hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                      >
-                        {category.moreButtonLabel}
-                      </Link>
-                    )}
-                  </div>
-                </div>
-
-                {/* Center Column - Description Card */}
-                <div className="rounded-[30px] border-2 border-[#EAEAEA] text-primary px-8 py-8 md:px-10 md:py-10">
-                  {/* <h3 className="text-base text-primary md:text-lg">{parse(detail.featuresHeading)}</h3> */}
-                  <p className="mt-2 text-xl font-bold">{parse(detail.intro)}</p>
-                  <ul className="mt-5 space-y-3 text-sm md:text-base">
-                    {visibleFeatures.map((feature) => (
-                      <li key={feature} className="flex items-start gap-3">
-                        <span className="material-symbols-rounded mt-0.5 text-[20px] leading-none text-[#77bb61]">
-                          arrow_right
-                        </span>
-                        {/* <span className="mt-1 inline-flex h-2 w-2 flex-none rounded-full bg-primary" /> */}
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  {hasMoreFeatures && (
-                    <button
-                      type="button"
-                      onClick={() => setExpandedProduct(detail.slug)}
-                      className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        </a>
+                      ))}
+                    </>
+                  ) : (
+                    <Link
+                      href={`/produkty/${detail.slug}`}
+                      className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 w-max text-sm font-bold bg-[#747171] text-white transition hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
                       {category.moreButtonLabel}
-                    </button>
+                    </Link>
                   )}
                 </div>
+              </div>
 
-                {/* Right Column - Product Image */}
-                {detail.image && (
-                  <div className="relative h-[280px] w-full overflow-hidden rounded-[28px] lg:h-auto lg:w-[320px]">
-                    <Image
-                      src={detail.image.src}
-                      alt={detail.image.alt}
-                      fill
-                      sizes="(min-width: 1024px) 320px, 100vw"
-                      className="object-contain p-6 lg:p-8"
-                      priority={false}
-                    />
-                  </div>
+              {/* Center Column - Description Card */}
+              <div className="md:w-[500px] rounded-[30px] border-2 border-[#EAEAEA] text-primary px-8 py-8 md:px-10 md:py-10">
+                {/* <h3 className="text-base text-primary md:text-lg">{parse(detail.featuresHeading)}</h3> */}
+                <p className="mt-2 text-xl font-bold">{parse(detail.intro)}</p>
+                <ul className="mt-5 space-y-3 text-sm md:text-base">
+                  {visibleFeatures.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3">
+                      <span className="material-symbols-rounded mt-0.5 text-[20px] leading-none text-[#77bb61]">
+                        arrow_right
+                      </span>
+                      {/* <span className="mt-1 inline-flex h-2 w-2 flex-none rounded-full bg-primary" /> */}
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                {hasMoreFeatures && (
+                  <button
+                    type="button"
+                    onClick={() => setExpandedProduct(detail.slug)}
+                    className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  >
+                    {category.moreButtonLabel}
+                  </button>
                 )}
-              </article>
-            );
-          })}
-        </div>
+              </div>
+
+              {/* Right Column - Product Image */}
+              {detail.image && (
+                <div className="relative h-auto md:w-[500px] overflow-hidden rounded-[28px]">
+                  <Image
+                    src={detail.image.src}
+                    alt={detail.image.alt}
+                    sizes="(min-width: 1024px) 320px, 100vw"
+                    className="object-contain h-auto"
+                    fill
+                    priority={false}
+                  />
+                </div>
+              )}
+            </article>
+          );
+        })}
+        {/* </div> */}
       </section>
 
       {/* Modal with full features list */}
@@ -243,11 +168,11 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
 
                 return (
                   <>
-                    <h2 className="pr-14 text-xl font-semibold text-primary md:text-2xl">{product.title}</h2>
+                    <h2 className="pr-14 text-xl font-semibold text-primary md:text-2xl">{parse(product.title)}</h2>
 
                     {/* Product intro */}
                     {product.intro && (
-                      <p className="mt-6 text-base leading-relaxed text-primary">{product.intro}</p>
+                      <p className="mt-6 text-lg leading-relaxed text-primary font-bold">{parse(product.intro)}</p>
                     )}
 
                     {/* Additional description paragraphs */}
