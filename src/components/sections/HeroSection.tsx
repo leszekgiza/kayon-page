@@ -34,7 +34,7 @@ const HeroSection = () => {
   }, [isModalOpen]);
 
   return (
-    <section className="relative h-screen max-h-[1280px] overflow-hidden flex items-center bg-black text-white">
+    <section className="relative h-screen max-h-[1280px] flex items-center bg-black text-white">
       <Image
         className="w-full max-w-[1250px] h-auto absolute z-10 top-[-40px] left-1/2 -translate-x-1/2 pointer-events-none"
         src="/top-shapes.svg"
