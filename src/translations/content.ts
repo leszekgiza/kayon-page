@@ -391,7 +391,7 @@ const pl: ContentStructure = {
     label: 'Jak działamy?',
     heading: 'Dostarczamy urządzenia<br />i serwis, które<br />minimalizują koszty',
     description:
-      'Rozwiązania Kayon są projektowane tak, by każdy uczestnik łańcucha interesariuszy — od dystrybutora, przez instalatora, po zarządcę i mieszkańca nieruchomości — zyskał realne oszczędności, zmniejszenie wydatków, mniej pracy operacyjnej i większą kontrolę.',
+      'Rozwiązania Kayon są projektowane tak,<br />by każdy uczestnik łańcucha interesariuszy —<br />od dystrybutora, przez instalatora, po zarządcę<br />i mieszkańca nieruchomości — zyskał realne<br />oszczędności, zmniejszenie wydatków, mniej<br />pracy operacyjnej i większą kontrolę.',
     listTitle: 'Co to<br />oznacza<br />w praktyce?',
     items: [
       {
