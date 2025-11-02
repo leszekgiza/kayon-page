@@ -44,37 +44,34 @@ const BenefitsSection = () => {
 
   return (
     <>
-      <section className="bg-[#f4b250] py-24 text-primary" id="jak-dzialamy">
-        <div className="px-4 md:px-0">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,575px)_minmax(0,1fr)]">
-            <div className="space-y-6 text-black md:ml-[100px] md:pl-8">
-              <SectionLabel label={benefits.label} bgClass="bg-[#fad8a8]" />
-              <h2 className="text-3xl leading-tight md:text-[40px]">{benefits.heading}</h2>
-              <SectionDescription text={benefits.description} textColorClass="text-[#1D1D1B]" />
-            </div>
-            <div>
-              <motion.div
-                className="grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-3"
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h3 className="pb-4 w-[242px] h-[242px] flex justify-center items-end text-3xl bg-[#c99446] text-black rounded-2xl">{parse(benefits.listTitle)}</h3>
-                {benefitCards.map((benefit, index) => (
-                  <div key={benefit.title} className="flex flex-col items-start gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-black">
-                      <span className="material-symbols-rounded text-2xl">
-                        {iconMap[index] || 'help'}
-                      </span>
-                    </div>
-                    <h4 className="text-base font-semibold text-black">{benefit.title}</h4>
-                    <ButtonSimple text={benefits.readMoreLabel} callbackFunction={() => setActiveBenefit(index)} bgClass="bg-[#1d1d1b]" />
-                  </div>
-                ))}
-              </motion.div>
-            </div>
+      <section id="jak-dzialamy" className="bg-[#f4b250] text-primary">
+        <div className="mx-auto px-8 md:px-0 py-12 md:py-24 max-w-[1660px] lg:min-h-[800px] flex flex-col md:flex-row justify-between gap-8 md:gap-28">
+          <div className="flex flex-col gap-8 md:gap-y-16">
+            <SectionLabel label={benefits.label} bgClass="bg-[#fad8a8]" />
+            <h2 className="text-3xl leading-tight md:text-[40px]">{parse(benefits.heading)}</h2>
+            <SectionDescription text={benefits.description} textColorClass="text-[#1D1D1B]" />
           </div>
+
+          <motion.div
+            className="md:w-[55%] flex flex-wrap justify-between md:justify-normal gap-2 md:gap-x-[80px]"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h3 className="p-4 md:pb-4 w-full md:w-[242px] md:h-[242px] md:flex justify-center items-end text-3xl bg-[#c99446] rounded-2xl">{parse(benefits.listTitle)}</h3>
+            {benefitCards.map((benefit, index) => (
+              <div key={benefit.title} className="flex-1 md:flex-initial mt-8 md:mt-0 w-[180px] md:w-[250px] md:h-[242px] flex flex-col gap-2 md:gap-0 justify-between items-start">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-black/20 text-white">
+                  <span className="material-symbols-rounded text-2xl">
+                    {iconMap[index] || 'help'}
+                  </span>
+                </div>
+                <h4 className="text-lg md:text-2xl font-bold">{benefit.title}</h4>
+                <ButtonSimple text={benefits.readMoreLabel} callbackFunction={() => setActiveBenefit(index)} bgClass="bg-[#1d1d1b]" />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
