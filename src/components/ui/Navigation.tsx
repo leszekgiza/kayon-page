@@ -52,12 +52,12 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
         )}
 
         {/* Right Icons - Figma: right: 40px, top: 40px, 3 icons with gap 20px */}
-        <div className="absolute right-[40px] top-[40px] inline-flex h-[57px] items-start justify-end gap-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)] w-[211px]">
+        <div className="absolute right-[40px] top-[40px] inline-flex h-[57px] items-start justify-end gap-[20px] w-[211px]">
           <>
             {/* KONTAKT - chat_bubble */}
             <Link
               href="/kontakt"
-              className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7] transition-colors duration-200 hover:border-white"
+              className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7] bg-[#050819]/50 transition-colors duration-200 hover:border-white"
               aria-label={navigation.actions.presentation.ariaLabel}
             >
               <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
@@ -70,7 +70,7 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
               href="https://openmetering.co/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7] transition-colors duration-200 hover:border-white"
+              className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7] bg-[#050819]/50 transition-colors duration-200 hover:border-white"
               aria-label={navigation.actions.login.ariaLabel}
             >
               <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">

@@ -304,7 +304,7 @@ const pl: ContentStructure = {
       'W świecie, w którym technologią nadaje tempo zmianom, przewagę zyskują ci, którzy dysponują nią wcześniej.',
     body:
       'Nasze systemy zdalnego odczytu wody i ciepła już dziś działają zgodnie z unijnymi regulacjami, które zaczną obowiązywać w 2027 roku.',
-    ctaLabel: 'Czytaj więcej',
+    ctaLabel: 'Więcej',
     modalTitle: '',
     modalLead:
       'Projektujemy nasze rozwiązania z myślą o wszystkich uczestnikach rynku  -  dystrybutorach, instalatorach, zarządcach nieruchomości, deweloperach, spółdzielniach, wspólnotach oraz pojedynczych lokatorach.',
