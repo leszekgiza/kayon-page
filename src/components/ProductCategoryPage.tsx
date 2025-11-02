@@ -43,7 +43,6 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
 
       {/* Products Section */}
       <section className="mx-auto px-8 md:px-0 py-12 md:py-24 max-w-[1440px]">
-        {/* <div className="container-custom space-y-16 md:space-y-20"> */}
         {items.map((detail, index) => {
           const hasDownloads = detail.downloads && detail.downloads.length > 0;
           const visibleFeatures = detail.features.slice(0, 3);
@@ -128,7 +127,6 @@ const ProductCategoryPage = ({ slug }: ProductCategoryPageProps) => {
             </article>
           );
         })}
-        {/* </div> */}
       </section>
 
       {/* Modal with full features list */}
