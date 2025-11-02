@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
+import ButtonSimple from './ui/ButtonSimple';
 
 const FeaturesSection = () => {
   const [activeFeature, setActiveFeature] = useState<number | null>(null);
@@ -64,16 +65,8 @@ const FeaturesSection = () => {
                     {parse(feature.title)}
                   </p>
 
-                  {/* Button - Desktop: px-[30px] py-[20px] text-[16px], Mobile: smaller */}
-                  <button
-                    type="button"
-                    onClick={() => setActiveFeature(index)}
-                    className="relative box-border flex shrink-0 items-center justify-center gap-[10px] rounded-[30px] bg-[#1d1d1b] px-[24px] py-[16px] content-stretch md:px-[30px] md:py-[20px]"
-                  >
-                    <p className="relative shrink-0 whitespace-pre font-['Montserrat'] text-[14px] font-bold leading-none text-white md:text-[16px]">
-                      {features.readMoreLabel}
-                    </p>
-                  </button>
+                  <ButtonSimple text={features.readMoreLabel} callbackFunction={() => setActiveFeature(index)} bgClass="bg-[#1d1d1b]" />
+
                 </div>
               </motion.div>
             );

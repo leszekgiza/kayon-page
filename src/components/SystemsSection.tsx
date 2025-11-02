@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
 import SectionLabel from './ui/SectionLabel';
+import ButtonSimple from './ui/ButtonSimple';
 
 const SystemsSection = () => {
   const { systems } = useContent();
@@ -24,15 +25,17 @@ const SystemsSection = () => {
             <h2 className="text-3xl font-semibold leading-tight text-primary md:text-[40px]">
               {systems.heading}
             </h2>
+
             <Link
               href="/systemy"
-              className="inline-flex w-max items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-light"
+              className="min-h-[51px] inline-flex w-max items-center gap-2 rounded-full bg-primary px-8 font-bold text-white transition-colors duration-200 hover:bg-primary-light"
             >
               {systems.ctaLabel}
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-6-6 6 6-6 6" />
               </svg>
             </Link>
+
           </motion.div>
           <motion.div
             className="relative z-0 aspect-[4/3] overflow-visible lg:aspect-auto lg:h-full lg:min-h-[500px]"

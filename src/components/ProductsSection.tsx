@@ -81,7 +81,7 @@ const ProductsSection = () => {
                   </div>
                   <Link
                     href={targetHref}
-                    className="absolute bottom-[20px] left-1/2 inline-flex -translate-x-1/2 items-center gap-[10px] rounded-[30px] bg-[#1D1D1B] px-[30px] py-[20px] text-base font-bold leading-none text-white transition-colors duration-200 hover:bg-[#2a2a27]"
+                    className="px-8 min-h-[51px] absolute bottom-[20px] left-1/2 inline-flex -translate-x-1/2 items-center gap-[10px] rounded-[30px] bg-[#1D1D1B] font-bold leading-none text-white transition-colors duration-200 hover:bg-[#2a2a27]"
                   >
                     {products.ctaLabel}
                   </Link>

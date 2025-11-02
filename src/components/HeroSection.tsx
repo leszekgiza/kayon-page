@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import KayonLogo from './KayonLogo';
 import { useContent } from '@/hooks/useContent';
+import ButtonSimple from './ui/ButtonSimple';
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -78,73 +79,67 @@ const HeroSection = () => {
       {/* Main Content - Figma: absolute positioning left: 1085px, top: 230px */}
       <div className="relative z-20 h-full">
         <div className="absolute left-4 top-[230px] flex flex-col items-start gap-20 md:left-[1085px]">
-            {/* Logo KAYON - Figma: 300.9x50px */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <KayonLogo className="h-[50px] w-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.4)]" />
-            </motion.div>
+          {/* Logo KAYON - Figma: 300.9x50px */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <KayonLogo className="h-[50px] w-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.4)]" />
+          </motion.div>
 
-            {/* Frame 39 - Text + CTA box, GAP 40px */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.15, duration: 0.6 }}
-              className="flex w-full flex-col gap-10"
-            >
-              {/* Headline Text - Figma: 40px, Bold (700), line-height 1.2, width 693px, left-aligned */}
-              <h1 className="w-full text-[28px] font-bold leading-[1.2] text-left text-white md:w-[693px] md:text-[40px]">
-                {hero.headline}
-              </h1>
+          {/* Frame 39 - Text + CTA box, GAP 40px */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, duration: 0.6 }}
+            className="flex w-full flex-col gap-10"
+          >
+            {/* Headline Text - Figma: 40px, Bold (700), line-height 1.2, width 693px, left-aligned */}
+            <h1 className="w-full text-[28px] font-bold leading-[1.2] text-left text-white md:w-[693px] md:text-[40px]">
+              {hero.headline}
+            </h1>
 
-              {/* Frame 2 - Box with text + CTA button (horizontal on large screens) */}
-              {/* Figma: corner radius 30px, padding 40px, gap 40px, border #484848 */}
-              <div className="flex w-full flex-col items-start gap-10 rounded-[30px] border-2 border-[#484848] bg-white/10 p-10 backdrop-blur-md lg:flex-row lg:items-center">
-                {/* Body text - Figma: 20px, Bold (700), line-height 1.2, width 437px on desktop */}
-                <p className="w-full text-base font-bold leading-[1.2] text-white md:w-[437px] md:text-[20px]">
-                  {hero.body}
-                </p>
+            {/* Frame 2 - Box with text + CTA button (horizontal on large screens) */}
+            {/* Figma: corner radius 30px, padding 40px, gap 40px, border #484848 */}
+            <div className="flex w-full flex-col items-start gap-10 rounded-[30px] border-2 border-[#484848] bg-white/10 p-10 backdrop-blur-md lg:flex-row lg:items-center">
+              {/* Body text - Figma: 20px, Bold (700), line-height 1.2, width 437px on desktop */}
+              <p className="w-full text-base font-bold leading-[1.2] text-white md:w-[437px] md:text-[20px]">
+                {hero.body}
+              </p>
 
-                {/* CTA Button - Figma: bg #1d1d1b, radius 30px, padding 20px/30px, text 16px Bold (700), leading-none */}
-                <button
-                  type="button"
-                  onClick={() => setIsModalOpen(true)}
-                  className="inline-flex shrink-0 items-center gap-[10px] rounded-[30px] bg-[#1d1d1b] px-[30px] py-[20px] text-base font-bold leading-none text-white transition-colors duration-200 hover:bg-[#2a2a27]"
-                >
-                  {hero.ctaLabel}
-                </button>
-              </div>
-            </motion.div>
+              <ButtonSimple text={hero.ctaLabel} bgClass="bg-[#1d1d1b]" callbackFunction={() => setIsModalOpen(true)} />
+
+            </div>
+          </motion.div>
         </div>
       </div>
 
-        {/* Scroll Down Icon - Figma: centered at bottom */}
-        <motion.button
-          type="button"
-          initial={{ opacity: 0, y: -16 }}
-          animate={{ opacity: 1, y: 0, transition: { delay: 0.5, duration: 0.6 } }}
-          whileHover={{ y: -8 }}
-          transition={{
-            y: {
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: 1.5,
-              ease: "easeInOut"
-            }
-          }}
-          onClick={() => {
-            const nextSection = document.querySelector('section:nth-of-type(2)');
-            nextSection?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          className="absolute bottom-[57px] left-1/2 flex h-[57px] w-[57px] -translate-x-1/2 cursor-pointer items-center justify-center rounded-[30px] bg-[#bcb7b7] transition-colors duration-300 hover:bg-[#d0d0d0]"
-          aria-label="Scroll down"
-        >
-          <span className="material-symbols-rounded text-[24px] text-white">
-            arrow_cool_down
-          </span>
-        </motion.button>
+      {/* Scroll Down Icon - Figma: centered at bottom */}
+      <motion.button
+        type="button"
+        initial={{ opacity: 0, y: -16 }}
+        animate={{ opacity: 1, y: 0, transition: { delay: 0.5, duration: 0.6 } }}
+        whileHover={{ y: -8 }}
+        transition={{
+          y: {
+            repeat: Infinity,
+            repeatType: "reverse",
+            duration: 1.5,
+            ease: "easeInOut"
+          }
+        }}
+        onClick={() => {
+          const nextSection = document.querySelector('section:nth-of-type(2)');
+          nextSection?.scrollIntoView({ behavior: 'smooth' });
+        }}
+        className="absolute bottom-[57px] left-1/2 flex h-[57px] w-[57px] -translate-x-1/2 cursor-pointer items-center justify-center rounded-[30px] bg-[#bcb7b7] transition-colors duration-300 hover:bg-[#d0d0d0]"
+        aria-label="Scroll down"
+      >
+        <span className="material-symbols-rounded text-[24px] text-white">
+          arrow_cool_down
+        </span>
+      </motion.button>
 
       <AnimatePresence initial={false}>
         {isModalOpen && (
