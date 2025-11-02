@@ -10,7 +10,7 @@ const OfferSection = () => {
   const { offer } = useContent();
 
   return (
-    <section className="bg-[#2cbceb] py-[165px] text-white" id="oferta">
+    <section id="oferta" className="bg-[#2cbceb] py-[165px] text-white">
       <div className="px-4 md:px-0">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,575px)_minmax(0,1fr)]">
           <div className="space-y-6 text-black md:ml-[100px] md:pl-8">

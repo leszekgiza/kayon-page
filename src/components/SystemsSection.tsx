@@ -11,7 +11,7 @@ const SystemsSection = () => {
   const { systems } = useContent();
 
   return (
-    <section className="relative overflow-hidden bg-white py-24" id="rozwiazania-systemowe">
+    <section id="rozwiazania-systemowe" className="relative overflow-hidden bg-white py-24">
       <div className="px-4 md:px-0">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,672px)_minmax(0,1fr)]">
           <motion.div
