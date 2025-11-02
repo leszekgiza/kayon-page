@@ -2,9 +2,9 @@ import parse from 'html-react-parser';
 
 const Sectiontext = ({ text, textColorClass }: { text: string, textColorClass: string }) => {
   return (
-    <div className={`px-8 py-6 w-full max-w-xl text-xl rounded-3xl ${textColorClass} border-2 border-white/30 leading-relaxed font-bold`}>
+    <p className={`md:!mt-12 px-8 py-6 text-xl rounded-3xl ${textColorClass} border-2 border-white/30 font-bold`}>
       {parse(text)}
-    </div>
+    </p>
   )
 };
 
