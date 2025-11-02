@@ -24,26 +24,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  if (CATEGORY_SLUGS.includes(slug)) {
-    const category = CONTENT.pl.productCategories.find((item) => item.slug === slug);
-    if (!category) {
-      return {};
-    }
-
-    return {
-      title: `KAYON - ${category.title}`,
-      description: category.description,
-    };
-  }
-
-  const detail = CONTENT.pl.productDetails[slug];
-  if (!detail) {
+  const category = CONTENT.pl.productCategories.find((item) => item.slug === slug);
+  if (!category) {
     return {};
   }
 
   return {
-    title: `KAYON - ${detail.title}`,
-    description: detail.intro,
+    title: `KAYON - ${category.title}`,
+    description: category.description,
   };
 }
 
@@ -51,9 +39,8 @@ const ProductDetailRoute = async ({ params }: { params: Promise<ProductDetailPar
   const { slug } = await params;
 
   const isCategory = CATEGORY_SLUGS.includes(slug);
-  const isProduct = PRODUCT_SLUGS.includes(slug);
 
-  if (!isCategory && !isProduct) {
+  if (!isCategory) {
     notFound();
   }
 
