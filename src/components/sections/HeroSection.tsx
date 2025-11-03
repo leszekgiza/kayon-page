@@ -34,9 +34,9 @@ const HeroSection = () => {
   }, [isModalOpen]);
 
   return (
-    <section className="relative h-screen max-h-[1280px] flex items-center bg-black text-white">
+    <section className="relative min-h-[800px] h-screen 2xl:max-h-[1280px] flex flex-col lg:flex-row items-center bg-black text-white">
       <Image
-        className="w-full max-w-[1250px] h-auto absolute z-10 top-[-40px] left-1/2 -translate-x-1/2 pointer-events-none"
+        className="w-full max-w-[1250px] h-auto absolute z-10 top-0 lg:top-[-40px] left-1/2 -translate-x-1/2 pointer-events-none"
         src="/top-shapes.svg"
         alt=""
         width={375}
@@ -56,11 +56,11 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black/25" />
       </div>
 
-      <div id="hero-left-col" className='min-w-[50%]'></div>
+      <div id="hero-left-col" className='hidden xl:block xl:min-w-[50%]'></div>
 
       <ScrollDownButton />
 
-      <div id="hero-right-col" className="px-8 md:ps-16 max-w-[675px] relative z-10">
+      <div id="hero-right-col" className="px-8 xl:ps-16 max-w-[550px] 2xl:max-w-[675px] absolute xl:relative translate-y-24 lg:translate-y-10 z-10">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ const HeroSection = () => {
           transition={{ delay: 0.15, duration: 0.6 }}
           className="flex w-full flex-col gap-10"
         >
-          <h1 className="mt-12 w-full text-[28px] font-bold leading-[1.2] text-left text-pretty text-white md:max-w-[693px] md:text-[40px]">
+          <h1 className="mt-12 w-full font-bold leading-[1.2] text-left text-pretty text-white md:max-w-[693px] text-[28px] md:text-[40px] xl:text-[28px] 2xl:text-[40px]">
             {hero.headline}
           </h1>
 
@@ -91,12 +91,12 @@ const HeroSection = () => {
       </div>
 
       {/* Gradient from left - from #040718 to transparent, rotated 180° */}
-      <div className="absolute left-0 top-0 h-full w-[390px]">
+      <div className="absolute left-0 top-0 h-full lg:w-[390px]">
         <div className="h-full w-full rotate-180 bg-gradient-to-l from-[#040718] to-transparent" />
       </div>
 
       {/* Gradient from right - from #040718 to transparent */}
-      <div className="absolute right-0 top-0 h-full w-[946px] bg-gradient-to-l from-[#040718] to-transparent" />
+      <div className="absolute right-0 top-0 h-full w-[300px] lg:w-[946px] opatity-25 lg:opacity-0 bg-gradient-to-l from-[#040718] to-transparent" />
 
       {/* Decorative large circle - Figma: left: -999px, top: -215px, rotated 180° */}
       <div className="absolute left-[-999px] top-[-215px] hidden h-[626px] w-[1799px] md:block pointer-events-none">
