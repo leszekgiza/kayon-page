@@ -53,7 +53,7 @@ const ProductsSection = () => {
 
   return (
     <section id="produkty" className="bg-[##484848] bg-gradient-to-r from-[#343432] to-[#484848] text-white">
-      <div className="2xl:flex items-center relative overflow-hidden">
+      <div className="2xl:flex items-center relative">
 
         <div id='product-section-left-col' className="p-8 2xl:py-24 md:pe-16 md:h-[800px] md:w-[640px] flex flex-col justify-between gap-8 bg-[#343432]">
           <SectionLabel label={products.label} bgClass="bg-[#EAEAEA]" />
