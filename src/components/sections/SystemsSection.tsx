@@ -13,7 +13,7 @@ const SystemsSection = () => {
   return (
     <section id="rozwiazania-systemowe" className="mx-auto p-8 2xl:px-0 2xl:py-24 max-w-[1660px] lg:min-h-[800px] flex flex-col 2xl:flex-row justify-between items-center 2xl:gap-28">
       <motion.div
-        className="max-w-[600px] flex flex-col gap-8 md:gap-y-16 text-primary"
+        className="max-w-[600px] flex flex-col gap-8 md:gap-y-16 items-center 2xl:items-start text-center 2xl:text-left text-primary"
         initial={{ opacity: 0, x: -24 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -44,7 +44,7 @@ const SystemsSection = () => {
         <Image
           src="/systems-diagram.webp"
           alt={systems.imageAlt}
-          className="md:h-[800px] w-auto object-contain"
+          className="md:h-[400px] 2xl:h-[800px] w-auto object-contain"
           width="400"
           height="280"
           priority
