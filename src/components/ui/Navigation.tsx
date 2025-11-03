@@ -9,6 +9,7 @@ import useDetectScroll, {
   Axis,
   Direction
 } from '@smakss/react-scroll-direction';
+import ToTopButton from './ToTopButton';
 
 interface NavigationProps {
   showCenterLinks?: boolean;
@@ -98,6 +99,7 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
           </button>
         </div>
       </nav >
+      {scrollPosition.top > 600 && <ToTopButton />}
       <FullScreenMenu open={isMenuOpen} onClose={() => setMenuOpen(false)} />
     </>
   );
