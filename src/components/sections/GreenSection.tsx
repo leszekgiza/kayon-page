@@ -6,7 +6,7 @@ import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
 import SectionLabel from '@/components/ui/SectionLabel';
 import SectionDescription from '@/components/ui/SectionDescription';
-import './GreenSection.css';
+import './GreenSection.css'
 
 const GreenSection = () => {
   const { clients } = useContent();
@@ -90,14 +90,14 @@ const GreenSection = () => {
 
   return (
     <section id="nasi-klienci" className="bg-[#77bb61] bg-gradient-to-r from-[#53923e] via-[#53923e] to-[#77bb61] text-white">
-      <div className="flex items-center relative overflow-hidden bg-[#53923e]">
-        <div className="green-section-left-col md:py-24 md:min-h-[800px] md:min-w-[50%] flex flex-col justify-between gap-8 bg-[#53923e]">
+      <div id='green-section-cols' className="px-0 2xl:flex flex-col 2xl:flex-row items-center relative bg-[#53923e]">
+        <div id='green-section-left-col' className="green-section-left-col p-8 md:py-24 lg:ps-20 2xl:min-h-[800px] md:min-w-[50%] flex flex-col justify-between gap-8 bg-[#53923e]">
           <SectionLabel label={clients.label} bgClass="bg-[#EAEAEA]" />
           <h2 className="text-3xl leading-tight md:text-[40px]">{parse(clients.heading)}</h2>
           <SectionDescription text={clients.highlight} textColorClass="text-white" />
         </div>
-        <div className="ps-8 md:ps-16 md:py-24 md:min-h-[800px] md:min-w-[50%] flex flex-col justify-between gap-8 bg-[#77bb61]">
-          <div className="overflow-hidden">
+        <div id='green-section-right-col' className="ps-8 md:ps-16 2xl:ps-10 py-8 md:py-24 2xl:min-h-[800px] md:min-w-[50%] flex flex-col justify-between gap-8 bg-[#77bb61] overflow-hidden">
+          <div className="">
             <motion.div
               style={trackStyle}
               className="flex min-w-0 gap-10 -mr-[2000px]"
@@ -131,7 +131,9 @@ const GreenSection = () => {
               ))}
             </motion.div>
           </div>
-          <div className="md:pe-[122px] md:max-w-[calc(952px - 128px)] flex items-center justify-between">
+          <div
+            id='greensection-carousel-controls'
+            className="2xl:pe-[122px] w-[80vw] max-w-[826px] flex items-center justify-between">
             <div className="flex items-center gap-2">
               {baseCards.map((_, dotIndex) => (
                 <button

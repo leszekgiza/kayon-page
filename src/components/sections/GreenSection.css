@@ -1,3 +1,5 @@
-.green-section-left-col {
-  padding-left: calc(50% - 830px);
+@media screen and (min-width: 1536px) {
+  .green-section-left-col {
+    padding-left: calc(50% - 830px);
+  }
 }
