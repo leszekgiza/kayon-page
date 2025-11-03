@@ -24,10 +24,10 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
     <>
       {/* Desktop Navigation - Figma: MENU component, 1920x137px */}
       <nav
-        className={`px-[40px] pt-4 pb-2 w-screen fixed top-0
-          ${scrollDir === 'down' && scrollPosition.top > 500 ? ' opacity-0 delay-300' : 'opacity-100 backdrop-blur-xl delay-300'}
-          ${scrollPosition.top === 0 ? ' opacity-100 backdrop-blur-none delay-300' : 'backdrop-blur-xl delay-300'}
-          z-50 flex justify-between transition-opacity duration-300 ease-in-out`}
+        className={`px-[40px] pt-4 pb-2 w-screen fixed top-0 z-50 flex justify-between delay-300 transition-opacity duration-300 ease-in-out
+          ${scrollDir === 'still' || scrollPosition.top === 0 ? ' opacity-100 backdrop-blur-none' : 'backdrop-blur-xl'}
+          ${scrollDir === 'down' && scrollPosition.top > 500 ? ' opacity-0' : 'opacity-100'}
+          `}
       >
         {/* Logo - Figma: left: 40px, top: 40px, 57x57px */}
         <Link
