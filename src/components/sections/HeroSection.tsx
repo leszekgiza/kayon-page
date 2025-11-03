@@ -34,7 +34,7 @@ const HeroSection = () => {
   }, [isModalOpen]);
 
   return (
-    <section className="relative min-h-[800px] h-screen 2xl:max-h-[1280px] flex flex-col lg:flex-row items-center bg-black text-white">
+    <section className="relative min-h-[800px] h-screen 2xl:max-h-[1280px] flex flex-col xl:flex-row items-center bg-black text-white">
       <Image
         className="w-full max-w-[1250px] h-auto absolute z-10 top-0 lg:top-[-40px] left-1/2 -translate-x-1/2 pointer-events-none"
         src="/top-shapes.svg"
@@ -60,7 +60,7 @@ const HeroSection = () => {
 
       <ScrollDownButton />
 
-      <div id="hero-right-col" className="px-8 xl:ps-16 max-w-[550px] 2xl:max-w-[675px] absolute xl:relative translate-y-24 lg:translate-y-10 z-10">
+      <div id="hero-right-col" className="px-8 xl:ps-16 xl:max-w-[550px] 2xl:max-w-[675px] absolute xl:relative translate-y-24 lg:translate-y-52 xl:translate-y-8 z-10">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}

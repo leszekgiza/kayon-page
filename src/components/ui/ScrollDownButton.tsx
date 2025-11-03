@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const ScrollDownButton = () => {
   return (
-    <div id='scroll-down-button' className='fixed lg:relative z-30 top-[85vh] md:top-[70vh] lg:top-[40vh] xl:top-[45vh]'>
+    <div id='scroll-down-button' className='fixed xl:relative z-30 top-[85vh] md:top-[70vh] lg:top-[80vh] xl:top-[45vh]'>
       <motion.button
         className="mx-auto h-[57px] w-[57px] z-30 cursor-pointer flex items-center justify-center rounded-[30px] bg-[#bcb7b7] transition-colors duration-300 hover:bg-[#d0d0d0]"
         type="button"
