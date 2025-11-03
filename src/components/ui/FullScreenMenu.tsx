@@ -75,10 +75,12 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
                     <div className="flex h-[13px] w-[47px] items-center justify-center flex-shrink-0">
                       <div className="rotate-90 scale-y-[-1]">
                         <div className="relative h-[47px] w-[13px]">
-                          <img
+                          <Image
                             alt=""
                             className="block size-full transition-opacity duration-200 group-hover:opacity-0"
                             src="https://www.figma.com/api/mcp/asset/55620f11-e657-4f94-af14-a817a7a4f6e2"
+                            width={13}
+                            height={47}
                           />
                           <div className="absolute inset-0 bg-[#2CBCEB] rounded-full opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
                         </div>
