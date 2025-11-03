@@ -99,7 +99,7 @@ const HeroSection = () => {
       <div className="absolute right-0 top-0 h-full w-[300px] lg:w-[946px] opatity-25 lg:opacity-0 bg-gradient-to-l from-[#040718] to-transparent" />
 
       {/* Decorative large circle - Figma: left: -999px, top: -215px, rotated 180° */}
-      <div className="absolute left-[-999px] top-[-215px] hidden h-[626px] w-[1799px] md:block pointer-events-none">
+      <div className="absolute left-1/2 translate-x-[-50%] hidden h-[626px] w-[1799px] md:block pointer-events-none">
         <div className="h-full w-full rotate-180 rounded-[313px] border-2 border-[#eaeaea] opacity-[0.15]" />
       </div>
 
