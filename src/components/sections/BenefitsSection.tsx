@@ -45,7 +45,7 @@ const BenefitsSection = () => {
   return (
     <>
       <section id="jak-dzialamy" className="bg-[#f4b250] text-primary">
-        <div className="mx-auto px-8 md:px-0 py-12 md:py-24 max-w-[1660px] lg:min-h-[800px] flex flex-col md:flex-row justify-between gap-8 md:gap-28">
+        <div className="mx-auto px-8 md:p-8 xl:ps-20 2xl:px-0 py-12 md:py-24 max-w-[1660px] lg:min-h-[800px] flex flex-col 2xl:flex-row justify-between gap-8 md:gap-28">
           <div className="max-w-[550px] flex flex-col gap-8 md:gap-y-16">
             <SectionLabel label={benefits.label} bgClass="bg-[#fad8a8]" />
             <h2 className="leading-tight text-3xl md:text-[40px]">{parse(benefits.heading)}</h2>
@@ -53,15 +53,15 @@ const BenefitsSection = () => {
           </div>
 
           <motion.div
-            className="md:w-[55%] flex flex-wrap justify-between md:justify-normal gap-2 md:gap-x-[80px]"
+            className="2xl:w-[55%] flex flex-wrap justify-between md:justify-normal gap-2 md:gap-16 2xl:gap-x-[80px]"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="p-4 md:pb-4 w-full md:w-[242px] md:h-[242px] md:flex justify-center items-end text-3xl bg-[#c99446] rounded-2xl">{parse(benefits.listTitle)}</h3>
+            <h3 className="p-4 md:pb-4 w-full md:w-[250px] md:h-[250px] md:flex justify-center items-end text-3xl bg-[#c99446] rounded-2xl">{parse(benefits.listTitle)}</h3>
             {benefitCards.map((benefit, index) => (
-              <div key={benefit.title} className="flex-1 md:flex-initial mt-8 md:mt-0 w-[180px] md:w-[250px] md:h-[242px] flex flex-col gap-2 md:gap-0 justify-between items-start">
+              <div key={benefit.title} className="flex-1 md:flex-initial mt-8 md:mt-0 w-[180px] md:w-[250px] md:h-[250px] flex flex-col gap-2 md:gap-0 justify-between items-start">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-black/20 text-white">
                   <span className="material-symbols-rounded text-2xl">
                     {iconMap[index] || 'help'}
@@ -73,7 +73,7 @@ const BenefitsSection = () => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section >
 
       <AnimatePresence>
         {activeBenefit !== null && (
