@@ -55,7 +55,7 @@ const ProductsSection = () => {
     <section id="produkty" className="bg-[##484848] bg-gradient-to-r from-[#343432] to-[#484848] text-white">
       <div className="2xl:flex items-center relative">
 
-        <div id='product-section-left-col' className="p-8 2xl:py-24 2xl:ps-20 md:pe-16 2xl:h-[800px] 2-full 2xl:w-[640px] flex flex-col justify-between gap-8 bg-[#343432]">
+        <div id='product-section-left-col' className="p-8 xl:px-20 2xl:py-24 2xl:ps-[122px] md:pe-16 2xl:h-[800px] w-full 2xl:max-w-[640px] flex flex-col justify-between gap-8 bg-[#343432]">
           <SectionLabel label={products.label} bgClass="bg-[#EAEAEA]" />
           <h2 className="text-3xl leading-tight md:text-[40px]">{parse(products.heading)}</h2>
           <SectionDescription text={products.description} textColorClass="text-white" />
@@ -65,7 +65,7 @@ const ProductsSection = () => {
         </div>
 
         {/* TODO: show a little part of next carousel item on mobile */}
-        <div id='product-section-right-col' className="ps-8 py-8 2xl:ps-10 2xl:py-24 2xl:min-h-[800px] flex flex-col justify-end gap-8 bg-[#484848] overflow-hidden">
+        <div id='product-section-right-col' className="ps-8 py-8 xl:px-20 2xl:ps-10 2xl:py-24 2xl:min-h-[800px] flex flex-col justify-end gap-8 bg-[#484848] overflow-hidden">
           <div className="lg:px-0">
             <motion.div
               className="flex gap-10 2xl:gap-[40px]"
