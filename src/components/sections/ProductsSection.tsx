@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useContent } from '@/hooks/useContent';
@@ -16,9 +16,32 @@ const ProductsSection = () => {
   const cardWidth = 310; // Fixed width from Figma
   const gap = 40; // gap between cards from Figma
   const cardWithGap = cardWidth + gap; // 350px total
-  const cardsPerView = 3; // Show 3 cards at a time on desktop
+  // const cardsPerView = 3; // Show 3 cards at a time on desktop
   const totalCards = products.groups.length;
-  const maxIndex = Math.max(0, totalCards - cardsPerView);
+  const [cardsPerView, setCardsPerView] = useState(3);
+  // const maxIndex = Math.max(0, totalCards - cardsPerView);
+
+  const maxIndex = useMemo(() => {
+    return Math.max(0, totalCards - cardsPerView);
+  }, [totalCards, cardsPerView]);
+
+
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      if (window.innerWidth >= 1280) {
+        setCardsPerView(3);
+      } else if (window.innerWidth >= 768) {
+        setCardsPerView(2);
+      } else {
+        setCardsPerView(1);
+      }
+    };
+
+    updateCardsPerView();
+    window.addEventListener('resize', updateCardsPerView);
+    return () => window.removeEventListener('resize', updateCardsPerView);
+  }, []);
+
 
   const handlePrev = () => {
     setCurrentIndex((prev) => Math.max(0, prev - 1));
@@ -30,9 +53,9 @@ const ProductsSection = () => {
 
   return (
     <section id="produkty" className="bg-[##484848] bg-gradient-to-r from-[#343432] to-[#484848] text-white">
-      <div className="flex items-center relative overflow-hidden">
+      <div className="2xl:flex items-center relative overflow-hidden">
 
-        <div className="green-section-left-col md:py-24 md:pe-16 md:h-[800px] md:w-[640px] flex flex-col justify-between gap-8 bg-[#343432]">
+        <div id='product-section-left-col' className="p-8 2xl:py-24 md:pe-16 md:h-[800px] md:w-[640px] flex flex-col justify-between gap-8 bg-[#343432]">
           <SectionLabel label={products.label} bgClass="bg-[#EAEAEA]" />
           <h2 className="text-3xl leading-tight md:text-[40px]">{parse(products.heading)}</h2>
           <SectionDescription text={products.description} textColorClass="text-white" />
@@ -41,10 +64,11 @@ const ProductsSection = () => {
           </p>
         </div>
 
-        <div className="ps-8 md:pb-16 md:ps-20 md:py-24 md:min-h-[800px] flex flex-col justify-end gap-8 bg-[#484848]">
-          <div className="overflow-hidden px-4 lg:px-0">
+        {/* TODO: show a little part of next carousel item on mobile */}
+        <div id='product-section-right-col' className="ps-8 py-8 md:ps-16 2xl:ps-10 2xl:py-24 md:min-h-[800px] flex flex-col justify-end gap-8 bg-[#484848] overflow-hidden">
+          <div className="lg:px-0">
             <motion.div
-              className="flex gap-[40px]"
+              className="flex gap-10 2xl:gap-[40px]"
               animate={{ x: `-${currentIndex * cardWithGap}px` }}
               transition={{ duration: 0.5, ease: 'easeInOut' }}
             >
@@ -87,7 +111,7 @@ const ProductsSection = () => {
           </div>
 
           {/* Navigation - PROGRESS 01 (dots on left, arrows on right) */}
-          <div className="mt-[70px] md:max-w-[888px] flex items-center justify-between px-4 lg:px-0">
+          <div className="2xl:mt-[70px] md:max-w-[888px] flex items-center justify-between px-4 lg:px-0">
             {/* Dot Navigation - PROGRESS 01 */}
             <div className="flex items-center gap-[13px]">
               {Array.from({ length: maxIndex + 1 }).map((_, index) => (
@@ -105,20 +129,17 @@ const ProductsSection = () => {
             <div className="flex items-center">
               <button
                 onClick={handlePrev}
-                disabled={currentIndex === 0}
-                className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#1D1D1B] text-white transition-all duration-200 hover:bg-primary/30 disabled:cursor-not-allowed"
+                className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#1D1D1B] text-white transition-all duration-200 hover:bg-[#10100f] disabled:cursor-not-allowed"
                 aria-label="Previous"
               >
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"></path>
                 </svg>
-
               </button>
 
               <button
                 onClick={handleNext}
-                disabled={currentIndex === maxIndex}
-                className="ms-4 flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#1D1D1B] text-white transition-all duration-200 hover:bg-primary/30 disabled:opacity-30 disabled:cursor-not-allowed"
+                className="ms-4 flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#1D1D1B] text-white transition-all duration-200 hover:bg-[#10100f] disabled:cursor-not-allowed"
                 aria-label="Next"
               >
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
