@@ -37,22 +37,19 @@ const FeaturesSection = () => {
       {/* 02 DLACZEGO - Figma: 1920x500px, 3 cards without gaps */}
       <section id="dla-kogo" className="bg-gradient-to-r from-[#d9d9d9] via-[#cbcbcb] to-[#bcbcbc]">
 
-        <div className="mx-auto max-w-[1660px] md:h-[500px] flex flex-col md:flex-row">
+        <div className="mx-auto max-w-[1660px] 2xl:h-[500px] flex flex-col md:flex-row">
           {featureCards.map((feature, index) => {
-            // Figma colors for each card background
             const bgColors = ['bg-[#d9d9d9]', 'bg-[#cbcbcb]', 'bg-[#bcbcbc]'];
 
             return (
               <motion.div
                 key={feature.title}
-                className={`md:w-1/3 md:p-20 md:first:ps-0 flex flex-col items-start justify-between ${bgColors[index]}`}
+                className={`p-8 xl:p-20 2xl:first:ps-0 md:w-1/3 flex flex-col gap-2 items-start justify-between ${bgColors[index]}`}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
-                {/* Content - Desktop: moved 55px up total, ml-[100px] mt-[45px], Mobile: padding */}
-                {/* Icon - Desktop: 57px, Mobile: 48px */}
                 <div className="md:min-w-1/3 flex size-[48px] shrink-0 items-center justify-center rounded-[30px] bg-[#747171] content-stretch md:size-[57px]">
                   <span className="material-symbols-rounded relative shrink-0 text-[20px] leading-none text-white md:text-[24px]">
                     check
