@@ -83,7 +83,6 @@ const ProductList = ({ slug }: ProductListProps) => {
                       <span className="material-symbols-rounded mt-0.5 text-[20px] leading-none text-[#77bb61]">
                         arrow_right
                       </span>
-                      {/* <span className="mt-1 inline-flex h-2 w-2 flex-none rounded-full bg-primary" /> */}
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -178,7 +177,7 @@ const ProductList = ({ slug }: ProductListProps) => {
                       <ul className="mt-4 space-y-3 text-sm text-primary/90 md:text-base">
                         {product.features.map((feature) => (
                           <li key={feature} className="flex items-start gap-3">
-                            <span className="mt-1 inline-flex h-2 w-2 flex-none rounded-full bg-primary" />
+                            <span className="material-symbols-rounded mt-0.5 text-[20px] leading-none text-[#77bb61]">arrow_right</span>
                             <span>{feature}</span>
                           </li>
                         ))}
