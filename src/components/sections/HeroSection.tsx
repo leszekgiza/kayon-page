@@ -60,7 +60,7 @@ const HeroSection = () => {
 
       <ScrollDownButton />
 
-      <div id="hero-right-col" className="px-8 xl:ps-16 xl:max-w-[550px] 2xl:max-w-[675px] absolute xl:relative translate-y-24 lg:translate-y-52 xl:translate-y-8 z-10">
+      <div id="hero-right-col" className="px-8 xl:ps-16 xl:max-w-[550px] 2xl:max-w-[675px] absolute xl:relative translate-y-24 lg:translate-y-52 xl:translate-y-2 z-10">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,12 +75,12 @@ const HeroSection = () => {
           transition={{ delay: 0.15, duration: 0.6 }}
           className="flex w-full flex-col gap-10"
         >
-          <h1 className="mt-12 w-full font-bold leading-[1.2] text-left text-pretty text-white md:max-w-[693px] text-[28px] md:text-[40px] xl:text-[28px] 2xl:text-[40px]">
+          <h1 className="mt-12 w-full font-bold leading-[1.2] text-left text-pretty text-white md:max-w-[693px] text-[28px] md:text-[40px] xl:text-[28px] 2xl:text-[36px]">
             {hero.headline}
           </h1>
 
-          <div className="flex w-full flex-col items-start gap-10 rounded-[30px] border-2 border-[#484848] bg-white/10 p-10 backdrop-blur-xs lg:flex-row lg:items-center">
-            <p className="w-full text-base font-bold leading-[1.2] text-white md:w-[437px] md:text-[20px]">
+          <div className="flex w-full flex-col items-start gap-2 rounded-[30px] border-2 border-[#484848] bg-white/10 p-6 backdrop-blur-xs lg:flex-row lg:items-center">
+            <p className="w-full text-base font-bold leading-[1.2] text-white md:w-[437px] md:text-[20px] text-pretty">
               {hero.body}
             </p>
 

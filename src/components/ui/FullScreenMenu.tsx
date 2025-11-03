@@ -49,7 +49,7 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
 
           <motion.div
             id='fullscreen-menu-cols'
-            className="md:pt-28 w-screen flex flex-col lg:flex-row gap-16 justify-center md:justify-between lg:items-center"
+            className="md:pt-28 w-screen flex flex-col md:flex-row gap-16 justify-center md:justify-between lg:items-center"
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 24 }}
@@ -58,12 +58,12 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
             <div
               id='fullscreen-menu-left-col'
               className="py-8 md:py-16 2xl:py-24 md:px-[5vw] 2xl:pe-52 w-full lg:w-1/2 max-w-[700px] md:h-[400px] relative flex flex-col items-center justify-center border-y-2 border-e-2 border-[#747171] rounded-r-full">
-              <KayonLogo className="h-10 md:h-[76px] w-auto lg:max-w-[350px] 2xl:max-w-[457px]" />
+              <KayonLogo className="h-10 md:h-[40px] lg:h-[76px] w-auto lg:max-w-[350px] 2xl:max-w-[457px]" />
             </div>
 
             <div
               id='fullscreen-menu-right-col'
-              className="mx-auto px-[5vw] max-2xl:pb-8 2xl:pe-52 md:w-[50%] lg:flex flex-col gap-2 2xl:gap-[60px] justify-around">
+              className="mx-auto px-[5vw] max-2xl:pb-8 2xl:pe-52 md:w-[50%] lg:flex flex-col gap-2 2xl:gap-[40px] justify-around">
               <nav className="flex flex-col gap-8">
                 {menuOverlay.items.map((item) => (
                   <Link
