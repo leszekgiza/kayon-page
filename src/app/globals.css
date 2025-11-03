@@ -64,3 +64,23 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
+
+/* CUSTOM STYLES */
+
+/* @media screen and (min-width: 1280px) {
+  .kayon-ps-fix {
+    padding-left: calc(100vw - 80px);
+  }
+} */
+
+@media screen and (min-width: 1536px) {
+  .kayon-ps-fix {
+    padding-left: 122px;
+  }
+}
+
+@media screen and (min-width: 1682px) {
+  .kayon-ps-fix {
+    padding-left: calc(50vw - 706px);
+  }
+}
