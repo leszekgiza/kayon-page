@@ -5,6 +5,10 @@ import Link from 'next/link';
 import KayonMark from '@/components/ui/KayonMark';
 import FullScreenMenu from '@/components/ui/FullScreenMenu';
 import { useContent } from '@/hooks/useContent';
+import useDetectScroll, {
+  Axis,
+  Direction
+} from '@smakss/react-scroll-direction';
 
 interface NavigationProps {
   showCenterLinks?: boolean;
@@ -14,15 +18,21 @@ interface NavigationProps {
 const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationProps) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const { navigation } = useContent();
+  const { scrollDir, scrollPosition } = useDetectScroll();
 
   return (
     <>
       {/* Desktop Navigation - Figma: MENU component, 1920x137px */}
-      <nav className="absolute left-0 right-0 top-0 z-50 hidden h-[137px] w-full md:block">
+      <nav
+        className={`px-[40px] pt-4 pb-2 w-screen fixed top-0
+          ${scrollDir === 'down' && scrollPosition.top > 500 ? ' opacity-0 delay-300' : 'opacity-100 backdrop-blur-xl delay-300'}
+          ${scrollPosition.top === 0 ? ' opacity-100 backdrop-blur-none delay-300' : 'backdrop-blur-xl delay-300'}
+          z-50 flex justify-between transition-opacity duration-300 ease-in-out`}
+      >
         {/* Logo - Figma: left: 40px, top: 40px, 57x57px */}
         <Link
           href="/"
-          className="absolute left-[40px] top-[40px] flex h-[57px] w-[57px] items-center justify-center rounded-[30px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)] transition-opacity duration-200 hover:opacity-80"
+          className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)] transition-opacity duration-200 hover:opacity-80"
           aria-label={navigation.homeAriaLabel}
         >
           <KayonMark />
@@ -30,29 +40,29 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
 
         {/* Center Labels - Figma: 3 labels with specific positions - only show on 2xl+ screens */}
         {showCenterLinks && (
-          <>
-            <div className="absolute left-[688px] top-[40px] hidden 2xl:inline-flex h-[57px] w-[186px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
+          <div id='nav-central-links' className="hidden opacity-0 lg:opacity-100 lg:flex gap-4 transition-all dutation-300 ease-in-out">
+            <div className="h-[57px] w-[186px] flex justify-center items-center rounded-[30px] border border-[#BCB7B7] hover:bg-[#2bbceb] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
               <Link href={`/${navigation.primaryLinks[0].href}`} className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white whitespace-nowrap">
                 {navigation.primaryLinks[0].label}
               </Link>
             </div>
 
-            <div className="absolute left-[894px] top-[40px] hidden 2xl:inline-flex h-[57px] w-[141px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
+            <div className="h-[57px] w-[141px] flex justify-center items-center rounded-[30px] border border-[#BCB7B7] hover:bg-[#f4b251] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
               <Link href={`/${navigation.primaryLinks[1].href}`} className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
                 {navigation.primaryLinks[1].label}
               </Link>
             </div>
 
-            <div className="absolute left-[1055px] top-[40px] hidden 2xl:inline-flex h-[57px] w-[177px] items-center justify-center gap-[10px] rounded-[30px] border border-[#BCB7B7] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
+            <div className="h-[57px] w-[177px] flex justify-center items-center rounded-[30px] border border-[#BCB7B7] hover:bg-[#76bb60] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
               <Link href={`/${navigation.primaryLinks[2].href}`} className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
                 {navigation.primaryLinks[2].label}
               </Link>
             </div>
-          </>
+          </div >
         )}
 
         {/* Right Icons - Figma: right: 40px, top: 40px, 3 icons with gap 20px */}
-        <div className="absolute right-[40px] top-[40px] inline-flex h-[57px] items-start justify-end gap-[20px] w-[211px]">
+        <div className="inline-flex h-[57px] items-start justify-end gap-[20px] w-[211px]">
           <>
             {/* KONTAKT - chat_bubble */}
             <Link
@@ -79,7 +89,7 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
             </a>
           </>
 
-          {/* MENU - menu icon with black background - ALWAYS VISIBLE */}
+          {/* HAMBURGER ICON */}
           <button
             type="button"
             onClick={() => setMenuOpen(true)}
@@ -91,32 +101,7 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
             </span>
           </button>
         </div>
-      </nav>
-
-      {/* Mobile Navigation - simplified for smaller screens */}
-      <nav className="absolute left-0 right-0 top-0 z-50 md:hidden">
-        <div className="flex items-center justify-between px-4 py-4">
-          <Link
-            href="/"
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 shadow-lg"
-            aria-label={navigation.homeAriaLabel}
-          >
-            <KayonMark />
-          </Link>
-
-          <button
-            type="button"
-            onClick={() => setMenuOpen(true)}
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1D1D1B] shadow-lg"
-            aria-label={navigation.actions.menu.ariaLabel}
-          >
-            <span className="material-symbols-rounded text-[24px] text-white">
-              menu
-            </span>
-          </button>
-        </div>
-      </nav>
-
+      </nav >
       <FullScreenMenu open={isMenuOpen} onClose={() => setMenuOpen(false)} />
     </>
   );
