@@ -26,7 +26,7 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
       <nav
         className={`px-[40px] pt-4 pb-2 w-screen fixed top-0 z-50 flex justify-between delay-300 transition-opacity duration-300 ease-in-out
           ${scrollDir === 'still' || scrollPosition.top === 0 ? ' opacity-100 backdrop-blur-none' : 'backdrop-blur-xl'}
-          ${scrollDir === 'down' && scrollPosition.top > 500 ? ' opacity-0' : 'opacity-100'}
+          ${scrollDir === 'down' && scrollPosition.top > 500 ? ' hidden opacity-0' : 'opacity-100'}
           `}
       >
         {/* Logo - Figma: left: 40px, top: 40px, 57x57px */}
@@ -41,23 +41,17 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
         {/* Center Labels - Figma: 3 labels with specific positions - only show on 2xl+ screens */}
         {showCenterLinks && (
           <div id='nav-central-links' className="hidden opacity-0 lg:opacity-100 lg:flex gap-4 transition-all dutation-300 ease-in-out">
-            <div className="h-[57px] w-[186px] flex justify-center items-center rounded-[30px] border border-[#BCB7B7] hover:bg-[#2bbceb] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
-              <Link href={`/${navigation.primaryLinks[0].href}`} className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white whitespace-nowrap">
-                {navigation.primaryLinks[0].label}
-              </Link>
-            </div>
+            <Link href={`/${navigation.primaryLinks[0].href}`} className="h-[57px] w-[186px] flex justify-center items-center text-[24px] font-bold border border-[#BCB7B7] rounded-full leading-[120%] text-white whitespace-nowrap hover:bg-[#76bb60]">
+              {navigation.primaryLinks[0].label}
+            </Link>
 
-            <div className="h-[57px] w-[141px] flex justify-center items-center rounded-[30px] border border-[#BCB7B7] hover:bg-[#f4b251] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
-              <Link href={`/${navigation.primaryLinks[1].href}`} className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
-                {navigation.primaryLinks[1].label}
-              </Link>
-            </div>
+            <Link href={`/${navigation.primaryLinks[1].href}`} className="h-[57px] w-[186px] flex justify-center items-center text-[24px] font-bold border border-[#BCB7B7] rounded-full leading-[120%] text-white whitespace-nowrap hover:bg-[#2bbceb]">
+              {navigation.primaryLinks[1].label}
+            </Link>
 
-            <div className="h-[57px] w-[177px] flex justify-center items-center rounded-[30px] border border-[#BCB7B7] hover:bg-[#76bb60] px-[30px] py-[20px] shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]">
-              <Link href={`/${navigation.primaryLinks[2].href}`} className="font-['Montserrat'] text-[24px] font-bold leading-[120%] text-white">
-                {navigation.primaryLinks[2].label}
-              </Link>
-            </div>
+            <Link href={`/${navigation.primaryLinks[2].href}`} className="h-[57px] w-[186px] flex justify-center items-center text-[24px] font-bold border border-[#BCB7B7] rounded-full leading-[120%] text-white whitespace-nowrap hover:bg-[#484848]">
+              {navigation.primaryLinks[2].label}
+            </Link>
           </div >
         )}
 

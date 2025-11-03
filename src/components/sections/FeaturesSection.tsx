@@ -44,7 +44,7 @@ const FeaturesSection = () => {
             return (
               <motion.div
                 key={feature.title}
-                className={`p-8 xl:p-20 md:w-1/3 flex flex-col gap-2 items-start justify-between ${bgColors[index]}`}
+                className={`p-8 xl:p-20 first:2xl:ps-[122px] md:w-1/3 flex flex-col gap-2 items-start justify-between ${bgColors[index]}`}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}

@@ -91,7 +91,7 @@ const GreenSection = () => {
   return (
     <section id="nasi-klienci" className="bg-[#77bb61] bg-gradient-to-r from-[#53923e] via-[#53923e] to-[#77bb61] text-white">
       <div id='green-section-cols' className="px-0 2xl:flex flex-col 2xl:flex-row items-center relative bg-[#53923e]">
-        <div id='green-section-left-col' className="green-section-left-col p-8 md:py-24 lg:ps-20 2xl:min-h-[800px] md:min-w-[50%] flex flex-col justify-between gap-8 bg-[#53923e]">
+        <div id='green-section-left-col' className="green-section-left-col p-8 md:py-24 lg:ps-8 2xl:min-h-[800px] md:min-w-[50%] flex flex-col justify-between gap-8 bg-[#53923e]">
           <SectionLabel label={clients.label} bgClass="bg-[#EAEAEA]" />
           <h2 className="text-3xl leading-tight md:text-[40px]">{parse(clients.heading)}</h2>
           <SectionDescription text={clients.highlight} textColorClass="text-white" />

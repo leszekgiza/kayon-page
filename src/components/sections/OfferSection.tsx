@@ -26,7 +26,7 @@ const OfferSection = () => {
           transition={{ duration: 0.6 }}
         >
           {offer.cards.map((card) => (
-            <div key={card.title} className="px-6 py-8 md:w-1/2 xl:w-[410px] md:min-h-[750px] xl:min-h-[600px] flex flex-col gap-4 rounded-[32px] bg-white text-primary shadow-lg">
+            <div key={card.title} className="px-6 py-8 md:w-1/2 xl:w-[410px] md:min-h-[600px] xl:min-h-[600px] flex flex-col gap-4 rounded-[32px] bg-white text-primary shadow-lg">
               <h3 className="text-2xl font-semibold">{parse(card.title)}</h3>
               <p className="my-2"><strong>{parse(card.textBeforeBullets)}</strong></p>
               <ul className="space-y-3 text-sm text-primary/80">
