@@ -91,12 +91,12 @@ const HeroSection = () => {
       </div>
 
       {/* Gradient from left - from #040718 to transparent, rotated 180° */}
-      <div className="absolute left-0 top-0 h-full lg:w-[390px]">
+      <div className="absolute left-0 top-0 h-full lg:w-[390px] opatity-50 lg:opacity-80">
         <div className="h-full w-full rotate-180 bg-gradient-to-l from-[#040718] to-transparent" />
       </div>
 
       {/* Gradient from right - from #040718 to transparent */}
-      <div className="absolute right-0 top-0 h-full w-[300px] lg:w-[946px] opatity-25 lg:opacity-0 bg-gradient-to-l from-[#040718] to-transparent" />
+      <div className="absolute right-0 top-0 h-full w-[300px] lg:w-[946px] opatity-25 lg:opacity-80 bg-gradient-to-l from-[#040718] to-transparent" />
 
       {/* Decorative large circle - Figma: left: -999px, top: -215px, rotated 180° */}
       <div className="absolute left-1/2 translate-x-[-50%] hidden h-[626px] w-[1799px] md:block pointer-events-none">
