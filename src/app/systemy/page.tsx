@@ -7,6 +7,7 @@ import Footer from '@/components/sections/Footer';
 import KayonLogo from '@/components/ui/KayonLogo';
 import ProductsSection from '@/components/sections/ProductsSection';
 import { useContent } from '@/hooks/useContent';
+import parse from 'html-react-parser';
 
 export default function SystemyPage() {
   const { systemsPage } = useContent();
@@ -77,15 +78,15 @@ export default function SystemyPage() {
           <div className="container mx-auto px-6 md:absolute md:left-[240px] md:top-1/2 md:w-[1000px] md:-translate-y-1/2 md:px-0">
             <div className="flex flex-col justify-center font-['Montserrat'] text-[#1d1d1b]">
               <p className="mb-0 text-[28px] font-bold leading-[1.2] md:text-[34px] lg:text-[40px]">
-                {systemsPage.allInKayon.heading}
+                {parse(systemsPage.allInKayon.heading)}
               </p>
               <p className="mb-0 text-[28px] font-bold leading-[1.2] md:text-[34px] lg:text-[40px]">&nbsp;</p>
               <p className="mb-0 text-[18px] font-bold leading-[1.3] md:text-[22px] lg:text-[24px] lg:leading-[1.2]">
-                {systemsPage.allInKayon.subheading}
+                {parse(systemsPage.allInKayon.subheading)}
               </p>
               <p className="mb-0 text-[16px] leading-[1.3] md:text-[18px] lg:text-[20px] lg:leading-[1.2]">&nbsp;</p>
               <p className="font-['Montserrat'] text-[14px] font-normal leading-[1.5] md:text-[15px] lg:text-[16px] lg:leading-[1.4]">
-                {systemsPage.allInKayon.description}
+                {parse(systemsPage.allInKayon.description)}
               </p>
             </div>
           </div>
@@ -105,10 +106,10 @@ export default function SystemyPage() {
               {/* Text content - [grid-area:1_/_1] means row 1, column 1 */}
               <div className="flex flex-col items-start gap-6 md:gap-[30px] lg:[grid-area:1_/_1]">
                 <h2 className="whitespace-pre font-['Montserrat'] text-[32px] font-bold leading-[1.2] text-[#1d1d1b] md:text-[36px] lg:text-[40px]">
-                  {systemsPage.systems.walkby.title}
+                  {parse(systemsPage.systems.walkby.title)}
                 </h2>
                 <p className="w-full font-['Montserrat'] text-[20px] font-normal leading-[1.3] text-[#1d1d1b] md:text-[22px] md:leading-[1.2] lg:w-[433px] lg:text-[24px]">
-                  {systemsPage.systems.walkby.subtitle}
+                  {parse(systemsPage.systems.walkby.subtitle)}
                 </p>
                 <div className="flex w-full flex-col items-start gap-6 md:gap-[30px] lg:w-[492px]">
                   {systemsPage.systems.walkby.features.map((feature, index) => (
@@ -117,7 +118,7 @@ export default function SystemyPage() {
                         arrow_right
                       </span>
                       <p className="flex-1 font-['Montserrat'] text-[14px] font-normal leading-[1.5] text-[#1d1d1b] md:text-[15px] lg:text-[16px] lg:leading-[1.4]">
-                        {feature}
+                        {parse(feature)}
                       </p>
                     </div>
                   ))}
@@ -149,11 +150,11 @@ export default function SystemyPage() {
             >
               <div className="flex flex-col items-start gap-6 md:gap-[30px] lg:[grid-area:1_/_1]">
                 <h2 className="whitespace-pre font-['Montserrat'] text-[32px] font-bold leading-[1.2] text-[#1d1d1b] md:text-[36px] lg:text-[40px]">
-                  <span>{systemsPage.systems.fix.title}</span>
+                  <span>{parse(systemsPage.systems.fix.title)}</span>
                   <span className="font-['Montserrat'] font-normal"> (Star)</span>
                 </h2>
                 <p className="w-full font-['Montserrat'] text-[20px] font-normal leading-[1.3] text-[#1d1d1b] md:text-[22px] md:leading-[1.2] lg:w-[433px] lg:text-[24px]">
-                  {systemsPage.systems.fix.subtitle}
+                  {parse(systemsPage.systems.fix.subtitle)}
                 </p>
                 <div className="flex w-full flex-col items-start gap-6 md:gap-[30px] lg:w-[492px]">
                   {systemsPage.systems.fix.features.map((feature, index) => (
@@ -162,7 +163,7 @@ export default function SystemyPage() {
                         arrow_right
                       </span>
                       <p className="flex-1 font-['Montserrat'] text-[14px] font-normal leading-[1.5] text-[#1d1d1b] md:text-[15px] lg:text-[16px] lg:leading-[1.4]">
-                        {feature}
+                        {parse(feature)}
                       </p>
                     </div>
                   ))}
@@ -193,10 +194,10 @@ export default function SystemyPage() {
             >
               <div className="flex flex-col items-start gap-6 md:gap-[30px] lg:[grid-area:1_/_1]">
                 <h2 className="whitespace-pre font-['Montserrat'] text-[32px] font-bold leading-[1.2] text-[#1d1d1b] md:text-[36px] lg:text-[40px]">
-                  {systemsPage.systems.mesh.title}
+                  {parse(systemsPage.systems.mesh.title)}
                 </h2>
                 <p className="w-full font-['Montserrat'] text-[20px] font-normal leading-[1.3] text-[#1d1d1b] md:text-[22px] md:leading-[1.2] lg:w-[433px] lg:text-[24px]">
-                  {systemsPage.systems.mesh.subtitle}
+                  {parse(systemsPage.systems.mesh.subtitle)}
                 </p>
                 <div className="flex w-full flex-col items-start gap-6 md:gap-[30px] lg:w-[492px]">
                   {systemsPage.systems.mesh.features.map((feature, index) => (
@@ -205,7 +206,7 @@ export default function SystemyPage() {
                         arrow_right
                       </span>
                       <p className="flex-1 font-['Montserrat'] text-[14px] font-normal leading-[1.5] text-[#1d1d1b] md:text-[15px] lg:text-[16px] lg:leading-[1.4]">
-                        {feature}
+                        {parse(feature)}
                       </p>
                     </div>
                   ))}

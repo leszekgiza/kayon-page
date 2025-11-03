@@ -470,14 +470,14 @@ const pl: ContentStructure = {
     hero: {
       title: 'Systemy',
       description:
-        'Każdy klient znajdzie tu rozwiązanie idealnie dopasowane do swojego sposobu pracy. To paleta rozwiązań od prostych systemów walk-by po inteligentną sieć MESH. Nasze systemy oferują coraz prostszy, bezpieczniejszy i coraz tańszy dostęp do danych pomiarówych. Obsługa może reagować coraz szybciej i tym samym efektywniej zarządzać mediami.',
+        'All in KAYON to inteligentne rozwiązania systemowe, które integrują pracę wielu urządzeń oraz wszystkie kluczowe dane i procesy. Automatyzują odczyty, generują raporty, alarmują o awariach i wspierają użytkowników na każdym etapie – od montażu po zarządzanie zasobami.',
     },
     allInKayon: {
-      heading: 'Systemy All in KAYON to inteligentne rozwiązania integrujące wiele urządzeń oraz wszystkie istotne dane i procesy.',
+      heading: 'System łączy wodomierze, ciepłomierze, moduły komunikacyjne i infrastrukturę odczytową w jedną, spójną sieć działającą niezawodnie i w pełni zdalnie.',
       subheading:
-        'Automatyzują pracę, generują raporty, alarmują o awariach i wspierają użytkowników na każdym etapie –od montażu po zarządzanie zasobami.',
+        'Kluczowym elementem ekosystemu jest <b>platforma webowa Openmetering</b>, która zapewnia równoczesny dostęp do danych z tysięcy urządzeń w dowolnej lokalizacji. Dzięki funkcjonalnemu i prostemu interfejsowi, zarządzanie, analiza i wizualizacja danych stają się proste, jak nigdy dotąd.',
       description:
-        'Integrują wodomierze, ciepłomierze, moduły komunikacyjne i infrastrukturę w jeden, spójny system, który działa niezawodnie i w pełni zdalnie. All in KAYON to wszystko w jednym miejscu – zawsze aktualne, zawsze pod kontrolą. Oferta zróżnicowanych rozwiązań pozwala dobrać system najlepiej odpowiadający stylowi pracy administratora, zarządcy nieruchomości, firmy instalacyjnej lub innego zarządzającego nimi podmiotu.',
+        'Użytkownicy mogą samodzielnie tworzyć zestawienia i raporty, uzyskując pełny obraz zużycia poszczególnych mediów oraz stanu infrastruktury – zawsze aktualny i zawsze pod kontrolą. <b>Trzy zróżnicowane rozwiązania pozyskiwania i transmisji danych – Walk-by, Fix i Mesh</b> – pozwalają dobrać system najlepiej dopasowany do sposobu pracy administratorów nieruchomości oraz firm zajmujących się instalacją, odczytami oraz rozliczaniem mediów.',
     },
     systems: {
       walkby: {
@@ -486,7 +486,8 @@ const pl: ContentStructure = {
         features: [
           'Praca w terenie staje się prosta, jak nigdy dotąd. Przesył danych jest natychmiastowy i w pełni automatyczny, a dostęp do nich w systemie jest natychmiastowy.',
           'Rozwiązanie pozwala szybko i bezbłędnie odczytywać dane z wodomierzy, ciepłomierzy, podzielników kosztów ogrzewania, gazomierzy i liczników prąd - bez fizycznego dostępu do nich.',
-          'System oparty na urządzeniu Range ONE i aplikacji Route ONE umożliwia także bieżącą diagnostykę i serwis różnego typu urządzeń pomiarówych.',
+          'System oparty na urządzeniu Range ONE i aplikacji Route ONE umożliwia także bieżącą diagnostykę i serwis różnego typu urządzeń pomiarowych.',
+          'Pełna integracja z platformą webową sprawia, że dane z odczytów automatycznie trafiają do systemu, gdzie można je natychmiast analizować i raportować.',
         ],
       },
       fix: {
@@ -496,15 +497,17 @@ const pl: ContentStructure = {
           'Rozwiązanie działa w oparciu o topologię gwiazdy, w której urządzenia pomiarowe komunikują się z koncentratorem bezpośrednio lub przez repeatery zwiększające zasięg sieci.',
           'System automatyzuje odczyty oraz zapewnia stały nadzór nad mediami i natychmiastową reakcję na awarie lub nieprawidłowości.',
           'Fix obsługuje różne typy liczników zgodnych ze standardem Wireless M-Bus lub OMS, maksymalnie ułatwiając zarządzanie i bilansowanie zużycia poszczególnych mediów.',
+          'Użytkownik ma bezpośredni dostęp do danych w interfejsie webowym, co pozwala na stałe monitorowanie i generowanie raportów w czasie rzeczywistym.',
         ],
       },
       mesh: {
         title: 'MESH',
-        subtitle: 'Automatyczny, niezawodny i najtańszy w utrzymaniu system odczytówy. Tak samodzielny, że można odnieść wrażenie, że myśli za użytkowników.',
+        subtitle: 'Niezawodność i niskie koszty – sieć, która sama się naprawia.',
         features: [
-          'Rozwiązanie jest  inteligentną, samokonfigurującą i samonaprawiającą się siecią pomiarową, która zapewnia nieprzerwaną komunikację nawet w trudnych warunkach.',
-          'To innowacyjny system, który opiera się wyłącznie na jednym koncentratorze danych – montaż sprowadza się do kliknięcia „GO", a dane automatycznie trafiają do chmury.',
+          'Rozwiązanie jest inteligentną, samokonfigurującą i samonaprawiającą się siecią pomiarową, która zapewnia nieprzerwaną komunikację nawet w trudnych warunkach.',
+          'To pierwszy na rynku system, który opiera się <b>wyłącznie na jednym koncentratorze danych oraz sieci połączeń pomiędzy urządzeniami pomiarowymi<b/> znajdującymi się w najbliższym otoczeniu.',
           'MESH to najtańszy i najbardziej niezawodny sposób budowy infrastruktury zdalnego monitoringu mediów, gwarantujący pełną kontrolę i minimalne koszty utrzymania.',
+          'Dane z urządzeń są natychmiast dostępne na platformie webowej, gdzie użytkownik odczytuje, porównuje i analizuje je w czasie rzeczywistym.',
         ],
       },
     },
