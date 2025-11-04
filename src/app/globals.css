@@ -80,6 +80,10 @@
   justify-content: space-between;
 }
 
+.kayon-shadow-text {
+  text-shadow: 1px 1px 4px #000000a6;
+}
+
 @media screen and (min-width: 390px) {
   .hero-right-col {
     transform: translateY(120px);
