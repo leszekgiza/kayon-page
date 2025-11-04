@@ -158,7 +158,7 @@ export default function SystemyPage() {
             </div>
           </div>
 
-          <div className='xl:h-[510px] flex place-content-center rounded-3xl border-2 border-[#eaeaea] shadow-2xl shadow-neutral-500'>
+          <div className='xl:h-[510px] flex place-content-center rounded-3xl border-2 border-[#eaeaea]'>
             <Image
               src="/systemy-mesh.png"
               alt="Walk-by system"
