@@ -36,30 +36,27 @@ const FeaturesSection = () => {
     <>
       <section id="dla-kogo" className="bg-gradient-to-r from-[#d9d9d9] via-[#cbcbcb] to-[#bcbcbc]">
 
-        <div className="mx-auto max-w-[1660px] 2xl:h-[500px] flex flex-col md:flex-row">
+        <div className="mx-auto max-w-[1400px] 2xl:h-[500px] flex flex-col md:flex-row">
           {featureCards.map((feature, index) => {
             const bgColors = ['bg-[#d9d9d9]', 'bg-[#cbcbcb]', 'bg-[#bcbcbc]'];
 
             return (
               <motion.div
                 key={feature.title}
-                className={`p-8 xl:p-20 first:2xl:ps-[122px] md:w-1/3 flex flex-col gap-2 items-start justify-between ${bgColors[index]}`}
+                className={`2xl:ps-20 2xl:first:ps-0 py-8 xl:py-20 flex flex-col flex-grow gap-2 items-start justify-between ${bgColors[index]}`}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
-                <div className="md:min-w-1/3 flex size-[48px] shrink-0 items-center justify-center rounded-[30px] bg-[#747171] content-stretch md:size-[57px]">
+                <div className="flex size-[48px] shrink-0 items-center justify-center rounded-[30px] bg-[#747171] content-stretch md:size-[57px]">
                   <span className="material-symbols-rounded relative shrink-0 text-[20px] leading-none text-white md:text-[24px]">
                     check
                   </span>
                 </div>
-
-                {/* Title - Desktop: w-[364px] text-[32px], Mobile: responsive */}
-                <p className="shrink-0 w-full text-[24px] font-bold leading-[1.2] text-[#1d1d1b] md:max-w-[280px] md:text-[32px]">
+                <p className="text-[24px] font-bold leading-[1.2] text-[#1d1d1b] md:max-w-[280px] md:text-[32px]">
                   {parse(feature.title)}
                 </p>
-
                 <ButtonSimple text={features.readMoreLabel} callbackFunction={() => setActiveFeature(index)} bgClass="bg-[#1d1d1b]" />
               </motion.div>
             );
