@@ -36,14 +36,14 @@ const FeaturesSection = () => {
     <>
       <section id="dla-kogo" className="bg-gradient-to-r from-[#d9d9d9] via-[#cbcbcb] to-[#bcbcbc]">
 
-        <div className="xl:px-20 2xl:px-0 mx-auto max-w-[1400px] 2xl:h-[500px] flex flex-col md:flex-row">
+        <div className="lg:px-10 xl:px-20 2xl:px-0 mx-auto max-w-[1400px] 2xl:h-[500px] flex flex-col md:flex-row">
           {featureCards.map((feature, index) => {
             const bgColors = ['bg-[#d9d9d9]', 'bg-[#cbcbcb]', 'bg-[#bcbcbc]'];
 
             return (
               <motion.div
                 key={feature.title}
-                className={`xl:ps-16 xl:first:ps-0 2xl:ps-20 2xl:first:ps-0 py-8 xl:py-20 flex flex-col flex-grow gap-2 items-start justify-between ${bgColors[index]}`}
+                className={`lg:ps-12 lg:first:ps-0 xl:ps-16 2xl:ps-20 py-8 xl:py-20 flex flex-col flex-grow gap-2 items-start justify-between ${bgColors[index]}`}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
