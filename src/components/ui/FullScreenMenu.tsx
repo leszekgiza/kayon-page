@@ -27,12 +27,33 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
+          <div className='kayon-top-shapes absolute z-10 top-0 left-1/2 -translate-x-1/2 flex pointer-events-none'>
+            <Image
+              className=""
+              src="/ts-shape.svg"
+              alt=""
+              width={150}
+              height={115}
+              priority
+              draggable={false}
+            />
+            <Image
+              className=""
+              src="/te-shape.svg"
+              alt=""
+              width={150}
+              height={115}
+              priority
+              draggable={false}
+            />
+          </div>
+
           <Image
-            className="w-full max-w-[1250px] h-auto absolute z-10 top-[-40px] left-1/2 -translate-x-1/2 pointer-events-none"
-            src="/top-shapes.svg"
+            className="max-md:w-[40px] w-[50px] h-auto absolute z-10 bottom-0 left-1/2 -translate-x-1/2 pointer-events-none"
+            src="/bottom-shape.svg"
             alt=""
-            width={375}
-            height={50}
+            width={50}
+            height={85}
             priority
             draggable={false}
           />
@@ -63,7 +84,7 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
 
             <div
               id='fullscreen-menu-right-col'
-              className="mx-auto px-[5vw] max-2xl:pb-8 2xl:pe-52 md:w-[50%] lg:flex flex-col gap-2 2xl:gap-[40px] justify-around">
+              className="mx-auto px-[5vw] max-2xl:pb-8 lg:flex flex-col gap-2 2xl:gap-[40px] justify-around">
               <nav className="flex flex-col gap-8">
                 {menuOverlay.items.map((item) => (
                   <Link
@@ -97,7 +118,7 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
                     key={lang}
                     type="button"
                     onClick={() => setLanguage(lang)}
-                    className="px-[30px] py-5 flex items-center justify-center rounded-[30px] bg-[#1d1d1b] text-base font-bold leading-none transition-colors hover:bg-[#2d2d2b]"
+                    className="px-[30px] py-5 h-[51px] flex items-center justify-center rounded-[30px] bg-[#1d1d1b] text-base font-bold leading-none transition-colors hover:bg-[#2d2d2b]"
                     aria-label={`Switch to ${LANGUAGE_LABELS[lang]}`}
                   >
                     {LANGUAGE_LABELS[lang]}

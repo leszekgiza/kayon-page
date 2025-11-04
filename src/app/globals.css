@@ -71,6 +71,11 @@
   top: calc(100vh - 140px);
 }
 
+.kayon-top-shapes {
+  min-width: 75vw;
+  justify-content: space-between;
+}
+
 @media screen and (min-width: 768px) {
   .scroll-down-button {
     top: calc(100vh - 220px);
