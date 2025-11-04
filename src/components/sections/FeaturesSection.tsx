@@ -34,7 +34,6 @@ const FeaturesSection = () => {
 
   return (
     <>
-      {/* 02 DLACZEGO - Figma: 1920x500px, 3 cards without gaps */}
       <section id="dla-kogo" className="bg-gradient-to-r from-[#d9d9d9] via-[#cbcbcb] to-[#bcbcbc]">
 
         <div className="mx-auto max-w-[1660px] 2xl:h-[500px] flex flex-col md:flex-row">
