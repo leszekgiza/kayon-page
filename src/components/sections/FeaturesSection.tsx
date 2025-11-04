@@ -34,8 +34,7 @@ const FeaturesSection = () => {
 
   return (
     <>
-      <section id="dla-kogo" className="bg-gradient-to-r from-[#d9d9d9] via-[#cbcbcb] to-[#bcbcbc]">
-
+      <section id="dla-kogo" className="bg-multi-gradient-gray">
         <div className="lg:px-10 xl:px-20 2xl:px-0 mx-auto max-w-[1400px] 2xl:h-[500px] flex flex-col md:flex-row">
           {featureCards.map((feature, index) => {
             const bgColors = ['bg-[#d9d9d9]', 'bg-[#cbcbcb]', 'bg-[#bcbcbc]'];

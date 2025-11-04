@@ -29,6 +29,9 @@ const config: Config = {
           }
         }
       },
+      backgroundImage: {
+        'multi-gradient-gray': 'linear-gradient(to right, #d9d9d9, #d9d9d9, #cbcbcb, #bcbcbc, #bcbcbc)',
+      },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
       },
