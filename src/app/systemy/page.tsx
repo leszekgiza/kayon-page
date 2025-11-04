@@ -48,9 +48,8 @@ export default function SystemyPage() {
       </div>
 
       <main className='px-4 lg:px-10 xl:px-20 2xl:px-0 py-12 md:py-20 lg:py-24 max-w-[1440px] mx-auto space-y-12 md:space-y-16 lg:space-y-20'>
-
         <motion.div
-          className="xl:flex justify-between"
+          className="lg:flex justify-between"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -77,19 +76,21 @@ export default function SystemyPage() {
             </div>
           </div>
 
-          <Image
-            src="/systemy-walkby.png"
-            alt="Walk-by system"
-            className="w-full h-auto xl:h-[510px] rounded-3xl border-2 border-[#eaeaea] object-cover"
-            width={375}
-            height={250}
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 911px"
-          />
+          <div className='xl:h-[510px] flex place-content-center rounded-3xl border-2 border-[#eaeaea]'>
+            <Image
+              src="/systemy-walkby.png"
+              alt="Walk-by system"
+              className="w-full h-auto object-contain"
+              width={375}
+              height={250}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 911px"
+            />
+          </div>
         </motion.div>
 
         {/* Fix (Star) System */}
         <motion.div
-          className="xl:flex justify-between"
+          className="lg:flex justify-between"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -117,20 +118,21 @@ export default function SystemyPage() {
             </div>
           </div>
 
-          <Image
-            src="/systemy-fix.png"
-            alt="Fix (Star) system"
-            width={375}
-            height={250}
-            className="w-full h-auto xl:h-[510px] rounded-3xl border-2 border-[#eaeaea] object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 911px"
-          />
-
+          <div className='xl:h-[510px] flex place-content-center rounded-3xl border-2 border-[#eaeaea]'>
+            <Image
+              src="/systemy-fix.png"
+              alt="Walk-by system"
+              className="w-full h-auto object-contain"
+              width={375}
+              height={250}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 911px"
+            />
+          </div>
         </motion.div>
 
         {/* MESH System */}
         <motion.div
-          className="xl:flex justify-between"
+          className="lg:flex justify-between"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -157,14 +159,16 @@ export default function SystemyPage() {
             </div>
           </div>
 
-          <Image
-            src="/systemy-mesh.png"
-            alt="MESH system"
-            width={375}
-            height={250}
-            className="w-full h-auto xl:h-[510px] rounded-3xl border-2 border-[#eaeaea] object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 911px"
-          />
+          <div className='xl:h-[510px] flex place-content-center rounded-3xl border-2 border-[#eaeaea]'>
+            <Image
+              src="/systemy-mesh.png"
+              alt="Walk-by system"
+              className="w-full h-auto object-contain"
+              width={375}
+              height={250}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 911px"
+            />
+          </div>
         </motion.div>
       </main>
 
