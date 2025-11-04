@@ -107,7 +107,7 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
 
               <div className="my-8 lg:my-2 h-px w-[338px] bg-[#747171]" />
               <a
-                className="mt-4 2xl:mt-0 block text-center rounded-full bg-[#2cbceb] md:px-[30px] py-4 md:py-5 text-xl md:text-2xl font-bold leading-[1.2] text-white transition-colors hover:bg-[#2cbceb]/80"
+                className="mt-4 2xl:mt-0 w-[338px] block text-center rounded-full bg-[#2cbceb] py-4 md:py-5 text-xl md:text-2xl font-bold leading-[1.2] text-white transition-colors hover:bg-[#2cbceb]/80"
                 href="https://openmetering.co/"
                 rel='nofollow noreferrer noopener'
                 title='Login'>
