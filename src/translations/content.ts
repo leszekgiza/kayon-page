@@ -150,8 +150,9 @@ export interface ProductDetailContent {
   title: string;
   intro: string;
   description: string[];
-  features: string[];
   featuresHeading: string;
+  features: string[];
+  textAfterFeatures?: string;
   downloads?: ProductDownloadContent[];
   image?: {
     src: string;
@@ -528,7 +529,7 @@ const pl: ContentStructure = {
       {
         title: 'Moduły komunikacyjne',
         slug: 'moduly-komunikacyjne',
-        items: ['Modularis One', 'WMBus Smart+', 'MBus Smart+ ', 'WMBus MicroClima', 'WMBus RC12'],
+        items: ['Modularis One', 'WMBus Smart+', 'MBus Smart+', 'WMBus MicroClima', 'WMBus RC12'],
       },
       {
         title: 'Ciepłomierze',
@@ -820,8 +821,6 @@ const pl: ContentStructure = {
         alt: 'Wodomierz Wehrle ETK(W)-EAX',
       },
       description: [
-        'Wodomierz ETK(W)-EAX jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.',
-        'Pobierz dokumentację: https://wehrle.de/en/metering/water/single-jet-dry-meters/single-jet-dry-modularis/#',
       ],
       featuresHeading: 'Najważniejsze cechy',
       features: [
@@ -829,68 +828,92 @@ const pl: ContentStructure = {
         'Zakres temperatur: do 50°C (zimna woda) oraz do 90°C (ciepła woda)',
         'Maksymalne natężenie przepływu (Q3): 2,5-4 m<sup>3</sup>/h',
         'Wysoka klasa dokładności pomiaru MID: R250 poziomo, R80 pionowo',
-        'Obracane w zakresię360 liczydło',
+        'Obracane w zakresię 360 liczydło',
         'Obudowa z niklowanego mosiądzu',
         'Klasa szczelności IP64',
         'Wytrzymałość do 1,6 MPa',
       ],
+      textAfterFeatures: 'Wodomierz ETK(W)-EAX jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.'
     },
 
     'maddalena-sj-plus-evo': {
       slug: 'maddalena-sj-plus-evo',
       heading: 'Opis poszczególnych wodomierzy',
-      title: 'Maddalena<br /><span className="font-medium">SJ PLUS-EVO</span>',
+      title: 'Wodomierz Maddalena<br /><span className="font-medium">SJ PLUS-EVO</span>',
       intro:
-        'Wodomierz SJ PLUS-EVO to nowoczesne rozwiązanie do zastosowań domowych, charakteryzujące sięnajwyższą jakością wykonania i niezawodną precyzją pomiarówa.',
+        'Wodomierz SJ PLUS-EVO to nowoczesne rozwiązanie do zastosowań domowych, charakteryzujące się najwyższą jakością wykonania i niezawodną precyzją pomiarową.',
       image: {
         src: '/images/products/wodomierze/maddalena-sj-plus-evo.png',
         alt: 'Wodomierz Maddalena SJ PLUS-EVO',
       },
       description: [
-        'Wodomierz SJ PLUS-EVO jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.',
-        'Pobierz dokumentację: https://www.maddalena.it/wp-content/uploads/catalog-pdf/schedatecnica-sjplus-en-v4.pdf',
       ],
       featuresHeading: 'Najważniejsze cechy',
       features: [
         'Gotowy do integracji z nowoczesnymi systemami zdalnego odczytu (przewodowe i radiowe moduły komunikacyjne)',
         'Zakres temperatur: do 90°C (ciepła woda)',
-        'Maksymalne natężenie przepływu (Q3): 1,6 m3/h dla DN15, 4,0 m3/h dla DN20',
+        'Maksymalne natężenie przepływu (Q3): 1,6 m<sup>3</sup>/h dla DN15, 4,0 m<sup>3</sup>/h dla DN20',
         'Wysoka klasa dokładności pomiaru MID: R maks. 160',
         'Możliwość instalacji w różnych pozycjach',
         'Obracane o 360 liczydło',
         'Wysoka odporność na działanie pola magnetycznego',
         'Dostępny z certyfikatem sanitarnym',
       ],
+      textAfterFeatures: 'Wodomierz SJ PLUS-EVO jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.'
     },
 
     'wasser-geraete-eco': {
       slug: 'wasser-geraete-eco',
       heading: 'Opis poszczególnych wodomierzy',
-      title: 'Wasser-Geräte<br /><span className="font-medium">ECO</span>',
+      title: 'Wodomierz Wasser - Geräte<br /><span className="font-medium">ECO</span>',
       intro:
-        'Wodomierz ECO od Wasser-Geräte zapewnia niezawodny pomiar zarówno ciepłej, jak i zimnej wody (do 90C) i jest idealnym rozwiązaniem do zastosowań mieszkaniowych i komercyjnych.',
+        'Wodomierz ECO od Wasser - Geräte zapewnia niezawodny pomiar zarówno ciepłej, jak i zimnej wody (do 90°C) i jest idealnym rozwiązaniem do zastosowań mieszkaniowych i komercyjnych.',
       image: {
         src: '/images/products/wodomierze/wasser-geraete-eco.png',
         alt: 'Wodomierz Wasser-Geräte ECO',
       },
       description: [
-        'Wodomierz ECO jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.',
-        'Pobierz dokumentację: https://www.wasser-geraete.de/products/wohnungswasserzaehlereco/#',
       ],
       featuresHeading: 'Najważniejsze cechy',
       features: [
-        'Gotowy do integracji z nakładką radiowa, M-Bus, impulsowa',
+        'Gotowy do integracji z nakładką radiową, M-Bus, impulsową',
         'Zakres temperatur: do 50°C (zimna woda), do 90°C (ciepła woda)',
-        'Maksymalne natężenie przepływu (Q3): 2,5 m3/h',
+        'Maksymalne natężenie przepływu (Q3): 2,5 m<sup>3</sup>/h',
         'Wysoka trwałość i odporność na uszkodzenia, konstrukcja odporna na kondensację',
-        'Opcje montazowe: poziomo/pionowo',
+        'Opcje montażowe: poziomo/pionowo',
       ],
+      textAfterFeatures: 'Wodomierz ECO jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.'
+    },
+
+    'apator-js-smart-plus': {
+      slug: 'apator-js-smart-plus',
+      heading: 'Opis poszczególnych wodomierzy',
+      title: 'Wodomierz Apator Powogaz<br /><span className="font-medium">JS Smart +</span>',
+      intro:
+        'Wodomierz Apator Powogaz JS Smart + to sprawdzone i niezawodne rozwiązanie od polskiego lidera rynku wodomierzy. Zaprojektowane do pomiaru przepływu wody w instalacjach domowych, cechujące się wysoką trwałością i odpornością na warunki środowiskowe.',
+      image: {
+        src: '/images/products/wodomierze/apator-js-smart-plus.png',
+        alt: 'Wodomierz Apator Powogaz JS Smart+',
+      },
+      description: [
+      ],
+      featuresHeading: 'Najważniejsze cechy',
+      features: [
+        'Gotowy do współpracy z różnymi nakładkami: Wireless M-Bus, impulsowa, M-Bus, indukcyjna',
+        'Zakres temperatur: do 50°C (zimna woda), do 90°C (ciepła woda)',
+        'Maksymalne natężenie przepływu (Q3): 1,6 m<sup>3</sup>/h (DN15), 2,5 m<sup>3</sup>/h (DN20), 4,0 m<sup>3</sup>/h (DN20; zależnie od modelu)',
+        'Wysoka klasa dokładności, zgodność z MID: R100 (H, DN15/20), R50 (V, DN15/20)',
+        'Obudowa odporna na działanie silnego zewnętrznego pola magnetycznego',
+        'Wytrzymałość do 16 bar',
+        'Możliwość montażu: liczydło na górze lub z boku (poziomy/pionowy montaż)',
+      ],
+      textAfterFeatures: 'Wodomierz JS Smart +  jest w pełni kompatybilny z modułami komunikacyjnymi MBus Smart+ i WMBus Smart+.'
     },
 
     'gwf-sonico-nano': {
       slug: 'gwf-sonico-nano',
       heading: 'Opis poszczególnych wodomierzy',
-      title: 'GWF Sonico<br /><span className="font-medium">Nano</span>',
+      title: 'Wodomierz GWF<br /><span className="font-medium">Sonico Nano</span>',
       intro:
         'GWF Sonico Nano to zaawansowany, ultradźwiękowy wodomierz oferujący najwyższą precyzję i trwałość w pomiarach zimnej wody w budownictwie mieszkaniowym oraz w przemyśle.',
       image: {
@@ -898,45 +921,18 @@ const pl: ContentStructure = {
         alt: 'Wodomierz GWF Sonico Nano',
       },
       description: [
-        'Sonico Nano to idealne rozwiązanie dla wszystkich poszukujących wysokiej precyzji oraz niezawodności pomiarów.',
-        'Pobierz dokumentację: https://productfinder.gwf.ch/uploads_productfinder/downloads/Sonico_Brochure_Enlit-Version-2024_KIe10200_web_v04.pdf',
       ],
       featuresHeading: 'Najważniejsze cechy',
       features: [
         'Ultradźwiękowy wodomierz kompatybilny z zaawansowanymi systemami zdalnego odczytu (LoRaWAN, Wireless M-Bus)',
         'Zakres temperatur: do 50°C (zimna woda), do 90°C (ciepła woda)',
-        'Maksymalne natężenie przepływu (Q3): 1,6 / 2,5 / 4 m3/h (w zależności od wybranego modelu DN)',
+        'Maksymalne natężenie przepływu (Q3): 1,6 / 2,5 / 4 m<sup>3</sup>/h (w zależności od wybranego modelu DN)',
         'Wysoka klasa dokładności pomiaru MID: R1000',
         'Bardzo niskie straty ciśnienia',
         'Prosta integracja z systemami automatyzacji',
         'Czas pracy na baterii do 20 lat',
       ],
-    },
-
-    'apator-js-smart-plus': {
-      slug: 'apator-js-smart-plus',
-      heading: 'Opis poszczególnych wodomierzy',
-      title: 'Apator<br /><span className="font-medium">Powogaz JS Smart+</span>',
-      intro:
-        'Wodomierz Apator Powogaz JS Smart+ to sprawdzone i niezawodne rozwiązanie od polskiego lidera rynku wodomierzy. Zaprojektowane do pomiaru przepływu wody w instalacjach domowych, cechujące sięwysoką trwałością i odpornością na warunki środowiskowe.',
-      image: {
-        src: '/images/products/wodomierze/apator-js-smart-plus.png',
-        alt: 'Wodomierz Apator Powogaz JS Smart+',
-      },
-      description: [
-        'Wodomierz JS Smart+ jest w pełni kompatybilny z modulami komunikacyjnymi MBus Smart+ i WMBus Smart+.',
-        'Pobierz dokumentację: https://api.apator.com/uploads/oferta/woda-i-cieplo/wodomierze/smart-plus/smart-plus-karta-katalogowa.pdf',
-      ],
-      featuresHeading: 'Najważniejsze cechy',
-      features: [
-        'Gotowy do współpracy z różnymi nakładkami: Wireless M-Bus, impulsowa, M-Bus, indukcyjna',
-        'Zakres temperatur: do 50°C (zimna woda), do 90°C (ciepła woda)',
-        'Maksymalne natężenie przepływu (Q3): 1,6 m3/h (DN15), 2,5 m3/h (DN20), 4,0 m3/h (DN20; zależnie od modelu)',
-        'Wysoka klasa dokładności, zgodność z MID: R100 (H, DN15/20), R50 (V, DN15/20)',
-        'Obudowa odporna na działanie silnego zewnętrznego pola magnetycznego',
-        'Wytrzymałość do 16 bar',
-        'Możliwość montażu: liczydło na górze lub z boku (poziomy/pionowy montaz)',
-      ],
+      textAfterFeatures: 'Sonico Nano to idealne rozwiązanie dla wszystkich poszukujących wysokiej precyzji oraz niezawodności pomiarów.'
     },
 
     'engelmann-senso-star-e': {

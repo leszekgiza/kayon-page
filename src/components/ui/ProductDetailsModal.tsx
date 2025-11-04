@@ -41,28 +41,30 @@ const ProductDetailsModal = ({ items, expandedProduct, setExpandedProduct }: any
 
                 return (
                   <>
-                    <h2 className="pr-14 text-xl font-semibold text-primary md:text-2xl">{parse(product.title)}</h2>
+                    <h2 className="pr-14 text-xl text-primary md:text-2xl">
+                      {parse(product.title)}
+                    </h2>
 
-                    {/* Product intro */}
+                    {/* TITLE */}
                     {product.intro && (
                       <p className="mt-6 text-lg leading-relaxed text-primary font-bold">{parse(product.intro)}</p>
                     )}
 
-                    {/* Additional description paragraphs */}
+                    {/* DESC */}
                     {product.description && product.description.length > 0 && (
                       <div className="mt-4 space-y-3">
                         {product.description.map((paragraph: string, index: number) => (
-                          <p key={index} className="text-base leading-relaxed text-primary/90">
+                          <p key={index} className="text-base leading-relaxed text-primary">
                             {paragraph}
                           </p>
                         ))}
                       </div>
                     )}
 
-                    {/* Features section */}
+                    {/* FEATURES */}
                     <div className="mt-6">
                       <h3 className="text-lg font-semibold text-primary">{product.featuresHeading}</h3>
-                      <ul className="mt-4 space-y-3 text-sm text-primary/90 md:text-base">
+                      <ul className="mt-4 space-y-3 text-sm text-primary md:text-base">
                         {product.features.map((feature: string) => (
                           <li key={feature} className="flex items-start gap-3">
                             <span className="material-symbols-rounded mt-0.5 text-[20px] leading-none text-[#77bb61]">arrow_right</span>
@@ -71,8 +73,19 @@ const ProductDetailsModal = ({ items, expandedProduct, setExpandedProduct }: any
                         ))}
                       </ul>
                     </div>
+
+                    {/* TEXT AFTER FEATURES */}
+                    {product.textAfterFeatures && product.textAfterFeatures.length > 0 &&
+                      <div className="mt-4 space-y-3">
+                        <p className="text-base leading-relaxed text-primary">
+                          {product.textAfterFeatures}
+                        </p>
+                      </div>
+                    }
+
                   </>
                 );
+
               })()}
             </motion.div>
           </motion.div>
