@@ -75,7 +75,6 @@ const ProductList = ({ slug }: ProductListProps) => {
 
               {/* Center Column - Description Card */}
               <div className="md:w-[500px] rounded-[30px] border-2 border-[#EAEAEA] text-primary px-8 py-8 md:px-10 md:py-10">
-                {/* <h3 className="text-base text-primary md:text-lg">{parse(detail.featuresHeading)}</h3> */}
                 <p className="mt-2 text-xl font-bold">{parse(detail.intro)}</p>
                 <ul className="mt-5 space-y-3 text-sm md:text-base">
                   {visibleFeatures.map((feature) => (
@@ -83,7 +82,7 @@ const ProductList = ({ slug }: ProductListProps) => {
                       <span className="material-symbols-rounded mt-0.5 text-[20px] leading-none text-[#77bb61]">
                         arrow_right
                       </span>
-                      <span>{feature}</span>
+                      <span>{parse(feature)}</span>
                     </li>
                   ))}
                 </ul>
@@ -178,7 +177,7 @@ const ProductList = ({ slug }: ProductListProps) => {
                         {product.features.map((feature) => (
                           <li key={feature} className="flex items-start gap-3">
                             <span className="material-symbols-rounded mt-0.5 text-[20px] leading-none text-[#77bb61]">arrow_right</span>
-                            <span>{feature}</span>
+                            <span>{parse(feature)}</span>
                           </li>
                         ))}
                       </ul>

@@ -633,7 +633,7 @@ const pl: ContentStructure = {
     {
       slug: 'wodomierze',
       title: 'Wodomierze',
-      description: 'Oferujemy wyłącznie urządzenia najwyższej jakości: niemieckich producentów Wehrle i Wasser - Geräte, szwajcarskiego GWF oraz wiodącej polskiej marki Apator Powogaz. Dla pełnego bezpieczeństwa i wygody oferujemy też niezawodny system odczytówy All in Kayon, który integruje wodomierze i zwiększa ich funkcjonalność.',
+      description: 'Oferujemy wyłącznie urządzenia najwyższej jakości: niemieckich producentów Wehrle i Wasser - Geräte, szwajcarskiego GWF oraz wiodącej polskiej marki Apator Powogaz. Dla pełnego bezpieczeństwa i wygody oferujemy też niezawodny system odczytowy All in Kayon, który integruje wodomierze i zwiększa ich funkcjonalność.',
       items: ['wehrle-etkw-eax', 'maddalena-sj-plus-evo', 'wasser-geraete-eco', 'apator-js-smart-plus', 'gwf-sonico-nano'],
       moreButtonLabel: 'Więcej',
       downloadPdfButtonLabel: 'Pobierz PDF',
@@ -809,13 +809,12 @@ const pl: ContentStructure = {
         { label: 'Pobierz (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
       ],
     },
-
     'wehrle-etkw-eax': {
       slug: 'wehrle-etkw-eax',
       heading: 'Opis poszczególnych wodomierzy',
-      title: 'Wehrle<br /><span className="font-medium">ETK(W)-EAX</span>',
+      title: 'Wodomierz Wehrle<br /><span className="font-medium">ETK(W)-EAX</span>',
       intro:
-        'Wodomierz jednostrumieniowy Wehrle to precyzyjne i niezawodne urządzenie do pomiaru zużycia wody w instalacjach domowych i komercyjnych, zaprojektowane z myślą o długotrwałą pracę w trudnych warunkach.',
+        'Wodomierz jednostrumieniowy  Wehrle to precyzyjne i niezawodne urządzenie do pomiaru zużycia wody w instalacjach domowych i komercyjnych, zaprojektowane z myślą o długotrwałej pracy w trudnych warunkach.',
       image: {
         src: '/images/products/wodomierze/wehrle-etkw-eax.png',
         alt: 'Wodomierz Wehrle ETK(W)-EAX',
@@ -828,7 +827,7 @@ const pl: ContentStructure = {
       features: [
         'Gotowy do integracji z dowolnym systemem AMR',
         'Zakres temperatur: do 50°C (zimna woda) oraz do 90°C (ciepła woda)',
-        'Maksymalne natężenie przepływu (Q3): 2,5-4 m3/h',
+        'Maksymalne natężenie przepływu (Q3): 2,5-4 m<sup>3</sup>/h',
         'Wysoka klasa dokładności pomiaru MID: R250 poziomo, R80 pionowo',
         'Obracane w zakresię360 liczydło',
         'Obudowa z niklowanego mosiądzu',
