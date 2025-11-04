@@ -1855,7 +1855,7 @@ const en: ContentStructure = {
       features: [
         'Ready for integration with any AMR system',
         'Temperature range: up to 50°C (cold water) and up to 90°C (hot water)',
-        'Maximum flow rate (Q3): 2.5-4 m3/h',
+        'Maximum flow rate (Q3): 2.5-4 m<sup>3</sup>/h',
         'High MID measurement accuracy class: R250 horizontal, R80 vertical',
         '360 rotatable register',
         'Nickel-plated brass housing',
@@ -1885,7 +1885,7 @@ const en: ContentStructure = {
       features: [
         'Ready for integration with modern remote reading systems (wired and radio communication modules)',
         'Temperature range: up to 90°C (hot water)',
-        'Maximum flow rate (Q3): 1.6 m3/h for DN15, 4.0 m3/h for DN20',
+        'Maximum flow rate (Q3): 1.6 m<sup>3</sup>/h for DN15, 4.0 m<sup>3</sup>/h for DN20',
         'High MID measurement accuracy class: R max. 160',
         'Installation possibility in various positions',
         '360 rotatable register',
@@ -1915,7 +1915,7 @@ const en: ContentStructure = {
       features: [
         'Ready for integration with radio module, M-Bus, pulse output',
         'Temperature range: up to 50°C (cold water), up to 90°C (hot water)',
-        'Maximum flow rate (Q3): 2.5 m3/h',
+        'Maximum flow rate (Q3): 2.5 m<sup>3</sup>/h',
         'High durability and damage resistance, condensation-resistant construction',
         'Mounting options: horizontal/vertical',
       ],
@@ -1942,7 +1942,7 @@ const en: ContentStructure = {
       features: [
         'Ultrasonic water meter compatible with advanced remote reading systems (LoRaWAN, Wireless M-Bus)',
         'Temperature range: up to 50°C (cold water), up to 90°C (hot water)',
-        'Maximum flow rate (Q3): 1.6 / 2.5 / 4 m3/h (depending on selected DN model)',
+        'Maximum flow rate (Q3): 1.6 / 2.5 / 4 m<sup>3</sup>/h (depending on selected DN model)',
         'High MID measurement accuracy class: R1000',
         'Very low pressure losses',
         'Simple integration with automation systems',
@@ -1971,7 +1971,7 @@ const en: ContentStructure = {
       features: [
         'Ready to work with various modules: Wireless M-Bus, pulse, M-Bus, inductive',
         'Temperature range: up to 50°C (cold water), up to 90°C (hot water)',
-        'Maximum flow rate (Q3): 1.6 m3/h (DN15), 2.5 m3/h (DN20), 4.0 m3/h (DN20; depending on model)',
+        'Maximum flow rate (Q3): 1.6 m<sup>3</sup>/h (DN15), 2.5 m<sup>3</sup>/h (DN20), 4.0 m<sup>3</sup>/h (DN20; depending on model)',
         'High accuracy class, MID compliance: R100 (H, DN15/20), R50 (V, DN15/20)',
         'Housing resistant to strong external magnetic fields',
         'Pressure resistance up to 16 bar',
@@ -2863,7 +2863,7 @@ const de: ContentStructure = {
       features: [
         'Bereit zur Integration mit jedem AMR-System',
         'Temperaturbereich: bis 50°C (Kaltwasser) und bis 90°C (Warmwasser)',
-        'Maximale Durchflussrate (Q3): 2,5-4 m3/h',
+        'Maximale Durchflussrate (Q3): 2,5-4 m<sup>3</sup>/h',
         'Hohe MID-Messgenauigkeitsklasse: R250 horizontal, R80 vertikal',
         'Um 360 drehbares Zaehlwerk',
         'Gehaeuse aus vernickeltem Messing',
@@ -2893,7 +2893,7 @@ const de: ContentStructure = {
       features: [
         'Bereit zur Integration mit modernen Fernablesungssystemen (kabelgebundene und Funk-Kommunikationsmodule)',
         'Temperaturbereich: bis 90°C (Warmwasser)',
-        'Maximale Durchflussrate (Q3): 1,6 m3/h für DN15, 4,0 m3/h für DN20',
+        'Maximale Durchflussrate (Q3): 1,6 m<sup>3</sup>/h für DN15, 4,0 m<sup>3</sup>/h für DN20',
         'Hohe MID-Messgenauigkeitsklasse: R max. 160',
         'Installationsmoeglichkeit in verschiedenen Positionen',
         'Um 360 drehbares Zaehlwerk',
@@ -2923,7 +2923,7 @@ const de: ContentStructure = {
       features: [
         'Bereit zur Integration mit Funkmodul, M-Bus, Impulsausgang',
         'Temperaturbereich: bis 50°C (Kaltwasser), bis 90°C (Warmwasser)',
-        'Maximale Durchflussrate (Q3): 2,5 m3/h',
+        'Maximale Durchflussrate (Q3): 2,5 m<sup>3</sup>/h',
         'Hohe Langlebigkeit und Beschaedigungsbestaendigkeit, kondensationsbestaendige Konstruktion',
         'Montageoptionen: horizontal/vertikal',
       ],
@@ -2950,7 +2950,7 @@ const de: ContentStructure = {
       features: [
         'Ultraschall-Wasserzaehler kompatibel mit fortschrittlichen Fernablesungssystemen (LoRaWAN, Wireless M-Bus)',
         'Temperaturbereich: bis 50°C (Kaltwasser), bis 90°C (Warmwasser)',
-        'Maximale Durchflussrate (Q3): 1,6 / 2,5 / 4 m3/h (je nach gewaehltem DN-Modell)',
+        'Maximale Durchflussrate (Q3): 1,6 / 2,5 / 4 m<sup>3</sup>/h (je nach gewaehltem DN-Modell)',
         'Hohe MID-Messgenauigkeitsklasse: R1000',
         'Sehr geringe Druckverluste',
         'Einfache Integration mit Automatisierungssystemen',
@@ -2979,7 +2979,7 @@ const de: ContentStructure = {
       features: [
         'Bereit zur Zusammenarbeit mit verschiedenen Modulen: Wireless M-Bus, Impuls, M-Bus, induktiv',
         'Temperaturbereich: bis 50°C (Kaltwasser), bis 90°C (Warmwasser)',
-        'Maximale Durchflussrate (Q3): 1,6 m3/h (DN15), 2,5 m3/h (DN20), 4,0 m3/h (DN20; je nach Modell)',
+        'Maximale Durchflussrate (Q3): 1,6 m<sup>3</sup>/h (DN15), 2,5 m<sup>3</sup>/h (DN20), 4,0 m<sup>3</sup>/h (DN20; je nach Modell)',
         'Hohe Genauigkeitsklasse, MID-Konformitaet: R100 (H, DN15/20), R50 (V, DN15/20)',
         'Gehaeuse bestaendig gegen starke externe Magnetfelder',
         'Druckfestigkeit bis 16 bar',
