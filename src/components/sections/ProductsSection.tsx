@@ -65,7 +65,7 @@ const ProductsSection = () => {
         </div>
 
         <div id='product-section-right-col' className="ps-4 lg:ps-10 py-8 xl:ps-20 2xl:ps-10 2xl:py-24 2xl:min-h-[800px] relative flex flex-col justify-end gap-8 bg-[#484848]">
-          <div className="lg:px-0">
+          <div className="lg:px-0 overflow-hidden">
             <motion.div
               className="flex gap-10 2xl:gap-[40px]"
               animate={{ x: `-${currentIndex * cardWithGap}px` }}
