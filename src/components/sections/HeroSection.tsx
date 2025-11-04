@@ -39,19 +39,30 @@ const HeroSection = () => {
   }, [isModalOpen]);
 
   return (
-    <section className="relative min-h-[800px] h-screen 2xl:max-h-[1280px] flex flex-col xl:flex-row items-center bg-black text-white">
-      <Image
-        className="w-full max-w-[1250px] h-auto absolute z-10 top-0 lg:top-[-40px] left-1/2 -translate-x-1/2 pointer-events-none"
-        src="/top-shapes.svg"
-        alt=""
-        width={375}
-        height={50}
-        priority
-        draggable={false}
-      />
+    <section className="max-md:pt-8 relative min-h-[800px] h-screen 2xl:max-h-[1280px] flex flex-col lg:flex-row items-center bg-black text-white">
+      <div className='kayon-top-shapes absolute z-10 top-0 left-1/2 -translate-x-1/2 flex pointer-events-none'>
+        <Image
+          className=""
+          src="/ts-shape.svg"
+          alt=""
+          width={150}
+          height={115}
+          priority
+          draggable={false}
+        />
+        <Image
+          className=""
+          src="/te-shape.svg"
+          alt=""
+          width={150}
+          height={115}
+          priority
+          draggable={false}
+        />
+      </div>
       <div className="absolute z-0 inset-0 pointer-events-none">
         <Image
-          src="/hero-top.png"
+          src="/hero-bg.jpg"
           alt={hero.imageAlt}
           fill
           priority
@@ -63,9 +74,9 @@ const HeroSection = () => {
 
       <div id="hero-left-col" className='hidden xl:block xl:min-w-[50%]'></div>
 
-      {scrollPosition.top < 600 && <ScrollDownButton />}
+      <ScrollDownButton />
 
-      <div id="hero-right-col" className="px-8 xl:ps-16 xl:max-w-[550px] 2xl:max-w-[675px] absolute xl:relative translate-y-24 lg:translate-y-52 xl:translate-y-2 z-10">
+      <div id="hero-right-col" className="hero-right-col lg:w-full px-8 xl:ps-16 xl:max-w-[550px] 2xl:max-w-[675px] absolute xl:relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -80,32 +91,18 @@ const HeroSection = () => {
           transition={{ delay: 0.15, duration: 0.6 }}
           className="flex w-full flex-col gap-10"
         >
-          <h1 className="mt-12 w-full font-bold leading-[1.2] text-left text-pretty text-white md:max-w-[693px] text-[28px] md:text-[40px] xl:text-[28px] 2xl:text-[36px]">
+          <h1 className="mt-12 font-bold leading-[1.2] text-left text-pretty text-white md:max-w-[693px] text-[28px] md:text-[40px] xl:text-[28px] 2xl:text-[36px]">
             {hero.headline}
           </h1>
 
-          <div className="flex w-full flex-col items-start gap-2 rounded-[30px] border-2 border-[#484848] bg-white/10 p-6 backdrop-blur-xs lg:flex-row lg:items-center">
-            <p className="w-full text-base font-bold leading-[1.2] text-white md:w-[437px] md:text-[20px] text-pretty">
+          <div className="flex flex-col items-start gap-2 rounded-[30px] border-2 border-[#484848] p-6 lg:flex-row lg:justify-between lg:items-center">
+            <p className="lg:w-full text-base font-bold leading-[1.2] text-white md:w-[437px] md:text-[20px] text-pretty">
               {hero.body}
             </p>
-
             <ButtonSimple text={hero.ctaLabel} bgClass="bg-[#1d1d1b]" callbackFunction={() => setIsModalOpen(true)} />
-
           </div>
+
         </motion.div>
-      </div>
-
-      {/* Gradient from left - from #040718 to transparent, rotated 180° */}
-      <div className="absolute left-0 top-0 h-full lg:w-[390px] opatity-50 lg:opacity-80">
-        <div className="h-full w-full rotate-180 bg-gradient-to-l from-[#040718] to-transparent" />
-      </div>
-
-      {/* Gradient from right - from #040718 to transparent */}
-      <div className="absolute right-0 top-0 h-full w-[300px] lg:w-[946px] opatity-25 lg:opacity-80 bg-gradient-to-l from-[#040718] to-transparent" />
-
-      {/* Decorative large circle - Figma: left: -999px, top: -215px, rotated 180° */}
-      <div className="absolute left-1/2 translate-x-[-50%] hidden h-[626px] w-[1799px] md:block pointer-events-none">
-        <div className="h-full w-full rotate-180 rounded-[313px] border-2 border-[#eaeaea] opacity-[0.15]" />
       </div>
 
       <AnimatePresence initial={false}>
