@@ -1536,16 +1536,6 @@ const en: ContentStructure = {
       'All Kayon devices are manufactured entirely within the European Union in compliance with CE, RED and EMC standards.',
     groups: [
       {
-        title: 'Systems and platforms',
-        slug: 'systemy-i-platformy',
-        items: [
-          'Route One mobile app',
-          'OpenMetering platform (2WayCom, FOTA)',
-          'Distributor portal',
-          'Technology dashboard',
-        ],
-      },
-      {
         title: 'Infrastructure',
         slug: 'infrastruktura',
         items: ['Range One', 'AC concentrator', 'BAT concentrator'],
@@ -2538,16 +2528,6 @@ const de: ContentStructure = {
     footnote:
       'Alle Kayon-Geräte werden vollständig in der Europäischen Union produziert und erfüllen die Normen CE, RED und EMC.',
     groups: [
-      {
-        title: 'Systeme & Plattformen',
-        slug: 'systemy-i-platformy',
-        items: [
-          'Route One Mobile App',
-          'OpenMetering Plattform (2WayCom, FOTA)',
-          'Distributor-Portal',
-          'Technologie-Dashboard',
-        ],
-      },
       {
         title: 'Infrastruktur',
         slug: 'infrastruktura',
