@@ -3,6 +3,10 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
+import useDetectScroll, {
+  Axis,
+  Direction
+} from '@smakss/react-scroll-direction';
 import KayonLogo from '@/components/ui/KayonLogo';
 import { useContent } from '@/hooks/useContent';
 import ButtonSimple from '@/components/ui/ButtonSimple';
@@ -11,6 +15,7 @@ import ScrollDownButton from '../ui/ScrollDownButton';
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { hero } = useContent();
+  const { scrollDir, scrollPosition } = useDetectScroll();
 
   useEffect(() => {
     if (!isModalOpen) {
@@ -58,7 +63,7 @@ const HeroSection = () => {
 
       <div id="hero-left-col" className='hidden xl:block xl:min-w-[50%]'></div>
 
-      <ScrollDownButton />
+      {scrollPosition.top < 600 && <ScrollDownButton />}
 
       <div id="hero-right-col" className="px-8 xl:ps-16 xl:max-w-[550px] 2xl:max-w-[675px] absolute xl:relative translate-y-24 lg:translate-y-52 xl:translate-y-2 z-10">
         <motion.div

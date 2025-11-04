@@ -67,11 +67,15 @@
 
 /* CUSTOM STYLES */
 
-/* @media screen and (min-width: 1280px) {
-  .kayon-ps-fix {
-    padding-left: calc(100vw - 80px);
+.scroll-down-button {
+  top: calc(100vh - 140px);
+}
+
+@media screen and (min-width: 768px) {
+  .scroll-down-button {
+    top: calc(100vh - 220px);
   }
-} */
+}
 
 @media screen and (min-width: 1536px) {
   .kayon-ps-fix {

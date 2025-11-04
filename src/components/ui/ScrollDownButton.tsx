@@ -22,7 +22,7 @@ const ScrollDownButton = () => {
       {isVisible && (
         <motion.div
           id="scroll-down-button"
-          className="fixed z-30 left-1/2 translate-x-[-50%] top-[85vh] md:top-[60vw] lg:top-[45vw] xl:top-[35vw] 2xl:top-[70vh]"
+          className="scroll-down-button fixed z-30 left-1/2 translate-x-[-50%]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
