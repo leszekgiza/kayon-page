@@ -55,7 +55,7 @@ const ProductsSection = () => {
     <section id="produkty" className="bg-[##484848] bg-gradient-to-r from-[#343432] via-[#343432] to-[#484848] text-white">
       <div className="max-w-[1400px] mx-auto 2xl:flex items-center relative">
 
-        <div id='product-section-left-col' className="lg:px-10 xl:px-20 2xl:px-0 2xl:pe-10 md:py-24 pe-8 xl:pe-20 2xl:py-24 md:pe-16 2xl:h-[800px] w-full 2xl:max-w-[640px] flex flex-col justify-between gap-8 bg-[#343432]">
+        <div id='product-section-left-col' className="px-4 py-8 lg:px-10 xl:px-20 2xl:px-0 2xl:pe-10 md:py-24 pe-8 xl:pe-20 2xl:py-24 md:pe-16 2xl:h-[800px] w-full 2xl:max-w-[640px] flex flex-col justify-between gap-8 bg-[#343432]">
           <SectionLabel label={products.label} bgClass="bg-[#EAEAEA]" />
           <h2 className="text-3xl leading-tight md:text-[40px]">{parse(products.heading)}</h2>
           <SectionDescription text={products.description} textColorClass="text-white" />
@@ -64,7 +64,7 @@ const ProductsSection = () => {
           </p>
         </div>
 
-        <div id='product-section-right-col' className="ps-8 lg:ps-10 py-8 xl:ps-20 2xl:ps-10 2xl:py-24 2xl:min-h-[800px] relative flex flex-col justify-end gap-8 bg-[#484848]">
+        <div id='product-section-right-col' className="ps-4 lg:ps-10 py-8 xl:ps-20 2xl:ps-10 2xl:py-24 2xl:min-h-[800px] relative flex flex-col justify-end gap-8 bg-[#484848]">
           <div className="lg:px-0">
             <motion.div
               className="flex gap-10 2xl:gap-[40px]"
@@ -109,8 +109,7 @@ const ProductsSection = () => {
             </motion.div>
           </div>
 
-          {/* Navigation - PROGRESS 01 (dots on left, arrows on right) */}
-          <div className="2xl:mt-[70px] md:max-w-[888px] flex items-center justify-between px-4 lg:px-0">
+          <div className="2xl:mt-[70px] lg:px-0 md:max-w-[888px] flex items-center justify-between">
             {/* Dot Navigation - PROGRESS 01 */}
             <div className="flex items-center gap-[13px]">
               {Array.from({ length: maxIndex + 1 }).map((_, index) => (
