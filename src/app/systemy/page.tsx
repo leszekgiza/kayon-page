@@ -26,7 +26,7 @@ export default function SystemyPage() {
       <HeroSimple title={systemsPage.hero.title} desc={systemsPage.hero.description} />
 
       <div className='bg-[#eaeaea]'>
-        <section className="px-4 lg:px-10 xl:px-20 2xl:px-0 py-12 2xl:py-24 max-w-[1440px] mx-auto flex justify-between gap-12">
+        <section className="px-4 lg:px-10 xl:px-20 2xl:px-0 py-12 2xl:py-24 max-w-[1440px] mx-auto md:flex justify-between gap-12">
           <div className="xl:w-1/2 max-w-[620px] flex flex-col justify-center text-pretty text-[#1d1d1b]">
             <p className="mb-0 text-[28px] font-bold leading-[1.2] md:text-[34px] lg:text-[40px]">
               {parse(systemsPage.allInKayon.heading)}
@@ -36,7 +36,7 @@ export default function SystemyPage() {
               {parse(systemsPage.allInKayon.subheading)}
             </p>
             <p className="mb-0 text-[16px] leading-[1.3] md:text-[18px] lg:text-[20px] lg:leading-[1.2]">&nbsp;</p>
-            <p className="text-[14px] font-normal leading-[1.5] md:text-[15px] lg:text-[16px] lg:leading-[1.4]">
+            <p className="max-sm:mb-4 text-[14px] font-normal leading-[1.5] md:text-[15px] lg:text-[16px] lg:leading-[1.4]">
               {parse(systemsPage.allInKayon.description)}
             </p>
           </div>
