@@ -8,6 +8,14 @@ import ProductsSection from '@/components/sections/ProductsSection';
 import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
 import HeroSimple from '@/components/sections/HeroSimple';
+import ImageLightbox from '@/components/ui/ImageLightbox';
+
+const previewImages = [
+  { src: "/images/systems/2.png" },
+  { src: "/images/systems/3.png" },
+  { src: "/images/systems/4.png" },
+  { src: "/images/systems/5.png" },
+];
 
 export default function SystemyPage() {
   const { systemsPage } = useContent();
@@ -18,8 +26,8 @@ export default function SystemyPage() {
       <HeroSimple title={systemsPage.hero.title} desc={systemsPage.hero.description} />
 
       <div className='bg-[#eaeaea]'>
-        <section className="px-4 lg:px-10 xl:px-20 2xl:px-0 py-12 2xl:py-24 max-w-[1400px] mx-auto">
-          <div className="flex flex-col justify-center text-[#1d1d1b]">
+        <section className="px-4 lg:px-10 xl:px-20 2xl:px-0 py-12 2xl:py-24 max-w-[1440px] mx-auto flex justify-between gap-12">
+          <div className="xl:w-1/2 max-w-[620px] flex flex-col justify-center text-pretty text-[#1d1d1b]">
             <p className="mb-0 text-[28px] font-bold leading-[1.2] md:text-[34px] lg:text-[40px]">
               {parse(systemsPage.allInKayon.heading)}
             </p>
@@ -32,10 +40,14 @@ export default function SystemyPage() {
               {parse(systemsPage.allInKayon.description)}
             </p>
           </div>
+
+          <div className="xl:w-1/2">
+            <ImageLightbox images={previewImages} />
+          </div>
         </section>
       </div>
 
-      <main className='px-4 lg:px-10 xl:px-20 2xl:px-0 py-12 md:py-20 lg:py-24 max-w-[1400px] mx-auto space-y-12 md:space-y-16 lg:space-y-20'>
+      <main className='px-4 lg:px-10 xl:px-20 2xl:px-0 py-12 md:py-20 lg:py-24 max-w-[1440px] mx-auto space-y-12 md:space-y-16 lg:space-y-20'>
 
         <motion.div
           className="xl:flex justify-between"

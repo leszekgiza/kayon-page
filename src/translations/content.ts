@@ -476,7 +476,7 @@ const pl: ContentStructure = {
     allInKayon: {
       heading: 'System łączy wodomierze, ciepłomierze, moduły komunikacyjne i infrastrukturę odczytową w jedną, spójną sieć działającą niezawodnie i w pełni zdalnie.',
       subheading:
-        'Kluczowym elementem ekosystemu jest <b>platforma webowa Openmetering</b>, która zapewnia równoczesny dostęp do danych z tysięcy urządzeń w dowolnej lokalizacji. Dzięki funkcjonalnemu i prostemu interfejsowi, zarządzanie, analiza i wizualizacja danych stają się proste, jak nigdy dotąd.',
+        'Kluczowym elementem ekosystemu jest platforma webowa Openmetering, która zapewnia równoczesny dostęp do danych z tysięcy urządzeń w dowolnej lokalizacji. Dzięki funkcjonalnemu i prostemu interfejsowi, zarządzanie, analiza i wizualizacja danych stają się proste, jak nigdy dotąd.',
       description:
         'Użytkownicy mogą samodzielnie tworzyć zestawienia i raporty, uzyskując pełny obraz zużycia poszczególnych mediów oraz stanu infrastruktury – zawsze aktualny i zawsze pod kontrolą. <b>Trzy zróżnicowane rozwiązania pozyskiwania i transmisji danych – Walk-by, Fix i Mesh</b> – pozwalają dobrać system najlepiej dopasowany do sposobu pracy administratorów nieruchomości oraz firm zajmujących się instalacją, odczytami oraz rozliczaniem mediów.',
     },
