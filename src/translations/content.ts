@@ -486,7 +486,7 @@ const pl: ContentStructure = {
         subtitle: 'Szybki odczyt zdalny, bez błędów, bez przestojów.',
         features: [
           'Praca w terenie staje się prosta, jak nigdy dotąd. Przesył danych jest natychmiastowy i w pełni automatyczny, a dostęp do nich w systemie jest natychmiastowy.',
-          'Rozwiązanie pozwala szybko i bezbłędnie odczytywać dane z wodomierzy, ciepłomierzy, podzielników kosztów ogrzewania, gazomierzy i liczników prąd - bez fizycznego dostępu do nich.',
+          'Rozwiązanie pozwala szybko i bezbłędnie odczytywać dane z wodomierzy, ciepłomierzy, podzielników kosztów ogrzewania, gazomierzy i liczników prądu - bez fizycznego dostępu do nich.',
           'System oparty na urządzeniu Range ONE i aplikacji Route ONE umożliwia także bieżącą diagnostykę i serwis różnego typu urządzeń pomiarowych.',
           'Pełna integracja z platformą webową sprawia, że dane z odczytów automatycznie trafiają do systemu, gdzie można je natychmiast analizować i raportować.',
         ],
@@ -506,7 +506,7 @@ const pl: ContentStructure = {
         subtitle: 'Niezawodność i niskie koszty – sieć, która sama się naprawia.',
         features: [
           'Rozwiązanie jest inteligentną, samokonfigurującą i samonaprawiającą się siecią pomiarową, która zapewnia nieprzerwaną komunikację nawet w trudnych warunkach.',
-          'To pierwszy na rynku system, który opiera się <b>wyłącznie na jednym koncentratorze danych oraz sieci połączeń pomiędzy urządzeniami pomiarowymi<b/> znajdującymi się w najbliższym otoczeniu.',
+          'To pierwszy na rynku system, który opiera się <b>wyłącznie na jednym koncentratorze danych oraz sieci połączeń pomiędzy urządzeniami pomiarowymi</b> znajdującymi się w najbliższym otoczeniu.',
           'MESH to najtańszy i najbardziej niezawodny sposób budowy infrastruktury zdalnego monitoringu mediów, gwarantujący pełną kontrolę i minimalne koszty utrzymania.',
           'Dane z urządzeń są natychmiast dostępne na platformie webowej, gdzie użytkownik odczytuje, porównuje i analizuje je w czasie rzeczywistym.',
         ],

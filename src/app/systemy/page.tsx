@@ -99,7 +99,6 @@ export default function SystemyPage() {
           <div className="lg:w-1/2 2xl:w-1/3 2xl:min-w-[530px] flex flex-col items-start gap-6 md:gap-[30px]">
             <h2 className="whitespace-pre text-[32px] font-bold leading-[1.2] text-[#1d1d1b] md:text-[36px] lg:text-[40px]">
               <span>{parse(systemsPage.systems.fix.title)}</span>
-              <span className="font-normal"> (Star)</span>
             </h2>
             <p className="w-full text-[20px] font-normal leading-[1.3] text-[#1d1d1b] md:text-[22px] md:leading-[1.2] lg:w-[433px] lg:text-[24px]">
               {parse(systemsPage.systems.fix.subtitle)}
@@ -159,7 +158,7 @@ export default function SystemyPage() {
             </div>
           </div>
 
-          <div className='xl:h-[510px] flex place-content-center rounded-3xl border-2 border-[#eaeaea]'>
+          <div className='xl:h-[510px] flex place-content-center rounded-3xl border-2 border-[#eaeaea] shadow-2xl shadow-neutral-500'>
             <Image
               src="/systemy-mesh.png"
               alt="Walk-by system"
