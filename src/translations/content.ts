@@ -833,7 +833,10 @@ const pl: ContentStructure = {
         'Klasa szczelności IP64',
         'Wytrzymałość do 1,6 MPa',
       ],
-      textAfterFeatures: 'Wodomierz ETK(W)-EAX jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.'
+      textAfterFeatures: 'Wodomierz ETK(W)-EAX jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.',
+      downloads: [
+        { label: 'Pobierz (EN)', href: '/downloads/Wehrle ETK EN.pdf' },
+      ],
     },
 
     'maddalena-sj-plus-evo': {
@@ -859,7 +862,10 @@ const pl: ContentStructure = {
         'Wysoka odporność na działanie pola magnetycznego',
         'Dostępny z certyfikatem sanitarnym',
       ],
-      textAfterFeatures: 'Wodomierz SJ PLUS-EVO jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.'
+      textAfterFeatures: 'Wodomierz SJ PLUS-EVO jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.',
+      downloads: [
+        { label: 'Pobierz (EN)', href: '/downloads/Maddalena SJ PLUS EVO EN.pdf' },
+      ],
     },
 
     'wasser-geraete-eco': {
@@ -882,7 +888,10 @@ const pl: ContentStructure = {
         'Wysoka trwałość i odporność na uszkodzenia, konstrukcja odporna na kondensację',
         'Opcje montażowe: poziomo/pionowo',
       ],
-      textAfterFeatures: 'Wodomierz ECO jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.'
+      textAfterFeatures: 'Wodomierz ECO jest w pełni kompatybilny z modułem komunikacyjnym Modularis ONE.',
+      downloads: [
+        { label: 'Pobierz (DE)', href: '/downloads/Wasser-Gerate DE.pdf' },
+      ],
     },
 
     'apator-js-smart-plus': {
@@ -907,7 +916,10 @@ const pl: ContentStructure = {
         'Wytrzymałość do 16 bar',
         'Możliwość montażu: liczydło na górze lub z boku (poziomy/pionowy montaż)',
       ],
-      textAfterFeatures: 'Wodomierz JS Smart +  jest w pełni kompatybilny z modułami komunikacyjnymi MBus Smart+ i WMBus Smart+.'
+      textAfterFeatures: 'Wodomierz JS Smart +  jest w pełni kompatybilny z modułami komunikacyjnymi MBus Smart+ i WMBus Smart+.',
+      downloads: [
+        { label: 'Pobierz (EN)', href: '/downloads/Apator Powogaz JS Smatr EN.pdf' },
+      ],
     },
 
     'gwf-sonico-nano': {
@@ -932,7 +944,10 @@ const pl: ContentStructure = {
         'Prosta integracja z systemami automatyzacji',
         'Czas pracy na baterii do 20 lat',
       ],
-      textAfterFeatures: 'Sonico Nano to idealne rozwiązanie dla wszystkich poszukujących wysokiej precyzji oraz niezawodności pomiarów.'
+      textAfterFeatures: 'Sonico Nano to idealne rozwiązanie dla wszystkich poszukujących wysokiej precyzji oraz niezawodności pomiarów.',
+      downloads: [
+        { label: 'Pobierz (EN)', href: '/downloads/Sonico_nano GWF EN.pdf' },
+      ],
     },
 
     'engelmann-senso-star-e': {
@@ -1847,6 +1862,9 @@ const en: ContentStructure = {
         'Protection class IP64',
         'Pressure resistance up to 1.6 MPa',
       ],
+      downloads: [
+        { label: 'Download (EN)', href: '/downloads/Wehrle ETK EN.pdf' },
+      ],
     },
 
     'maddalena-sj-plus-evo': {
@@ -1874,6 +1892,9 @@ const en: ContentStructure = {
         'High resistance to magnetic field effects',
         'Available with sanitary certificate',
       ],
+      downloads: [
+        { label: 'Download (EN)', href: '/downloads/Maddalena SJ PLUS EVO EN.pdf' },
+      ],
     },
 
     'wasser-geraete-eco': {
@@ -1897,6 +1918,9 @@ const en: ContentStructure = {
         'Maximum flow rate (Q3): 2.5 m3/h',
         'High durability and damage resistance, condensation-resistant construction',
         'Mounting options: horizontal/vertical',
+      ],
+      downloads: [
+        { label: 'Download (DE)', href: '/downloads/Wasser-Gerate DE.pdf' },
       ],
     },
 
@@ -1924,6 +1948,9 @@ const en: ContentStructure = {
         'Simple integration with automation systems',
         'Battery life up to 20 years',
       ],
+      downloads: [
+        { label: 'Download (EN)', href: '/downloads/Sonico_nano GWF EN.pdf' },
+      ],
     },
 
     'apator-js-smart-plus': {
@@ -1949,6 +1976,9 @@ const en: ContentStructure = {
         'Housing resistant to strong external magnetic fields',
         'Pressure resistance up to 16 bar',
         'Mounting possibility: register on top or side (horizontal/vertical mounting)',
+      ],
+      downloads: [
+        { label: 'Download (EN)', href: '/downloads/Apator Powogaz JS Smatr EN.pdf' },
       ],
     },
 
@@ -2840,6 +2870,9 @@ const de: ContentStructure = {
         'Schutzart IP64',
         'Druckfestigkeit bis 1,6 MPa',
       ],
+      downloads: [
+        { label: 'Herunterladen (EN)', href: '/downloads/Wehrle ETK EN.pdf' },
+      ],
     },
 
     'maddalena-sj-plus-evo': {
@@ -2867,6 +2900,9 @@ const de: ContentStructure = {
         'Hohe Bestaendigkeit gegen magnetische Felder',
         'Erhaeltlich mit Hygienezertifikat',
       ],
+      downloads: [
+        { label: 'PDF herunterladen (EN)', href: '/downloads/Maddalena SJ PLUS EVO EN.pdf' },
+      ],
     },
 
     'wasser-geraete-eco': {
@@ -2890,6 +2926,9 @@ const de: ContentStructure = {
         'Maximale Durchflussrate (Q3): 2,5 m3/h',
         'Hohe Langlebigkeit und Beschaedigungsbestaendigkeit, kondensationsbestaendige Konstruktion',
         'Montageoptionen: horizontal/vertikal',
+      ],
+      downloads: [
+        { label: 'Herunterladen (DE)', href: '/downloads/Wasser-Gerate DE.pdf' },
       ],
     },
 
@@ -2917,6 +2956,9 @@ const de: ContentStructure = {
         'Einfache Integration mit Automatisierungssystemen',
         'Batterielebensdauer bis zu 20 Jahren',
       ],
+      downloads: [
+        { label: 'Herunterladen (EN)', href: '/downloads/Sonico_nano GWF EN.pdf' },
+      ],
     },
 
     'apator-js-smart-plus': {
@@ -2942,6 +2984,9 @@ const de: ContentStructure = {
         'Gehaeuse bestaendig gegen starke externe Magnetfelder',
         'Druckfestigkeit bis 16 bar',
         'Montagemoeglichkeit: Zaehlwerk oben oder seitlich (horizontale/vertikale Montage)',
+      ],
+      downloads: [
+        { label: 'Herunterladen (EN)', href: '/downloads/Apator Powogaz JS Smatr EN.pdf' },
       ],
     },
 
