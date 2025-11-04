@@ -4,7 +4,7 @@ const HeroSimple = ({ title, desc }: { title: string, desc: string }) => {
   return (
     <section className="relative h-[400px] overflow-hidden bg-[#343432] text-white md:min-h-[500px] lg:min-h-[600px]">
       {/* Decorative circle - left side, partially off-screen - hidden on mobile */}
-      <div className="absolute left-[-555px] top-[-29px] hidden h-[494px] w-[1420px] items-center justify-center lg:flex">
+      <div className="absolute lg:left-[-955px] xl:left-[-855px] 2xl:left-[-555px] top-[-29px] hidden h-[494px] w-[1420px] items-center justify-center lg:flex">
         <div className="rotate-180">
           <div className="relative h-[494px] w-[1420px] rounded-[247px] opacity-20">
             <div
@@ -15,8 +15,7 @@ const HeroSimple = ({ title, desc }: { title: string, desc: string }) => {
         </div>
       </div>
 
-      {/* KAYON Logotype - Desktop: left-[250px] top-[285px], Mobile: centered top */}
-      <div className="absolute left-1/2 top-8 -translate-x-1/2 md:top-12 lg:left-[250px] lg:top-[285px] lg:translate-x-0">
+      <div className="absolute left-1/2 top-8 md:top-12 lg:left-[50px] 2xl:left-[450px] 2xl:-translate-x-1/2 lg:top-[285px] lg:translate-x-0">
         <KayonLogo className="h-[40px] w-auto md:h-[60px] lg:h-[76px]" />
       </div>
 
