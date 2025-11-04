@@ -45,7 +45,7 @@ const BenefitsSection = () => {
   return (
     <>
       <section id="jak-dzialamy" className="bg-[#f4b250] text-primary">
-        <div className="py-12 md:py-24 max-w-[1400px] mx-auto lg:min-h-[800px] flex flex-col 2xl:flex-row justify-between gap-8 2xl:gap-28">
+        <div className="xl:px-20 2xl:px-0 py-12 md:py-24 max-w-[1400px] mx-auto lg:min-h-[800px] flex flex-col 2xl:flex-row justify-between gap-8 2xl:gap-28">
           <div className="max-w-[550px] flex flex-col gap-8 md:gap-y-8 2xl:gap-y-16">
             <SectionLabel label={benefits.label} bgClass="bg-[#fad8a8]" />
             <h2 className="leading-tight text-3xl md:text-[40px]">{parse(benefits.heading)}</h2>
