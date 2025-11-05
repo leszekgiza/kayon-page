@@ -19,8 +19,8 @@ const HeroSimple = ({ title, desc }: { title: string, desc: string }) => {
         <KayonLogo className="h-[40px] w-auto md:h-[60px] lg:h-[76px]" />
       </div>
 
-      {/* Content Frame - Desktop: left-[1085px] top-[218px], Mobile: centered */}
-      <div className="absolute left-1/2 top-24 flex max-w-[500px] -translate-x-1/2 flex-col items-start gap-[40px] md:top-32 lg:left-[555px] xl:left-[670px] 2xl:lg:left-[1085px] lg:top-[140px] 2xl:top-[140px] lg:translate-x-0">
+      {/* RIGHT COL */}
+      <div className="absolute left-1/2 top-24 flex max-w-[500px] -translate-x-1/2 flex-col items-start gap-[40px] md:top-32 lg:left-[555px] xl:left-[670px] 2xl:lg:left-[1085px] lg:top-[140px] 2xl:top-[100px] lg:translate-x-0">
         {/* Title */}
         <div className="flex flex-col justify-center font-['Montserrat'] font-bold leading-[0] text-white">
           <h1 className="whitespace-pre text-[26px] leading-[1.2] md:text-[32px] lg:text-[40px]">
