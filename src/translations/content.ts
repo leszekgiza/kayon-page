@@ -102,6 +102,7 @@ export interface SystemsSectionContent {
 
 export interface ProductsGroupContent {
   title: string;
+  styledTitle?: string;
   items: string[];
   slug: string;
 }
@@ -2577,6 +2578,7 @@ const de: ContentStructure = {
       },
       {
         title: 'Kommunikationsmodule',
+        styledTitle: 'Kommunikations<br />-module',
         slug: 'moduly-komunikacyjne',
         items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
       },

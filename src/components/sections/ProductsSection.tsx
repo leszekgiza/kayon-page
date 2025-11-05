@@ -84,7 +84,9 @@ const ProductsSection = () => {
                     transition={{ duration: 0.6 }}
                   >
                     <div className="mb-4 h-full flex flex-col justify-between">
-                      <h3 className="text-2xl font-bold leading-[1.2] text-[#1D1D1B]">{group.title}</h3>
+                      <h3 className="text-2xl font-bold leading-[1.2] text-[#1D1D1B]">
+                        {group.styledTitle ? parse(group.styledTitle) : group.title}
+                      </h3>
                       <ul className="mt-[30px] flex flex-col gap-[15px]">
                         {group.items.map((item) => (
                           <li key={item} className="flex items-start gap-[10px]">
