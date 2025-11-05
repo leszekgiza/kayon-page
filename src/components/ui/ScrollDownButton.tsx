@@ -40,7 +40,7 @@ const ScrollDownButton = () => {
         </motion.button>
         <Image
           src="/central-shape.svg"
-          className="mt-4 2xl:mt-14 mx-auto"
+          className="mt-4 mx-auto"
           alt=""
           width={49}
           height={177}
