@@ -757,7 +757,7 @@ const pl: ContentStructure = {
         'Kompaktowa konstrukcja do montażu bez narzędzi',
       ],
       downloads: [
-        { label: 'Pobierz (EN)', href: '/downloads/WMBus Smart+_EN.pdf' },
+        { label: 'Pobierz (EN)', href: '/downloads/MBus Smart+_EN.pdf' },
         { label: 'Pobierz (DE)', href: '/downloads/MBus Smart+_DE.pdf' },
       ],
     },
