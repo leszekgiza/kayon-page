@@ -42,20 +42,20 @@ const GreenSection = () => {
     console.log('index: ', index, 'visibleCount: ', visibleCount);
   }, [index, visibleCount]);
 
-  useEffect(() => {
-    const needsReset =
-      index >= baseLength * 2 ? -baseLength : index < baseLength ? baseLength : 0;
+  // useEffect(() => {
+  //   const needsReset =
+  //     index >= baseLength * 2 ? -baseLength : index < baseLength ? baseLength : 0;
 
-    if (needsReset !== 0) {
-      const timeout = setTimeout(() => {
-        setAnimateTransition(false);
-        setIndex((prev) => prev + needsReset);
-      }, 450);
-      return () => clearTimeout(timeout);
-    }
+  //   if (needsReset !== 0) {
+  //     const timeout = setTimeout(() => {
+  //       setAnimateTransition(false);
+  //       setIndex((prev) => prev + needsReset);
+  //     }, 450);
+  //     return () => clearTimeout(timeout);
+  //   }
 
-    return undefined;
-  }, [index, baseLength]);
+  //   return undefined;
+  // }, [index, baseLength]);
 
   useEffect(() => {
     if (!animateTransition) {
@@ -89,11 +89,7 @@ const GreenSection = () => {
       setIndex((prev) => prev - 1);
     }
   };
-  /**
-   * Handles the next button click event.
-   * If the current index is less than 9, increments the index by 1.
-   * Otherwise, does nothing.
-   */
+
   const handleNext = () => {
     if (index < 9) {
       setIndex((prev) => prev + 1);
