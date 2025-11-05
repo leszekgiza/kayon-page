@@ -1564,7 +1564,7 @@ const en: ContentStructure = {
       {
         title: 'Heat meters',
         slug: 'cieplomierze',
-        items: ['Engelmann SensoStar', 'Maddalena MicroClima', 'Rota PloMeter'],
+        items: ['Engelmann SensoStar', 'Maddalena MicroClima', 'RC12 Plometer'],
       },
       {
         title: 'Communication modules',
@@ -2574,7 +2574,7 @@ const de: ContentStructure = {
       {
         title: 'Wärmezähler',
         slug: 'cieplomierze',
-        items: ['Engelmann SensoStar', 'Maddalena MicroClima', 'Rota PloMeter'],
+        items: ['Engelmann SensoStar', 'Maddalena MicroClima', 'RC12 Plometer'],
       },
       {
         title: 'Kommunikationsmodule',
