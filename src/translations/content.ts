@@ -700,6 +700,7 @@ const pl: ContentStructure = {
       ],
       downloads: [
         { label: 'Pobierz (PL)', href: '/downloads/Modularis One_PL.pdf' },
+        { label: 'Pobierz (EN)', href: '/downloads/Modularis One_EN.pdf' },
         { label: 'Pobierz (DE)', href: '/downloads/Modularis One_DE.pdf' },
       ],
     },
@@ -729,6 +730,7 @@ const pl: ContentStructure = {
         'Stopień ochrony IP65, zgodność z normami EN 13757 i OMS',
       ],
       downloads: [
+        { label: 'Pobierz (EN)', href: '/downloads/WMBus Smart+_EN.pdf' },
         { label: 'Pobierz (DE)', href: '/downloads/WMBus Smart+_DE.pdf' },
       ],
     },
@@ -755,6 +757,7 @@ const pl: ContentStructure = {
         'Kompaktowa konstrukcja do montażu bez narzędzi',
       ],
       downloads: [
+        { label: 'Pobierz (EN)', href: '/downloads/WMBus Smart+_EN.pdf' },
         { label: 'Pobierz (DE)', href: '/downloads/MBus Smart+_DE.pdf' },
       ],
     },
@@ -781,6 +784,7 @@ const pl: ContentStructure = {
         'Praca w szerokim zakresiętemperatur -10C do 55C',
       ],
       downloads: [
+        { label: 'Pobierz (EN)', href: '/downloads/MicroClima WMBUS_EN.pdf' },
         { label: 'Pobierz (DE)', href: '/downloads/MicroClima WMBUS_DE.pdf' },
       ],
     },
@@ -807,6 +811,7 @@ const pl: ContentStructure = {
         'Solidna obudowa IP67 odporna na wilgotne środowisko',
       ],
       downloads: [
+        { label: 'Pobierz (EN)', href: '/downloads/RC12_WMBUS_EN.pdf' },
         { label: 'Pobierz (DE)', href: '/downloads/RC12_WMBUS_DE.pdf' },
       ],
     },
@@ -1723,6 +1728,7 @@ const en: ContentStructure = {
       ],
       downloads: [
         { label: 'Download PDF (PL)', href: '/downloads/Modularis One_PL.pdf' },
+        { label: 'Download PDF (EN)', href: '/downloads/Modularis One_EN.pdf' },
         { label: 'Download PDF (DE)', href: '/downloads/Modularis One_DE.pdf' },
       ],
     },
@@ -1752,6 +1758,7 @@ const en: ContentStructure = {
         'IP65 protection rating, compliant with EN 13757 and OMS standards',
       ],
       downloads: [
+        { label: 'Download PDF (EN)', href: '/downloads/WMBus Smart+_EN.pdf' },
         { label: 'Download PDF (DE)', href: '/downloads/WMBus Smart+_DE.pdf' },
       ],
     },
@@ -2731,6 +2738,7 @@ const de: ContentStructure = {
       ],
       downloads: [
         { label: 'PDF herunterladen (PL)', href: '/downloads/Modularis One_PL.pdf' },
+        { label: 'PDF herunterladen (EN)', href: '/downloads/Modularis One_EN.pdf' },
         { label: 'PDF herunterladen (DE)', href: '/downloads/Modularis One_DE.pdf' },
       ],
     },
@@ -2760,6 +2768,7 @@ const de: ContentStructure = {
         'Schutzart IP65, konform mit EN 13757 und OMS Normen',
       ],
       downloads: [
+        { label: 'PDF herunterladen (EN)', href: '/downloads/WMBus Smart+_EN.pdf' },
         { label: 'PDF herunterladen (DE)', href: '/downloads/WMBus Smart+_DE.pdf' },
       ],
     },
