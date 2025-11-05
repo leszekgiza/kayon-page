@@ -11,7 +11,7 @@ const GreenSection = () => {
   const { clients } = useContent();
   const baseCards = clients.cards;
   const baseLength = baseCards.length;
-  const extendedCards = useMemo(() => [...baseCards, ...baseCards, ...baseCards], [baseCards]);
+  const extendedCards = useMemo(() => [...baseCards, ...baseCards], [baseCards]);
   const extendedLength = extendedCards.length;
   const GAP_SIZE = 40; // gap-10 in pixels (Figma)
   const CARD_WIDTH = 305; // Fixed width from Figma
@@ -89,13 +89,11 @@ const GreenSection = () => {
       setIndex((prev) => prev - 1);
     }
   };
-/*************  ✨ Windsurf Command ⭐  *************/
-/**
- * Handles the next button click event.
- * If the current index is less than 9, increments the index by 1.
- * Otherwise, does nothing.
- */
-/*******  99b5420d-411b-4c4a-a939-f135d3e06444  *******/
+  /**
+   * Handles the next button click event.
+   * If the current index is less than 9, increments the index by 1.
+   * Otherwise, does nothing.
+   */
   const handleNext = () => {
     if (index < 9) {
       setIndex((prev) => prev + 1);
