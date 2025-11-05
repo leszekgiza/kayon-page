@@ -273,7 +273,7 @@ const pl: ContentStructure = {
   navigation: {
     homeAriaLabel: 'KAYON strona główna',
     primaryLinks: [
-      { label: 'Home', href: '#' },
+      { label: 'Dla kogo?', href: '#dla-kogo' },
       { label: 'Oferta', href: '#oferta' },
       { label: 'Produkty', href: '#produkty' },
     ],
@@ -1304,7 +1304,7 @@ const en: ContentStructure = {
   navigation: {
     homeAriaLabel: 'KAYON homepage',
     primaryLinks: [
-      { label: 'Home', href: '#' },
+      { label: 'Who we help', href: '#' },
       { label: 'Offer', href: '#oferta' },
       { label: 'Products', href: '#produkty' },
     ],
@@ -2315,7 +2315,7 @@ const de: ContentStructure = {
   navigation: {
     homeAriaLabel: 'KAYON Startseite',
     primaryLinks: [
-      { label: 'Startseite', href: '#' },
+      { label: 'Wem helfen wir', href: '#' },
       { label: 'Angebot', href: '#oferta' },
       { label: 'Produkte', href: '#produkty' },
     ],
