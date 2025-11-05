@@ -91,7 +91,7 @@ const HeroSection = () => {
           transition={{ delay: 0.15, duration: 0.6 }}
           className="flex w-full flex-col gap-10"
         >
-          <h1 className="mt-12 font-bold leading-[1.2] text-left text-pretty text-white md:max-w-[693px] text-[28px] md:text-[40px] xl:text-[28px] 2xl:text-[36px]">
+          <h1 className="mt-12 font-bold leading-[1.2] text-left text-pretty text-white md:max-w-[693px] text-[28px] md:text-[40px] lg:text-2xl xl:text-[28px] 2xl:text-[36px]">
             {hero.headline}
           </h1>
 
