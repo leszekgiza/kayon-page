@@ -539,7 +539,7 @@ const pl: ContentStructure = {
       {
         title: 'Wodomierze',
         slug: 'wodomierze',
-        items: ['Wherle', 'Maddalena', 'Wasser-Geräte', 'GWF', 'Apator Powogaz'],
+        items: ['Wherle', 'Maddalena', 'Wasser-Geräte', 'Apator Powogaz', 'GWF'],
       },
     ],
     ctaLabel: 'Więcej',
@@ -1558,7 +1558,7 @@ const en: ContentStructure = {
       {
         title: 'Water meters',
         slug: 'wodomierze',
-        items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'GWF Sonico Nano', 'Apator JS Smart+'],
+        items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'Apator JS Smart+', 'GWF Sonico Nano'],
       },
       {
         title: 'Heat meters',
@@ -1585,8 +1585,8 @@ const en: ContentStructure = {
           'Wehrle water meter - ETK(W)-EAX',
           'Maddalena water meter - SJ PLUS-EVO',
           'Wasser-Geräte water meter - ECO',
-          'GWF water meter - Sonico Nano',
           'Apator Powogaz water meter - JS Smart+',
+          'GWF water meter - Sonico Nano',
         ],
         downloads: [],
         readMoreLabel: 'Explore products',
@@ -2568,7 +2568,7 @@ const de: ContentStructure = {
       {
         title: 'Wasserzaehler',
         slug: 'wodomierze',
-        items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'GWF Sonico Nano', 'Apator JS Smart+'],
+        items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'Apator JS Smart+', 'GWF Sonico Nano'],
       },
       {
         title: 'Wärmezähler',
@@ -2595,8 +2595,8 @@ const de: ContentStructure = {
           'Wehrle Wasserzaehler - ETK(W)-EAX',
           'Maddalena Wasserzaehler - SJ PLUS-EVO',
           'Wasser-Geräte Wasserzaehler - ECO',
-          'GWF Wasserzaehler - Sonico Nano',
           'Apator Powogaz Wasserzaehler - JS Smart+',
+          'GWF Wasserzaehler - Sonico Nano',
         ],
         downloads: [],
         readMoreLabel: 'Produkte ansehen',
