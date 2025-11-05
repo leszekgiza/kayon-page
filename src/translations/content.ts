@@ -1318,7 +1318,7 @@ const en: ContentStructure = {
   menuOverlay: {
     closeAria: 'Close menu',
     items: [
-      { label: 'Who we help', href: '#nasi-klienci' },
+      { label: 'Home', href: '#' },
       { label: 'Offer', href: '#oferta' },
       { label: 'Products', href: '#produkty' },
       { label: 'Contact', href: '/kontakt' },
@@ -2327,7 +2327,7 @@ const de: ContentStructure = {
   menuOverlay: {
     closeAria: 'Menü schließen',
     items: [
-      { label: 'Für wen?', href: '#nasi-klienci' },
+      { label: 'Startseite', href: '#' },
       { label: 'Angebot', href: '#oferta' },
       { label: 'Produkte', href: '#produkty' },
       { label: 'Kontakt', href: '/kontakt' },
