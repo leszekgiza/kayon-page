@@ -39,6 +39,10 @@ const GreenSection = () => {
   }, []);
 
   useEffect(() => {
+    console.log('index: ', index, 'visibleCount: ', visibleCount);
+  }, [index, visibleCount]);
+
+  useEffect(() => {
     const needsReset =
       index >= baseLength * 2 ? -baseLength : index < baseLength ? baseLength : 0;
 
@@ -80,8 +84,17 @@ const GreenSection = () => {
     return (normalized + baseLength) % baseLength;
   }, [index, baseLength]);
 
-  const handleNext = () => setIndex((prev) => prev + 1);
-  const handlePrev = () => setIndex((prev) => prev - 1);
+  const handlePrev = () => {
+    if (index > 5) {
+      setIndex((prev) => prev - 1);
+    }
+  };
+  const handleNext = () => {
+    if (index < 9) {
+      setIndex((prev) => prev + 1);
+    }
+  };
+
   const handleDot = (dotIndex: number) => setIndex(baseLength + dotIndex);
 
   const formatDotAria = (dotIndex: number) =>
