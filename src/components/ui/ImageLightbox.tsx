@@ -25,7 +25,7 @@ const ImageLightbox = ({ images }: { images: any[] }) => {
       {images.map((image) => (
         <Image
           key={image.src}
-          className="w-[200px] flex-grow first:w-full cursor-pointer rounded-lg shadow-xl shadow-neutral-300"
+          className="w-[200px] flex-grow first:w-full cursor-pointer rounded-lg shadow-xl shadow-neutral-300 hover:scale-105 transition-transform duration-300 ease-in-out"
           onClick={() => handleOpenGallery(images)}
           src={image.src}
           alt="Preview"
