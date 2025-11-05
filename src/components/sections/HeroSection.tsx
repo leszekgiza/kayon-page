@@ -66,7 +66,7 @@ const HeroSection = () => {
           alt={hero.imageAlt}
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-left scale-x-[-1]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/25" />
