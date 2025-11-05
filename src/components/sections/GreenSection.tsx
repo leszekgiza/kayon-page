@@ -89,6 +89,13 @@ const GreenSection = () => {
       setIndex((prev) => prev - 1);
     }
   };
+/*************  ✨ Windsurf Command ⭐  *************/
+/**
+ * Handles the next button click event.
+ * If the current index is less than 9, increments the index by 1.
+ * Otherwise, does nothing.
+ */
+/*******  99b5420d-411b-4c4a-a939-f135d3e06444  *******/
   const handleNext = () => {
     if (index < 9) {
       setIndex((prev) => prev + 1);

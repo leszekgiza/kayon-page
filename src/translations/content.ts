@@ -1304,7 +1304,7 @@ const en: ContentStructure = {
   navigation: {
     homeAriaLabel: 'KAYON homepage',
     primaryLinks: [
-      { label: 'Who we help', href: '#' },
+      { label: 'Who we help', href: '#dla-kogo' },
       { label: 'Offer', href: '#oferta' },
       { label: 'Products', href: '#produkty' },
     ],
@@ -2315,7 +2315,7 @@ const de: ContentStructure = {
   navigation: {
     homeAriaLabel: 'KAYON Startseite',
     primaryLinks: [
-      { label: 'Wem helfen wir', href: '#' },
+      { label: 'Wem helfen wir', href: '#dla-kogo' },
       { label: 'Angebot', href: '#oferta' },
       { label: 'Produkte', href: '#produkty' },
     ],
