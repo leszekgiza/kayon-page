@@ -540,7 +540,7 @@ const pl: ContentStructure = {
       {
         title: 'Wodomierze',
         slug: 'wodomierze',
-        items: ['Wherle', 'Maddalena', 'Wasser-Geräte', 'Apator Powogaz', 'GWF'],
+        items: ['Wherle', 'Maddalena', 'Wasser-Geräte', 'GWF', 'Apator Powogaz'],
       },
     ],
     ctaLabel: 'Więcej',
@@ -1554,22 +1554,22 @@ const en: ContentStructure = {
       {
         title: 'Infrastructure',
         slug: 'infrastruktura',
-        items: ['Range One', 'AC concentrator', 'BAT concentrator'],
-      },
-      {
-        title: 'Water meters',
-        slug: 'wodomierze',
-        items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'Apator JS Smart+', 'GWF Sonico Nano'],
-      },
-      {
-        title: 'Heat meters',
-        slug: 'cieplomierze',
-        items: ['Engelmann SensoStar', 'Maddalena MicroClima', 'RC12 Plometer'],
+        items: ['Range One', 'ECLIPSE WMBus Gateway', 'ECLIPSE WMBus Repeater', 'EIXO WMBus Gateway', 'EXIO WMBus Repeater'],
       },
       {
         title: 'Communication modules',
         slug: 'moduly-komunikacyjne',
-        items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
+        items: ['Modularis One', 'WMBus Smart+', 'MBus Smart+', 'WMBus MicroClima', 'WMBus RC12'],
+      },
+      {
+        title: 'Heat meters',
+        slug: 'cieplomierze',
+        items: ['Engelman SensoStar', 'Maddalena MicroClima', 'RC12 Ploumeter'],
+      },
+      {
+        title: 'Water meters',
+        slug: 'wodomierze',
+        items: ['Wherle', 'Maddalena', 'Wasser-Geräte', 'GWF', 'Apator Powogaz'],
       },
     ],
     ctaLabel: 'More',
@@ -2564,23 +2564,23 @@ const de: ContentStructure = {
       {
         title: 'Infrastruktur',
         slug: 'infrastruktura',
-        items: ['Range One', 'AC-Konzentrator', 'BAT-Konzentrator'],
-      },
-      {
-        title: 'Wasserzaehler',
-        slug: 'wodomierze',
-        items: ['Wehrle', 'Maddalena', 'Wasser-Geräte', 'Apator JS Smart+', 'GWF Sonico Nano'],
-      },
-      {
-        title: 'Wärmezähler',
-        slug: 'cieplomierze',
-        items: ['Engelmann SensoStar', 'Maddalena MicroClima', 'RC12 Plometer'],
+        items: ['Range One', 'ECLIPSE WMBus Gateway', 'ECLIPSE WMBus Repeater', 'EIXO WMBus Gateway', 'EXIO WMBus Repeater'],
       },
       {
         title: 'Kommunikationsmodule',
         styledTitle: 'Kommunikations<br />-module',
         slug: 'moduly-komunikacyjne',
-        items: ['wMBus Smart+', 'MBus Smart+', 'wMBus MicroClima', 'Repeater'],
+        items: ['Modularis One', 'WMBus Smart+', 'MBus Smart+', 'WMBus MicroClima', 'WMBus RC12'],
+      },
+      {
+        title: 'Wärmezähler',
+        slug: 'cieplomierze',
+        items: ['Engelman SensoStar', 'Maddalena MicroClima', 'RC12 Ploumeter'],
+      },
+      {
+        title: 'Wasserzaehler',
+        slug: 'wodomierze',
+        items: ['Wherle', 'Maddalena', 'Wasser-Geräte', 'GWF', 'Apator Powogaz'],
       },
     ],
     ctaLabel: 'Mehr',
