@@ -16,6 +16,9 @@ const config: Config = {
           light: 'rgb(52, 52, 50)',         // #343432 - Secondary dark
           lighter: 'rgb(116, 113, 113)',    // #747171 - Text gray
         },
+        blue: 'rgb(44, 188, 235)',        // #2cbceb - Primary blue
+        yellow: 'rgb(244, 178, 80)',        // #f4b250 - Gold/Orange
+        green: 'rgb(119, 187, 97)',       // #77bb61 - Green
         accent: {
           blue: 'rgb(44, 188, 235)',        // #2cbceb - Primary blue
           gold: 'rgb(244, 178, 80)',        // #f4b250 - Gold/Orange
