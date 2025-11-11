@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import KayonLogo from '@/components/ui/KayonLogo';
 import { useContent } from '@/hooks/useContent';
 import { useLanguage, SUPPORTED_LANGUAGES, LANGUAGE_LABELS } from '@/components/LanguageProvider';
+import './FullScreenMenu.css';
 
 interface FullScreenMenuProps {
   open: boolean;
@@ -91,22 +92,9 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
                     key={item.href}
                     href={resolveHref(item.href)}
                     onClick={onClose}
-                    className="group flex items-center gap-10 text-xl md:text-[3vw] 2xl:text-5xl font-bold leading-[1.2]"
+                    className="fullscreen-menu__link group flex items-center gap-10 text-xl md:text-[3vw] 2xl:text-5xl font-bold leading-[1.2]"
                   >
-                    <div className="flex h-[13px] w-[47px] items-center justify-center flex-shrink-0">
-                      <div className="rotate-90 scale-y-[-1]">
-                        <div className="relative h-[47px] w-[13px]">
-                          <img
-                            alt=""
-                            className="block size-full transition-opacity duration-200 group-hover:opacity-0"
-                            src="https://www.figma.com/api/mcp/asset/55620f11-e657-4f94-af14-a817a7a4f6e2"
-                            width={13}
-                            height={47}
-                          />
-                          <div className="absolute inset-0 bg-[#2CBCEB] rounded-full opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
-                        </div>
-                      </div>
-                    </div>
+                    <div className="fullscreen-menu__li-ellipse w-[47px] h-[13px] bg-green rounded-full transition-colors duration-150 ease-in-out"></div>
                     <span>{item.label}</span>
                   </Link>
                 ))}
@@ -128,7 +116,7 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
 
               <div className="my-8 lg:my-2 h-px w-[338px] bg-[#747171]" />
               <a
-                className="mt-4 2xl:mt-0 w-[338px] block text-center rounded-full bg-[#2cbceb] py-4 md:py-5 text-xl md:text-2xl font-bold leading-[1.2] text-white transition-colors hover:bg-[#2cbceb]/80"
+                className="mt-4 2xl:mt-0 w-[338px] block text-center rounded-full bg-blue py-4 md:py-5 text-xl md:text-2xl font-bold leading-[1.2] text-white transition-colors hover:bg-[#2cbceb]/80"
                 href="https://openmetering.co/"
                 rel='nofollow noreferrer noopener'
                 title='Login'>
