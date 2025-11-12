@@ -91,12 +91,12 @@ const HeroSection = () => {
           transition={{ delay: 0.15, duration: 0.6 }}
           className="flex w-full flex-col gap-10"
         >
-          <h1 className="mt-12 font-bold leading-[1.2] text-left text-pretty text-white md:max-w-[693px] text-[28px] md:text-[40px] lg:text-2xl xl:text-[28px] 2xl:text-[36px]">
+          <h1 className="mt-12 md:max-w-[693px] text-4xl font-bold text-left text-pretty text-white">
             {hero.headline}
           </h1>
 
           <div className="flex flex-col items-start gap-2 rounded-[30px] border-2 border-[#484848] p-6 lg:flex-row lg:justify-between lg:items-center">
-            <p className="lg:w-full text-base font-bold leading-[1.2] text-white md:w-[437px] md:text-[20px] text-pretty">
+            <p className="lg:w-full md:w-[437px] text-xl font-bold text-white text-pretty">
               {hero.body}
             </p>
             <ButtonSimple text={hero.ctaLabel} bgClass="bg-[#1d1d1b]" callbackFunction={() => setIsModalOpen(true)} />

@@ -119,7 +119,7 @@ const FullScreenMenu = ({ open, onClose }: FullScreenMenuProps) => {
                 className="mt-4 2xl:mt-0 w-[338px] block text-center rounded-full bg-blue py-4 md:py-5 text-xl md:text-2xl font-bold leading-[1.2] text-white transition-colors hover:bg-blue/80"
                 href="https://openmetering.co/"
                 rel='nofollow noreferrer noopener'
-                title='Login'>
+              >
                 {menuOverlay.cta.label}
               </a>
             </div>

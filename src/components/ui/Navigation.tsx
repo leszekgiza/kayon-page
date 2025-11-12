@@ -62,7 +62,6 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
             {/* KONTAKT - chat_bubble */}
             <Link
               href="/kontakt"
-              title='Contact'
               className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7]transition-colors duration-200 hover:border-white"
               aria-label={navigation.actions.presentation.ariaLabel}
             >
@@ -74,13 +73,12 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
             {/* PLATFORMA - login */}
             <a
               href="https://openmetering.co/"
-              title='Login'
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7]transition-colors duration-200 hover:border-white"
               aria-label={navigation.actions.login.ariaLabel}
             >
-              <span className="material-symbols-rounded text-[24px] leading-[100%] text-gray-300">
+              <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
                 login
               </span>
             </a>
