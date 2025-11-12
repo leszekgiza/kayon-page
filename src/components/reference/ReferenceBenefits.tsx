@@ -10,7 +10,7 @@ const ReferenceBenefits = () => {
   ];
 
   return (
-    <section className="w-[1920px] bg-[#F4B250] py-24 text-[#1D1D1B]">
+    <section className="w-[1920px] bg-orange py-24 text-[#1D1D1B]">
       <div className="mx-auto w-full max-w-[1440px] px-8">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.6fr)_minmax(0,1fr)]">
           {/* Left Column */}
