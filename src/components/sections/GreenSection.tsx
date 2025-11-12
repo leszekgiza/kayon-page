@@ -42,21 +42,6 @@ const GreenSection = () => {
     console.log('index: ', index, 'visibleCount: ', visibleCount);
   }, [index, visibleCount]);
 
-  // useEffect(() => {
-  //   const needsReset =
-  //     index >= baseLength * 2 ? -baseLength : index < baseLength ? baseLength : 0;
-
-  //   if (needsReset !== 0) {
-  //     const timeout = setTimeout(() => {
-  //       setAnimateTransition(false);
-  //       setIndex((prev) => prev + needsReset);
-  //     }, 450);
-  //     return () => clearTimeout(timeout);
-  //   }
-
-  //   return undefined;
-  // }, [index, baseLength]);
-
   useEffect(() => {
     if (!animateTransition) {
       const raf = requestAnimationFrame(() => setAnimateTransition(true));
