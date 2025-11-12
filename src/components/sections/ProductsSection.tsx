@@ -53,9 +53,9 @@ const ProductsSection = () => {
 
   return (
     <section id="produkty" className="bg-[##484848] bg-gradient-to-r from-[#343432] via-[#343432] to-[#484848] text-white">
-      <div className="2xl:max-w-[1400px] mx-auto 2xl:flex items-center relative">
+      <div className="max-w-[1700px] mx-auto 2xl:flex items-center relative">
 
-        <div id='product-section-left-col' className="px-4 py-8 lg:px-10 xl:px-20 2xl:px-0 2xl:pe-10 md:py-24 pe-8 xl:pe-20 2xl:py-24 md:pe-16 2xl:h-[800px] w-full 2xl:max-w-[640px] flex flex-col justify-between gap-8 bg-[#343432]">
+        <div id='product-section-left-col' className="px-4 py-8 lg:px-10 xl:px-20 2xl:ps-0 2xl:pe-10 md:py-24 pe-8 xl:pe-20 2xl:py-24 md:pe-16 2xl:h-[800px] w-full 2xl:max-w-[640px] flex flex-col justify-between gap-8 bg-[#343432]">
           <SectionLabel label={products.label} bgClass="bg-[#EAEAEA]" />
           <h2 className="text-3xl leading-tight md:text-[40px]">{parse(products.heading)}</h2>
           <SectionDescription text={products.description} textColorClass="text-white" />

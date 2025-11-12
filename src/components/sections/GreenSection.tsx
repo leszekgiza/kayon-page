@@ -12,7 +12,6 @@ const GreenSection = () => {
   const baseCards = clients.cards;
   const baseLength = baseCards.length;
   const extendedCards = useMemo(() => [...baseCards, ...baseCards], [baseCards]);
-  const extendedLength = extendedCards.length;
   const GAP_SIZE = 40; // gap-10 in pixels (Figma)
   const CARD_WIDTH = 305; // Fixed width from Figma
   const CARD_HEIGHT = 460; // Fixed height from Figma
@@ -87,14 +86,14 @@ const GreenSection = () => {
     clients.dotAriaTemplate.replace('%d', String(dotIndex + 1));
 
   return (
-    <section id="nasi-klienci" className="bg-gradient-to-r from-[#53923e] via-[#53923e] to-[#77bb61] text-white">
-      <div id='green-section-cols' className="px-0 2xl:max-w-[1400px] mx-auto 2xl:flex flex-col 2xl:flex-row items-center">
-        <div id='green-section-left-col' className="px-4 lg:px-10 xl:px-20 2xl:px-0 2xl:pe-12 py-8 pe-8 md:py-24 2xl:min-h-[800px] md:min-w-[50%] flex flex-col justify-between gap-8 bg-[#53923e]">
+    <section id="nasi-klienci" className="bg-gradient-to-r from-[#53923e] via-[#53923e] to-green text-white">
+      <div id='green-section-cols' className="px-0 2xl:max-w-[1700px] mx-auto 2xl:flex flex-col 2xl:flex-row items-center">
+        <div id='green-section-left-col' className="px-4 lg:px-10 xl:px-20  2xl:ps-0 2xl:pe-12 py-8 pe-8 md:py-24 2xl:min-h-[800px] md:min-w-[50%] flex flex-col justify-between gap-8 bg-[#53923e]">
           <SectionLabel label={clients.label} bgClass="bg-[#EAEAEA]" />
           <h2 className="text-3xl leading-tight md:text-[40px]">{parse(clients.heading)}</h2>
           <SectionDescription text={clients.highlight} textColorClass="text-white" />
         </div>
-        <div id='green-section-right-col' className="ps-4 lg:ps-10 xl:ps-20 2xl:ps-10 py-8 md:py-24 2xl:min-h-[800px] relative w-full 2xl:w-[50vw] flex flex-col justify-between gap-8 bg-[#77bb61]">
+        <div id='green-section-right-col' className="ps-4 lg:ps-10 xl:ps-20 2xl:ps-10 py-8 md:py-24 2xl:min-h-[800px] relative w-full 2xl:w-[50vw] flex flex-col justify-between gap-8 bg-green">
           <div className='overflow-hidden'>
             <motion.div
               style={trackStyle}
@@ -138,7 +137,7 @@ const GreenSection = () => {
                   key={dotIndex}
                   type="button"
                   onClick={() => handleDot(dotIndex)}
-                  className={`h-6 w-6 flex justify-center items-center rounded-full bg-[#77bb61] border-2 border-[#5f904f] transition-all duration-200 ${dotIndex === activeDot ? 'carousel-progress-is-current border-green bg-[#77bb61]' : ''
+                  className={`h-6 w-6 flex justify-center items-center rounded-full bg-green border-2 border-[#5f904f] transition-all duration-200 ${dotIndex === activeDot ? 'carousel-progress-is-current border-green bg-green' : ''
                     }`}
                   aria-label={formatDotAria(dotIndex)}
                 />

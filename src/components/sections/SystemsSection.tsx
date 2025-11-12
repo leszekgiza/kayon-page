@@ -11,9 +11,9 @@ const SystemsSection = () => {
   const { systems } = useContent();
 
   return (
-    <section id="rozwiazania-systemowe" className="mx-auto px-4 py-8 2xl:py-0 max-w-[1400px] lg:min-h-[800px] flex flex-col 2xl:flex-row justify-between items-center 2xl:gap-28">
+    <section id="rozwiazania-systemowe" className="mx-auto px-4 py-8 lg:px-20 2xl:px-0 xl:py-0 max-w-[1700px] lg:min-h-[800px] flex flex-col xl:flex-row justify-between items-center 2xl:gap-28">
       <motion.div
-        className="2xl:w-[50%] 2xl:max-w-[600px] flex flex-col gap-8 md:gap-y-16 items-center 2xl:items-start text-center 2xl:text-left text-primary"
+        className="xl:w-[50%] xl:max-w-[600px] flex flex-col gap-8 md:gap-y-16 items-center xl:items-start text-center xl:text-left text-primary"
         initial={{ opacity: 0, x: -24 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}

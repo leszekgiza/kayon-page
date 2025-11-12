@@ -23,7 +23,7 @@ const ReferenceOffer = () => {
   ];
 
   return (
-    <section className="w-[1920px] bg-[#2CBCEB] py-24 text-white">
+    <section className="w-[1920px] bg-blue py-24 text-white">
       <div className="mx-auto w-full max-w-[1440px] px-8">
         <div className="grid gap-12 lg:grid-cols-[0.67fr_1fr]">
           {/* Left Column */}
