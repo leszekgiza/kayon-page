@@ -44,25 +44,25 @@ const BenefitsSection = () => {
 
   return (
     <>
-      <section id="jak-dzialamy" className="bg-[#f4b250] text-primary">
-        <div className="px-4 lg:ps-10 xl:px-20 2xl:px-0 py-12 md:py-24 max-w-[1700px] mx-auto lg:min-h-[800px] flex flex-col 2xl:flex-row justify-between gap-8 2xl:gap-28">
-          <div className="max-w-[550px] flex flex-col gap-8 md:gap-y-8 2xl:gap-y-16">
+      <section id="jak-dzialamy" className="bg-orange text-primary">
+        <div className="px-4 lg:ps-10 xl:px-20 2xl:px-8 py-12 md:py-24 max-w-[1700px] mx-auto lg:min-h-[800px] flex flex-col xl:flex-row justify-between gap-8">
+          <div className="xl:max-w-[30%] 2xl:max-w-[550px] flex flex-col gap-8 md:gap-y-8 2xl:gap-y-16">
             <SectionLabel label={benefits.label} bgClass="bg-[#fad8a8]" />
             <h2 className="leading-tight text-3xl md:text-[40px]">{parse(benefits.heading)}</h2>
             <SectionDescription text={benefits.description} textColorClass="text-[#1D1D1B]" />
           </div>
 
           <motion.div
-            className="2xl:w-[55%] flex flex-wrap justify-between md:justify-normal gap-2 md:gap-16 2xl:gap-x-[80px]"
+            className="xl:min-w-[60%] 2xl:min-w-[55%] grid grid-cols-2 md:grid-cols-3 gap-4"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="p-4 md:pb-4 w-full md:w-[250px] md:h-[250px] md:flex justify-center items-end text-3xl bg-[#c99446] rounded-2xl">{parse(benefits.listTitle)}</h3>
+            <h3 className="p-4 md:pb-4 w-full xl:w-[250px] lg:h-[200px] xl:h-[250px] md:flex justify-center items-end text-3xl bg-[#c99446] rounded-2xl">{parse(benefits.listTitle)}</h3>
             {benefitCards.map((benefit, index) => (
-              <div key={benefit.title} className="flex-1 md:flex-initial mt-8 md:mt-0 w-[180px] md:w-[250px] md:h-[250px] flex flex-col gap-2 md:gap-0 justify-between items-start">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-black/20 text-white">
+              <div key={benefit.title} className="flex-1 md:flex-initial mt-8 md:mt-0 xl:w-[250px] lg:h-[200px] xl:h-[250px] flex flex-col gap-2 md:gap-0 justify-between items-start">
+                <div className="flex min-h-14 min-w-14 items-center justify-center rounded-full bg-[#c99446] text-white">
                   <span className="material-symbols-rounded text-2xl">
                     {iconMap[index] || 'help'}
                   </span>
