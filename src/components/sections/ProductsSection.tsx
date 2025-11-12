@@ -118,7 +118,7 @@ const ProductsSection = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`h-6 w-6 flex justify-center items-center rounded-full bg-[#484848] border-2 border-[#747171] transition-all duration-200 ${index === currentIndex ? 'carousel-progress-is-current bg-[#484848]' : ''
+                  className={`h-6 w-6 flex justify-center items-center rounded-full transition-all duration-200 border-2 border-[#747171] ${index === currentIndex ? 'products__carousel-progress-is-current' : ''
                     }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />

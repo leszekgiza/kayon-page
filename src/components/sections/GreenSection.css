@@ -1,8 +1,8 @@
-.products__carousel-progress-is-current::before {
+.target__carousel-progress-is-current::before {
   content: '';
   display: block;
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #747171;
+  background: #5f904f;
 }

@@ -6,6 +6,7 @@ import { useContent } from '@/hooks/useContent';
 import parse from 'html-react-parser';
 import SectionLabel from '@/components/ui/SectionLabel';
 import SectionDescription from '@/components/ui/SectionDescription';
+import './GreenSection.css';
 
 const GreenSection = () => {
   const { clients } = useContent();
@@ -137,7 +138,7 @@ const GreenSection = () => {
                   key={dotIndex}
                   type="button"
                   onClick={() => handleDot(dotIndex)}
-                  className={`h-6 w-6 flex justify-center items-center rounded-full bg-green border-2 border-[#5f904f] transition-all duration-200 ${dotIndex === activeDot ? 'carousel-progress-is-current border-green bg-green' : ''
+                  className={`h-6 w-6 flex justify-center items-center rounded-full transition-all duration-200 border-2 border-[#5f904f] ${dotIndex === activeDot ? 'target__carousel-progress-is-current' : ''
                     }`}
                   aria-label={formatDotAria(dotIndex)}
                 />
