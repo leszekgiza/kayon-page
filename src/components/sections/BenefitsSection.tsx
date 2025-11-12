@@ -53,7 +53,7 @@ const BenefitsSection = () => {
           </div>
 
           <motion.div
-            className="xl:min-w-[60%] 2xl:min-w-[55%] grid grid-cols-2 md:grid-cols-3 gap-4"
+            className="xl:min-w-[60%] 2xl:min-w-[55%] grid grid-cols-2 md:grid-cols-3 gap-4 xl:gap-12"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
