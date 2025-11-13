@@ -39,7 +39,7 @@ const HeroSection = () => {
   }, [isModalOpen]);
 
   return (
-    <section className="max-md:pt-8 relative min-h-[800px] h-screen 2xl:max-h-[1280px] flex flex-col lg:flex-row items-center bg-black text-white">
+    <section className="max-md:pt-8 relative min-h-screen lg:min-h-[800px] flex flex-col lg:flex-row items-center bg-black text-white">
       <div className='kayon-top-shapes absolute z-10 top-0 left-1/2 -translate-x-1/2 flex pointer-events-none'>
         <Image
           className=""
@@ -91,12 +91,12 @@ const HeroSection = () => {
           transition={{ delay: 0.15, duration: 0.6 }}
           className="flex w-full flex-col gap-10"
         >
-          <h1 className="mt-12 md:max-w-[693px] text-4xl font-bold text-left text-pretty text-white">
+          <h1 className="mt-12 text-lg lg:text-4xl font-bold text-left text-pretty text-white">
             {hero.headline}
           </h1>
 
-          <div className="flex flex-col items-start gap-2 rounded-[30px] border-2 border-[#484848] p-6 lg:flex-row lg:justify-between lg:items-center">
-            <p className="lg:w-full md:w-[437px] text-xl font-bold text-white text-pretty">
+          <div className="p-6 flex flex-col items-start gap-2 rounded-3xl border-2 border-[#484848] lg:flex-row lg:justify-between lg:items-center">
+            <p className="lg:text-xl font-bold text-white text-pretty">
               {hero.body}
             </p>
             <ButtonSimple text={hero.ctaLabel} bgClass="bg-[#1d1d1b]" callbackFunction={() => setIsModalOpen(true)} />
