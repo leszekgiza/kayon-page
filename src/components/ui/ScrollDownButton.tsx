@@ -7,8 +7,6 @@ const ScrollDownButton = () => {
   return (
     <AnimatePresence>
       <motion.div
-        id="scroll-down-button"
-        className="scroll-down-button absolute z-30 left-1/2 translate-x-[-50%]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -40,7 +38,7 @@ const ScrollDownButton = () => {
         </motion.button>
         <Image
           src="/central-shape.svg"
-          className="mt-4 mx-auto"
+          className="mt-12 mx-auto"
           alt=""
           width={49}
           height={177}

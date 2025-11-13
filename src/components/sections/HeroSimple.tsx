@@ -5,7 +5,7 @@ import HeroSimpleCircle from "../ui/HeroSimpleCircle";
 const HeroSimple = ({ title, desc }: { title: string, desc: string }) => {
   return (
     <section className="relative overflow-hidden bg-[#343432] text-white">
-      <div className="relative z-10 px-4 py-10 pt-32 md:pt-32 lg:pt-10 lg:px-10 xl:px-20 xl:pt-20 2xl:px-0 max-w-[1440px] mx-auto flex flex-col lg:flex-row justify-between items-center lg:gap-4">
+      <div className="relative z-10 px-4 pt-32 pb-10 lg:pt-10 lg:px-10 xl:px-20 xl:pt-20 2xl:px-0 max-w-[1440px] mx-auto flex flex-col lg:flex-row justify-between items-center lg:gap-4">
         <div className="lg:w-1/2">
           <KayonLogo className="h-auto w-full lg:w-[80%] xl:w-[450px]" />
         </div>

@@ -7,8 +7,6 @@ const ScrollDownButtonMinimal = () => {
   return (
     <AnimatePresence>
       <motion.div
-        id="scroll-down-button"
-        className="scroll-down-button"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
