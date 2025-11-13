@@ -62,7 +62,7 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
             {/* KONTAKT - chat_bubble */}
             <Link
               href="/kontakt"
-              className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7]transition-colors duration-200 hover:border-white"
+              className="flex h-[57px] w-[57px] items-center justify-center rounded-full border border-white hover:border-green transition-all duration-300 ease-in-out"
               aria-label={navigation.actions.presentation.ariaLabel}
             >
               <span className="material-symbols-rounded text-[24px] leading-[100%] text-gray-300">
@@ -75,7 +75,7 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
               href="https://openmetering.co/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] border border-[#BCB7B7]transition-colors duration-200 hover:border-white"
+              className="flex h-[57px] w-[57px] items-center justify-center rounded-full border border-white hover:border-green transition-all duration-300 ease-in-out"
               aria-label={navigation.actions.login.ariaLabel}
             >
               <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
@@ -88,7 +88,7 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
           <button
             type="button"
             onClick={() => setMenuOpen(true)}
-            className="flex h-[57px] w-[57px] items-center justify-center rounded-[30px] bg-[#1D1D1B] transition-colors duration-200 hover:bg-[#343432]"
+            className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#1D1D1B] border-green hover:border hover:bg-none transition-all duration-300 ease-in-out"
             aria-label={navigation.actions.menu.ariaLabel}
           >
             <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
