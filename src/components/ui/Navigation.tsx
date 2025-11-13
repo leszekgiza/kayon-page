@@ -41,16 +41,16 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
 
         {/* Center Labels - Figma: 3 labels with specific positions - only show on 2xl+ screens */}
         {showCenterLinks && (
-          <div id='nav-central-links' className="hidden opacity-0 lg:opacity-100 lg:flex gap-4 transition-all dutation-300 ease-in-out">
-            <Link href={`/${navigation.primaryLinks[0].href}`} className="kayon-shadow-text px-6 h-[57px] w-max min-w-[186px] flex justify-center items-center text-[24px] font-bold border border-[#BCB7B7] rounded-full leading-[120%] text-white whitespace-nowrap hover:bg-[#76bb60]">
+          <div id='nav-central-links' className="hidden opacity-0 lg:opacity-100 lg:flex gap-4">
+            <Link href={`/${navigation.primaryLinks[0].href}`} className="kayon-text-shadow px-6 h-[57px] w-max min-w-[186px] flex justify-center items-center text-[24px] font-bold border border-[#BCB7B7] rounded-full leading-[120%] text-white whitespace-nowrap hover:bg-[#76bb60] transition-all dutation-300 ease-in-out">
               {navigation.primaryLinks[0].label}
             </Link>
 
-            <Link href={`/${navigation.primaryLinks[1].href}`} className="kayon-shadow-text px-6 h-[57px] w-max min-w-[186px] flex justify-center items-center text-[24px] font-bold border border-[#BCB7B7] rounded-full leading-[120%] text-white whitespace-nowrap hover:bg-[#2bbceb]">
+            <Link href={`/${navigation.primaryLinks[1].href}`} className="kayon-text-shadow px-6 h-[57px] w-max min-w-[186px] flex justify-center items-center text-[24px] font-bold border border-[#BCB7B7] rounded-full leading-[120%] text-white whitespace-nowrap hover:bg-[#2bbceb] transition-all dutation-300 ease-in-out">
               {navigation.primaryLinks[1].label}
             </Link>
 
-            <Link href={`/${navigation.primaryLinks[2].href}`} className="kayon-shadow-text px-6 h-[57px] w-max min-w-[186px] flex justify-center items-center text-[24px] font-bold border border-[#BCB7B7] rounded-full leading-[120%] text-white whitespace-nowrap hover:bg-[#484848]">
+            <Link href={`/${navigation.primaryLinks[2].href}`} className="kayon-text-shadow px-6 h-[57px] w-max min-w-[186px] flex justify-center items-center text-[24px] font-bold border border-[#BCB7B7] rounded-full leading-[120%] text-white whitespace-nowrap hover:bg-[#484848] transition-all dutation-300 ease-in-out">
               {navigation.primaryLinks[2].label}
             </Link>
           </div >
@@ -88,7 +88,7 @@ const Navigation = ({ showCenterLinks = true, isHomePage = true }: NavigationPro
           <button
             type="button"
             onClick={() => setMenuOpen(true)}
-            className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#1D1D1B] border-green hover:border hover:bg-none transition-all duration-300 ease-in-out"
+            className="flex h-[57px] w-[57px] items-center justify-center rounded-full bg-[#1D1D1B] hover:bg-[#1D1D1B]/0 border border-green/0 hover:border-green/100 transition-all duration-300 ease-in-out"
             aria-label={navigation.actions.menu.ariaLabel}
           >
             <span className="material-symbols-rounded text-[24px] leading-[100%] text-white">
